@@ -406,7 +406,7 @@ async function renderAnswer(qid) {
   if (a && diagList(a).length) {
     const abox = A.querySelector('.abox');
     const db = el('button', 'diag-toggle', '◨ Diagram');
-    db.title = 'Show these points as a hand-drawable diagram';
+    db.title = 'Flip the relevant points to a hand-drawable diagram, and back';
     db.onclick = () => {
       const on = abox.classList.toggle('diag-on');
       db.classList.toggle('on', on);

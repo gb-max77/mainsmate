@@ -540,10 +540,14 @@ body[data-mode=scan] .diag-toggle{display:none}
 .abox.has-toggle{padding-top:30px}
 
 /* swap-in-place: hide the section's bullets, reveal its diagram */
+/* Flip like a card: the diagram appears IN PLACE OF the section it represents and
+   flips back to the bullets on toggle. The diagram carries that section's content
+   so nothing leaks. Read Along is unaffected — it reads the point text straight
+   from the DOM whether the bullets are showing or flipped away. */
 .segdiag{display:none}
 body[data-mode=full] .abox.diag-on .has-diag .pts{display:none}
-body[data-mode=full] .abox.diag-on .has-diag .segdiag,body[data-mode=full] .abox.diag-on .segdiag.standalone{display:block;animation:dgin .18s ease}
-@keyframes dgin{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+body[data-mode=full] .abox.diag-on .has-diag .segdiag{display:block;animation:dgin .2s ease}
+@keyframes dgin{from{opacity:0;transform:perspective(700px) rotateX(-14deg)}to{opacity:1;transform:none}}
 
 /* the picture: simple, reproducible by hand, theme-aware */
 .dg{margin:12px 0 4px;padding:16px 15px 18px;border:1.5px dashed color-mix(in srgb,var(--blue) 42%,var(--line));
