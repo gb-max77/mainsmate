@@ -131,13 +131,16 @@ curl -s https://gb-max77.github.io/mainsmate/sw.js | grep -o "mainsmate-v[0-9]*"
 - [x] 4 cross-paper calibration samples enriched (gs2-1, gs3-1, pubad1-2,
       pubad2-4) with the user's sign-off on depth/style.
 - [x] **PubAd I: 68/68 T1 complete** — enriched or rewritten, all in band, 0
-      template-broken remaining, 0 console errors. Deployed live (v7).
-- [ ] **PubAd II: 0/63 T1** — next up. Check for the same template defect
-      first (grep `pubad2.json` for `"Disciplinary anchor"` / `"Federal
-      Consultation"`).
-- [ ] GS-3: 0/29 T1
+      template-broken remaining. Deployed live (v7).
+- [x] **PubAd II: 63/63 T1 complete** — only 4 mains were template-broken
+      (93-96, rewritten); rest were strong, needed only artifact/headless
+      cleanup + 2 ceiling trims. 0 out-of-band, 0 template-broken. Deployed (v9).
+- [ ] GS-3: 0/29 T1 — next up.
 - [ ] GS-2: 0/46 T1 — push after this one per user's stated cadence
 - [ ] GS-1: 0/37 T1
+- Note: GS papers may or may not share the PubAd template defect — run the
+  detector first (grep `"Disciplinary anchor"` / `"Federal Consultation"`, and
+  the structural detector for artifact/headless/empty points).
 
 ## Live site
 
