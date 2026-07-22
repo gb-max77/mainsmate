@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>MainsMate — CSE 2026 Model Answers</title>
+<meta name="theme-color" content="#0b0d12">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<header class="topbar">
+  <button class="back" id="back" hidden aria-label="Back">‹</button>
+  <button class="icon" id="btn-home" hidden aria-label="Home" title="Home">⌂</button>
+  <button class="icon" id="btn-sb" hidden aria-label="Question list" title="Questions in this paper">☰</button>
+  <div class="brand"><b>MainsMate</b><span>CSE 2026 · model answers</span></div>
+  <div class="spacer"></div>
+  <button class="icon" id="btn-search" aria-label="Search">⌕</button>
+</header>
+
+<!-- ══ HOME ══ -->
+<main id="view-home" class="view active">
+  <div class="countdown" id="countdown"></div>
+  <div class="papers" id="papers"></div>
+  <button class="notes-cta" id="go-notes">
+    <span class="ic">📚</span>
+    <span class="nm"><b>Notes library</b><small id="notes-sub">Mains Smasher notes, by paper</small></span>
+    <span class="arw">›</span>
+  </button>
+  <section class="due" id="due-wrap" hidden>
+    <h2>Due for revision</h2>
+    <div id="due-list"></div>
+  </section>
+</main>
+
+<!-- ══ LIST ══ -->
+<main id="view-list" class="view">
+  <h1 id="list-title"></h1>
+  <div class="filters">
+    <input id="q-search" type="search" placeholder="Search questions & keywords…" autocomplete="off">
+    <div class="chips" id="tier-chips">
+      <button class="chip" data-tier="all" aria-pressed="true">All</button>
+      <button class="chip t1" data-tier="1">T1</button>
+      <button class="chip t2" data-tier="2">T2</button>
+      <button class="chip t3" data-tier="3">T3</button>
+      <button class="chip todo" data-tier="todo">○ Not written</button>
+      <button class="chip thin" data-tier="thin">◑ Under limit</button>
+      <button class="chip shaky" data-tier="weak">Shaky / Blank</button>
+    </div>
+    <select id="theme-sel"></select>
+  </div>
+  <div id="q-list"></div>
+</main>
+
+<!-- ══ NOTES ══ -->
+<main id="view-notes" class="view">
+  <h1>📚 Notes library</h1>
+  <input id="n-search" type="search" placeholder="Search all notes…" autocomplete="off">
+  <div id="n-results" hidden></div>
+  <div id="n-books"></div>
+</main>
+
+<main id="view-book" class="view">
+  <h1 id="book-title"></h1>
+  <div class="srcbar">
+    <button class="srcmode active" data-src="pdf">📄 Original PDF</button>
+    <button class="srcmode" data-src="text">📝 Extracted chapters</button>
+    <a class="srcdl" id="book-dl" download>⤓ Download</a>
+  </div>
+  <div id="book-pdf"></div>
+  <div id="book-chapters" hidden></div>
+</main>
+
+<main id="view-chapter" class="view">
+  <div class="ch-head">
+    <h1 id="ch-title"></h1>
+    <div id="ch-meta"></div>
+  </div>
+  <div id="ch-pyq"></div>
+  <div id="ch-outline"></div>
+  <a class="pdfjump" id="ch-pdf">📄 Open this chapter in the original PDF ↗</a>
+  <pre id="ch-text"></pre>
+</main>
+
+<!-- ══ ANSWER ══ -->
+<main id="view-answer" class="view">
+  <div class="modebar">
+    <div class="modes" id="modes">
+      <button class="mode active" data-mode="full">Full</button>
+      <button class="mode" data-mode="skeleton">Skeleton</button>
+      <button class="mode" data-mode="scan">60s scan</button>
+      <button class="mode" data-mode="cloze">Cloze</button>
+    </div>
+    <button class="icon" id="btn-size" title="Reading size">Aa</button>
+    <button class="icon" id="btn-step" title="Step through points (→)">▸ Step</button>
+    <button class="icon toggle" id="btn-branches" title="Show/hide branch angles">Branches On</button>
+    <button class="icon ra-toggle" id="btn-ra" title="Read this paper aloud, question by question">◉ Read Along</button>
+  </div>
+  <aside id="sidebar" aria-label="Questions in this paper">
+    <button id="sb-pin" title="Pin sidebar">☰</button>
+    <div id="sb-list"></div>
+  </aside>
+  <div class="ra-bar" id="ra-bar" hidden>
+    <div class="ra-row1">
+      <span class="ra-status" id="ra-status">Reading 1 of 1</span>
+      <span class="spacer"></span>
+      <button class="ra-btn" id="ra-pause">Pause</button>
+      <button class="ra-btn" id="ra-next">Next question</button>
+      <button class="ra-btn ra-more" id="ra-more">▾</button>
+    </div>
+    <div class="ra-progress-row">
+      <span class="ra-plabel">Paper</span>
+      <div class="ra-track"><div class="ra-fill" id="ra-fill"></div></div>
+      <span class="ra-eta" id="ra-eta">--:--:--</span>
+    </div>
+    <div class="ra-settings" id="ra-settings" hidden>
+      <label>Speed
+        <select id="ra-rate"></select>
+      </label>
+      <label>Voice
+        <select id="ra-voice"></select>
+      </label>
+    </div>
+  </div>
+  <nav class="pager top" id="pager-top">
+    <button class="pg" data-nav="prev">‹ Previous</button>
+    <span class="pg-pos"></span>
+    <button class="pg" data-nav="next">Next ›</button>
+  </nav>
+  <article id="answer"></article>
+  <div class="done-wrap">
+    <button id="btn-done">Mark as completed</button>
+  </div>
+  <nav class="pager bottom" id="pager-bottom">
+    <button class="pg" data-nav="prev">‹ Previous</button>
+    <span class="pg-pos"></span>
+    <button class="pg" data-nav="next">Next ›</button>
+  </nav>
+  <div class="recall" id="recall">
+    <span>How well did you recall it?</span>
+    <div>
+      <button class="rc r3" data-r="3">Confident</button>
+      <button class="rc r2" data-r="2">Shaky</button>
+      <button class="rc r1" data-r="1">Blank</button>
+    </div>
+  </div>
+</main>
+
+<nav class="tabbar" id="tabbar">
+  <button class="tab" data-go="#/"        aria-label="Home"><span>⌂</span>Home</button>
+  <button class="tab" data-go="#last"     aria-label="Continue"><span>↩</span>Continue</button>
+  <button class="tab" data-go="#due"      aria-label="Revise"><span>◉</span>Revise</button>
+  <button class="tab" data-go="#/n"       aria-label="Notes"><span>📚</span>Notes</button>
+  <button class="tab" data-go="#find"     aria-label="Search"><span>⌕</span>Search</button>
+</nav>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

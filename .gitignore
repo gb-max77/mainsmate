@@ -1,0 +1,4 @@
+.DS_Store
+node_modules/
+
+# large binaries are committed deliberately (source PDFs for the notes reader)

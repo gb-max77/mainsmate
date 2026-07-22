@@ -1,0 +1,12 @@
+{
+  "name": "MainsMate — CSE 2026 Model Answers",
+  "short_name": "MainsMate",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [
+    { "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%230b0d12'/%3E%3Ctext x='96' y='128' font-size='96' text-anchor='middle' fill='%23f0b74e' font-family='serif' font-weight='bold'%3EMM%3C/text%3E%3C/svg%3E",
+      "sizes": "192x192", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
