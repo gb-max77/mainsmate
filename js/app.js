@@ -34,6 +34,7 @@ let PAPERS = [], ANSWERS = {}, cur = null;
 let mode = localStorage.getItem('mm-mode') || 'full';
 let lineIdx = -1;                       // reading cursor for ↑/↓ line navigation
 let answerTheme = 'all';
+let answerTier = null; // null = filter by theme dropdown; '1'|'2'|'3' = filter nav + Read Along to that tier
 let readAlong = false, readPaused = false, readRun = 0, readCurrentIndex = 0;
 let readProgressTimer = null, readProgressRatio = 0, readSegmentStartedAt = 0;
 let readSegmentStartRatio = 0, readSegmentEndRatio = 0, readSegmentDuration = 0;
@@ -385,6 +386,7 @@ async function renderAnswer(qid) {
   themeSelect.innerHTML = `<option value="all">All themes</option>` + p.sections.map(s => `<option value="${esc(s.t)}">${esc(s.t)}</option>`).join('');
   if (answerTheme !== 'all' && !p.sections.some(s => s.t === answerTheme)) answerTheme = 'all';
   themeSelect.value = answerTheme;
+  paintTierToggle();
   A.append(el('h1', 'qtitle', esc(r.q)));
   let wc = '';
   if (a) {
@@ -965,12 +967,29 @@ const mainRows = pid => { const p = paperOf(pid); return p ? rows(p, true) : [];
 // advance, timeline). Respects the selected theme AND the Branches toggle:
 //   branches on  → main, its branches, next main, …
 //   branches off → main questions only (arrows and narration skip branches).
+// A tier filter, when active, takes over navigation (all sections, one tier);
+// otherwise the theme dropdown governs. Branches inherit their parent's tier.
+function rowTier(row) {
+  if (row.tier) return String(row.tier);
+  const parent = row.isBranch ? findRow(row.parent) : null;
+  return parent?.tier ? String(parent.tier) : null;
+}
 function navSequence(pid) {
   const p = paperOf(pid); if (!p) return [];
   const base = readBranches ? rows(p) : rows(p, true);
+  if (answerTier) return base.filter(row => rowTier(row) === answerTier);
   return base.filter(row => answerTheme === 'all' || row.sec === answerTheme);
 }
 const answerNavRows = navSequence;
+
+// Reflect the active tier on the T1/T2/T3 chips and grey out the theme dropdown
+// while a tier governs navigation.
+function paintTierToggle() {
+  $('#answer-tier')?.querySelectorAll('button').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.tier === answerTier)));
+  const sel = $('#answer-theme');
+  if (sel) { sel.disabled = !!answerTier; sel.classList.toggle('muted', !!answerTier); }
+}
 
 // Where `cur` sits in the sequence. With branches off while viewing a branch, we
 // anchor to its parent so prev/next still make sense.
@@ -1011,7 +1030,8 @@ function renderSidebar(r) {
   $('#sb-progress').textContent = `${mainCount} main · ${branchCount} branch${branchCount === 1 ? '' : 'es'} · ${available} answered`;
   $('#sb-search').value = '';
   let sec = null;
-  for (const q of mainRows(r.pid).filter(q => answerTheme === 'all' || q.sec === answerTheme)) {
+  const sbFilter = q => answerTier ? rowTier(q) === answerTier : (answerTheme === 'all' || q.sec === answerTheme);
+  for (const q of mainRows(r.pid).filter(sbFilter)) {
     if (q.sec !== sec) { sec = q.sec; L.append(el('div', 'sb-sec', esc(sec))); }
     const a = ANSWERS[r.pid]?.[q.qid];
     const branches = q.branches || [];
@@ -1147,6 +1167,16 @@ $('#answer-theme').onchange = e => {
   answerTheme = e.target.value;
   const first = navSequence(cur.pid)[0];
   if (first && first.sec !== cur.sec) go(`#/a/${first.qid}`);
+  else { paintDock(); renderSidebar(cur); }
+};
+// Tier chips: toggling one filters Prev/Next, the sidebar and Read Along to that
+// tier (all sections). Clicking the active chip clears it, restoring the theme.
+$('#answer-tier').onclick = e => {
+  const b = e.target.closest('button'); if (!b || !cur) return;
+  answerTier = answerTier === b.dataset.tier ? null : b.dataset.tier;
+  paintTierToggle();
+  const seq = navSequence(cur.pid);
+  if (seq.length && !seq.some(r => r.qid === cur.qid)) go(`#/a/${seq[0].qid}`);
   else { paintDock(); renderSidebar(cur); }
 };
 $('#tier-chips').onclick = e => {

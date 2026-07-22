@@ -61,12 +61,12 @@ button{background:none;border:0;cursor:pointer}
 .view{display:none;max-width:860px;margin:0 auto;padding:18px 16px 90px}
 .view.active{display:block}
 
-.app-dock{position:fixed;z-index:24;left:50%;bottom:calc(10px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:4px;padding:5px 8px;background:var(--glass-solid);backdrop-filter:blur(16px);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
-.app-dock button{display:grid;place-items:center;min-width:62px;padding:4px 9px;border-radius:10px;color:var(--dim)}
+.app-dock{position:fixed;z-index:24;left:50%;bottom:calc(12px + env(safe-area-inset-bottom));transform:translateX(-50%);display:flex;gap:6px;padding:7px 10px;background:var(--glass-solid);backdrop-filter:blur(18px) saturate(1.3);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.app-dock button{display:grid;place-items:center;gap:3px;min-width:72px;padding:7px 12px;border-radius:12px;color:var(--dim)}
 .app-dock button[hidden]{display:none}
 .app-dock button:hover:not(:disabled){background:var(--card);color:var(--ink)}
 .app-dock button:disabled{opacity:.28;cursor:default}
-.app-dock button>.nav-icon{color:var(--dim);transition:color .15s,transform .15s}.app-dock button:hover:not(:disabled)>.nav-icon{color:var(--gold);transform:translateY(-1px)}.app-dock small{font-size:10px;line-height:1.25}
+.app-dock button>.nav-icon{width:23px;height:23px;color:var(--dim);transition:color .15s,transform .15s}.app-dock button:hover:not(:disabled)>.nav-icon{color:var(--gold);transform:translateY(-1px)}.app-dock small{font-size:10.5px;line-height:1.2;letter-spacing:.01em}
 body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
 
 /* ── home ── */
@@ -149,6 +149,14 @@ body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
 .modebar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;position:sticky;top:56px;z-index:20;
   background:var(--glass);backdrop-filter:blur(14px);padding:6px 0 8px;border-bottom:1px solid var(--line);margin-bottom:14px}
 #answer-theme{height:31px;max-width:200px;padding:4px 26px 4px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--dim);font-size:11px}
+#answer-theme.muted{opacity:.4}
+/* tier filter: T1/T2/T3 chips that override the theme dropdown for navigation */
+.tier-toggle{display:flex;gap:3px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:3px;height:31px}
+.tier-toggle button{font-size:11px;font-weight:600;padding:0 9px;border-radius:6px;color:var(--faint);letter-spacing:.02em}
+.tier-toggle button:hover{color:var(--ink)}
+.tier-toggle button[data-tier="1"][aria-pressed=true]{background:var(--t1);color:#fff}
+.tier-toggle button[data-tier="2"][aria-pressed=true]{background:var(--t2);color:#241a05}
+.tier-toggle button[data-tier="3"][aria-pressed=true]{background:var(--t3);color:#fff}
 /* the two reading views: a full-width segmented control, split evenly */
 .modes{display:flex;gap:4px;background:var(--bg2);padding:3px;border-radius:10px;flex:1 1 100%}
 .mode{flex:1;text-align:center;font-size:12.5px;padding:8px 4px;border-radius:8px;color:var(--dim);white-space:nowrap}
@@ -343,7 +351,7 @@ body.sb-open #sb-backdrop{display:block}
   .modebar{flex-wrap:wrap}
   .read-status{top:126px}
   .modes{flex-basis:100%;order:1}
-  #answer-theme,#btn-size,.branch-toggle,.read-toggle{order:2}
+  #answer-theme,.tier-toggle,#btn-size,.branch-toggle,.read-toggle{order:2}
   #answer-theme{max-width:132px;flex:1}
   .read-toggle{margin-left:auto}
 }
@@ -425,9 +433,9 @@ html,body{line-height:var(--lh,1.68)}
 .qrow .meta .cm{color:var(--green)}
 .sb-q.done .sb-n::after{content:"✓";margin-left:3px;color:var(--green)}
 
-/* clear the floating dock at the page foot */
-#view-answer{padding-bottom:104px}
-@media (max-width:560px){ #view-answer{padding-bottom:124px} }
+/* clear the floating dock at the page foot (dock is ~86px tall incl. offset) */
+#view-answer{padding-bottom:128px}
+@media (max-width:560px){ #view-answer{padding-bottom:150px} }
 
 .chip .cnt{opacity:.6;font-variant-numeric:tabular-nums;font-weight:400}
 .chip:disabled{opacity:.35;cursor:default}
