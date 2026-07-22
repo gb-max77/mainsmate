@@ -49,7 +49,6 @@ button{background:none;border:0;cursor:pointer}
 .icon:hover{background:var(--bg2);color:var(--ink)}
 .smartkey{position:relative;display:flex;align-items:center;gap:7px;padding:6px 21px 6px 9px;border:1px solid var(--line);border-radius:11px;color:var(--dim);font-size:11px;overflow:hidden}
 .smartkey:hover{border-color:var(--blue);color:var(--ink);background:linear-gradient(135deg,rgba(91,140,255,.13),transparent)}
-.smartkey kbd{position:absolute;right:4px;top:4px;display:grid;place-items:center;min-width:13px;height:13px;border-radius:4px;background:var(--card);color:var(--gold);font:700 8px/1 system-ui}
 .nav-icon{position:relative;display:inline-block;width:21px;height:21px;flex:none;color:currentColor}
 .home-icon::before{content:"";position:absolute;left:4px;top:8px;width:12px;height:10px;border:2px solid currentColor;border-top:0;border-radius:2px 2px 4px 4px}
 .home-icon::after{content:"";position:absolute;left:4px;top:3px;width:12px;height:12px;border-left:2px solid currentColor;border-top:2px solid currentColor;border-radius:3px 0 0;transform:rotate(45deg) scale(.72)}
@@ -89,8 +88,6 @@ body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
 .ring.rev{--c:var(--blue)}
 .ring i{width:30px;height:30px;border-radius:50%;background:var(--card);display:grid;place-items:center;
   font-size:10px;font-style:normal;color:var(--dim);font-variant-numeric:tabular-nums}
-.due{margin-top:26px}
-.due h2{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin:0 0 10px}
 
 /* ── list ── */
 #list-title{font-size:20px;margin:0 0 14px;letter-spacing:-.01em}
@@ -149,13 +146,14 @@ body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
 .empty{color:var(--faint);text-align:center;padding:40px 0;font-size:14px}
 
 /* ── answer ── */
-.modebar{display:flex;gap:9px;align-items:center;position:sticky;top:56px;z-index:20;
-  background:var(--glass);backdrop-filter:blur(14px);padding:5px 0 7px;border-bottom:1px solid var(--line);margin-bottom:12px}
-#answer-theme{height:31px;max-width:180px;padding:4px 26px 4px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--dim);font-size:11px}
-#pager-top{display:none}
-.modes{display:flex;gap:4px;background:var(--bg2);padding:3px;border-radius:9px;flex:none}
-.mode{font-size:12px;padding:6px 13px;border-radius:7px;color:var(--dim);white-space:nowrap}
+.modebar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;position:sticky;top:56px;z-index:20;
+  background:var(--glass);backdrop-filter:blur(14px);padding:6px 0 8px;border-bottom:1px solid var(--line);margin-bottom:14px}
+#answer-theme{height:31px;max-width:200px;padding:4px 26px 4px 8px;border:1px solid var(--line);border-radius:8px;background:var(--bg2);color:var(--dim);font-size:11px}
+/* the two reading views: a full-width segmented control, split evenly */
+.modes{display:flex;gap:4px;background:var(--bg2);padding:3px;border-radius:10px;flex:1 1 100%}
+.mode{flex:1;text-align:center;font-size:12.5px;padding:8px 4px;border-radius:8px;color:var(--dim);white-space:nowrap}
 .mode.active{background:var(--card);color:var(--ink);font-weight:600;box-shadow:0 1px 3px #0004}
+.mode:hover:not(.active){color:var(--ink)}
 .branch-toggle{position:relative;display:flex;align-items:center;gap:6px;min-height:34px;margin-left:auto;padding:5px 8px;border:1px solid var(--line);border-radius:9px;color:var(--dim)}
 .branch-toggle[hidden]{display:none}.branch-toggle.on{border-color:rgba(91,140,255,.7);background:rgba(91,140,255,.10);color:var(--ink)}
 .message-icon{position:relative;width:21px;height:16px;border-radius:6px;background:var(--blue)}
@@ -237,20 +235,6 @@ body[data-mode=scan] .pt{margin-bottom:8px}
 .btopic{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .qmeta .cm{color:var(--green);font-weight:700}
 
-/* ── legacy recall styles (unused, kept out of the way) ── */
-.rc.on{border-width:2px}
-.rc.r3.on{background:rgba(126,226,168,.14);border-color:var(--green)}
-.rc.r2.on{background:rgba(240,183,78,.14);border-color:var(--gold)}
-.rc.r1.on{background:rgba(255,107,107,.14);border-color:var(--t1)}
-
-/* ── pager (2) ── */
-.pager{display:flex;align-items:center;gap:12px;margin:26px 0 0;padding-top:16px;border-top:1px solid var(--line)}
-.pg{flex:1;font-size:13px;padding:10px 14px;border:1px solid var(--line);border-radius:9px;color:var(--dim);
-  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.pg:hover:not(:disabled){border-color:var(--blue);color:var(--ink)}
-.pg:disabled{opacity:.3;cursor:default}
-.pg[data-nav=prev]{text-align:left} .pg[data-nav=next]{text-align:right}
-.pg-pos{flex:none;font-size:11.5px;color:var(--faint);font-variant-numeric:tabular-nums}
 
 /* ── sidebar: the original site's left question map, made touch-friendly ── */
 #sidebar{position:fixed;top:56px;bottom:0;left:0;z-index:28;width:330px;max-width:86vw;
@@ -359,12 +343,11 @@ body.sb-open #sb-backdrop{display:block}
   .modebar{flex-wrap:wrap}
   .read-status{top:126px}
   .modes{flex-basis:100%;order:1}
-  #answer-theme,#btn-size,#btn-step,.branch-toggle,.read-toggle{order:2}
+  #answer-theme,#btn-size,.branch-toggle,.read-toggle{order:2}
   #answer-theme{max-width:132px;flex:1}
   .read-toggle{margin-left:auto}
 }
 @media (max-width:430px){
-  #btn-step{font-size:11.5px;padding-inline:8px}
   .read-toggle{font-size:11.5px;padding-inline:8px}
   .read-status{align-items:flex-start;flex-wrap:wrap}
   .read-status #read-status-text{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -431,9 +414,6 @@ html,body{line-height:var(--lh,1.68)}
 #answer{max-width:74ch;margin-inline:auto}
 #btn-size{font-weight:600;letter-spacing:.02em}
 
-/* ── answer pager ── */
-.pager.top{margin:0 0 4px;padding-top:0;border-top:0;border-bottom:1px solid var(--line);padding-bottom:12px}
-
 /* ── mark as completed ── */
 .done-wrap{display:flex;justify-content:center;margin-top:18px}
 #btn-done{font-size:13.5px;font-weight:600;padding:11px 26px;border-radius:99px;
@@ -492,3 +472,57 @@ body[data-mode=scan] .bh{margin-top:18px}
   :root,:root[data-theme=dark]{--line:#3a4152;--dim:#c6c8d4}
   :root[data-theme=light]{--line:#c9c0aa;--dim:#403c30}
 }
+
+
+/* ═══════════ MainsMate — focus & eye-comfort pass (edit 9) ═══════════ */
+/* Principle: the ANSWER is the object of attention. Everything else recedes.
+   Warm neutrals, generous rhythm, one saturated hue per structural role kept
+   as the memory hook; chrome is quiet and low-contrast. */
+
+/* the answer card is the brightest, most present surface on the page */
+.abox{padding:26px 30px;border-radius:16px;line-height:1.76;letter-spacing:.003em;
+  box-shadow:var(--shadow-soft)}
+:root[data-theme=dark] .abox{background:#20222d}   /* lifted a touch above the page */
+@media (max-width:560px){ .abox{padding:17px 17px} }
+#answer{max-width:66ch;margin-inline:auto}
+
+/* reading rhythm: air between points, clear heading separation */
+.abox .intro{margin-bottom:15px}
+.abox .bh{margin:26px 0 12px;font-size:15px;letter-spacing:.01em}
+.abox .pt{margin-bottom:15px}
+.abox .conc{margin-top:20px}
+.abox .wf{margin-top:20px}
+
+/* intros: keep the gold accent on the label, but let the sentence itself read
+   in a calmer high-legibility tone (gold italics over many lines strain) */
+.intro{color:var(--ink);opacity:.92}
+.intro b.lbl{color:var(--gold);opacity:1}
+
+/* chrome recedes: quieter top bar + dock, thinner separators */
+.topbar{border-bottom-color:color-mix(in srgb,var(--line) 60%,transparent)}
+.modebar{border-bottom-color:color-mix(in srgb,var(--line) 55%,transparent)}
+.smartkey{font-size:11px;color:var(--faint)}
+.smartkey:hover{color:var(--ink)}
+.qtitle{font-weight:650;line-height:1.5}
+.qmeta{opacity:.85}
+
+/* Read Along panel: calmer, thinner, less shouty */
+.read-status{background:color-mix(in srgb,var(--green) 6%,var(--card));
+  border-color:color-mix(in srgb,var(--green) 26%,var(--line))}
+.read-time-row progress,#read-details-toggle progress{height:4px}
+
+/* scan mode: the skeleton should feel airy and instantly parseable */
+body[data-mode=scan] .abox{line-height:1.66}
+body[data-mode=scan] .pt{margin-bottom:10px}
+body[data-mode=scan] .bh{margin-top:20px}
+
+/* de-emphasise the secondary actions (Regenerate / Copy) — present, not loud */
+.actions{margin-top:32px;opacity:.9}
+.act{color:var(--faint)}
+
+/* calmer selection + focus rings */
+::selection{background:color-mix(in srgb,var(--gold) 30%,transparent)}
+:focus-visible{outline:2px solid color-mix(in srgb,var(--blue) 70%,transparent);outline-offset:2px}
+
+/* gentle motion only */
+@media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}

@@ -356,8 +356,9 @@ async function renderAnswer(qid) {
     const cls = w > r.w * 1.05 ? 'over' : (w < lo ? 'thin' : 'ok');
     wc = ` · <span class="wc ${cls}">${w} / ${lo}-${r.w}w</span>`;
   }
+  // Paper · topic · tier · marks · word count — the facts that frame the answer.
   A.append(el('div', 'qmeta',
-    `${p.short} · ${r.sec} ${r.tier ? `· T${r.tier}` : ''} · ${r.m} marks · ${Math.round(r.m * 0.72)} min`
+    `${p.short} · ${esc(r.sec)}${r.tier ? ` · T${r.tier}` : ''} · ${r.m} marks`
     + (r.isBranch ? ` · ↳ branch of Q${r.parent.split('-')[1]}` : '')
     + wc
     + (store.isDone(qid) ? ` · <span class="cm">✓ completed</span>` : '')));
@@ -393,7 +394,6 @@ async function renderAnswer(qid) {
 
   paintDone(qid);
   paintBranchReadToggle(r);
-  renderPager(r);
   renderSidebar(r);
   applyMode();
   window.scrollTo(0, 0);
@@ -467,8 +467,12 @@ function speechParts() {
   const out = [];
   nodes.forEach((node, index) => {
     node.classList.add('read-segment');
+    // The scan-keyword is a visual scaffold that repeats the opening words of the
+    // expansion — narrate a clone with it stripped, or every point is read twice.
+    const clone = node.cloneNode(true);
+    clone.querySelectorAll('.scan-keyword').forEach(el => el.remove());
     const prefix = index === 0 ? 'Question. ' : '';
-    const words = cleanSpeech(prefix + node.textContent).split(' ').filter(Boolean);
+    const words = cleanSpeech(prefix + clone.textContent).split(' ').filter(Boolean);
     let chunk = '';
     for (const word of words) {
       if (chunk && `${chunk} ${word}`.length > 260) {
@@ -509,9 +513,7 @@ function answerReadSeconds(row) {
 
 function buildReadTimeline(parts) {
   if (!cur) return null;
-  const paper = paperOf(cur.pid);
-  const sequence = (readBranches ? rows(paper) : mainRows(cur.pid))
-    .filter(row => ANSWERS[row.pid]?.[row.qid]);
+  const sequence = navSequence(cur.pid).filter(row => ANSWERS[row.pid]?.[row.qid]);
   const target = cur.isBranch && !readBranches ? cur.parent : cur.qid;
   let currentIndex = sequence.findIndex(row => row.qid === target);
   if (currentIndex < 0) currentIndex = 0;
@@ -566,6 +568,19 @@ function startReadProgressTimer(parts) {
   }, 350);
 }
 
+// What the status line says while narrating: which question this is within the
+// paper (and, on a branch, which branch) — not the internal chunk being spoken.
+function readPositionLabel() {
+  if (!cur) return 'Reading';
+  const p = paperOf(cur.pid);
+  const mains = rows(p, true);
+  const key = cur.isBranch ? cur.parent : cur.qid;
+  const mi = mains.findIndex(r => r.qid === key);
+  let s = `${p.short} · Q${mains[mi]?.n ?? '?'} of ${mains.length}`;
+  if (cur.isBranch) s += ` · branch ${Number(cur.qid.split('-b')[1] || 0) + 1}`;
+  return s;
+}
+
 function paintReadAlong(message) {
   const btn = $('#btn-read');
   const status = $('#read-status');
@@ -613,39 +628,21 @@ function stopReadAlong(message = '') {
   paintReadAlong(message);
 }
 
-function nextMainQuestion(r) {
-  if (!r) return null;
-  const list = mainRows(r.pid);
-  const base = r.isBranch ? r.parent : r.qid;
-  const i = list.findIndex(x => x.qid === base);
-  return i >= 0 && i < list.length - 1 ? list[i + 1] : null;
-}
-
-function nextReadQuestion(r) {
-  if (!readBranches) return nextMainQuestion(r);
-  const parent = r.isBranch ? findRow(r.parent) : r;
-  if (!parent) return nextMainQuestion(r);
-  const branchRows = (parent.branches || [])
-    .map((_, i) => findRow(qidOf(r.pid, parent.n, i)))
-    .filter(row => row && ANSWERS[row.pid]?.[row.qid]);
-  if (!r.isBranch && branchRows.length) return branchRows[0];
-  if (r.isBranch) {
-    const i = branchRows.findIndex(x => x.qid === r.qid);
-    if (i >= 0 && i < branchRows.length - 1) return branchRows[i + 1];
-  }
-  return nextMainQuestion(parent);
-}
-
+// Read Along walks the very same sequence as the arrows, so "next" is identical
+// whether you press → or let narration roll on — and Branches off means it never
+// steps into a branch answer.
 function advanceReadAlong() {
   if (!readAlong || !cur) return;
   readRun++;
   if (canSpeak()) speechSynthesis.cancel();
-  const next = nextReadQuestion(cur);
+  const seq = navSequence(cur.pid);
+  const i = navIndex(seq);
+  const next = i >= 0 ? seq[i + 1] : null;
   if (next) {
-    paintReadAlong(next.isBranch ? 'Main answer complete · opening branch answer' : 'Question complete · opening next main answer');
+    paintReadAlong(next.isBranch ? 'Branch answer next…' : 'Next question…');
     go(`#/a/${next.qid}`);
   }
-  else stopReadAlong('Paper complete — you reached the final question.');
+  else stopReadAlong('Paper complete — you reached the final answer.');
 }
 
 function populateVoiceOptions() {
@@ -733,7 +730,7 @@ function startReadAlong(startIndex = 0) {
       part.node.classList.add('reading-now');
       part.node.scrollIntoView({ block: 'center', behavior: 'smooth' });
       paintReadProgress(readSegmentStartRatio, parts);
-      paintReadAlong(`Reading ${index + 1} of ${parts.length} · ${cur.qid.toUpperCase()}`);
+      paintReadAlong(readPositionLabel());
     };
     utterance.onboundary = event => {
       if (run !== readRun || readPaused) return;
@@ -753,7 +750,7 @@ function startReadAlong(startIndex = 0) {
     speechSynthesis.speak(utterance);
   };
 
-  paintReadAlong(`Reading ${cur.qid.toUpperCase()}…`);
+  paintReadAlong(readPositionLabel());
   speak(firstIndex);
 }
 
@@ -919,27 +916,23 @@ async function searchNotes(q) {
 // Both walk the same ordered list of main questions, so "next" in the pager and
 // the sidebar's order can never disagree.
 const mainRows = pid => { const p = paperOf(pid); return p ? rows(p, true) : []; };
-const answerNavRows = pid => {
-  const p = paperOf(pid); if (!p) return [];
-  return rows(p).filter(row => answerTheme === 'all' || row.sec === answerTheme);
-};
 
-function renderPager(r) {
-  const list = mainRows(r.pid);
-  const base = r.isBranch ? r.parent : r.qid;
-  const i = list.findIndex(x => x.qid === base);
-  const prev = i > 0 ? list[i - 1] : null, next = i >= 0 && i < list.length - 1 ? list[i + 1] : null;
-  const label = i >= 0 ? `Q${list[i].n} · ${i + 1} of ${list.length}` : '';
-  // Keep the page-level navigation and the app dock on the same ordered list.
-  for (const nav of document.querySelectorAll('.pager')) {
-    nav.querySelector('.pg-pos').textContent = label;
-    for (const btn of nav.querySelectorAll('.pg')) {
-      const tgt = btn.dataset.nav === 'prev' ? prev : next;
-      btn.disabled = !tgt;
-      btn.title = tgt ? tgt.q.slice(0, 90) : '';
-      btn.onclick = tgt ? () => go(`#/a/${tgt.qid}`) : null;
-    }
-  }
+// The ONE ordered list every prev/next consumer walks (arrows, dock, Read Along
+// advance, timeline). Respects the selected theme AND the Branches toggle:
+//   branches on  → main, its branches, next main, …
+//   branches off → main questions only (arrows and narration skip branches).
+function navSequence(pid) {
+  const p = paperOf(pid); if (!p) return [];
+  const base = readBranches ? rows(p) : rows(p, true);
+  return base.filter(row => answerTheme === 'all' || row.sec === answerTheme);
+}
+const answerNavRows = navSequence;
+
+// Where `cur` sits in the sequence. With branches off while viewing a branch, we
+// anchor to its parent so prev/next still make sense.
+function navIndex(seq) {
+  const key = (!readBranches && cur?.isBranch) ? cur.parent : cur?.qid;
+  return seq.findIndex(r => r.qid === key);
 }
 
 function paintDone(qid) {
@@ -967,9 +960,11 @@ function renderSidebar(r) {
   const L = $('#sb-list'); L.innerHTML = '';
   const paper = paperOf(r.pid);
   const all = rows(paper);
+  const mainCount = rows(paper, true).length;
+  const branchCount = all.length - mainCount;
   const available = all.filter(q => ANSWERS[r.pid]?.[q.qid]).length;
   $('#sb-title').textContent = paper?.short || paper?.name || 'Question map';
-  $('#sb-progress').textContent = `${available}/${all.length} answers · main + branches`;
+  $('#sb-progress').textContent = `${mainCount} main · ${branchCount} branch${branchCount === 1 ? '' : 'es'} · ${available} answered`;
   $('#sb-search').value = '';
   let sec = null;
   for (const q of mainRows(r.pid).filter(q => answerTheme === 'all' || q.sec === answerTheme)) {
@@ -1010,9 +1005,9 @@ function subjectHash() {
 
 function dockMove(direction) {
   if (!cur) return;
-  const list = answerNavRows(cur.pid);
-  const i = list.findIndex(row => row.qid === cur.qid);
-  const target = direction === 'next' ? list[i + 1] : list[i - 1];
+  const seq = navSequence(cur.pid);
+  const i = navIndex(seq);
+  const target = direction === 'next' ? seq[i + 1] : seq[i - 1];
   if (target) go(`#/a/${target.qid}`);
 }
 
@@ -1022,10 +1017,10 @@ function paintDock() {
   const next = $('#app-dock [data-dock="next"]');
   prev.hidden = !answer;
   next.hidden = !answer;
-  const list = cur ? answerNavRows(cur.pid) : [];
-  const i = cur ? list.findIndex(row => row.qid === cur.qid) : -1;
+  const seq = cur ? navSequence(cur.pid) : [];
+  const i = cur ? navIndex(seq) : -1;
   prev.disabled = i <= 0;
-  next.disabled = i < 0 || i >= list.length - 1;
+  next.disabled = i < 0 || i >= seq.length - 1;
   document.body.classList.toggle('answer-open', answer);
 }
 
@@ -1106,9 +1101,9 @@ $('#q-search').oninput = e => { filt.q = e.target.value; renderList(); };
 $('#theme-sel').onchange = e => { filt.theme = e.target.value; renderList(); };
 $('#answer-theme').onchange = e => {
   answerTheme = e.target.value;
-  const first = answerNavRows(cur.pid)[0];
+  const first = navSequence(cur.pid)[0];
   if (first && first.sec !== cur.sec) go(`#/a/${first.qid}`);
-  else { renderPager(cur); paintDock(); renderSidebar(cur); }
+  else { paintDock(); renderSidebar(cur); }
 };
 $('#tier-chips').onclick = e => {
   const c = e.target.closest('.chip'); if (!c) return;
