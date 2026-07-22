@@ -530,23 +530,23 @@ body[data-mode=scan] .bh{margin-top:20px}
 
 /* ═══════════════ Hand-drawable diagrams + toggle ═══════════════ */
 .abox{position:relative}
-.diag-toggle{position:absolute;top:14px;right:14px;z-index:3;font-size:11.5px;padding:5px 11px;
-  border:1px solid var(--line);border-radius:9px;color:var(--faint);background:var(--card);
-  font-family:var(--ui-font);line-height:1}
-.diag-toggle:hover{border-color:var(--blue);color:var(--ink)}
-.diag-toggle.on{border-color:var(--blue);color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,var(--card))}
-body[data-mode=scan] .diag-toggle{display:none}
-/* keep the toggle from colliding with the first line of the answer */
-.abox.has-toggle{padding-top:30px}
+/* the flip control sits on the heading of the section it flips, so flipping back
+   is right where you are looking */
+.bh:has(.seg-flip){display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.seg-flip{margin-left:auto;flex:none;font-size:11px;padding:4px 10px;border:1px solid var(--line);
+  border-radius:8px;color:var(--faint);background:var(--card);font-family:var(--ui-font);
+  font-weight:600;line-height:1}
+.seg-flip:hover{border-color:var(--blue);color:var(--ink)}
+.seg-flip.on{border-color:var(--blue);color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,var(--card))}
+body[data-mode=scan] .seg-flip{display:none}
 
-/* swap-in-place: hide the section's bullets, reveal its diagram */
 /* Flip like a card: the diagram appears IN PLACE OF the section it represents and
    flips back to the bullets on toggle. The diagram carries that section's content
    so nothing leaks. Read Along is unaffected — it reads the point text straight
    from the DOM whether the bullets are showing or flipped away. */
 .segdiag{display:none}
-body[data-mode=full] .abox.diag-on .has-diag .pts{display:none}
-body[data-mode=full] .abox.diag-on .has-diag .segdiag{display:block;animation:dgin .2s ease}
+body[data-mode=full] .bsec.flip .pts{display:none}
+body[data-mode=full] .bsec.flip .segdiag{display:block;animation:dgin .2s ease}
 @keyframes dgin{from{opacity:0;transform:perspective(700px) rotateX(-14deg)}to{opacity:1;transform:none}}
 
 /* the picture: simple, reproducible by hand, theme-aware */

@@ -328,8 +328,9 @@ function answerHTML(a) {
   digs.forEach(d => { if (Number.isInteger(d.seg)) (bySeg[d.seg] = bySeg[d.seg] || []).push(d); });
   (a.body || []).forEach((bd, bi) => {
     const segdig = (bySeg[bi] || []).map(renderDiag).join('');
+    const flipBtn = segdig ? `<button class="seg-flip" type="button" title="Flip these points to a hand-drawable diagram, and back">◨ Diagram</button>` : '';
     h += `<section class="bsec${segdig ? ' has-diag' : ''}" data-si="${bi}">`
-      + `<div class="bh">H${bi + 1} — ${md(bd.h)}</div>`
+      + `<div class="bh">H${bi + 1} — ${md(bd.h)}${flipBtn}</div>`
       + `<div class="pts">` + (bd.p || []).map(pt => `<p class="pt${pt.unv ? ' unv' : ''}">${pointHTML(pt)}</p>`).join('') + `</div>`
       + (segdig ? `<div class="segdiag">${segdig}</div>` : '')
       + `</section>`;
@@ -401,20 +402,8 @@ async function renderAnswer(qid) {
   A.insertAdjacentHTML('beforeend',
     `<div class="abox">${a ? answerHTML(a) : noAnswerHTML(r)}</div>`);
 
-  // Diagram toggle — swaps the diagrammable section(s) between bullets and a
-  // hand-drawable picture. Model Answer view only; only when the answer has one.
-  if (a && diagList(a).length) {
-    const abox = A.querySelector('.abox');
-    const db = el('button', 'diag-toggle', '◨ Diagram');
-    db.title = 'Flip the relevant points to a hand-drawable diagram, and back';
-    db.onclick = () => {
-      const on = abox.classList.toggle('diag-on');
-      db.classList.toggle('on', on);
-      db.textContent = on ? '≡ Text' : '◨ Diagram';
-    };
-    abox.classList.add('has-toggle');
-    abox.appendChild(db);
-  }
+  // The Diagram flip lives on each diagrammable section's heading (see the
+  // #answer click handler); nothing to add at the answer level.
 
   // Branches ride on the same prepared content, so they live WITH the parent rather
   // than as separate destinations — each expands inline instead of navigating away.
@@ -453,11 +442,11 @@ async function renderAnswer(qid) {
 function applyMode() {
   document.body.dataset.mode = mode;
   $('#modes')?.querySelectorAll('.mode').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
-  // Diagram view is a Model-Answer affordance — leaving that view resets it.
-  if (mode !== 'full') {
-    $('#answer .abox')?.classList.remove('diag-on');
-    const db = $('.diag-toggle'); if (db) { db.classList.remove('on'); db.textContent = '◨ Diagram'; }
-  }
+  // Diagram flips are a Model-Answer affordance — leaving that view flips them back.
+  if (mode !== 'full') $('#answer').querySelectorAll('.bsec.flip').forEach(s => {
+    s.classList.remove('flip');
+    const b = s.querySelector('.seg-flip'); if (b) { b.classList.remove('on'); b.textContent = '◨ Diagram'; }
+  });
 }
 
 // The nodes Read Along narrates, in reading order — also the targets for the
@@ -1211,6 +1200,16 @@ populateVoiceOptions();
 if (canSpeak()) speechSynthesis.addEventListener('voiceschanged', populateVoiceOptions);
 // Tap any line to read from there — works whether or not narration is running.
 $('#answer').addEventListener('click', e => {
+  // Per-section diagram flip lives on the heading — handle it before tap-to-read.
+  const flip = e.target.closest('.seg-flip');
+  if (flip) {
+    e.stopPropagation();
+    const sec = flip.closest('.bsec');
+    const on = sec.classList.toggle('flip');
+    flip.classList.toggle('on', on);
+    flip.textContent = on ? '≡ Text' : '◨ Diagram';
+    return;
+  }
   const target = e.target.closest('.qtitle, .intro, .bh, .pt, .diag, .wf, .conc, .nowrite');
   if (!target) return;
   const index = speechParts().findIndex(part => part.node === target);
