@@ -541,8 +541,8 @@ body[data-mode=scan] .diag-toggle{display:none}
 
 /* swap-in-place: hide the section's bullets, reveal its diagram */
 .segdiag{display:none}
-.abox.diag-on .has-diag .pts{display:none}
-.abox.diag-on .has-diag .segdiag,.abox.diag-on .segdiag.standalone{display:block;animation:dgin .18s ease}
+body[data-mode=full] .abox.diag-on .has-diag .pts{display:none}
+body[data-mode=full] .abox.diag-on .has-diag .segdiag,body[data-mode=full] .abox.diag-on .segdiag.standalone{display:block;animation:dgin .18s ease}
 @keyframes dgin{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
 
 /* the picture: simple, reproducible by hand, theme-aware */
