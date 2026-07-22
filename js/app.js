@@ -257,13 +257,40 @@ function writtenWords(a) {
   return parts.join(' ').replace(/\*\*|[•·—–]/g, ' ').split(/\s+/).filter(Boolean).length;
 }
 
-function diagHTML(d) {
-  if (!d) return '';
-  const parts = String(d.d).split(/\s*(?:→|->)\s*/);
-  const body = parts.length > 1
-    ? `<div class="flow">${parts.map(x => `<span class="node">${esc(x)}</span>`).join('<span class="arw">→</span>')}</div>`
-    : `<div>${esc(d.d)}</div>`;
-  return `<div class="diag"><div class="lbl">Diagram · ${esc(d.k)} · drawable in 30s</div>${body}</div>`;
+// ── Hand-drawable diagrams ──────────────────────────────────────────────────
+// A diagram re-presents EXISTING answer points as something a candidate can
+// reproduce by hand in ~30s: a flow (A→B→C), a cycle (loop), a hub (centre +
+// spokes) or a tree (root + branches). `seg` (0-based) ties it to a body section
+// so the Diagram toggle swaps that section's bullets for the picture in place.
+function normDiag(d) {
+  if (!d) return null;
+  // legacy shape {k:'flow', d:'A → B → C'}
+  if (d.d && !d.nodes) {
+    return { type: d.k || 'flow', seg: d.seg, title: d.title || '', center: d.center,
+      nodes: String(d.d).split(/\s*(?:→|->)\s*/).map(s => s.trim()).filter(Boolean),
+      note: d.note || 'drawable in 30s' };
+  }
+  return { type: d.type || 'flow', seg: d.seg, title: d.title || '', center: d.center,
+    nodes: (d.nodes || []).slice(), note: d.note || 'drawable in 30s' };
+}
+const diagList = a => (Array.isArray(a.diag) ? a.diag : (a.diag ? [a.diag] : [])).map(normDiag).filter(d => d && (d.nodes.length || d.center));
+const dNode = (x, cls) => `<span class="dnode${cls ? ' ' + cls : ''}">${md(x)}</span>`;
+
+function renderDiag(d) {
+  const cap = `<div class="dg-cap">${d.title ? esc(d.title) : esc(d.type)}${d.note ? ` · <i>${esc(d.note)}</i>` : ''}</div>`;
+  let inner;
+  if (d.type === 'hub') {
+    inner = `<div class="dg-hub"><div class="dnode dcenter">${md(d.center || '')}</div>`
+      + `<div class="dspokes">${d.nodes.map(n => dNode(n)).join('')}</div></div>`;
+  } else if (d.type === 'tree') {
+    inner = `<div class="dg-tree"><div class="dnode droot">${md(d.center || '')}</div>`
+      + `<div class="dbranches">${d.nodes.map(n => dNode(n)).join('')}</div></div>`;
+  } else { // flow | cycle
+    inner = `<div class="dg-flow${d.type === 'cycle' ? ' dg-cycle' : ''}">`
+      + d.nodes.map(n => dNode(n)).join('<span class="darw">→</span>')
+      + (d.type === 'cycle' ? '<span class="dloop" title="repeats">↺</span>' : '') + `</div>`;
+  }
+  return `<div class="dg dg-${esc(d.type)}">${cap}${inner}</div>`;
 }
 
 // Each paper is marked on different things, so the regeneration prompt differs.
@@ -296,11 +323,19 @@ function answerHTML(a) {
       + (a.flash || []).slice(0, 5).map(x => `<span class="keyword-cue">${md(x)}</span>`).join('') + `</div>`;
   }
   for (const i of a.intro || []) h += `<p class="intro"><b class="lbl">Intro (${esc(i.t)}):</b> ${md(i.x)}</p>`;
+  const digs = diagList(a);
+  const bySeg = {};
+  digs.forEach(d => { if (Number.isInteger(d.seg)) (bySeg[d.seg] = bySeg[d.seg] || []).push(d); });
   (a.body || []).forEach((bd, bi) => {
-    h += `<div class="bh">H${bi + 1} — ${md(bd.h)}</div>`;
-    for (const pt of bd.p || []) h += `<p class="pt${pt.unv ? ' unv' : ''}">${pointHTML(pt)}</p>`;
+    const segdig = (bySeg[bi] || []).map(renderDiag).join('');
+    h += `<section class="bsec${segdig ? ' has-diag' : ''}" data-si="${bi}">`
+      + `<div class="bh">H${bi + 1} — ${md(bd.h)}</div>`
+      + `<div class="pts">` + (bd.p || []).map(pt => `<p class="pt${pt.unv ? ' unv' : ''}">${pointHTML(pt)}</p>`).join('') + `</div>`
+      + (segdig ? `<div class="segdiag">${segdig}</div>` : '')
+      + `</section>`;
   });
-  if (a.diag) h += diagHTML(a.diag);
+  const standalone = digs.filter(d => !Number.isInteger(d.seg));
+  if (standalone.length) h += `<div class="segdiag standalone">${standalone.map(renderDiag).join('')}</div>`;
   if (a.wf?.length) h += `<p class="wf"><b class="lbl">Way Forward:</b> ${a.wf.map(md).join(' · ')}</p>`;
   if (a.mne) h += `<p class="wf"><b class="lbl">Mnemonic:</b> ${md(a.mne)}</p>`;
   if (a.conc) h += `<p class="conc">Conclusion: ${md(a.conc)}</p>`;
@@ -366,6 +401,21 @@ async function renderAnswer(qid) {
   A.insertAdjacentHTML('beforeend',
     `<div class="abox">${a ? answerHTML(a) : noAnswerHTML(r)}</div>`);
 
+  // Diagram toggle — swaps the diagrammable section(s) between bullets and a
+  // hand-drawable picture. Model Answer view only; only when the answer has one.
+  if (a && diagList(a).length) {
+    const abox = A.querySelector('.abox');
+    const db = el('button', 'diag-toggle', '◨ Diagram');
+    db.title = 'Show these points as a hand-drawable diagram';
+    db.onclick = () => {
+      const on = abox.classList.toggle('diag-on');
+      db.classList.toggle('on', on);
+      db.textContent = on ? '≡ Text' : '◨ Diagram';
+    };
+    abox.classList.add('has-toggle');
+    abox.appendChild(db);
+  }
+
   // Branches ride on the same prepared content, so they live WITH the parent rather
   // than as separate destinations — each expands inline instead of navigating away.
   const parent = r.isBranch ? findRow(r.parent) : r;
@@ -403,6 +453,11 @@ async function renderAnswer(qid) {
 function applyMode() {
   document.body.dataset.mode = mode;
   $('#modes')?.querySelectorAll('.mode').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
+  // Diagram view is a Model-Answer affordance — leaving that view resets it.
+  if (mode !== 'full') {
+    $('#answer .abox')?.classList.remove('diag-on');
+    const db = $('.diag-toggle'); if (db) { db.classList.remove('on'); db.textContent = '◨ Diagram'; }
+  }
 }
 
 // The nodes Read Along narrates, in reading order — also the targets for the

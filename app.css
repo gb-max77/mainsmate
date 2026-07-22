@@ -526,3 +526,47 @@ body[data-mode=scan] .bh{margin-top:20px}
 
 /* gentle motion only */
 @media (prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+
+
+/* ═══════════════ Hand-drawable diagrams + toggle ═══════════════ */
+.abox{position:relative}
+.diag-toggle{position:absolute;top:14px;right:14px;z-index:3;font-size:11.5px;padding:5px 11px;
+  border:1px solid var(--line);border-radius:9px;color:var(--faint);background:var(--card);
+  font-family:var(--ui-font);line-height:1}
+.diag-toggle:hover{border-color:var(--blue);color:var(--ink)}
+.diag-toggle.on{border-color:var(--blue);color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,var(--card))}
+body[data-mode=scan] .diag-toggle{display:none}
+/* keep the toggle from colliding with the first line of the answer */
+.abox.has-toggle{padding-top:30px}
+
+/* swap-in-place: hide the section's bullets, reveal its diagram */
+.segdiag{display:none}
+.abox.diag-on .has-diag .pts{display:none}
+.abox.diag-on .has-diag .segdiag,.abox.diag-on .segdiag.standalone{display:block;animation:dgin .18s ease}
+@keyframes dgin{from{opacity:0;transform:translateY(4px)}to{opacity:1}}
+
+/* the picture: simple, reproducible by hand, theme-aware */
+.dg{margin:12px 0 4px;padding:16px 15px 18px;border:1.5px dashed color-mix(in srgb,var(--blue) 42%,var(--line));
+  border-radius:16px;background:color-mix(in srgb,var(--blue) 5%,transparent);font-family:var(--ui-font)}
+.dg-cap{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:var(--faint);margin-bottom:13px}
+.dg-cap i{text-transform:none;letter-spacing:0;color:var(--ghost)}
+.dnode{display:inline-flex;align-items:center;justify-content:center;text-align:center;
+  padding:7px 13px;border:1.75px solid var(--blue);background:var(--card);color:var(--ink);
+  font-size:13px;font-weight:600;line-height:1.28;
+  border-radius:11px 13px 10px 12px}          /* faintly irregular = hand-drawn feel */
+.dnode b{color:inherit}
+.darw{margin:0 7px;color:var(--blue);font-weight:800}
+.dloop{margin-left:9px;color:var(--gold);font-size:17px;font-weight:700}
+
+.dg-flow{display:flex;flex-wrap:wrap;align-items:center;gap:9px 0}
+.dg-cycle{padding-right:4px}
+
+.dg-hub,.dg-tree{display:flex;flex-direction:column;align-items:center;gap:0}
+.dcenter,.droot{border-color:var(--gold);color:var(--gold);font-size:14px;padding:9px 17px;border-width:2px}
+.dspokes,.dbranches{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;position:relative;
+  margin-top:16px}
+.dspokes::before,.dbranches::before{content:"";position:absolute;top:-16px;left:50%;width:2px;height:16px;
+  background:color-mix(in srgb,var(--blue) 55%,var(--line))}
+.dspokes .dnode{border-color:var(--green)}
+.dbranches .dnode{border-color:var(--blue)}
+@media (max-width:560px){ .dg-flow{flex-direction:column;align-items:flex-start} .darw{transform:rotate(90deg);margin:2px 0 2px 16px} }
