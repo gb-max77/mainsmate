@@ -135,12 +135,26 @@ curl -s https://gb-max77.github.io/mainsmate/sw.js | grep -o "mainsmate-v[0-9]*"
 - [x] **PubAd II: 63/63 T1 complete** — only 4 mains were template-broken
       (93-96, rewritten); rest were strong, needed only artifact/headless
       cleanup + 2 ceiling trims. 0 out-of-band, 0 template-broken. Deployed (v9).
-- [ ] GS-3: 0/29 T1 — next up.
-- [ ] GS-2: 0/46 T1 — push after this one per user's stated cadence
-- [ ] GS-1: 0/37 T1
-- Note: GS papers may or may not share the PubAd template defect — run the
-  detector first (grep `"Disciplinary anchor"` / `"Federal Consultation"`, and
-  the structural detector for artifact/headless/empty points).
+- [x] **GS-3: 29/29 T1 complete** — already excellent/current; only trims (5) +
+      2 artifact renames. Deployed (v10).
+- [x] **GS-2: 46/46 T1 complete** — 12 template-broken (71-82) rewritten; 34
+      clean. Deployed (v11).
+- [x] **GS-1: 37/37 T1 complete** — fully clean, no defects; only 6 ceiling
+      trims. Deployed (v12).
+
+### ✅ T1 PASS COMPLETE — 243 answers across all 5 scheduled papers, all in
+band, 0 template-broken, 0 out-of-band.
+
+## Remaining for full-completion (per user's ultimate goal: "all papers all
+## questions and branches")
+
+- [ ] **T2 / T3 tiers** for PubAd I, PubAd II, GS-1/2/3 (same method + template
+      detector; the T1/T2/T3 toggle already filters these for the user).
+- [ ] **Branch answers** (`<pid>-<n>-b<i>`) — the branch template defect exists
+      (e.g. `pubad2-35-b0`, `-53-b0`, `-66-b0/b1`, `-70-b2`, `-77-b1`, `-88-b0`);
+      run the detector across all `*-b*` keys before enriching.
+- [ ] **GS-4 (36 T1) and Essay (7 T1)** — explicitly out of the original scope;
+      confirm with user before starting.
 
 ## Live site
 
