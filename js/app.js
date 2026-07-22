@@ -1,51 +1,48 @@
 // ── MainsMate ── one module, no build step. Data in, reader out.
-import { speech, SPEEDS } from './tts.js';
 const $ = s => document.querySelector(s);
 const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
 const esc = s => String(s ?? '').replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[m]));
-// **gold** spans are the load-bearing keywords — they drive Cloze masking too.
+// **gold** spans are the load-bearing keywords used for rapid visual scanning.
 const md = s => esc(s)
   .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
   .replace(/(^|[^*])\*(?!\s)([^*]+?)\*(?!\*)/g, '$1<i>$2</i>');
 
 const EXAM = { essay: '2026-08-21', gs1: '2026-08-22', gs2: '2026-08-22', gs3: '2026-08-23', gs4: '2026-08-23', pubad1: '2026-08-30', pubad2: '2026-08-30' };
-// The order you revise in, not the order UPSC sits them.
-const ORDER = ['gs1', 'gs3', 'pubad1', 'pubad2', 'gs2', 'gs4', 'essay'];
+// Actual examination sequence: Essay, four GS papers, then the optional papers.
+const ORDER = ['essay', 'gs1', 'gs2', 'gs3', 'gs4', 'pubad1', 'pubad2'];
 
+// Progress is a single signal: completed or not. Recall/SRS was removed — the
+// "Not completed" filter is how you find what still needs a read-through.
 const store = {
   get k() { return 'mm-progress'; },
   data: JSON.parse(localStorage.getItem('mm-progress') || '{}'),
   save() { localStorage.setItem(this.k, JSON.stringify(this.data)); },
-  rec(qid) { return this.data[qid] || null; },
   isDone(qid) { return !!this.data[qid]?.done; },
   toggleDone(qid) {
     const e = this.data[qid] = this.data[qid] || {};
     e.done = !e.done;
-    if (e.done) e.doneAt = Date.now(); else delete e.doneAt;
-    if (!e.done && !e.r) delete this.data[qid];       // no state left worth keeping
+    if (e.done) e.doneAt = Date.now(); else delete this.data[qid];
     this.save();
     return !!e.done;
-  },
-  // SRS: Blank→1d, Shaky→3d, Confident→10d. Deliberately coarse — this is a 5-week run-in, not Anki.
-  mark(qid, r) {
-    // clicking the already-selected rating clears it — a question can go back to unmarked
-    if (this.data[qid]?.r === r) {
-      const e = this.data[qid];
-      delete e.r; delete e.due; delete e.seen;
-      if (!e.done) delete this.data[qid];
-      this.save();
-      return null;
-    }
-    const days = { 1: 1, 2: 3, 3: 10 }[r];
-    const e = this.data[qid] = this.data[qid] || {};
-    Object.assign(e, { r, seen: Date.now(), due: Date.now() + days * 864e5 });
-    this.save();
-    return r;
   }
 };
 
-let PAPERS = [], ANSWERS = {}, cur = null, mode = 'full', stepOn = false, stepIdx = -1;
-let branchesOn = (localStorage.getItem('mm-branches') ?? '1') === '1';
+// Two reading views: "Model Answer" (full) is the complete answer; "Scan" is a
+// 60-second skeleton (intro, headings, point heads + a 1-3 word keyword, examples).
+// Read Along narrates the full text in either view.
+let PAPERS = [], ANSWERS = {}, cur = null;
+let mode = localStorage.getItem('mm-mode') || 'full';
+let lineIdx = -1;                       // reading cursor for ↑/↓ line navigation
+let answerTheme = 'all';
+let readAlong = false, readPaused = false, readRun = 0, readCurrentIndex = 0;
+let readProgressTimer = null, readProgressRatio = 0, readSegmentStartedAt = 0;
+let readSegmentStartRatio = 0, readSegmentEndRatio = 0, readSegmentDuration = 0;
+let readTimelineMeta = null;
+let readDetailsOpen = false;
+let readVoiceURI = localStorage.getItem('mm-read-voice') || 'auto-uk-female';
+let readSpeed = Number(localStorage.getItem('mm-read-speed') || .9);
+let readBranches = localStorage.getItem('mm-read-branches') !== 'false';
+if (![.75, .9, 1, 1.15, 1.3].includes(readSpeed)) readSpeed = .9;
 
 const paperOf = id => PAPERS.find(p => p.id === id);
 const qidOf = (pid, n, b) => b == null ? `${pid}-${n}` : `${pid}-${n}-b${b}`;
@@ -53,7 +50,7 @@ const qidOf = (pid, n, b) => b == null ? `${pid}-${n}` : `${pid}-${n}-b${b}`;
 async function loadAnswers(pid) {
   if (ANSWERS[pid]) return ANSWERS[pid];
   try {
-    const r = await fetch(`data/answers/${pid}.json`, { cache: 'no-cache' });
+    const r = await fetch(`data/answers/${pid}.json?v=16`, { cache: 'no-cache' });
     ANSWERS[pid] = r.ok ? await r.json() : {};
   } catch { ANSWERS[pid] = {}; }
   return ANSWERS[pid];
@@ -102,35 +99,21 @@ function renderHome() {
     const w = bs.reduce((s, b) => s + b.chapters.reduce((t, c) => t + c.w, 0), 0);
     $('#notes-sub').textContent = `${bs.length} books · ${ch} chapters · ${(w / 1000).toFixed(0)}k words`;
   });
-
-  const due = [];
-  for (const p of PAPERS) for (const r of rows(p)) {
-    const rc = store.rec(r.qid);
-    if (rc && rc.due < Date.now() && ANSWERS[p.id]?.[r.qid]) due.push(r);
-  }
-  $('#due-wrap').hidden = !due.length;
-  if (due.length) {
-    const L = $('#due-list'); L.innerHTML = '';
-    due.slice(0, 12).forEach(r => L.append(qRow(r)));
-  }
 }
 
 /* ══════════════════ LIST ══════════════════ */
-const isThin = (a, r) => writtenWords(a) < (r.wmin || 0) || (a.body || []).length < 2;
-
 let filt = { tier: 'all', q: '', theme: 'all', pid: null };
 
 function qRow(r) {
-  const a = ANSWERS[r.pid]?.[r.qid], rc = store.rec(r.qid);
+  const a = ANSWERS[r.pid]?.[r.qid];
   const b = el('button', `qrow tier${r.tier || 3}${r.isBranch ? ' branch' : ''}`);
-  const rcTxt = rc ? `<span class="rc${rc.r}">${['', '● Blank', '● Shaky', '● Confident'][rc.r]}</span>` : '';
   b.innerHTML = `<span class="meta">
       ${r.tier ? `<span class="tag t${r.tier}">T${r.tier}</span>` : ''}
       <span>${r.m}M · ${r.w}w</span>
       ${r.isBranch ? '<span>↳ branch</span>' : ''}
       ${a ? '<span class="ok">✓ written</span>' : ''}
       ${store.isDone(r.qid) ? '<span class="cm">◉ completed</span>' : ''}
-      ${rcTxt}</span><p><span class="qn">Q${r.n}.</span> ${esc(r.q)}</p>`;
+      </span><p><span class="qn">Q${r.n}.</span> ${esc(r.q)}</p>`;
   b.onclick = () => go(`#/a/${r.qid}`);
   if (r.isBranch || !r.branches?.length) return b;
 
@@ -164,17 +147,13 @@ function qRow(r) {
 function paintChipCounts(p) {
   const all = rows(p, true);
   const inTheme = r => filt.theme === 'all' || r.sec === filt.theme;
-  const n = {
-    all: all.filter(inTheme).length,
-    1: 0, 2: 0, 3: 0, todo: 0, thin: 0, weak: 0,
-  };
+  const n = { all: all.filter(inTheme).length, 1: 0, 2: 0, 3: 0, todo: 0, undone: 0, done: 0 };
   for (const r of all) {
     if (!inTheme(r)) continue;
     if (r.tier) n[r.tier]++;
     const a = ANSWERS[p.id]?.[r.qid];
-    if (!a) n.todo++; else if (isThin(a, r)) n.thin++;
-    const rc = store.rec(r.qid);
-    if (rc && rc.r <= 2) n.weak++;
+    if (!a) n.todo++;
+    if (store.isDone(r.qid)) n.done++; else n.undone++;
   }
   for (const c of $('#tier-chips').querySelectorAll('.chip')) {
     const k = c.dataset.tier;
@@ -184,7 +163,9 @@ function paintChipCounts(p) {
     s.textContent = ` (${n[k] ?? 0})`;
     c.append(s);
     c.disabled = (n[k] ?? 0) === 0 && k !== 'all';
+    c.hidden = ['todo', 'undone', 'done'].includes(k) && (n[k] ?? 0) === 0;
   }
+  return n;
 }
 
 function renderList() {
@@ -199,13 +180,18 @@ function renderList() {
     sel.value = 'all'; filt.theme = 'all';
   }
 
+  const counts = paintChipCounts(p);
+  if (filt.tier !== 'all' && (counts[filt.tier] ?? 0) === 0) {
+    filt.tier = 'all';
+    $('#tier-chips').querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.tier === 'all')));
+  }
   const needle = filt.q.toLowerCase();
   const list = rows(p, true).filter(r => {
     if (filt.theme !== 'all' && r.sec !== filt.theme) return false;
     const ans = ANSWERS[p.id]?.[r.qid];
     if (filt.tier === 'todo') { if (ans) return false; }
-    else if (filt.tier === 'thin') { if (!ans || !isThin(ans, r)) return false; }
-    else if (filt.tier === 'weak') { const rc = store.rec(r.qid); if (!rc || rc.r > 2) return false; }
+    else if (filt.tier === 'undone') { if (store.isDone(r.qid)) return false; }
+    else if (filt.tier === 'done') { if (!store.isDone(r.qid)) return false; }
     else if (filt.tier !== 'all' && String(r.tier) !== filt.tier) return false;
     if (needle) {
       const hay = (r.q + ' ' + (ANSWERS[p.id]?.[r.qid]?.flash || []).join(' ')).toLowerCase();
@@ -214,7 +200,6 @@ function renderList() {
     return true;
   });
 
-  paintChipCounts(p);
   const L = $('#q-list'); L.innerHTML = '';
   if (!list.length) { L.append(el('div', 'empty', 'No questions match these filters.')); return; }
   let sec = null;
@@ -222,6 +207,7 @@ function renderList() {
     if (r.sec !== sec) { sec = r.sec; L.append(el('div', 'sec-h', esc(sec))); }
     L.append(qRow(r));
   }
+  if (!filt.q && filt.tier === 'all') window.scrollTo(0, 0);
 }
 
 // A branch's gist: first clause, trimmed — enough to recognise the angle at a glance.
@@ -237,15 +223,25 @@ function findRow(qid) {
   return rows(p).find(r => r.qid === qid) || null;
 }
 
-// Cloze masks the gold spans — tap to reveal one, or hit the reveal-all action.
-const clozed = h => h.replace(/<b>(.+?)<\/b>/g, '<b class="cz">$1</b>');
-
 function pointHTML(pt) {
   let h = '';
   if (pt.k) h += `<b class="lbl">${md(pt.k)}</b>: `;
+  const phrase = scanKeyword(pt);
+  if (phrase) h += `<span class="scan-keyword">${esc(phrase)}</span>`;
   h += `<span class="x">${md(pt.x)}</span>`;
   if (pt.ex) h += ` <span class="ex"><b class="lbl">Ex:</b> ${md(pt.ex)}</span>`;
   return h;
+}
+
+function scanKeyword(pt) {
+  if (pt.kw) return String(pt.kw);
+  const bold = String(pt.x || '').match(/\*\*([^*]{2,48})\*\*/)?.[1];
+  if (bold) return bold;
+  const stop = /^(a|an|the|this|that|these|those|is|are|was|were|be|being|been|to|of|for|and|or|but|in|on|at|by|with|from|into|through|it|its|their|his|her|can|may|must|should)$/i;
+  const words = String(pt.x || '').replace(/[*_]/g, '').split(/\s+/)
+    .map(word => word.replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}-]+$/gu, ''))
+    .filter(word => word && !stop.test(word));
+  return words.slice(0, 3).join(' ');
 }
 
 // Words you'd actually put on paper: ONE intro + headings + points + wf + conclusion.
@@ -295,6 +291,10 @@ function gaiURL(r) {
 // inline branch panels — one source of truth for how an answer looks.
 function answerHTML(a) {
   let h = '';
+  if (a.directive || a.flash?.length) {
+    h += `<div class="answer-cues">${a.directive ? `<span class="demand-cue">Demand · ${esc(a.directive)}</span>` : ''}`
+      + (a.flash || []).slice(0, 5).map(x => `<span class="keyword-cue">${md(x)}</span>`).join('') + `</div>`;
+  }
   for (const i of a.intro || []) h += `<p class="intro"><b class="lbl">Intro (${esc(i.t)}):</b> ${md(i.x)}</p>`;
   (a.body || []).forEach((bd, bi) => {
     h += `<div class="bh">H${bi + 1} — ${md(bd.h)}</div>`;
@@ -327,36 +327,40 @@ function branchItem(id, b, ans) {
     }
     body.hidden = !open;
     it.classList.toggle('open', open);
-    if (open && mode === 'cloze') applyCloze(body);
   };
   it.append(head, body);
   return it;
 }
 
 async function renderAnswer(qid) {
+  // Any in-flight utterance belongs to the page we are leaving. Cancelling here
+  // also makes manual question jumps restart cleanly while Read Along is on.
+  readRun++;
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
   const pid = qid.split('-')[0];
   await loadAnswers(pid);
   const r = findRow(qid); if (!r) return go('#/');
-  cur = r; stepIdx = -1; stepOn = false; $('#btn-step').classList.remove('on');
+  cur = r; lineIdx = -1; readCurrentIndex = 0;
   const a = ANSWERS[pid]?.[qid];
   const A = $('#answer'); A.innerHTML = '';
 
   const p = paperOf(pid);
+  const themeSelect = $('#answer-theme');
+  themeSelect.innerHTML = `<option value="all">All themes</option>` + p.sections.map(s => `<option value="${esc(s.t)}">${esc(s.t)}</option>`).join('');
+  if (answerTheme !== 'all' && !p.sections.some(s => s.t === answerTheme)) answerTheme = 'all';
+  themeSelect.value = answerTheme;
   A.append(el('h1', 'qtitle', esc(r.q)));
-  const rc = store.rec(qid);
   let wc = '';
   if (a) {
     const w = writtenWords(a), lo = r.wmin || 0;
-    // below the floor = marks left on the table; above the ceiling = can't be written in time
     const cls = w > r.w * 1.05 ? 'over' : (w < lo ? 'thin' : 'ok');
-    const note = { over: ' — trim', thin: ' — under limit', ok: '' }[cls];
-    wc = ` · <span class="wc ${cls}">${w} / ${lo}-${r.w}w${note}</span>`;
+    wc = ` · <span class="wc ${cls}">${w} / ${lo}-${r.w}w</span>`;
   }
   A.append(el('div', 'qmeta',
     `${p.short} · ${r.sec} ${r.tier ? `· T${r.tier}` : ''} · ${r.m} marks · ${Math.round(r.m * 0.72)} min`
     + (r.isBranch ? ` · ↳ branch of Q${r.parent.split('-')[1]}` : '')
     + wc
-    + (rc ? ` · last recall: ${['', 'Blank', 'Shaky', 'Confident'][rc.r]}` : '')));
+    + (store.isDone(qid) ? ` · <span class="cm">✓ completed</span>` : '')));
 
   A.insertAdjacentHTML('beforeend',
     `<div class="abox">${a ? answerHTML(a) : noAnswerHTML(r)}</div>`);
@@ -364,7 +368,7 @@ async function renderAnswer(qid) {
   // Branches ride on the same prepared content, so they live WITH the parent rather
   // than as separate destinations — each expands inline instead of navigating away.
   const parent = r.isBranch ? findRow(r.parent) : r;
-  if (branchesOn && parent?.branches?.length) {
+  if (parent?.branches?.length) {
     const bx = el('div', 'branches',
       `<h3>Branch angles — ${esc(topicOf(parent.q))}</h3>`);
     if (r.isBranch) {
@@ -382,165 +386,375 @@ async function renderAnswer(qid) {
   const acts = el('div', 'actions');
   const gai = el('button', 'act gai', '⟳ Regenerate in Google AI Mode');
   gai.onclick = () => window.open(gaiURL(r), '_blank', 'noopener');
-  const rev = el('button', 'act', '👁 Reveal all cloze');
-  rev.onclick = () => A.querySelectorAll('.cz').forEach(c => c.classList.add('show'));
-  const pr = el('button', 'act', '🖨 Print / PDF');
-  pr.onclick = () => window.print();
   const cp = el('button', 'act', '⧉ Copy answer');
   cp.onclick = () => { navigator.clipboard.writeText(A.innerText); cp.textContent = '✓ Copied'; setTimeout(() => cp.textContent = '⧉ Copy answer', 1400); };
-  acts.append(gai, rev, cp, pr);
+  acts.append(gai, cp);
   A.append(acts);
 
-  paintRecall(qid);
   paintDone(qid);
+  paintBranchReadToggle(r);
   renderPager(r);
   renderSidebar(r);
   applyMode();
-  paintBranchesBtn();
-  syncReadAlong(r);
   window.scrollTo(0, 0);
-}
-
-function paintBranchesBtn() {
-  $('#btn-branches').classList.toggle('on', branchesOn);
-  $('#btn-branches').textContent = branchesOn ? 'Branches On' : 'Branches Off';
-}
-
-function applyCloze(root) {
-  root.querySelectorAll('.pt, .intro, .conc, .wf').forEach(n => { n.innerHTML = clozed(n.innerHTML); });
-  root.querySelectorAll('.cz').forEach(c => c.onclick = () => c.classList.toggle('show'));
+  if (readAlong) startReadAlong();
 }
 
 function applyMode() {
   document.body.dataset.mode = mode;
-  const A = $('#answer');
-  // removeAttribute, not className='' — a leftover class="" stops clozed()'s <b> regex matching on re-entry
-  A.querySelectorAll('b.cz').forEach(c => c.removeAttribute('class'));
-  if (mode === 'cloze') applyCloze(A);
+  $('#modes')?.querySelectorAll('.mode').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
 }
 
-function step(dir) {
-  const pts = [...$('#answer').querySelectorAll('.pt')];
-  if (!pts.length) return;
-  pts.forEach(p => p.classList.remove('focus'));
-  stepIdx = Math.max(0, Math.min(pts.length - 1, stepIdx + dir));
-  const n = pts[stepIdx];
-  n.classList.add('focus');
-  n.scrollIntoView({ block: 'center' }); // instant — smooth scrolling breaks the in-app browser
+// The nodes Read Along narrates, in reading order — also the targets for the
+// ↑/↓ line cursor and tap-to-read.
+function readNodes() {
+  const A = $('#answer'); if (!A) return [];
+  const abox = A.querySelector('.abox');
+  return [A.querySelector('.qtitle'), ...(abox ? abox.querySelectorAll('.intro, .bh, .pt, .diag, .wf, .conc, .nowrite') : [])].filter(Boolean);
+}
+
+// ↑/↓ moves a reading cursor between lines; if Read Along is on, narration jumps
+// to that line so the voice follows the eye.
+function moveLine(dir) {
+  const nodes = readNodes();
+  if (!nodes.length) return;
+  let at = nodes.findIndex(n => n.classList.contains('reading-now'));
+  if (at < 0) at = dir > 0 ? -1 : 0;
+  lineIdx = Math.max(0, Math.min(nodes.length - 1, at + dir));
+  const node = nodes[lineIdx];
+  nodes.forEach(n => n.classList.remove('reading-now'));
+  node.classList.add('reading-now');
+  node.scrollIntoView({ block: 'center' }); // instant — smooth scrolling breaks the in-app browser
+  if (readAlong) {
+    const i = speechParts().findIndex(part => part.node === node);
+    if (i >= 0) startReadAlong(i);
+  }
 }
 
 /* ══════════════════ READ ALONG ══════════════════ */
-// Reads an entire paper aloud, question by question, using the same line-based
-// TTS engine as the audiobook feature. Lines are pulled straight from the
-// rendered #answer DOM (not re-derived from JSON) so highlighting can never
-// drift from what applyMode()/applyCloze() actually put on screen.
-let raOn = false, raQueue = [], raIdx = -1, raNavigating = false;
-const WPM_BASE = 155; // baseline words/min at 1x — only used for the paper ETA estimate
+// Speech is opt-in for the current session. Once enabled it reads the question,
+// walks the answer block-by-block, and then opens the next main question.
+const canSpeak = () => 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
+// Turn the on-screen shorthand into something a TTS voice says naturally:
+// expand exam abbreviations, and convert stray dashes into audible pauses.
+const cleanSpeech = s => String(s || '')
+  .replace(/H(\d+)\s*[—–-]\s*/g, 'Section $1. ')          // H1 — Thesis → Section 1. Thesis
+  .replace(/\bEx\b\.?\s*:?\s*/g, 'Example: ')             // Ex: → Example:
+  .replace(/\bArts?\b\.?\s*(?=\d)/g, 'Article ')          // Art. 21 → Article 21
+  .replace(/\bAmdt\b\.?/gi, 'Amendment')
+  .replace(/\bDPSPs?\b/g, 'Directive Principles')
+  .replace(/\bFRs\b/g, 'Fundamental Rights').replace(/\bFR\b/g, 'Fundamental Right')
+  .replace(/\bSC\b/g, 'Supreme Court').replace(/\bHC\b/g, 'High Court')
+  .replace(/\bw\.r\.t\.?/gi, 'with respect to')
+  .replace(/\bi\.e\.?/gi, 'that is').replace(/\be\.g\.?/gi, 'for example')
+  .replace(/\bvs?\b\.?\s/gi, ' versus ')
+  .replace(/₹\s?/g, ' rupees ').replace(/%/g, ' percent ')
+  .replace(/→/g, ', leads to, ').replace(/↔/g, ' versus ')
+  .replace(/[▪•·]/g, '. ')
+  .replace(/\s[—–]\s/g, ', ')                             // spaced em/en dash → pause
+  .replace(/(\w)[—–](\w)/g, '$1, $2')                    // word—word → pause (keeps hyphenated words)
+  .replace(/\s-\s/g, ', ')                                // spaced hyphen → pause
+  .replace(/&/g, ' and ')
+  .replace(/\s+/g, ' ')
+  .replace(/\s+([.,;:])/g, '$1')
+  .trim();
 
-const raBuildQueue = pid => { const p = paperOf(pid); return p ? rows(p, !branchesOn) : []; };
-const raLines = () => [...$('#answer').querySelectorAll('.intro, .bh, .pt, .wf, .conc')];
-const raWordsFor = r => { const a = ANSWERS[r.pid]?.[r.qid]; return a ? writtenWords(a) : 0; };
-
-function raClearHighlight() {
-  $('#answer').querySelectorAll('.ra-active').forEach(n => n.classList.remove('ra-active'));
-}
-function raHighlight(idx) {
-  raClearHighlight();
-  const n = raLines()[idx];
-  if (!n) return;
-  n.classList.add('ra-active');
-  n.scrollIntoView({ block: 'center' }); // instant — smooth scrolling breaks the in-app browser
-}
-
-function raETA() {
-  if (raIdx < 0) return 0;
-  const wordsLeft = raWordsFor(raQueue[raIdx]) + raQueue.slice(raIdx + 1).reduce((s, r) => s + raWordsFor(r), 0);
-  return wordsLeft / (WPM_BASE * speech.rate); // minutes
-}
-function fmtHMS(mins) {
-  let s = Math.max(0, Math.round(mins * 60));
-  const h = Math.floor(s / 3600); s %= 3600;
-  const m = Math.floor(s / 60); s %= 60;
-  return `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-}
-
-function raPaintBar() {
-  const bar = $('#ra-bar'); bar.hidden = !raOn;
-  if (!raOn || raIdx < 0) return;
-  const r = raQueue[raIdx];
-  $('#ra-status').innerHTML = `<span class="ra-dot"></span>Reading ${raIdx + 1} of ${raQueue.length} · ${esc(r.qid.toUpperCase())}`;
-  $('#ra-fill').style.width = `${Math.round((raIdx / Math.max(1, raQueue.length)) * 100)}%`;
-  $('#ra-eta').textContent = fmtHMS(raETA());
-  $('#ra-pause').textContent = speech.playing ? 'Pause' : 'Resume';
-}
-
-async function raStartSpeakingCurrent() {
-  await new Promise(res => setTimeout(res, 30)); // let renderAnswer's DOM settle
-  const texts = raLines().map(n => n.innerText || n.textContent || '');
-  speech.load(texts, 0);
-  raPaintBar();
-  speech.play();
+function speechParts() {
+  const nodes = [
+    $('#answer .qtitle'),
+    ...$('#answer .abox').querySelectorAll('.intro, .bh, .pt, .diag, .wf, .conc, .nowrite')
+  ].filter(Boolean);
+  const out = [];
+  nodes.forEach((node, index) => {
+    node.classList.add('read-segment');
+    const prefix = index === 0 ? 'Question. ' : '';
+    const words = cleanSpeech(prefix + node.textContent).split(' ').filter(Boolean);
+    let chunk = '';
+    for (const word of words) {
+      if (chunk && `${chunk} ${word}`.length > 260) {
+        out.push({ node, text: chunk });
+        chunk = word;
+      } else chunk += `${chunk ? ' ' : ''}${word}`;
+    }
+    if (chunk) out.push({ node, text: chunk });
+  });
+  return out;
 }
 
-function raPlayIdx(i) {
-  if (i < 0 || i >= raQueue.length) { raStop(); return; }
-  raIdx = i;
-  const targetHash = `#/a/${raQueue[i].qid}`;
-  if (location.hash !== targetHash) { raNavigating = true; go(targetHash); raNavigating = false; }
-  else raStartSpeakingCurrent();
+const formatReadTime = seconds => {
+  const value = Math.max(0, Math.round(Number(seconds) || 0));
+  const hours = Math.floor(value / 3600);
+  const minutes = Math.floor(value % 3600 / 60);
+  const clock = `${minutes}:${String(value % 60).padStart(2, '0')}`;
+  return hours ? `${hours}:${String(minutes).padStart(2, '0')}:${String(value % 60).padStart(2, '0')}` : clock;
+};
+
+function estimatedReadSeconds(parts = speechParts()) {
+  const wordCount = parts.reduce((sum, part) => sum + part.text.split(/\s+/).filter(Boolean).length, 0);
+  return Math.max(1, wordCount / (170 * readSpeed) * 60);
 }
 
-speech.onLine = idx => { if (raOn) raHighlight(idx); };
-speech.onState = () => raPaintBar();
-speech.onFinish = () => { if (raOn) raPlayIdx(raIdx + 1); };
-
-function raStart() {
-  if (!speech.supported) { alert('Read Along needs a browser with speech-synthesis support.'); return; }
-  if (!cur) return;
-  raOn = true;
-  $('#btn-ra').classList.add('on');
-  raQueue = raBuildQueue(cur.pid);
-  const base = cur.isBranch ? cur.parent : cur.qid;
-  const i = raQueue.findIndex(r => r.qid === base);
-  raPlayIdx(i < 0 ? 0 : i);
+function answerReadSeconds(row) {
+  const answer = ANSWERS[row.pid]?.[row.qid];
+  const strings = [row.q];
+  const collect = value => {
+    if (typeof value === 'string') strings.push(value);
+    else if (Array.isArray(value)) value.forEach(collect);
+    else if (value && typeof value === 'object') Object.values(value).forEach(collect);
+  };
+  collect(answer);
+  const wordCount = cleanSpeech(strings.join(' ')).split(/\s+/).filter(Boolean).length;
+  return Math.max(1, wordCount / (170 * readSpeed) * 60);
 }
 
-function raStop() {
-  raOn = false; raIdx = -1;
-  speech.stop();
-  $('#btn-ra').classList.remove('on');
-  $('#ra-bar').hidden = true;
-  raClearHighlight();
+function buildReadTimeline(parts) {
+  if (!cur) return null;
+  const paper = paperOf(cur.pid);
+  const sequence = (readBranches ? rows(paper) : mainRows(cur.pid))
+    .filter(row => ANSWERS[row.pid]?.[row.qid]);
+  const target = cur.isBranch && !readBranches ? cur.parent : cur.qid;
+  let currentIndex = sequence.findIndex(row => row.qid === target);
+  if (currentIndex < 0) currentIndex = 0;
+  const durations = sequence.map(answerReadSeconds);
+  durations[currentIndex] = estimatedReadSeconds(parts);
+  const paperBefore = durations.slice(0, currentIndex).reduce((sum, value) => sum + value, 0);
+  const paperTotal = durations.reduce((sum, value) => sum + value, 0);
+  const sectionIndexes = sequence.map((row, index) => row.sec === cur.sec ? index : -1).filter(index => index >= 0);
+  const sectionCurrent = Math.max(0, sectionIndexes.indexOf(currentIndex));
+  const sectionDurations = sectionIndexes.map(index => durations[index]);
+  const sectionBefore = sectionDurations.slice(0, sectionCurrent).reduce((sum, value) => sum + value, 0);
+  const sectionTotal = sectionDurations.reduce((sum, value) => sum + value, 0) || durations[currentIndex];
+  return { questionTotal: durations[currentIndex], paperBefore, paperTotal, sectionBefore, sectionTotal };
 }
 
-// Runs every time renderAnswer() paints, so Read Along stays correct whether the
-// page changed because RA advanced itself or because the user tapped elsewhere.
-function syncReadAlong(r) {
-  if (!raOn || raNavigating) return;
-  const q = raQueue[raIdx];
-  if (q && q.qid === r.qid) { raPaintBar(); return; }
-  const i = raQueue.findIndex(x => x.qid === r.qid);
-  if (i < 0) { raStop(); return; }
-  raIdx = i;
-  raStartSpeakingCurrent();
+function setReadProgress(id, ratio) {
+  const progress = $(id);
+  const value = Math.max(0, Math.min(1, ratio || 0));
+  progress.value = Math.round(value * 1000) / 10;
+  progress.textContent = `${Math.round(value * 100)}%`;
 }
 
-function raPopulateSettings() {
-  const rateSel = $('#ra-rate');
-  if (!rateSel.dataset.filled) {
-    rateSel.innerHTML = SPEEDS.map(s => `<option value="${s}">${s}×</option>`).join('');
-    rateSel.value = speech.rate;
-    rateSel.dataset.filled = '1';
-    rateSel.onchange = () => { speech.setRate(parseFloat(rateSel.value)); raPaintBar(); };
+function paintReadProgress(ratio = readProgressRatio, parts = speechParts()) {
+  readProgressRatio = Math.max(0, Math.min(1, Number(ratio) || 0));
+  readTimelineMeta ||= buildReadTimeline(parts);
+  const meta = readTimelineMeta || { questionTotal: estimatedReadSeconds(parts), sectionBefore: 0, sectionTotal: 1, paperBefore: 0, paperTotal: 1 };
+  const questionElapsed = meta.questionTotal * readProgressRatio;
+  const sectionElapsed = meta.sectionBefore + questionElapsed;
+  const paperElapsed = meta.paperBefore + questionElapsed;
+  setReadProgress('#read-progress', readProgressRatio);
+  setReadProgress('#read-section-progress', sectionElapsed / meta.sectionTotal);
+  setReadProgress('#read-paper-progress', paperElapsed / meta.paperTotal);
+  setReadProgress('#read-paper-summary-progress', paperElapsed / meta.paperTotal);
+  $('#read-elapsed').textContent = `Elapsed ${formatReadTime(questionElapsed)}`;
+  $('#read-remaining').textContent = formatReadTime(meta.questionTotal - questionElapsed);
+  $('#read-section-remaining').textContent = formatReadTime(meta.sectionTotal - sectionElapsed);
+  $('#read-paper-remaining').textContent = formatReadTime(meta.paperTotal - paperElapsed);
+  $('#read-paper-summary-remaining').textContent = formatReadTime(meta.paperTotal - paperElapsed);
+}
+
+function stopReadProgressTimer() {
+  if (readProgressTimer) clearInterval(readProgressTimer);
+  readProgressTimer = null;
+}
+
+function startReadProgressTimer(parts) {
+  stopReadProgressTimer();
+  readProgressTimer = setInterval(() => {
+    if (!readAlong || readPaused || !readSegmentDuration) return;
+    const fraction = Math.min(1, (performance.now() - readSegmentStartedAt) / readSegmentDuration);
+    paintReadProgress(readSegmentStartRatio + (readSegmentEndRatio - readSegmentStartRatio) * fraction, parts);
+  }, 350);
+}
+
+function paintReadAlong(message) {
+  const btn = $('#btn-read');
+  const status = $('#read-status');
+  btn.classList.toggle('on', readAlong);
+  btn.setAttribute('aria-pressed', String(readAlong));
+  btn.lastChild.textContent = readAlong ? ' Stop Reading' : ' Read Along';
+  status.hidden = !readAlong && !message;
+  $('#read-details-toggle').hidden = !readAlong;
+  $('#read-details-panel').hidden = !readAlong || !readDetailsOpen;
+  $('#read-details-toggle').setAttribute('aria-expanded', String(readDetailsOpen));
+  $('#read-pause').hidden = !readAlong;
+  $('#read-pause').classList.toggle('on', readPaused);
+  $('#read-pause').setAttribute('aria-pressed', String(readPaused));
+  $('#read-pause').textContent = readPaused ? '▶ Resume' : '❚❚ Pause';
+  $('.read-pulse').classList.toggle('paused', readPaused);
+  document.body.classList.toggle('read-active', readAlong);
+  if (message) $('#read-status-text').textContent = message;
+}
+
+function toggleReadPause() {
+  if (!readAlong || !canSpeak()) return;
+  readPaused = !readPaused;
+  if (readPaused) {
+    speechSynthesis.pause();
+    paintReadAlong(`Paused · ${cur.qid.toUpperCase()} · press Spacebar or Resume`);
+  } else {
+    readSegmentStartRatio = readProgressRatio;
+    readSegmentStartedAt = performance.now();
+    speechSynthesis.resume();
+    paintReadAlong(`Reading · ${cur.qid.toUpperCase()}`);
   }
-  const voiceSel = $('#ra-voice');
-  const voices = speech.voices();
-  if (voices.length && voiceSel.options.length <= 1) {
-    voiceSel.innerHTML = `<option value="">Auto</option>` +
-      voices.map(v => `<option value="${esc(v.voiceURI)}">${esc(v.name)} (${esc(v.lang)})</option>`).join('');
-    voiceSel.value = speech.voiceURI || '';
-    voiceSel.onchange = () => speech.setVoice(voiceSel.value);
+}
+
+function stopReadAlong(message = '') {
+  readAlong = false;
+  readPaused = false;
+  readRun++;
+  if (canSpeak()) speechSynthesis.cancel();
+  stopReadProgressTimer();
+  $('#answer').querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+  readCurrentIndex = 0;
+  readProgressRatio = 0;
+  readTimelineMeta = null;
+  readDetailsOpen = false;
+  paintReadAlong(message);
+}
+
+function nextMainQuestion(r) {
+  if (!r) return null;
+  const list = mainRows(r.pid);
+  const base = r.isBranch ? r.parent : r.qid;
+  const i = list.findIndex(x => x.qid === base);
+  return i >= 0 && i < list.length - 1 ? list[i + 1] : null;
+}
+
+function nextReadQuestion(r) {
+  if (!readBranches) return nextMainQuestion(r);
+  const parent = r.isBranch ? findRow(r.parent) : r;
+  if (!parent) return nextMainQuestion(r);
+  const branchRows = (parent.branches || [])
+    .map((_, i) => findRow(qidOf(r.pid, parent.n, i)))
+    .filter(row => row && ANSWERS[row.pid]?.[row.qid]);
+  if (!r.isBranch && branchRows.length) return branchRows[0];
+  if (r.isBranch) {
+    const i = branchRows.findIndex(x => x.qid === r.qid);
+    if (i >= 0 && i < branchRows.length - 1) return branchRows[i + 1];
   }
+  return nextMainQuestion(parent);
+}
+
+function advanceReadAlong() {
+  if (!readAlong || !cur) return;
+  readRun++;
+  if (canSpeak()) speechSynthesis.cancel();
+  const next = nextReadQuestion(cur);
+  if (next) {
+    paintReadAlong(next.isBranch ? 'Main answer complete · opening branch answer' : 'Question complete · opening next main answer');
+    go(`#/a/${next.qid}`);
+  }
+  else stopReadAlong('Paper complete — you reached the final question.');
+}
+
+function populateVoiceOptions() {
+  const select = $('#read-voice');
+  if (!select || !canSpeak()) return;
+  const voices = speechSynthesis.getVoices();
+  select.innerHTML = '';
+  const fallback = document.createElement('option');
+  fallback.value = 'auto-uk-female';
+  fallback.textContent = 'UK English female · recommended';
+  select.append(fallback);
+  voices
+    .sort((a, b) => a.lang.localeCompare(b.lang) || a.name.localeCompare(b.name))
+    .forEach(v => {
+      const option = document.createElement('option');
+      option.value = v.voiceURI;
+      option.textContent = `${v.name} · ${v.lang}`;
+      select.append(option);
+    });
+  if ([...select.options].some(o => o.value === readVoiceURI)) select.value = readVoiceURI;
+  else select.value = 'auto-uk-female';
+}
+
+function preferredVoice(voices) {
+  if (readVoiceURI !== 'auto-uk-female') {
+    const chosen = voices.find(v => v.voiceURI === readVoiceURI);
+    if (chosen) return chosen;
+  }
+  const exact = voices.find(v => /google uk english female/i.test(v.name));
+  if (exact) return exact;
+  const femaleNames = /serena|stephanie|kate|martha|siri female|female/i;
+  return voices.find(v => /^en[-_]gb$/i.test(v.lang) && femaleNames.test(v.name))
+    || voices.find(v => /^en[-_]gb$/i.test(v.lang))
+    || voices.find(v => /^en[-_]in$/i.test(v.lang))
+    || voices.find(v => /^en/i.test(v.lang));
+}
+
+function startReadAlong(startIndex = 0) {
+  if (!readAlong) return;
+  if (!canSpeak()) {
+    stopReadAlong('Read Along is not supported by this browser.');
+    return;
+  }
+
+  const parts = speechParts();
+  if (!parts.length) {
+    advanceReadAlong();
+    return;
+  }
+
+  const run = ++readRun;
+  readPaused = false;
+  readTimelineMeta = null;
+  speechSynthesis.cancel();
+  const voices = speechSynthesis.getVoices();
+  const voice = preferredVoice(voices);
+  const firstIndex = Math.max(0, Math.min(parts.length - 1, Number(startIndex) || 0));
+  const lengths = parts.map(part => Math.max(1, part.text.length));
+  const totalLength = lengths.reduce((sum, length) => sum + length, 0);
+  const before = index => lengths.slice(0, index).reduce((sum, length) => sum + length, 0);
+  paintReadProgress(before(firstIndex) / totalLength, parts);
+  startReadProgressTimer(parts);
+
+  const speak = index => {
+    if (!readAlong || run !== readRun) return;
+    if (index >= parts.length) {
+      advanceReadAlong();
+      return;
+    }
+
+    const part = parts[index];
+    readCurrentIndex = index;
+    readSegmentStartRatio = before(index) / totalLength;
+    readSegmentEndRatio = (before(index) + lengths[index]) / totalLength;
+    readSegmentDuration = Math.max(700, estimatedReadSeconds([part]) * 1000);
+    readSegmentStartedAt = performance.now();
+    const utterance = new SpeechSynthesisUtterance(part.text);
+    utterance.lang = voice?.lang || 'en-IN';
+    utterance.rate = readSpeed;
+    utterance.pitch = 1;
+    if (voice) utterance.voice = voice;
+    utterance.onstart = () => {
+      if (run !== readRun) return;
+      $('#answer').querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+      part.node.classList.add('reading-now');
+      part.node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      paintReadProgress(readSegmentStartRatio, parts);
+      paintReadAlong(`Reading ${index + 1} of ${parts.length} · ${cur.qid.toUpperCase()}`);
+    };
+    utterance.onboundary = event => {
+      if (run !== readRun || readPaused) return;
+      const within = Math.max(0, Math.min(1, event.charIndex / Math.max(1, part.text.length)));
+      readSegmentStartRatio = (before(index) + lengths[index] * within) / totalLength;
+      readSegmentStartedAt = performance.now();
+      paintReadProgress(readSegmentStartRatio, parts);
+    };
+    utterance.onend = () => {
+      paintReadProgress(readSegmentEndRatio, parts);
+      speak(index + 1);
+    };
+    utterance.onerror = e => {
+      if (e.error !== 'canceled' && e.error !== 'interrupted')
+        stopReadAlong('Narration stopped. Tap Read Along to try again.');
+    };
+    speechSynthesis.speak(utterance);
+  };
+
+  paintReadAlong(`Reading ${cur.qid.toUpperCase()}…`);
+  speak(firstIndex);
 }
 
 /* ══════════════════ NOTES ══════════════════ */
@@ -573,39 +787,16 @@ async function renderNotes() {
     const btn = el('button', 'paper');
     btn.innerHTML = `<span class="ic">${b.icon}</span>
       <span class="nm"><b>${esc(b.title)}</b>
-      <small>📄 full PDF · ${b.chapters.length} chapters · ${(words / 1000).toFixed(0)}k words</small></span>
+      <small>${b.chapters.length} chapters · ${(words / 1000).toFixed(0)}k words</small></span>
       <span class="arw">›</span>`;
     btn.onclick = () => go(`#/n/${b.id}`);
     L.append(btn);
   }
 }
 
-// The book opens on the original PDF — continuous scroll in the browser's own
-// viewer — with the text extraction as the alternative view.
-let bookSrc = 'pdf';
-
-function paintBookSrc(b) {
-  $('#book-pdf').hidden = bookSrc !== 'pdf';
-  $('#book-chapters').hidden = bookSrc !== 'text';
-  for (const t of document.querySelectorAll('.srcmode')) t.classList.toggle('active', t.dataset.src === bookSrc);
-  const P = $('#book-pdf');
-  if (bookSrc === 'pdf' && !P.dataset.for) {
-    P.dataset.for = b.id;
-    P.innerHTML = `<iframe src="${b.pdf}#view=FitH" title="${esc(b.title)}"></iframe>`;
-  }
-}
-
 async function renderBook(id) {
   const b = await loadBook(id);
   $('#book-title').textContent = `${b.icon} ${b.title}`;
-  const P = $('#book-pdf');
-  if (P.dataset.for !== b.id) { P.dataset.for = ''; P.innerHTML = ''; }
-  $('#book-dl').href = b.pdf;
-  $('#book-dl').setAttribute('download', b.title + '.pdf');
-  paintBookSrc(b);
-  document.querySelectorAll('.srcmode').forEach(t => t.onclick = () => {
-    bookSrc = t.dataset.src; paintBookSrc(b);
-  });
   const L = $('#book-chapters'); L.innerHTML = '';
   let part = undefined;
   b.chapters.forEach((c, i) => {
@@ -621,6 +812,62 @@ async function renderBook(id) {
 
 const len2k = t => t.split(/\s+/).length;
 
+function noteHTML(text) {
+  const noise = /^(click or scan|scan (?:the )?(?:qr|code)|to read more|read more|download the app|metric data|data metric)$/i;
+  const rawLines = String(text || '').split(/\r?\n/)
+    .map(x => x.replace(/\b(?:click or scan|to read more)\b/ig, '').replace(/\s+/g, ' ').trim())
+    .filter(x => x && !noise.test(x));
+  const lines = [];
+  for (let i = 0; i < rawLines.length; i++) {
+    if (/^\d+(?:\.\d+)*[.)]$/.test(rawLines[i]) && rawLines[i + 1]) {
+      lines.push(`${rawLines[i]} ${rawLines[++i]}`);
+    } else lines.push(rawLines[i]);
+  }
+  let html = '', paragraph = [], list = [];
+  const flushParagraph = () => {
+    if (!paragraph.length) return;
+    html += `<p>${md(paragraph.join(' '))}</p>`;
+    paragraph = [];
+  };
+  const flushList = () => {
+    if (!list.length) return;
+    html += `<ul>${list.map(x => `<li>${md(x)}</li>`).join('')}</ul>`;
+    list = [];
+  };
+  const flush = () => { flushParagraph(); flushList(); };
+
+  for (let line of lines) {
+    line = line.replace(/^(?:y|Y)\s+(?=[A-Z₹$0-9])/, '').replace(/\s+[yY]\s+(?=[A-Z₹$0-9])/g, ' — ');
+    const numbered = line.match(/^(\d+(?:\.\d+)*[.)])\s+(.+)$/);
+    const bullet = line.match(/^[•▪●◆►➤✓✔✦*\-–—]\s*(.+)$/);
+    const shortSection = numbered && !line.includes(' — ') && line.length < 78 && !/[₹$%]|\b(?:FY\d+|20\d{2})\b/.test(line);
+    const label = /^(introduction|background|context|key facts?|features?|objectives?|significance|challenges?|issues?|impact|measures?|initiatives?|way forward|conclusion|case stud(?:y|ies)|examples?|data|metric)s?\s*:?(.*)$/i.exec(line);
+
+    if (shortSection) {
+      flush();
+      html += `<h2><span>${esc(numbered[1])}</span>${md(numbered[2])}</h2>`;
+    } else if (label && line.length < 95) {
+      flush();
+      html += `<h3>${md(line.replace(/:$/, ''))}</h3>`;
+    } else if (bullet) {
+      flushParagraph();
+      list.push(bullet[1]);
+    } else if (numbered && (line.includes(' — ') || line.length < 150)) {
+      flushParagraph();
+      list.push(`${numbered[1]} ${numbered[2]}`);
+    } else if (line.length < 55 && /^[A-Z][A-Za-z0-9 &'()\-/:]+$/.test(line) && !/[.!?]$/.test(line)) {
+      flush();
+      html += `<h3>${md(line)}</h3>`;
+    } else {
+      flushList();
+      paragraph.push(line);
+      if (/[.!?]$/.test(line) && paragraph.join(' ').length > 180) flushParagraph();
+    }
+  }
+  flush();
+  return html || '<p class="empty">No readable text was extracted for this chapter.</p>';
+}
+
 async function renderChapter(id, i) {
   const b = await loadBook(id);
   const c = b.chapters[+i]; if (!c) return go(`#/n/${id}`);
@@ -634,10 +881,7 @@ async function renderChapter(id, i) {
   const O = $('#ch-outline'); O.innerHTML = '';
   if (c.subs?.length) O.innerHTML = `<h3>In this chapter</h3><div class="subs">` +
     c.subs.map(x => `<span>${esc(x)}</span>`).join('') + `</div>`;
-  const J = $('#ch-pdf');
-  if (b.pdf && c.p) { J.hidden = false; J.href = `${b.pdf}#page=${c.p}`; J.target = '_blank'; }
-  else J.hidden = true;
-  $('#ch-text').textContent = c.text;
+  $('#ch-text').innerHTML = noteHTML(c.text);
   window.scrollTo(0, 0);
 }
 
@@ -675,6 +919,10 @@ async function searchNotes(q) {
 // Both walk the same ordered list of main questions, so "next" in the pager and
 // the sidebar's order can never disagree.
 const mainRows = pid => { const p = paperOf(pid); return p ? rows(p, true) : []; };
+const answerNavRows = pid => {
+  const p = paperOf(pid); if (!p) return [];
+  return rows(p).filter(row => answerTheme === 'all' || row.sec === answerTheme);
+};
 
 function renderPager(r) {
   const list = mainRows(r.pid);
@@ -682,7 +930,7 @@ function renderPager(r) {
   const i = list.findIndex(x => x.qid === base);
   const prev = i > 0 ? list[i - 1] : null, next = i >= 0 && i < list.length - 1 ? list[i + 1] : null;
   const label = i >= 0 ? `Q${list[i].n} · ${i + 1} of ${list.length}` : '';
-  // top and bottom pagers are identical, so drive both from one loop
+  // Keep the page-level navigation and the app dock on the same ordered list.
   for (const nav of document.querySelectorAll('.pager')) {
     nav.querySelector('.pg-pos').textContent = label;
     for (const btn of nav.querySelectorAll('.pg')) {
@@ -701,17 +949,47 @@ function paintDone(qid) {
   b.textContent = done ? '✓ Completed — tap to undo' : 'Mark as completed';
 }
 
+function paintBranchReadToggle(r) {
+  const b = $('#branch-read-toggle');
+  const parent = r?.isBranch ? findRow(r.parent) : r;
+  const count = parent?.branches?.length || 0;
+  b.hidden = count === 0;
+  $('#branch-count').textContent = String(count);
+  b.querySelector('.branch-label').textContent = readBranches ? 'Branches On' : 'Branches Off';
+  b.classList.toggle('on', readBranches);
+  b.setAttribute('aria-pressed', String(readBranches));
+  b.title = readBranches
+    ? `Read ${count} branch answer${count === 1 ? '' : 's'} before the next main question`
+    : `Skip ${count} branch answer${count === 1 ? '' : 's'} during Read Along`;
+}
+
 function renderSidebar(r) {
   const L = $('#sb-list'); L.innerHTML = '';
-  const base = r.isBranch ? r.parent : r.qid;
+  const paper = paperOf(r.pid);
+  const all = rows(paper);
+  const available = all.filter(q => ANSWERS[r.pid]?.[q.qid]).length;
+  $('#sb-title').textContent = paper?.short || paper?.name || 'Question map';
+  $('#sb-progress').textContent = `${available}/${all.length} answers · main + branches`;
+  $('#sb-search').value = '';
   let sec = null;
-  for (const q of mainRows(r.pid)) {
+  for (const q of mainRows(r.pid).filter(q => answerTheme === 'all' || q.sec === answerTheme)) {
     if (q.sec !== sec) { sec = q.sec; L.append(el('div', 'sb-sec', esc(sec))); }
     const a = ANSWERS[r.pid]?.[q.qid];
-    const b = el('button', 'sb-q' + (q.qid === base ? ' on' : '') + (a ? '' : ' todo') + (store.isDone(q.qid) ? ' done' : ''));
-    b.innerHTML = `<span class="sb-n">Q${q.n}</span><span class="sb-t">${esc(q.q)}</span>`;
+    const branches = q.branches || [];
+    const b = el('button', 'sb-q sb-main' + (q.qid === r.qid ? ' on' : '') + (a ? '' : ' todo') + (store.isDone(q.qid) ? ' done' : ''));
+    b.dataset.search = q.q.toLowerCase();
+    b.innerHTML = `<span class="sb-n">Q${q.n}</span><span class="sb-t">${esc(q.q)}</span>${branches.length ? `<span class="sb-badge" title="${branches.length} branch question${branches.length === 1 ? '' : 's'}">${branches.length}</span>` : ''}`;
     b.onclick = () => { go(`#/a/${q.qid}`); document.body.classList.remove('sb-open'); };
     L.append(b);
+    branches.forEach((branch, i) => {
+      const qid = qidOf(r.pid, q.n, i);
+      const answer = ANSWERS[r.pid]?.[qid];
+      const bb = el('button', 'sb-q sb-branch' + (qid === r.qid ? ' on' : '') + (answer ? '' : ' todo') + (store.isDone(qid) ? ' done' : ''));
+      bb.dataset.search = `${q.q} ${branch.q}`.toLowerCase();
+      bb.innerHTML = `<span class="sb-tree" aria-hidden="true">└</span><span class="sb-t">${esc(branch.q)}</span>`;
+      bb.onclick = () => { go(`#/a/${qid}`); document.body.classList.remove('sb-open'); };
+      L.append(bb);
+    });
   }
   const on = L.querySelector('.sb-q.on');
   if (on) on.scrollIntoView({ block: 'center' });   // instant — smooth breaks the in-app browser
@@ -720,15 +998,46 @@ function renderSidebar(r) {
 /* ══════════════════ ROUTER ══════════════════ */
 function go(hash) { location.hash = hash; }
 
+function subjectHash() {
+  const [, kind, arg] = (location.hash || '#/').split('/');
+  if ((kind === 'a' || kind === 'p') && (cur?.pid || arg)) return `#/p/${cur?.pid || arg}`;
+  if (kind === 'n') {
+    const bookId = (location.hash || '').split('/')[2];
+    return bookId ? `#/n/${bookId}` : '#/n';
+  }
+  return filt.pid ? `#/p/${filt.pid}` : '#/n';
+}
+
+function dockMove(direction) {
+  if (!cur) return;
+  const list = answerNavRows(cur.pid);
+  const i = list.findIndex(row => row.qid === cur.qid);
+  const target = direction === 'next' ? list[i + 1] : list[i - 1];
+  if (target) go(`#/a/${target.qid}`);
+}
+
+function paintDock() {
+  const answer = $('#view-answer').classList.contains('active');
+  const prev = $('#app-dock [data-dock="previous"]');
+  const next = $('#app-dock [data-dock="next"]');
+  prev.hidden = !answer;
+  next.hidden = !answer;
+  const list = cur ? answerNavRows(cur.pid) : [];
+  const i = cur ? list.findIndex(row => row.qid === cur.qid) : -1;
+  prev.disabled = i <= 0;
+  next.disabled = i < 0 || i >= list.length - 1;
+  document.body.classList.toggle('answer-open', answer);
+}
+
 async function route() {
   const h = location.hash || '#/';
   const [, kind, arg] = h.split('/');
+  if (kind !== 'a' && readAlong) stopReadAlong();
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-  document.body.dataset.mode = 'full';
+  document.body.dataset.mode = mode;
   document.body.classList.remove('sb-open');
   $('#back').hidden = h === '#/';
   $('#btn-sb').hidden = kind !== 'a';
-  if (kind !== 'a' && raOn) raStop();
 
   if (kind === 'n') {
     const [, , bookId, chIdx] = h.split('/');
@@ -743,13 +1052,24 @@ async function route() {
     $('#view-answer').classList.add('active'); await renderAnswer(arg);
   } else {
     $('#view-home').classList.add('active');
-    await Promise.all(ORDER.map(loadAnswers));
     renderHome();
+    Promise.all(ORDER.map(loadAnswers)).then(() => {
+      if ((location.hash || '#/') === '#/') renderHome();
+    });
   }
+  paintDock();
 }
 
 /* ══════════════════ WIRING ══════════════════ */
 $('#back').onclick = () => history.back();
+$('#key-home').onclick = () => go('#/');
+$('#key-subject').onclick = () => go(subjectHash());
+$('#app-dock').onclick = e => {
+  const b = e.target.closest('button[data-dock]'); if (!b || b.disabled) return;
+  if (b.dataset.dock === 'home') go('#/');
+  else if (b.dataset.dock === 'subject') go(subjectHash());
+  else dockMove(b.dataset.dock);
+};
 $('#go-notes').onclick = () => go('#/n');
 $('#btn-done').onclick = () => { if (cur) { store.toggleDone(cur.qid); paintDone(cur.qid); } };
 
@@ -763,10 +1083,33 @@ $('#btn-size').onclick = () => {
   applySize();
 };
 applySize();
+
+// Day / night. Defaults to the OS preference, then remembers the manual choice.
+// Warm-tinted palettes in both — long study sessions, low eye strain.
+const prefersLight = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches;
+let theme = localStorage.getItem('mm-theme') || (prefersLight ? 'light' : 'dark');
+const applyTheme = () => {
+  document.documentElement.dataset.theme = theme;
+  $('#btn-theme').textContent = theme === 'light' ? '☀' : '☾';
+  const meta = document.querySelector('meta[name=theme-color]');
+  if (meta) meta.content = theme === 'light' ? '#f4efe4' : '#101319';
+};
+$('#btn-theme').onclick = () => {
+  theme = theme === 'light' ? 'dark' : 'light';
+  localStorage.setItem('mm-theme', theme);
+  applyTheme();
+};
+applyTheme();
+
 $('#n-search').oninput = e => searchNotes(e.target.value.trim());
-$('#btn-search').onclick = () => { if (filt.pid) { go(`#/p/${filt.pid}`); setTimeout(() => $('#q-search').focus(), 60); } };
 $('#q-search').oninput = e => { filt.q = e.target.value; renderList(); };
 $('#theme-sel').onchange = e => { filt.theme = e.target.value; renderList(); };
+$('#answer-theme').onchange = e => {
+  answerTheme = e.target.value;
+  const first = answerNavRows(cur.pid)[0];
+  if (first && first.sec !== cur.sec) go(`#/a/${first.qid}`);
+  else { renderPager(cur); paintDock(); renderSidebar(cur); }
+};
 $('#tier-chips').onclick = e => {
   const c = e.target.closest('.chip'); if (!c) return;
   filt.tier = c.dataset.tier;
@@ -776,61 +1119,103 @@ $('#tier-chips').onclick = e => {
 $('#modes').onclick = e => {
   const m = e.target.closest('.mode'); if (!m) return;
   mode = m.dataset.mode;
-  $('#modes').querySelectorAll('.mode').forEach(x => x.classList.toggle('active', x === m));
+  localStorage.setItem('mm-mode', mode);
   applyMode();
 };
-$('#btn-step').onclick = () => {
-  stepOn = !stepOn; $('#btn-step').classList.toggle('on', stepOn);
-  if (stepOn) { stepIdx = -1; step(1); }
-  else $('#answer').querySelectorAll('.pt').forEach(p => p.classList.remove('focus'));
-};
-$('#btn-branches').onclick = () => {
-  branchesOn = !branchesOn;
-  localStorage.setItem('mm-branches', branchesOn ? '1' : '0');
-  paintBranchesBtn();
-  if (cur) renderAnswer(cur.qid);
-  if (raOn && cur) {
-    raQueue = raBuildQueue(cur.pid);
-    const i = raQueue.findIndex(r => r.qid === cur.qid);
-    if (i >= 0) raIdx = i;
-    raPaintBar();
+$('#btn-read').onclick = () => {
+  if (readAlong) stopReadAlong();
+  else {
+    readAlong = true;
+    paintReadAlong('Preparing narration…');
+    startReadAlong();
   }
 };
-$('#btn-ra').onclick = () => raOn ? raStop() : raStart();
-$('#ra-pause').onclick = () => speech.toggle();
-$('#ra-next').onclick = () => raPlayIdx(raIdx + 1);
-$('#ra-more').onclick = () => { raPopulateSettings(); $('#ra-settings').hidden = !$('#ra-settings').hidden; };
-$('#recall').onclick = e => {
-  const b = e.target.closest('.rc'); if (!b || !cur) return;
-  const set = store.mark(cur.qid, +b.dataset.r);
-  paintRecall(cur.qid);
-  if (set === null) return;                    // just cleared — stay put
-  b.textContent = '✓';
-  setTimeout(() => { b.textContent = { 1: 'Blank', 2: 'Shaky', 3: 'Confident' }[b.dataset.r]; history.back(); }, 450);
+$('#read-pause').onclick = toggleReadPause;
+$('#read-skip').onclick = advanceReadAlong;
+$('#read-details-toggle').onclick = () => {
+  readDetailsOpen = !readDetailsOpen;
+  paintReadAlong();
 };
-
-function paintRecall(qid) {
-  const rc = store.rec(qid);
-  $('#recall').querySelectorAll('.rc').forEach(x => x.classList.toggle('on', rc && +x.dataset.r === rc.r));
-  $('#recall').querySelector('span').textContent =
-    rc ? `Marked ${{ 1: 'Blank', 2: 'Shaky', 3: 'Confident' }[rc.r]} — tap again to clear` : 'How well did you recall it?';
-}
+$('#read-speed').value = String(readSpeed);
+$('#branch-read-toggle').onclick = () => {
+  readBranches = !readBranches;
+  localStorage.setItem('mm-read-branches', String(readBranches));
+  paintBranchReadToggle(cur);
+  if (readAlong) {
+    const parts = speechParts();
+    readTimelineMeta = buildReadTimeline(parts);
+    paintReadProgress(readProgressRatio, parts);
+  }
+};
+$('#read-speed').onchange = e => {
+  readSpeed = Number(e.target.value);
+  localStorage.setItem('mm-read-speed', String(readSpeed));
+  if (readAlong) startReadAlong(readCurrentIndex);
+};
+$('#read-voice').onchange = e => {
+  readVoiceURI = e.target.value;
+  localStorage.setItem('mm-read-voice', readVoiceURI);
+  if (readAlong) startReadAlong(readCurrentIndex);
+};
+populateVoiceOptions();
+if (canSpeak()) speechSynthesis.addEventListener('voiceschanged', populateVoiceOptions);
+// Tap any line to read from there — works whether or not narration is running.
+$('#answer').addEventListener('click', e => {
+  const target = e.target.closest('.qtitle, .intro, .bh, .pt, .diag, .wf, .conc, .nowrite');
+  if (!target) return;
+  const index = speechParts().findIndex(part => part.node === target);
+  if (index < 0) return;
+  if (!readAlong) { readAlong = true; paintReadAlong('Preparing narration…'); }
+  startReadAlong(index);
+});
 addEventListener('keydown', e => {
+  if (e.target.closest('input,select,textarea,[contenteditable="true"]')) return;
+  if (e.code === 'Space' && $('#view-answer').classList.contains('active')) {
+    e.preventDefault();
+    if (readAlong) toggleReadPause();
+    else {
+      readAlong = true;
+      paintReadAlong('Preparing narration…');
+      startReadAlong();
+    }
+    return;
+  }
+  if (e.key === '1') { e.preventDefault(); go('#/'); return; }
+  if (e.key === '2') { e.preventDefault(); go(subjectHash()); return; }
   if (!$('#view-answer').classList.contains('active')) return;
-  if (e.key === 'ArrowRight') { stepOn = true; $('#btn-step').classList.add('on'); step(1); }
-  if (e.key === 'ArrowLeft') step(-1);
+  // ←/→ walk questions (main → its branches → next main); ↑/↓ walk lines
+  if (e.key === 'ArrowRight') { e.preventDefault(); dockMove('next'); }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); dockMove('previous'); }
+  if (e.key === 'ArrowDown') { e.preventDefault(); moveLine(1); }
+  if (e.key === 'ArrowUp') { e.preventDefault(); moveLine(-1); }
 });
 const toggleSb = () => document.body.classList.toggle('sb-open');
 $('#sb-pin').onclick = toggleSb;
 $('#btn-sb').onclick = toggleSb;
+$('#sb-backdrop').onclick = () => document.body.classList.remove('sb-open');
+$('#sb-search').oninput = e => {
+  const term = e.target.value.trim().toLowerCase();
+  let section = null, visibleInSection = false;
+  for (const node of $('#sb-list').children) {
+    if (node.classList.contains('sb-sec')) {
+      if (section) section.hidden = !visibleInSection;
+      section = node; visibleInSection = false; continue;
+    }
+    const show = !term || node.dataset.search.includes(term);
+    node.hidden = !show;
+    visibleInSection ||= show;
+  }
+  if (section) section.hidden = !visibleInSection;
+};
 addEventListener('keydown', e => {
   if (!$('#view-answer').classList.contains('active')) return;
   if (e.key === 'Escape') document.body.classList.remove('sb-open');
 });
 addEventListener('hashchange', route);
+addEventListener('beforeunload', () => { if (canSpeak()) speechSynthesis.cancel(); });
 
 (async function init() {
   PAPERS = await (await fetch('data/questions.json', { cache: 'no-cache' })).json();
   await route();
-  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => { });
+  if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js', { updateViaCache: 'none' }).catch(() => { });
 })();

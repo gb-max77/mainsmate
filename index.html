@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>MainsMate — CSE 2026 Model Answers</title>
-<meta name="theme-color" content="#0b0d12">
+<meta name="theme-color" content="#101319">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="app.css">
 </head>
 <body>
 
 <header class="topbar">
-  <button class="back" id="back" hidden aria-label="Back">‹</button>
-  <button class="icon" id="btn-home" hidden aria-label="Home" title="Home">⌂</button>
-  <button class="icon" id="btn-sb" hidden aria-label="Question list" title="Questions in this paper">☰</button>
+  <button class="back" id="back" aria-label="Back">‹</button>
+  <button class="icon" id="btn-sb" aria-label="Question list" title="Questions in this paper">☰</button>
   <div class="brand"><b>MainsMate</b><span>CSE 2026 · model answers</span></div>
   <div class="spacer"></div>
-  <button class="icon" id="btn-search" aria-label="Search">⌕</button>
+  <button class="icon" id="btn-theme" aria-label="Toggle day / night" title="Day / night theme">☾</button>
+  <button class="smartkey" id="key-home" aria-label="Go home" title="Home · keyboard shortcut 1"><span class="nav-icon home-icon" aria-hidden="true"></span><span>Home</span><kbd>1</kbd></button>
+  <button class="smartkey" id="key-subject" aria-label="Go to current subject" title="Subject · keyboard shortcut 2"><span class="nav-icon subject-icon" aria-hidden="true"></span><span>Subject</span><kbd>2</kbd></button>
 </header>
 
-<!-- ══ HOME ══ -->
-<main id="view-home" class="view active">
+<main id="view-home" class="view">
   <div class="countdown" id="countdown"></div>
   <div class="papers" id="papers"></div>
   <button class="notes-cta" id="go-notes">
@@ -28,32 +28,26 @@
     <span class="nm"><b>Notes library</b><small id="notes-sub">Mains Smasher notes, by paper</small></span>
     <span class="arw">›</span>
   </button>
-  <section class="due" id="due-wrap" hidden>
-    <h2>Due for revision</h2>
-    <div id="due-list"></div>
-  </section>
 </main>
 
-<!-- ══ LIST ══ -->
 <main id="view-list" class="view">
   <h1 id="list-title"></h1>
   <div class="filters">
-    <input id="q-search" type="search" placeholder="Search questions & keywords…" autocomplete="off">
+    <input id="q-search" type="search" placeholder="Search questions &amp; keywords…" autocomplete="off">
     <div class="chips" id="tier-chips">
       <button class="chip" data-tier="all" aria-pressed="true">All</button>
       <button class="chip t1" data-tier="1">T1</button>
       <button class="chip t2" data-tier="2">T2</button>
       <button class="chip t3" data-tier="3">T3</button>
       <button class="chip todo" data-tier="todo">○ Not written</button>
-      <button class="chip thin" data-tier="thin">◑ Under limit</button>
-      <button class="chip shaky" data-tier="weak">Shaky / Blank</button>
+      <button class="chip undone" data-tier="undone">◍ Not completed</button>
+      <button class="chip done" data-tier="done">✓ Completed</button>
     </div>
-    <select id="theme-sel"></select>
+    <select id="theme-sel" aria-label="Filter by theme"></select>
   </div>
   <div id="q-list"></div>
 </main>
 
-<!-- ══ NOTES ══ -->
 <main id="view-notes" class="view">
   <h1>📚 Notes library</h1>
   <input id="n-search" type="search" placeholder="Search all notes…" autocomplete="off">
@@ -63,13 +57,7 @@
 
 <main id="view-book" class="view">
   <h1 id="book-title"></h1>
-  <div class="srcbar">
-    <button class="srcmode active" data-src="pdf">📄 Original PDF</button>
-    <button class="srcmode" data-src="text">📝 Extracted chapters</button>
-    <a class="srcdl" id="book-dl" download>⤓ Download</a>
-  </div>
-  <div id="book-pdf"></div>
-  <div id="book-chapters" hidden></div>
+  <div id="book-chapters"></div>
 </main>
 
 <main id="view-chapter" class="view">
@@ -79,52 +67,70 @@
   </div>
   <div id="ch-pyq"></div>
   <div id="ch-outline"></div>
-  <a class="pdfjump" id="ch-pdf">📄 Open this chapter in the original PDF ↗</a>
-  <pre id="ch-text"></pre>
+  <div id="ch-text" class="note-doc"></div>
 </main>
 
-<!-- ══ ANSWER ══ -->
 <main id="view-answer" class="view">
   <div class="modebar">
     <div class="modes" id="modes">
-      <button class="mode active" data-mode="full">Full</button>
-      <button class="mode" data-mode="skeleton">Skeleton</button>
-      <button class="mode" data-mode="scan">60s scan</button>
-      <button class="mode" data-mode="cloze">Cloze</button>
+      <button class="mode" data-mode="full" title="The full model answer, in full">Model Answer</button>
+      <button class="mode" data-mode="scan" title="Skeleton for 60-second recall">Scan</button>
     </div>
-    <button class="icon" id="btn-size" title="Reading size">Aa</button>
-    <button class="icon" id="btn-step" title="Step through points (→)">▸ Step</button>
-    <button class="icon toggle" id="btn-branches" title="Show/hide branch angles">Branches On</button>
-    <button class="icon ra-toggle" id="btn-ra" title="Read this paper aloud, question by question">◉ Read Along</button>
+    <select id="answer-theme" aria-label="Filter answer navigation by theme" title="Limit Previous/Next to one theme"></select>
+    <button class="icon" id="btn-size" title="Reading size" aria-label="Change reading size">Aa</button>
+    <button class="branch-toggle on" id="branch-read-toggle" type="button" aria-pressed="true" title="Read branch answers before the next main question" hidden>
+      <span class="message-icon" aria-hidden="true"></span>
+      <span class="branch-badge" id="branch-count">0</span>
+      <span class="branch-label">Branches On</span>
+    </button>
+    <button class="read-toggle" id="btn-read" type="button" aria-pressed="false" title="Read the full answer aloud and continue to the next question">
+      <span aria-hidden="true">◉</span> Read Along</button>
   </div>
+  <div class="read-status" id="read-status" role="status" aria-live="polite" hidden>
+    <span class="read-pulse" aria-hidden="true"></span>
+    <span id="read-status-text">Reading</span>
+    <button id="read-pause" type="button" aria-pressed="false" title="Pause or resume Read Along (Spacebar)" hidden>❚❚ Pause</button>
+    <button id="read-skip" type="button">Next question</button>
+    <button id="read-details-toggle" type="button" aria-expanded="false" title="Show detailed Read Along timing and settings" hidden>
+      <span>Paper</span><progress id="read-paper-summary-progress" value="0" max="100" aria-label="Whole paper progress">0%</progress><time id="read-paper-summary-remaining">0:00</time><span aria-hidden="true" class="detail-caret">⌄</span>
+    </button>
+    <div class="read-details-panel" id="read-details-panel" hidden>
+    <div class="read-progress-wrap" id="read-progress-wrap">
+      <div class="read-time-head"><time id="read-elapsed">Elapsed 0:00</time><span>Estimated time remaining</span></div>
+      <div class="read-time-row question-time"><span>Question</span><progress id="read-progress" value="0" max="100" aria-label="Question narration progress">0%</progress><time id="read-remaining">0:00</time></div>
+      <div class="read-time-row section-time"><span>Subject</span><progress id="read-section-progress" value="0" max="100" aria-label="Current subject section progress">0%</progress><time id="read-section-remaining">0:00</time></div>
+      <div class="read-time-row paper-time"><span>Paper</span><progress id="read-paper-progress" value="0" max="100" aria-label="Whole paper progress">0%</progress><time id="read-paper-remaining">0:00</time></div>
+    </div>
+    <div class="read-controls" id="read-controls">
+      <label>
+        <span>Voice</span>
+        <select id="read-voice" aria-label="Read Along voice"></select>
+      </label>
+      <label>
+        <span>Speed</span>
+        <select id="read-speed" aria-label="Read Along speed">
+          <option value="0.75">0.75×</option>
+          <option value="0.9">0.9×</option>
+          <option value="1">1×</option>
+          <option value="1.15">1.15×</option>
+          <option value="1.3">1.3×</option>
+        </select>
+      </label>
+      <span class="read-hint">Tap a line to read from there · ↑↓ move line · Spacebar pauses.</span>
+    </div>
+    </div>
+  </div>
+  <button id="sb-backdrop" aria-label="Close question list" tabindex="-1"></button>
   <aside id="sidebar" aria-label="Questions in this paper">
-    <button id="sb-pin" title="Pin sidebar">☰</button>
+    <div class="sb-head">
+      <div><b id="sb-title">Paper</b><span id="sb-progress"></span></div>
+      <button id="sb-pin" aria-label="Close question list" title="Close question list">×</button>
+    </div>
+    <label class="sb-search"><span aria-hidden="true">⌕</span><input id="sb-search" type="search" placeholder="Find a question or keyword" aria-label="Search this paper"></label>
     <div id="sb-list"></div>
   </aside>
-  <div class="ra-bar" id="ra-bar" hidden>
-    <div class="ra-row1">
-      <span class="ra-status" id="ra-status">Reading 1 of 1</span>
-      <span class="spacer"></span>
-      <button class="ra-btn" id="ra-pause">Pause</button>
-      <button class="ra-btn" id="ra-next">Next question</button>
-      <button class="ra-btn ra-more" id="ra-more">▾</button>
-    </div>
-    <div class="ra-progress-row">
-      <span class="ra-plabel">Paper</span>
-      <div class="ra-track"><div class="ra-fill" id="ra-fill"></div></div>
-      <span class="ra-eta" id="ra-eta">--:--:--</span>
-    </div>
-    <div class="ra-settings" id="ra-settings" hidden>
-      <label>Speed
-        <select id="ra-rate"></select>
-      </label>
-      <label>Voice
-        <select id="ra-voice"></select>
-      </label>
-    </div>
-  </div>
   <nav class="pager top" id="pager-top">
-    <button class="pg" data-nav="prev">‹ Previous</button>
+    <button class="pg" data-nav="prev" disabled>‹ Previous</button>
     <span class="pg-pos"></span>
     <button class="pg" data-nav="next">Next ›</button>
   </nav>
@@ -132,27 +138,13 @@
   <div class="done-wrap">
     <button id="btn-done">Mark as completed</button>
   </div>
-  <nav class="pager bottom" id="pager-bottom">
-    <button class="pg" data-nav="prev">‹ Previous</button>
-    <span class="pg-pos"></span>
-    <button class="pg" data-nav="next">Next ›</button>
-  </nav>
-  <div class="recall" id="recall">
-    <span>How well did you recall it?</span>
-    <div>
-      <button class="rc r3" data-r="3">Confident</button>
-      <button class="rc r2" data-r="2">Shaky</button>
-      <button class="rc r1" data-r="1">Blank</button>
-    </div>
-  </div>
 </main>
 
-<nav class="tabbar" id="tabbar">
-  <button class="tab" data-go="#/"        aria-label="Home"><span>⌂</span>Home</button>
-  <button class="tab" data-go="#last"     aria-label="Continue"><span>↩</span>Continue</button>
-  <button class="tab" data-go="#due"      aria-label="Revise"><span>◉</span>Revise</button>
-  <button class="tab" data-go="#/n"       aria-label="Notes"><span>📚</span>Notes</button>
-  <button class="tab" data-go="#find"     aria-label="Search"><span>⌕</span>Search</button>
+<nav class="app-dock" id="app-dock" aria-label="App navigation">
+  <button data-dock="home"><span class="nav-icon home-icon" aria-hidden="true"></span><small>Home</small></button>
+  <button data-dock="subject"><span class="nav-icon subject-icon" aria-hidden="true"></span><small>Subject</small></button>
+  <button data-dock="previous" disabled><span class="nav-icon arrow-icon previous-icon" aria-hidden="true"></span><small>Previous</small></button>
+  <button data-dock="next"><span class="nav-icon arrow-icon next-icon" aria-hidden="true"></span><small>Next</small></button>
 </nav>
 
 <script type="module" src="js/app.js"></script>

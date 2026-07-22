@@ -1,6 +1,6 @@
 // Bump CACHE on every deploy or the SW serves stale assets.
-const CACHE = 'mainsmate-v1';
-const ASSETS = ['./', './index.html', './app.css', './js/app.js', './js/tts.js', './manifest.webmanifest', './data/questions.json'];
+const CACHE = 'mainsmate-v3';
+const ASSETS = ['./', './index.html', './app.css', './js/app.js', './manifest.webmanifest', './data/questions.json'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
