@@ -67,6 +67,24 @@ question than the stem), contaminated intros (copy-pasted from an unrelated
 answer), and malformed/duplicated points (empty `k`, or a point whose `k`
 repeats the section heading, e.g. `"X — Section Name"`).
 
+## Second template defect (found late — DIFFERENT detector needed)
+
+A SECOND generic template exists, missed by the first detector. Tell-tale point
+keys: **"Agency From Below"**, **"Continuity Change"**, **"Material Foundations"**,
+**"Regional Diversity"**, "Distribution Test", "Density Paradox", "Value-chain
+Integration", "Risk Resilience", "Productivity Test"; generic headings **"Concept
+and context / Key dimensions and evidence / Implications and assessment"**; and a
+generic intro **"The demand is to connect potential with performance…"**. Unlike
+the first template, these answers have REAL content polluted with ~3 identical
+generic filler points + a generic intro. Fix = swap intro/headings/filler-points
+for question-specific content (see `scratchpad/gs3_depollute.py`, `gs1_geo_mains.py`).
+Detector: grep for `"Agency From Below"` or `"Value-chain Integration"`.
+Scope found: gs1 ~50, gs2 ~34 (mostly FALSE POSITIVES — generic headings but real
+content, low priority), gs3 9 (DONE). 
+- [x] GS-3: 9 de-polluted (v19). GS-1 Geography mains (72-75) done (v19).
+- [ ] GS-1 remaining ~46: History/Culture (7), Modern (5), Post-Ind (2), World (4),
+      Geography branches (13), Society (15). Same swap method.
+
 ## Word-band discipline (the recurring failure mode)
 
 **I consistently under-write full rewrites on the first pass**, landing
