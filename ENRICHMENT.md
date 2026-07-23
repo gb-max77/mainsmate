@@ -159,10 +159,10 @@ band, 0 template-broken, 0 out-of-band.
 
 - Geography/IR **hand-drawable sketch layer** built + 8 sketches deployed (v15):
   gs1-31/33/34/36/41, gs3-1 (IMEC), gs3-55 (cascade), gs2-81 (INSTC).
-- **GS-2 T2 template-broken mains rewritten** (10: gs2-4/5/9/12/14/17/21/22/39/46),
-  deployed v16.
-- [ ] **Template-broken branches** remain: 24 in gs2, 8 in pubad2 (detector list in
-      commit history). These need full rewrites — do before enriching good branches.
+- **ALL template-broken answers fixed and deployed (v17):** GS-2 10 T2 mains +
+  24 branches, PubAd II 8 branches. GS-2 and PubAd II now have **0 template-broken**
+  answers at any tier. Detector (`"Disciplinary anchor"`/`"Federal Consultation"`/
+  `"Constitutional Morality"`) returns 0 across gs2 + pubad2.
 - [ ] **T2 / T3 tiers** for PubAd I, PubAd II, GS-1/2/3 (~186 mains; same method +
       template detector; the T1/T2/T3 toggle already filters these for the user).
 - [ ] **Branch answers** (`<pid>-<n>-b<i>`) — the branch template defect exists
