@@ -157,8 +157,14 @@ band, 0 template-broken, 0 out-of-band.
 ## Remaining for full-completion (per user's ultimate goal: "all papers all
 ## questions and branches")
 
-- [ ] **T2 / T3 tiers** for PubAd I, PubAd II, GS-1/2/3 (same method + template
-      detector; the T1/T2/T3 toggle already filters these for the user).
+- Geography/IR **hand-drawable sketch layer** built + 8 sketches deployed (v15):
+  gs1-31/33/34/36/41, gs3-1 (IMEC), gs3-55 (cascade), gs2-81 (INSTC).
+- **GS-2 T2 template-broken mains rewritten** (10: gs2-4/5/9/12/14/17/21/22/39/46),
+  deployed v16.
+- [ ] **Template-broken branches** remain: 24 in gs2, 8 in pubad2 (detector list in
+      commit history). These need full rewrites — do before enriching good branches.
+- [ ] **T2 / T3 tiers** for PubAd I, PubAd II, GS-1/2/3 (~186 mains; same method +
+      template detector; the T1/T2/T3 toggle already filters these for the user).
 - [ ] **Branch answers** (`<pid>-<n>-b<i>`) — the branch template defect exists
       (e.g. `pubad2-35-b0`, `-53-b0`, `-66-b0/b1`, `-70-b2`, `-77-b1`, `-88-b0`);
       run the detector across all `*-b*` keys before enriching.
