@@ -85,6 +85,20 @@ content, low priority), gs3 9 (DONE).
 - [ ] GS-1 remaining ~46: History/Culture (7), Modern (5), Post-Ind (2), World (4),
       Geography branches (13), Society (15). Same swap method.
 
+
+## ✅ MILESTONE (v21): ALL generic-template defects cleared across all 7 papers
+- template-1 boilerplate ("Disciplinary anchor" etc.): 0
+- 2nd-template filler points ("Agency From Below"/"Value-chain Integration" etc.): 0
+- generic scaffold headings ("Concept and context" etc.): 0 (renamed)
+GS-1 second-template de-pollution complete: 50 answers (geo mains 4, history 18,
+geo branches 13, society 15) + 3 residual GS-3. All in band.
+
+## Remaining (optional, lower marginal value)
+- Full surgical enrichment of the already-in-band, correct, non-defective T2/T3
+  mains + branches across papers (adding more current data / diagrams where a
+  topic naturally enables). ~hundreds of answers; not a defect, a polish.
+- More diagrams/sketches where topics enable.
+
 ## Word-band discipline (the recurring failure mode)
 
 **I consistently under-write full rewrites on the first pass**, landing
