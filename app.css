@@ -272,6 +272,8 @@ body[data-mode=scan] .pt{margin-bottom:8px}
 .sb-n{flex:none;font-variant-numeric:tabular-nums;color:var(--faint);font-weight:700;min-width:26px}
 .sb-t{flex:1;min-width:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .sb-badge{display:grid;place-items:center;min-width:19px;height:19px;padding:0 5px;flex:none;border-radius:10px;background:var(--blue);color:#fff;font-size:10px;font-weight:700;box-shadow:0 0 0 2px var(--bg2)}
+/* star marking sidebar items whose answer carries a diagram/map (flip mode) */
+.sb-diag{flex:none;color:var(--gold);font-size:10px;line-height:1;margin-left:2px}
 .sb-branch{margin-left:24px;width:calc(100% - 24px);padding:6px 8px;font-size:11.5px;color:var(--faint)}
 .sb-tree{flex:none;color:var(--ghost);font-family:ui-monospace,SFMono-Regular,monospace}
 #sb-backdrop{display:none;position:fixed;inset:56px 0 0;z-index:27;width:100%;background:rgba(3,5,9,.62);backdrop-filter:blur(2px);cursor:default}

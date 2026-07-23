@@ -275,6 +275,8 @@ function normDiag(d) {
     nodes: (d.nodes || []).slice(), note: d.note || 'drawable in 30s', sketch: d.sketch };
 }
 const diagList = a => (Array.isArray(a.diag) ? a.diag : (a.diag ? [a.diag] : [])).map(normDiag).filter(d => d && (d.nodes.length || d.center));
+// Does this answer carry a diagram/map (for the sidebar star)?
+const hasDiag = a => !!(a && diagList(a).length);
 const dNode = (x, cls) => `<span class="dnode${cls ? ' ' + cls : ''}">${md(x)}</span>`;
 
 function renderDiag(d) {
@@ -1045,7 +1047,8 @@ function renderSidebar(r) {
     const branches = q.branches || [];
     const b = el('button', 'sb-q sb-main' + (q.qid === r.qid ? ' on' : '') + (a ? '' : ' todo') + (store.isDone(q.qid) ? ' done' : ''));
     b.dataset.search = q.q.toLowerCase();
-    b.innerHTML = `<span class="sb-n">Q${q.n}</span><span class="sb-t">${esc(q.q)}</span>${branches.length ? `<span class="sb-badge" title="${branches.length} branch question${branches.length === 1 ? '' : 's'}">${branches.length}</span>` : ''}`;
+    const mainStar = hasDiag(a) ? `<span class="sb-diag" title="Has a hand-drawable diagram / map (flip mode)">✦</span>` : '';
+    b.innerHTML = `<span class="sb-n">Q${q.n}</span><span class="sb-t">${esc(q.q)}</span>${mainStar}${branches.length ? `<span class="sb-badge" title="${branches.length} branch question${branches.length === 1 ? '' : 's'}">${branches.length}</span>` : ''}`;
     b.onclick = () => { go(`#/a/${q.qid}`); document.body.classList.remove('sb-open'); };
     L.append(b);
     branches.forEach((branch, i) => {
@@ -1053,7 +1056,7 @@ function renderSidebar(r) {
       const answer = ANSWERS[r.pid]?.[qid];
       const bb = el('button', 'sb-q sb-branch' + (qid === r.qid ? ' on' : '') + (answer ? '' : ' todo') + (store.isDone(qid) ? ' done' : ''));
       bb.dataset.search = `${q.q} ${branch.q}`.toLowerCase();
-      bb.innerHTML = `<span class="sb-tree" aria-hidden="true">└</span><span class="sb-t">${esc(branch.q)}</span>`;
+      bb.innerHTML = `<span class="sb-tree" aria-hidden="true">└</span><span class="sb-t">${esc(branch.q)}</span>${hasDiag(answer) ? `<span class="sb-diag" title="Has a hand-drawable diagram / map (flip mode)">✦</span>` : ''}`;
       bb.onclick = () => { go(`#/a/${qid}`); document.body.classList.remove('sb-open'); };
       L.append(bb);
     });
