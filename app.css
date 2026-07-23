@@ -582,3 +582,25 @@ body[data-mode=full] .bsec.flip .segdiag{display:block;animation:dgin .2s ease}
 .dspokes .dnode{border-color:var(--green)}
 .dbranches .dnode{border-color:var(--blue)}
 @media (max-width:560px){ .dg-flow{flex-direction:column;align-items:flex-start} .darw{transform:rotate(90deg);margin:2px 0 2px 16px} }
+
+/* ── nested sketch / map layer inside a diagram dialog ── */
+.dg-sketch-wrap{margin-top:14px;padding-top:12px;border-top:1px dashed color-mix(in srgb,var(--blue) 30%,var(--line))}
+.dg-sketch-btn{font-size:11px;font-weight:600;color:var(--faint);border:1px solid var(--line);border-radius:8px;
+  padding:5px 11px;font-family:var(--ui-font);line-height:1}
+.dg-sketch-btn:hover{color:var(--ink);border-color:var(--blue)}
+.dg-sketch-btn.on{color:var(--blue);border-color:var(--blue);background:color-mix(in srgb,var(--blue) 12%,var(--card))}
+.dg-sketch{margin-top:14px;text-align:center}
+.dg-sketch svg{max-width:100%;height:auto;display:inline-block}
+.dg-sketch-note{margin-top:8px;font-size:11px;color:var(--faint);font-style:italic}
+/* reusable hand-drawn stroke roles for authored SVGs (theme-aware) */
+.dg-sketch .sk-ink{stroke:var(--ink);fill:none;stroke-width:1.6}
+.dg-sketch .sk-blue{stroke:var(--blue);fill:none;stroke-width:1.8}
+.dg-sketch .sk-green{stroke:var(--green);fill:none;stroke-width:1.8}
+.dg-sketch .sk-gold{stroke:var(--gold);fill:none;stroke-width:1.8}
+.dg-sketch .sk-red{stroke:var(--t1);fill:none;stroke-width:1.8}
+.dg-sketch .sk-faint{stroke:var(--faint);fill:none;stroke-width:1}
+.dg-sketch .fl-ink{fill:var(--ink)} .dg-sketch .fl-blue{fill:var(--blue)} .dg-sketch .fl-green{fill:var(--green)}
+.dg-sketch .fl-gold{fill:var(--gold)} .dg-sketch .fl-red{fill:var(--t1)} .dg-sketch .fl-faint{fill:var(--faint)}
+.dg-sketch .sk-fillblue{fill:color-mix(in srgb,var(--blue) 14%,transparent)}
+.dg-sketch .sk-fillgreen{fill:color-mix(in srgb,var(--green) 16%,transparent)}
+.dg-sketch text{font-family:var(--ui-font);font-size:11px;font-weight:600}

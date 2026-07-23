@@ -96,6 +96,15 @@ tissue first, cut facts last.
   independent — it reads `.pt` text from the DOM regardless of flip state.
 - Only add where a section is a *genuine* process/structure/timeline — most
   analytical answers should have none. Don't force one.
+- **Sketch/map layer (Geography, IR):** a diagram may carry
+  `diag.sketch = {label, svg, note}` — a hand-drawable SVG concept sketch or
+  simple map behind a nested view/hide toggle *inside* the diagram dialog. SVGs
+  use theme-aware helper classes defined in app.css (`.sk-ink/.sk-blue/.sk-green/
+  .sk-gold/.sk-red/.sk-faint` strokes, `.fl-*` fills, `.sk-fillblue/green`).
+  Keep them simple enough to reproduce by hand (topper-copy convention). Done so
+  far: gs1-31 monsoon map, gs1-33 subduction section, gs1-34 cyclone section,
+  gs1-41 Indus basin map. TODO where natural: gs1-36 (GLOF), gs3-55 (Dharali
+  cascade), and IR route maps (INSTC/Chabahar, IMEC) when doing GS-2 IR / GS-3.
 
 ## Verification per batch
 

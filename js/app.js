@@ -269,10 +269,10 @@ function normDiag(d) {
   if (d.d && !d.nodes) {
     return { type: d.k || 'flow', seg: d.seg, title: d.title || '', center: d.center,
       nodes: String(d.d).split(/\s*(?:→|->)\s*/).map(s => s.trim()).filter(Boolean),
-      note: d.note || 'drawable in 30s' };
+      note: d.note || 'drawable in 30s', sketch: d.sketch };
   }
   return { type: d.type || 'flow', seg: d.seg, title: d.title || '', center: d.center,
-    nodes: (d.nodes || []).slice(), note: d.note || 'drawable in 30s' };
+    nodes: (d.nodes || []).slice(), note: d.note || 'drawable in 30s', sketch: d.sketch };
 }
 const diagList = a => (Array.isArray(a.diag) ? a.diag : (a.diag ? [a.diag] : [])).map(normDiag).filter(d => d && (d.nodes.length || d.center));
 const dNode = (x, cls) => `<span class="dnode${cls ? ' ' + cls : ''}">${md(x)}</span>`;
@@ -291,7 +291,15 @@ function renderDiag(d) {
       + d.nodes.map(n => dNode(n)).join('<span class="darw">→</span>')
       + (d.type === 'cycle' ? '<span class="dloop" title="repeats">↺</span>' : '') + `</div>`;
   }
-  return `<div class="dg dg-${esc(d.type)}">${cap}${inner}</div>`;
+  // Geography / IR answers may carry an extra hand-drawable sketch or map
+  // (concept diagram, cross-section, route map) behind a view/hide toggle.
+  let sketch = '';
+  if (d.sketch && d.sketch.svg) {
+    const label = d.sketch.label || 'Sketch / map';
+    sketch = `<div class="dg-sketch-wrap"><button class="dg-sketch-btn" type="button" data-label="${esc(label)}">▤ ${esc(label)}</button>`
+      + `<div class="dg-sketch" hidden>${d.sketch.svg}${d.sketch.note ? `<div class="dg-sketch-note">${esc(d.sketch.note)}</div>` : ''}</div></div>`;
+  }
+  return `<div class="dg dg-${esc(d.type)}">${cap}${inner}${sketch}</div>`;
 }
 
 // Each paper is marked on different things, so the regeneration prompt differs.
@@ -1238,6 +1246,17 @@ $('#answer').addEventListener('click', e => {
     const on = sec.classList.toggle('flip');
     flip.classList.toggle('on', on);
     flip.textContent = on ? '≡ Text' : '◨ Diagram';
+    return;
+  }
+  // Sketch/map view-hide toggle nested inside a diagram dialog.
+  const sk = e.target.closest('.dg-sketch-btn');
+  if (sk) {
+    e.stopPropagation();
+    const panel = sk.nextElementSibling;
+    const show = panel.hidden;
+    panel.hidden = !show;
+    sk.classList.toggle('on', show);
+    sk.textContent = (show ? '✕ ' : '▤ ') + (sk.dataset.label || 'Sketch / map');
     return;
   }
   const target = e.target.closest('.qtitle, .intro, .bh, .pt, .diag, .wf, .conc, .nowrite');
