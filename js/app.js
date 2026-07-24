@@ -397,6 +397,7 @@ async function renderAnswer(qid) {
   if (answerTheme !== 'all' && !p.sections.some(s => s.t === answerTheme)) answerTheme = 'all';
   themeSelect.value = answerTheme;
   paintTierToggle();
+  paintAnswerCount();
   A.append(el('h1', 'qtitle', esc(r.q)));
   let wc = '';
   if (a) {
@@ -1001,6 +1002,19 @@ function paintTierToggle() {
   if (sel) { sel.disabled = !!answerTier; sel.classList.toggle('muted', !!answerTier); }
 }
 
+// x / y — questions in the current theme/tier selection over the paper total,
+// on the same main+branches basis that Prev/Next and Read Along traverse.
+function paintAnswerCount() {
+  const el = $('#answer-count'); if (!el) return;
+  const p = cur && paperOf(cur.pid);
+  if (!p) { el.textContent = ''; return; }
+  const total = (readBranches ? rows(p) : rows(p, true)).length;
+  const shown = navSequence(cur.pid).length;
+  el.textContent = `${shown}/${total}`;
+  el.title = answerTier ? `${shown} Tier-${answerTier} questions of ${total}`
+    : (answerTheme === 'all' ? `All ${total} questions` : `${shown} in this theme of ${total}`);
+}
+
 // Where `cur` sits in the sequence. With branches off while viewing a branch, we
 // anchor to its parent so prev/next still make sense.
 function navIndex(seq) {
@@ -1178,7 +1192,7 @@ $('#answer-theme').onchange = e => {
   answerTheme = e.target.value;
   const first = navSequence(cur.pid)[0];
   if (first && first.sec !== cur.sec) go(`#/a/${first.qid}`);
-  else { paintDock(); renderSidebar(cur); }
+  else { paintDock(); renderSidebar(cur); paintAnswerCount(); }
 };
 // Tier chips: toggling one filters Prev/Next, the sidebar and Read Along to that
 // tier (all sections). Clicking the active chip clears it, restoring the theme.
@@ -1188,7 +1202,7 @@ $('#answer-tier').onclick = e => {
   paintTierToggle();
   const seq = navSequence(cur.pid);
   if (seq.length && !seq.some(r => r.qid === cur.qid)) go(`#/a/${seq[0].qid}`);
-  else { paintDock(); renderSidebar(cur); }
+  else { paintDock(); renderSidebar(cur); paintAnswerCount(); }
 };
 $('#tier-chips').onclick = e => {
   const c = e.target.closest('.chip'); if (!c) return;
@@ -1221,6 +1235,7 @@ $('#branch-read-toggle').onclick = () => {
   readBranches = !readBranches;
   localStorage.setItem('mm-read-branches', String(readBranches));
   paintBranchReadToggle(cur);
+  paintDock(); paintAnswerCount();
   if (readAlong) {
     const parts = speechParts();
     readTimelineMeta = buildReadTimeline(parts);
