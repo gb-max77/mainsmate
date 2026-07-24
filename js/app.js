@@ -499,6 +499,7 @@ const canSpeak = () => 'speechSynthesis' in window && 'SpeechSynthesisUtterance'
 // Turn the on-screen shorthand into something a TTS voice says naturally:
 // expand exam abbreviations, and convert stray dashes into audible pauses.
 const cleanSpeech = s => String(s || '')
+  .replace(/\bIntro\s*\([^)]*\)/gi, 'Intro')               // "Intro (concept):" → "Intro:" — the (type) tag is a visual cue, not spoken
   .replace(/H(\d+)\s*[—–-]\s*/g, 'Section $1. ')          // H1 — Thesis → Section 1. Thesis
   .replace(/\bEx\b\.?\s*:?\s*/g, 'Example: ')             // Ex: → Example:
   .replace(/\bArts?\b\.?\s*(?=\d)/g, 'Article ')          // Art. 21 → Article 21
