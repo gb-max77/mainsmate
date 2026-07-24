@@ -1002,17 +1002,17 @@ function paintTierToggle() {
   if (sel) { sel.disabled = !!answerTier; sel.classList.toggle('muted', !!answerTier); }
 }
 
-// x / y — questions in the current theme/tier selection over the paper total,
-// on the same main+branches basis that Prev/Next and Read Along traverse.
+// position / total — where the current question sits within the active
+// theme/tier selection (the same ordered list Prev/Next and Read Along walk).
 function paintAnswerCount() {
   const el = $('#answer-count'); if (!el) return;
-  const p = cur && paperOf(cur.pid);
-  if (!p) { el.textContent = ''; return; }
-  const total = (readBranches ? rows(p) : rows(p, true)).length;
-  const shown = navSequence(cur.pid).length;
-  el.textContent = `${shown}/${total}`;
-  el.title = answerTier ? `${shown} Tier-${answerTier} questions of ${total}`
-    : (answerTheme === 'all' ? `All ${total} questions` : `${shown} in this theme of ${total}`);
+  if (!cur) { el.textContent = ''; return; }
+  const seq = navSequence(cur.pid);
+  const i = navIndex(seq), total = seq.length;
+  if (i < 0 || !total) { el.textContent = ''; return; }
+  el.textContent = `${i + 1}/${total}`;
+  const where = answerTier ? `Tier-${answerTier}` : (answerTheme === 'all' ? 'the paper' : 'this theme');
+  el.title = `Question ${i + 1} of ${total} in ${where}`;
 }
 
 // Where `cur` sits in the sequence. With branches off while viewing a branch, we
