@@ -358,23 +358,27 @@ const noAnswerHTML = r => `<div class="nowrite"><p>No model answer written for t
   <small>Tier ${r.tier || '—'} · generate one in Google AI Mode below, pre-loaded with the paper's answer brief.</small></div>`;
 
 // A collapsed branch: question line + toggle. Expanding reveals the answer in place.
-function branchItem(id, b, ans) {
+function branchItem(id, b, ans, expand) {
   const it = el('div', 'bitem');
   const head = el('button', 'bhead');
   head.innerHTML = `<span class="caret">▸</span><span class="btxt">↳ ${esc(b.q)}</span>
     <span class="bmeta">${b.m}M${ans ? ' <i class="ok">✓</i>' : ''}</span>`;
   const body = el('div', 'bbody');
-  body.hidden = true;
+  const fill = () => {
+    if (body.dataset.filled) return;
+    body.innerHTML = (ans ? answerHTML(ans) : noAnswerHTML(b))
+      + `<a class="bopen" href="#/a/${id}">Open full ↗</a>`;
+    body.dataset.filled = '1';
+  };
   head.onclick = () => {
     const open = body.hidden;
-    if (open && !body.dataset.filled) {
-      body.innerHTML = (ans ? answerHTML(ans) : noAnswerHTML(b))
-        + `<a class="bopen" href="#/a/${id}">Open full ↗</a>`;
-      body.dataset.filled = '1';
-    }
+    if (open) fill();
     body.hidden = !open;
     it.classList.toggle('open', open);
   };
+  // Branches On → show the branch answer inline right away.
+  if (expand) { fill(); body.hidden = false; it.classList.add('open'); }
+  else body.hidden = true;
   it.append(head, body);
   return it;
 }
@@ -431,7 +435,7 @@ async function renderAnswer(qid) {
     parent.branches.forEach((b, i) => {
       const id = qidOf(pid, parent.n, i);
       if (id === qid) return;
-      bx.append(branchItem(id, b, ANSWERS[pid]?.[id]));
+      bx.append(branchItem(id, b, ANSWERS[pid]?.[id], readBranches));
     });
     A.append(bx);
   }
@@ -1236,6 +1240,12 @@ $('#branch-read-toggle').onclick = () => {
   localStorage.setItem('mm-read-branches', String(readBranches));
   paintBranchReadToggle(cur);
   paintDock(); paintAnswerCount();
+  // Expand (or collapse) the inline branch panels to match — reuse each panel's
+  // own toggle so unfilled bodies get their answer rendered on expand.
+  $('#answer').querySelectorAll('.bitem').forEach(it => {
+    const isOpen = !it.querySelector('.bbody').hidden;
+    if (readBranches !== isOpen) it.querySelector('.bhead').click();
+  });
   if (readAlong) {
     const parts = speechParts();
     readTimelineMeta = buildReadTimeline(parts);
