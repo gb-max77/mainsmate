@@ -1084,6 +1084,272 @@ function renderSidebar(r) {
   if (on) on.scrollIntoView({ block: 'center' });   // instant — smooth breaks the in-app browser
 }
 
+/* ══════════════════ REVISION FEED ══════════════════ */
+// A phone-first, Twitter/Stories-style drill: two axes. Horizontal = the cards of
+// ONE answer (question → intro → each body heading → way forward + conclusion), so
+// swiping right rehearses the skeleton you'd actually write. Vertical = the next
+// question. Both axes are native CSS scroll-snap — no gesture library.
+const feed = {
+  pid: localStorage.getItem('mm-feed-paper') || 'all',
+  theme: 'all',
+  tier: null,
+  diagOnly: false,
+  shuffle: localStorage.getItem('mm-feed-shuffle') === 'true',
+  seq: [],          // filtered rows, in display order
+  drawn: 0,         // how many of seq are in the DOM
+  playing: false,
+  playRun: 0
+};
+const FEED_PAGE = 6;      // questions appended per batch
+const FEED_MAX = 24;      // questions kept in the DOM (older ones are trimmed)
+
+// One answer → its cards. Body sections each get their own card, so a 2-section
+// answer is 5 cards, a 3-section 6, and an Essay (12 lenses) one card per lens.
+function feedCards(row, a) {
+  const cards = [{ kind: 'q' }];
+  if (a) {
+    if (a.intro?.length) cards.push({ kind: 'intro' });
+    (a.body || []).forEach((_, si) => cards.push({ kind: 'sec', si }));
+    if (a.wf?.length || a.conc) cards.push({ kind: 'close' });
+  }
+  return cards;
+}
+
+const PAPER_TAG = { essay: 'Essay', gs1: 'GS-1', gs2: 'GS-2', gs3: 'GS-3', gs4: 'GS-4', pubad1: 'PubAd I', pubad2: 'PubAd II' };
+
+function feedCardHTML(card, row, a) {
+  if (card.kind === 'q') {
+    // Some older flash arrays are just the question's opening words — worthless as
+    // memory hooks. Keep multi-word cues and any single word not lifted from the stem.
+    const stem = new Set(String(row.q || '').toLowerCase().match(/[a-z0-9]+/g) || []);
+    const cueList = (a?.flash || []).map(x => String(x).trim()).filter(t => {
+      const w = t.toLowerCase().match(/[a-z0-9]+/g) || [];
+      return w.length > 1 || (w.length === 1 && !stem.has(w[0]));
+    }).slice(0, 5);
+    // A single word reads well as a hashtag; a phrase does not — keep phrases as pills.
+    const cues = cueList.length > 1 ? cueList.map(t =>
+      `<span class="fcue">${/^[\w-]+$/.test(t) ? '#' : ''}${md(t)}</span>`).join('') : '';
+    return `<div class="fc-kind">Question</div>
+      <p class="fc-q">${esc(row.isBranch ? row.q : row.q)}</p>
+      ${a?.directive ? `<p class="fc-demand"><b>Demand</b> · ${esc(a.directive)}</p>` : ''}
+      ${cues ? `<div class="fcues">${cues}</div>` : ''}
+      ${a ? '' : '<p class="fc-none">No model answer written yet.</p>'}`;
+  }
+  if (card.kind === 'intro') {
+    const i = a.intro[0];
+    return `<div class="fc-kind">Intro <span class="fc-tag">${esc(i.t || '')}</span></div>
+      <p class="fc-body">${md(i.x)}</p>`;
+  }
+  if (card.kind === 'sec') {
+    const b = a.body[card.si];
+    const pts = (b.p || []).map(pt => `<li class="fc-pt">${pt.k ? `<b>${md(pt.k)}</b> ` : ''}${md(pt.x || '')}${pt.ex ? ` <span class="fc-ex">Ex: ${md(pt.ex)}</span>` : ''}</li>`).join('');
+    return `<div class="fc-kind">H${card.si + 1}</div>
+      <p class="fc-h">${md(b.h || '')}</p>
+      <ul class="fc-pts">${pts}</ul>`;
+  }
+  const wf = (a.wf || []).map(md).join(' · ');
+  return `<div class="fc-kind">Close</div>
+    ${wf ? `<p class="fc-body"><b>Way Forward</b> — ${wf}</p>` : ''}
+    ${a.conc ? `<p class="fc-body fc-conc"><b>Conclusion</b> — ${md(a.conc)}</p>` : ''}`;
+}
+
+function feedQuestionEl(row) {
+  const a = ANSWERS[row.pid]?.[row.qid];
+  const cards = feedCards(row, a);
+  const sec = el('section', 'fq');
+  sec.dataset.qid = row.qid;
+  const tier = rowTier(row);
+  const handle = `${PAPER_TAG[row.pid] || row.pid} · ${esc(row.sec)}`;
+  sec.innerHTML =
+    `<header class="fq-head">
+       <span class="fq-av" aria-hidden="true">${esc((PAPER_TAG[row.pid] || '?').replace(/[^A-Za-z0-9]/g, '').slice(0, 2))}</span>
+       <span class="fq-who"><b>${handle}</b><small>@${esc(row.pid)} · Q${esc(String(row.n ?? ''))}${row.isBranch ? '·b' : ''}${row.m ? ` · ${esc(String(row.m))}m` : ''}</small></span>
+       ${tier ? `<span class="tag t${tier}">T${tier}</span>` : ''}
+       ${hasDiag(a) ? '<span class="sb-diag" title="Has a diagram / map">✦</span>' : ''}
+     </header>
+     <div class="fq-pips">${cards.map((_, i) => `<i class="${i === 0 ? 'on' : ''}"></i>`).join('')}</div>
+     <div class="fq-rail">${cards.map(c => `<article class="fcard"><div class="fc-in">${feedCardHTML(c, row, a)}</div></article>`).join('')}</div>
+     <footer class="fq-foot">
+       <button class="fq-act" data-act="done" aria-pressed="${store.isDone(row.qid)}" title="Mark as completed">✓</button>
+       <button class="fq-act" data-act="play" title="Read this card aloud, then roll on">▶</button>
+       <button class="fq-act" data-act="open" title="Open the full answer">↗</button>
+       <span class="fq-pos"></span>
+     </footer>`;
+  const rail = sec.querySelector('.fq-rail');
+  rail.addEventListener('scroll', () => feedPaintPips(sec), { passive: true });
+  feedPaintPips(sec);
+  return sec;
+}
+
+const feedCardIndex = sec => {
+  const rail = sec.querySelector('.fq-rail');
+  return Math.round(rail.scrollLeft / Math.max(1, rail.clientWidth));
+};
+
+function feedPaintPips(sec) {
+  const i = feedCardIndex(sec);
+  const pips = sec.querySelectorAll('.fq-pips i');
+  pips.forEach((p, n) => p.classList.toggle('on', n === i));
+  const pos = sec.querySelector('.fq-pos');
+  if (pos) pos.textContent = `${i + 1}/${pips.length}`;
+}
+
+// Build the filtered, ordered list of questions the feed walks.
+function feedSequence() {
+  const papers = feed.pid === 'all' ? ORDER : [feed.pid];
+  let out = [];
+  for (const pid of papers) {
+    const p = paperOf(pid); if (!p) continue;
+    out = out.concat(rows(p).filter(r => {
+      if (feed.tier && rowTier(r) !== feed.tier) return false;
+      if (feed.pid !== 'all' && feed.theme !== 'all' && r.sec !== feed.theme) return false;
+      if (feed.diagOnly && !hasDiag(ANSWERS[pid]?.[r.qid])) return false;
+      return true;
+    }));
+  }
+  if (feed.shuffle) for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [out[i], out[j]] = [out[j], out[i]];
+  }
+  return out;
+}
+
+function feedAppend(n = FEED_PAGE) {
+  const scroll = $('#feed-scroll');
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < n && feed.drawn < feed.seq.length; i++, feed.drawn++) {
+    frag.append(feedQuestionEl(feed.seq[feed.drawn]));
+  }
+  scroll.append(frag);
+  // Keep the DOM bounded: drop questions well above the viewport and subtract the
+  // exact height removed (every .fq is one viewport tall) so scroll stays put.
+  const kids = scroll.children;
+  if (kids.length > FEED_MAX) {
+    const drop = kids.length - FEED_MAX;
+    const h = scroll.clientHeight;
+    const seen = Math.floor(scroll.scrollTop / Math.max(1, h));
+    const cut = Math.min(drop, Math.max(0, seen - 2));
+    for (let i = 0; i < cut; i++) kids[0].remove();
+    if (cut) scroll.scrollTop -= cut * h;
+  }
+}
+
+// The topbar's height varies (the brand wraps on narrow screens), so measure it
+// rather than hard-coding — the feed must fill exactly the space below it.
+function feedSyncHeight() {
+  const tb = document.querySelector('.topbar');
+  if (tb) document.documentElement.style.setProperty('--tb', `${Math.round(tb.getBoundingClientRect().height)}px`);
+}
+addEventListener('resize', () => { if ($('#view-feed')?.classList.contains('active')) feedSyncHeight(); });
+
+function renderFeed() {
+  feedSyncHeight();
+  const scroll = $('#feed-scroll');
+  feedStop();
+  scroll.innerHTML = '';
+  feed.seq = feedSequence();
+  feed.drawn = 0;
+  $('#feed-count').textContent = feed.seq.length ? `${feed.seq.length} Q` : '';
+  $('#feed-empty').hidden = !!feed.seq.length;
+  feedAppend(FEED_PAGE * 2);
+  scroll.scrollTop = 0;
+}
+
+function feedPaintBar() {
+  const paper = $('#feed-paper');
+  if (paper && !paper.options.length) {
+    paper.innerHTML = `<option value="all">All papers</option>` +
+      ORDER.map(id => `<option value="${id}">${esc(PAPER_TAG[id] || id)}</option>`).join('');
+  }
+  if (paper) paper.value = feed.pid;
+  const theme = $('#feed-theme');
+  const p = feed.pid === 'all' ? null : paperOf(feed.pid);
+  theme.hidden = !p;
+  if (p) {
+    theme.innerHTML = `<option value="all">All themes</option>` +
+      p.sections.map(s => `<option value="${esc(s.t)}">${esc(s.t)}</option>`).join('');
+    if (!p.sections.some(s => s.t === feed.theme)) feed.theme = 'all';
+    theme.value = feed.theme;
+  }
+  $('#feed-tier').querySelectorAll('button').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.tier === feed.tier)));
+  $('#feed-diag').setAttribute('aria-pressed', String(feed.diagOnly));
+  $('#feed-shuffle').setAttribute('aria-pressed', String(feed.shuffle));
+}
+
+/* ── feed navigation ── */
+const feedCurrent = () => {
+  const scroll = $('#feed-scroll');
+  const i = Math.round(scroll.scrollTop / Math.max(1, scroll.clientHeight));
+  return scroll.children[Math.max(0, Math.min(scroll.children.length - 1, i))] || null;
+};
+
+function feedMoveCard(dir) {
+  const sec = feedCurrent(); if (!sec) return false;
+  const rail = sec.querySelector('.fq-rail');
+  const n = sec.querySelectorAll('.fcard').length;
+  const i = feedCardIndex(sec) + dir;
+  if (i < 0 || i >= n) return false;
+  rail.scrollTo({ left: i * rail.clientWidth, behavior: 'smooth' });
+  return true;
+}
+
+function feedMoveQuestion(dir) {
+  const scroll = $('#feed-scroll');
+  const sec = feedCurrent(); if (!sec) return false;
+  const target = dir > 0 ? sec.nextElementSibling : sec.previousElementSibling;
+  if (!target) { if (dir > 0) feedAppend(); return false; }
+  // Always land on the first card of the next question — Stories convention.
+  target.querySelector('.fq-rail').scrollTo({ left: 0, behavior: 'auto' });
+  scroll.scrollTo({ top: target.offsetTop - scroll.offsetTop, behavior: 'smooth' });
+  if (feed.drawn - Array.from(scroll.children).indexOf(target) < FEED_PAGE) feedAppend();
+  return true;
+}
+
+/* ── feed autoplay: read this card, slide right, then drop to the next question ── */
+function feedStop(message) {
+  feed.playing = false;
+  feed.playRun++;
+  if (canSpeak()) speechSynthesis.cancel();
+  $('#view-feed')?.querySelectorAll('.fq-act[data-act="play"]').forEach(b => b.classList.remove('on'));
+  if (message) $('#feed-count') && ($('#feed-count').textContent = message);
+}
+
+function feedSpeakCurrent() {
+  if (!feed.playing) return;
+  const sec = feedCurrent();
+  if (!sec) return feedStop();
+  sec.querySelector('.fq-act[data-act="play"]')?.classList.add('on');
+  const card = sec.querySelectorAll('.fcard')[feedCardIndex(sec)];
+  const text = cleanSpeech(card ? card.textContent : '');
+  const run = ++feed.playRun;
+  if (!text) return feedNextInPlay(run);
+  const u = new SpeechSynthesisUtterance(text);
+  const voice = preferredVoice(speechSynthesis.getVoices());
+  u.lang = voice?.lang || 'en-IN';
+  u.rate = readSpeed; u.pitch = 1;
+  if (voice) u.voice = voice;
+  u.onend = () => feedNextInPlay(run);
+  u.onerror = () => feedNextInPlay(run);
+  speechSynthesis.speak(u);
+}
+
+function feedNextInPlay(run) {
+  if (!feed.playing || run !== feed.playRun) return;
+  // right through the answer's cards, then down to the next question
+  const moved = feedMoveCard(1) || feedMoveQuestion(1);
+  if (!moved) return feedStop('End of feed');
+  setTimeout(feedSpeakCurrent, 420);   // let the snap settle before speaking
+}
+
+function feedTogglePlay() {
+  if (feed.playing) return feedStop();
+  if (!canSpeak()) return;
+  if (readAlong) stopReadAlong();
+  feed.playing = true;
+  feedSpeakCurrent();
+}
+
 /* ══════════════════ ROUTER ══════════════════ */
 function go(hash) { location.hash = hash; }
 
@@ -1116,6 +1382,9 @@ function paintDock() {
   prev.disabled = i <= 0;
   next.disabled = i < 0 || i >= seq.length - 1;
   document.body.classList.toggle('answer-open', answer);
+  const feedOn = $('#view-feed').classList.contains('active');
+  document.body.classList.toggle('feed-open', feedOn);
+  if (feedOn) feedSyncHeight();   // after the class lands — it compacts the topbar
 }
 
 async function route() {
@@ -1128,7 +1397,14 @@ async function route() {
   $('#back').hidden = h === '#/';
   $('#btn-sb').hidden = kind !== 'a';
 
-  if (kind === 'n') {
+  if (kind !== 'feed' && feed.playing) feedStop();
+
+  if (kind === 'feed') {
+    $('#view-feed').classList.add('active');
+    await Promise.all((feed.pid === 'all' ? ORDER : [feed.pid]).map(loadAnswers));
+    feedPaintBar();
+    renderFeed();
+  } else if (kind === 'n') {
     const [, , bookId, chIdx] = h.split('/');
     if (bookId && chIdx !== undefined) { $('#view-chapter').classList.add('active'); await renderChapter(bookId, chIdx); }
     else if (bookId) { $('#view-book').classList.add('active'); await renderBook(bookId); }
@@ -1157,9 +1433,41 @@ $('#app-dock').onclick = e => {
   const b = e.target.closest('button[data-dock]'); if (!b || b.disabled) return;
   if (b.dataset.dock === 'home') go('#/');
   else if (b.dataset.dock === 'subject') go(subjectHash());
+  else if (b.dataset.dock === 'feed') go('#/feed');
   else dockMove(b.dataset.dock);
 };
 $('#go-notes').onclick = () => go('#/n');
+$('#go-feed').onclick = () => go('#/feed');
+
+/* ── feed wiring ── */
+$('#feed-paper').onchange = e => {
+  feed.pid = e.target.value; feed.theme = 'all';
+  localStorage.setItem('mm-feed-paper', feed.pid);
+  go('#/feed'); route();
+};
+$('#feed-theme').onchange = e => { feed.theme = e.target.value; renderFeed(); };
+$('#feed-tier').onclick = e => {
+  const b = e.target.closest('button[data-tier]'); if (!b) return;
+  feed.tier = feed.tier === b.dataset.tier ? null : b.dataset.tier;
+  feedPaintBar(); renderFeed();
+};
+$('#feed-diag').onclick = () => { feed.diagOnly = !feed.diagOnly; feedPaintBar(); renderFeed(); };
+$('#feed-shuffle').onclick = () => {
+  feed.shuffle = !feed.shuffle;
+  localStorage.setItem('mm-feed-shuffle', String(feed.shuffle));
+  feedPaintBar(); renderFeed();
+};
+$('#feed-scroll').addEventListener('scroll', () => {
+  const s = $('#feed-scroll');
+  if (s.scrollTop + s.clientHeight * 2 > s.scrollHeight) feedAppend();
+}, { passive: true });
+$('#view-feed').addEventListener('click', e => {
+  const b = e.target.closest('.fq-act'); if (!b) return;
+  const sec = b.closest('.fq'); const qid = sec.dataset.qid;
+  if (b.dataset.act === 'done') { const on = store.toggleDone(qid); b.setAttribute('aria-pressed', String(on)); }
+  else if (b.dataset.act === 'open') { feedStop(); go(`#/a/${qid}`); }
+  else if (b.dataset.act === 'play') feedTogglePlay();
+});
 $('#btn-done').onclick = () => { if (cur) { store.toggleDone(cur.qid); paintDone(cur.qid); } };
 
 // Reading size persists — eye comfort is a per-person setting, not a per-session one.
@@ -1309,6 +1617,16 @@ addEventListener('keydown', e => {
   }
   if (e.key === '1') { e.preventDefault(); go('#/'); return; }
   if (e.key === '2') { e.preventDefault(); go(subjectHash()); return; }
+  // In the feed the two axes are literal: ←/→ move within one answer's cards,
+  // ↑/↓ move to the next question. Space toggles autoplay.
+  if ($('#view-feed').classList.contains('active')) {
+    if (e.code === 'Space') { e.preventDefault(); feedTogglePlay(); return; }
+    if (e.key === 'ArrowRight') { e.preventDefault(); feedStop(); feedMoveCard(1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); feedStop(); feedMoveCard(-1); }
+    if (e.key === 'ArrowDown') { e.preventDefault(); feedStop(); feedMoveQuestion(1); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); feedStop(); feedMoveQuestion(-1); }
+    return;
+  }
   if (!$('#view-answer').classList.contains('active')) return;
   // ←/→ walk questions (main → its branches → next main); ↑/↓ walk lines
   if (e.key === 'ArrowRight') { e.preventDefault(); dockMove('next'); }

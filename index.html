@@ -23,11 +23,33 @@
 <main id="view-home" class="view">
   <div class="countdown" id="countdown"></div>
   <div class="papers" id="papers"></div>
+  <button class="notes-cta feed-cta" id="go-feed">
+    <span class="ic">⚡</span>
+    <span class="nm"><b>Revision feed</b><small>Scroll the whole syllabus, card by card</small></span>
+    <span class="arw">›</span>
+  </button>
   <button class="notes-cta" id="go-notes">
     <span class="ic">📚</span>
     <span class="nm"><b>Notes library</b><small id="notes-sub">Mains Smasher notes, by paper</small></span>
     <span class="arw">›</span>
   </button>
+</main>
+
+<main id="view-feed" class="view">
+  <div class="feed-bar" id="feed-bar">
+    <select id="feed-paper" aria-label="Filter feed by paper"></select>
+    <select id="feed-theme" aria-label="Filter feed by theme"></select>
+    <div class="tier-toggle" id="feed-tier" role="group" aria-label="Filter feed by tier">
+      <button type="button" data-tier="1" aria-pressed="false" title="Only Tier-1">T1</button>
+      <button type="button" data-tier="2" aria-pressed="false" title="Only Tier-2">T2</button>
+      <button type="button" data-tier="3" aria-pressed="false" title="Only Tier-3">T3</button>
+    </div>
+    <button class="fchip" id="feed-diag" aria-pressed="false" title="Only questions with a diagram or map">✦</button>
+    <button class="fchip" id="feed-shuffle" aria-pressed="false" title="Shuffle the order">⤫ Shuffle</button>
+    <span class="feed-count" id="feed-count"></span>
+  </div>
+  <div class="feed-scroll" id="feed-scroll" tabindex="-1"></div>
+  <div class="feed-empty" id="feed-empty" hidden>No questions match these filters.</div>
 </main>
 
 <main id="view-list" class="view">
@@ -144,6 +166,7 @@
 <nav class="app-dock" id="app-dock" aria-label="App navigation">
   <button data-dock="home"><span class="nav-icon home-icon" aria-hidden="true"></span><small>Home</small></button>
   <button data-dock="subject"><span class="nav-icon subject-icon" aria-hidden="true"></span><small>Subject</small></button>
+  <button data-dock="feed"><span class="nav-icon feed-icon" aria-hidden="true"></span><small>Feed</small></button>
   <button data-dock="previous" disabled><span class="nav-icon arrow-icon previous-icon" aria-hidden="true"></span><small>Previous</small></button>
   <button data-dock="next"><span class="nav-icon arrow-icon next-icon" aria-hidden="true"></span><small>Next</small></button>
 </nav>
