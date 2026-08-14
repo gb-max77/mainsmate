@@ -360,9 +360,9 @@ function answerHTML(a) {
   digs.forEach(d => { if (Number.isInteger(d.seg)) (bySeg[d.seg] = bySeg[d.seg] || []).push(d); });
   (a.body || []).forEach((bd, bi) => {
     const segdig = (bySeg[bi] || []).map(renderDiag).join('');
-    const flipBtn = segdig ? `<button class="seg-flip" type="button" title="Flip these points to a hand-drawable diagram, and back">◨ Diagram</button>` : '';
+    // The figure sits with the section it explains — both visible together.
     h += `<section class="bsec${segdig ? ' has-diag' : ''}" data-si="${bi}">`
-      + `<div class="bh">H${bi + 1} — ${md(bd.h)}${flipBtn}</div>`
+      + `<div class="bh">H${bi + 1} — ${md(bd.h)}</div>`
       + `<div class="pts">` + (bd.p || []).map(pt => `<p class="pt${pt.unv ? ' unv' : ''}">${pointHTML(pt)}</p>`).join('') + `</div>`
       + (segdig ? `<div class="segdiag">${segdig}</div>` : '')
       + `</section>`;
@@ -480,11 +480,6 @@ async function renderAnswer(qid) {
 function applyMode() {
   document.body.dataset.mode = mode;
   $('#modes')?.querySelectorAll('.mode').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
-  // Diagram flips are a Model-Answer affordance — leaving that view flips them back.
-  if (mode !== 'full') $('#answer').querySelectorAll('.bsec.flip').forEach(s => {
-    s.classList.remove('flip');
-    const b = s.querySelector('.seg-flip'); if (b) { b.classList.remove('on'); b.textContent = '◨ Diagram'; }
-  });
 }
 
 // The nodes Read Along narrates, in reading order — also the targets for the
@@ -1087,7 +1082,7 @@ function renderSidebar(r) {
     const branches = q.branches || [];
     const b = el('button', 'sb-q sb-main' + (q.qid === r.qid ? ' on' : '') + (a ? '' : ' todo') + (store.isDone(q.qid) ? ' done' : ''));
     b.dataset.search = q.q.toLowerCase();
-    const mainStar = hasDiag(a) ? `<span class="sb-diag" title="Has a hand-drawable diagram / map (flip mode)">✦</span>` : '';
+    const mainStar = hasDiag(a) ? `<span class="sb-diag" title="Has a diagram from the fact sheet">✦</span>` : '';
     b.innerHTML = `<span class="sb-n">Q${q.n}</span><span class="sb-t">${esc(q.q)}</span>${mainStar}${branches.length ? `<span class="sb-badge" title="${branches.length} branch question${branches.length === 1 ? '' : 's'}">${branches.length}</span>` : ''}`;
     b.onclick = () => { go(`#/a/${q.qid}`); document.body.classList.remove('sb-open'); };
     L.append(b);
@@ -1096,7 +1091,7 @@ function renderSidebar(r) {
       const answer = ANSWERS[r.pid]?.[qid];
       const bb = el('button', 'sb-q sb-branch' + (qid === r.qid ? ' on' : '') + (answer ? '' : ' todo') + (store.isDone(qid) ? ' done' : ''));
       bb.dataset.search = `${q.q} ${branch.q}`.toLowerCase();
-      bb.innerHTML = `<span class="sb-tree" aria-hidden="true">└</span><span class="sb-t">${esc(branch.q)}</span>${hasDiag(answer) ? `<span class="sb-diag" title="Has a hand-drawable diagram / map (flip mode)">✦</span>` : ''}`;
+      bb.innerHTML = `<span class="sb-tree" aria-hidden="true">└</span><span class="sb-t">${esc(branch.q)}</span>${hasDiag(answer) ? `<span class="sb-diag" title="Has a diagram from the fact sheet">✦</span>` : ''}`;
       bb.onclick = () => { go(`#/a/${qid}`); document.body.classList.remove('sb-open'); };
       L.append(bb);
     });
@@ -1164,9 +1159,12 @@ function feedCardHTML(card, row, a) {
   if (card.kind === 'sec') {
     const b = a.body[card.si];
     const pts = (b.p || []).map(pt => `<li class="fc-pt">${pt.k ? `<b>${md(pt.k)}</b> ` : ''}${md(pt.x || '')}${pt.ex ? ` <span class="fc-ex">Ex: ${md(pt.ex)}</span>` : ''}</li>`).join('');
+    // The section's figure rides along with it in the feed too.
+    const fig = diagList(a).filter(d => d.seg === card.si).map(renderDiag).join('');
     return `<div class="fc-kind">H${card.si + 1}</div>
       <p class="fc-h">${md(b.h || '')}</p>
-      <ul class="fc-pts">${pts}</ul>`;
+      <ul class="fc-pts">${pts}</ul>
+      ${fig ? `<div class="segdiag">${fig}</div>` : ''}`;
   }
   const wf = (a.wf || []).map(md).join(' · ');
   return `<div class="fc-kind">Close</div>
@@ -1596,16 +1594,6 @@ populateVoiceOptions();
 if (canSpeak()) speechSynthesis.addEventListener('voiceschanged', populateVoiceOptions);
 // Tap any line to read from there — works whether or not narration is running.
 $('#answer').addEventListener('click', e => {
-  // Per-section diagram flip lives on the heading — handle it before tap-to-read.
-  const flip = e.target.closest('.seg-flip');
-  if (flip) {
-    e.stopPropagation();
-    const sec = flip.closest('.bsec');
-    const on = sec.classList.toggle('flip');
-    flip.classList.toggle('on', on);
-    flip.textContent = on ? '≡ Text' : '◨ Diagram';
-    return;
-  }
   // Sketch/map view-hide toggle nested inside a diagram dialog.
   const sk = e.target.closest('.dg-sketch-btn');
   if (sk) {
