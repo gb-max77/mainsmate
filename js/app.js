@@ -269,12 +269,17 @@ function normDiag(d) {
   if (d.d && !d.nodes) {
     return { type: d.k || 'flow', seg: d.seg, title: d.title || '', center: d.center,
       nodes: String(d.d).split(/\s*(?:→|->)\s*/).map(s => s.trim()).filter(Boolean),
+      cols: [], rows: [], foot: d.foot || '',
       note: d.note || 'drawable in 30s', sketch: d.sketch };
   }
   return { type: d.type || 'flow', seg: d.seg, title: d.title || '', center: d.center,
-    nodes: (d.nodes || []).slice(), note: d.note || 'drawable in 30s', sketch: d.sketch };
+    nodes: (d.nodes || []).slice(),
+    // `table` carries a multi-attribute comparison; `foot` is the dashed box that
+    // holds the decisive holding or caveat the boxes themselves cannot state.
+    cols: (d.cols || []).slice(), rows: (d.rows || []).map(r => r.slice()), foot: d.foot || '',
+    note: d.note || 'drawable in 30s', sketch: d.sketch };
 }
-const diagList = a => (Array.isArray(a.diag) ? a.diag : (a.diag ? [a.diag] : [])).map(normDiag).filter(d => d && (d.nodes.length || d.center));
+const diagList = a => (Array.isArray(a.diag) ? a.diag : (a.diag ? [a.diag] : [])).map(normDiag).filter(d => d && (d.nodes.length || d.center || d.rows.length));
 // Does this answer carry a diagram/map (for the sidebar star)?
 const hasDiag = a => !!(a && diagList(a).length);
 const dNode = (x, cls) => `<span class="dnode${cls ? ' ' + cls : ''}">${md(x)}</span>`;
@@ -288,11 +293,21 @@ function renderDiag(d) {
   } else if (d.type === 'tree') {
     inner = `<div class="dg-tree"><div class="dnode droot">${md(d.center || '')}</div>`
       + `<div class="dbranches">${d.nodes.map(n => dNode(n)).join('')}</div></div>`;
+  } else if (d.type === 'table') {
+    // Multi-attribute comparison — the form the sheets use for 'compare X and Y'.
+    inner = `<table class="dg-table"><thead><tr>${d.cols.map(c => `<th>${md(c)}</th>`).join('')}</tr></thead>`
+      + `<tbody>${d.rows.map(r => `<tr>${r.map(c => `<td>${md(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  } else if (d.type === 'stack') {
+    // Stacked bands — layers read top-to-bottom (e.g. border / economic / systemic).
+    inner = `<div class="dg-stack">${d.nodes.map(n => `<div class="dband">${md(n)}</div>`).join('')}</div>`;
   } else { // flow | cycle
     inner = `<div class="dg-flow${d.type === 'cycle' ? ' dg-cycle' : ''}">`
       + d.nodes.map(n => dNode(n)).join('<span class="darw">→</span>')
       + (d.type === 'cycle' ? '<span class="dloop" title="repeats">↺</span>' : '') + `</div>`;
   }
+  // The dashed box: the caveat, holding or remedy that turns a procedural figure
+  // into a constitutional one. Drawn dashed so it reads as commentary, not a node.
+  const foot = d.foot ? `<div class="dg-foot">${md(d.foot)}</div>` : '';
   // Geography / IR answers may carry an extra hand-drawable sketch or map
   // (concept diagram, cross-section, route map) behind a view/hide toggle.
   let sketch = '';
@@ -301,7 +316,7 @@ function renderDiag(d) {
     sketch = `<div class="dg-sketch-wrap"><button class="dg-sketch-btn" type="button" data-label="${esc(label)}">▤ ${esc(label)}</button>`
       + `<div class="dg-sketch" hidden>${d.sketch.svg}${d.sketch.note ? `<div class="dg-sketch-note">${esc(d.sketch.note)}</div>` : ''}</div></div>`;
   }
-  return `<div class="dg dg-${esc(d.type)}">${cap}${inner}${sketch}</div>`;
+  return `<div class="dg dg-${esc(d.type)}">${cap}${inner}${foot}${sketch}</div>`;
 }
 
 // Each paper is marked on different things, so the regeneration prompt differs.
