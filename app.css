@@ -607,6 +607,17 @@ body[data-mode=full] .bsec.flip .segdiag{display:block;animation:dgin .2s ease}
 .dband:nth-child(2){border-color:var(--green)}
 .dband:nth-child(3){border-color:var(--gold)}
 
+/* ── the figure as printed in the fact sheet, cropped from source ── */
+.dg-figure{padding:0;border:0;background:transparent}
+.dg-img{display:block;width:100%;height:auto;border-radius:12px;
+  border:1.5px solid color-mix(in srgb,var(--blue) 22%,var(--line))}
+/* Line art on cream paper: invert for the dark theme so it reads as chalk on
+   slate, and rotate the hue back so the ochre headings stay ochre. */
+:root:not([data-theme="light"]) .dg-img{filter:invert(.92) hue-rotate(180deg)}
+[data-theme="light"] .dg-img{filter:none}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]) .dg-img{filter:none} }
+[data-theme="dark"] .dg-img{filter:invert(.92) hue-rotate(180deg)}
+
 /* ── the dashed box: the holding or remedy the boxes cannot state ── */
 .dg-foot{margin-top:13px;padding:9px 12px;font-size:12px;line-height:1.4;color:var(--faint);
   border:1.25px dashed color-mix(in srgb,var(--gold) 48%,var(--line));border-radius:10px;

@@ -277,14 +277,20 @@ function normDiag(d) {
     // `table` carries a multi-attribute comparison; `foot` is the dashed box that
     // holds the decisive holding or caveat the boxes themselves cannot state.
     cols: (d.cols || []).slice(), rows: (d.rows || []).map(r => r.slice()), foot: d.foot || '',
-    note: d.note || 'drawable in 30s', sketch: d.sketch };
+    fig: d.fig || '', note: d.note || 'drawable in 30s', sketch: d.sketch };
 }
-const diagList = a => (Array.isArray(a.diag) ? a.diag : (a.diag ? [a.diag] : [])).map(normDiag).filter(d => d && (d.nodes.length || d.center || d.rows.length));
+const diagList = a => (Array.isArray(a.diag) ? a.diag : (a.diag ? [a.diag] : [])).map(normDiag).filter(d => d && (d.nodes.length || d.center || d.rows.length || d.fig));
 // Does this answer carry a diagram/map (for the sidebar star)?
 const hasDiag = a => !!(a && diagList(a).length);
 const dNode = (x, cls) => `<span class="dnode${cls ? ' ' + cls : ''}">${md(x)}</span>`;
 
 function renderDiag(d) {
+  // `fig` = the figure as it is actually drawn in the Logic & Fact Sheet, cropped
+  // straight out of the source. It already carries its own title and caption, so
+  // nothing else is drawn around it.
+  if (d.fig) {
+    return `<div class="dg dg-figure"><img class="dg-img" src="${esc(d.fig)}" alt="${esc(d.title || 'diagram')}" loading="lazy" decoding="async"></div>`;
+  }
   const cap = `<div class="dg-cap">${d.title ? esc(d.title) : esc(d.type)}${d.note ? ` · <i>${esc(d.note)}</i>` : ''}</div>`;
   let inner;
   if (d.type === 'hub') {
