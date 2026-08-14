@@ -549,8 +549,13 @@ body[data-mode=scan] .bh{margin-top:20px}
 /* The figure stands with the section it explains — points above, picture below,
    both visible at once. Read Along is unaffected: it reads the point text from
    the DOM and never touches the figure. */
-.segdiag{display:block;margin-top:10px}
-.segdiag.standalone{margin-top:14px}
+/* Every figure for the answer gathers at its foot, under one heading. */
+.segdiag{display:block;margin-top:18px;padding-top:14px;
+  border-top:1px dashed color-mix(in srgb,var(--blue) 30%,var(--line))}
+.dg-head{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--gold);
+  font-weight:700;margin-bottom:10px;font-family:var(--ui-font)}
+.segdiag .dg+.dg{margin-top:14px}
+body[data-mode=scan] .segdiag{display:none}
 
 /* the picture: simple, reproducible by hand, theme-aware */
 .dg{margin:12px 0 4px;padding:16px 15px 18px;border:1.5px dashed color-mix(in srgb,var(--blue) 42%,var(--line));
@@ -731,3 +736,28 @@ body.feed-open .app-dock button{min-width:58px;padding:5px 8px}
   .fcard{padding:0 max(12px,calc(50% - 330px))}
   .fq-head,.fq-pips,.fq-foot{padding-left:max(16px,calc(50% - 322px));padding-right:max(16px,calc(50% - 322px))}
 }
+
+/* ══════════════════ FACTNSTAT ══════════════════ */
+.facts-sub{color:var(--faint);font-size:13px;line-height:1.5;margin:-4px 0 14px;max-width:70ch}
+#facts-count{color:var(--gold);font-weight:600;white-space:nowrap}
+.facts-search{margin-bottom:12px}
+#facts-papers{margin-bottom:18px}
+#facts-papers .chip.on{border-color:var(--gold);color:var(--gold);
+  background:color-mix(in srgb,var(--gold) 14%,var(--card))}
+.fs-sec{margin-bottom:26px}
+.fs-sec>h2{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);
+  font-weight:700;margin:0 0 14px;padding-bottom:7px;
+  border-bottom:1.5px solid color-mix(in srgb,var(--gold) 40%,var(--line));font-family:var(--ui-font)}
+.fs-group{margin-bottom:16px;break-inside:avoid}
+.fs-group>h3{font-size:12.5px;font-weight:700;color:var(--blue);margin:0 0 7px;font-family:var(--ui-font)}
+.fs-group ul{list-style:none;margin:0;padding:0}
+.fs-group li{position:relative;padding:5px 0 5px 15px;font-size:13.5px;line-height:1.5;color:var(--ink);
+  border-bottom:1px dashed color-mix(in srgb,var(--blue) 14%,var(--line))}
+.fs-group li:last-child{border-bottom:0}
+.fs-group li::before{content:"·";position:absolute;left:3px;color:var(--gold);font-weight:800}
+.fs-group li b{color:var(--gold)}
+.fs-group mark{background:color-mix(in srgb,var(--gold) 32%,transparent);color:var(--ink);
+  border-radius:3px;padding:0 2px}
+.fs-none{color:var(--faint);font-style:italic;padding:22px 0}
+@media (min-width:900px){ #facts-body{column-count:2;column-gap:34px} .fs-sec{break-inside:avoid-column} }
+.facts-icon::before{content:"◈";font-size:15px;line-height:1}

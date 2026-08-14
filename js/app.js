@@ -356,22 +356,17 @@ function answerHTML(a) {
   }
   for (const i of a.intro || []) h += `<p class="intro"><b class="lbl">Intro (${esc(i.t)}):</b> ${md(i.x)}</p>`;
   const digs = diagList(a);
-  const bySeg = {};
-  digs.forEach(d => { if (Number.isInteger(d.seg)) (bySeg[d.seg] = bySeg[d.seg] || []).push(d); });
   (a.body || []).forEach((bd, bi) => {
-    const segdig = (bySeg[bi] || []).map(renderDiag).join('');
-    // The figure sits with the section it explains — both visible together.
-    h += `<section class="bsec${segdig ? ' has-diag' : ''}" data-si="${bi}">`
+    h += `<section class="bsec" data-si="${bi}">`
       + `<div class="bh">H${bi + 1} — ${md(bd.h)}</div>`
       + `<div class="pts">` + (bd.p || []).map(pt => `<p class="pt${pt.unv ? ' unv' : ''}">${pointHTML(pt)}</p>`).join('') + `</div>`
-      + (segdig ? `<div class="segdiag">${segdig}</div>` : '')
       + `</section>`;
   });
-  const standalone = digs.filter(d => !Number.isInteger(d.seg));
-  if (standalone.length) h += `<div class="segdiag standalone">${standalone.map(renderDiag).join('')}</div>`;
   if (a.wf?.length) h += `<p class="wf"><b class="lbl">Way Forward:</b> ${a.wf.map(md).join(' · ')}</p>`;
   if (a.mne) h += `<p class="wf"><b class="lbl">Mnemonic:</b> ${md(a.mne)}</p>`;
   if (a.conc) h += `<p class="conc">Conclusion: ${md(a.conc)}</p>`;
+  // Every figure for this answer sits together at the foot of it.
+  if (digs.length) h += `<div class="segdiag"><div class="dg-head">Visuals</div>${digs.map(renderDiag).join('')}</div>`;
   return h;
 }
 
@@ -1127,6 +1122,7 @@ function feedCards(row, a) {
     if (a.intro?.length) cards.push({ kind: 'intro' });
     (a.body || []).forEach((_, si) => cards.push({ kind: 'sec', si }));
     if (a.wf?.length || a.conc) cards.push({ kind: 'close' });
+    if (diagList(a).length) cards.push({ kind: 'visuals' });
   }
   return cards;
 }
@@ -1159,18 +1155,65 @@ function feedCardHTML(card, row, a) {
   if (card.kind === 'sec') {
     const b = a.body[card.si];
     const pts = (b.p || []).map(pt => `<li class="fc-pt">${pt.k ? `<b>${md(pt.k)}</b> ` : ''}${md(pt.x || '')}${pt.ex ? ` <span class="fc-ex">Ex: ${md(pt.ex)}</span>` : ''}</li>`).join('');
-    // The section's figure rides along with it in the feed too.
-    const fig = diagList(a).filter(d => d.seg === card.si).map(renderDiag).join('');
     return `<div class="fc-kind">H${card.si + 1}</div>
       <p class="fc-h">${md(b.h || '')}</p>
-      <ul class="fc-pts">${pts}</ul>
-      ${fig ? `<div class="segdiag">${fig}</div>` : ''}`;
+      <ul class="fc-pts">${pts}</ul>`;
+  }
+  if (card.kind === 'visuals') {
+    return `<div class="fc-kind">Visuals</div>
+      <div class="segdiag">${diagList(a).map(renderDiag).join('')}</div>`;
   }
   const wf = (a.wf || []).map(md).join(' · ');
   return `<div class="fc-kind">Close</div>
     ${wf ? `<p class="fc-body"><b>Way Forward</b> — ${wf}</p>` : ''}
     ${a.conc ? `<p class="fc-body fc-conc"><b>Conclusion</b> — ${md(a.conc)}</p>` : ''}`;
 }
+
+/* ══════════════════ FACTNSTAT — the paper-wise fact bank ══════════════════ */
+let FACTS = null;
+const facts = { pid: localStorage.getItem('mm-facts-paper') || 'gs2', q: '' };
+
+async function loadFacts() {
+  if (FACTS) return FACTS;
+  FACTS = await fetch('data/factnstat.json').then(r => r.json()).catch(() => ({}));
+  return FACTS;
+}
+
+// Highlight the matched run so the eye lands on it without re-reading the line.
+const factMark = (s, q) => !q ? md(s)
+  : md(s).replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'ig'), '<mark>$1</mark>');
+
+async function renderFacts(arg) {
+  await loadFacts();
+  if (arg && FACTS[arg]) facts.pid = arg;
+  localStorage.setItem('mm-facts-paper', facts.pid);
+  const chips = $('#facts-papers');
+  chips.innerHTML = Object.entries(FACTS).map(([pid, d]) =>
+    `<button class="chip${pid === facts.pid ? ' on' : ''}" data-fp="${pid}" aria-pressed="${pid === facts.pid}">${esc(d.label)}</button>`).join('');
+  const d = FACTS[facts.pid];
+  const q = facts.q.trim().toLowerCase();
+  let shown = 0, total = 0;
+  let html = '';
+  for (const s of d?.sections || []) {
+    let secHTML = '';
+    for (const g of s.groups) {
+      const items = g.items.filter(t => { total++; return !q || t.toLowerCase().includes(q); });
+      if (!items.length) continue;
+      shown += items.length;
+      secHTML += `<div class="fs-group"><h3>${esc(g.g)}</h3><ul>`
+        + items.map(t => `<li>${factMark(t, facts.q.trim())}</li>`).join('') + `</ul></div>`;
+    }
+    if (secHTML) html += `<section class="fs-sec"><h2>${esc(s.h)}</h2>${secHTML}</section>`;
+  }
+  $('#facts-body').innerHTML = html || `<p class="fs-none">Nothing matches “${esc(facts.q)}” in ${esc(d?.label || '')}.</p>`;
+  $('#facts-count').textContent = q ? `${shown} of ${total} shown` : `${total} facts`;
+}
+
+$('#facts-papers')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-fp]'); if (!b) return;
+  facts.pid = b.dataset.fp; renderFacts();
+});
+$('#facts-q')?.addEventListener('input', e => { facts.q = e.target.value; renderFacts(); });
 
 function feedQuestionEl(row) {
   const a = ANSWERS[row.pid]?.[row.qid];
@@ -1423,6 +1466,9 @@ async function route() {
     await Promise.all((feed.pid === 'all' ? ORDER : [feed.pid]).map(loadAnswers));
     feedPaintBar();
     renderFeed();
+  } else if (kind === 'facts') {
+    $('#view-facts').classList.add('active');
+    await renderFacts(arg);
   } else if (kind === 'n') {
     const [, , bookId, chIdx] = h.split('/');
     if (bookId && chIdx !== undefined) { $('#view-chapter').classList.add('active'); await renderChapter(bookId, chIdx); }
@@ -1453,9 +1499,11 @@ $('#app-dock').onclick = e => {
   if (b.dataset.dock === 'home') go('#/');
   else if (b.dataset.dock === 'subject') go(subjectHash());
   else if (b.dataset.dock === 'feed') go('#/feed');
+  else if (b.dataset.dock === 'facts') go('#/facts');
   else dockMove(b.dataset.dock);
 };
 $('#go-notes').onclick = () => go('#/n');
+$('#go-facts').onclick = () => go('#/facts');
 $('#go-feed').onclick = () => go('#/feed');
 
 /* ── feed wiring ── */

@@ -28,6 +28,11 @@
     <span class="nm"><b>Revision feed</b><small>Scroll the whole syllabus, card by card</small></span>
     <span class="arw">›</span>
   </button>
+  <button class="notes-cta" id="go-facts">
+    <span class="ic">◈</span>
+    <span class="nm"><b>FactnStat</b><small>Articles, cases, committees, schemes, data — paper-wise</small></span>
+    <span class="arw">›</span>
+  </button>
   <button class="notes-cta" id="go-notes">
     <span class="ic">📚</span>
     <span class="nm"><b>Notes library</b><small id="notes-sub">Mains Smasher notes, by paper</small></span>
@@ -68,6 +73,14 @@
     <select id="theme-sel" aria-label="Filter by theme"></select>
   </div>
   <div id="q-list"></div>
+</main>
+
+<main id="view-facts" class="view">
+  <h1>◈ FactnStat</h1>
+  <p class="facts-sub">Constitutional provisions, commissions, schemes, case law, committees, rankings and data — arranged paper-wise for recall. <span id="facts-count"></span></p>
+  <label class="sb-search facts-search"><span aria-hidden="true">⌕</span><input id="facts-q" type="search" placeholder="Search every fact — case, Article, scheme, figure" aria-label="Search facts"></label>
+  <div class="chips" id="facts-papers"></div>
+  <div id="facts-body"></div>
 </main>
 
 <main id="view-notes" class="view">
@@ -167,6 +180,7 @@
   <button data-dock="home"><span class="nav-icon home-icon" aria-hidden="true"></span><small>Home</small></button>
   <button data-dock="subject"><span class="nav-icon subject-icon" aria-hidden="true"></span><small>Subject</small></button>
   <button data-dock="feed"><span class="nav-icon feed-icon" aria-hidden="true"></span><small>Feed</small></button>
+  <button data-dock="facts"><span class="nav-icon facts-icon" aria-hidden="true"></span><small>Facts</small></button>
   <button data-dock="previous" disabled><span class="nav-icon arrow-icon previous-icon" aria-hidden="true"></span><small>Previous</small></button>
   <button data-dock="next"><span class="nav-icon arrow-icon next-icon" aria-hidden="true"></span><small>Next</small></button>
 </nav>
