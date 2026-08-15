@@ -1,0 +1,55 @@
+{
+  "h": "Data for GS-2 — Governance, Justice, Social Sector",
+  "k": "data",
+  "groups": [
+    {
+      "g": "Parliament and legislature",
+      "items": [
+        {"t": "Sitting days", "d": "The Lok Sabha now sits for about **55-70 days a year**, against **~130 days in the 1950s**; the National Commission to Review the Working of the Constitution recommended a **minimum of 100 days for the Lok Sabha and 60 for the Rajya Sabha**. Several state assemblies sit for **under 30 days**.", "s": "PRS Legislative Research, 2025"},
+        {"t": "Legislative scrutiny", "d": "Only about **16% of bills** introduced in the 17th Lok Sabha were referred to committees, against **60%+ in the 15th**. A significant share of bills are passed **within a day of introduction**, and time spent on the budget's demands for grants has fallen — the empirical basis of the 'decline of Parliament' argument.", "s": "PRS Legislative Research"},
+        {"t": "Criminalisation of politics", "d": "**46% of MPs in the 18th Lok Sabha have declared criminal cases**, and about **31% face serious charges** (offences punishable by 5+ years). The figure has risen at every election since 2004 (24% → 30% → 34% → 43% → 46%). ADR data is the standard citation.", "s": "Association for Democratic Reforms, 2024"},
+        {"t": "Women in legislatures", "d": "Women are about **14% of the Lok Sabha** and under **10% of most state assemblies** — against the global average of ~27% (IPU). The **106th Amendment (Nari Shakti Vandan Adhiniyam, 2023)** reserves **one-third of seats** in the Lok Sabha, state assemblies and the Delhi assembly, but only **after the census and delimitation**, with a 15-year duration.", "s": "IPU / 106th Amendment"},
+        {"t": "Ordinances and disruptions", "d": "Ordinance-making has continued at a steady pace; disruptions cost Parliament a substantial share of scheduled hours, and **question hour is the first casualty**. Productivity of a session is now routinely reported as a percentage of scheduled time — a metric that did not exist before the 2000s.", "s": "PRS / Lok Sabha Secretariat"}
+      ]
+    },
+    {
+      "g": "Judiciary and criminal justice",
+      "items": [
+        {"t": "Pendency", "d": "**~5.29 crore cases pending** — about **4.6 crore in district courts**, **63 lakh in High Courts** and **~86,000 in the Supreme Court**. Over **1.1 crore cases have been pending for more than five years**. The NJDG makes this live and public — itself a transparency reform worth citing.", "s": "National Judicial Data Grid, 2025"},
+        {"t": "Judge strength", "d": "About **21 judges per million population** against the **50 per million recommended by the Law Commission's 120th Report (1987)** and reiterated in *All India Judges Association*. **Vacancy: ~30% in High Courts** (sanctioned 1,122) and ~20% in the subordinate judiciary. The Supreme Court's sanctioned strength is **34**.", "s": "Department of Justice, 2025"},
+        {"t": "Judicial diversity", "d": "Of the judges appointed to the higher judiciary since 2018, a large majority are from the general category; women are about **10-14% of High Court judges** and there have been only **11 women judges in the Supreme Court's history**. The collegium's own resolutions now cite diversity as a criterion.", "s": "Department of Justice / Rajya Sabha replies"},
+        {"t": "Prisons", "d": "**Occupancy rate 131%**, and **75.8% of prisoners are undertrials** — one of the highest shares in the world. A disproportionate share of undertrials are SC, ST and OBC and over two-thirds have not completed schooling. **Section 479 BNSS** now allows release of first-time undertrials who have served **one-third** of the maximum sentence.", "s": "NCRB Prison Statistics India 2022"},
+        {"t": "Legal aid", "d": "Under the **Legal Services Authorities Act, 1987**, about **80% of the population is eligible for free legal aid**, but only a small fraction has ever used it. **Lok Adalats** dispose of crores of cases — the National Lok Adalat settles more cases in a day than courts do in months — but mostly pre-litigation and compoundable matters.", "s": "NALSA"},
+        {"t": "Cost and access", "d": "India spends roughly **0.08-0.1% of GDP on the judiciary** — among the lowest of major democracies; most states spend under 1% of their budget on the judiciary. The **All India Judicial Service**, proposed since the 1958 Law Commission's 14th Report and enabled by **Article 312**, remains unimplemented for want of state consensus.", "s": "India Justice Report / Article 312"}
+      ]
+    },
+    {
+      "g": "Transparency, corruption and civil services",
+      "items": [
+        {"t": "RTI in practice", "d": "**45-60 lakh RTI applications** are filed a year — among the highest volumes in the world. But **vacancies in Information Commissions** (the Central Information Commission has frequently functioned below strength, and some state commissions have gone defunct) and a backlog of over 4 lakh appeals have blunted it, as documented by the Satark Nagrik Sangathan report cards.", "s": "SNS-CHRI RTI Report Card"},
+        {"t": "Lokpal", "d": "The **first Lokpal was appointed in 2019**, six years after the Act. Complaint numbers are small and prosecution sanctions rarer — the institutional-design-versus-outcome gap. Several states still lack a functioning Lokayukta despite the Act's one-year mandate.", "s": "Lokpal of India annual reports"},
+        {"t": "Civil service size", "d": "India has roughly **1,600 central government employees per lakh population** — a **small** state by international comparison (the US federal figure is ~4 times higher), contradicting the 'bloated bureaucracy' claim. **IAS: sanctioned ~6,858, in position ~5,500**, a shortfall of over 1,300, with the direct-recruitment intake of 180 a year unable to close it (Baswan Committee, 2016).", "s": "DoPT / Baswan Committee"},
+        {"t": "Lateral entry", "d": "Introduced from 2018 on the **Second ARC and NITI Aayog's** recommendation — Joint Secretary, Director and Deputy Secretary posts filled by contract from the private sector, academia and PSUs. Roughly **60+ appointments** so far. The 2024 advertisement was withdrawn over the absence of **reservation** in single-post recruitment — the live controversy.", "s": "UPSC / DoPT"},
+        {"t": "Grievance and service delivery", "d": "**CPGRAMS** receives **20+ lakh grievances a year** with average disposal down from 28 to about **13 days**, and now runs an independent feedback call centre. Over **20 states** have Public Service Guarantee Acts with penalties for delay — the enforceable version of the citizens' charter.", "s": "DARPG, 2025"}
+      ]
+    },
+    {
+      "g": "Local government and federal fiscal facts",
+      "items": [
+        {"t": "Panchayats", "d": "**2.55 lakh gram panchayats** and about **31 lakh elected representatives**, of whom **~46% are women** — well above the one-third mandate, since 21 states legislated 50%. But panchayats raise only about **1% of their revenue on their own** and depend on tied transfers; **only 20 of 29 Eleventh Schedule subjects** are devolved on average, and functionaries rarely follow functions.", "s": "Ministry of Panchayati Raj / RBI Study, 2024"},
+        {"t": "Municipal finance", "d": "Municipal own revenue is about **0.15% of GDP** against 2-8% in comparable countries; municipalities' total revenue is ~1% of GDP. Property tax collection is a fraction of potential. **Over 1,400 vacancies of elected councils** and delayed municipal elections in several states defeat Article 243U — the 74th Amendment's weakest limb.", "s": "RBI, Report on Municipal Finances, 2024"},
+        {"t": "State Finance Commissions", "d": "Constitutionally mandated every five years under **Articles 243I and 243Y**, but many states have delayed constitution or failed to table the **Action Taken Report**. The 15th FC made the tabling of the SFC report a **condition for local body grants** from 2024-25 — a rare use of conditionality to enforce a constitutional duty.", "s": "15th Finance Commission"},
+        {"t": "Fiscal federalism", "d": "States account for about **60% of total government expenditure** but raise only about **35-40% of revenue** — the classic **vertical fiscal imbalance**. Cesses and surcharges, which are **outside the divisible pool**, have risen to a substantial share of the Centre's gross tax revenue, reducing effective devolution below the headline 41%.", "s": "RBI State Finances: A Study of Budgets"}
+      ]
+    },
+    {
+      "g": "Civil society, NGOs and SHGs",
+      "items": [
+        {"t": "NGO scale", "d": "India has an estimated **31 lakh NGOs** (CBI's affidavit to the Supreme Court) — roughly one for every 400 citizens, more than the number of schools or health facilities. About **1.6 lakh** are registered on the **NGO Darpan** portal, and FCRA-registered associations have fallen from over 22,000 to about **16,000** after cancellations and lapses.", "s": "CBI affidavit / MHA FCRA data"},
+        {"t": "Foreign contributions", "d": "Annual foreign contribution receipts by FCRA associations run to roughly **₹15,000-20,000 crore**. The 2020 amendment's ban on **sub-granting** hit the intermediary-grassroots model hardest, since large NGOs traditionally passed funds down to small local organisations.", "s": "MHA FCRA Annual Returns"},
+        {"t": "Self-Help Groups", "d": "**~90 lakh SHGs with 10 crore women** under DAY-NRLM, with cumulative bank credit of over **₹10 lakh crore** and NPAs of around **2%** — better than most priority-sector lending. The SHG-Bank Linkage Programme, started by **NABARD in 1992**, is the world's largest microfinance programme.", "s": "NABARD Status of Microfinance in India / MoRD"},
+        {"t": "CSR", "d": "**Section 135 of the Companies Act, 2013** made India the **first country to mandate CSR** — 2% of average net profits of the last three years for companies meeting the turnover, net worth or profit thresholds, with 'comply or explain' converted into a **penalty** in 2021. Annual CSR spending is around **₹30,000 crore**, but is concentrated in a few states and in education and health.", "s": "MCA National CSR Portal"}
+      ]
+    }
+  ]
+}

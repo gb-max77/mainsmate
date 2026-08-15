@@ -756,6 +756,26 @@ body.feed-open .app-dock button{min-width:58px;padding:5px 8px}
 .fs-group li:last-child{border-bottom:0}
 .fs-group li::before{content:"·";position:absolute;left:3px;color:var(--gold);font-weight:800}
 .fs-group li b{color:var(--gold)}
+/* ── a typed entry: lead term, the evidence, then the source it stands on ── */
+#facts-kinds{margin:-8px 0 18px}
+#facts-kinds .chip{font-size:11.5px;padding:5px 10px}
+#facts-kinds .chip.on{border-color:var(--blue);color:var(--blue);
+  background:color-mix(in srgb,var(--blue) 14%,var(--card))}
+.fi{cursor:pointer;transition:background .18s}
+.fi:hover{background:color-mix(in srgb,var(--gold) 7%,transparent)}
+.fi.copied{background:color-mix(in srgb,var(--green) 18%,transparent)}
+.fi-t{color:var(--gold);font-weight:700}
+.fi-t::after{content:" — ";color:var(--faint);font-weight:400}
+.fi-s{color:var(--faint);font-size:11.5px;font-style:italic;white-space:normal}
+.fi-s::before{content:"[";}
+.fi-s::after{content:"]";}
+.fi-k{display:inline-block;font-family:var(--ui-font);font-size:9.5px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.06em;padding:1px 5px;border-radius:5px;margin-right:5px;
+  vertical-align:1px;color:var(--blue);border:1px solid color-mix(in srgb,var(--blue) 40%,var(--line))}
+.fi-k[data-k="case"],.fi-k[data-k="prov"],.fi-k[data-k="law"]{color:var(--gold);
+  border-color:color-mix(in srgb,var(--gold) 42%,var(--line))}
+.fi-k[data-k="eg"],.fi-k[data-k="quote"]{color:var(--green);
+  border-color:color-mix(in srgb,var(--green) 42%,var(--line))}
 .fs-group mark{background:color-mix(in srgb,var(--gold) 32%,transparent);color:var(--ink);
   border-radius:3px;padding:0 2px}
 .fs-none{color:var(--faint);font-style:italic;padding:22px 0}

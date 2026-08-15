@@ -1,0 +1,58 @@
+{
+  "h": "Quotations & Constitutional Voices",
+  "k": "quote",
+  "groups": [
+    {
+      "g": "The Constitution and the Republic",
+      "items": [
+        {"t": "Ambedkar, on the working of a constitution", "d": "\"However good a Constitution may be, if those who are implementing it are not good, it will prove to be bad.\" — the standard opening for any answer on institutional decay versus constitutional design.", "s": "Constituent Assembly, 25 November 1949"},
+        {"t": "Ambedkar, on political versus social democracy", "d": "India enters a life of contradictions — **\"equality in politics and inequality in social and economic life\"** — one person one vote, but not one person one value. The single most usable quotation across GS-1 society, GS-2 rights and Essay.", "s": "Constituent Assembly, 25 November 1949"},
+        {"t": "Ambedkar, on constitutional morality", "d": "Constitutional morality is **\"not a natural sentiment; it has to be cultivated\"** — invoked by the Supreme Court in *Naz Foundation*, *Sabarimala* and *Navtej Johar* to mean fidelity to constitutional values over majoritarian sentiment.", "s": "Constituent Assembly / Grote, cited in Sabarimala (2018)"},
+        {"t": "Nehru, on the moment of independence", "d": "\"At the stroke of the midnight hour, when the world sleeps, India will awake to life and freedom... a moment comes, which comes but rarely in history.\" — the *Tryst with Destiny* speech; also the source of \"the service of India means the service of the millions who suffer.\"", "s": "14-15 August 1947"},
+        {"t": "Granville Austin, on the Constitution", "d": "The Constitution is **\"first and foremost a social document\"**, and its core provisions are aimed at furthering the goals of the **social revolution**. His other coinage — the **'seamless web'** of democracy, social revolution and national unity — is the standard frame for any 'basic features' answer.", "s": "The Indian Constitution: Cornerstone of a Nation"},
+        {"t": "Nani Palkhivala, on the Constitution's authorship", "d": "\"The Constitution is not a mere lawyers' document; it is a vehicle of life, and its spirit is always the spirit of the age.\" — often paired with the judiciary's living-tree approach to interpretation.", "s": "Cited in constitutional jurisprudence"},
+        {"t": "Justice Krishna Iyer, on justice", "d": "\"Law without justice is a body without a soul.\" Also his line that bail, not jail, is the rule — the anchor for undertrial and personal-liberty answers.", "s": "Supreme Court of India"},
+        {"t": "Chandrachud J., on privacy", "d": "\"Privacy is the constitutional core of human dignity... the right to be let alone.\" *Puttaswamy* also holds that **privacy is intrinsic to Article 21 and Part III as a whole**, not a stand-alone right.", "s": "K.S. Puttaswamy v. Union of India (2017)"}
+      ]
+    },
+    {
+      "g": "Development, poverty and freedom",
+      "items": [
+        {"t": "Amartya Sen, on development", "d": "**\"Development as freedom\"** — development is the expansion of the real freedoms people enjoy, and poverty is **capability deprivation**, not merely low income. The intellectual basis of the HDI and of any 'growth is not development' argument.", "s": "Development as Freedom, 1999"},
+        {"t": "Sen, on famine", "d": "\"No famine has ever taken place in the history of the world in a functioning democracy\" — famines are failures of **entitlement and exchange**, not of food availability. Use for food security, PDS and democratic accountability.", "s": "Poverty and Famines, 1981"},
+        {"t": "Gandhi, on the last person", "d": "The **talisman**: \"Recall the face of the poorest and weakest man whom you may have seen, and ask yourself if the step you contemplate is going to be of any use to him.\" — the antyodaya test, usable in ethics, governance and welfare answers alike.", "s": "Mahatma Gandhi, 1948"},
+        {"t": "Gandhi, on need and greed", "d": "\"The earth provides enough to satisfy every man's need, but not every man's greed.\" — the standard sustainability epigraph, and the intellectual ancestor of the LiFE mission's sufficiency argument.", "s": "Mahatma Gandhi"},
+        {"t": "Gandhi, on village republics", "d": "\"The future of India lies in its villages\" and his vision of **oceanic circles** — not a pyramid with the apex sustained by the base, but ever-widening circles with the individual at the centre. The philosophical case for the 73rd Amendment.", "s": "Hind Swaraj / Harijan"},
+        {"t": "Tagore, on freedom of mind", "d": "\"Where the mind is without fear and the head is held high... into that heaven of freedom, my Father, let my country awake.\" Also his critique of nationalism as \"organised selfishness\" — useful for balance in nationalism essays.", "s": "Gitanjali / Nationalism"},
+        {"t": "Kalam, on aspiration", "d": "\"Dream is not that which you see while sleeping, it is something that does not let you sleep.\" — and \"small aim is a crime\", for essays on youth, education and aspiration.", "s": "A.P.J. Abdul Kalam, Wings of Fire"},
+        {"t": "Brundtland, on sustainability", "d": "Sustainable development is development that **\"meets the needs of the present without compromising the ability of future generations to meet their own needs\"** — the definition every environment answer should carry verbatim.", "s": "Our Common Future, WCED 1987"}
+      ]
+    },
+    {
+      "g": "State, power and administration",
+      "items": [
+        {"t": "Lord Acton, on power", "d": "\"Power tends to corrupt, and absolute power corrupts absolutely\" — the classical case for checks and balances, separation of powers and independent oversight.", "s": "Lord Acton, 1887"},
+        {"t": "Madison, on government and human nature", "d": "\"If men were angels, no government would be necessary. If angels were to govern men, neither external nor internal controls on government would be necessary.\" — the sharpest one-line justification for institutional accountability.", "s": "Federalist No. 51"},
+        {"t": "Woodrow Wilson, on administration", "d": "\"It is getting to be harder to run a constitution than to frame one\" — from *The Study of Administration* (1887), the essay that founded the discipline and the politics-administration dichotomy.", "s": "Woodrow Wilson, 1887"},
+        {"t": "Max Weber, on bureaucracy", "d": "Bureaucracy is technically superior to any other form of organisation as **\"the exercise of control on the basis of knowledge\"** — but risks becoming an **'iron cage'** of rationality and 'a mechanism of dehumanised efficiency'. Both halves must appear in a balanced answer.", "s": "Economy and Society"},
+        {"t": "Sardar Patel, on the steel frame", "d": "The services are the **\"steel frame\"** of India, and the civil servant must have **\"independence of expression and fearlessness\"** and the freedom to speak the truth to the minister — the constitutional basis of Article 311 protection and of frank advice.", "s": "Constituent Assembly, 10 October 1949"},
+        {"t": "Kautilya, on the ruler's happiness", "d": "\"In the happiness of his subjects lies the king's happiness; in their welfare his welfare... he shall consider as good, not what pleases him, but what pleases his subjects.\" — the oldest citable Indian statement of public interest over self-interest.", "s": "Arthashastra"},
+        {"t": "Thiruvalluvar, on justice", "d": "\"It is the sceptre of the king that ensures the rain and the harvest\" — and the Kural's rule that a just sceptre, not force, sustains the realm. A high-value Indian anchor when a Western thinker would be the obvious choice.", "s": "Tirukkural"},
+        {"t": "Justice Bhagwati, on public interest litigation", "d": "PIL is \"a strategic arm of the legal aid movement... intended to bring justice within the reach of the poor masses\" — the founding rationale of relaxed locus standi in *S.P. Gupta* (1981).", "s": "S.P. Gupta v. Union of India (1981)"}
+      ]
+    },
+    {
+      "g": "Society, equality and change",
+      "items": [
+        {"t": "Ambedkar, on caste and endogamy", "d": "Caste is **\"an enclosed class\"**, sustained by endogamy; annihilating caste requires attacking the **religious sanction of the shastras**, and inter-caste marriage is \"the real remedy\". Also: \"I measure the progress of a community by the degree of progress which women have achieved.\"", "s": "Annihilation of Caste, 1936 / Castes in India, 1916"},
+        {"t": "Jyotirao Phule and Savitribai Phule", "d": "The Satyashodhak Samaj (1873) and India's first school for girls (1848). Phule's *Gulamgiri* recast caste as slavery; Savitribai is the anchor example for women's education as the entry point to social reform.", "s": "Satyashodhak Samaj"},
+        {"t": "Tarabai Shinde, on patriarchy", "d": "***Stri Purush Tulana* (1882)** — the first modern Indian feminist critique, arguing that the faults blamed on women are equally men's. The earliest Indian citation available for a gender answer.", "s": "Tarabai Shinde, 1882"},
+        {"t": "Nelson Mandela, on education", "d": "\"Education is the most powerful weapon which you can use to change the world.\" Also: \"A nation should not be judged by how it treats its highest citizens, but its lowest ones\" — the prison-reform and marginalised-sections quotation.", "s": "Nelson Mandela"},
+        {"t": "Martin Luther King Jr., on justice", "d": "\"Injustice anywhere is a threat to justice everywhere\" and \"the arc of the moral universe is long, but it bends towards justice\" — for civil rights, dissent and social justice essays.", "s": "Letter from Birmingham Jail, 1963"},
+        {"t": "Rousseau, on freedom", "d": "\"Man is born free, and everywhere he is in chains\" — the social contract's opening, and the classical framing for liberty-versus-authority questions.", "s": "The Social Contract, 1762"},
+        {"t": "Vivekananda, on strength", "d": "\"Arise, awake, and stop not till the goal is reached\"; and his standard for religion — \"they alone live who live for others\". His Chicago address (1893) is the standard example of India's civilisational soft power.", "s": "Swami Vivekananda"},
+        {"t": "Elinor Ostrom, on the commons", "d": "Commons need be neither privatised nor nationalised — communities can self-govern them through **eight design principles**: clear boundaries, congruence with local conditions, collective-choice arrangements, monitoring, graduated sanctions, conflict-resolution, recognition of the right to organise, and nested enterprises. The single most citable framework for water, forest and fishery answers.", "s": "Governing the Commons, 1990"}
+      ]
+    }
+  ]
+}

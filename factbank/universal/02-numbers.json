@@ -1,0 +1,96 @@
+{
+  "h": "India in Numbers — The Macro Spine",
+  "k": "data",
+  "groups": [
+    {
+      "g": "Size, growth and structure of the economy",
+      "items": [
+        {"t": "GDP size", "d": "India is the **4th largest economy** at ~**$4.19 trillion** nominal, having crossed Japan in 2025; **3rd largest by PPP** at ~$17 trillion. Projected to be 3rd nominal by 2027-28. Share of world GDP ~3.6% nominal, ~7.9% PPP.", "s": "IMF World Economic Outlook, 2025"},
+        {"t": "Growth rate", "d": "Real GDP growth **6.5% in FY25**, with FY26 projected at **6.5%** — fastest among major economies. Decadal average ~6.6%. India contributes about **16% of global growth**.", "s": "NSO / RBI, 2025"},
+        {"t": "Per capita income", "d": "Per capita net national income ~**₹2.35 lakh (~$2,880)** in FY25, roughly doubled in nominal terms in a decade. GNI per capita keeps India in the **lower-middle-income** band (World Bank threshold for upper-middle is ~$4,500) — the 'Viksit Bharat 2047' target implies reaching ~$14,000, a 5x rise.", "s": "NSO / World Bank, 2025"},
+        {"t": "Sectoral GVA shares", "d": "Services ~**55%**, Industry ~**28%**, Agriculture ~**16-18%** of GVA. The structural anomaly: agriculture holds **46.1% of employment** for ~18% of output, while services generate 55% of output on ~30% of employment. That mismatch *is* the disguised-unemployment argument.", "s": "NSO / PLFS 2023-24"},
+        {"t": "Manufacturing share", "d": "Manufacturing stuck at ~**17% of GVA** against the **25% target** of the National Manufacturing Policy 2011 and Make in India — 'premature deindustrialisation'. India skipped the manufacturing-led transition that East Asia used.", "s": "NSO / Economic Survey"},
+        {"t": "Informality", "d": "About **90% of the workforce is informal** and the informal sector produces ~**45% of GVA**; **e-Shram** has over **30 crore** registrations of unorganised workers. Formalisation is measured by EPFO additions (~1.3 crore net in FY25) and GST registration.", "s": "PLFS / e-Shram portal, 2025"},
+        {"t": "MSME weight", "d": "MSMEs contribute ~**30% of GDP**, ~**45% of exports**, and employ ~**23 crore** people across **6+ crore** units on Udyam. The 'missing middle': over 99% are micro, and firms deliberately stay small to avoid regulatory thresholds.", "s": "Ministry of MSME / Udyam, 2025"}
+      ]
+    },
+    {
+      "g": "Public finance — Budget and fiscal position",
+      "items": [
+        {"t": "Fiscal deficit", "d": "**4.4% of GDP** budgeted for FY26, down from 9.2% in FY21 (COVID peak) and 4.8% in FY25 — the glide path now targets a **declining debt-to-GDP ratio** rather than a deficit number, a doctrinal shift from the FRBM Act's deficit anchor.", "s": "Union Budget 2025-26"},
+        {"t": "Capital expenditure", "d": "**₹11.21 lakh crore** capex in FY26 BE (~3.1% of GDP), up ~4x from FY20; plus **₹1.5 lakh crore** of 50-year interest-free capex loans to states. Capex multiplier is ~2.45 against ~0.98 for revenue expenditure (NIPFP/RBI) — the argument for quality of spending.", "s": "Union Budget 2025-26"},
+        {"t": "Budget size and composition", "d": "Total expenditure ~**₹50.65 lakh crore** in FY26 BE. Biggest claims on the rupee: **interest payments (~20%)**, states' share of taxes (~22%), central sector schemes, defence, and subsidies. Interest payments exceed the entire capex budget — the debt-servicing constraint in one line.", "s": "Union Budget 2025-26"},
+        {"t": "Tax-to-GDP", "d": "Centre's gross tax-GDP ~**11.7%**, general government ~**18%** — well below the OECD average (~34%) and below peer emerging economies (~24%). Direct:indirect tax split has moved to roughly **57:43**, a progressivity gain.", "s": "Budget 2025-26 / Economic Survey"},
+        {"t": "Income tax relief", "d": "Budget 2025-26 made income up to **₹12 lakh effectively tax-free** in the new regime (₹12.75 lakh for salaried, with standard deduction) — foregone revenue ~₹1 lakh crore, aimed at reviving urban consumption.", "s": "Union Budget 2025-26"},
+        {"t": "GST collections", "d": "Gross GST **₹22.08 lakh crore in FY25**, up 9.4%; monthly record **₹2.37 lakh crore (April 2025)**. Average monthly collection has roughly doubled since FY21. Registered taxpayers ~1.5 crore, from 65 lakh at launch.", "s": "Ministry of Finance, 2025"},
+        {"t": "GST 2.0 rate rationalisation", "d": "The Council collapsed the four-slab structure into **5% and 18%**, with a **40% demerit rate** for sin and luxury goods — the most significant GST reform since 2017, aimed at ending classification disputes and inverted duty structures.", "s": "GST Council, 56th meeting, September 2025"},
+        {"t": "Debt", "d": "Centre's debt ~**57% of GDP**, general government ~**81%** — high by emerging-market standards but overwhelmingly **rupee-denominated and domestically held**, which is why India avoids the currency-mismatch crisis that hits other high-debt economies. External debt ~19% of GDP.", "s": "Economic Survey / RBI, 2025"},
+        {"t": "Subsidies", "d": "Major subsidies in FY26 BE: **food ~₹2.03 lakh crore**, **fertiliser ~₹1.67 lakh crore**, petroleum small after decontrol. Food + fertiliser together exceed the health and education budgets combined — the standard 'merit vs non-merit subsidy' framing.", "s": "Union Budget 2025-26"},
+        {"t": "Devolution", "d": "The **15th Finance Commission** fixed states' share of the divisible pool at **41%** (down from 42% on J&K's reorganisation). Cesses and surcharges — outside the divisible pool — have risen to a substantial share of gross tax revenue, which is the states' core grievance. **16th Finance Commission (Arvind Panagariya)** reports for the 2026-31 cycle.", "s": "15th FC Report / 16th FC ToR"}
+      ]
+    },
+    {
+      "g": "External sector",
+      "items": [
+        {"t": "Total exports", "d": "Record **$824.9 billion** in FY25 — merchandise **$437.4 bn** plus services **$387.5 bn**. Services now carry nearly half of India's export earnings, and India is the **7th largest services exporter** in the world.", "s": "Ministry of Commerce, 2025"},
+        {"t": "Trade deficit and CAD", "d": "Merchandise trade deficit ~**$283 billion**, but the services surplus and remittances hold the **current account deficit at ~0.6% of GDP** — well inside the 2.5% comfort threshold. Services + remittances are India's external shock absorber.", "s": "RBI, 2025"},
+        {"t": "Import basket", "d": "Crude oil (~$130-140 bn), gold, electronics and **edible oil (~$17 bn)** dominate imports. Crude import dependence is ~**88%**, natural gas ~50%, and edible oil ~**57% of consumption** — three structural vulnerabilities to name in any energy or food-security answer.", "s": "PPAC / Ministry of Commerce, 2025"},
+        {"t": "Trade partners", "d": "**USA is India's largest trading partner** (~$132 bn bilateral) and the largest export destination; **China is the largest source of imports**, with a bilateral deficit exceeding **$99 billion** — the single largest deficit India runs with any country.", "s": "Ministry of Commerce, FY25"},
+        {"t": "FDI", "d": "**Gross FDI $81.04 billion in FY25** (+14%); cumulative inflows since April 2000 crossed **$1 trillion**. But **net FDI collapsed to under $1 billion** as repatriation and disinvestment surged — the gross/net divergence is the sophisticated point. Top sources: Singapore, Mauritius; top sector: services and computer software; top state: Maharashtra.", "s": "DPIIT / RBI, FY25"},
+        {"t": "Forex reserves", "d": "~**$690 billion**, peaking at $704.9 bn — the **4th largest reserves** in the world, covering roughly 11 months of imports. Gold's share in reserves has risen sharply as central banks diversify.", "s": "RBI, 2025"},
+        {"t": "Remittances", "d": "**$129.4 billion** in 2024 — the **world's largest recipient** for a decade running and about 14% of global remittances; India was the first country to cross $100 bn. The source mix has shifted from Gulf blue-collar to US/UK/Singapore white-collar.", "s": "World Bank / RBI Remittances Survey, 2024"},
+        {"t": "Rupee and internationalisation", "d": "The rupee trades around **₹85-88/$**; **Special Rupee Vostro Accounts** now permit rupee settlement with several countries, and India has signed local-currency-settlement arrangements with the UAE and Indonesia. Rupee's share in global forex turnover remains ~1.6%.", "s": "RBI, 2025"}
+      ]
+    },
+    {
+      "g": "Population, demography and urbanisation",
+      "items": [
+        {"t": "Population", "d": "**1.46 billion** — the world's most populous country since 2023. Median age ~**28-29** (China 40, Japan 49); **~65% below 35**; working-age share peaks around **68% in the 2030s** — the demographic dividend window closes around 2055.", "s": "UNFPA State of World Population 2025"},
+        {"t": "TFR — Total Fertility Rate", "d": "**2.0 and now ~1.9** — **below the replacement level of 2.1**. Bihar highest (~3.0), Sikkim/West Bengal lowest (~1.1-1.6). India's population will still grow to ~1.65 billion by 2060 because of **population momentum** — that term is the mark.", "s": "NFHS-5 (2019-21) / UNFPA 2025"},
+        {"t": "Ageing", "d": "The 60-plus share rises from ~**10.5% (2022) to ~20.8% by 2050** — the elderly will outnumber children under 15. Kerala and Tamil Nadu have already aged; Bihar and UP have not. **Feminisation of ageing**: women outlive men, so the elderly are disproportionately widowed women with no pension.", "s": "UNFPA India Ageing Report 2023"},
+        {"t": "Urbanisation", "d": "**31.1% urban at Census 2011**, ~36-37% now, projected **40% by 2030 and ~50% by 2050** — adding roughly 400 million urban residents. Cities already generate over **60% of GDP** on 3% of land. India's urbanisation is under-counted: 'census towns' remain governed as villages.", "s": "Census 2011 / UN World Urbanization Prospects"},
+        {"t": "Census 2027", "d": "Reference date **1 March 2027** (1 October 2026 for snow-bound areas); **houselisting phase April-September 2026**; conducted under the **Census Act, 1948**, with confidentiality of individual records. Two firsts: **caste enumeration, the first since 1931**, and a **digital census with self-enumeration**. It also unfreezes **delimitation**, frozen by the 84th Amendment until the first census after 2026.", "s": "Registrar General of India, 2025"},
+        {"t": "Sex ratio", "d": "Sex ratio at birth improved to ~**930-940 females per 1,000 males** (SRS/NFHS-5), and the overall sex ratio is now above 1,000 in NFHS-5 — but the *child* sex ratio remains the weak point, and Haryana and Punjab remain the worst-performing large states.", "s": "NFHS-5 / SRS"},
+        {"t": "Migration", "d": "Roughly **45 crore internal migrants** (Census 2011, ~37% of the population); the 2017 Economic Survey's Cohort-based Migration Metric put annual inter-state migration at **~90 lakh**. Uttar Pradesh and Bihar are the largest sources; Delhi, Maharashtra and Gujarat the largest destinations. COVID-19 exposed the invisibility of this workforce — 'one nation one ration card' was the policy answer.", "s": "Census 2011 / Economic Survey 2016-17"}
+      ]
+    },
+    {
+      "g": "Employment and labour",
+      "items": [
+        {"t": "LFPR / WPR / UR", "d": "**LFPR 60.1%**, **WPR 58.2%**, **unemployment 3.2%** (usual status, 15+). The low headline unemployment number coexists with high underemployment — the meaningful indicator in India is not UR but the **quality of work**, since self-employment dominates.", "s": "PLFS 2023-24"},
+        {"t": "FLFPR — Female Labour Force Participation Rate", "d": "**23.3% (2017-18) → 41.7% (2023-24)** — nearly a doubling, the single most striking labour statistic available. But the rise is driven largely by **rural self-employment and unpaid family work**, not by paid formal jobs — state the trend *and* the caveat.", "s": "PLFS 2023-24"},
+        {"t": "Employment composition", "d": "**Self-employed 58.4%**, regular wage/salaried 21.7%, casual labour 19.8%. The share of regular salaried work has *fallen* since 2018-19 — the informalisation trend inside the formal narrative.", "s": "PLFS 2023-24"},
+        {"t": "Agriculture's employment share", "d": "Rose from **42.5% (2018-19) to 46.1% (2023-24)** — a *reversal* of structural transformation, reflecting distress absorption after COVID rather than agricultural revival. A powerful counter-intuitive data point.", "s": "PLFS 2023-24"},
+        {"t": "Youth unemployment", "d": "Youth (15-29) unemployment ~**10.2%**, and much higher among the educated — graduate unemployment is multiples of the illiterate rate. This is the **educated-unemployment paradox**: unemployment rises with education level, pointing to skill mismatch, not job scarcity alone.", "s": "PLFS 2023-24"},
+        {"t": "Skilling", "d": "Only about **4-5% of the workforce has formal vocational training** against 52% in the US, 68% in the UK and 96% in South Korea. India needs to create roughly **78.5 lakh non-farm jobs annually** to 2030 to absorb the workforce.", "s": "Economic Survey 2023-24"},
+        {"t": "Gig economy", "d": "**77 lakh gig workers (2020-21) → projected 2.35 crore by 2029-30**, then 4.1% of the total workforce. The **Code on Social Security, 2020** was the first Indian law to define 'gig' and 'platform' workers; Rajasthan and Karnataka legislated first at state level.", "s": "NITI Aayog, 'India's Booming Gig and Platform Economy', 2022"}
+      ]
+    },
+    {
+      "g": "Health and education",
+      "items": [
+        {"t": "Health spending", "d": "Government health expenditure **1.84% of GDP** against the **National Health Policy 2017 target of 2.5% by 2025**. India is among the lowest public health spenders globally — the root cause of the out-of-pocket burden.", "s": "National Health Accounts 2021-22"},
+        {"t": "OOPE — Out-of-Pocket Expenditure", "d": "Fell from **62.6% (2014-15) → 39.4% (2021-22)** of total health expenditure — a genuine structural improvement, driven by PM-JAY, Jan Aushadhi and public spending. Still far above the ~18% global average. Health costs push ~5-6 crore Indians into poverty annually.", "s": "National Health Accounts 2021-22"},
+        {"t": "MMR — Maternal Mortality Ratio", "d": "**97 per lakh live births (2018-20)**, down from 130 (2014-16) and 556 (1990) — India met the MDG and is on track for the **SDG target of 70 by 2030**. Kerala ~19; Assam, UP and MP remain far above the national figure.", "s": "SRS Special Bulletin, RGI"},
+        {"t": "IMR and U5MR", "d": "**IMR 28** and **U5MR 32** per 1,000 live births — both have more than halved since 1990. Neonatal deaths now form the bulk of infant mortality, shifting the policy problem from immunisation to institutional delivery quality.", "s": "SRS 2020 / NFHS-5"},
+        {"t": "Health workforce", "d": "Doctor-population ratio ~**1:811**, better than the WHO norm of 1:1000, but **nurses at ~1.7 per 1,000** against the WHO norm of 3 and hospital beds ~**1.3 per 1,000** against 3. The shortage is of nurses, beds and rural placement — not doctors in aggregate.", "s": "National Medical Commission, 2024"},
+        {"t": "Foundational learning", "d": "Only **23.4% of Class 3 children can read a Class 2 text** (up from 16.3% in 2022) and **33.7% can do subtraction** — improvement post-COVID but still a learning crisis. NIPUN Bharat targets universal foundational literacy and numeracy by 2026-27.", "s": "ASER 2024"},
+        {"t": "School enrolment", "d": "**24.8 crore** school students; GER near 100% at elementary, **77.4% secondary**, **56.2% higher secondary**; dropout is concentrated at the secondary stage. PTR ~25:1 against the RTE norm of 30:1 — the aggregate is fine, the distribution is not.", "s": "UDISE+ 2023-24"},
+        {"t": "Higher education", "d": "Enrolment **4.33 crore**, **GER 28.4%** against the **NEP 2020 target of 50% by 2035**; female GER has overtaken male; **SC/ST/OBC enrolment rising fastest**. India has 1,100+ universities and 45,000+ colleges, but ~60% of colleges are rural and single-stream.", "s": "AISHE 2021-22"},
+        {"t": "Education spending", "d": "~**4.6% of GDP** against the **6% recommended by the Kothari Commission (1966)** and reaffirmed by **NEP 2020** — a target unmet for six decades. That is the cleanest 'policy continuity without delivery' example in the education syllabus.", "s": "Economic Survey / NEP 2020"}
+      ]
+    },
+    {
+      "g": "Digital India and technology",
+      "items": [
+        {"t": "Internet and mobile", "d": "**~97 crore internet subscribers** and ~116 crore telecom connections; **teledensity ~84%**, but rural teledensity ~59% against urban 130% — the digital divide is now about *quality and use*, not access. India has among the world's lowest data tariffs.", "s": "TRAI, 2025"},
+        {"t": "UPI — Unified Payments Interface", "d": "**18-19 billion transactions a month**, worth **₹24-25 lakh crore**; UPI accounts for nearly **half of all real-time digital payment transactions in the world**. Live in seven-plus countries including UAE, Singapore, France, Nepal, Sri Lanka and Mauritius. The flagship Digital Public Infrastructure export.", "s": "NPCI, 2025"},
+        {"t": "JAM trinity and DBT", "d": "**Aadhaar ~142 crore**; **Jan Dhan 55 crore accounts** (56% women, ~₹2.6 lakh crore deposits); DBT has transferred through **1,200+ schemes** with cumulative estimated savings of **₹3.48 lakh crore** from removal of duplicate and ghost beneficiaries.", "s": "DBT Mission / UIDAI, 2025"},
+        {"t": "Digital economy", "d": "The digital economy is ~**11.74% of GVA (2022-23)**, projected to reach nearly **20% by 2030** — growing about twice as fast as the rest of the economy. Digital Public Infrastructure (DPI) is now an explicit Indian export doctrine, carried into the G20 New Delhi Declaration.", "s": "MeitY–ICRIER Report, 2024"},
+        {"t": "Semiconductors", "d": "**India Semiconductor Mission, ₹76,000 crore** — units approved at Dholera (Tata–PSMC fab), Sanand (Micron ATMP, CG Power, Kaynes), Morigaon Assam (Tata OSAT) and Jewar. **India's first indigenously packaged chip rolled out in 2025**. India currently designs ~20% of the world's chips but fabricates almost none.", "s": "MeitY / ISM, 2025"},
+        {"t": "IndiaAI Mission", "d": "**₹10,372 crore** over five years across seven pillars — compute capacity (38,000+ GPUs empanelled), foundation models, datasets (AIKosh), application development, future skills, startup financing and safe & trusted AI. India hosts the **AI Impact Summit in 2026**.", "s": "MeitY, 2025"},
+        {"t": "Space sector", "d": "India's space economy ~**$8.4 billion (~2% of the global market)**, targeted at **$44 billion by 2033**. **100% FDI liberalised (2024)**, IN-SPACe as the single-window regulator, a **₹1,000 crore venture fund**, and 300+ space startups. Milestones: **Chandrayaan-3 (first at the lunar south pole, 2023)**, Aditya-L1, **SpaDeX docking (2025, 4th country to do it)**, **NISAR (2025, with NASA)**, Shubhanshu Shukla on Axiom-4 to the ISS (2025). Targets: **Bharatiya Antariksh Station by 2035, Indian on the Moon by 2040**.", "s": "ISRO / IN-SPACe, 2025"}
+      ]
+    }
+  ]
+}

@@ -1245,7 +1245,7 @@ $('#comp-q')?.addEventListener('input', e => { comp.q = e.target.value; renderCo
 
 /* ══════════════════ FACTNSTAT — the paper-wise fact bank ══════════════════ */
 let FACTS = null;
-const facts = { pid: localStorage.getItem('mm-facts-paper') || 'gs2', q: '' };
+const facts = { pid: localStorage.getItem('mm-facts-paper') || 'gs2', q: '', k: '' };
 
 async function loadFacts() {
   if (FACTS) return FACTS;
@@ -1257,6 +1257,22 @@ async function loadFacts() {
 const factMark = (s, q) => !q ? md(s)
   : md(s).replace(new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'ig'), '<mark>$1</mark>');
 
+// Every entry carries a kind, so a search can be narrowed to one class of evidence.
+const FKIND = {
+  data: 'Data', index: 'Indices', prov: 'Provisions', case: 'Case law', law: 'Statutes',
+  sch: 'Schemes', cmte: 'Committees', eg: 'Examples', quote: 'Quotes', term: 'Concepts'
+};
+const factText = it => `${it.t || ''} ${it.d} ${it.s || ''}`.toLowerCase();
+
+function factItemHTML(it, q, badge) {
+  const bits = [];
+  if (badge) bits.push(`<span class="fi-k" data-k="${it.k}">${FKIND[it.k] || it.k}</span>`);
+  if (it.t) bits.push(`<b class="fi-t">${factMark(it.t, q)}</b>`);
+  bits.push(`<span class="fi-d">${factMark(it.d, q)}</span>`);
+  if (it.s) bits.push(`<span class="fi-s">${factMark(it.s, q)}</span>`);
+  return `<li class="fi" data-k="${it.k}" tabindex="0" title="Click to copy">${bits.join(' ')}</li>`;
+}
+
 async function renderFacts(arg) {
   await loadFacts();
   if (arg && FACTS[arg]) facts.pid = arg;
@@ -1266,19 +1282,32 @@ async function renderFacts(arg) {
     `<button class="chip${pid === facts.pid ? ' on' : ''}" data-fp="${pid}" aria-pressed="${pid === facts.pid}">${esc(d.label)}</button>`).join('');
   const d = FACTS[facts.pid];
   const q = facts.q.trim().toLowerCase();
-  let shown = 0, total = 0;
+  const all = (d?.sections || []).flatMap(s => s.groups.flatMap(g => g.items));
+  // Kind chips are drawn from this paper only, and count what the search leaves.
+  const hitsQ = all.filter(it => !q || factText(it).includes(q));
+  const byKind = {};
+  for (const it of hitsQ) byKind[it.k] = (byKind[it.k] || 0) + 1;
+  if (facts.k && !byKind[facts.k]) facts.k = '';
+  const kindBar = $('#facts-kinds');
+  if (kindBar) kindBar.innerHTML = !all.length ? '' :
+    `<button class="chip${facts.k ? '' : ' on'}" data-fk="">All ${hitsQ.length}</button>` +
+    Object.keys(FKIND).filter(k => byKind[k]).map(k =>
+      `<button class="chip${facts.k === k ? ' on' : ''}" data-fk="${k}" aria-pressed="${facts.k === k}">${FKIND[k]} ${byKind[k]}</button>`).join('');
+  const badge = !!(q || facts.k);
+  let shown = 0;
   let html = '';
   for (const s of d?.sections || []) {
     let secHTML = '';
     for (const g of s.groups) {
-      const items = g.items.filter(t => { total++; return !q || t.toLowerCase().includes(q); });
+      const items = g.items.filter(it => (!facts.k || it.k === facts.k) && (!q || factText(it).includes(q)));
       if (!items.length) continue;
       shown += items.length;
       secHTML += `<div class="fs-group"><h3>${esc(g.g)}</h3><ul>`
-        + items.map(t => `<li>${factMark(t, facts.q.trim())}</li>`).join('') + `</ul></div>`;
+        + items.map(it => factItemHTML(it, facts.q.trim(), badge)).join('') + `</ul></div>`;
     }
     if (secHTML) html += `<section class="fs-sec"><h2>${esc(s.h)}</h2>${secHTML}</section>`;
   }
+  const total = all.length;
   $('#facts-body').innerHTML = html || `<p class="fs-none">Nothing matches “${esc(facts.q)}” in ${esc(d?.label || '')}.</p>`;
   // Jump-nav: every section and its groups, so a paper of 400 facts stays navigable.
   const nav = [...$('#facts-body').querySelectorAll('.fs-sec')].map((sec, si) => {
@@ -1290,14 +1319,25 @@ async function renderFacts(arg) {
     return `<details class="fx-sec"${si === 0 ? ' open' : ''}><summary>${esc(h2.textContent)}</summary>${subs}</details>`;
   }).join('');
   $('#facts-nav').innerHTML = nav;
-  $('#facts-count').textContent = q ? `${shown} of ${total} shown` : `${total} facts`;
+  $('#facts-count').textContent = (q || facts.k) ? `${shown} of ${total} shown` : `${total} facts`;
 }
 
 $('#facts-papers')?.addEventListener('click', e => {
   const b = e.target.closest('[data-fp]'); if (!b) return;
-  facts.pid = b.dataset.fp; renderFacts();
+  facts.pid = b.dataset.fp; facts.k = ''; renderFacts();
+});
+$('#facts-kinds')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-fk]'); if (!b) return;
+  facts.k = b.dataset.fk; renderFacts();
 });
 $('#facts-q')?.addEventListener('input', e => { facts.q = e.target.value; renderFacts(); });
+// A fact is only useful in the answer copy — one tap lifts the whole line.
+$('#facts-body')?.addEventListener('click', e => {
+  const li = e.target.closest('.fi'); if (!li) return;
+  const t = [...li.querySelectorAll('.fi-t,.fi-d,.fi-s')].map(n => n.textContent).join(' — ');
+  navigator.clipboard?.writeText(t);
+  li.classList.add('copied'); setTimeout(() => li.classList.remove('copied'), 900);
+});
 
 function feedQuestionEl(row) {
   const a = ANSWERS[row.pid]?.[row.qid];
