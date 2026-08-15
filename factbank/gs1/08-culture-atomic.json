@@ -1,0 +1,31 @@
+{
+  "h": "Rapid Recall — Culture, Texts and Monuments",
+  "k": "term",
+  "groups": [
+    {
+      "g": "One line each — art and architecture",
+      "items": [
+        {"t": "Sanchi Stupa", "d": "Ashokan brick core, enlarged in stone under the **Sungas**, four **toranas** carved under the **Satavahanas**; UNESCO site. Buddha depicted **aniconically** here."},
+        {"t": "Brihadesvara, Thanjavur", "d": "**Rajaraja I, c. 1010**, Chola; 60 m vimana; one of the 'Great Living Chola Temples' (with Gangaikonda Cholapuram and Airavatesvara); its inscriptions are a complete record of temple endowments and administration."},
+        {"t": "Kailasanatha, Ellora", "d": "**Rashtrakuta, 8th century**, Cave 16 — monolithic, carved **top-down from living rock**, the largest such excavation in the world."},
+        {"t": "Konark Sun Temple", "d": "**Narasimhadeva I, 13th century, Eastern Ganga** — conceived as Surya's chariot with 24 wheels and seven horses; Odisha (Kalinga) idiom of the Nagara style."},
+        {"t": "Modhera Sun Temple", "d": "**Solanki, 1026**, Gujarat — the **surya kund** stepped tank, and a sanctum aligned so the equinox sun strikes the image."},
+        {"t": "Khajuraho", "d": "**Chandella, 10th-11th century** — panchayatana plan, clustered shikharas rising like a mountain range, and sculpture organised in horizontal bands. UNESCO site."},
+        {"t": "Hoysala temples", "d": "**Belur, Halebid, Somnathpur** — soapstone, **stellate plan**, lathe-turned pillars, jagati platform; inscribed by UNESCO in **2023** as the 'Sacred Ensembles of the Hoysalas'."},
+        {"t": "Mahabalipuram", "d": "**Pallava, 7th-8th century** — monolithic rathas, the Shore Temple, and 'Descent of the Ganga/Arjuna's Penance', the largest open-air rock relief in the world."},
+        {"t": "Ajanta and Ellora contrasted", "d": "**Ajanta** — 29 caves, **Buddhist only**, famous for **murals in tempera on mud plaster**; **Ellora** — 34 caves, **Buddhist, Hindu and Jain together**, famous for sculpture and the Kailasanatha."},
+        {"t": "Gandhara, Mathura, Amaravati", "d": "**Gandhara** — Greco-Roman, grey schist, wavy hair, realistic drapery; **Mathura** — indigenous, spotted red sandstone, energetic and fleshy; **Amaravati** — white marble, narrative medallions, slender and dynamic figures."},
+        {"t": "Qutb complex", "d": "**Qutb Minar and Quwwat-ul-Islam (Slave dynasty)** — corbelled arches and reused temple pillars; the **Alai Darwaza (Khalji, 1311)** introduced the **true arch and true dome**."},
+        {"t": "Gol Gumbaz", "d": "**Bijapur, Adil Shahi, 1656** — the second largest dome in the world unsupported by pillars, with the **whispering gallery**; the peak of Deccan provincial style."},
+        {"t": "Humayun's Tomb and the Taj", "d": "**Humayun's Tomb (1570)** — the **first garden tomb** in India and the prototype of the **charbagh** layout; the **Taj Mahal (1632-53)** perfected it with white marble, **pietra dura** inlay and complete bilateral symmetry, set on a riverfront terrace."},
+        {"t": "Fatehpur Sikri", "d": "**Akbar's capital (1571-85)** — the Buland Darwaza, Diwan-i-Khas with its central pillar, Panch Mahal and Jodha Bai's palace; a synthesis of Gujarati, Bengali and Persian idioms in red sandstone."},
+        {"t": "Indian Ocean trade and temple towns", "d": "**Muziris, Arikamedu, Tamralipti, Bharuch (Barygaza)** as ancient ports; the **Periplus of the Erythraean Sea** as the source; and temple towns (Kanchi, Madurai, Thanjavur) as centres of production, banking and land management, not merely worship."},
+        {"t": "Classical languages", "d": "**Eleven now** — Tamil (2004), Sanskrit (2005), Telugu and Kannada (2008), Malayalam (2013), Odia (2014), and **Marathi, Pali, Prakrit, Assamese and Bengali (2024)**. Criteria: high antiquity of early texts, a valuable body of ancient literature, an original literary tradition, and a distinct classical form."},
+        {"t": "Sangam literature", "d": "**c. 300 BCE-300 CE**, Tamil — *Tolkappiyam* (grammar), *Ettuthogai* (eight anthologies), *Pattuppattu* (ten idylls), and the twin epics *Silappadikaram* and *Manimekalai*. Divided thematically into **akam** (interior/love) and **puram** (exterior/war and public life), with the **five tinai** landscapes."},
+        {"t": "Buddhist and Jain councils", "d": "**Buddhist councils** — Rajgriha (483 BCE), Vaishali (383), **Pataliputra under Ashoka (250)**, and **Kashmir under Kanishka (72 CE)**, where the Mahayana-Hinayana split hardened. **Jain councils** — Pataliputra (c. 300 BCE) and **Valabhi (512 CE)**, where the Agamas were compiled; the Digambara-Svetambara split preceded them."},
+        {"t": "Ashoka's edicts", "d": "**Major Rock Edicts (14), Minor Rock Edicts, Pillar Edicts (7), Cave inscriptions (Barabar)**; **Rock Edict XIII** describes the Kalinga war and remorse; **Rock Edict XII** is the classic statement of religious tolerance ('honour another's sect'). Languages: Prakrit in Brahmi and Kharosthi, plus **Greek and Aramaic** at Kandahar."},
+        {"t": "Chola local government", "d": "The **Uttaramerur inscriptions of Parantaka I (c. 920 CE)** record the **kudavolai** system — election by lot to village committees (variyams), with qualifications and disqualifications for candidates. India's oldest documented electoral procedure and a standing value addition for local-governance answers."}
+      ]
+    }
+  ]
+}

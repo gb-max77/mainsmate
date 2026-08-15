@@ -1,0 +1,31 @@
+{
+  "h": "Rapid Recall — Numbers Worth Memorising",
+  "k": "data",
+  "groups": [
+    {
+      "g": "The twenty numbers that fit any answer",
+      "items": [
+        {"t": "GDP and rank", "d": "**$4.19 trillion, 4th largest**; 3rd by PPP; growth **6.5%**; contributes ~16% of global growth.", "s": "IMF 2025"},
+        {"t": "Per capita income", "d": "**₹2.35 lakh (~$2,880)**; lower-middle-income; Viksit Bharat 2047 implies ~$14,000 — a five-fold rise.", "s": "NSO 2025"},
+        {"t": "Fiscal deficit and capex", "d": "**4.4% of GDP (FY26 BE)**; capex **₹11.21 lakh crore (3.1% of GDP)**; capex multiplier 2.45 vs 0.98 for revenue spending.", "s": "Budget 2025-26"},
+        {"t": "Tax-GDP and GST", "d": "Centre's gross tax-GDP **11.7%**; GST collections **₹22.08 lakh crore (FY25)**; GST slabs collapsed to **5% and 18% plus a 40% demerit rate** in 2025.", "s": "MoF / GST Council"},
+        {"t": "Exports and CAD", "d": "Total exports **$824.9 bn**; merchandise deficit ~$283 bn; **CAD 0.6% of GDP**; forex **~$690 bn**; remittances **$129.4 bn, the world's largest**.", "s": "Commerce / RBI 2025"},
+        {"t": "Employment", "d": "**LFPR 60.1%, WPR 58.2%, UR 3.2%**; **FLFPR 23.3% (2017-18) → 41.7% (2023-24)**; agriculture's employment share rose to **46.1%**; ~90% informal.", "s": "PLFS 2023-24"},
+        {"t": "Poverty", "d": "**MPI 24.85% → 14.96%**, 24.82 crore out; extreme poverty **27.1% → 5.3%**, 171 million lifted; top 1% hold **40.1% of wealth**.", "s": "NITI / World Bank / WIL"},
+        {"t": "Population", "d": "**1.46 billion**, most populous; **TFR 1.9, below replacement**; median age 28-29; 60-plus **10.5% → 20.8% by 2050**; urban **31.1% → ~40% by 2030**.", "s": "UNFPA 2025 / NFHS-5"},
+        {"t": "Health", "d": "Public health spending **1.84% of GDP** (target 2.5%); **OOPE 62.6% → 39.4%**; MMR **97**; IMR 28; anaemia **57% women, 67% children**.", "s": "NHA / SRS / NFHS-5"},
+        {"t": "Education", "d": "Spending **~4.6% of GDP** against the 6% Kothari/NEP target; only **23.4% of Class 3 children read a Class 2 text**; higher-education **GER 28.4%** against NEP's 50% by 2035.", "s": "ASER 2024 / AISHE"},
+        {"t": "Agriculture", "d": "Foodgrain **~354 MT**; horticulture **~355 MT, now larger**; net sown **140 mn ha**; **86% holdings small and marginal**, average **1.08 ha**; only **~6% of farmers sell at MSP**; **~10% of food is processed**.", "s": "MoA&FW / Shanta Kumar"},
+        {"t": "Water", "d": "Per capita **1,486 m³ (2021) → 1,367 by 2031**; India has **18% of world population and 4% of freshwater**; agriculture uses **78-80%**; groundwater supplies **60% of irrigation**.", "s": "Jal Shakti / CGWB"},
+        {"t": "Energy", "d": "**484 GW installed; non-fossil crossed 50% in June 2025, five years early**; coal is 48% of capacity but **~72% of generation**; per capita electricity **1,395 kWh** vs the world's 3,500; crude import dependence **88%**.", "s": "MoP / MNRE / PPAC"},
+        {"t": "Climate", "d": "**3rd largest emitter (~7-8%)** but per capita **~2 tCO₂e vs 4.7 world**; NDC: **45% intensity cut by 2030, net zero 2070**; forest and tree cover **25.17%** against the 33% target.", "s": "UNFCCC / ISFR 2023"},
+        {"t": "Digital", "d": "**97 crore internet users**; **UPI 18-19 bn transactions a month, ~half of global real-time payments**; Aadhaar 142 crore; Jan Dhan 55 crore; DBT savings **₹3.48 lakh crore**; digital economy **11.74% of GVA**.", "s": "TRAI / NPCI / MeitY"},
+        {"t": "Justice", "d": "**5.29 crore cases pending**; **21 judges per million** against the recommended 50; **undertrials 75.8%** of prisoners; prison occupancy **131%**.", "s": "NJDG / NCRB"},
+        {"t": "Local government", "d": "**2.55 lakh gram panchayats, ~31 lakh elected representatives, 46% women**; panchayats raise **~1%** of their own revenue; municipal own revenue **0.15% of GDP**.", "s": "MoPR / RBI"},
+        {"t": "Defence and security", "d": "Budget **₹6.81 lakh crore**; production **₹1.51 lakh crore**; exports **₹23,622 crore, up 34x since 2013-14**; LWE districts **126 (2010) → 38 (2024)**.", "s": "MoD / MHA"},
+        {"t": "Science", "d": "R&D **~0.64% of GDP** vs China's 2.4%; **3rd largest scientific publisher**; **GII rank 39, up from 81 in 2015**; space economy **$8.4 bn → $44 bn by 2033**.", "s": "DST / WIPO / ISRO"},
+        {"t": "MSME and startups", "d": "MSMEs: **30% of GDP, 45% of exports, 23 crore jobs, 6+ crore units**; **1.6 lakh recognised startups, 100+ unicorns, 3rd largest ecosystem**, ~45% from tier-2/3 cities.", "s": "MoMSME / DPIIT"}
+      ]
+    }
+  ]
+}
