@@ -96,6 +96,7 @@
 
 <main id="view-comptopic" class="view">
   <div id="comptopic"></div>
+  <aside class="fns" id="fns-c" aria-label="Relevant facts and evidence" hidden></aside>
   <div class="done-wrap"><button id="comp-done">Mark as completed</button></div>
 </main>
 
@@ -112,6 +113,17 @@
       <button class="fj-arw" data-jump="prev" aria-label="Previous section">‹</button>
       <select id="facts-sel" aria-label="Jump to a section"></select>
       <button class="fj-arw" data-jump="next" aria-label="Next section">›</button>
+      <button class="fj-read" id="facts-read" type="button" aria-pressed="false"
+              title="Read the bank aloud from here (Spacebar)">◉</button>
+    </div>
+    <div class="facts-readbar" id="facts-readbar" role="status" aria-live="polite" hidden>
+      <span class="read-pulse" aria-hidden="true"></span>
+      <span id="facts-readpos"></span>
+      <button id="facts-readprev" type="button" title="Previous entry">‹</button>
+      <button id="facts-readpause" type="button">❚❚ Pause</button>
+      <button id="facts-readnext" type="button" title="Next entry">›</button>
+      <button id="facts-readstop" type="button">Stop</button>
+      <span class="fr-hint">Tap any entry to read from there</span>
     </div>
   </div>
   <div id="facts-body"></div>
@@ -207,6 +219,9 @@
     <div id="sb-list"></div>
   </aside>
   <article id="answer"></article>
+  <!-- Evidence from FactnStat that fits THIS answer. Rides the left gutter on a
+       wide screen, folds to a collapsed block under the answer on a narrow one. -->
+  <aside class="fns" id="fns" aria-label="Relevant facts and evidence" hidden></aside>
   <div class="done-wrap">
     <button id="btn-done">Mark as completed</button>
   </div>

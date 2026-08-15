@@ -1277,6 +1277,8 @@ function factItemHTML(it, q, badge) {
 
 async function renderFacts(arg) {
   await loadFacts();
+  // Any re-render replaces the nodes narration is walking, so it cannot continue.
+  if (factRead.on) factRead.stop();
   if (arg && FACTS[arg]) facts.pid = arg;
   localStorage.setItem('mm-facts-paper', facts.pid);
   const chips = $('#facts-papers');
@@ -1394,6 +1396,91 @@ const factJump = {
 };
 window.addEventListener('scroll', () => { if ($('#view-facts')?.classList.contains('active')) factJump.onScroll(); }, { passive: true });
 
+/* Read Along for the bank: walks the filtered entries in order, in the same voice
+   and at the same speed as the answer narration, so the two feel like one feature.
+   The source line is left unspoken — it reads as noise between entries and is on
+   screen anyway. */
+const factRead = {
+  on: false, paused: false, run: 0, i: 0, nodes: [],
+  collect() { this.nodes = [...($('#facts-body')?.querySelectorAll('.fi') || [])]; },
+  // Where the eye already is, so ▶ picks up from what you were reading.
+  nearestToView() {
+    const y = factJump.top + 40;
+    let best = 0;
+    for (let n = 0; n < this.nodes.length; n++) {
+      if (this.nodes[n].getBoundingClientRect().top <= y) best = n; else break;
+    }
+    return best;
+  },
+  start(i) {
+    if (!canSpeak()) return this.stop('This browser cannot speak.');
+    this.collect();
+    if (!this.nodes.length) return this.stop('Nothing to read.');
+    if (readAlong) stopReadAlong();          // the two narrations never overlap
+    feedStop?.();
+    this.on = true; this.paused = false;
+    this.i = Math.max(0, Math.min(this.nodes.length - 1, i ?? this.nearestToView()));
+    this.speak();
+  },
+  speak() {
+    if (!this.on) return;
+    const node = this.nodes[this.i];
+    if (!node) return this.stop('End of the bank.');
+    this.mark(node);
+    const term = node.querySelector('.fi-t')?.textContent || '';
+    const detail = node.querySelector('.fi-d')?.textContent || '';
+    const text = cleanSpeech(`${term} ${detail}`);
+    const run = ++this.run;
+    this.paint();
+    if (!text.trim()) return this.advance();
+    const u = new SpeechSynthesisUtterance(text);
+    const voice = preferredVoice(speechSynthesis.getVoices());
+    u.lang = voice?.lang || 'en-IN';
+    u.rate = readSpeed; u.pitch = 1;
+    if (voice) u.voice = voice;
+    u.onend = () => { if (this.on && run === this.run) this.advance(); };
+    u.onerror = () => { if (this.on && run === this.run) this.advance(); };
+    speechSynthesis.speak(u);
+  },
+  mark(node) {
+    $('#facts-body')?.querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+    node.classList.add('reading-now');
+    node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  },
+  advance() { this.i++; this.speak(); },
+  step(dir) {
+    if (!this.on) return;
+    this.run++; speechSynthesis.cancel();
+    this.i = Math.max(0, Math.min(this.nodes.length - 1, this.i + dir));
+    this.speak();
+  },
+  togglePause() {
+    if (!this.on) return;
+    this.paused = !this.paused;
+    if (this.paused) speechSynthesis.pause(); else speechSynthesis.resume();
+    this.paint();
+  },
+  toggle() { this.on ? this.stop() : this.start(); },
+  stop(message = '') {
+    this.on = false; this.paused = false; this.run++;
+    if (canSpeak()) speechSynthesis.cancel();
+    $('#facts-body')?.querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+    this.paint(message);
+  },
+  paint(message = '') {
+    const btn = $('#facts-read'), bar = $('#facts-readbar');
+    if (!btn || !bar) return;
+    btn.setAttribute('aria-pressed', String(this.on));
+    btn.classList.toggle('on', this.on);
+    bar.hidden = !this.on && !message;
+    if (message && !this.on) { $('#facts-readpos').textContent = message; return; }
+    if (!this.on) return;
+    $('#facts-readpos').textContent = `${this.i + 1} / ${this.nodes.length}`;
+    $('#facts-readpause').textContent = this.paused ? '▶ Resume' : '❚❚ Pause';
+    factJump.measure();                       // the bar changes the frozen block's height
+  }
+};
+
 /* The right-edge rail: how much of the filtered bank is behind you, how much is left.
    Entry offsets are cached per render and the lookup is a binary search, so this
    stays cheap even at a thousand entries. */
@@ -1444,12 +1531,27 @@ $('#facts-kinds')?.addEventListener('click', e => {
   facts.k = b.dataset.fk; renderFacts();
 });
 $('#facts-q')?.addEventListener('input', e => { facts.q = e.target.value; renderFacts(); });
-// A fact is only useful in the answer copy — one tap lifts the whole line.
+// A fact is only useful in the answer copy — one tap lifts the whole line. While
+// Read Along is running the same tap means "read from here", matching the answer view.
 $('#facts-body')?.addEventListener('click', e => {
   const li = e.target.closest('.fi'); if (!li) return;
+  if (factRead.on) {
+    factRead.collect();
+    const i = factRead.nodes.indexOf(li);
+    if (i >= 0) { factRead.run++; speechSynthesis.cancel(); factRead.i = i; factRead.speak(); }
+    return;
+  }
   const t = [...li.querySelectorAll('.fi-t,.fi-d,.fi-s')].map(n => n.textContent).join(' — ');
   navigator.clipboard?.writeText(t).catch(() => {});
   li.classList.add('copied'); setTimeout(() => li.classList.remove('copied'), 900);
+});
+$('#facts-read')?.addEventListener('click', () => factRead.toggle());
+$('#facts-readbar')?.addEventListener('click', e => {
+  const id = e.target.id;
+  if (id === 'facts-readpause') factRead.togglePause();
+  else if (id === 'facts-readnext') factRead.step(1);
+  else if (id === 'facts-readprev') factRead.step(-1);
+  else if (id === 'facts-readstop') factRead.stop();
 });
 
 function feedQuestionEl(row) {
@@ -1771,6 +1873,7 @@ async function route() {
   const h = location.hash || '#/';
   const [, kind, arg] = h.split('/');
   if (kind !== 'a' && readAlong) stopReadAlong();
+  if (kind !== 'facts' && factRead.on) factRead.stop();
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.body.dataset.mode = mode;
   document.body.classList.remove('sb-open');
@@ -2009,7 +2112,7 @@ $('#answer').addEventListener('click', e => {
   startReadAlong(index);
 });
 addEventListener('keydown', e => {
-  if (e.target.closest('input,select,textarea,[contenteditable="true"]')) return;
+  if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) return;
   if (e.code === 'Space' && $('#view-answer').classList.contains('active')) {
     e.preventDefault();
     if (readAlong) toggleReadPause();
@@ -2022,6 +2125,18 @@ addEventListener('keydown', e => {
   }
   if (e.key === '1') { e.preventDefault(); go('#/'); return; }
   if (e.key === '2') { e.preventDefault(); go(subjectHash()); return; }
+  // In the bank: Space starts or pauses narration, ↑/↓ step entry by entry.
+  if ($('#view-facts').classList.contains('active')) {
+    if (e.code === 'Space') {
+      e.preventDefault();
+      factRead.on ? factRead.togglePause() : factRead.start();
+      return;
+    }
+    if (factRead.on && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+      e.preventDefault(); factRead.step(e.key === 'ArrowDown' ? 1 : -1); return;
+    }
+    return;
+  }
   // In the feed the two axes are literal: ←/→ move within one answer's cards,
   // ↑/↓ move to the next question. Space toggles autoplay.
   if ($('#view-feed').classList.contains('active')) {
