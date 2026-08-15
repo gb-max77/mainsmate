@@ -102,15 +102,21 @@
 <main id="view-facts" class="view">
   <h1>◈ FactnStat</h1>
   <p class="facts-sub">Data, indices, provisions, case law, statutes, schemes, committees, examples and quotations — typed, sourced and answer-ready. Filter by kind, search across all of it, tap any line to copy it. <span id="facts-count"></span></p>
-  <label class="sb-search facts-search"><span aria-hidden="true">⌕</span><input id="facts-q" type="search" placeholder="Search every fact — case, Article, scheme, figure" aria-label="Search facts"></label>
   <div class="chips" id="facts-papers"></div>
   <div class="chips" id="facts-kinds"></div>
-  <div class="facts-jump" id="facts-jump">
-    <button class="fj-arw" data-jump="prev" aria-label="Previous section">‹</button>
-    <select id="facts-sel" aria-label="Jump to a section"></select>
-    <button class="fj-arw" data-jump="next" aria-label="Next section">›</button>
+  <!-- Search and section-nav stay frozen together: both are how you re-enter a
+       1,000-entry bank mid-scroll, so neither may scroll out of reach. -->
+  <div class="facts-stick">
+    <label class="sb-search facts-search"><span aria-hidden="true">⌕</span><input id="facts-q" type="search" placeholder="Search every fact — case, Article, scheme, figure" aria-label="Search facts"></label>
+    <div class="facts-jump" id="facts-jump">
+      <button class="fj-arw" data-jump="prev" aria-label="Previous section">‹</button>
+      <select id="facts-sel" aria-label="Jump to a section"></select>
+      <button class="fj-arw" data-jump="next" aria-label="Next section">›</button>
+    </div>
   </div>
   <div id="facts-body"></div>
+  <!-- How far through the filtered bank you are, and how much is left. -->
+  <div class="facts-rail" id="facts-rail" aria-hidden="true"><i></i><span id="facts-left"></span></div>
 </main>
 
 <main id="view-notes" class="view">

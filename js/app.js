@@ -1333,31 +1333,43 @@ function buildFactJump() {
   sel.innerHTML = opts;
   factJump.list = anchors;
   factJump.cur = anchors[0]?.id || '';
+  factJump.measure();
   factJump.sync(true);
+  factRail.measure();
 }
 
 // The strip always names where you are. Position is computed from the headings
 // themselves rather than observed asynchronously, so it never lands stale.
 const factJump = {
-  list: [], cur: '', pend: '', pendAt: 0, queued: false,
+  list: [], cur: '', pend: '', pendAt: 0, queued: false, top: 104,
   mark(id) { this.cur = id; const s = $('#facts-sel'); if (s && s.value !== id) s.value = id; },
+  // Where a heading comes to rest: just under the frozen search + nav block.
+  // Use the block's sticky OFFSET, not its current position — measured before a
+  // scroll it is still down the page, which would put the read line off-screen.
+  measure() {
+    const s = document.querySelector('.facts-stick');
+    if (!s) { this.top = 104; return; }
+    const stuck = parseFloat(getComputedStyle(s).top) || 56;
+    this.top = Math.round(stuck + s.getBoundingClientRect().height) + 8;
+    document.documentElement.style.setProperty('--fstick', `${this.top}px`);
+  },
   sync(force) {
     if (!this.list.length) return;
-    // A jump owns the label until its target actually settles under the strip.
+    // A jump owns the label until its target actually settles under the block.
     if (this.pend && !force) {
       const a = this.list.find(x => x.id === this.pend);
-      const settled = !a || Math.abs(a.el.getBoundingClientRect().top - 104) < 10
+      const settled = !a || Math.abs(a.el.getBoundingClientRect().top - this.top) < 12
         || Date.now() - this.pendAt > 2500;
       if (!settled) { this.mark(this.pend); return; }
       this.pend = '';
     }
     let best = this.list[0];
-    for (const a of this.list) { if (a.el.getBoundingClientRect().top <= 120) best = a; else break; }
+    for (const a of this.list) { if (a.el.getBoundingClientRect().top <= this.top + 16) best = a; else break; }
     this.mark(best.id);
   },
   onScroll() {
     if (this.queued) return; this.queued = true;
-    requestAnimationFrame(() => { this.queued = false; this.sync(); });
+    requestAnimationFrame(() => { this.queued = false; this.sync(); factRail.paint(); });
   },
   go(id) {
     const a = this.list.find(x => x.id === id); if (!a) return;
@@ -1381,6 +1393,41 @@ const factJump = {
   }
 };
 window.addEventListener('scroll', () => { if ($('#view-facts')?.classList.contains('active')) factJump.onScroll(); }, { passive: true });
+
+/* The right-edge rail: how much of the filtered bank is behind you, how much is left.
+   Entry offsets are cached per render and the lookup is a binary search, so this
+   stays cheap even at a thousand entries. */
+const factRail = {
+  tops: [], total: 0, hide: 0,
+  index() {                                   // entries whose top has passed the read line
+    const y = window.scrollY + factJump.top;
+    let lo = 0, hi = this.tops.length;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (this.tops[mid] <= y) lo = mid + 1; else hi = mid; }
+    return lo;
+  },
+  measure() {
+    const nodes = $('#facts-body')?.querySelectorAll('.fi') || [];
+    this.tops = [...nodes].map(n => n.getBoundingClientRect().top + window.scrollY);
+    this.total = this.tops.length;
+    this.paint();
+  },
+  paint() {
+    const rail = $('#facts-rail'); if (!rail) return;
+    if (!this.total) { rail.classList.remove('live'); rail.querySelector('i').style.height = '0'; return; }
+    const seen = this.index();
+    const frac = Math.min(1, seen / this.total);
+    rail.querySelector('i').style.height = `${(frac * 100).toFixed(1)}%`;
+    const left = this.total - seen;
+    const label = rail.querySelector('span');
+    label.textContent = left ? `${left} left` : 'end';
+    label.style.top = `${(frac * 100).toFixed(1)}%`;
+    // The count shows while you move and fades once you settle to read, so it
+    // never sits over the text you are actually on.
+    rail.classList.add('live');
+    clearTimeout(this.hide);
+    this.hide = setTimeout(() => rail.classList.remove('live'), 1100);
+  }
+};
 $('#facts-sel')?.addEventListener('change', e => factJump.go(e.target.value));
 $('#facts-jump')?.addEventListener('click', e => {
   const b = e.target.closest('[data-jump]'); if (!b) return;
@@ -1536,15 +1583,19 @@ function feedAppend(n = FEED_PAGE) {
 }
 
 // The topbar's height varies (the brand wraps on narrow screens), so measure it
-// rather than hard-coding — the feed must fill exactly the space below it.
-function feedSyncHeight() {
+// rather than hard-coding: the feed fills exactly the space below it, and
+// FactnStat's frozen search + nav block hangs from it.
+function syncTopbarHeight() {
   const tb = document.querySelector('.topbar');
   if (tb) document.documentElement.style.setProperty('--tb', `${Math.round(tb.getBoundingClientRect().height)}px`);
 }
-addEventListener('resize', () => { if ($('#view-feed')?.classList.contains('active')) feedSyncHeight(); });
+addEventListener('resize', () => {
+  if ($('#view-feed')?.classList.contains('active')) syncTopbarHeight();
+  if ($('#view-facts')?.classList.contains('active')) { syncTopbarHeight(); factJump.measure(); factRail.measure(); }
+});
 
 function renderFeed() {
-  feedSyncHeight();
+  syncTopbarHeight();
   const scroll = $('#feed-scroll');
   feedStop();
   scroll.innerHTML = '';
@@ -1713,7 +1764,7 @@ function paintDock() {
   document.body.classList.toggle('answer-open', answer);
   const feedOn = $('#view-feed').classList.contains('active');
   document.body.classList.toggle('feed-open', feedOn);
-  if (feedOn) feedSyncHeight();   // after the class lands — it compacts the topbar
+  if (feedOn) syncTopbarHeight();   // after the class lands — it compacts the topbar
 }
 
 async function route() {
@@ -1741,6 +1792,7 @@ async function route() {
     else { $('#view-comp').classList.add('active'); await renderComp(); }
   } else if (kind === 'facts') {
     $('#view-facts').classList.add('active');
+    syncTopbarHeight();          // the frozen block and the rail hang off the topbar
     await renderFacts(arg);
   } else if (kind === 'n') {
     const [, , bookId, chIdx] = h.split('/');
