@@ -1,0 +1,26 @@
+{
+  "h": "2026 — What Changed This Year",
+  "k": "data",
+  "groups": [
+    {
+      "g": "Economy and public finance",
+      "items": [
+        {"t": "Union Budget 2026-27", "d": "Total expenditure **₹53.47 lakh crore**; capex **₹12.22 lakh crore** with **effective capex ₹17.15 lakh crore (~4.4% of GDP)**; **fiscal deficit 4.3% of GDP**, from 4.4% in RE 2025-26; **central government debt projected to fall to 55.6% of GDP** from 56.1%. Cite the FY27 figures, not FY26 — using last year's budget is the commonest dating error in an economy answer.", "s": "Union Budget 2026-27"},
+        {"t": "Economic Survey 2025-26", "d": "Theme: **'Pushing the Growth Frontier'**. Estimates **7.4% growth in 2025-26** (against 6.5% in 2024-25) and projects **6.8-7.2% for 2026-27**, with medium-term potential at ~7%. Describes a **'Goldilocks' moment — high growth with historically low inflation (~1.7%)**. Growth is led by private consumption (~61.5% of GDP) and investment (~30%).", "s": "Economic Survey 2025-26"},
+        {"t": "16th Finance Commission award", "d": "Accepted by the Union, effective **1 April 2026 to 31 March 2031**. States' share held at **41%**; a new **10% weight for contribution to GDP**; the **tax-and-fiscal-effort criterion dropped**; the Centre to reach a **3.5% fiscal deficit by 2030-31** and states 3% of GSDP; **off-budget borrowing by states to be discontinued and brought on-budget**. FY27 Finance Commission grants ~**₹1.4 lakh crore**.", "s": "16th Finance Commission"},
+        {"t": "Forex and banking", "d": "Forex reserves hit a record **$701.4 billion (January 2026)**. Bank asset quality improved further — **GNPA 2.2% and NNPA 0.5% (September 2025)**, from a GNPA peak of 11.2% in 2018. Use the newer figures where the question is on financial-sector health.", "s": "RBI / Economic Survey 2025-26"},
+        {"t": "GST 2.0 in effect", "d": "The two-slab structure — **5% and 18%, with a 40% demerit rate** — approved by the Council in **September 2025** and now the operating regime, ending most classification disputes and much of the inverted duty structure. The unfinished agenda remains **petroleum, natural gas, electricity and alcohol**, still outside GST.", "s": "GST Council"}
+      ]
+    },
+    {
+      "g": "Polity, judgments and administration",
+      "items": [
+        {"t": "Census 2027 notified", "d": "The Centre issued the **notification for the 16th Census**, ending a 16-year gap. **Houselisting from April 2026**; reference date **1 March 2027** (1 October 2026 for the snow-bound areas of Ladakh, J&K, Himachal and Uttarakhand); **caste enumerated for the first time since 1931**, and the first **digital census with self-enumeration**. Its second consequence is that it unfreezes **delimitation**, frozen by the 84th Amendment until the first census after 2026.", "s": "Registrar General of India, 2026", "k": "prov"},
+        {"t": "Harish Rana (2026)", "d": "Permitted **withdrawal of life-sustaining treatment, including clinically assisted nutrition and hydration**, for a patient in a persistent vegetative state for 13 years — the first definitive application of the passive-euthanasia framework laid down in *Common Cause* (2018). The current authority on the right to die with dignity.", "s": "Supreme Court, March 2026", "k": "case"},
+        {"t": "Pooja Pal (2026)", "d": "Held that granting **permanent commission to women Short Service Commission officers** is a **constitutional obligation, not a discretionary favour** — carrying forward *Babita Puniya* (2020) and *Annie Nagaraja* (2020). The strongest recent citation for substantive equality under Articles 14 and 16 in the armed forces.", "s": "Supreme Court, 2026", "k": "case"},
+        {"t": "Hamsaanandini Nanduri (2026)", "d": "Struck down **Section 60(4) of the Code on Social Security, 2020**, which capped maternity benefit for **adoptive mothers** at children under three months, as violative of **Articles 14 and 21**. A ready example of a welfare statute failing the equality test on an arbitrary classification.", "s": "Supreme Court, 2026", "k": "case"},
+        {"t": "Presidential Reference on Governors' assent", "d": "After *State of Tamil Nadu v. Governor* (2025) deemed re-passed bills assented and read timelines into **Articles 200 and 201**, the Union made a **Reference under Article 143** asking whether courts may prescribe such timelines and whether a deemed assent is constitutionally available. The live federal question of the cycle — cite the sequence, not just one ruling.", "s": "Article 143 Reference, 2025-26", "k": "prov"}
+      ]
+    }
+  ]
+}
