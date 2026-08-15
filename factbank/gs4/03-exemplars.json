@@ -1,0 +1,33 @@
+{
+  "h": "The Exemplar Bank — The Act, Then the Value",
+  "k": "eg",
+  "groups": [
+    {
+      "g": "Civil servants and officers",
+      "items": [
+        {"t": "T.N. Seshan", "d": "As Chief Election Commissioner (1990-96) he enforced the **Model Code of Conduct**, introduced voter ID cards and expenditure monitoring, and postponed elections where the machinery was compromised. **Value: institutional courage — using existing powers fully rather than waiting for new ones.**", "s": "Election Commission of India"},
+        {"t": "E. Sreedharan", "d": "Delivered the Konkan Railway and the **Delhi Metro ahead of schedule and within budget**, and resigned publicly owning a crane collapse. **Value: accountability without being asked, and the demonstration that a public agency can match private-sector delivery.**", "s": "DMRC"},
+        {"t": "Armstrong Pame", "d": "IAS officer who built the **100 km 'People's Road' in Tousem, Manipur** through crowdfunding and community labour when no budget existed. **Value: resourcefulness and mobilisation of social capital where the administrative machinery has no answer.**", "s": "Manipur"},
+        {"t": "Satyendra Dubey and Manjunath Shanmugam", "d": "Dubey (**NHAI, 2003**) exposed corruption in the Golden Quadrilateral and was murdered after his identity was leaked from the PMO; Manjunath (**IOC, 2005**) was killed for sealing petrol pumps selling adulterated fuel. **Value: the price of integrity without institutional protection — the standing argument for operationalising the Whistle Blowers Protection Act, 2014.**", "s": "Whistleblower cases"},
+        {"t": "Ashok Khemka and Sanjiv Chaturvedi", "d": "Khemka — **50+ transfers in a career of about 30 years** after cancelling a land mutation; Chaturvedi — CVO at AIIMS, awarded the **Magsaysay (2015)** for anti-corruption work, repeatedly stripped of charge. **Value: integrity has a career cost, which is precisely why fixed tenure (T.S.R. Subramanian, 2013) is a systemic rather than a personal remedy.**", "s": "Service records"},
+        {"t": "Durga Shakti Nagpal", "d": "Suspended as SDM in Gautam Budh Nagar after acting against illegal sand mining. **Value: the collision between local political economy and the rule of law — and the reason the Civil Services Board and written orders matter more than exhortations to be brave.**", "s": "2013"},
+        {"t": "Kiran Bedi", "d": "As IG (Prisons) at **Tihar** she introduced Vipassana meditation, literacy and grievance boxes for inmates — the reforms that won the **Magsaysay (1994)**. **Value: reformative justice and the recognition of the prisoner as a rights-bearing person.**", "s": "Tihar Jail reforms"},
+        {"t": "Collectors who changed a district", "d": "**S.R. Sankaran** — 'the people's IAS officer', architect of the **Bonded Labour System (Abolition) Act, 1976** and of SC/ST welfare in Andhra; **Aruna Sundararajan** (Akshaya, Kerala's first e-literacy project); **Rajni Sekhri Sibal**, who protected a merit list under pressure; **Smita Sabharwal, Prashant Nair (Kudumbashree/Compassionate Kozhikode)**. **Value: the district officer's discretion, used for the last citizen rather than the loudest one.**", "s": "Administrative history"},
+        {"t": "Officers in crisis", "d": "**Rajendra Bhatt and the Bhilwara model (COVID-19)** — ruthless containment, house-to-house screening and a district-level ring-fence that WHO cited; **Odisha's cyclone evacuations under successive Special Relief Commissioners**; **Kerala's 2018 flood response** with crowdsourced rescue coordination. **Value: decisiveness under uncertainty, and the willingness to act on incomplete information rather than wait for perfect authority.**", "s": "Crisis administration"}
+      ]
+    },
+    {
+      "g": "Citizens, reformers and institutions",
+      "items": [
+        {"t": "Aruna Roy and the MKSS", "d": "Left the IAS to organise the **jan sunwai** movement in Rajasthan, where muster rolls and bills were read aloud in the village square — producing the **RTI Act, 2005**. **Value: transparency as a demand from below, and the conversion of a local practice into a national statute.**", "s": "MKSS"},
+        {"t": "Ela Bhatt and SEWA", "d": "Organised self-employed women — vendors, home-based workers, waste-pickers — into a union and a cooperative bank (1972). **Value: dignity of informal labour, and the insight that the poor need organisation before they need charity.**", "s": "SEWA"},
+        {"t": "Verghese Kurien", "d": "**Operation Flood** and Amul — turned dairying into a farmer-owned cooperative and made India the world's largest milk producer. **Value: institution-building that transfers value to the producer, and the refusal of a technocrat to take the commercial spoils of his own model.**", "s": "NDDB"},
+        {"t": "Bindeshwar Pathak", "d": "**Sulabh International** — twin-pit toilets and the rehabilitation of manual scavengers, treating sanitation as a question of caste dignity, not plumbing. **Value: technology chosen for its social consequence.**", "s": "Sulabh"},
+        {"t": "Bunker Roy and the Barefoot College", "d": "Trained rural, often illiterate, grandmothers as **solar engineers** — in India and across Africa. **Value: capability, not credential — the capability approach in practice.**", "s": "Barefoot College, Tilonia"},
+        {"t": "Environmental exemplars", "d": "**Chipko (Gaura Devi, Sunderlal Bahuguna, Chandi Prasad Bhatt)**; **Rajendra Singh's** johad revival (Stockholm Water Prize); **Jadav Payeng, the 'Forest Man of India'**, who planted a 1,300-acre forest on a Brahmaputra sandbar; **Saalumarada Thimmakka**. **Value: individual stewardship of a commons that no law protected.**", "s": "Environmental movements"},
+        {"t": "Institutional exemplars", "d": "**ISRO** — frugal engineering and mission ownership; **the Election Commission** — MCC enforcement; **the Supreme Court's PIL jurisdiction**; **NDMA and Odisha's OSDMA** — zero-casualty evacuation; **Kerala's Kudumbashree** — women's collective governance. **Value: ethics is finally an institutional property, not just a personal one — good people in bad systems get worn down.**", "s": "Institutional practice"},
+        {"t": "Failures worth citing honestly", "d": "**Bhopal (1984)** — regulatory capture, absent liability and a settlement of $470 million against the actual toll; **the 2G and coal allocations** — discretion without transparent method; **Vyapam and the paper-leak cases** — the collapse of examination integrity; **manual scavenging deaths** despite two prohibiting statutes. **Value: an answer that names a failure and its structural cause reads as honest analysis, not cynicism.**", "s": "Case record"}
+      ]
+    }
+  ]
+}

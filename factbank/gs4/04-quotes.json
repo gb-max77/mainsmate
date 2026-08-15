@@ -1,0 +1,46 @@
+{
+  "h": "Quotations by Theme",
+  "k": "quote",
+  "groups": [
+    {
+      "g": "Integrity, character and conscience",
+      "items": [
+        {"t": "Integrity, defined", "d": "\"Integrity is doing the right thing even when no one is watching.\" — C.S. Lewis. Pair with **\"Character is like a tree and reputation its shadow; the shadow is what we think of it, the tree is the real thing\"** (Abraham Lincoln).", "s": "C.S. Lewis / Lincoln"},
+        {"t": "Character over ability", "d": "\"Ability will get you success; character will keep you there.\" And Gandhi's **seven social sins**: wealth without work, pleasure without conscience, knowledge without character, commerce without morality, science without humanity, worship without sacrifice, and **politics without principle**.", "s": "Gandhi, Young India, 1925"},
+        {"t": "Conscience", "d": "\"In matters of conscience, the law of the majority has no place.\" — Gandhi. And Thoreau: **\"Must the citizen ever for a moment resign his conscience to the legislator?\"**", "s": "Gandhi / Thoreau, Civil Disobedience"},
+        {"t": "Honesty in office", "d": "Kautilya: **\"Just as it is impossible not to taste honey placed on the tongue, so it is impossible for a government servant not to eat up a bit of the king's revenue\"** — the earliest statement of the need for audit and surveillance rather than trust alone.", "s": "Arthashastra"},
+        {"t": "Small acts", "d": "\"We can do no great things, only small things with great love.\" — Mother Teresa. For the case-study conclusion where the officer's remedy is modest but real.", "s": "Mother Teresa"}
+      ]
+    },
+    {
+      "g": "Power, office and accountability",
+      "items": [
+        {"t": "Power reveals", "d": "\"Nearly all men can stand adversity, but if you want to test a man's character, give him power.\" — Lincoln. With Acton's **\"power tends to corrupt, and absolute power corrupts absolutely.\"**", "s": "Lincoln / Acton"},
+        {"t": "Public office as trust", "d": "\"Public office is a public trust\" — the American formulation; the Indian version is the **Constitution's oath 'to do right to all manner of people... without fear or favour, affection or ill-will'**, which is worth quoting verbatim in an integrity answer.", "s": "Third Schedule, Constitution of India"},
+        {"t": "Speaking truth to power", "d": "Sardar Patel to the Constituent Assembly: the civil servant must have **\"independence of expression and fearlessness\"** and be free to tell the minister the truth — 'if you do not adopt this course, then do not follow the present Constitution'.", "s": "Constituent Assembly, 10 October 1949"},
+        {"t": "Obedience and its limit", "d": "Arendt's **banality of evil** — the Eichmann finding that the worst harm comes from officials who stop thinking. Pair with Milgram's obedience experiments: **the safeguard must be in the system, because the individual conscience is not reliable under authority.**", "s": "Arendt / Milgram"},
+        {"t": "Accountability", "d": "\"The price of greatness is responsibility.\" — Churchill. And Ambedkar: **\"Bhakti in religion may be a road to the salvation of the soul. But in politics, bhakti or hero-worship is a sure road to degradation and to eventual dictatorship.\"**", "s": "Churchill / Ambedkar, 1949"}
+      ]
+    },
+    {
+      "g": "Justice, compassion and the last person",
+      "items": [
+        {"t": "The talisman", "d": "\"Recall the face of the poorest and the weakest man whom you may have seen, and ask yourself if the step you contemplate is going to be of any use to him. Will he gain anything by it? Will it restore him to a control over his own life and destiny?\" — the test for any administrative decision.", "s": "Gandhi, 1948"},
+        {"t": "Justice", "d": "\"Injustice anywhere is a threat to justice everywhere.\" — Martin Luther King Jr. And Rawls: **\"Justice is the first virtue of social institutions, as truth is of systems of thought.\"**", "s": "King / Rawls"},
+        {"t": "How a society is judged", "d": "\"A nation should not be judged by how it treats its highest citizens, but its lowest ones.\" — Mandela. And Humphrey: **\"the moral test of government is how it treats those in the dawn of life, the twilight of life, and the shadows of life.\"**", "s": "Mandela / Hubert Humphrey"},
+        {"t": "Compassion in administration", "d": "The Dalai Lama: **\"Love and compassion are necessities, not luxuries. Without them, humanity cannot survive.\"** Use where the case study turns on empathy overriding a procedurally correct but harsh outcome.", "s": "Dalai Lama"},
+        {"t": "Equality", "d": "Ambedkar: **\"We must begin by acknowledging that there is complete absence of two things in Indian society — equality and fraternity\"**, and his warning about a life of contradictions between political equality and social and economic inequality.", "s": "Constituent Assembly, 25 November 1949"}
+      ]
+    },
+    {
+      "g": "Courage, dissent and change",
+      "items": [
+        {"t": "Moral courage", "d": "\"The ultimate measure of a man is not where he stands in moments of comfort and convenience, but where he stands at times of challenge and controversy.\" — Martin Luther King Jr.", "s": "MLK"},
+        {"t": "Silence", "d": "\"The world will not be destroyed by those who do evil, but by those who watch them without doing anything.\" — attributed to Einstein. And Dante's warning about the hottest places in hell reserved for those who remain neutral in a moral crisis.", "s": "Attributed"},
+        {"t": "Being the change", "d": "\"Be the change you wish to see in the world\" — and Gandhi's stricter formulation: **\"as human beings, our greatness lies not so much in being able to remake the world as in being able to remake ourselves.\"**", "s": "Gandhi"},
+        {"t": "Dissent", "d": "Justice Chandrachud: **\"Dissent is the safety valve of democracy\"**; and Voltaire's attributed line on defending to the death the right to say it. Useful in answers on protest, free speech and internal disagreement within an organisation.", "s": "Supreme Court / attributed to Voltaire"},
+        {"t": "Persistence", "d": "\"First they ignore you, then they laugh at you, then they fight you, then you win\" — attributed to Gandhi; and Kalam: **\"Dream is not that which you see while sleeping, it is something that does not let you sleep.\"**", "s": "Attributed / Kalam"}
+      ]
+    }
+  ]
+}
