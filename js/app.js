@@ -1215,7 +1215,7 @@ function renderCompTopic(pid, n) {
         : `<p class="c-para">${md(p)}</p>`).join('')}
       ${t.position ? `<p class="wf"><b class="lbl">Position:</b> ${md(t.position)}</p>` : ''}
       ${t.conc ? `<p class="conc">${md(t.conc)}</p>` : ''}
-      ${t.draw ? `<div class="segdiag"><div class="dg-head">Draw it</div><p class="c-draw">${md(t.draw)}</p></div>` : ''}
+      ${(t.figure || t.draw) ? `<div class="segdiag"><div class="dg-head">Figure</div>${t.figure ? `<p class="c-para">${md(t.figure)}</p>` : ''}${t.draw ? `<p class="c-draw"><b>Draw it —</b> ${md(t.draw)}</p>` : ''}</div>` : ''}
       ${bank}
     </article>`;
   const b = $('#comp-done');
