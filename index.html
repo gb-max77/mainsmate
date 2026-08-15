@@ -100,8 +100,12 @@
   <label class="sb-search facts-search"><span aria-hidden="true">⌕</span><input id="facts-q" type="search" placeholder="Search every fact — case, Article, scheme, figure" aria-label="Search facts"></label>
   <div class="chips" id="facts-papers"></div>
   <div class="chips" id="facts-kinds"></div>
-  <div class="facts-wrap"><aside id="facts-nav" aria-label="Jump to a section"></aside>
-    <div id="facts-body"></div></div>
+  <div class="facts-jump" id="facts-jump">
+    <button class="fj-arw" data-jump="prev" aria-label="Previous section">‹</button>
+    <select id="facts-sel" aria-label="Jump to a section"></select>
+    <button class="fj-arw" data-jump="next" aria-label="Next section">›</button>
+  </div>
+  <div id="facts-body"></div>
 </main>
 
 <main id="view-notes" class="view">

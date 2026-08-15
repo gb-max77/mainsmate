@@ -1309,22 +1309,86 @@ async function renderFacts(arg) {
   }
   const total = all.length;
   $('#facts-body').innerHTML = html || `<p class="fs-none">Nothing matches “${esc(facts.q)}” in ${esc(d?.label || '')}.</p>`;
-  // Jump-nav: every section and its groups, so a paper of 400 facts stays navigable.
-  const nav = [...$('#facts-body').querySelectorAll('.fs-sec')].map((sec, si) => {
-    const h2 = sec.querySelector('h2'); h2.id = `fsx-${si}`;
-    const subs = [...sec.querySelectorAll('.fs-group>h3')].map((h3, gi) => {
-      h3.id = `fsx-${si}-${gi}`;
-      return `<a href="#fsx-${si}-${gi}" class="fx-sub">${esc(h3.textContent)}</a>`;
-    }).join('');
-    return `<details class="fx-sec"${si === 0 ? ' open' : ''}><summary>${esc(h2.textContent)}</summary>${subs}</details>`;
-  }).join('');
-  $('#facts-nav').innerHTML = nav;
+  buildFactJump();
   $('#facts-count').textContent = (q || facts.k) ? `${shown} of ${total} shown` : `${total} facts`;
 }
+
+/* Jump strip: one row instead of a sidebar. The select carries every section and
+   its groups; the arrows step across sections; scrolling updates the label. */
+function buildFactJump() {
+  const sel = $('#facts-sel'); if (!sel) return;
+  const anchors = [];
+  const opts = [...$('#facts-body').querySelectorAll('.fs-sec')].map((sec, si) => {
+    const h2 = sec.querySelector('h2'); h2.id = `fsx-${si}`;
+    anchors.push({ id: h2.id, el: h2, sec: true });
+    const subs = [...sec.querySelectorAll('.fs-group>h3')].map((h3, gi) => {
+      h3.id = `fsx-${si}-${gi}`;
+      anchors.push({ id: h3.id, el: h3, sec: false });
+      return `<option value="${h3.id}">— ${esc(h3.textContent)}</option>`;
+    }).join('');
+    return `<optgroup label="${esc(h2.textContent)}"><option value="${h2.id}">${esc(h2.textContent)}</option>${subs}</optgroup>`;
+  }).join('');
+  sel.innerHTML = opts;
+  factJump.list = anchors;
+  factJump.cur = anchors[0]?.id || '';
+  factJump.sync(true);
+}
+
+// The strip always names where you are. Position is computed from the headings
+// themselves rather than observed asynchronously, so it never lands stale.
+const factJump = {
+  list: [], cur: '', pend: '', pendAt: 0, queued: false,
+  mark(id) { this.cur = id; const s = $('#facts-sel'); if (s && s.value !== id) s.value = id; },
+  sync(force) {
+    if (!this.list.length) return;
+    // A jump owns the label until its target actually settles under the strip.
+    if (this.pend && !force) {
+      const a = this.list.find(x => x.id === this.pend);
+      const settled = !a || Math.abs(a.el.getBoundingClientRect().top - 104) < 10
+        || Date.now() - this.pendAt > 2500;
+      if (!settled) { this.mark(this.pend); return; }
+      this.pend = '';
+    }
+    let best = this.list[0];
+    for (const a of this.list) { if (a.el.getBoundingClientRect().top <= 120) best = a; else break; }
+    this.mark(best.id);
+  },
+  onScroll() {
+    if (this.queued) return; this.queued = true;
+    requestAnimationFrame(() => { this.queued = false; this.sync(); });
+  },
+  go(id) {
+    const a = this.list.find(x => x.id === id); if (!a) return;
+    this.pend = id; this.pendAt = Date.now();
+    this.mark(id);
+    a.el.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  },
+  // Arrows step section to section; the select is what reaches an individual group.
+  secIndex() {
+    let last = -1;
+    for (let i = 0; i < this.list.length; i++) {
+      if (this.list[i].sec) last++;
+      if (this.list[i].id === this.cur) return Math.max(0, last);
+    }
+    return Math.max(0, last);
+  },
+  step(dir) {
+    const secs = this.list.filter(a => a.sec); if (!secs.length) return;
+    const i = Math.min(secs.length - 1, Math.max(0, this.secIndex() + dir));
+    this.go(secs[i].id);
+  }
+};
+window.addEventListener('scroll', () => { if ($('#view-facts')?.classList.contains('active')) factJump.onScroll(); }, { passive: true });
+$('#facts-sel')?.addEventListener('change', e => factJump.go(e.target.value));
+$('#facts-jump')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-jump]'); if (!b) return;
+  factJump.step(b.dataset.jump === 'next' ? 1 : -1);
+});
 
 $('#facts-papers')?.addEventListener('click', e => {
   const b = e.target.closest('[data-fp]'); if (!b) return;
   facts.pid = b.dataset.fp; facts.k = ''; renderFacts();
+  $('#view-facts')?.scrollIntoView({ block: 'start' });
 });
 $('#facts-kinds')?.addEventListener('click', e => {
   const b = e.target.closest('[data-fk]'); if (!b) return;

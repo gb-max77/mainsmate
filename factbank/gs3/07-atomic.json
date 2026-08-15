@@ -1,0 +1,49 @@
+{
+  "h": "Rapid Recall — Figures and Instruments",
+  "k": "data",
+  "groups": [
+    {
+      "g": "Economy — one figure per line",
+      "items": [
+        {"t": "Inflation target", "d": "**CPI 4% with a ±2% band**, statutory since 2016; a failure is **three consecutive quarters outside the band**, requiring a written report to the government. Food carries a **45.9% weight** in CPI — which is why headline inflation tracks vegetables more than monetary policy."},
+        {"t": "Repo and the policy corridor", "d": "**Repo** is the policy rate; the corridor runs from the **SDF (Standing Deposit Facility, repo minus 25 bps)** to the **MSF (repo plus 25 bps)**. **CRR** ~4% (no interest paid) and **SLR** ~18% of NDTL. The **Monetary Policy Committee** decides by majority with the Governor's casting vote."},
+        {"t": "Bank credit and NPAs", "d": "**GNPA ~2.5%, a multi-decade low**, from 11.2% in 2018; **CRAR ~16-17%** against the Basel III minimum of 11.5% with buffers; provision coverage above 75%. Credit-to-GDP ~56%, well below peers — India is under-banked in credit, not in accounts."},
+        {"t": "Priority sector lending", "d": "**40% of adjusted net bank credit** — agriculture 18% (with 10% for small and marginal farmers), micro enterprises 7.5%, weaker sections 12%. Shortfalls go to **RIDF with NABARD**, and **PSLCs** allow trading of the obligation."},
+        {"t": "Financial inclusion index", "d": "RBI's index rose from **43.4 (2017) to ~64.2** — access, usage and quality, with quality the weakest sub-index. Jan Dhan: **55 crore accounts, 56% women, ~₹2.6 lakh crore deposits**."},
+        {"t": "Insurance and pension", "d": "Insurance penetration **~3.7% of GDP**, having fallen, against a world average near 7%; life dominates. **NPS + APY** together have over 8 crore subscribers with AUM above ₹14 lakh crore. IRDAI's target is **'Insurance for All by 2047'**."},
+        {"t": "Disinvestment and PSEs", "d": "The **new PSE policy (2021)** limits the state to **four strategic sectors with a bare minimum presence** and full exit elsewhere. **LIC's IPO (2022)** was India's largest; **Air India's** sale to Tata (2021) the first successful privatisation of a major PSU in two decades. **DIPAM** handles both disinvestment and the **National Monetisation Pipeline**."},
+        {"t": "GST structure", "d": "**CGST + SGST** on intra-state and **IGST** on inter-state supply; the **GST Council (Art. 279A)** votes with the Centre at one-third and states at two-thirds, decisions by three-fourths. Excluded from GST: **petroleum crude, high-speed diesel, petrol, natural gas, ATF, electricity and alcohol for human consumption** — the unfinished agenda."},
+        {"t": "Tax buoyancy and compliance", "d": "GST registrations rose from **65 lakh at launch to ~1.5 crore**; income tax returns filed crossed **8 crore**; **faceless assessment and appeals** removed the assessee-officer interface. Direct:indirect ratio ~**57:43**, a progressivity improvement."},
+        {"t": "External debt and reserves adequacy", "d": "External debt ~**19% of GDP**, with short-term debt a modest share; reserves ~**$690 bn** covering about 11 months of imports and well above the Guidotti-Greenspan rule. India's vulnerability is not solvency but **oil-price and capital-flow volatility**."}
+      ]
+    },
+    {
+      "g": "Environment, energy and security — one figure per line",
+      "items": [
+        {"t": "Renewable capacity mix", "d": "Solar ~**110 GW**, wind ~**51 GW**, large hydro ~47 GW, biomass ~11 GW, small hydro ~5 GW, nuclear ~8.7 GW. Solar's cost fell from **₹10.95/unit (2010) to ~₹2.4-2.6/unit** — the fastest cost decline of any Indian infrastructure input."},
+        {"t": "Coal reality", "d": "Domestic production crossed **1 billion tonnes**; coal is ~48% of installed capacity but **~70-74% of generation**, because renewables have low capacity utilisation. India has committed to a **phase-down, not a phase-out** — the wording India secured at Glasgow."},
+        {"t": "Nuclear", "d": "**~8.7 GW installed, target 100 GW by 2047**; the **three-stage programme** (PHWR → fast breeder → thorium) with **Kalpakkam's PFBR** at the threshold of stage two; **Civil Liability for Nuclear Damage Act, 2010's Section 17(b)** supplier liability is the barrier to imports, and amendments to it and to the Atomic Energy Act were announced in Budget 2025-26."},
+        {"t": "Forest cover trend", "d": "Forest and tree cover **24.62% (ISFR 2021) → 25.17% (ISFR 2023)** against the **33% National Forest Policy 1988 target**; the increase is largely in **open forest and plantations**, while **very dense forest and North-Eastern cover have declined** — always state the composition, not just the total."},
+        {"t": "Water stress", "d": "Per capita availability **1,486 m³ (2021) → ~1,367 by 2031**; below 1,700 is 'stressed', below 1,000 'scarce'. India has **18% of the world's population and 4% of its freshwater**, and agriculture takes **78-80%** of it."},
+        {"t": "Air quality standards", "d": "India's NAAQS for **PM2.5 is 40 µg/m³ annual** against the **WHO guideline of 5**; the **NCAP** targets a **40% reduction by 2025-26** in 131 non-attainment cities. Air pollution is linked to over **1.6 million deaths a year** in India (Lancet/GBD estimates)."},
+        {"t": "Biodiversity targets", "d": "**Kunming-Montreal GBF (2022)** — **30x30**: 30% of terrestrial and marine areas conserved by 2030, restoration of 30% of degraded ecosystems, and **$200 bn a year** in biodiversity finance. India's protected-area coverage is ~5.3% of land, so the gap is large; **OECMs (other effective area-based conservation measures)** are how India intends to count community-conserved areas."},
+        {"t": "Defence numbers", "d": "Budget **₹6.81 lakh crore (FY26)**, ~13% of the union budget and ~1.9% of GDP; **production ₹1.51 lakh crore**, **exports ₹23,622 crore** to 100+ countries; **75% of the capital procurement budget reserved for domestic industry**; five positive indigenisation lists covering 500+ items. India remains among the world's top two arms importers."},
+        {"t": "Internal security numbers", "d": "**LWE-affected districts 126 (2010) → 38 (2024)**, target to end LWE by **31 March 2026**; **CAPFs ~10 lakh personnel**; **police-population ratio ~155 per lakh** against the **UN norm of 222**; **police vacancy ~20-22%**; and **women are ~12% of the police force**, against the 33% many states have declared as policy."},
+        {"t": "Cyber numbers", "d": "**22+ lakh complaints a year** on the National Cybercrime Reporting Portal; **NCRB recorded 65,893 cybercrime cases (2022)**; CERT-In's 2022 directions require reporting of specified incidents within **six hours**; India's **Global Cybersecurity Index** score is 98.49 (Tier 1)."}
+      ]
+    },
+    {
+      "g": "Instruments and bodies — one line each",
+      "items": [
+        {"t": "CACP", "d": "**Commission for Agricultural Costs and Prices** — an advisory body (not statutory) recommending MSP for 22 crops on the basis of **A2, A2+FL and C2** cost concepts, demand-supply, price trends, terms of trade and the likely effect on consumers.", "k": "cmte"},
+        {"t": "FCI and buffer norms", "d": "**Food Corporation of India (1965)** — procurement, storage, movement and distribution; buffer stock and strategic reserve norms are fixed quarterly, and stocks have run far above them, at a substantial carrying cost. **Decentralised procurement** by states is the reform direction.", "k": "cmte"},
+        {"t": "NABARD", "d": "**1982**, on the **Sivaraman Committee's** recommendation — refinance for rural credit, supervision of RRBs and cooperative banks, the **RIDF**, and the **SHG-Bank Linkage Programme (1992)**, the world's largest microfinance programme.", "k": "cmte"},
+        {"t": "SEBI, CCI and IBBI", "d": "**SEBI (1992)** — protection of investors, regulation of markets, and the LODR framework. **CCI (Competition Act, 2002)** — anti-competitive agreements, abuse of dominance and combinations, with the **2023 amendment** adding a **deal-value threshold** for digital-market acquisitions and settlement/commitment provisions. **IBBI** — the IBC's regulator.", "k": "cmte"},
+        {"t": "TRAI and the telecom framework", "d": "**TRAI (1997)** with **TDSAT** as its appellate tribunal; the **Telecommunications Act, 2023** replaced the Indian Telegraph Act, 1885 — administrative assignment of satellite spectrum, a new right-of-way regime, and interception provisions that have drawn privacy criticism.", "k": "cmte"},
+        {"t": "BEE and the energy instruments", "d": "**Bureau of Energy Efficiency** under the Energy Conservation Act, 2001 — **star labelling**, the **Energy Conservation Building Code**, **PAT (Perform, Achieve and Trade)** with ESCerts, and now the **Carbon Credit Trading Scheme**. UJALA distributed 37 crore LED bulbs, cutting peak demand measurably.", "k": "cmte"},
+        {"t": "ISRO's institutional layer", "d": "**IN-SPACe** (single-window authorisation and promotion of private players), **NSIL** (the commercial arm), **Department of Space** and the **Indian Space Policy 2023**, which defined the roles and opened end-to-end activity to non-government entities.", "k": "cmte"},
+        {"t": "Statistical instruments", "d": "**PLFS** (employment, now monthly), **HCES** (consumption, reset the CPI basket), **NFHS** (health), **NSS AIDIS** (debt and investment), **Situation Assessment Survey** (farmer incomes), **ASI** (industry), **IIP and CPI/WPI**, and the **base-year revision** of the GDP series. Quoting the right survey for the right number is itself a scoring habit.", "k": "cmte"}
+      ]
+    }
+  ]
+}
