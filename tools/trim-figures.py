@@ -64,6 +64,34 @@ def decode(png: bytes):
     return w, h, bpp, out
 
 
+def encode(w, h, bpp, rows):
+    """Write a PNG back. sips can only crop about the centre, which cannot remove
+    bottom-only whitespace without eating the top, so we re-encode ourselves."""
+    colour = {1: 0, 2: 4, 3: 2, 4: 6}[bpp]
+    raw = bytearray()
+    for line in rows:
+        raw.append(0)                      # filter: none
+        raw += line
+    def chunk(typ, data):
+        return (struct.pack('>I', len(data)) + typ + data
+                + struct.pack('>I', zlib.crc32(typ + data) & 0xffffffff))
+    return (b'\x89PNG\r\n\x1a\n'
+            + chunk(b'IHDR', struct.pack('>IIBBBBB', w, h, 8, colour, 0, 0, 0))
+            + chunk(b'IDAT', zlib.compress(bytes(raw), 9))
+            + chunk(b'IEND', b''))
+
+
+def ink_count(w, h, bpp, rows, y0=0, y1=None):
+    """Inked pixels in a row band — compared before and after to prove nothing was cut."""
+    n = 0
+    for line in rows[y0:(h if y1 is None else y1 + 1)]:
+        for x in range(w):
+            i = x * bpp
+            if line[i] < INK if bpp <= 2 else (line[i] < INK or line[i + 1] < INK or line[i + 2] < INK):
+                n += 1
+    return n
+
+
 def ink_box(w, h, bpp, rows, drop_page_number=True):
     top, bot, left, right = None, None, w, 0
     row_has = []
@@ -113,24 +141,21 @@ def main():
         if not box:
             print(f'{f.name:18} SKIP (blank)'); continue
         top, bot, _, _ = box
-        # Height only. The dead space is the blank band and the page number below
-        # the drawing; the side margins are near-symmetric, and sips can only crop
-        # about the centre — trimming width too shifts the frame and clips captions.
-        nh = bot - top + 1
-        if nh > h * 0.94:
+        # Height only — the waste is the blank band and page number under the
+        # drawing; side margins are near-symmetric and worth leaving alone.
+        target = bot - top + 1
+        if target > h * 0.94:
             print(f'{f.name:18} ok      {w}x{h} (already tight)'); continue
-        # Keep the crop centred on the ink so the centred cut lands where we want.
-        dy = (top + bot) // 2 - h // 2
-        keep = h - 2 * abs(dy)                      # after re-centring
-        target = min(nh, keep)
         print(f'{f.name:18} {w}x{h} → {w}x{target}  (-{100 - target * 100 // h}% height)')
         saved += (h - target) * w
         if apply:
-            if abs(dy) >= 1:
-                subprocess.run(['sips', '-c', str(keep), str(w), str(f)],
-                               check=True, capture_output=True)
-            subprocess.run(['sips', '-c', str(target), str(w), str(f)],
-                           check=True, capture_output=True)
+            want = ink_count(w, h, bpp, rows, top, bot)
+            f.write_bytes(encode(w, target, bpp, rows[top:bot + 1]))
+            # Prove it: every inked pixel of the drawing survived the cut.
+            aw, ah, abpp, arows = decode(f.read_bytes())
+            kept = ink_count(aw, ah, abpp, arows)
+            if kept != want:
+                print(f'{"":18} !! INK CHANGED in {f.name}: {want} → {kept}')
     print(f'\n{"applied" if apply else "would save"} ~{saved // 1000}k pixel-rows of dead space')
 
 
