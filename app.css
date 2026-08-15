@@ -761,3 +761,17 @@ body.feed-open .app-dock button{min-width:58px;padding:5px 8px}
 .fs-none{color:var(--faint);font-style:italic;padding:22px 0}
 @media (min-width:900px){ #facts-body{column-count:2;column-gap:34px} .fs-sec{break-inside:avoid-column} }
 .facts-icon::before{content:"◈";font-size:15px;line-height:1}
+
+/* ══════════════════ MODEL COMPENDIUM ══════════════════ */
+#comp-tiers{margin:8px 0 18px}
+#comp-papers .chip.on{border-color:var(--gold);color:var(--gold);
+  background:color-mix(in srgb,var(--gold) 14%,var(--card))}
+#comp-count{color:var(--gold);font-weight:600;white-space:nowrap}
+.c-para{margin:0 0 11px;line-height:1.66}
+.c-draw{margin:0;font-size:13px;line-height:1.55;color:var(--dim);font-style:italic}
+.c-bank{margin-top:18px;padding-top:14px;
+  border-top:1px dashed color-mix(in srgb,var(--gold) 34%,var(--line))}
+.c-bankrow{margin:0 0 9px;font-size:13.5px;line-height:1.5;padding-left:13px;position:relative}
+.c-bankrow::before{content:"·";position:absolute;left:2px;color:var(--gold);font-weight:800}
+.c-bankrow b{color:var(--gold);display:block;font-size:12.5px;margin-bottom:1px}
+#comp-done.on{border-color:var(--green);color:var(--green)}

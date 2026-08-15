@@ -28,6 +28,11 @@
     <span class="nm"><b>Revision feed</b><small>Scroll the whole syllabus, card by card</small></span>
     <span class="arw">›</span>
   </button>
+  <button class="notes-cta" id="go-comp">
+    <span class="ic">❖</span>
+    <span class="nm"><b>Model Compendium</b><small>177 topics · GS-1, GS-2, GS-3 · Tier 1 &amp; Tier 2</small></span>
+    <span class="arw">›</span>
+  </button>
   <button class="notes-cta" id="go-facts">
     <span class="ic">◈</span>
     <span class="nm"><b>FactnStat</b><small>Articles, cases, committees, schemes, data — paper-wise</small></span>
@@ -73,6 +78,20 @@
     <select id="theme-sel" aria-label="Filter by theme"></select>
   </div>
   <div id="q-list"></div>
+</main>
+
+<main id="view-comp" class="view">
+  <h1>❖ Model Compendium</h1>
+  <p class="facts-sub">One model answer per topic, carrying the provision, case law, committee and value-addition load of every likely variant. <span id="comp-count"></span></p>
+  <label class="sb-search facts-search"><span aria-hidden="true">⌕</span><input id="comp-q" type="search" placeholder="Search topics and questions" aria-label="Search compendium"></label>
+  <div class="chips" id="comp-papers"></div>
+  <div class="chips" id="comp-tiers"></div>
+  <div id="comp-body"></div>
+</main>
+
+<main id="view-comptopic" class="view">
+  <div id="comptopic"></div>
+  <div class="done-wrap"><button id="comp-done">Mark as completed</button></div>
 </main>
 
 <main id="view-facts" class="view">

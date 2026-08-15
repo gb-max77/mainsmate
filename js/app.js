@@ -1169,6 +1169,70 @@ function feedCardHTML(card, row, a) {
     ${a.conc ? `<p class="fc-body fc-conc"><b>Conclusion</b> — ${md(a.conc)}</p>` : ''}`;
 }
 
+/* ══════════════════ MODEL COMPENDIUM ══════════════════ */
+let COMP = null;
+const comp = { pid: localStorage.getItem('mm-comp-paper') || 'gs2',
+               tier: localStorage.getItem('mm-comp-tier') || 'all', q: '' };
+
+async function loadComp() {
+  if (!COMP) COMP = await fetch('data/compendium.json').then(r => r.json()).catch(() => ({}));
+  return COMP;
+}
+const compKey = (pid, n) => `c:${pid}-${n}`;
+
+async function renderComp() {
+  await loadComp();
+  localStorage.setItem('mm-comp-paper', comp.pid);
+  localStorage.setItem('mm-comp-tier', comp.tier);
+  $('#comp-papers').innerHTML = Object.entries(COMP).map(([pid, d]) =>
+    `<button class="chip${pid === comp.pid ? ' on' : ''}" data-cp="${pid}">${esc(d.label)}</button>`).join('');
+  $('#comp-tiers').innerHTML = [['all', 'All'], ['1', 'Tier 1 · 15m'], ['2', 'Tier 2 · 10m']].map(([v, l]) =>
+    `<button class="chip t${v === 'all' ? '' : v}" data-ct="${v}" aria-pressed="${comp.tier === v}">${l}</button>`).join('');
+  const d = COMP[comp.pid]; const q = comp.q.trim().toLowerCase();
+  const rows = (d?.topics || []).filter(t =>
+    (comp.tier === 'all' || String(t.tier) === comp.tier) &&
+    (!q || t.t.toLowerCase().includes(q) || (t.q || '').toLowerCase().includes(q)));
+  $('#comp-count').textContent = `${rows.length} of ${d?.topics.length || 0} topics`;
+  $('#comp-body').innerHTML = rows.map(t => `
+    <a class="qrow t${t.tier}${store.isDone(compKey(comp.pid, t.n)) ? ' done' : ''}" href="#/c/${comp.pid}/${t.n}">
+      <p><span class="qn">${t.n}.</span> ${esc(t.t)}</p>
+      <div class="qmeta"><span class="tag t${t.tier}">T${t.tier}</span>${t.marks} marks · ${t.words} words${t.bank?.length ? ` · ${t.bank.length} variants` : ''}${t.draw ? ' · figure' : ''}</div>
+    </a>`).join('') || `<p class="fs-none">No topic matches.</p>`;
+}
+
+function renderCompTopic(pid, n) {
+  const t = (COMP?.[pid]?.topics || []).find(x => String(x.n) === String(n));
+  if (!t) { $('#comptopic').innerHTML = '<p class="fs-none">Topic not found.</p>'; return; }
+  const bank = t.bank?.length ? `<div class="c-bank"><div class="dg-head">Variant expansion bank</div>`
+    + t.bank.map(([k, v]) => `<p class="c-bankrow"><b>${md(k)}</b> ${md(v)}</p>`).join('') + `</div>` : '';
+  $('#comptopic').innerHTML = `
+    <h1 class="qtitle">${esc(t.t)}</h1>
+    <div class="qmeta">${esc(COMP[pid].label)} · <span class="tag t${t.tier}">T${t.tier}</span>${t.marks} marks · ${t.words} words</div>
+    <article class="abox">
+      ${t.q ? `<p class="intro"><b class="lbl">Q:</b> ${md(t.q)}</p>` : ''}
+      ${(t.body || []).map(p => p.startsWith('•')
+        ? `<p class="pt">${md(p.replace(/^•\s*/, ''))}</p>`
+        : `<p class="c-para">${md(p)}</p>`).join('')}
+      ${t.position ? `<p class="wf"><b class="lbl">Position:</b> ${md(t.position)}</p>` : ''}
+      ${t.conc ? `<p class="conc">${md(t.conc)}</p>` : ''}
+      ${t.draw ? `<div class="segdiag"><div class="dg-head">Draw it</div><p class="c-draw">${md(t.draw)}</p></div>` : ''}
+      ${bank}
+    </article>`;
+  const b = $('#comp-done');
+  const k = compKey(pid, n);
+  const paint = () => { const on = store.isDone(k); b.textContent = on ? '✓ Completed' : 'Mark as completed'; b.classList.toggle('on', on); };
+  b.onclick = () => { store.toggleDone(k); paint(); };
+  paint();
+}
+
+$('#comp-papers')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-cp]'); if (!b) return; comp.pid = b.dataset.cp; renderComp();
+});
+$('#comp-tiers')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-ct]'); if (!b) return; comp.tier = b.dataset.ct; renderComp();
+});
+$('#comp-q')?.addEventListener('input', e => { comp.q = e.target.value; renderComp(); });
+
 /* ══════════════════ FACTNSTAT — the paper-wise fact bank ══════════════════ */
 let FACTS = null;
 const facts = { pid: localStorage.getItem('mm-facts-paper') || 'gs2', q: '' };
@@ -1466,6 +1530,11 @@ async function route() {
     await Promise.all((feed.pid === 'all' ? ORDER : [feed.pid]).map(loadAnswers));
     feedPaintBar();
     renderFeed();
+  } else if (kind === 'c') {
+    await loadComp();
+    const [, , cpid, cn] = h.split('/');
+    if (cpid && cn !== undefined) { $('#view-comptopic').classList.add('active'); renderCompTopic(cpid, cn); }
+    else { $('#view-comp').classList.add('active'); await renderComp(); }
   } else if (kind === 'facts') {
     $('#view-facts').classList.add('active');
     await renderFacts(arg);
@@ -1504,6 +1573,7 @@ $('#app-dock').onclick = e => {
 };
 $('#go-notes').onclick = () => go('#/n');
 $('#go-facts').onclick = () => go('#/facts');
+$('#go-comp').onclick = () => go('#/c');
 $('#go-feed').onclick = () => go('#/feed');
 
 /* ── feed wiring ── */
