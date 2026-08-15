@@ -1,5 +1,5 @@
 // Bump CACHE on every deploy or the SW serves stale assets.
-const CACHE = 'mainsmate-v46';
+const CACHE = 'mainsmate-v47';
 const ASSETS = ['./', './index.html', './app.css', './js/app.js', './manifest.webmanifest', './data/questions.json'];
 
 self.addEventListener('install', e => {
