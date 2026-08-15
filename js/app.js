@@ -1280,6 +1280,16 @@ async function renderFacts(arg) {
     if (secHTML) html += `<section class="fs-sec"><h2>${esc(s.h)}</h2>${secHTML}</section>`;
   }
   $('#facts-body').innerHTML = html || `<p class="fs-none">Nothing matches “${esc(facts.q)}” in ${esc(d?.label || '')}.</p>`;
+  // Jump-nav: every section and its groups, so a paper of 400 facts stays navigable.
+  const nav = [...$('#facts-body').querySelectorAll('.fs-sec')].map((sec, si) => {
+    const h2 = sec.querySelector('h2'); h2.id = `fsx-${si}`;
+    const subs = [...sec.querySelectorAll('.fs-group>h3')].map((h3, gi) => {
+      h3.id = `fsx-${si}-${gi}`;
+      return `<a href="#fsx-${si}-${gi}" class="fx-sub">${esc(h3.textContent)}</a>`;
+    }).join('');
+    return `<details class="fx-sec"${si === 0 ? ' open' : ''}><summary>${esc(h2.textContent)}</summary>${subs}</details>`;
+  }).join('');
+  $('#facts-nav').innerHTML = nav;
   $('#facts-count').textContent = q ? `${shown} of ${total} shown` : `${total} facts`;
 }
 
