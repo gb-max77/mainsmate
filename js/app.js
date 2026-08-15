@@ -1218,6 +1218,16 @@ function renderCompTopic(pid, n) {
       ${(t.figure || t.draw) ? `<div class="segdiag"><div class="dg-head">Figure</div>${t.figure ? `<p class="c-para">${md(t.figure)}</p>` : ''}${t.draw ? `<p class="c-draw"><b>Draw it —</b> ${md(t.draw)}</p>` : ''}</div>` : ''}
       ${bank}
     </article>`;
+  // Walk the same list the browser shows, so prev/next respect the tier filter.
+  const list = (COMP[pid].topics || []).filter(x => comp.tier === 'all' || String(x.tier) === comp.tier);
+  const at = list.findIndex(x => String(x.n) === String(n));
+  const nav = (d, label) => {
+    const to = list[at + d];
+    return to ? `<a class="c-nav" href="#/c/${pid}/${to.n}">${label === 'prev' ? '‹ Previous' : 'Next ›'}</a>`
+              : `<span class="c-nav off">${label === 'prev' ? '‹ Previous' : 'Next ›'}</span>`;
+  };
+  $('#comptopic').insertAdjacentHTML('beforeend',
+    `<div class="c-navbar">${nav(-1,'prev')}<span class="c-pos">${at + 1} / ${list.length}</span>${nav(1,'next')}</div>`);
   const b = $('#comp-done');
   const k = compKey(pid, n);
   const paint = () => { const on = store.isDone(k); b.textContent = on ? '✓ Completed' : 'Mark as completed'; b.classList.toggle('on', on); };
