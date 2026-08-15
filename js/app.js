@@ -460,7 +460,7 @@ async function renderAnswer(qid) {
   const gai = el('button', 'act gai', '⟳ Regenerate in Google AI Mode');
   gai.onclick = () => window.open(gaiURL(r), '_blank', 'noopener');
   const cp = el('button', 'act', '⧉ Copy answer');
-  cp.onclick = () => { navigator.clipboard.writeText(A.innerText); cp.textContent = '✓ Copied'; setTimeout(() => cp.textContent = '⧉ Copy answer', 1400); };
+  cp.onclick = () => { navigator.clipboard?.writeText(A.innerText).catch(() => {}); cp.textContent = '✓ Copied'; setTimeout(() => cp.textContent = '⧉ Copy answer', 1400); };
   acts.append(gai, cp);
   A.append(acts);
 
@@ -1007,7 +1007,6 @@ function navSequence(pid) {
   if (answerTier) return base.filter(row => rowTier(row) === answerTier);
   return base.filter(row => answerTheme === 'all' || row.sec === answerTheme);
 }
-const answerNavRows = navSequence;
 
 // Reflect the active tier on the T1/T2/T3 chips and grey out the theme dropdown
 // while a tier governs navigation.
@@ -1101,8 +1100,11 @@ function renderSidebar(r) {
 // swiping right rehearses the skeleton you'd actually write. Vertical = the next
 // question. Both axes are native CSS scroll-snap — no gesture library.
 const feed = {
+  src: localStorage.getItem('mm-feed-src') || 'answers',   // 'answers' | 'facts'
   pid: localStorage.getItem('mm-feed-paper') || 'all',
+  fpid: localStorage.getItem('mm-feed-fpaper') || 'all',   // paper while in facts mode
   theme: 'all',
+  kind: 'all',
   tier: null,
   diagOnly: false,
   shuffle: localStorage.getItem('mm-feed-shuffle') === 'true',
@@ -1399,7 +1401,7 @@ $('#facts-q')?.addEventListener('input', e => { facts.q = e.target.value; render
 $('#facts-body')?.addEventListener('click', e => {
   const li = e.target.closest('.fi'); if (!li) return;
   const t = [...li.querySelectorAll('.fi-t,.fi-d,.fi-s')].map(n => n.textContent).join(' — ');
-  navigator.clipboard?.writeText(t);
+  navigator.clipboard?.writeText(t).catch(() => {});
   li.classList.add('copied'); setTimeout(() => li.classList.remove('copied'), 900);
 });
 
@@ -1431,6 +1433,50 @@ function feedQuestionEl(row) {
   return sec;
 }
 
+/* ── the same feed, fed by FactnStat: one entry per screen, doomscrollable ── */
+const factSlug = t => String(t || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').slice(0, 48);
+const factKey = row => `f:${row.pid}:${factSlug(row.it.t || row.it.d)}`;
+
+function feedFactEl(row) {
+  const { it } = row;
+  const sec = el('section', 'fq fq-fact');
+  sec.dataset.qid = factKey(row);
+  const kindLabel = FKIND[it.k] || it.k;
+  sec.innerHTML =
+    `<header class="fq-head">
+       <span class="fq-av" aria-hidden="true">${esc((row.label || '?').replace(/[^A-Za-z0-9]/g, '').slice(0, 2))}</span>
+       <span class="fq-who"><b>${esc(row.label)} · ${esc(row.group)}</b><small>@${esc(row.pid)} · ${esc(row.sec)}</small></span>
+       <span class="fi-k" data-k="${it.k}">${esc(kindLabel)}</span>
+     </header>
+     <div class="fq-rail"><article class="fcard" data-k="${it.k}"><div class="fc-in">
+       ${it.t ? `<p class="fc-term">${md(it.t)}</p>` : ''}
+       <p class="fc-fact">${md(it.d)}</p>
+       ${it.s ? `<p class="fc-src">${esc(it.s)}</p>` : ''}
+     </div></article></div>
+     <footer class="fq-foot">
+       <button class="fq-act" data-act="done" aria-pressed="${store.isDone(factKey(row))}" title="Mark as revised">✓</button>
+       <button class="fq-act" data-act="play" title="Read this aloud, then roll on">▶</button>
+       <button class="fq-act" data-act="copy" title="Copy this fact">⧉</button>
+       <button class="fq-act" data-act="open" title="Open this bank in FactnStat">↗</button>
+       <span class="fq-pos"></span>
+     </footer>`;
+  return sec;
+}
+
+// Flatten the fact bank into feed rows, honouring the paper and kind filters.
+function factSequence() {
+  const pids = feed.fpid === 'all' ? Object.keys(FACTS || {}) : [feed.fpid];
+  const out = [];
+  for (const pid of pids) {
+    const d = FACTS?.[pid]; if (!d) continue;
+    for (const s of d.sections) for (const g of s.groups) for (const it of g.items) {
+      if (feed.kind !== 'all' && it.k !== feed.kind) continue;
+      out.push({ pid, label: d.label, sec: s.h, group: g.g, it });
+    }
+  }
+  return out;
+}
+
 const feedCardIndex = sec => {
   const rail = sec.querySelector('.fq-rail');
   return Math.round(rail.scrollLeft / Math.max(1, rail.clientWidth));
@@ -1444,18 +1490,22 @@ function feedPaintPips(sec) {
   if (pos) pos.textContent = `${i + 1}/${pips.length}`;
 }
 
-// Build the filtered, ordered list of questions the feed walks.
+// Build the filtered, ordered list the feed walks — questions or facts.
 function feedSequence() {
-  const papers = feed.pid === 'all' ? ORDER : [feed.pid];
   let out = [];
-  for (const pid of papers) {
-    const p = paperOf(pid); if (!p) continue;
-    out = out.concat(rows(p).filter(r => {
-      if (feed.tier && rowTier(r) !== feed.tier) return false;
-      if (feed.pid !== 'all' && feed.theme !== 'all' && r.sec !== feed.theme) return false;
-      if (feed.diagOnly && !hasDiag(ANSWERS[pid]?.[r.qid])) return false;
-      return true;
-    }));
+  if (feed.src === 'facts') {
+    out = factSequence();
+  } else {
+    const papers = feed.pid === 'all' ? ORDER : [feed.pid];
+    for (const pid of papers) {
+      const p = paperOf(pid); if (!p) continue;
+      out = out.concat(rows(p).filter(r => {
+        if (feed.tier && rowTier(r) !== feed.tier) return false;
+        if (feed.pid !== 'all' && feed.theme !== 'all' && r.sec !== feed.theme) return false;
+        if (feed.diagOnly && !hasDiag(ANSWERS[pid]?.[r.qid])) return false;
+        return true;
+      }));
+    }
   }
   if (feed.shuffle) for (let i = out.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -1468,7 +1518,8 @@ function feedAppend(n = FEED_PAGE) {
   const scroll = $('#feed-scroll');
   const frag = document.createDocumentFragment();
   for (let i = 0; i < n && feed.drawn < feed.seq.length; i++, feed.drawn++) {
-    frag.append(feedQuestionEl(feed.seq[feed.drawn]));
+    const row = feed.seq[feed.drawn];
+    frag.append(feed.src === 'facts' ? feedFactEl(row) : feedQuestionEl(row));
   }
   scroll.append(frag);
   // Keep the DOM bounded: drop questions well above the viewport and subtract the
@@ -1499,21 +1550,27 @@ function renderFeed() {
   scroll.innerHTML = '';
   feed.seq = feedSequence();
   feed.drawn = 0;
-  $('#feed-count').textContent = feed.seq.length ? `${feed.seq.length} Q` : '';
+  $('#feed-count').textContent = feed.seq.length
+    ? `${feed.seq.length} ${feed.src === 'facts' ? 'facts' : 'Q'}` : '';
   $('#feed-empty').hidden = !!feed.seq.length;
   feedAppend(FEED_PAGE * 2);
   scroll.scrollTop = 0;
 }
 
 function feedPaintBar() {
+  const onFacts = feed.src === 'facts';
+  $('#feed-src').querySelectorAll('button').forEach(b =>
+    b.setAttribute('aria-pressed', String(b.dataset.src === feed.src)));
+  // The paper list differs by source: papers with answers, versus banks of facts.
   const paper = $('#feed-paper');
-  if (paper && !paper.options.length) {
-    paper.innerHTML = `<option value="all">All papers</option>` +
-      ORDER.map(id => `<option value="${id}">${esc(PAPER_TAG[id] || id)}</option>`).join('');
-  }
-  if (paper) paper.value = feed.pid;
+  paper.innerHTML = `<option value="all">All papers</option>` + (onFacts
+    ? Object.entries(FACTS || {}).map(([id, d]) => `<option value="${id}">${esc(d.label)}</option>`).join('')
+    : ORDER.map(id => `<option value="${id}">${esc(PAPER_TAG[id] || id)}</option>`).join(''));
+  paper.value = onFacts ? feed.fpid : feed.pid;
+  if (paper.selectedIndex < 0) { paper.value = 'all'; if (onFacts) feed.fpid = 'all'; else feed.pid = 'all'; }
+
   const theme = $('#feed-theme');
-  const p = feed.pid === 'all' ? null : paperOf(feed.pid);
+  const p = (!onFacts && feed.pid !== 'all') ? paperOf(feed.pid) : null;
   theme.hidden = !p;
   if (p) {
     theme.innerHTML = `<option value="all">All themes</option>` +
@@ -1521,10 +1578,32 @@ function feedPaintBar() {
     if (!p.sections.some(s => s.t === feed.theme)) feed.theme = 'all';
     theme.value = feed.theme;
   }
+  const kind = $('#feed-kind');
+  kind.hidden = !onFacts;
+  if (onFacts) {
+    const present = new Set(factSequenceKinds());
+    kind.innerHTML = `<option value="all">All kinds</option>` +
+      Object.entries(FKIND).filter(([k]) => present.has(k))
+        .map(([k, l]) => `<option value="${k}">${esc(l)}</option>`).join('');
+    if (feed.kind !== 'all' && !present.has(feed.kind)) feed.kind = 'all';
+    kind.value = feed.kind;
+  }
+  // Tier, diagram and theme filters only mean something for answers.
+  $('#feed-tier').hidden = onFacts;
+  $('#feed-diag').hidden = onFacts;
   $('#feed-tier').querySelectorAll('button').forEach(b =>
     b.setAttribute('aria-pressed', String(b.dataset.tier === feed.tier)));
   $('#feed-diag').setAttribute('aria-pressed', String(feed.diagOnly));
   $('#feed-shuffle').setAttribute('aria-pressed', String(feed.shuffle));
+}
+
+// Which kinds exist in the currently selected bank(s) — so the filter never offers an empty one.
+function factSequenceKinds() {
+  const pids = feed.fpid === 'all' ? Object.keys(FACTS || {}) : [feed.fpid];
+  const set = new Set();
+  for (const pid of pids) for (const s of FACTS?.[pid]?.sections || [])
+    for (const g of s.groups) for (const it of g.items) set.add(it.k);
+  return set;
 }
 
 /* ── feed navigation ── */
@@ -1651,7 +1730,8 @@ async function route() {
 
   if (kind === 'feed') {
     $('#view-feed').classList.add('active');
-    await Promise.all((feed.pid === 'all' ? ORDER : [feed.pid]).map(loadAnswers));
+    if (feed.src === 'facts') await loadFacts();
+    else await Promise.all((feed.pid === 'all' ? ORDER : [feed.pid]).map(loadAnswers));
     feedPaintBar();
     renderFeed();
   } else if (kind === 'c') {
@@ -1701,12 +1781,25 @@ $('#go-comp').onclick = () => go('#/c');
 $('#go-feed').onclick = () => go('#/feed');
 
 /* ── feed wiring ── */
+$('#feed-src').onclick = e => {
+  const b = e.target.closest('button[data-src]'); if (!b || b.dataset.src === feed.src) return;
+  feed.src = b.dataset.src;
+  localStorage.setItem('mm-feed-src', feed.src);
+  route();                       // the source decides which data the route loads
+};
 $('#feed-paper').onchange = e => {
+  if (feed.src === 'facts') {
+    feed.fpid = e.target.value; feed.kind = 'all';
+    localStorage.setItem('mm-feed-fpaper', feed.fpid);
+    feedPaintBar(); renderFeed();
+    return;
+  }
   feed.pid = e.target.value; feed.theme = 'all';
   localStorage.setItem('mm-feed-paper', feed.pid);
   go('#/feed'); route();
 };
 $('#feed-theme').onchange = e => { feed.theme = e.target.value; renderFeed(); };
+$('#feed-kind').onchange = e => { feed.kind = e.target.value; renderFeed(); };
 $('#feed-tier').onclick = e => {
   const b = e.target.closest('button[data-tier]'); if (!b) return;
   feed.tier = feed.tier === b.dataset.tier ? null : b.dataset.tier;
@@ -1725,9 +1818,18 @@ $('#feed-scroll').addEventListener('scroll', () => {
 $('#view-feed').addEventListener('click', e => {
   const b = e.target.closest('.fq-act'); if (!b) return;
   const sec = b.closest('.fq'); const qid = sec.dataset.qid;
+  const onFact = sec.classList.contains('fq-fact');
   if (b.dataset.act === 'done') { const on = store.toggleDone(qid); b.setAttribute('aria-pressed', String(on)); }
-  else if (b.dataset.act === 'open') { feedStop(); go(`#/a/${qid}`); }
   else if (b.dataset.act === 'play') feedTogglePlay();
+  else if (b.dataset.act === 'copy') {
+    const t = [...sec.querySelectorAll('.fc-term,.fc-fact,.fc-src')].map(n => n.textContent).join(' — ');
+    navigator.clipboard?.writeText(t).catch(() => {});
+    b.classList.add('on'); setTimeout(() => b.classList.remove('on'), 900);
+  }
+  else if (b.dataset.act === 'open') {
+    feedStop();
+    go(onFact ? `#/facts/${qid.split(':')[1]}` : `#/a/${qid}`);
+  }
 });
 $('#btn-done').onclick = () => { if (cur) { store.toggleDone(cur.qid); paintDone(cur.qid); } };
 

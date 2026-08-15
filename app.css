@@ -10,7 +10,7 @@
   --green:#84e3ac;     /* examples · way forward — the mark-fetchers */
   --lav:#c4c1da;       /* intros */
   --t1:#ff6b6b; --t2:#f2bd5c; --t3:#7aa2ff;
-  --focus:rgba(242,189,92,.12); --focus-line:var(--gold);
+  --focus:rgba(242,189,92,.12);
   --glass:rgba(19,20,26,.86); --glass-solid:rgba(25,27,35,.95);
   --shadow:0 12px 40px rgba(0,0,0,.5);
   --shadow-soft:0 1px 0 #ffffff08 inset,0 14px 34px rgba(0,0,0,.28);
@@ -24,7 +24,7 @@
   --ink:#2b2924; --dim:#585444; --faint:#8a8574; --ghost:#a8a290;
   --gold:#a9750f; --blue:#2f56c9; --green:#1a7a49; --lav:#6a5ea3;
   --t1:#c9433a; --t2:#a9750f; --t3:#2f56c9;
-  --focus:rgba(169,117,15,.14); --focus-line:var(--gold);
+  --focus:rgba(169,117,15,.14);
   --glass:rgba(244,239,228,.86); --glass-solid:rgba(250,246,238,.95);
   --shadow:0 12px 34px rgba(120,96,44,.20);
   --shadow-soft:0 1px 0 #ffffffaa inset,0 12px 30px rgba(120,96,44,.12);
@@ -105,13 +105,12 @@ body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
   margin:22px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line)}
 .qrow{display:block;width:100%;text-align:left;padding:13px 14px;background:var(--card);
   border:1px solid var(--line);border-left-width:3px;border-radius:10px;margin-bottom:8px}
-.qrow:hover{border-color:#333b52}
 .qrow.tier1{border-left-color:var(--t1)} .qrow.tier2{border-left-color:var(--t2)} .qrow.tier3{border-left-color:var(--t3)}
+.qrow:hover{border-color:#333b52}
 .qrow .meta{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--faint);margin-bottom:5px}
 .qrow .meta .tag{padding:1px 6px;border-radius:4px;background:var(--bg2);font-weight:600;letter-spacing:.03em}
 .qrow .meta .tag.t1{color:var(--t1)} .qrow .meta .tag.t2{color:var(--t2)} .qrow .meta .tag.t3{color:var(--t3)}
 .qrow .meta .ok{color:var(--green)}
-.qrow .meta .rc1{color:var(--t1)} .qrow .meta .rc2{color:var(--gold)} .qrow .meta .rc3{color:var(--green)}
 .qrow p{margin:0;font-size:14.5px;line-height:1.5}
 .qrow.branch{margin-left:20px;background:transparent;border-style:dashed}
 .qrow.branch p{color:var(--dim);font-size:13.5px}
@@ -152,6 +151,7 @@ body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
 #answer-theme.muted{opacity:.4}
 /* tier filter: T1/T2/T3 chips that override the theme dropdown for navigation */
 .tier-toggle{display:flex;gap:3px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:3px;height:31px}
+.tier-toggle[hidden]{display:none}
 .tier-toggle button{font-size:11px;font-weight:600;padding:0 9px;border-radius:6px;color:var(--faint);letter-spacing:.02em}
 .tier-toggle button:hover{color:var(--ink)}
 .tier-toggle button[data-tier="1"][aria-pressed=true]{background:var(--t1);color:#fff}
@@ -175,7 +175,6 @@ body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
 
 .qtitle{font-size:18px;font-weight:650;color:var(--ink);letter-spacing:-.005em;margin:0 0 6px;line-height:1.5;text-wrap:pretty}
 .qmeta{font-size:11.5px;color:var(--faint);font-weight:550;margin-bottom:20px}
-.qmeta .warn{color:var(--t1)}
 .wc{padding:1px 6px;border-radius:4px;background:transparent;color:var(--ghost);font-weight:500}
 .wc.ok,.wc.thin,.wc.over{color:var(--ghost)}
 
@@ -190,11 +189,6 @@ body.answer-open .app-dock{bottom:calc(63px + env(safe-area-inset-bottom))}
 .pt .x{color:var(--dim)}
 .pt .ex{color:var(--green)}
 .pt .ex b{color:var(--green);font-weight:700}
-.pt.focus{background:var(--focus);box-shadow:inset 0 0 0 1px var(--focus-line);
-  padding:10px 12px 10px 26px;margin:0 -10px 12px}
-.pt.focus::before{left:12px;top:10px;color:var(--gold)}
-.pt.focus .x,.pt.focus .ex{color:var(--ink)}
-.pt.focus .ex{color:var(--green)}
 .pt.unv b::after{content:" ⚠";color:var(--t1);font-size:11px}
 
 .wf{color:var(--green);margin:20px 0 0;line-height:1.6}
@@ -721,6 +715,30 @@ body.feed-open .brand span{display:none}
 .fc-ex{color:var(--dim);font-size:13.5px}
 .fc-ex::before{content:""}
 
+/* ── the feed fed by FactnStat: one evidence card per screen ── */
+.feed-src{display:flex;gap:3px;background:var(--bg2);border:1px solid var(--line);
+  border-radius:8px;padding:3px;height:31px}
+.feed-src button{font-size:11.5px;font-weight:600;padding:0 11px;border-radius:6px;color:var(--faint)}
+.feed-src button:hover{color:var(--ink)}
+.feed-src button[aria-pressed=true]{background:var(--gold);color:#151109}
+/* No pips row on a fact — it is a single card, not a rail of them. */
+.fq-fact{grid-template-rows:auto 1fr auto}
+.fq-fact .fq-head .fi-k{margin-left:auto;margin-right:0;flex:none;align-self:flex-start}
+.fq-fact .fq-who{flex:1 1 auto}
+.fq-fact .fq-who small{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fq-fact .fc-in{--fk:var(--blue);border-left:3px solid color-mix(in srgb,var(--fk) 62%,var(--line))}
+.fcard[data-k=case] .fc-in,.fcard[data-k=prov] .fc-in,.fcard[data-k=law] .fc-in{--fk:var(--gold)}
+.fcard[data-k=sch] .fc-in,.fcard[data-k=cmte] .fc-in,.fcard[data-k=eg] .fc-in{--fk:var(--green)}
+.fcard[data-k=term] .fc-in,.fcard[data-k=quote] .fc-in{--fk:var(--lav)}
+.fq-fact .fc-kind{color:var(--fk)}
+.fc-term{margin:0 0 10px;font-size:19px;line-height:1.35;font-weight:700;color:var(--fk)}
+.fc-fact{margin:0;font-size:16.5px;line-height:1.66;color:var(--ink)}
+.fc-fact b{color:color-mix(in srgb,var(--fk) 80%,var(--ink));font-weight:700}
+.fc-fact i{color:var(--dim)}
+.fc-src{margin:14px 0 0;font-family:var(--ui-font);font-size:11.5px;color:var(--faint);
+  padding-top:9px;border-top:1px dashed var(--line)}
+.fc-src::before{content:"⌁ "}
+
 .fq-foot{display:flex;align-items:center;gap:8px;padding:0 18px}
 .fq-act{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
   font-size:15px;color:var(--dim);background:var(--bg2);border:1px solid var(--line)}
@@ -744,42 +762,53 @@ body.feed-open .app-dock button{min-width:58px;padding:5px 8px}
 #facts-papers{margin-bottom:18px}
 #facts-papers .chip.on{border-color:var(--gold);color:var(--gold);
   background:color-mix(in srgb,var(--gold) 14%,var(--card))}
-.fs-sec{margin-bottom:26px}
+.fs-sec{margin-bottom:30px}
 .fs-sec>h2{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);
-  font-weight:700;margin:0 0 14px;padding-bottom:7px;
-  border-bottom:1.5px solid color-mix(in srgb,var(--gold) 40%,var(--line));font-family:var(--ui-font)}
-.fs-group{margin-bottom:16px;break-inside:avoid}
-.fs-group>h3{font-size:12.5px;font-weight:700;color:var(--blue);margin:0 0 7px;font-family:var(--ui-font)}
-.fs-group ul{list-style:none;margin:0;padding:0}
-.fs-group li{position:relative;padding:5px 0 5px 15px;font-size:13.5px;line-height:1.5;color:var(--ink);
-  border-bottom:1px dashed color-mix(in srgb,var(--blue) 14%,var(--line))}
-.fs-group li:last-child{border-bottom:0}
-.fs-group li::before{content:"·";position:absolute;left:3px;color:var(--gold);font-weight:800}
-.fs-group li b{color:var(--gold)}
-/* ── a typed entry: lead term, the evidence, then the source it stands on ── */
+  font-weight:700;margin:0 0 16px;padding-bottom:8px;
+  border-bottom:1.5px solid color-mix(in srgb,var(--gold) 34%,var(--line));font-family:var(--ui-font)}
+.fs-group{margin-bottom:20px;break-inside:avoid}
+.fs-group>h3{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--dim);margin:0 0 9px;
+  font-family:var(--ui-font);text-transform:uppercase}
+.fs-group ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+
+/* ── a typed entry: lead term, the evidence, then the source it stands on.
+   Kind carries a fixed hue, the same four roles the answer view uses, so an
+   entry is recognised by colour before it is read. ── */
 #facts-kinds{margin:-8px 0 18px}
 #facts-kinds .chip{font-size:11.5px;padding:5px 10px}
 #facts-kinds .chip.on{border-color:var(--blue);color:var(--blue);
   background:color-mix(in srgb,var(--blue) 14%,var(--card))}
-.fi{cursor:pointer;transition:background .18s}
-.fi:hover{background:color-mix(in srgb,var(--gold) 7%,transparent)}
-.fi.copied{background:color-mix(in srgb,var(--green) 18%,transparent)}
-.fi-t{color:var(--gold);font-weight:700}
-.fi-t::after{content:" — ";color:var(--faint);font-weight:400}
-.fi-s{color:var(--faint);font-size:11.5px;font-style:italic;white-space:normal}
-.fi-s::before{content:"[";}
-.fi-s::after{content:"]";}
+.fi{--fk:var(--blue);position:relative;cursor:pointer;list-style:none;
+  padding:11px 14px 11px 15px;border-radius:11px;
+  background:var(--card);border:1px solid var(--line);
+  border-left:3px solid color-mix(in srgb,var(--fk) 62%,var(--line));
+  font-family:var(--read-font);font-size:15px;line-height:1.62;color:var(--ink);
+  max-width:78ch;transition:border-color .18s,background .18s}
+.fi[data-k="case"],.fi[data-k="prov"],.fi[data-k="law"]{--fk:var(--gold)}
+.fi[data-k="sch"],.fi[data-k="cmte"],.fi[data-k="eg"]{--fk:var(--green)}
+.fi[data-k="term"],.fi[data-k="quote"]{--fk:var(--lav)}
+.fi:hover{border-color:color-mix(in srgb,var(--fk) 40%,var(--line));
+  background:color-mix(in srgb,var(--fk) 6%,var(--card))}
+.fi.copied{border-color:var(--green);background:color-mix(in srgb,var(--green) 14%,var(--card))}
+.fi.copied::after{content:"copied";position:absolute;top:8px;right:10px;font-family:var(--ui-font);
+  font-size:9.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.fi-t{color:var(--fk);font-weight:700}
+.fi-t::after{content:" — ";color:var(--ghost);font-weight:400}
+/* Bold inside the evidence is the load-bearing figure — one accent, never a rainbow. */
+.fi-d b{color:color-mix(in srgb,var(--fk) 78%,var(--ink));font-weight:700}
+.fi-d i{color:var(--dim)}
+.fi-s{display:block;margin-top:5px;color:var(--faint);font-family:var(--ui-font);
+  font-size:11px;font-style:normal;letter-spacing:.02em}
+.fi-s::before{content:"⌁ "}
 .fi-k{display:inline-block;font-family:var(--ui-font);font-size:9.5px;font-weight:700;
-  text-transform:uppercase;letter-spacing:.06em;padding:1px 5px;border-radius:5px;margin-right:5px;
-  vertical-align:1px;color:var(--blue);border:1px solid color-mix(in srgb,var(--blue) 40%,var(--line))}
-.fi-k[data-k="case"],.fi-k[data-k="prov"],.fi-k[data-k="law"]{color:var(--gold);
-  border-color:color-mix(in srgb,var(--gold) 42%,var(--line))}
-.fi-k[data-k="eg"],.fi-k[data-k="quote"]{color:var(--green);
-  border-color:color-mix(in srgb,var(--green) 42%,var(--line))}
-.fs-group mark{background:color-mix(in srgb,var(--gold) 32%,transparent);color:var(--ink);
-  border-radius:3px;padding:0 2px}
+  text-transform:uppercase;letter-spacing:.06em;padding:1px 6px;border-radius:5px;margin-right:6px;
+  vertical-align:2px;color:var(--fk);background:color-mix(in srgb,var(--fk) 12%,transparent);
+  border:1px solid color-mix(in srgb,var(--fk) 34%,var(--line))}
+.fs-group mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:var(--ink);
+  border-radius:3px;padding:0 2px;font-weight:600}
 .fs-none{color:var(--faint);font-style:italic;padding:22px 0}
-@media (min-width:900px){ #facts-body{column-count:2;column-gap:34px} .fs-sec{break-inside:avoid-column} }
+@media (min-width:1000px){ #facts-body{column-count:2;column-gap:30px} .fs-sec{break-inside:avoid-column}
+  .fi{max-width:none} }
 .facts-icon::before{content:"◈";font-size:15px;line-height:1}
 
 /* ══════════════════ MODEL COMPENDIUM ══════════════════ */
@@ -787,13 +816,19 @@ body.feed-open .app-dock button{min-width:58px;padding:5px 8px}
 #comp-papers .chip.on{border-color:var(--gold);color:var(--gold);
   background:color-mix(in srgb,var(--gold) 14%,var(--card))}
 #comp-count{color:var(--gold);font-weight:600;white-space:nowrap}
-.c-para{margin:0 0 11px;line-height:1.66}
-.c-draw{margin:0;font-size:13px;line-height:1.55;color:var(--dim);font-style:italic}
-.c-bank{margin-top:18px;padding-top:14px;
-  border-top:1px dashed color-mix(in srgb,var(--gold) 34%,var(--line))}
-.c-bankrow{margin:0 0 9px;font-size:13.5px;line-height:1.5;padding-left:13px;position:relative}
-.c-bankrow::before{content:"·";position:absolute;left:2px;color:var(--gold);font-weight:800}
-.c-bankrow b{color:var(--gold);display:block;font-size:12.5px;margin-bottom:1px}
+/* Reading surface: measure capped near 70ch, generous leading, one accent per role. */
+.c-para{margin:0 0 14px;line-height:1.74;max-width:70ch}
+#comptopic .abox .pt{max-width:70ch}
+.c-draw{margin:0;font-size:13.5px;line-height:1.6;color:var(--dim);font-style:italic;max-width:70ch}
+.c-bank{margin-top:22px;padding-top:16px;
+  border-top:1px dashed color-mix(in srgb,var(--gold) 30%,var(--line))}
+/* Each variant is its own card — a wall of dashes is where recall dies. */
+.c-bank .dg-head{margin-bottom:10px}
+.c-bankrow{margin:0 0 8px;padding:10px 13px;font-size:14.5px;line-height:1.6;max-width:74ch;
+  background:var(--card);border:1px solid var(--line);
+  border-left:3px solid color-mix(in srgb,var(--gold) 55%,var(--line));border-radius:10px}
+.c-bankrow b{color:var(--gold);display:block;font-family:var(--ui-font);font-size:12px;
+  letter-spacing:.02em;margin-bottom:3px}
 #comp-done.on{border-color:var(--green);color:var(--green)}
 .c-navbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px;
   padding-top:14px;border-top:1px solid var(--line)}

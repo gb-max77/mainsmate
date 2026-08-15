@@ -47,8 +47,13 @@
 
 <main id="view-feed" class="view">
   <div class="feed-bar" id="feed-bar">
+    <div class="feed-src" id="feed-src" role="group" aria-label="What the feed shows">
+      <button type="button" data-src="answers" aria-pressed="true">Answers</button>
+      <button type="button" data-src="facts" aria-pressed="false">FactnStat</button>
+    </div>
     <select id="feed-paper" aria-label="Filter feed by paper"></select>
     <select id="feed-theme" aria-label="Filter feed by theme"></select>
+    <select id="feed-kind" aria-label="Filter feed by kind of evidence" hidden></select>
     <div class="tier-toggle" id="feed-tier" role="group" aria-label="Filter feed by tier">
       <button type="button" data-tier="1" aria-pressed="false" title="Only Tier-1">T1</button>
       <button type="button" data-tier="2" aria-pressed="false" title="Only Tier-2">T2</button>
