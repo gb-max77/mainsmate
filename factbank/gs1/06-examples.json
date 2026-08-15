@@ -1,0 +1,26 @@
+{
+  "h": "Problem → Example → Lesson (GS-1)",
+  "k": "eg",
+  "groups": [
+    {
+      "g": "Society and social change",
+      "items": [
+        {"t": "Breaking caste through education", "d": "**Savitribai and Jyotirao Phule's school for girls (1848)** and the Satyashodhak Samaj; a century later, **Kerala's near-universal literacy** built on the Travancore-Cochin missionary and princely investment plus the **1957 land reforms**. *Lesson: caste hierarchy weakens fastest where education and land redistribution act together — either alone produces mobility without structural change (Srinivas's Sanskritisation).*", "s": "Social history"},
+        {"t": "Women's collective agency", "d": "**Kudumbashree (Kerala, 46 lakh women)** and **SEWA (Ela Bhatt, Ahmedabad, 1972 — organising self-employed women, now 2.5 million members and a cooperative bank)**. *Lesson: for informal women workers, the union and the cooperative do what labour law cannot — they create the counterparty that the law assumes already exists.*", "s": "SEWA / Kudumbashree"},
+        {"t": "Confronting a harmful practice", "d": "**Sati abolition (1829)** — Rammohan Roy's scriptural argument plus Bentinck's law; **Devadasi abolition**; **Kerala and Tamil Nadu's temple-entry proclamations (1936, 1939)**; and against these, the **persistence of manual scavenging** despite the 1993 and 2013 Acts. *Lesson: a practice ends when law, social reform from within the tradition, and an alternative livelihood arrive together — the third element is what manual scavenging still lacks.*", "s": "Social reform history"},
+        {"t": "Managing diversity", "d": "**Linguistic reorganisation (1956)** defused the language question that Selig Harrison called India's 'most dangerous decade'; the **Sixth Schedule councils** and the **Bodo, Karbi Anglong and ULFA accords** did the same for ethnic autonomy. *Lesson: India accommodates identity through asymmetric federalism rather than suppressing it — accommodation converts secession into representation.*", "s": "Post-independence India"},
+        {"t": "Communal violence and its aftermath", "d": "The **Justice Sachar Committee (2006)** found Muslims below the national average on most indicators; **Justice Srikrishna (Mumbai, 1993)** and **Justice Nanavati** inquiries; and the **communal-violence response of the Kerala and Bhiwandi (mohalla committees, Suresh Khopde)** models, where police-community committees pre-empted riots. *Lesson: prevention is local and institutional — a mohalla committee is worth more than a post-riot commission.*", "s": "Commission reports"}
+      ]
+    },
+    {
+      "g": "Geography, disaster and heritage",
+      "items": [
+        {"t": "Urban flooding", "d": "**Chennai (2015)** — the Adyar and Cooum floodplains and 300+ waterbodies encroached; **Mumbai (2005, 2021)** — the Mithi river narrowed and mangroves cleared; **Bengaluru (2022)** — lakes and rajakaluves built over. *Lesson: urban flooding is a land-use failure, not a rainfall event — the NDMA's Urban Flooding Guidelines (2010, the world's first) exist and are ignored at the master-plan stage.*", "s": "NDMA"},
+        {"t": "Water-scarce city that recovered", "d": "**Chennai's 'Day Zero' (2019)** and the recovery through **mandatory rooftop rainwater harvesting (a 2003 amendment to the building rules)** and restored eris (tank irrigation systems). *Lesson: the traditional tank cascade was the city's original water system — restoration beat augmentation.*", "s": "Tamil Nadu Government"},
+        {"t": "Heritage that pays", "d": "**Ahmedabad — India's first UNESCO World Heritage City (2017)** with its pols and heritage walk; **Hampi and Khajuraho** as tourism economies; and **Maratha Military Landscapes (2025)** as the newest inscription. *Lesson: inscription is a conservation obligation and a livelihood asset simultaneously — the risk is over-tourism, as at Venice and increasingly at Ladakh and Manali.*", "s": "UNESCO"},
+        {"t": "Migration and the receiving city", "d": "**Kerala's response to inter-state migrant workers** — the **Awaz health insurance scheme, Apna Ghar hostels and Roshni** schooling for migrant children, and the deliberate official term **'guest workers'**. Against it, the 2020 exodus that followed the national lockdown. *Lesson: a receiving state that registers, insures and schools migrants converts an invisible workforce into a governed one — one nation one ration card is the national version of the same insight.*", "s": "Government of Kerala"},
+        {"t": "Ecological limits ignored", "d": "**Joshimath subsidence (2023)** — the **Mishra Committee had warned in 1976** that the town sits on old landslide debris and construction should be restricted; **Wayanad landslides (2024)** in a zone the **Gadgil report** classified ESZ-1. *Lesson: in both cases the science existed decades earlier — the failure is not of knowledge but of the land-use decision that overrode it.*", "s": "Mishra Committee, 1976 / Gadgil Report, 2011"}
+      ]
+    }
+  ]
+}
