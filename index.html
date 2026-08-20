@@ -95,6 +95,18 @@
 </main>
 
 <main id="view-comptopic" class="view">
+  <div class="comp-readrow">
+    <button class="fj-read" id="comp-read" type="button" aria-pressed="false"
+            title="Read this topic aloud (Spacebar)">◉ Read Along</button>
+    <div class="facts-readbar" id="comp-readbar" role="status" aria-live="polite" hidden>
+      <span class="read-pulse" aria-hidden="true"></span>
+      <span id="comp-readpos"></span>
+      <button id="comp-readprev" type="button" title="Previous block">‹</button>
+      <button id="comp-readpause" type="button">❙❙ Pause</button>
+      <button id="comp-readnext" type="button" title="Next block">›</button>
+      <button id="comp-readstop" type="button">Stop</button>
+    </div>
+  </div>
   <div id="comptopic"></div>
   <aside class="fns" id="fns-c" aria-label="Relevant facts and evidence" hidden></aside>
   <div class="done-wrap"><button id="comp-done">Mark as completed</button></div>

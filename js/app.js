@@ -1210,6 +1210,96 @@ async function renderComp() {
     </a>`).join('') || `<p class="fs-none">No topic matches.</p>`;
 }
 
+/* Read Along for a compendium topic: the same walk-and-highlight as the bank, over
+   the topic's own blocks. Kept separate from the answer narration, which carries
+   paper-wide timelines and a branch sequence a single topic has no use for. */
+const compRead = {
+  on: false, paused: false, run: 0, i: 0, nodes: [],
+  collect() {
+    this.nodes = [...($('#comptopic')?.querySelectorAll(
+      '.qtitle, .abox .intro, .abox .c-para, .abox .pt, .abox .wf, .abox .conc, .c-bankrow') || [])];
+  },
+  start(i = 0) {
+    if (!canSpeak()) return this.stop('This browser cannot speak.');
+    this.collect();
+    if (!this.nodes.length) return this.stop('Nothing to read.');
+    if (readAlong) stopReadAlong();
+    if (factRead.on) factRead.stop();
+    feedStop?.();
+    this.on = true; this.paused = false;
+    this.i = Math.max(0, Math.min(this.nodes.length - 1, i));
+    this.speak();
+  },
+  speak() {
+    if (!this.on) return;
+    const node = this.nodes[this.i];
+    if (!node) return this.stop('End of the topic.');
+    $('#comptopic').querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+    node.classList.add('reading-now');
+    node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    const run = ++this.run;
+    this.paint();
+    const text = cleanSpeech(node.textContent);
+    if (!text.trim()) { this.i++; return this.speak(); }
+    const u = new SpeechSynthesisUtterance(text);
+    const voice = preferredVoice(speechSynthesis.getVoices());
+    u.lang = voice?.lang || 'en-IN';
+    u.rate = readSpeed; u.pitch = 1;
+    if (voice) u.voice = voice;
+    const on = () => { if (this.on && run === this.run) { this.i++; this.speak(); } };
+    u.onend = on; u.onerror = on;
+    speechSynthesis.speak(u);
+  },
+  step(dir) {
+    if (!this.on) return;
+    this.run++; speechSynthesis.cancel();
+    this.i = Math.max(0, Math.min(this.nodes.length - 1, this.i + dir));
+    this.speak();
+  },
+  togglePause() {
+    if (!this.on) return;
+    this.paused = !this.paused;
+    if (this.paused) speechSynthesis.pause(); else speechSynthesis.resume();
+    this.paint();
+  },
+  toggle() { this.on ? this.stop() : this.start(); },
+  stop(message = '') {
+    this.on = false; this.paused = false; this.run++;
+    if (canSpeak()) speechSynthesis.cancel();
+    $('#comptopic')?.querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+    this.paint(message);
+  },
+  paint(message = '') {
+    const btn = $('#comp-read'), bar = $('#comp-readbar');
+    if (!btn || !bar) return;
+    btn.setAttribute('aria-pressed', String(this.on));
+    btn.classList.toggle('on', this.on);
+    bar.hidden = !this.on && !message;
+    if (message && !this.on) { $('#comp-readpos').textContent = message; return; }
+    if (!this.on) return;
+    $('#comp-readpos').textContent = `${this.i + 1} / ${this.nodes.length}`;
+    $('#comp-readpause').textContent = this.paused ? '\u25b6 Resume' : '\u2759\u2759 Pause';
+  }
+};
+
+// The topic list as the browser is currently showing it — tier filter included,
+// so Previous/Next never jumps to a topic the list has filtered away.
+function compSequence() {
+  const [, , pid] = (location.hash || '').split('/');
+  const topics = COMP?.[pid]?.topics || [];
+  return topics.filter(x => comp.tier === 'all' || String(x.tier) === comp.tier)
+               .map(x => ({ pid, n: x.n }));
+}
+function compIndex(seq) {
+  const [, , , n] = (location.hash || '').split('/');
+  return seq.findIndex(x => String(x.n) === String(n));
+}
+function compMove(direction) {
+  const seq = compSequence();
+  const to = seq[compIndex(seq) + (direction === 'next' ? 1 : -1)];
+  if (to) go(`#/c/${to.pid}/${to.n}`);
+}
+
 function renderCompTopic(pid, n) {
   const t = (COMP?.[pid]?.topics || []).find(x => String(x.n) === String(n));
   if (!t) { $('#comptopic').innerHTML = '<p class="fs-none">Topic not found.</p>'; return; }
@@ -1238,6 +1328,7 @@ function renderCompTopic(pid, n) {
   };
   $('#comptopic').insertAdjacentHTML('beforeend',
     `<div class="c-navbar">${nav(-1,'prev')}<span class="c-pos">${at + 1} / ${list.length}</span>${nav(1,'next')}</div>`);
+  compRead.stop();                       // a new topic replaces the blocks being read
   $('#fns-c').hidden = true;
   loadFacts().then(() => {
     if (!location.hash.includes(`/c/${pid}/${n}`)) return;
@@ -1250,6 +1341,24 @@ function renderCompTopic(pid, n) {
   b.onclick = () => { store.toggleDone(k); paint(); };
   paint();
 }
+
+$('#comp-read')?.addEventListener('click', () => compRead.toggle());
+$('#comp-readbar')?.addEventListener('click', e => {
+  const id = e.target.id;
+  if (id === 'comp-readpause') compRead.togglePause();
+  else if (id === 'comp-readnext') compRead.step(1);
+  else if (id === 'comp-readprev') compRead.step(-1);
+  else if (id === 'comp-readstop') compRead.stop();
+});
+// Tapping a block reads from there, as in the answer view and the bank.
+$('#comptopic')?.addEventListener('click', e => {
+  if (!compRead.on) return;
+  const n = e.target.closest('.qtitle,.intro,.c-para,.pt,.wf,.conc,.c-bankrow');
+  if (!n) return;
+  compRead.collect();
+  const i = compRead.nodes.indexOf(n);
+  if (i >= 0) { compRead.run++; speechSynthesis.cancel(); compRead.i = i; compRead.speak(); }
+});
 
 $('#comp-papers')?.addEventListener('click', e => {
   const b = e.target.closest('[data-cp]'); if (!b) return; comp.pid = b.dataset.cp; renderComp();
@@ -1947,15 +2056,16 @@ function dockMove(direction) {
 
 function paintDock() {
   const answer = $('#view-answer').classList.contains('active');
+  const topic = $('#view-comptopic').classList.contains('active');
   const prev = $('#app-dock [data-dock="previous"]');
   const next = $('#app-dock [data-dock="next"]');
-  prev.hidden = !answer;
-  next.hidden = !answer;
-  const seq = cur ? navSequence(cur.pid) : [];
-  const i = cur ? navIndex(seq) : -1;
+  prev.hidden = next.hidden = !(answer || topic);
+  // The compendium walks its own list, filtered exactly as the browser shows it.
+  const seq = topic ? compSequence() : (cur ? navSequence(cur.pid) : []);
+  const i = topic ? compIndex(seq) : (cur ? navIndex(seq) : -1);
   prev.disabled = i <= 0;
   next.disabled = i < 0 || i >= seq.length - 1;
-  document.body.classList.toggle('answer-open', answer);
+  document.body.classList.toggle('answer-open', answer || topic);
   const feedOn = $('#view-feed').classList.contains('active');
   document.body.classList.toggle('feed-open', feedOn);
   if (feedOn) syncTopbarHeight();   // after the class lands — it compacts the topbar
@@ -1966,6 +2076,7 @@ async function route() {
   const [, kind, arg] = h.split('/');
   if (kind !== 'a' && readAlong) stopReadAlong();
   if (kind !== 'facts' && factRead.on) factRead.stop();
+  if (!(kind === 'c' && h.split('/').length > 3) && compRead.on) compRead.stop();
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.body.dataset.mode = mode;
   document.body.classList.remove('sb-open');
@@ -2020,6 +2131,7 @@ $('#app-dock').onclick = e => {
   else if (b.dataset.dock === 'subject') go(subjectHash());
   else if (b.dataset.dock === 'feed') go('#/feed');
   else if (b.dataset.dock === 'facts') go('#/facts');
+  else if ($('#view-comptopic').classList.contains('active')) compMove(b.dataset.dock);
   else dockMove(b.dataset.dock);
 };
 $('#go-notes').onclick = () => go('#/n');
@@ -2217,6 +2329,15 @@ addEventListener('keydown', e => {
   }
   if (e.key === '1') { e.preventDefault(); go('#/'); return; }
   if (e.key === '2') { e.preventDefault(); go(subjectHash()); return; }
+  if ($('#view-comptopic').classList.contains('active')) {
+    if (e.code === 'Space') { e.preventDefault(); compRead.on ? compRead.togglePause() : compRead.start(); return; }
+    if (e.key === 'ArrowRight') { e.preventDefault(); compMove('next'); return; }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); compMove('previous'); return; }
+    if (compRead.on && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+      e.preventDefault(); compRead.step(e.key === 'ArrowDown' ? 1 : -1); return;
+    }
+    return;
+  }
   // In the bank: Space starts or pauses narration, ↑/↓ step entry by entry.
   if ($('#view-facts').classList.contains('active')) {
     if (e.code === 'Space') {
