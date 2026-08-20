@@ -435,6 +435,14 @@ async function renderAnswer(qid) {
   A.insertAdjacentHTML('beforeend',
     `<div class="abox">${a ? answerHTML(a) : noAnswerHTML(r)}</div>`);
 
+  // Evidence from the bank that fits this answer. Loaded lazily and rendered when
+  // it arrives, so the answer never waits on it.
+  $('#fns').hidden = true;
+  loadFacts().then(() => {
+    if (cur?.qid !== qid) return;                 // navigated on while loading
+    renderFNS($('#fns'), `${r.q} ${A.querySelector('.abox')?.innerText || ''}`, pid);
+  });
+
   // The Diagram flip lives on each diagrammable section's heading (see the
   // #answer click handler); nothing to add at the answer level.
 
@@ -1230,6 +1238,12 @@ function renderCompTopic(pid, n) {
   };
   $('#comptopic').insertAdjacentHTML('beforeend',
     `<div class="c-navbar">${nav(-1,'prev')}<span class="c-pos">${at + 1} / ${list.length}</span>${nav(1,'next')}</div>`);
+  $('#fns-c').hidden = true;
+  loadFacts().then(() => {
+    if (!location.hash.includes(`/c/${pid}/${n}`)) return;
+    renderFNS($('#fns-c'), `${t.t} ${t.q || ''} ${$('#comptopic .abox')?.innerText || ''}`, pid);
+  });
+
   const b = $('#comp-done');
   const k = compKey(pid, n);
   const paint = () => { const on = store.isDone(k); b.textContent = on ? '✓ Completed' : 'Mark as completed'; b.classList.toggle('on', on); };
@@ -1244,6 +1258,84 @@ $('#comp-tiers')?.addEventListener('click', e => {
   const b = e.target.closest('[data-ct]'); if (!b) return; comp.tier = b.dataset.ct; renderComp();
 });
 $('#comp-q')?.addEventListener('input', e => { comp.q = e.target.value; renderComp(); });
+
+/* ══════════════════ FNS — the bank, matched to one answer ══════════════════ */
+// Words that appear in every second UPSC sentence carry no signal, so matching on
+// them would surface the same handful of entries under every answer.
+const FNS_STOP = new Set(('the and for with that this from have has had are was were which their its not but all any '
+  + 'can may must under over into than then also such been being more most other some only when where what who how why '
+  + 'they them these those there here after before between within without through during against upon while both each '
+  + 'india indian indias state states government governments public national central union policy policies act acts law '
+  + 'laws right rights power powers court courts scheme schemes report reports committee commission article articles '
+  + 'system systems people social economic development need needs role issue issues case cases year years new').split(' '));
+const fnsWords = s => (String(s).toLowerCase().match(/[a-z][a-z'-]{3,}/g) || []).filter(x => !FNS_STOP.has(x));
+
+// Everything the answer actually says, as one lowercased haystack plus a token set.
+function fnsHaystack(text) {
+  const low = ' ' + String(text).toLowerCase().replace(/\s+/g, ' ') + ' ';
+  return { low, set: new Set(fnsWords(low)) };
+}
+
+// A phrase counts only as a whole term: "Article 1" must not match "Article 142".
+function fnsHasPhrase(low, phrase) {
+  let at = low.indexOf(phrase);
+  while (at >= 0) {
+    const before = low[at - 1] || ' ', after = low[at + phrase.length] || ' ';
+    if (!/[a-z0-9]/.test(before) && !/[a-z0-9]/.test(after)) return true;
+    at = low.indexOf(phrase, at + 1);
+  }
+  return false;
+}
+
+function fnsMatches(hay, pid, limit = 7) {
+  if (!FACTS) return [];
+  const out = [];
+  for (const [fpid, d] of Object.entries(FACTS)) {
+    // Same paper first, cross-cutting next, another paper's bank only on a strong hit.
+    const weight = fpid === pid ? 1.3 : (fpid === 'universal' ? 1 : 0.55);
+    for (const s of d.sections) for (const g of s.groups) for (const it of g.items) {
+      if (!it.t) continue;
+      if (!it._w) it._w = fnsWords(it.t);          // cached on first use
+      const phrase = it.t.toLowerCase().replace(/\s+/g, ' ').split(' —')[0];
+      let score = 0;
+      // A whole named thing — "Kesavananda Bharati (1973)", "Jal Jeevan Mission" —
+      // appearing verbatim is far stronger evidence than scattered word overlap.
+      // Boundary-checked: without it "Article 1" matches inside "Article 142".
+      // Multi-word only: a term like "Authority — three theories" reduces to the
+      // single generic word "authority", which matches almost any answer.
+      if (phrase.includes(' ') && phrase.length >= 8 && fnsHasPhrase(hay.low, phrase)) score += 9;
+      for (const t of it._w) if (hay.set.has(t)) score += 2;
+      // Another paper's bank may only surface on a verbatim hit — loose word
+      // overlap there drags administrative theory into art-history answers.
+      const foreign = fpid !== pid && fpid !== 'universal';
+      if (foreign && score < 9) continue;
+      if (it._w.length && score) score = score * weight;
+      if (score >= 6) out.push({ it, pid: fpid, label: d.label, score });
+    }
+  }
+  out.sort((a, b) => b.score - a.score);
+  const seen = new Set();
+  return out.filter(r => !seen.has(r.it.t) && seen.add(r.it.t)).slice(0, limit);
+}
+
+function renderFNS(box, text, pid) {
+  if (!box) return;
+  const hay = fnsHaystack(text);
+  const rows = fnsMatches(hay, pid);
+  box.hidden = !rows.length;
+  if (!rows.length) { box.innerHTML = ''; return; }   // never leave the last answer's evidence behind
+  box.innerHTML = `<div class="fns-head"><b>FNS</b><span>${rows.length}</span>
+      <a href="#/facts/${esc(pid)}" title="Open the full bank">bank ↗</a></div>`
+    + rows.map(r => `<div class="fns-row" data-k="${r.it.k}" title="Tap to expand, double-tap to copy">
+        <b>${md(r.it.t)}</b><span class="fns-d">${md(r.it.d)}</span>
+        ${r.it.s ? `<i class="fns-s">${esc(r.it.s)}</i>` : ''}</div>`).join('');
+}
+
+// One row at a time expands — the box is a reminder, not a second answer.
+document.addEventListener('click', e => {
+  const row = e.target.closest('.fns-row'); if (!row) return;
+  row.classList.toggle('open');
+});
 
 /* ══════════════════ FACTNSTAT — the paper-wise fact bank ══════════════════ */
 let FACTS = null;

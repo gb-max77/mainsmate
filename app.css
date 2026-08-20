@@ -824,6 +824,41 @@ body.feed-open .app-dock button{min-width:58px;padding:5px 8px}
   .fi{max-width:none} }
 .facts-icon::before{content:"◈";font-size:15px;line-height:1}
 
+/* ══════════════════ FNS — the bank, beside the answer ══════════════════ */
+/* Narrow: a block under the answer, quiet enough to ignore while reading.
+   Wide (1240px+): it moves into the empty left gutter and sticks there. */
+.fns{margin:22px 0 0;padding:13px 14px;border-radius:13px;
+  background:color-mix(in srgb,var(--gold) 5%,var(--card));
+  border:1px solid color-mix(in srgb,var(--gold) 26%,var(--line))}
+.fns[hidden]{display:none}
+.fns-head{display:flex;align-items:baseline;gap:8px;margin-bottom:9px;font-family:var(--ui-font)}
+.fns-head b{font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--gold)}
+.fns-head span{font-size:10px;color:var(--faint);font-variant-numeric:tabular-nums}
+.fns-head a{margin-left:auto;font-size:10.5px;color:var(--blue);text-decoration:none}
+.fns-head a:hover{text-decoration:underline}
+.fns-row{--fk:var(--blue);cursor:pointer;padding:8px 0 8px 10px;font-size:13px;line-height:1.5;
+  border-left:2px solid color-mix(in srgb,var(--fk) 55%,var(--line));
+  border-bottom:1px dashed color-mix(in srgb,var(--gold) 16%,var(--line))}
+.fns-row:last-child{border-bottom:0}
+.fns-row[data-k=case],.fns-row[data-k=prov],.fns-row[data-k=law]{--fk:var(--gold)}
+.fns-row[data-k=sch],.fns-row[data-k=cmte],.fns-row[data-k=eg]{--fk:var(--green)}
+.fns-row[data-k=term],.fns-row[data-k=quote]{--fk:var(--lav)}
+.fns-row>b{display:block;color:var(--fk);font-size:12.5px;font-family:var(--ui-font);margin-bottom:2px}
+/* Collapsed to two lines: enough to recognise, never enough to compete with the answer. */
+.fns-d{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  color:var(--dim);font-family:var(--read-font)}
+.fns-row.open .fns-d{-webkit-line-clamp:unset;color:var(--ink)}
+.fns-d b{color:color-mix(in srgb,var(--fk) 75%,var(--ink))}
+.fns-s{display:none;margin-top:4px;font-family:var(--ui-font);font-size:10.5px;
+  font-style:normal;color:var(--faint)}
+.fns-row.open .fns-s{display:block}
+@media (min-width:1240px){
+  .fns{position:fixed;left:max(12px,calc(50% - 430px - 268px));width:252px;
+    top:calc(var(--tb,56px) + 96px);max-height:calc(100vh - var(--tb,56px) - 190px);
+    overflow-y:auto;scrollbar-width:thin;margin:0;z-index:4}
+  body.sb-open .fns{display:none}          /* the question drawer owns that space */
+}
+
 /* ══════════════════ MODEL COMPENDIUM ══════════════════ */
 #comp-tiers{margin:8px 0 18px}
 #comp-papers .chip.on{border-color:var(--gold);color:var(--gold);
