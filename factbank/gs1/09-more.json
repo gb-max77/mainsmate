@@ -1,0 +1,43 @@
+{
+  "h": "More for GS-1 — Society, History, Geography",
+  "k": "data",
+  "groups": [
+    {
+      "g": "Society — the harder edges",
+      "items": [
+        {"t": "Caste census, what it changes", "d": "**Census 2027 enumerates caste for the first time since 1931.** Consequences to name: the **50% ceiling** argument becomes empirical rather than notional; **sub-categorisation** (Rohini Commission, *Davinder Singh* 2024) gains data; welfare targeting sharpens; and the counter-risk is that enumeration **hardens identity** it merely meant to measure.", "s": "RGI / Rohini Commission"},
+        {"t": "Endogamy, still near-total", "d": "Inter-caste marriages remain roughly **5-6% of all marriages** (India Human Development Survey), which is why Ambedkar's diagnosis — caste survives through endogamy — is not a historical observation but a current one. **Shakti Vahini (2018)** on honour crimes is the legal anchor.", "s": "IHDS / Shakti Vahini (2018)"},
+        {"t": "Urban anonymity has not dissolved caste", "d": "Residential segregation by caste persists in Indian cities, and matrimonial and rental markets remain caste-sorted — evidence against the assumption that urbanisation is automatically an emancipator. Use to complicate any 'modernisation ends caste' argument.", "s": "Urban sociology research"},
+        {"t": "Tribal displacement", "d": "Adivasis are about **8.6% of the population** but a disproportionate share of those displaced by dams, mines and industry since 1947, with rehabilitation historically incomplete. **PESA (1996)**, the **FRA (2006)** and *Niyamgiri* (2013) exist because consent was the missing element.", "s": "Ministry of Tribal Affairs / FRA"},
+        {"t": "Women's unpaid work", "d": "Indian women perform roughly **7 times** the unpaid domestic and care work men do (Time Use Survey, 2019), and this — not preference or education — is the binding constraint on female labour force participation. The strongest single fact for a gender-and-economy answer.", "s": "NSS Time Use Survey 2019"},
+        {"t": "Ageing without a pension", "d": "Only about a quarter of India's elderly have any pension, and the **60-plus share doubles to ~20.8% by 2050**; **feminisation of ageing** means the typical poor elderly person is a widow with no independent income. Instruments: MWPSC Act 2007, Atal Vayo Abhyuday, and Ayushman Bharat's 70+ universal cover.", "s": "UNFPA India Ageing Report 2023"},
+        {"t": "Communalism versus communal violence", "d": "**Bipan Chandra's** distinction matters in an answer: communalism is the **ideology** (three stages — common secular interests, different interests, hostile interests); violence is only its episodic symptom. Remedies that address violence alone treat the symptom.", "s": "Bipan Chandra", "k": "term"},
+        {"t": "Secularism, the Indian variant", "d": "**Principled distance** (Bhargava): the state may intervene in religion to protect rights — temple entry, triple talaq, Sabarimala — and abstain otherwise. This is why Indian secularism looks 'interventionist' beside French laïcité and is not therefore less secular.", "s": "Rajeev Bhargava", "k": "term"}
+      ]
+    },
+    {
+      "g": "History and culture — one more line each",
+      "items": [
+        {"t": "Why 1857 failed, stated crisply", "d": "**No common leadership, no shared aim, no coordination across regions, the south and Punjab largely uninvolved, superior British communications (telegraph and railway), and support from several princely states.** Six reasons, and the last two are the ones most answers miss.", "s": "Modern Indian history"},
+        {"t": "Moderates, fairly assessed", "d": "Their achievement was **the economic critique** — Naoroji's drain theory, Ranade and Dutt — which built the intellectual case before the mass movement could be built. Dismissing them as petitioners misses that the extremists inherited an argument the moderates had already won.", "s": "Freedom struggle"},
+        {"t": "Gandhi's structural innovation", "d": "He converted the Congress from an annual gathering of elites into a **mass organisation with a permanent structure** — linguistic provincial committees, a working committee, membership at four annas — after the Nagpur session (1920). The organisational change mattered as much as satyagraha.", "s": "Freedom struggle"},
+        {"t": "Women in the national movement", "d": "**Sarojini Naidu** (Congress president, 1925), **Kasturba**, **Kamaladevi Chattopadhyay** (Dandi salt satyagraha, courted arrest), **Aruna Asaf Ali** (Quit India flag at Gowalia Tank), **Usha Mehta** (Congress Radio), **Rani Gaidinliu** (Naga resistance), **Matangini Hazra**, **Bhikaji Cama** (flag at Stuttgart, 1907). Names beat the generic sentence.", "s": "Freedom struggle"},
+        {"t": "Partition, the human number", "d": "**10-12 million displaced, up to a million dead, and about 75,000 women abducted** — the largest forced migration in recorded history, effected across a line drawn in five weeks by a man who had never been to India. The abduction figure is the one most answers omit.", "s": "Partition historiography"},
+        {"t": "Integration, the three exceptions", "d": "**Junagadh** (ruler acceded to Pakistan, plebiscite went to India), **Hyderabad** (Operation Polo, 1948), **Kashmir** (Instrument of Accession, 26 October 1947). Naming what made each different is the answer; 'Patel integrated 565 states' is the preamble.", "s": "Post-independence India"},
+        {"t": "Temple as economic institution", "d": "South Indian temples were **landholders, employers, bankers and irrigation managers** — Chola inscriptions record endowments, interest rates and grain measures. This converts a culture answer into a political-economy one, which is where the marks are.", "s": "Chola epigraphy"},
+        {"t": "Indian Ocean before Europe", "d": "**Muziris, Barygaza (Bharuch), Arikamedu, Tamralipti** traded with Rome, Arabia and Southeast Asia; the *Periplus of the Erythraean Sea* is the source. The point: the Indian Ocean was a **connected commercial world long before European arrival**, which reframes 'the age of discovery'.", "s": "Ancient trade history"}
+      ]
+    },
+    {
+      "g": "Geography — the mechanisms most often confused",
+      "items": [
+        {"t": "Why the Bay gets more cyclones", "d": "Higher sea surface temperature, **freshwater influx from the Ganga-Brahmaputra stratifying the surface and keeping it warm**, proximity to the monsoon trough, and slower dissipation over the shallow shelf — while the Arabian Sea is drier and cooler, though warming is narrowing the gap. Four mechanisms, not one.", "s": "IMD / climatology"},
+        {"t": "Why Tamil Nadu is dry in the south-west monsoon", "d": "It lies in the **rain shadow of the Western Ghats** during June-September and receives its main rainfall from the **retreating north-east monsoon (Oct-Dec)**, when the winds have picked up moisture crossing the Bay. The clearest example of aspect determining a rainfall regime.", "s": "Climatology"},
+        {"t": "Estuary versus delta, the reason", "d": "The **Narmada and Tapi form estuaries** because they flow through **rift valleys** with steep gradients and little sediment load reaching a subsiding coast, while the Ganga, Godavari and Krishna build deltas on a gentle, aggrading shelf. Structure, not size, decides.", "s": "Geomorphology"},
+        {"t": "Western Disturbances matter more than they look", "d": "Extratropical cyclones from the Mediterranean, steered by the **sub-tropical westerly jet**, delivering the **winter rain the rabi wheat crop depends on** and the snow that feeds the Himalayan rivers in summer. Their weakening or shift is a food-security question, not just a weather one.", "s": "IMD"},
+        {"t": "Groundwater as the real irrigation system", "d": "Groundwater supplies about **60% of irrigation and 85% of rural drinking water**, extraction stage ~60%, with over-exploited blocks concentrated in **Punjab, Haryana, Rajasthan and western UP** — the same states where power is free and procurement assured. The map of depletion is the map of the incentive.", "s": "CGWB"},
+        {"t": "Laterite, and why it matters economically", "d": "Formed by **heavy rain, high temperature and leaching** that strips silica and leaves iron and aluminium — poor in humus and nitrogen, so agriculturally weak, but the source of **bauxite** and a traditional building brick. Links a soil type to a mineral answer.", "s": "Pedology"}
+      ]
+    }
+  ]
+}

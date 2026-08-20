@@ -1,0 +1,31 @@
+{
+  "h": "More for GS-3 — Chains, Trade-offs and Second-order Effects",
+  "k": "data",
+  "groups": [
+    {
+      "g": "Causal chains worth writing out",
+      "items": [
+        {"t": "Free power → paddy → depletion", "d": "Free or flat-rate farm power plus assured MSP procurement makes paddy rational in Punjab despite 1,500+ mm of water per kg of rice; groundwater falls; the state pays subsidy twice — for power and for procurement — and again for the resulting stubble burning in Delhi's airshed. **One incentive, four costs**: write the chain, not the complaint.", "s": "CGWB / CACP"},
+        {"t": "Fertiliser control → NPK skew → soil", "d": "Urea alone stays under statutory price control while P&K move under NBS, so urea is relatively cheap; the **NPK ratio skews to ~8:3:1 against an ideal 4:2:1**; soil organic carbon and micronutrients decline; yields plateau and subsidy rises. **PM-PRANAM** and nano urea attack the symptom; decontrol attacks the cause.", "s": "Department of Fertilizers"},
+        {"t": "Import dependence → rupee → inflation", "d": "**88% crude import dependence** means an oil price shock transmits to the current account, the rupee, and then to core inflation through transport costs — which is why India's inflation is partly imported and monetary policy alone cannot fully answer it. The strategic petroleum reserve and ethanol blending are the buffers.", "s": "PPAC / RBI"},
+        {"t": "Capacity ≠ generation", "d": "Non-fossil crossed **50% of installed capacity in 2025**, but coal still produces **~70-74% of electricity**, because solar and wind have capacity utilisation factors of ~20-25% against coal's 60-70%. Any answer that celebrates the capacity number without this distinction is wrong on the physics.", "s": "CEA / MNRE"},
+        {"t": "Storage is the binding constraint", "d": "Renewables cannot displace coal for **evening peak demand** without storage; hence viability gap funding for battery storage, pumped hydro revival, and the round-the-clock renewable tenders. The grid problem is not generation, it is **firming**.", "s": "Ministry of Power"},
+        {"t": "Formalisation → credit → productivity", "d": "GST registration and Udyam listing create a **verifiable transaction record**, which allows cash-flow-based lending (OCEN, TReDS, account aggregator) instead of collateral-based lending, which is the actual constraint on MSME growth. This is why formalisation is a productivity argument, not a tax argument.", "s": "RBI / Ministry of MSME"},
+        {"t": "Post-harvest loss → price volatility", "d": "Losses of about **₹1.53 lakh crore a year** mean supply reaching the market is lumpy, so onion and tomato prices spike and crash; the answer is cold chain, storage and processing (**only ~10% of produce is processed**), not export bans, which suppress the price signal that would fund the storage.", "s": "NABCONS 2022 / MoFPI"}
+      ]
+    },
+    {
+      "g": "Trade-offs to name explicitly",
+      "items": [
+        {"t": "Growth versus conservation, correctly framed", "d": "*M.K. Ranjitsinh* (2024) refused to treat it as binary — it balanced the Great Indian Bustard against transmission lines by requiring expert assessment rather than a blanket ban. The examiner rewards the frame that **converts a binary into a design problem**.", "s": "Supreme Court (2024)"},
+        {"t": "Efficiency versus equity in subsidy", "d": "Targeted cash is more efficient; universal in-kind is more inclusive because it does not fail on identification. India's answer has been **both** — free grain to 80 crore under NFSA/PMGKAY alongside DBT elsewhere — and the honest point is that **exclusion error is a harm and inclusion error is a cost**, which are not the same thing.", "s": "Economic Survey / DBT Mission"},
+        {"t": "Federalism versus a single market", "d": "GST created one tax but the Council's recommendations are **only recommendatory** (*Mohit Minerals*, 2022); APMC and land remain state subjects, which is why a national agricultural market cannot be legislated from the Centre. The 2020 farm laws are the case study in what happens when it is attempted.", "s": "Supreme Court (2022)"},
+        {"t": "Data protection versus delivery", "d": "The **DPDP Act, 2023** gives the state broad exemptions under Section 17 — defensible for security, corrosive for accountability, and it narrowed RTI Section 8(1)(j). The trade-off to state: **the same architecture that reduces leakage also concentrates surveillance capacity.**", "s": "DPDP Act, 2023"},
+        {"t": "Self-reliance versus integration", "d": "PLI and higher tariffs raise domestic assembly but risk **protecting inefficiency** and raising input costs for downstream exporters; India's withdrawal from RCEP (2019) and its subsequent CEPA/TEPA/FTA push are the two halves of the same debate. Note that mobile exports rose while **value addition stayed ~20%**.", "s": "DPIIT / Ministry of Commerce"},
+        {"t": "Speed versus due process in land", "d": "The **LARR Act, 2013** requires consent (70% PPP, 80% private), social impact assessment and rehabilitation — which protects the displaced and slows infrastructure. Several states have amended it for exempted categories. The honest answer names **who bears the cost of delay and who bears the cost of speed**.", "s": "LARR Act, 2013"},
+        {"t": "Security versus liberty, tested", "d": "*Puttaswamy*'s **proportionality** test is the operative standard for surveillance, preventive detention (*Ameena Begum*, 2023) and internet shutdowns (*Anuradha Bhasin*, 2020): legality, legitimate aim, necessity, and least restrictive means with procedural safeguards. Apply the four steps rather than asserting balance.", "s": "Supreme Court"},
+        {"t": "Adaptation versus mitigation finance", "d": "India needs both, but adaptation is where the near-term human cost sits — heat action plans, crop insurance, coastal protection — while global finance flows disproportionately to mitigation. **Adaptation finance needs are 10-18 times current flows** (UNEP). The equity argument in one number.", "s": "UNEP Adaptation Gap Report"}
+      ]
+    }
+  ]
+}

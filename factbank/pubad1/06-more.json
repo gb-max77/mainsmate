@@ -1,0 +1,32 @@
+{
+  "h": "More Theory — Applications, Critiques and Indian Instances",
+  "k": "term",
+  "groups": [
+    {
+      "g": "Theory with an Indian instance attached",
+      "items": [
+        {"t": "Lipsky, applied to India", "d": "The **patwari, ASHA, constable, anganwadi worker and panchayat secretary** are India's street-level bureaucrats: widest discretion, least training, most citizen contact. Every delivery failure traced to 'attitude' is usually a coping mechanism produced by inadequate resources and unclear rules — the theory reframes blame as design.", "s": "Lipsky, 1980"},
+        {"t": "Pressman-Wildavsky, applied to India", "d": "A centrally sponsored scheme passes through ministry, state department, district, block and panchayat — each a **clearance point** whose probabilities multiply. This is why convergence models (Aspirational Districts) that collapse clearance points outperform schemes that add coordination committees.", "s": "Implementation, 1973"},
+        {"t": "Riggs, applied to India", "d": "**Formalism** — the gap between the prescribed and the practised — is visible in citizens' charters without remedies, social audits without independent auditors, and rules notified but never enforced. Naming the concept converts a complaint into an analysis.", "s": "Riggs"},
+        {"t": "Kingdon, applied to India", "d": "**GST (2017), IBC (2016) and Aadhaar** each waited years in the policy stream until a problem stream (revenue leakage, twin balance sheets, leakage in subsidies) and a politics stream (a government with numbers) aligned, and an entrepreneur coupled them. The best frame for 'why did this reform happen now'.", "s": "Kingdon, 1984"},
+        {"t": "Ostrom, applied to India", "d": "**Pani panchayats, Kudumbashree neighbourhood groups, joint forest management committees, and PESA gram sabhas** are nested, boundary-defined, self-monitoring institutions. Where they fail, check the eight principles: usually monitoring or graduated sanctions are missing, not enthusiasm.", "s": "Ostrom, 1990"},
+        {"t": "Weber, applied to India", "d": "The steel frame is legal-rational in form, with strong **traditional** residues (deference, seniority, personal loyalty) and periodic **charismatic** surges around individual officers. Merton's **goal displacement** appears wherever the file becomes the objective; Crozier's **vicious circle** wherever a scandal produces another layer of clearance.", "s": "Weber / Merton / Crozier"},
+        {"t": "Simon, applied to India", "d": "**Bounded rationality** explains why the Collector satisfices: incomplete data, competing statutes, no time. The institutional answer is not to demand full rationality but to improve **decision premises** — better data, clearer criteria, pre-set rules for recurring choices.", "s": "Simon, 1947"},
+        {"t": "NPM, applied and criticised in India", "d": "Adopted selectively — outcome budgeting, PPPs, contracting out, citizen-as-customer language, agencification (SPVs for Smart Cities). The **Smart Cities SPV** is the sharpest critique available: speed was bought by bypassing the elected municipal council, hollowing out the 74th Amendment.", "s": "Hood / MoHUA"}
+      ]
+    },
+    {
+      "g": "Sharper distinctions and second-order points",
+      "items": [
+        {"t": "Efficiency is not a neutral criterion", "d": "**Waldo's** central claim: choosing efficiency as the test smuggles in a political theory about what the state is for. This is the standing answer to any question that assumes administration is a technical activity.", "s": "The Administrative State, 1948"},
+        {"t": "Accountability without answerability", "d": "India has many oversight bodies whose findings carry no consequence — NHRC recommendations, CAG performance audits, parliamentary committee reports. The distinction to draw: **reporting is not accountability unless someone must answer and can be sanctioned.**", "s": "Public administration"},
+        {"t": "Autonomy versus accountability, resolved", "d": "For regulators and investigative agencies the workable settlement is **security of tenure and funding (autonomy) plus mandatory public reporting and legislative scrutiny (accountability)** — the pairing *Vineet Narain* used for the CBI and the FSLRC proposed for financial regulators.", "s": "Vineet Narain (1997) / FSLRC"},
+        {"t": "Generalist and specialist, past the cliché", "d": "The real issue is not who is better but **at what level and for what decision**. Domain knowledge decides technical questions; the generalist's value is inter-sectoral coordination and political interpretation. Second ARC's answer — mid-career domain assignment — accepts both rather than choosing.", "s": "Second ARC, 10th Report"},
+        {"t": "Delegated legislation, the quantitative point", "d": "The volume of rules, regulations and notifications far exceeds the volume of primary legislation, yet the **Committee on Subordinate Legislation** examines a fraction. The accountability gap is not the principle of delegation but the **absence of scrutiny capacity**.", "s": "Parliamentary procedure"},
+        {"t": "Coordination, three mechanisms", "d": "**Hierarchy** (a common superior decides), **markets** (price allocates), **networks** (mutual adjustment among equals). India's inter-ministerial problems are network problems attacked with hierarchical tools — which is why committees proliferate and coordination does not improve.", "s": "Governance theory"},
+        {"t": "Why reform reports do not land", "d": "The ARC's own diagnosis applies to itself: recommendations that need **no new law and no new money** get implemented; those needing legislation, constitutional amendment or a transfer of power do not. Sorting your recommendations by that test is what makes a PubAd conclusion credible.", "s": "Second ARC"},
+        {"t": "The comparative caution", "d": "Wilson warned in 1887 against importing an administrative system with its political assumptions attached; Riggs showed why the transplant fails. Any answer recommending a foreign model should say **what in the Indian context will carry it** — otherwise it is a wish, not a recommendation.", "s": "Wilson / Riggs"}
+      ]
+    }
+  ]
+}

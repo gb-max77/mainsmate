@@ -1,0 +1,38 @@
+{
+  "h": "More Anchors — Reform, Finance and the Live Debates",
+  "k": "cmte",
+  "groups": [
+    {
+      "g": "Contemporary administrative reform",
+      "items": [
+        {"t": "Mission Karmayogi in numbers", "d": "**iGOT-Karmayogi** past 1 crore registered users and 3 crore course completions; **Karmayogi Prarambh** as the induction module and **Aarambh** as the common foundation course across services. The reform's real test is whether **FRAC-based role matching** changes posting decisions, not whether courses are completed.", "s": "DoPT / CBC, 2025", "k": "data"},
+        {"t": "Special Campaigns for pendency", "d": "DARPG's annual **Swachhata and pendency-disposal campaigns** have cleared crores of files, freed lakhs of square feet of office space and earned scrap revenue in the hundreds of crores — the rare administrative reform with a measurable, published output. Cite as evidence that **process cleaning is a governance intervention**, not housekeeping.", "s": "DARPG", "k": "data"},
+        {"t": "National Single Window System", "d": "One portal for central and state clearances, replacing the applicant's task of discovering which of 30+ departments must approve what. The administrative principle: **the burden of coordination belongs to the state, not the citizen** — the same principle behind Sevottam and one-stop centres.", "s": "DPIIT", "k": "sch"},
+        {"t": "Decriminalising compliance", "d": "**Jan Vishwas (Amendment of Provisions) Act, 2023** removed imprisonment from **183 provisions across 42 central Acts**, converting them to monetary penalties; Jan Vishwas 2.0 continues. The PubAd point: **regulatory overreach is a governance failure**, and trust-based regulation shifts the state from suspicion to verification.", "s": "Act of 2023", "k": "law"},
+        {"t": "e-Office and file movement", "d": "Adopted across central ministries, with the DARPG target of cutting the levels a file passes through to **four**. The classic critique it addresses is **Merton's ritualism** — the file as an end in itself; digitisation makes delay visible and therefore answerable.", "s": "DARPG"},
+        {"t": "Citizen feedback as an instrument", "d": "CPGRAMS' **Independent Feedback Unit** calls citizens back after disposal, which converts closure statistics into satisfaction data. The principle: **an output measure that the implementing agency controls will be gamed; an outcome measure gathered independently will not.**", "s": "DARPG"}
+      ]
+    },
+    {
+      "g": "Finance, accountability and the federal edge",
+      "items": [
+        {"t": "Single Nodal Agency model", "d": "Centrally sponsored scheme funds now flow through one nodal account per scheme per state with **just-in-time release** and mandatory PFMS tracking. Centre's case: float and diversion end. States' case: it converts a transfer into a **controlled disbursal** and starves them of working capital. This is the sharpest live fiscal-federalism dispute after cesses.", "s": "Ministry of Finance", "k": "data"},
+        {"t": "Off-budget borrowing", "d": "State borrowing routed through corporations and special purpose vehicles to stay outside the FRBM limit. The **16th Finance Commission** recommended discontinuing it and bringing all such borrowing on-budget — the accountability principle being that **a liability the legislature cannot see, it cannot control**.", "s": "16th Finance Commission"},
+        {"t": "Fiscal Health Index of States", "d": "NITI Aayog's index (2025) ranks states on **quality of expenditure, revenue mobilisation, fiscal prudence, debt index and debt sustainability** — competitive federalism applied to state finance. Useful whenever the question asks how the Centre influences states without legislating.", "s": "NITI Aayog, 2025", "k": "index"},
+        {"t": "CAG's blind spots", "d": "Three standing gaps: **PPP projects** sit awkwardly within audit jurisdiction; **the lag** between audit and PAC scrutiny blunts consequence; and **performance audit findings carry no enforcement**. Every CAG answer should name at least one, or it reads as a description rather than an assessment.", "s": "Public accounts"},
+        {"t": "Estimates versus Public Accounts Committee", "d": "**PAC** looks backwards at money already spent, on the CAG's report, chaired by the Opposition by convention; the **Estimates Committee** looks forward at whether the estimate itself is economical, has no CAG support, and is Lok Sabha only. Confusing the two is a common and costly error.", "s": "Rules of Procedure", "k": "prov"},
+        {"t": "Zonal Councils, revived", "d": "Statutory under the **States Reorganisation Act, 1956**, chaired by the Union Home Minister — five councils plus the separate **North Eastern Council**. Their meetings have become more frequent and now carry inter-state issues (border disputes, river water, security) that the Inter-State Council rarely convenes for. Cite as evidence that **federal coordination has migrated to the statutory forum**.", "s": "MHA", "k": "prov"}
+      ]
+    },
+    {
+      "g": "Personnel and the live controversies",
+      "items": [
+        {"t": "Central deputation friction", "d": "The proposed 2022 amendment to **Rule 6 of the IAS (Cadre) Rules, 1954** would let the Centre call an officer on central deputation without the state's concurrence in specified circumstances. States read it as an attack on the federal bargain behind Article 312; the Centre reads it as a response to falling deputation numbers. Unresolved, and a ready 15-marker.", "s": "DoPT"},
+        {"t": "Unified Pension Scheme", "d": "From 2025, an assured **50% of the last 12 months' average pay** for 25 years of service, with a minimum guarantee and inflation indexation — a partial return to defined benefit after the NPS shift of 2004. The PubAd angle: **pension design is a motivation instrument** (Herzberg's hygiene factor) and a fiscal liability at once.", "s": "Ministry of Finance", "k": "data"},
+        {"t": "Performance appraisal, honestly assessed", "d": "The move from ACR to **PAR** brought disclosure and numerical grading, and 360-degree feedback for empanelment. The unfixed problem is **rating inflation** — when almost everyone is 'outstanding', the instrument stops discriminating and promotion reverts to seniority.", "s": "DoPT"},
+        {"t": "Women in the civil services", "d": "Women are roughly a third of recent IAS batches and a much smaller share of senior policy posts; in the police they are about **12%** against the 33% many states have declared. **Representative bureaucracy** theory (Kingsley, Krislov) is the frame: passive representation matters because it changes what the institution notices.", "s": "DoPT / BPRD", "k": "data"},
+        {"t": "Capacity at the cutting edge", "d": "The **frontline** — patwari, ASHA, anganwadi worker, constable, panchayat secretary — carries most citizen contact with the least training and the widest discretion. Lipsky's **street-level bureaucracy** is the theory; the practical implication is that capacity building spent at the top has the smallest marginal return.", "s": "Lipsky / Second ARC", "k": "term"}
+      ]
+    }
+  ]
+}

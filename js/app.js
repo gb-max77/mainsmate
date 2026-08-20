@@ -285,11 +285,19 @@ const hasDiag = a => !!(a && diagList(a).length);
 const dNode = (x, cls) => `<span class="dnode${cls ? ' ' + cls : ''}">${md(x)}</span>`;
 
 function renderDiag(d) {
+  // Geography / IR / concept answers may carry a hand-drawable sketch behind a
+  // view-hide toggle. Built first because a figure can carry one too.
+  let sketch = '';
+  if (d.sketch && d.sketch.svg) {
+    const label = d.sketch.label || 'Sketch / map';
+    sketch = `<div class="dg-sketch-wrap"><button class="dg-sketch-btn" type="button" data-label="${esc(label)}">▤ ${esc(label)}</button>`
+      + `<div class="dg-sketch" hidden>${d.sketch.svg}${d.sketch.note ? `<div class="dg-sketch-note">${esc(d.sketch.note)}</div>` : ''}</div></div>`;
+  }
   // `fig` = the figure as it is actually drawn in the Logic & Fact Sheet, cropped
   // straight out of the source. It already carries its own title and caption, so
-  // nothing else is drawn around it.
+  // nothing else is drawn around it — but a sketch still rides underneath.
   if (d.fig) {
-    return `<div class="dg dg-figure"><img class="dg-img" src="${esc(d.fig)}" alt="${esc(d.title || 'diagram')}" loading="lazy" decoding="async"></div>`;
+    return `<div class="dg dg-figure"><img class="dg-img" src="${esc(d.fig)}" alt="${esc(d.title || 'diagram')}" loading="lazy" decoding="async">${sketch}</div>`;
   }
   const cap = `<div class="dg-cap">${d.title ? esc(d.title) : esc(d.type)}${d.note ? ` · <i>${esc(d.note)}</i>` : ''}</div>`;
   let inner;
@@ -314,14 +322,6 @@ function renderDiag(d) {
   // The dashed box: the caveat, holding or remedy that turns a procedural figure
   // into a constitutional one. Drawn dashed so it reads as commentary, not a node.
   const foot = d.foot ? `<div class="dg-foot">${md(d.foot)}</div>` : '';
-  // Geography / IR answers may carry an extra hand-drawable sketch or map
-  // (concept diagram, cross-section, route map) behind a view/hide toggle.
-  let sketch = '';
-  if (d.sketch && d.sketch.svg) {
-    const label = d.sketch.label || 'Sketch / map';
-    sketch = `<div class="dg-sketch-wrap"><button class="dg-sketch-btn" type="button" data-label="${esc(label)}">▤ ${esc(label)}</button>`
-      + `<div class="dg-sketch" hidden>${d.sketch.svg}${d.sketch.note ? `<div class="dg-sketch-note">${esc(d.sketch.note)}</div>` : ''}</div></div>`;
-  }
   return `<div class="dg dg-${esc(d.type)}">${cap}${inner}${foot}${sketch}</div>`;
 }
 
@@ -1476,6 +1476,20 @@ function factItemHTML(it, q, badge) {
   return `<li class="fi" data-k="${it.k}" tabindex="0" title="Click to copy">${bits.join(' ')}</li>`;
 }
 
+// A paper's own sections, followed by the cross-cutting groups tagged as serving
+// it. The Cross-cutting bank stays the single source — these are the same objects,
+// shown a second time where they are actually needed.
+function factSections(pid) {
+  const own = FACTS?.[pid]?.sections || [];
+  if (pid === 'universal') return own;
+  const borrowed = [];
+  for (const s of FACTS?.universal?.sections || []) {
+    const groups = s.groups.filter(g => (g.p || []).includes(pid));
+    if (groups.length) borrowed.push({ h: `${s.h} · cross-cutting`, groups });
+  }
+  return borrowed.length ? own.concat(borrowed) : own;
+}
+
 async function renderFacts(arg) {
   await loadFacts();
   // Any re-render replaces the nodes narration is walking, so it cannot continue.
@@ -1487,7 +1501,8 @@ async function renderFacts(arg) {
     `<button class="chip${pid === facts.pid ? ' on' : ''}" data-fp="${pid}" aria-pressed="${pid === facts.pid}">${esc(d.label)}</button>`).join('');
   const d = FACTS[facts.pid];
   const q = facts.q.trim().toLowerCase();
-  const all = (d?.sections || []).flatMap(s => s.groups.flatMap(g => g.items));
+  const sections = factSections(facts.pid);
+  const all = sections.flatMap(s => s.groups.flatMap(g => g.items));
   // Kind chips are drawn from this paper only, and count what the search leaves.
   const hitsQ = all.filter(it => !q || factText(it).includes(q));
   const byKind = {};
@@ -1501,7 +1516,7 @@ async function renderFacts(arg) {
   const badge = !!(q || facts.k);
   let shown = 0;
   let html = '';
-  for (const s of d?.sections || []) {
+  for (const s of sections) {
     let secHTML = '';
     for (const g of s.groups) {
       const items = g.items.filter(it => (!facts.k || it.k === facts.k) && (!q || factText(it).includes(q)));

@@ -1,0 +1,31 @@
+{
+  "h": "Essay — Anchors That Open and Close",
+  "k": "quote",
+  "groups": [
+    {
+      "g": "Openers with a fact behind them",
+      "items": [
+        {"t": "Technology and judgement", "d": "India is **1st in the world in AI skill penetration** yet spends **~0.64% of GDP on R&D** against China's 2.4% — a country that can operate the technology it does not yet create. Opens any essay on technology, education or self-reliance with a paradox rather than a platitude.", "s": "Stanford AI Index 2025 / DST"},
+        {"t": "Growth and its distribution", "d": "Extreme poverty fell **27.1% → 5.3%** in a decade while the **top 1% came to hold 40.1% of wealth**. Both are true; an essay that states only one has chosen a side before it has argued. The best opening for inequality, development or 'growth without development'.", "s": "World Bank 2025 / World Inequality Lab"},
+        {"t": "The demographic clock", "d": "Median age **28**, working-age share peaking in the **2030s**, and the window closing around **2055** — with Kerala already ageing while Bihar is still young. Dividend and burden in the same sentence, and the reason internal migration is the hinge.", "s": "UNFPA 2025"},
+        {"t": "Women's work", "d": "**FLFPR 23.3% (2017-18) → 41.7% (2023-24)** — a near doubling, driven largely by unpaid family work and rural self-employment. The rise *and* its composition together make the point that measurement can flatter a story.", "s": "PLFS 2023-24"},
+        {"t": "The environmental double bind", "d": "India is the **3rd largest emitter** in total and emits ~**2 tCO₂e per person** against a world average of 4.7, ranks **176 of 180 on EPI** and **10th on CCPI**. Four numbers that show why the same country is both culprit and victim in the climate argument.", "s": "UNEP / Yale EPI / CCPI"},
+        {"t": "Institutions and trust", "d": "Pendency of **5.29 crore cases**, **21 judges per million** against a recommended 50, and **75.8% of prisoners are undertrials**. The strongest factual opening for essays on justice delayed, rule of law, or reform of institutions.", "s": "NJDG / NCRB"},
+        {"t": "The digital paradox", "d": "**UPI carries about half the world's real-time digital payments** while rural teledensity sits near **59%** against urban 130%. Capability at the frontier and exclusion at the base, in one line.", "s": "NPCI / TRAI"}
+      ]
+    },
+    {
+      "g": "Closers that lift a conclusion",
+      "items": [
+        {"t": "Ambedkar's contradiction", "d": "\"We are going to enter into a life of contradictions... equality in politics and inequality in social and economic life\" — and his warning that we must remove it \"or those who suffer from inequality will blow up the structure of political democracy\". The definitive closing for any essay on equality, democracy or social justice.", "s": "Constituent Assembly, 25 November 1949"},
+        {"t": "Gandhi's talisman as a test", "d": "Close by applying it rather than quoting it: measure the policy just argued against **the face of the poorest person it will touch**. A conclusion that performs the test reads as judgement; one that merely cites it reads as decoration.", "s": "Gandhi, 1948"},
+        {"t": "Sen on what development is for", "d": "Development is the **expansion of the real freedoms people enjoy** — so the question is never how fast the economy grew, but what people became able to do. Closes growth, welfare and capability essays.", "s": "Development as Freedom, 1999"},
+        {"t": "Tagore against the closed mind", "d": "\"Where the mind is without fear and the head is held high... where the clear stream of reason has not lost its way\" — for essays on education, dissent, science and rationality. His caution that nationalism can become \"organised selfishness\" supplies the balance in identity essays.", "s": "Gitanjali / Nationalism"},
+        {"t": "Brundtland, verbatim", "d": "Development that \"meets the needs of the present without compromising the ability of future generations to meet their own needs\" — the one definition an environment essay should carry word for word, then apply to the specific trade-off it argued.", "s": "Our Common Future, 1987"},
+        {"t": "Ostrom against false choices", "d": "Commons need be neither privatised nor nationalised — communities can govern them, given clear boundaries, monitoring, graduated sanctions and the recognised right to organise. The closing move for any essay that has been set up as market versus state.", "s": "Governing the Commons, 1990"},
+        {"t": "Kautilya on whose happiness counts", "d": "\"In the happiness of his subjects lies the king's happiness... he shall consider as good, not what pleases him, but what pleases his subjects.\" An Indian, pre-modern statement of public interest — worth more in an Indian essay than a Western equivalent.", "s": "Arthashastra"},
+        {"t": "The structure that earns the mark", "d": "An essay closes well when the last paragraph **answers the title as a question**, concedes the strongest counter-argument in one clause, and ends on a forward, non-utopian note. Naming the cost of your own recommendation is what separates a mature conclusion from an exhortation.", "s": "Answer-writing method", "k": "term"}
+      ]
+    }
+  ]
+}

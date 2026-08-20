@@ -52,7 +52,12 @@ def load_paper(pid):
                     o['s'] = it['s'].strip()
                 items.append(o)
             if items:
-                groups.append({'g': g['g'], 'items': items})
+                grp = {'g': g['g'], 'items': items}
+                # Which other papers this cross-cutting group also serves, so the
+                # renderer can surface it there without duplicating it in the file.
+                if g.get('p'):
+                    grp['p'] = g['p']
+                groups.append(grp)
         if groups:
             sections.append({'h': s['h'], 'groups': groups})
     return sections
