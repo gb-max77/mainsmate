@@ -1497,6 +1497,14 @@ function factSections(pid) {
    Highlights and edits are stored per entry in localStorage: the bank itself is a
    static file served to everyone, so a personal mark cannot live in it. Entries are
    keyed by paper + a slug of the term, which survives re-ordering and rebuilds. */
+// A pointer gesture that made a mark must not also be read as a tap: finishing a
+// drag-select would otherwise start narration or copy the line. Checking the live
+// selection is not enough — making the mark clears it, so the click that follows
+// sees nothing. The stamp below is what the click actually consults.
+let hlMarkedAt = 0;
+const hlGesture = () => hl.on &&
+  (Date.now() - hlMarkedAt < 500 || String(window.getSelection()).trim().length > 1);
+
 const HL_COLOURS = [['gold', 'Gold'], ['blue', 'Blue'], ['green', 'Green'], ['lav', 'Violet']];
 const hlStore = {
   marks: JSON.parse(localStorage.getItem('mm-hl') || '{}'),
@@ -1565,6 +1573,7 @@ function applyHighlights(li, key) {
       after.splitText(m.x.length);
       const mark = document.createElement('mark');
       mark.className = 'hl'; mark.dataset.c = m.c;
+      mark.title = 'Click to remove (highlighter on)';
       after.parentNode.replaceChild(mark, after);
       mark.appendChild(after);
     }
@@ -1871,7 +1880,7 @@ $('#facts-q')?.addEventListener('input', e => { facts.q = e.target.value; render
 // Read Along is running the same tap means "read from here", matching the answer view.
 $('#facts-body')?.addEventListener('click', e => {
   const li = e.target.closest('.fi'); if (!li) return;
-  if (hl.on) return;                       // marking owns the pointer; copy would fight it
+  if (hlGesture()) return;                 // that click ended a mark, not a tap
   if (factRead.on) {
     factRead.collect();
     const i = factRead.nodes.indexOf(li);
@@ -1919,6 +1928,7 @@ document.addEventListener('mouseup', () => {
   const a = hlSurface(sel.anchorNode), b = hlSurface(sel.focusNode);
   if (!a || !b || a.key !== b.key) return;          // one block at a time
   hlStore.add(a.key, text, hl.colour, hlMeta(a.host, a.key));
+  hlMarkedAt = Date.now();
   sel.removeAllRanges();
   applyHighlights(a.host, a.key);
 });
@@ -2284,7 +2294,8 @@ function renderHighlights() {
       <div class="fs-group"><h3>${esc(sec)}</h3>`
       + entries.map(en => `<div class="hl-entry">
           <a href="${esc(en.m.href || '#/')}"><b>${esc(en.m.term || '')}</b></a>
-          ${en.list.map(mk => `<mark class="hl" data-c="${mk.c}" data-key="${esc(en.key)}">${esc(mk.x)}</mark>`).join(' ')}
+          <button class="hl-drop" data-drop="${esc(en.key)}" title="Remove every mark on this entry" aria-label="Remove every mark on this entry">✕</button>
+          ${en.list.map(mk => `<span class="hl-wrap"><mark class="hl" data-c="${mk.c}" data-key="${esc(en.key)}">${esc(mk.x)}</mark><button class="hl-x" data-key="${esc(en.key)}" data-x="${esc(mk.x)}" title="Remove this mark" aria-label="Remove this mark">✕</button></span>`).join(' ')}
         </div>`).join('')
       + `</div>`).join('')
     + `</section>`).join('');
@@ -2304,8 +2315,17 @@ $('#hl-copy')?.addEventListener('click', () => {
   const b = $('#hl-copy'); b.textContent = '✓ Copied';
   setTimeout(() => b.textContent = '⧉ Copy all', 1200);
 });
-// Clicking a mark in this view removes it, wherever it came from.
+// Removing, three ways: the small x on a mark, the x on an entry (all of its
+// marks), or clicking the mark itself.
 $('#hl-body')?.addEventListener('click', e => {
+  const x = e.target.closest('.hl-x');
+  if (x) { e.preventDefault(); hlStore.remove(x.dataset.key, x.dataset.x); return renderHighlights(); }
+  const drop = e.target.closest('.hl-drop');
+  if (drop) {
+    e.preventDefault();
+    delete hlStore.marks[drop.dataset.drop]; delete hlStore.meta[drop.dataset.drop];
+    hlStore.save(); return renderHighlights();
+  }
   const mark = e.target.closest('mark.hl'); if (!mark) return;
   e.preventDefault();
   hlStore.remove(mark.dataset.key, mark.textContent);
@@ -2592,6 +2612,7 @@ $('#answer').addEventListener('click', e => {
     sk.textContent = (show ? '✕ ' : '▤ ') + (sk.dataset.label || 'Sketch / map');
     return;
   }
+  if (hlGesture()) return;                 // finishing a highlight must not start narration
   const target = e.target.closest('.qtitle, .intro, .bh, .pt, .diag, .wf, .conc, .nowrite');
   if (!target) return;
   const index = speechParts().findIndex(part => part.node === target);

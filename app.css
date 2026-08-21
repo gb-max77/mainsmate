@@ -993,3 +993,14 @@ body.hl-on #facts-body mark.hl:hover{outline:1px dashed var(--ghost)}
 #ans-hl{width:32px;height:31px}
 body.hl-on #answer .abox{cursor:text}
 body.hl-on #answer mark.hl{cursor:pointer}
+
+/* Removing a mark: an x on each one, and an x that clears the whole entry. */
+.hl-wrap{position:relative;display:inline-block}
+.hl-x{position:absolute;top:-8px;right:-6px;width:15px;height:15px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);color:var(--faint);
+  font-size:9px;line-height:1;display:none;place-items:center;padding:0}
+.hl-wrap:hover .hl-x{display:grid}
+.hl-x:hover{color:var(--t1);border-color:var(--t1)}
+.hl-drop{float:right;width:18px;height:18px;border-radius:6px;border:1px solid var(--line);
+  background:var(--card);color:var(--ghost);font-size:10px;line-height:1;padding:0}
+.hl-drop:hover{color:var(--t1);border-color:var(--t1)}
