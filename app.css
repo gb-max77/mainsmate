@@ -974,21 +974,22 @@ body.hl-on #facts-body mark.hl:hover{outline:1px dashed var(--ghost)}
 .fi-edit b{color:var(--blue);cursor:pointer;font-weight:700}
 .fi-edit b:hover{text-decoration:underline}
 /* Home panel */
-.hl-panel{margin:18px 0 4px;padding:14px 15px;border-radius:14px;background:var(--card);
-  border:1px solid color-mix(in srgb,var(--gold) 24%,var(--line))}
-.hl-panel[hidden]{display:none}
-.hl-head{display:flex;align-items:baseline;gap:9px;margin-bottom:10px;font-family:var(--ui-font)}
-.hl-head b{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
-.hl-head span{font-size:10.5px;color:var(--faint)}
-.hl-clear{margin-left:auto;font-size:10.5px;color:var(--faint);border:1px solid var(--line);
-  border-radius:7px;padding:3px 8px}
-.hl-clear:hover{color:var(--t1);border-color:var(--t1)}
-.hl-paper{margin-bottom:12px}
-.hl-paper>h3{margin:0 0 6px;font-family:var(--ui-font);font-size:11.5px;font-weight:700;color:var(--blue)}
-.hl-sec{margin:0 0 8px 2px;padding-left:9px;border-left:2px solid color-mix(in srgb,var(--blue) 26%,var(--line))}
-.hl-sec>h4{margin:0 0 4px;font-family:var(--ui-font);font-size:10.5px;font-weight:600;
-  text-transform:uppercase;letter-spacing:.05em;color:var(--faint)}
-.hl-entry{display:block;text-decoration:none;padding:4px 0;font-family:var(--read-font);
-  font-size:13.5px;line-height:1.5;color:var(--ink)}
-.hl-entry>b{display:block;font-family:var(--ui-font);font-size:11px;color:var(--gold);margin-bottom:1px}
-.hl-entry:hover{background:color-mix(in srgb,var(--gold) 6%,transparent);border-radius:7px}
+#hl-tools{margin:4px 0 18px}
+#hl-count{color:var(--gold);font-weight:600;white-space:nowrap}
+#hl-copy.chip,#hl-clear.chip{font-size:11.5px}
+#hl-clear:hover{color:var(--t1);border-color:var(--t1)}
+#hl-body .fs-group{margin-bottom:14px}
+.hl-entry{display:block;padding:7px 0 8px 11px;font-family:var(--read-font);
+  font-size:14.5px;line-height:1.6;color:var(--ink);
+  border-left:2px solid color-mix(in srgb,var(--gold) 40%,var(--line));
+  border-bottom:1px dashed color-mix(in srgb,var(--gold) 14%,var(--line))}
+#hl-body .hl-entry:last-child{border-bottom:0}
+.hl-entry>a{text-decoration:none}
+.hl-entry b{display:block;font-family:var(--ui-font);font-size:11px;color:var(--gold);
+  margin-bottom:3px;letter-spacing:.02em}
+.hl-entry mark.hl{cursor:pointer}
+.hl-entry:hover{background:color-mix(in srgb,var(--gold) 5%,transparent)}
+/* the answer view's own highlighter button sits with the reading controls */
+#ans-hl{width:32px;height:31px}
+body.hl-on #answer .abox{cursor:text}
+body.hl-on #answer mark.hl{cursor:pointer}

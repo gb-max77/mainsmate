@@ -437,6 +437,9 @@ async function renderAnswer(qid) {
 
   // Evidence from the bank that fits this answer. Loaded lazily and rendered when
   // it arrives, so the answer never waits on it.
+  applyHighlights(A.querySelector('.abox'), `a::${qid}`);
+  hl.paint();
+
   $('#fns').hidden = true;
   loadFacts().then(() => {
     if (cur?.qid !== qid) return;                 // navigated on while loading
@@ -1528,9 +1531,12 @@ const hl = {
   paint() {
     const btn = $('#facts-hl'), bar = $('#facts-hlbar');
     if (!btn) return;
-    btn.setAttribute('aria-pressed', String(this.on));
-    btn.classList.toggle('on', this.on);
-    btn.dataset.c = this.colour;
+    for (const b of [btn, $('#ans-hl')]) {
+      if (!b) continue;
+      b.setAttribute('aria-pressed', String(this.on));
+      b.classList.toggle('on', this.on);
+      b.dataset.c = this.colour;
+    }
     if (bar) {
       bar.hidden = !this.on;
       bar.innerHTML = HL_COLOURS.map(([c, label]) =>
@@ -1865,6 +1871,7 @@ $('#facts-q')?.addEventListener('input', e => { facts.q = e.target.value; render
 // Read Along is running the same tap means "read from here", matching the answer view.
 $('#facts-body')?.addEventListener('click', e => {
   const li = e.target.closest('.fi'); if (!li) return;
+  if (hl.on) return;                       // marking owns the pointer; copy would fight it
   if (factRead.on) {
     factRead.collect();
     const i = factRead.nodes.indexOf(li);
@@ -1875,28 +1882,45 @@ $('#facts-body')?.addEventListener('click', e => {
   navigator.clipboard?.writeText(t).catch(() => {});
   li.classList.add('copied'); setTimeout(() => li.classList.remove('copied'), 900);
 });
-/* ── highlighter: select to mark, click a mark to remove ── */
+/* ── highlighter: select to mark, click a mark to remove.
+   Marking is independent of edit mode — it touches nothing but the marks store,
+   and while it is on, tap-to-copy stands down so a drag-select cannot fire it. ── */
 $('#facts-hl')?.addEventListener('click', () => hl.toggle());
-$('#facts-hlbar')?.addEventListener('click', e => {
-  const b = e.target.closest('[data-c]'); if (b) hl.setColour(b.dataset.c);
+$('#ans-hl')?.addEventListener('click', () => hl.toggle());
+document.addEventListener('click', e => {
+  const b = e.target.closest('.facts-hlbar [data-c]'); if (b) hl.setColour(b.dataset.c);
 });
-$('#facts-body')?.addEventListener('mouseup', () => {
+
+// One handler for both surfaces: the bank's entries and an answer's blocks.
+function hlSurface(node) {
+  const li = node?.parentElement?.closest?.('.fi');
+  if (li) return { host: li, key: li.dataset.key };
+  const blk = node?.parentElement?.closest?.('#answer .abox');
+  if (blk && cur) return { host: blk, key: `a::${cur.qid}` };
+  return null;
+}
+function hlMeta(host, key) {
+  if (key.startsWith('a::')) {
+    const p = paperOf(cur.pid);
+    return { pid: cur.pid, label: PAPER_TAG[cur.pid] || cur.pid, sec: cur.sec || p?.short || '',
+             grp: 'Model answer', term: cur.q?.slice(0, 90) || '', href: `#/a/${cur.qid}` };
+  }
+  const d = FACTS?.[facts.pid];
+  return { pid: facts.pid, label: d?.label || facts.pid,
+           sec: host.closest('.fs-sec')?.querySelector('h2')?.textContent || '',
+           grp: host.closest('.fs-group')?.querySelector('h3')?.textContent || '',
+           term: host.querySelector('.fi-t')?.textContent || '', href: `#/facts/${facts.pid}` };
+}
+document.addEventListener('mouseup', () => {
   if (!hl.on) return;
   const sel = window.getSelection();
   const text = String(sel).trim();
   if (!text || text.length < 2) return;
-  const li = sel.anchorNode?.parentElement?.closest('.fi');
-  if (!li || !sel.focusNode?.parentElement?.closest('.fi')) return;
-  if (li !== sel.focusNode.parentElement.closest('.fi')) return;   // one entry at a time
-  const d = FACTS?.[facts.pid];
-  const grp = li.closest('.fs-group')?.querySelector('h3')?.textContent || '';
-  const sec = li.closest('.fs-sec')?.querySelector('h2')?.textContent || '';
-  hlStore.add(li.dataset.key, text, hl.colour, {
-    pid: facts.pid, label: d?.label || facts.pid, sec, grp,
-    term: li.querySelector('.fi-t')?.textContent || ''
-  });
+  const a = hlSurface(sel.anchorNode), b = hlSurface(sel.focusNode);
+  if (!a || !b || a.key !== b.key) return;          // one block at a time
+  hlStore.add(a.key, text, hl.colour, hlMeta(a.host, a.key));
   sel.removeAllRanges();
-  applyHighlights(li, li.dataset.key);
+  applyHighlights(a.host, a.key);
 });
 
 /* ── inline edit: e enters and leaves; Ctrl+S or the bar saves ── */
@@ -1918,8 +1942,22 @@ $('#facts-body')?.addEventListener('click', e => {
     renderFacts();
   }
 }, true);
+// The same, for a mark inside an answer.
+$('#answer')?.addEventListener('click', e => {
+  const mark = e.target.closest('.hl'); if (!mark || !hl.on || !cur) return;
+  e.stopPropagation();
+  hlStore.remove(`a::${cur.qid}`, mark.textContent);
+  const p = mark.parentNode; p.replaceChild(document.createTextNode(mark.textContent), mark); p.normalize();
+}, true);
 addEventListener('keydown', e => {
-  if (!$('#view-facts')?.classList.contains('active')) return;
+  const onFacts = $('#view-facts')?.classList.contains('active');
+  const onAnswer = $('#view-answer')?.classList.contains('active');
+  if (!onFacts && !onAnswer) return;
+  if (onAnswer) {
+    if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) return;
+    if (e.key === 'h' || e.key === 'H') { e.preventDefault(); hl.toggle(); }
+    return;
+  }
   if (factEdit.node) {                      // inside the editor
     if (e.key === 'Escape') { e.preventDefault(); factEdit.stop(); renderFacts(); }
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's') { e.preventDefault(); factEdit.save(); }
@@ -2222,35 +2260,58 @@ function feedTogglePlay() {
    back from the bank. Grouped paper → section, which is the bank's own subject
    organisation, then listed newest group first. */
 function renderHighlights() {
-  const panel = $('#hl-panel'); if (!panel) return;
   const n = hlStore.count();
-  panel.hidden = !n;
-  if (!n) { panel.innerHTML = ''; return; }
+  const cta = $('#go-hl');
+  if (cta) {
+    cta.hidden = !n;
+    const sub = $('#hl-sub');
+    if (sub && n) sub.textContent = `${n} passage${n === 1 ? '' : 's'} marked, grouped by subject`;
+  }
+  const body = $('#hl-body'); if (!body) return;
+  $('#hl-count') && ($('#hl-count').textContent = n ? `${n} marked` : '');
+  if (!n) { body.innerHTML = `<p class="fs-none">Nothing marked yet. Turn the highlighter on in FactnStat or in any answer — the button, or press h — and select the text you want to keep.</p>`; return; }
+  // Grouped paper → section, which is the app's own subject organisation.
   const byPaper = {};
   for (const [key, list] of Object.entries(hlStore.marks)) {
     const m = hlStore.meta[key] || {};
     const label = m.label || key.split('::')[0];
     const sec = m.sec || 'Marked';
-    ((byPaper[label] ||= {})[sec] ||= []).push({ key, pid: m.pid, term: m.term, grp: m.grp, list });
+    ((byPaper[label] ||= {})[sec] ||= []).push({ key, m, list });
   }
-  panel.innerHTML = `<div class="hl-head"><b>◧ Highlights</b><span>${n} across ${Object.keys(byPaper).length} papers</span>
-      <button class="hl-clear" id="hl-clear" type="button">Clear all</button></div>`
-    + Object.entries(byPaper).map(([label, secs]) => `
-      <div class="hl-paper"><h3>${esc(label)}</h3>`
-      + Object.entries(secs).map(([sec, entries]) => `
-        <div class="hl-sec"><h4>${esc(sec)}</h4>`
-        + entries.map(en => `<a class="hl-entry" href="#/facts/${esc(en.pid || '')}">
-            <b>${esc(en.term || '')}</b>
-            ${en.list.map(mk => `<mark class="hl" data-c="${mk.c}">${esc(mk.x)}</mark>`).join(' ')}
-          </a>`).join('')
-        + `</div>`).join('')
-      + `</div>`).join('');
+  body.innerHTML = Object.entries(byPaper).map(([label, secs]) => `
+    <section class="fs-sec"><h2>${esc(label)}</h2>`
+    + Object.entries(secs).map(([sec, entries]) => `
+      <div class="fs-group"><h3>${esc(sec)}</h3>`
+      + entries.map(en => `<div class="hl-entry">
+          <a href="${esc(en.m.href || '#/')}"><b>${esc(en.m.term || '')}</b></a>
+          ${en.list.map(mk => `<mark class="hl" data-c="${mk.c}" data-key="${esc(en.key)}">${esc(mk.x)}</mark>`).join(' ')}
+        </div>`).join('')
+      + `</div>`).join('')
+    + `</section>`).join('');
 }
-$('#hl-panel')?.addEventListener('click', e => {
-  if (e.target.id !== 'hl-clear') return;
-  e.preventDefault();
+
+$('#hl-clear')?.addEventListener('click', () => {
   hlStore.marks = {}; hlStore.meta = {}; hlStore.save(); renderHighlights();
 });
+$('#hl-copy')?.addEventListener('click', () => {
+  const lines = [];
+  for (const [key, list] of Object.entries(hlStore.marks)) {
+    const m = hlStore.meta[key] || {};
+    lines.push(`${m.label || ''} · ${m.term || ''}`);
+    list.forEach(mk => lines.push(`  — ${mk.x}`));
+  }
+  navigator.clipboard?.writeText(lines.join('\n')).catch(() => {});
+  const b = $('#hl-copy'); b.textContent = '✓ Copied';
+  setTimeout(() => b.textContent = '⧉ Copy all', 1200);
+});
+// Clicking a mark in this view removes it, wherever it came from.
+$('#hl-body')?.addEventListener('click', e => {
+  const mark = e.target.closest('mark.hl'); if (!mark) return;
+  e.preventDefault();
+  hlStore.remove(mark.dataset.key, mark.textContent);
+  renderHighlights();
+});
+$('#go-hl')?.addEventListener('click', () => go('#/hl'));
 
 /* ══════════════════ ROUTER ══════════════════ */
 function go(hash) { location.hash = hash; }
@@ -2315,6 +2376,9 @@ async function route() {
     const [, , cpid, cn] = h.split('/');
     if (cpid && cn !== undefined) { $('#view-comptopic').classList.add('active'); renderCompTopic(cpid, cn); }
     else { $('#view-comp').classList.add('active'); await renderComp(); }
+  } else if (kind === 'hl') {
+    $('#view-hl').classList.add('active');
+    renderHighlights();
   } else if (kind === 'facts') {
     $('#view-facts').classList.add('active');
     syncTopbarHeight();          // the frozen block and the rail hang off the topbar
@@ -2333,7 +2397,7 @@ async function route() {
   } else {
     $('#view-home').classList.add('active');
     renderHome();
-    renderHighlights();
+    renderHighlights();      // refreshes the Highlights entry's count and visibility
     Promise.all(ORDER.map(loadAnswers)).then(() => {
       if ((location.hash || '#/') === '#/') renderHome();
     });

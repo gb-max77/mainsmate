@@ -38,7 +38,11 @@
     <span class="nm"><b>FactnStat</b><small>Articles, cases, committees, schemes, data — paper-wise</small></span>
     <span class="arw">›</span>
   </button>
-  <section class="hl-panel" id="hl-panel" hidden></section>
+  <button class="notes-cta" id="go-hl" hidden>
+    <span class="ic">◧</span>
+    <span class="nm"><b>Highlights</b><small id="hl-sub">Everything you have marked, by subject</small></span>
+    <span class="arw">›</span>
+  </button>
   <button class="notes-cta" id="go-notes">
     <span class="ic">📚</span>
     <span class="nm"><b>Notes library</b><small id="notes-sub">Mains Smasher notes, by paper</small></span>
@@ -111,6 +115,16 @@
   <div id="comptopic"></div>
   <aside class="fns" id="fns-c" aria-label="Relevant facts and evidence" hidden></aside>
   <div class="done-wrap"><button id="comp-done">Mark as completed</button></div>
+</main>
+
+<main id="view-hl" class="view">
+  <h1>◧ Highlights</h1>
+  <p class="facts-sub">Every passage you have marked, in the bank and in the answers, grouped by where it came from. <span id="hl-count"></span></p>
+  <div class="chips" id="hl-tools">
+    <button class="chip" id="hl-copy" type="button">⧉ Copy all</button>
+    <button class="chip" id="hl-clear" type="button">Clear all</button>
+  </div>
+  <div id="hl-body"></div>
 </main>
 
 <main id="view-facts" class="view">
@@ -188,6 +202,8 @@
       <span class="branch-badge" id="branch-count">0</span>
       <span class="branch-label">Branches On</span>
     </button>
+    <button class="fj-hl" id="ans-hl" type="button" aria-pressed="false" data-c="gold"
+            title="Highlighter (h) — select text in the answer to mark it">▮</button>
     <button class="read-toggle" id="btn-read" type="button" aria-pressed="false" title="Read the full answer aloud and continue to the next question">
       <span aria-hidden="true">◉</span> Read Along</button>
   </div>
