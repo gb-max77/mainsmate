@@ -1467,13 +1467,13 @@ const FKIND = {
 };
 const factText = it => `${it.t || ''} ${it.d} ${it.s || ''}`.toLowerCase();
 
-function factItemHTML(it, q, badge) {
+function factItemHTML(it, q, badge, key) {
   const bits = [];
   if (badge) bits.push(`<span class="fi-k" data-k="${it.k}">${FKIND[it.k] || it.k}</span>`);
   if (it.t) bits.push(`<b class="fi-t">${factMark(it.t, q)}</b>`);
   bits.push(`<span class="fi-d">${factMark(it.d, q)}</span>`);
   if (it.s) bits.push(`<span class="fi-s">${factMark(it.s, q)}</span>`);
-  return `<li class="fi" data-k="${it.k}" tabindex="0" title="Click to copy">${bits.join(' ')}</li>`;
+  return `<li class="fi" data-k="${it.k}" data-key="${esc(key || '')}" tabindex="0" title="Click to copy">${bits.join(' ')}</li>`;
 }
 
 // A paper's own sections, followed by the cross-cutting groups tagged as serving
@@ -1489,6 +1489,112 @@ function factSections(pid) {
   }
   return borrowed.length ? own.concat(borrowed) : own;
 }
+
+/* ══════════ HIGHLIGHTER + INLINE EDIT for the bank ══════════
+   Highlights and edits are stored per entry in localStorage: the bank itself is a
+   static file served to everyone, so a personal mark cannot live in it. Entries are
+   keyed by paper + a slug of the term, which survives re-ordering and rebuilds. */
+const HL_COLOURS = [['gold', 'Gold'], ['blue', 'Blue'], ['green', 'Green'], ['lav', 'Violet']];
+const hlStore = {
+  marks: JSON.parse(localStorage.getItem('mm-hl') || '{}'),
+  meta: JSON.parse(localStorage.getItem('mm-hl-meta') || '{}'),
+  edits: JSON.parse(localStorage.getItem('mm-fedits') || '{}'),
+  save() {
+    localStorage.setItem('mm-hl', JSON.stringify(this.marks));
+    localStorage.setItem('mm-hl-meta', JSON.stringify(this.meta));
+    localStorage.setItem('mm-fedits', JSON.stringify(this.edits));
+  },
+  add(key, text, colour, meta) {
+    const list = this.marks[key] || (this.marks[key] = []);
+    if (!list.some(m => m.x === text)) list.push({ x: text, c: colour });
+    this.meta[key] = meta;
+    this.save();
+  },
+  remove(key, text) {
+    if (!this.marks[key]) return;
+    this.marks[key] = this.marks[key].filter(m => m.x !== text);
+    if (!this.marks[key].length) { delete this.marks[key]; delete this.meta[key]; }
+    this.save();
+  },
+  count() { return Object.values(this.marks).reduce((n, l) => n + l.length, 0); }
+};
+const factKeyOf = (pid, it) => `${pid}::${factSlug(it.t || it.d)}`;
+
+const hl = {
+  on: localStorage.getItem('mm-hl-on') === 'true',
+  colour: localStorage.getItem('mm-hl-colour') || 'gold',
+  toggle() { this.on = !this.on; localStorage.setItem('mm-hl-on', String(this.on)); this.paint(); },
+  setColour(c) { this.colour = c; localStorage.setItem('mm-hl-colour', c); this.paint(); },
+  paint() {
+    const btn = $('#facts-hl'), bar = $('#facts-hlbar');
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', String(this.on));
+    btn.classList.toggle('on', this.on);
+    btn.dataset.c = this.colour;
+    if (bar) {
+      bar.hidden = !this.on;
+      bar.innerHTML = HL_COLOURS.map(([c, label]) =>
+        `<button class="hl-sw${c === this.colour ? ' on' : ''}" data-c="${c}" title="${label}" aria-label="${label}"></button>`).join('')
+        + `<span class="hl-hint">Select text to mark it · click a mark to remove</span>`;
+    }
+    document.body.classList.toggle('hl-on', this.on);
+  }
+};
+
+// Re-apply stored marks by walking text nodes, rather than by rewriting HTML: the
+// entry's markup already carries bold and italics, and a string replace would break them.
+function applyHighlights(li, key) {
+  const list = hlStore.marks[key]; if (!list?.length) return;
+  for (const m of list) {
+    const walker = document.createTreeWalker(li, NodeFilter.SHOW_TEXT);
+    const hits = [];
+    let n;
+    while ((n = walker.nextNode())) {
+      if (n.parentElement.closest('.hl')) continue;
+      const at = n.nodeValue.indexOf(m.x);
+      if (at >= 0) { hits.push([n, at]); break; }      // first occurrence is enough
+    }
+    for (const [node, at] of hits) {
+      const after = node.splitText(at);
+      after.splitText(m.x.length);
+      const mark = document.createElement('mark');
+      mark.className = 'hl'; mark.dataset.c = m.c;
+      after.parentNode.replaceChild(mark, after);
+      mark.appendChild(after);
+    }
+  }
+}
+
+/* ── inline edit: e enters and leaves, the bar saves ── */
+const factEdit = {
+  node: null, key: null,
+  start(li) {
+    if (!li) return;
+    this.stop();
+    this.node = li; this.key = li.dataset.key;
+    li.classList.add('editing');
+    li.querySelectorAll('.fi-t,.fi-d').forEach(n => { n.contentEditable = 'true'; n.spellcheck = false; });
+    li.insertAdjacentHTML('beforeend',
+      `<span class="fi-edit">editing · <b data-ed="save">Save</b> (Ctrl+S) · <b data-ed="cancel">Cancel</b> (Esc) · e to exit</span>`);
+    li.querySelector('.fi-d')?.focus();
+  },
+  save() {
+    if (!this.node) return;
+    const t = this.node.querySelector('.fi-t')?.innerText.replace(/\s*—\s*$/, '').trim();
+    const d = this.node.querySelector('.fi-d')?.innerText.trim();
+    hlStore.edits[this.key] = { t: t || '', d: d || '' };
+    hlStore.save();
+    this.stop(); renderFacts();
+  },
+  stop() {
+    if (!this.node) return;
+    this.node.classList.remove('editing');
+    this.node.querySelectorAll('[contenteditable]').forEach(n => n.removeAttribute('contenteditable'));
+    this.node.querySelector('.fi-edit')?.remove();
+    this.node = null; this.key = null;
+  },
+  toggle(li) { this.node ? (this.stop(), renderFacts()) : this.start(li); }
+};
 
 async function renderFacts(arg) {
   await loadFacts();
@@ -1523,12 +1629,20 @@ async function renderFacts(arg) {
       if (!items.length) continue;
       shown += items.length;
       secHTML += `<div class="fs-group"><h3>${esc(g.g)}</h3><ul>`
-        + items.map(it => factItemHTML(it, facts.q.trim(), badge)).join('') + `</ul></div>`;
+        + items.map(it => {
+            const key = factKeyOf(facts.pid, it);
+            const ed = hlStore.edits[key];
+            return factItemHTML(ed ? { ...it, t: ed.t || it.t, d: ed.d || it.d } : it,
+                                facts.q.trim(), badge, key);
+          }).join('') + `</ul></div>`;
     }
     if (secHTML) html += `<section class="fs-sec"><h2>${esc(s.h)}</h2>${secHTML}</section>`;
   }
   const total = all.length;
   $('#facts-body').innerHTML = html || `<p class="fs-none">Nothing matches “${esc(facts.q)}” in ${esc(d?.label || '')}.</p>`;
+  // Marks are re-applied after every paint — filtering and search rebuild the list.
+  $('#facts-body').querySelectorAll('.fi').forEach(li => applyHighlights(li, li.dataset.key));
+  hl.paint();
   buildFactJump();
   $('#facts-count').textContent = (q || facts.k) ? `${shown} of ${total} shown` : `${total} facts`;
 }
@@ -1761,6 +1875,61 @@ $('#facts-body')?.addEventListener('click', e => {
   navigator.clipboard?.writeText(t).catch(() => {});
   li.classList.add('copied'); setTimeout(() => li.classList.remove('copied'), 900);
 });
+/* ── highlighter: select to mark, click a mark to remove ── */
+$('#facts-hl')?.addEventListener('click', () => hl.toggle());
+$('#facts-hlbar')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-c]'); if (b) hl.setColour(b.dataset.c);
+});
+$('#facts-body')?.addEventListener('mouseup', () => {
+  if (!hl.on) return;
+  const sel = window.getSelection();
+  const text = String(sel).trim();
+  if (!text || text.length < 2) return;
+  const li = sel.anchorNode?.parentElement?.closest('.fi');
+  if (!li || !sel.focusNode?.parentElement?.closest('.fi')) return;
+  if (li !== sel.focusNode.parentElement.closest('.fi')) return;   // one entry at a time
+  const d = FACTS?.[facts.pid];
+  const grp = li.closest('.fs-group')?.querySelector('h3')?.textContent || '';
+  const sec = li.closest('.fs-sec')?.querySelector('h2')?.textContent || '';
+  hlStore.add(li.dataset.key, text, hl.colour, {
+    pid: facts.pid, label: d?.label || facts.pid, sec, grp,
+    term: li.querySelector('.fi-t')?.textContent || ''
+  });
+  sel.removeAllRanges();
+  applyHighlights(li, li.dataset.key);
+});
+
+/* ── inline edit: e enters and leaves; Ctrl+S or the bar saves ── */
+let factHover = null;
+$('#facts-body')?.addEventListener('mouseover', e => {
+  const li = e.target.closest('.fi'); if (li) factHover = li;
+});
+$('#facts-body')?.addEventListener('focusin', e => {
+  const li = e.target.closest('.fi'); if (li) factHover = li;
+});
+$('#facts-body')?.addEventListener('click', e => {
+  const ed = e.target.closest('[data-ed]');
+  if (ed) { e.stopPropagation(); ed.dataset.ed === 'save' ? factEdit.save() : (factEdit.stop(), renderFacts()); return; }
+  const mark = e.target.closest('.hl');
+  if (mark && hl.on) {
+    e.stopPropagation();
+    const li = mark.closest('.fi');
+    hlStore.remove(li.dataset.key, mark.textContent);
+    renderFacts();
+  }
+}, true);
+addEventListener('keydown', e => {
+  if (!$('#view-facts')?.classList.contains('active')) return;
+  if (factEdit.node) {                      // inside the editor
+    if (e.key === 'Escape') { e.preventDefault(); factEdit.stop(); renderFacts(); }
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's') { e.preventDefault(); factEdit.save(); }
+    return;
+  }
+  if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) return;
+  if (e.key === 'h' || e.key === 'H') { e.preventDefault(); hl.toggle(); }
+  if (e.key === 'e' || e.key === 'E') { e.preventDefault(); factEdit.toggle(factHover); }
+});
+
 $('#facts-read')?.addEventListener('click', () => factRead.toggle());
 $('#facts-readbar')?.addEventListener('click', e => {
   const id = e.target.id;
@@ -2048,6 +2217,41 @@ function feedTogglePlay() {
   feedSpeakCurrent();
 }
 
+/* ── the home panel: every mark you have made, grouped by where it came from ──
+   Built from storage on each home render, so it is current the moment you come
+   back from the bank. Grouped paper → section, which is the bank's own subject
+   organisation, then listed newest group first. */
+function renderHighlights() {
+  const panel = $('#hl-panel'); if (!panel) return;
+  const n = hlStore.count();
+  panel.hidden = !n;
+  if (!n) { panel.innerHTML = ''; return; }
+  const byPaper = {};
+  for (const [key, list] of Object.entries(hlStore.marks)) {
+    const m = hlStore.meta[key] || {};
+    const label = m.label || key.split('::')[0];
+    const sec = m.sec || 'Marked';
+    ((byPaper[label] ||= {})[sec] ||= []).push({ key, pid: m.pid, term: m.term, grp: m.grp, list });
+  }
+  panel.innerHTML = `<div class="hl-head"><b>◧ Highlights</b><span>${n} across ${Object.keys(byPaper).length} papers</span>
+      <button class="hl-clear" id="hl-clear" type="button">Clear all</button></div>`
+    + Object.entries(byPaper).map(([label, secs]) => `
+      <div class="hl-paper"><h3>${esc(label)}</h3>`
+      + Object.entries(secs).map(([sec, entries]) => `
+        <div class="hl-sec"><h4>${esc(sec)}</h4>`
+        + entries.map(en => `<a class="hl-entry" href="#/facts/${esc(en.pid || '')}">
+            <b>${esc(en.term || '')}</b>
+            ${en.list.map(mk => `<mark class="hl" data-c="${mk.c}">${esc(mk.x)}</mark>`).join(' ')}
+          </a>`).join('')
+        + `</div>`).join('')
+      + `</div>`).join('');
+}
+$('#hl-panel')?.addEventListener('click', e => {
+  if (e.target.id !== 'hl-clear') return;
+  e.preventDefault();
+  hlStore.marks = {}; hlStore.meta = {}; hlStore.save(); renderHighlights();
+});
+
 /* ══════════════════ ROUTER ══════════════════ */
 function go(hash) { location.hash = hash; }
 
@@ -2129,6 +2333,7 @@ async function route() {
   } else {
     $('#view-home').classList.add('active');
     renderHome();
+    renderHighlights();
     Promise.all(ORDER.map(loadAnswers)).then(() => {
       if ((location.hash || '#/') === '#/') renderHome();
     });

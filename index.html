@@ -38,6 +38,7 @@
     <span class="nm"><b>FactnStat</b><small>Articles, cases, committees, schemes, data — paper-wise</small></span>
     <span class="arw">›</span>
   </button>
+  <section class="hl-panel" id="hl-panel" hidden></section>
   <button class="notes-cta" id="go-notes">
     <span class="ic">📚</span>
     <span class="nm"><b>Notes library</b><small id="notes-sub">Mains Smasher notes, by paper</small></span>
@@ -127,7 +128,10 @@
       <button class="fj-arw" data-jump="next" aria-label="Next section">›</button>
       <button class="fj-read" id="facts-read" type="button" aria-pressed="false"
               title="Read the bank aloud from here (Spacebar)">◉</button>
+      <button class="fj-hl" id="facts-hl" type="button" aria-pressed="false" data-c="gold"
+              title="Highlighter (h) — select text to mark it">▮</button>
     </div>
+    <div class="facts-hlbar" id="facts-hlbar" hidden></div>
     <div class="facts-readbar" id="facts-readbar" role="status" aria-live="polite" hidden>
       <span class="read-pulse" aria-hidden="true"></span>
       <span id="facts-readpos"></span>

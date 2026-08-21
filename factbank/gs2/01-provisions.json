@@ -5,70 +5,301 @@
     {
       "g": "Preamble, Union and citizenship",
       "items": [
-        {"t": "Preamble", "d": "Sovereign, Socialist, Secular, Democratic Republic; Justice (social, economic, political), Liberty, Equality, Fraternity — dignity of the individual and unity and **integrity** of the nation. 'Socialist', 'Secular' and 'integrity' were inserted by the **42nd Amendment, 1976**. Held to be **part of the Constitution and amendable but not its basic structure** in *Kesavananda* and reaffirmed in 2024.", "s": "Preamble / Kesavananda Bharati (1973)"},
-        {"t": "Article 1", "d": "India, that is Bharat, shall be a **Union of States** — Ambedkar: the Union is not the result of an agreement among states and no state has the **right to secede**. The textual anchor for 'indestructible union of destructible states'.", "s": "Constitution of India"},
-        {"t": "Articles 2 and 3", "d": "Art. 2 admits or establishes **new** states; **Art. 3** forms new states and alters areas, boundaries or names of existing states — needs the **President's recommendation** and reference to the state legislature **whose view is not binding**. Basis of linguistic reorganisation and of Telangana (2014) and the J&K Reorganisation Act, 2019.", "s": "Berubari Union (1960) / Babulal Parate (1960)"},
-        {"t": "Articles 5-11", "d": "Citizenship at commencement; **Art. 11** empowers Parliament to regulate citizenship by law — hence the **Citizenship Act, 1955** and its amendments (1986, 2003 introducing the NRC/NPR framework, and 2019). Citizenship is a **Union subject (List I, Entry 17)**.", "s": "Constitution / Citizenship Act, 1955"}
+        {
+          "t": "Preamble",
+          "d": "Sovereign, Socialist, Secular, Democratic Republic; Justice (social, economic, political), Liberty, Equality, Fraternity — dignity of the individual and unity and **integrity** of the nation. 'Socialist', 'Secular' and 'integrity' were inserted by the **42nd Amendment, 1976**. Held to be **part of the Constitution and amendable but not its basic structure** in *Kesavananda* and reaffirmed in 2024.",
+          "s": "Preamble / Kesavananda Bharati (1973)"
+        },
+        {
+          "t": "Article 1",
+          "d": "India, that is Bharat, shall be a **Union of States** — Ambedkar: the Union is not the result of an agreement among states and no state has the **right to secede**. The textual anchor for 'indestructible union of destructible states'.",
+          "s": "Constitution of India"
+        },
+        {
+          "t": "Articles 2 and 3",
+          "d": "Art. 2 admits or establishes **new** states; **Art. 3** forms new states and alters areas, boundaries or names of existing states — needs the **President's recommendation** and reference to the state legislature **whose view is not binding**. Basis of linguistic reorganisation and of Telangana (2014) and the J&K Reorganisation Act, 2019.",
+          "s": "Berubari Union (1960) / Babulal Parate (1960)"
+        },
+        {
+          "t": "Articles 5-11",
+          "d": "Citizenship at commencement; **Art. 11** empowers Parliament to regulate citizenship by law — hence the **Citizenship Act, 1955** and its amendments (1986, 2003 introducing the NRC/NPR framework, and 2019). Citizenship is a **Union subject (List I, Entry 17)**.",
+          "s": "Constitution / Citizenship Act, 1955"
+        }
       ]
     },
     {
       "g": "Fundamental Rights",
       "items": [
-        {"t": "Article 12", "d": "Definition of **'State'** — includes Government and Parliament of India, state governments and legislatures, **local authorities and 'other authorities'**. 'Other authorities' extended to instrumentalities of the state by the six-fold test in *Ajay Hasia* and *R.D. Shetty*; BCCI held amenable to writ jurisdiction for public functions.", "s": "Ajay Hasia (1981) / Zee Telefilms (2005)"},
-        {"t": "Article 13", "d": "Laws inconsistent with Fundamental Rights are **void** — the textual basis of **judicial review**. Carries the doctrines of **severability**, **eclipse**, and **waiver is not permitted** (a citizen cannot waive a fundamental right — *Basheshar Nath*). **Art. 13(4)** excludes constitutional amendments, which is why *Kesavananda* had to build basic structure.", "s": "Article 13"},
-        {"t": "Article 14", "d": "Equality before law (Dicey's negative concept) and equal protection of the laws (positive). Tests: **reasonable classification** (intelligible differentia + rational nexus) and, since *E.P. Royappa*, the **arbitrariness test** — 'equality and arbitrariness are sworn enemies'. Extended to **manifest arbitrariness** of legislation in *Shayara Bano*.", "s": "E.P. Royappa (1974) / Shayara Bano (2017)"},
-        {"t": "Articles 15 and 16", "d": "15(1) bars discrimination on religion, race, caste, sex, place of birth; **15(3)** special provisions for women and children; **15(4)** SEBC/SC/ST advancement; **15(5)** private unaided institutions (93rd Amendment); **15(6)** and **16(6)** EWS 10% (103rd Amendment, upheld in *Janhit Abhiyan* 2022). 16(4) reservation in appointments; **16(4A)** promotion with consequential seniority; **16(4B)** carry-forward of backlog vacancies.", "s": "Articles 15-16 / Janhit Abhiyan (2022)"},
-        {"t": "Article 17", "d": "**Abolition of untouchability** — the only fundamental right enforceable against private individuals as well; operationalised through the Protection of Civil Rights Act, 1955 and the **SC/ST (Prevention of Atrocities) Act, 1989**. Invoked in *Sabarimala* by Chandrachud J. to cover exclusion based on notions of purity and pollution.", "s": "Article 17 / Sabarimala (2018)"},
-        {"t": "Articles 19 and 21", "d": "**19(1)(a)-(g)** six freedoms, each with its own reasonableness clause (19(2)-(6)); **Art. 21** life and personal liberty, transformed by *Maneka Gandhi* into a **'procedure established by law' that must be just, fair and reasonable** — importing substantive due process. The **golden triangle is Articles 14, 19 and 21** (*Minerva Mills*).", "s": "Maneka Gandhi (1978) / Minerva Mills (1980)"},
-        {"t": "Article 21 — the derived rights", "d": "Read into Art. 21: **privacy** (*Puttaswamy* 2017), **clean environment** (*Subhash Kumar*), **livelihood** (*Olga Tellis*), **speedy trial** (*Hussainara Khatoon*), **legal aid** (*M.H. Hoskot*), **shelter**, **health**, **dignity**, **against a clean environment free of climate impacts** (*M.K. Ranjitsinh* 2024), **passive euthanasia and living wills** (*Common Cause* 2018), and the **right to be forgotten** in emerging jurisprudence. Naming three with case-tags is worth more than listing ten.", "s": "Supreme Court, Article 21 jurisprudence"},
-        {"t": "Articles 21A and 45", "d": "**86th Amendment, 2002** made free and compulsory education for **6-14 years** a fundamental right (Art. 21A), moved the earlier Art. 45 directive to **early childhood care and education below 6**, and added the parental duty under **Art. 51A(k)**. Implemented by the **RTE Act, 2009**, upheld in *Society for Unaided Private Schools* (2012).", "s": "86th Amendment, 2002"},
-        {"t": "Article 22", "d": "Protection against arrest and detention — right to be informed of grounds, to consult counsel, and production before a magistrate within **24 hours**; **but 22(3)** excludes enemy aliens and **preventive detention**. 22(4)-(7) permit detention up to **3 months** without an Advisory Board. India is the only major democracy with **peacetime preventive detention in the Constitution itself**.", "s": "Article 22 / Ameena Begum (2023)"},
-        {"t": "Articles 23 and 24", "d": "**23** prohibits traffic in human beings and **begar/forced labour** — the basis of the Bonded Labour System (Abolition) Act, 1976 and of *PUDR v. Union of India* (1982), which held that **payment below minimum wage is forced labour**. **24** bars employment of children under 14 in factories, mines and hazardous work.", "s": "PUDR (1982) / Article 24"},
-        {"t": "Articles 25-28", "d": "**25** freedom of conscience and free profession, practice and propagation of religion, subject to public order, morality, health and **the state's power to make social welfare and reform laws**; **26** rights of religious denominations; **27** no compulsion to pay taxes for promotion of a religion; **28** religious instruction in state-funded institutions. The **essential religious practices doctrine** comes from *Shirur Mutt* (1954).", "s": "Shirur Mutt (1954)"},
-        {"t": "Articles 29 and 30", "d": "**29** protects the language, script and culture of any section of citizens; **30** gives **minorities the right to establish and administer educational institutions**, and 30(1A) requires that compensation on acquisition not defeat that right. *T.M.A. Pai* (2002) fixed the **state as the unit** for determining minority status; *Aligarh Muslim University* (2024) overruled *Azeez Basha* and laid down the **indicia test** for minority character.", "s": "T.M.A. Pai (2002) / AMU (2024)"},
-        {"t": "Article 32", "d": "Right to constitutional remedies — Ambedkar's **\"heart and soul of the Constitution\"**. Five writs: **habeas corpus, mandamus, prohibition, certiorari, quo warranto**. Art. 32 is itself a fundamental right and **cannot be suspended except under Art. 359** during an emergency; the SC's power under 32 is part of the **basic structure**.", "s": "Article 32 / L. Chandra Kumar (1997)"},
-        {"t": "Article 31C and property", "d": "The **44th Amendment, 1978** deleted the right to property from Part III and made it a **constitutional right under Article 300A** ('no person shall be deprived of property save by authority of law'). *Minerva Mills* struck down the extension of Art. 31C protection to all DPSPs, restoring the balance between Parts III and IV.", "s": "44th Amendment / Minerva Mills (1980)"}
+        {
+          "t": "Article 12",
+          "d": "Definition of **'State'** — includes Government and Parliament of India, state governments and legislatures, **local authorities and 'other authorities'**. 'Other authorities' extended to instrumentalities of the state by the six-fold test in *Ajay Hasia* and *R.D. Shetty*; BCCI held amenable to writ jurisdiction for public functions.",
+          "s": "Ajay Hasia (1981) / Zee Telefilms (2005)"
+        },
+        {
+          "t": "Article 13",
+          "d": "Laws inconsistent with Fundamental Rights are **void** — the textual basis of **judicial review**. Carries the doctrines of **severability**, **eclipse**, and **waiver is not permitted** (a citizen cannot waive a fundamental right — *Basheshar Nath*). **Art. 13(4)** excludes constitutional amendments, which is why *Kesavananda* had to build basic structure.",
+          "s": "Article 13"
+        },
+        {
+          "t": "Article 14",
+          "d": "Equality before law (Dicey's negative concept) and equal protection of the laws (positive). Tests: **reasonable classification** (intelligible differentia + rational nexus) and, since *E.P. Royappa*, the **arbitrariness test** — 'equality and arbitrariness are sworn enemies'. Extended to **manifest arbitrariness** of legislation in *Shayara Bano*.",
+          "s": "E.P. Royappa (1974) / Shayara Bano (2017)"
+        },
+        {
+          "t": "Articles 15 and 16",
+          "d": "15(1) bars discrimination on religion, race, caste, sex, place of birth; **15(3)** special provisions for women and children; **15(4)** SEBC/SC/ST advancement; **15(5)** private unaided institutions (93rd Amendment); **15(6)** and **16(6)** EWS 10% (103rd Amendment, upheld in *Janhit Abhiyan* 2022). 16(4) reservation in appointments; **16(4A)** promotion with consequential seniority; **16(4B)** carry-forward of backlog vacancies.",
+          "s": "Articles 15-16 / Janhit Abhiyan (2022)"
+        },
+        {
+          "t": "Article 17",
+          "d": "**Abolition of untouchability** — the only fundamental right enforceable against private individuals as well; operationalised through the Protection of Civil Rights Act, 1955 and the **SC/ST (Prevention of Atrocities) Act, 1989**. Invoked in *Sabarimala* by Chandrachud J. to cover exclusion based on notions of purity and pollution.",
+          "s": "Article 17 / Sabarimala (2018)"
+        },
+        {
+          "t": "Articles 19 and 21",
+          "d": "**19(1)(a)-(g)** six freedoms, each with its own reasonableness clause (19(2)-(6)); **Art. 21** life and personal liberty, transformed by *Maneka Gandhi* into a **'procedure established by law' that must be just, fair and reasonable** — importing substantive due process. The **golden triangle is Articles 14, 19 and 21** (*Minerva Mills*).",
+          "s": "Maneka Gandhi (1978) / Minerva Mills (1980)"
+        },
+        {
+          "t": "Article 21 — the derived rights",
+          "d": "Read into Art. 21: **privacy** (*Puttaswamy* 2017), **clean environment** (*Subhash Kumar*), **livelihood** (*Olga Tellis*), **speedy trial** (*Hussainara Khatoon*), **legal aid** (*M.H. Hoskot*), **shelter**, **health**, **dignity**, **against a clean environment free of climate impacts** (*M.K. Ranjitsinh* 2024), **passive euthanasia and living wills** (*Common Cause* 2018), and the **right to be forgotten** in emerging jurisprudence. Naming three with case-tags is worth more than listing ten.",
+          "s": "Supreme Court, Article 21 jurisprudence"
+        },
+        {
+          "t": "Articles 21A and 45",
+          "d": "**86th Amendment, 2002** made free and compulsory education for **6-14 years** a fundamental right (Art. 21A), moved the earlier Art. 45 directive to **early childhood care and education below 6**, and added the parental duty under **Art. 51A(k)**. Implemented by the **RTE Act, 2009**, upheld in *Society for Unaided Private Schools* (2012).",
+          "s": "86th Amendment, 2002"
+        },
+        {
+          "t": "Article 22",
+          "d": "Protection against arrest and detention — right to be informed of grounds, to consult counsel, and production before a magistrate within **24 hours**; **but 22(3)** excludes enemy aliens and **preventive detention**. 22(4)-(7) permit detention up to **3 months** without an Advisory Board. India is the only major democracy with **peacetime preventive detention in the Constitution itself**.",
+          "s": "Article 22 / Ameena Begum (2023)"
+        },
+        {
+          "t": "Articles 23 and 24",
+          "d": "**23** prohibits traffic in human beings and **begar/forced labour** — the basis of the Bonded Labour System (Abolition) Act, 1976 and of *PUDR v. Union of India* (1982), which held that **payment below minimum wage is forced labour**. **24** bars employment of children under 14 in factories, mines and hazardous work.",
+          "s": "PUDR (1982) / Article 24"
+        },
+        {
+          "t": "Articles 25-28",
+          "d": "**25** freedom of conscience and free profession, practice and propagation of religion, subject to public order, morality, health and **the state's power to make social welfare and reform laws**; **26** rights of religious denominations; **27** no compulsion to pay taxes for promotion of a religion; **28** religious instruction in state-funded institutions. The **essential religious practices doctrine** comes from *Shirur Mutt* (1954).",
+          "s": "Shirur Mutt (1954)"
+        },
+        {
+          "t": "Articles 29 and 30",
+          "d": "**29** protects the language, script and culture of any section of citizens; **30** gives **minorities the right to establish and administer educational institutions**, and 30(1A) requires that compensation on acquisition not defeat that right. *T.M.A. Pai* (2002) fixed the **state as the unit** for determining minority status; *Aligarh Muslim University* (2024) overruled *Azeez Basha* and laid down the **indicia test** for minority character.",
+          "s": "T.M.A. Pai (2002) / AMU (2024)"
+        },
+        {
+          "t": "Article 32",
+          "d": "Right to constitutional remedies — Ambedkar's **\"heart and soul of the Constitution\"**. Five writs: **habeas corpus, mandamus, prohibition, certiorari, quo warranto**. Art. 32 is itself a fundamental right and **cannot be suspended except under Art. 359** during an emergency; the SC's power under 32 is part of the **basic structure**.",
+          "s": "Article 32 / L. Chandra Kumar (1997)"
+        },
+        {
+          "t": "Article 31C and property",
+          "d": "The **44th Amendment, 1978** deleted the right to property from Part III and made it a **constitutional right under Article 300A** ('no person shall be deprived of property save by authority of law'). *Minerva Mills* struck down the extension of Art. 31C protection to all DPSPs, restoring the balance between Parts III and IV.",
+          "s": "44th Amendment / Minerva Mills (1980)"
+        }
       ]
     },
     {
       "g": "DPSPs, duties and the executive",
       "items": [
-        {"t": "Directive Principles — key articles", "d": "**39(b)-(c)** material resources and concentration of wealth; **39A** equal justice and free legal aid (42nd Amendment); **40** organisation of village panchayats; **41** right to work, education and public assistance; **43** living wage; **43B** cooperative societies (97th Amendment); **44** uniform civil code; **47** nutrition and public health, prohibition of intoxicants; **48A** environment, forests and wildlife (42nd); **50** separation of judiciary from executive.", "s": "Part IV"},
-        {"t": "Article 51A", "d": "**Eleven Fundamental Duties**, inserted by the **42nd Amendment, 1976** on the **Swaran Singh Committee's** recommendation, with 51A(k) added by the 86th. Non-justiciable, but the **Verma Committee (1999)** listed existing statutes that operationalise them, and courts use them as an interpretive aid.", "s": "42nd Amendment / Verma Committee, 1999"},
-        {"t": "Articles 52-78 — the Union Executive", "d": "**53** executive power vested in the President; **74** Council of Ministers **aid and advise**, binding after the **42nd Amendment**, with a **one-time return for reconsideration** added by the 44th; **75(3)** collective responsibility to the Lok Sabha; **76** Attorney General; **78** the PM's duty to communicate Council decisions to the President — the constitutional basis of the President's right to be informed.", "s": "Part V / Shamsher Singh (1974)"},
-        {"t": "Article 72 and 161", "d": "**Pardoning power** — President (72) covers court martial, offences against Union law, and **all death sentences**; Governor (161) is narrower. It is an **executive act, exercised on ministerial advice**, and is **judicially reviewable on limited grounds** — non-application of mind, mala fides, or irrelevant considerations. Undue delay in deciding a mercy petition is a ground to commute.", "s": "Maru Ram (1980) / Epuru Sudhakar (2006) / Shatrughan Chauhan (2014)"},
-        {"t": "Article 123 and 213", "d": "**Ordinance-making power** of the President and Governor, exercisable only when the legislature is not in session and immediate action is necessary. *Krishna Kumar Singh* (2017) held that **re-promulgation is a fraud on the Constitution** and that ordinances must be laid before the legislature — satisfaction is subject to judicial review. Bihar's 256 re-promulgated ordinances over 1967-81 is the standing example.", "s": "D.C. Wadhwa (1987) / Krishna Kumar Singh (2017)"},
-        {"t": "Articles 153-167 — the Governor", "d": "**155** appointed by the President; **156** holds office **during the President's pleasure** — no fixed tenure; **163** aids-and-advises except where he acts in his discretion, and **the question of what falls in discretion is non-justiciable in form but reviewable in substance**; **164(1)** appoints the CM; **200** assent to bills; **361** immunity. The Sarkaria, Punchhi and Venkatachaliah reports all recommended appointment from a panel proposed by the state and removal only for proven misconduct.", "s": "Part VI / Sarkaria & Punchhi Commissions"},
-        {"t": "Article 200 and 201", "d": "The Governor may assent, withhold assent, return a non-money bill for reconsideration, or **reserve it for the President**. The **first proviso requires a return 'as soon as possible'**; if the House passes it again, the Governor **shall not withhold assent**. The Supreme Court has read **timelines into what the text leaves open** and held that indefinite inaction — the 'pocket veto' — is unconstitutional. The Presidential Reference of 2025 arose from this line of cases.", "s": "State of Punjab v. Governor (2023) / State of Tamil Nadu v. Governor (2025)"},
-        {"t": "Article 356", "d": "President's Rule on failure of constitutional machinery. *S.R. Bommai* (1994) made the proclamation **justiciable**, held that the **floor of the House is the only test of majority**, that the Assembly may be dissolved only **after both Houses of Parliament approve**, and that **secularism is a basic feature** — a state government acting against secularism can be dismissed. Recommended for use only in extreme cases by the **Sarkaria Commission**.", "s": "S.R. Bommai (1994) / Rameshwar Prasad (2006)"}
+        {
+          "t": "Directive Principles — key articles",
+          "d": "**39(b)-(c)** material resources and concentration of wealth; **39A** equal justice and free legal aid (42nd Amendment); **40** organisation of village panchayats; **41** right to work, education and public assistance; **43** living wage; **43B** cooperative societies (97th Amendment); **44** uniform civil code; **47** nutrition and public health, prohibition of intoxicants; **48A** environment, forests and wildlife (42nd); **50** separation of judiciary from executive.",
+          "s": "Part IV"
+        },
+        {
+          "t": "Article 51A",
+          "d": "**Eleven Fundamental Duties**, inserted by the **42nd Amendment, 1976** on the **Swaran Singh Committee's** recommendation, with 51A(k) added by the 86th. Non-justiciable, but the **Verma Committee (1999)** listed existing statutes that operationalise them, and courts use them as an interpretive aid.",
+          "s": "42nd Amendment / Verma Committee, 1999"
+        },
+        {
+          "t": "Articles 52-78 — the Union Executive",
+          "d": "**53** executive power vested in the President; **74** Council of Ministers **aid and advise**, binding after the **42nd Amendment**, with a **one-time return for reconsideration** added by the 44th; **75(3)** collective responsibility to the Lok Sabha; **76** Attorney General; **78** the PM's duty to communicate Council decisions to the President — the constitutional basis of the President's right to be informed.",
+          "s": "Part V / Shamsher Singh (1974)"
+        },
+        {
+          "t": "Article 72 and 161",
+          "d": "**Pardoning power** — President (72) covers court martial, offences against Union law, and **all death sentences**; Governor (161) is narrower. It is an **executive act, exercised on ministerial advice**, and is **judicially reviewable on limited grounds** — non-application of mind, mala fides, or irrelevant considerations. Undue delay in deciding a mercy petition is a ground to commute.",
+          "s": "Maru Ram (1980) / Epuru Sudhakar (2006) / Shatrughan Chauhan (2014)"
+        },
+        {
+          "t": "Article 123 and 213",
+          "d": "**Ordinance-making power** of the President and Governor, exercisable only when the legislature is not in session and immediate action is necessary. *Krishna Kumar Singh* (2017) held that **re-promulgation is a fraud on the Constitution** and that ordinances must be laid before the legislature — satisfaction is subject to judicial review. Bihar's 256 re-promulgated ordinances over 1967-81 is the standing example.",
+          "s": "D.C. Wadhwa (1987) / Krishna Kumar Singh (2017)"
+        },
+        {
+          "t": "Articles 153-167 — the Governor",
+          "d": "**155** appointed by the President; **156** holds office **during the President's pleasure** — no fixed tenure; **163** aids-and-advises except where he acts in his discretion, and **the question of what falls in discretion is non-justiciable in form but reviewable in substance**; **164(1)** appoints the CM; **200** assent to bills; **361** immunity. The Sarkaria, Punchhi and Venkatachaliah reports all recommended appointment from a panel proposed by the state and removal only for proven misconduct.",
+          "s": "Part VI / Sarkaria & Punchhi Commissions"
+        },
+        {
+          "t": "Article 200 and 201",
+          "d": "The Governor may assent, withhold assent, return a non-money bill for reconsideration, or **reserve it for the President**. The **first proviso requires a return 'as soon as possible'**; if the House passes it again, the Governor **shall not withhold assent**. The Supreme Court has read **timelines into what the text leaves open** and held that indefinite inaction — the 'pocket veto' — is unconstitutional. The Presidential Reference of 2025 arose from this line of cases.",
+          "s": "State of Punjab v. Governor (2023) / State of Tamil Nadu v. Governor (2025)"
+        },
+        {
+          "t": "Article 356",
+          "d": "President's Rule on failure of constitutional machinery. *S.R. Bommai* (1994) made the proclamation **justiciable**, held that the **floor of the House is the only test of majority**, that the Assembly may be dissolved only **after both Houses of Parliament approve**, and that **secularism is a basic feature** — a state government acting against secularism can be dismissed. Recommended for use only in extreme cases by the **Sarkaria Commission**.",
+          "s": "S.R. Bommai (1994) / Rameshwar Prasad (2006)"
+        }
       ]
     },
     {
       "g": "Parliament and legislature",
       "items": [
-        {"t": "Articles 79-88", "d": "**79** Parliament = President + two Houses; **80** Rajya Sabha up to 250 (238 elected by **single transferable vote** by state assemblies + 12 nominated); **81** Lok Sabha up to 550; **83** terms — LS five years, RS a permanent body with **one-third retiring every two years**; **88** ministers and the AG have the right to speak in either House.", "s": "Part V, Chapter II"},
-        {"t": "Article 100 and 108", "d": "**100** quorum is **one-tenth** of the total membership; **108** **joint sitting** to resolve a deadlock on an ordinary or financial (not money) bill — used only **three times**: Dowry Prohibition Act (1961), Banking Service Commission Repeal (1978) and the **POTA (2002)**. The Speaker presides over a joint sitting.", "s": "Articles 100, 108"},
-        {"t": "Articles 109-117 — financial procedure", "d": "**109** money bills originate only in the Lok Sabha; the Rajya Sabha has **14 days and only recommendatory power**; **110** defines a money bill and the **Speaker's certification is final**; **112** Annual Financial Statement; **113-114** demands for grants and the Appropriation Bill; **266** Consolidated Fund; **267** Contingency Fund; **117** prior recommendation of the President for financial bills. The money-bill route used for Aadhaar was upheld in *Puttaswamy (Aadhaar)* but doubted in *Rojer Mathew* and referred to a larger bench.", "s": "Articles 109-117 / Rojer Mathew (2019)"},
-        {"t": "Articles 105 and 194 — privileges", "d": "Freedom of speech in Parliament and immunity from proceedings for anything said or any vote given. **Sita Soren (2024)**, a **seven-judge bench, overruled P.V. Narasimha Rao (1998)**, holding that a legislator who takes a **bribe for a vote or speech enjoys no immunity** — the offence is complete on acceptance and is not 'essential to' the legislative function. Privileges remain **uncodified**, the standing reform demand.", "s": "Sita Soren v. Union of India (2024)"},
-        {"t": "Tenth Schedule — anti-defection", "d": "Inserted by the **52nd Amendment, 1985**; the **91st Amendment, 2003** deleted the split (one-third) exception and required a **merger of two-thirds**. *Kihoto Hollohan* (1992) upheld it but made the **Speaker's decision subject to judicial review**; *Keisham Meghachandra* (2020) said the Speaker should decide **within three months** and suggested an independent tribunal; *Subhash Desai* (2023) held that a **Whip is appointed by the party, not the legislature party**.", "s": "Tenth Schedule / Kihoto Hollohan (1992)"},
-        {"t": "Parliamentary committees", "d": "**PAC (1921, 22 members, chaired by the Opposition by convention)**, **Estimates Committee (1950, 30 members, LS only — 'continuous economy committee')**, **COPU (1964, 22)**; **24 Department-Related Standing Committees since 1993** (16 LS + 8 RS, 31 members each), which examine demands for grants, bills and long-term policy. Ministers are not members of DRSCs. Committee scrutiny of bills has fallen sharply — the standing critique of parliamentary decline.", "s": "Rules of Procedure / PRS Legislative Research"}
+        {
+          "t": "Articles 79-88",
+          "d": "**79** Parliament = President + two Houses; **80** Rajya Sabha up to 250 (238 elected by **single transferable vote** by state assemblies + 12 nominated); **81** Lok Sabha up to 550; **83** terms — LS five years, RS a permanent body with **one-third retiring every two years**; **88** ministers and the AG have the right to speak in either House.",
+          "s": "Part V, Chapter II"
+        },
+        {
+          "t": "Article 100 and 108",
+          "d": "**100** quorum is **one-tenth** of the total membership; **108** **joint sitting** to resolve a deadlock on an ordinary or financial (not money) bill — used only **three times**: Dowry Prohibition Act (1961), Banking Service Commission Repeal (1978) and the **POTA (2002)**. The Speaker presides over a joint sitting.",
+          "s": "Articles 100, 108"
+        },
+        {
+          "t": "Articles 109-117 — financial procedure",
+          "d": "**109** money bills originate only in the Lok Sabha; the Rajya Sabha has **14 days and only recommendatory power**; **110** defines a money bill and the **Speaker's certification is final**; **112** Annual Financial Statement; **113-114** demands for grants and the Appropriation Bill; **266** Consolidated Fund; **267** Contingency Fund; **117** prior recommendation of the President for financial bills. The money-bill route used for Aadhaar was upheld in *Puttaswamy (Aadhaar)* but doubted in *Rojer Mathew* and referred to a larger bench.",
+          "s": "Articles 109-117 / Rojer Mathew (2019)"
+        },
+        {
+          "t": "Articles 105 and 194 — privileges",
+          "d": "Freedom of speech in Parliament and immunity from proceedings for anything said or any vote given. **Sita Soren (2024)**, a **seven-judge bench, overruled P.V. Narasimha Rao (1998)**, holding that a legislator who takes a **bribe for a vote or speech enjoys no immunity** — the offence is complete on acceptance and is not 'essential to' the legislative function. Privileges remain **uncodified**, the standing reform demand.",
+          "s": "Sita Soren v. Union of India (2024)"
+        },
+        {
+          "t": "Tenth Schedule — anti-defection",
+          "d": "Inserted by the **52nd Amendment, 1985**; the **91st Amendment, 2003** deleted the split (one-third) exception and required a **merger of two-thirds**. *Kihoto Hollohan* (1992) upheld it but made the **Speaker's decision subject to judicial review**; *Keisham Meghachandra* (2020) said the Speaker should decide **within three months** and suggested an independent tribunal; *Subhash Desai* (2023) held that a **Whip is appointed by the party, not the legislature party**.",
+          "s": "Tenth Schedule / Kihoto Hollohan (1992)"
+        },
+        {
+          "t": "Parliamentary committees",
+          "d": "**PAC (1921, 22 members, chaired by the Opposition by convention)**, **Estimates Committee (1950, 30 members, LS only — 'continuous economy committee')**, **COPU (1964, 22)**; **24 Department-Related Standing Committees since 1993** (16 LS + 8 RS, 31 members each), which examine demands for grants, bills and long-term policy. Ministers are not members of DRSCs. Committee scrutiny of bills has fallen sharply — the standing critique of parliamentary decline.",
+          "s": "Rules of Procedure / PRS Legislative Research"
+        }
       ]
     },
     {
       "g": "Judiciary, federalism and constitutional bodies",
       "items": [
-        {"t": "Articles 124-147 — the Supreme Court", "d": "**124** establishment and appointment; **124A-C** were the NJAC provisions struck down in 2015; **126** acting CJI; **127-128** ad hoc and retired judges; **129** court of record with contempt power; **131** original jurisdiction in Centre-state disputes; **136** **Special Leave Petition**, the discretionary residual power; **137** review; **141** law declared is binding on all courts; **142** **complete justice**; **143** advisory jurisdiction, which the Court may decline.", "s": "Part V, Chapter IV"},
-        {"t": "Article 142", "d": "Power to pass any decree necessary for **complete justice**. Used for the **Ayodhya** settlement, the **Babri** structure, the **2G** cancellation, dissolving marriages on **irretrievable breakdown** (*Shilpa Sailesh*, 2023), and in *State of Punjab v. Governor* to fix timelines. Also the subject of the sharpest separation-of-powers criticism — powers under 142 cannot **supplant substantive law**.", "s": "Article 142 / Shilpa Sailesh (2023)"},
-        {"t": "Articles 214-231 and 226", "d": "High Courts; **Art. 226 is wider than Art. 32** — it issues writs for fundamental rights **and for 'any other purpose'**, and its territorial reach extends to where the cause of action arises. *L. Chandra Kumar* (1997) held that the **High Courts' power of judicial review under 226/227 is part of the basic structure** and tribunals cannot oust it.", "s": "L. Chandra Kumar (1997)"},
-        {"t": "Articles 245-255 — legislative relations", "d": "**246** and the **Seventh Schedule**: Union List 97, State List 59 (originally 66), Concurrent List 52 (originally 47). **248** residuary power with the Union; **249** RS resolution by two-thirds enabling Parliament to legislate on a State List item in the national interest; **250** during emergency; **252** two or more states requesting; **253** to implement international agreements; **254** **repugnancy**, with state law prevailing if it receives **Presidential assent**. Doctrines: **pith and substance, colourable legislation, harmonious construction**.", "s": "Part XI"},
-        {"t": "Articles 262 and 263", "d": "**262** inter-state **river water disputes** — Parliament may bar the jurisdiction of all courts, done by the Inter-State River Water Disputes Act, 1956; **263** empowers the President to establish an **Inter-State Council** — done in 1990 on the **Sarkaria Commission's** recommendation. The ISC is an advisory, recommendatory body that has met rarely; the **Punchhi Commission** wanted it strengthened into the primary forum for federal consultation.", "s": "Articles 262-263"},
-        {"t": "Article 279A — the GST Council", "d": "Created by the **101st Amendment, 2016**. Voting: **Centre one-third, all states together two-thirds, decisions by a three-fourths majority**; quorum one-half. *Mohit Minerals* (2022) held that **the Council's recommendations are persuasive, not binding**, because both Parliament and state legislatures have simultaneous power under Art. 246A — described by the Court as **'cooperative federalism as dialogue'**.", "s": "Union of India v. Mohit Minerals (2022)"},
-        {"t": "Articles 280 and 148-151", "d": "**280** Finance Commission every five years — devolution, grants-in-aid under Art. 275, and measures to augment state funds for local bodies. **148-151** the **CAG** — appointed by the President, removable like a SC judge, salary charged on the Consolidated Fund, **barred from further office** under the Union or a state after retirement; reports go to the President/Governor and are examined by the PAC.", "s": "Articles 148-151, 280"},
-        {"t": "Articles 315-323 — Public Service Commissions", "d": "UPSC and State PSCs; **316** appointment by the President/Governor, **at least half the members must have held office under the Government for ten years**; **317** removal **only by the President on a Supreme Court reference**; **319** post-retirement bar (a UPSC chairman is ineligible for any further government employment); **320** functions; **322** expenses charged on the Consolidated Fund; **323** annual report laid before the legislature with a memorandum on non-acceptance of advice.", "s": "Part XIV"},
-        {"t": "Articles 323A-323B and 324", "d": "**Tribunals** (42nd Amendment) — administrative tribunals (323A, Parliament only) and other-matter tribunals (323B). **324** vests superintendence, direction and control of elections in the **Election Commission**; the CEC and ECs are now appointed under the **CEC and Other ECs Act, 2023**, enacted after *Anoop Baranwal* (2023) had prescribed a CJI-inclusive panel. The CEC can be removed only like a SC judge; other ECs only on the CEC's recommendation.", "s": "Articles 323A-B, 324 / Anoop Baranwal (2023)"},
-        {"t": "Articles 338, 338A, 338B, 350B", "d": "**NCSC (338)**, **NCST (338A, created by the 89th Amendment, 2003)** and **NCBC (338B, given constitutional status by the 102nd Amendment, 2018)** — all have the powers of a civil court and must be consulted on major policy affecting their groups. **350B** Special Officer for Linguistic Minorities. The **105th Amendment, 2021** restored the states' power to identify their own SEBCs after *Maratha Reservation* (2021).", "s": "Articles 338-338B / 102nd & 105th Amendments"},
-        {"t": "Articles 243-243O and 243P-243ZG", "d": "**73rd and 74th Amendments, 1992** — three tiers above 20 lakh population, five-year terms, **State Election Commission (243K/243ZA)**, **State Finance Commission every five years (243I/243Y)**, **one-third seats for women** (many states now 50%), **Eleventh Schedule 29 subjects** and **Twelfth Schedule 18 subjects**, **District Planning Committee (243ZD)** and **Metropolitan Planning Committee (243ZE)**. Devolution of functions, funds and functionaries remains discretionary — the core weakness.", "s": "Parts IX and IXA"},
-        {"t": "Fifth and Sixth Schedules", "d": "**Fifth Schedule** — Scheduled Areas in ten states, Governor's report to the President, **Tribes Advisory Council**, and the Governor's power to modify central or state laws for the area. **Sixth Schedule** — **Autonomous District Councils in Assam, Meghalaya, Tripura and Mizoram** with legislative, judicial and financial powers over land, forests and customary law. **PESA, 1996** extends Part IX to Scheduled Areas with the gram sabha as the competent authority.", "s": "Fifth & Sixth Schedules / PESA, 1996"}
+        {
+          "t": "Articles 124-147 — the Supreme Court",
+          "d": "**124** establishment and appointment; **124A-C** were the NJAC provisions struck down in 2015; **126** acting CJI; **127-128** ad hoc and retired judges; **129** court of record with contempt power; **131** original jurisdiction in Centre-state disputes; **136** **Special Leave Petition**, the discretionary residual power; **137** review; **141** law declared is binding on all courts; **142** **complete justice**; **143** advisory jurisdiction, which the Court may decline.",
+          "s": "Part V, Chapter IV"
+        },
+        {
+          "t": "Article 142",
+          "d": "Power to pass any decree necessary for **complete justice**. Used for the **Ayodhya** settlement, the **Babri** structure, the **2G** cancellation, dissolving marriages on **irretrievable breakdown** (*Shilpa Sailesh*, 2023), and in *State of Punjab v. Governor* to fix timelines. Also the subject of the sharpest separation-of-powers criticism — powers under 142 cannot **supplant substantive law**.",
+          "s": "Article 142 / Shilpa Sailesh (2023)"
+        },
+        {
+          "t": "Articles 214-231 and 226",
+          "d": "High Courts; **Art. 226 is wider than Art. 32** — it issues writs for fundamental rights **and for 'any other purpose'**, and its territorial reach extends to where the cause of action arises. *L. Chandra Kumar* (1997) held that the **High Courts' power of judicial review under 226/227 is part of the basic structure** and tribunals cannot oust it.",
+          "s": "L. Chandra Kumar (1997)"
+        },
+        {
+          "t": "Articles 245-255 — legislative relations",
+          "d": "**246** and the **Seventh Schedule**: Union List 97, State List 59 (originally 66), Concurrent List 52 (originally 47). **248** residuary power with the Union; **249** RS resolution by two-thirds enabling Parliament to legislate on a State List item in the national interest; **250** during emergency; **252** two or more states requesting; **253** to implement international agreements; **254** **repugnancy**, with state law prevailing if it receives **Presidential assent**. Doctrines: **pith and substance, colourable legislation, harmonious construction**.",
+          "s": "Part XI"
+        },
+        {
+          "t": "Articles 262 and 263",
+          "d": "**262** inter-state **river water disputes** — Parliament may bar the jurisdiction of all courts, done by the Inter-State River Water Disputes Act, 1956; **263** empowers the President to establish an **Inter-State Council** — done in 1990 on the **Sarkaria Commission's** recommendation. The ISC is an advisory, recommendatory body that has met rarely; the **Punchhi Commission** wanted it strengthened into the primary forum for federal consultation.",
+          "s": "Articles 262-263"
+        },
+        {
+          "t": "Article 279A — the GST Council",
+          "d": "Created by the **101st Amendment, 2016**. Voting: **Centre one-third, all states together two-thirds, decisions by a three-fourths majority**; quorum one-half. *Mohit Minerals* (2022) held that **the Council's recommendations are persuasive, not binding**, because both Parliament and state legislatures have simultaneous power under Art. 246A — described by the Court as **'cooperative federalism as dialogue'**.",
+          "s": "Union of India v. Mohit Minerals (2022)"
+        },
+        {
+          "t": "Articles 280 and 148-151",
+          "d": "**280** Finance Commission every five years — devolution, grants-in-aid under Art. 275, and measures to augment state funds for local bodies. **148-151** the **CAG** — appointed by the President, removable like a SC judge, salary charged on the Consolidated Fund, **barred from further office** under the Union or a state after retirement; reports go to the President/Governor and are examined by the PAC.",
+          "s": "Articles 148-151, 280"
+        },
+        {
+          "t": "Articles 315-323 — Public Service Commissions",
+          "d": "UPSC and State PSCs; **316** appointment by the President/Governor, **at least half the members must have held office under the Government for ten years**; **317** removal **only by the President on a Supreme Court reference**; **319** post-retirement bar (a UPSC chairman is ineligible for any further government employment); **320** functions; **322** expenses charged on the Consolidated Fund; **323** annual report laid before the legislature with a memorandum on non-acceptance of advice.",
+          "s": "Part XIV"
+        },
+        {
+          "t": "Articles 323A-323B and 324",
+          "d": "**Tribunals** (42nd Amendment) — administrative tribunals (323A, Parliament only) and other-matter tribunals (323B). **324** vests superintendence, direction and control of elections in the **Election Commission**; the CEC and ECs are now appointed under the **CEC and Other ECs Act, 2023**, enacted after *Anoop Baranwal* (2023) had prescribed a CJI-inclusive panel. The CEC can be removed only like a SC judge; other ECs only on the CEC's recommendation.",
+          "s": "Articles 323A-B, 324 / Anoop Baranwal (2023)"
+        },
+        {
+          "t": "Articles 338, 338A, 338B, 350B",
+          "d": "**NCSC (338)**, **NCST (338A, created by the 89th Amendment, 2003)** and **NCBC (338B, given constitutional status by the 102nd Amendment, 2018)** — all have the powers of a civil court and must be consulted on major policy affecting their groups. **350B** Special Officer for Linguistic Minorities. The **105th Amendment, 2021** restored the states' power to identify their own SEBCs after *Maratha Reservation* (2021).",
+          "s": "Articles 338-338B / 102nd & 105th Amendments"
+        },
+        {
+          "t": "Articles 243-243O and 243P-243ZG",
+          "d": "**73rd and 74th Amendments, 1992** — three tiers above 20 lakh population, five-year terms, **State Election Commission (243K/243ZA)**, **State Finance Commission every five years (243I/243Y)**, **one-third seats for women** (many states now 50%), **Eleventh Schedule 29 subjects** and **Twelfth Schedule 18 subjects**, **District Planning Committee (243ZD)** and **Metropolitan Planning Committee (243ZE)**. Devolution of functions, funds and functionaries remains discretionary — the core weakness.",
+          "s": "Parts IX and IXA"
+        },
+        {
+          "t": "Fifth and Sixth Schedules",
+          "d": "**Fifth Schedule** — Scheduled Areas in ten states, Governor's report to the President, **Tribes Advisory Council**, and the Governor's power to modify central or state laws for the area. **Sixth Schedule** — **Autonomous District Councils in Assam, Meghalaya, Tripura and Mizoram** with legislative, judicial and financial powers over land, forests and customary law. **PESA, 1996** extends Part IX to Scheduled Areas with the gram sabha as the competent authority.",
+          "s": "Fifth & Sixth Schedules / PESA, 1996"
+        }
+      ]
+    },
+    {
+      "g": "Static recall — provisions asked in their own right",
+      "items": [
+        {
+          "t": "Article 3 and the state's opinion",
+          "d": "Parliament may alter a state's area, boundary or name; the **President must refer the bill to the state legislature**, which gives an opinion that is **not binding** and may be ignored after the specified period. The basis of the 2014 and 2019 reorganisations.",
+          "s": "Article 3"
+        },
+        {
+          "t": "Articles 19(2)-(6), the eight grounds",
+          "d": "Speech may be restricted only on **sovereignty and integrity, security of the state, friendly relations with foreign states, public order, decency or morality, contempt of court, defamation, and incitement to an offence**. Any restriction outside the eight is unconstitutional (*Kaushal Kishor*, 2023).",
+          "s": "Article 19"
+        },
+        {
+          "t": "Article 20, the three protections",
+          "d": "**No ex post facto criminal law, no double jeopardy, no self-incrimination** — and it is **non-suspendable even in an emergency** after the 44th Amendment. *Selvi* (2010) extended the third to narco-analysis, polygraph and brain mapping without consent.",
+          "s": "Article 20 / Selvi (2010)"
+        },
+        {
+          "t": "Article 33 and 34",
+          "d": "**33** lets Parliament restrict the fundamental rights of the **armed forces, police and analogous forces**; **34** permits indemnity for acts done under **martial law** — a term the Constitution nowhere defines, and which is distinct from a National Emergency.",
+          "s": "Articles 33-34"
+        },
+        {
+          "t": "Articles 100 and 122",
+          "d": "**100** — decisions by majority of members present and voting, the presiding officer having only a **casting vote**, and business is valid notwithstanding vacancies; **122** — **courts cannot inquire into parliamentary proceedings on grounds of alleged irregularity of procedure**, though illegality remains reviewable (*Raja Ram Pal*, 2007).",
+          "s": "Articles 100, 122"
+        },
+        {
+          "t": "Articles 168-212, the state mirror",
+          "d": "State legislatures mirror the Union: **Article 200-201** assent, **202-207** financial procedure, **208-212** procedure and privileges. **Legislative Councils** exist in six states and may be created or abolished by Parliament under **Article 169** on a resolution of the assembly by special majority.",
+          "s": "Part VI"
+        },
+        {
+          "t": "Article 257 and 365",
+          "d": "**257** — the Union may direct a state on matters affecting Union executive power (communications, railways); **365** — failure to comply with a lawful direction lets the President hold that the state's government cannot be carried on in accordance with the Constitution, opening Article 356. The chain 256 → 257 → 365 → 356 is the coercive federal sequence.",
+          "s": "Part XI"
+        },
+        {
+          "t": "Ninth Schedule and Article 31B",
+          "d": "Laws placed in the Ninth Schedule are immunised from Part III challenge — but only those inserted **before 24 April 1973** are safe; anything later is testable against the basic structure (*I.R. Coelho*, 2007). It began with 13 land-reform laws and now holds close to 300.",
+          "s": "Article 31B"
+        },
+        {
+          "t": "Schedules, all twelve",
+          "d": "**1** states and UTs; **2** emoluments; **3** oaths; **4** Rajya Sabha seats; **5** Scheduled Areas; **6** tribal areas of Assam, Meghalaya, Tripura, Mizoram; **7** three lists; **8** 22 languages; **9** protected laws; **10** anti-defection; **11** 29 panchayat subjects; **12** 18 municipal subjects. Being able to number them is worth a mark on its own.",
+          "s": "Constitution of India"
+        },
+        {
+          "t": "Emergency, the numbers",
+          "d": "**352** approval within **one month** by **special majority**, then six months at a time; **356** approval within **two months** by simple majority, six months at a time, maximum **three years** (beyond one year only with an Emergency in force and the ECI certifying that elections cannot be held); **360** never used.",
+          "s": "Part XVIII"
+        }
       ]
     }
   ]

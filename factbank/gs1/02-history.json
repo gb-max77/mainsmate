@@ -5,43 +5,176 @@
     {
       "g": "Ancient and medieval anchors",
       "items": [
-        {"t": "Harappan civilisation", "d": "**c. 2600-1900 BCE** mature phase; over 1,500 sites, the largest Indian ones being **Rakhigarhi (Haryana), Dholavira (Gujarat — UNESCO 2021, water-harvesting reservoirs and a signboard), Lothal (dockyard), Kalibangan (ploughed field, fire altars), Banawali, Surkotada (horse remains debated)**. Features: grid town planning, **standardised burnt bricks in a 1:2:4 ratio**, the Great Bath, drainage, no monumental temples or royal tombs, and an undeciphered script.", "s": "ASI"},
-        {"t": "Mauryas", "d": "**Chandragupta (321 BCE) with Kautilya**, Bindusara, **Ashoka (268-232 BCE)** — the **Kalinga war (261 BCE)** and the turn to **Dhamma**; edicts in **Brahmi, Kharosthi, Greek and Aramaic**, deciphered by **James Prinsep (1837)**. Administration: Arthashashtra's **saptanga theory**, mahamatras, dhamma mahamatras, rajukas, and the **Sarnath lion capital** as the state emblem. Megasthenes' *Indica*; Junagadh rock inscription of Rudradaman on the **Sudarshana lake**.", "s": "Ancient Indian history"},
-        {"t": "Guptas and the classical age", "d": "**c. 320-550 CE** — Chandragupta I, **Samudragupta (Prayag Prashasti by Harisena)**, Chandragupta II Vikramaditya (Fa-Hien's visit; the **Mehrauli iron pillar**). Achievements: **Aryabhata (zero, decimal place value, heliocentric hints, Aryabhatiya, 499 CE)**, Varahamihira, Kalidasa, the **Nalanda mahavihara**, Dashavatara temple at Deogarh and the Bhitargaon brick temple — the **first structural temples**. Also the beginnings of **land grants (agrahara/brahmadeya)** and, on one reading, of Indian feudalism.", "s": "Ancient Indian history"},
-        {"t": "South Indian polities", "d": "**Cholas** — Rajaraja I and **Rajendra I (Gangaikonda Cholapuram, naval expedition to Srivijaya, 1025)**; the **Uttaramerur inscription** records **kudavolai** election to village sabhas, India's oldest documented electoral procedure; **nadu, ur, sabha, nagaram** as local bodies. **Vijayanagara (1336, Harihara and Bukka; Krishnadevaraya; Hampi)** and the **Battle of Talikota (1565)**; **amara-nayaka system**. **Pallavas, Pandyas, Chalukyas, Rashtrakutas, Satavahanas**.", "s": "South Indian history"},
-        {"t": "Delhi Sultanate and Mughals", "d": "**Sultanate 1206-1526** — Slave, Khalji (**Alauddin's market control and the first standing army**), Tughlaq (**Muhammad bin Tughlaq's token currency and capital transfer**; **Firoz Shah's** canals and jizya), Sayyid, Lodi; **iqta system**. **Mughals 1526-1857** — **Babur (Panipat I, 1526)**, Humayun, **Akbar (mansabdari, zabti/dahsala revenue with Todar Mal, Din-i-Ilahi, sulh-i-kul, abolition of jizya 1564)**, Jahangir, Shah Jahan, **Aurangzeb (reimposed jizya 1679, Deccan campaigns)**. **Shivaji's coronation 1674; ashtapradhan; chauth and sardeshmukhi**.", "s": "Medieval Indian history"}
+        {
+          "t": "Harappan civilisation",
+          "d": "**c. 2600-1900 BCE** mature phase; over 1,500 sites, the largest Indian ones being **Rakhigarhi (Haryana), Dholavira (Gujarat — UNESCO 2021, water-harvesting reservoirs and a signboard), Lothal (dockyard), Kalibangan (ploughed field, fire altars), Banawali, Surkotada (horse remains debated)**. Features: grid town planning, **standardised burnt bricks in a 1:2:4 ratio**, the Great Bath, drainage, no monumental temples or royal tombs, and an undeciphered script.",
+          "s": "ASI"
+        },
+        {
+          "t": "Mauryas",
+          "d": "**Chandragupta (321 BCE) with Kautilya**, Bindusara, **Ashoka (268-232 BCE)** — the **Kalinga war (261 BCE)** and the turn to **Dhamma**; edicts in **Brahmi, Kharosthi, Greek and Aramaic**, deciphered by **James Prinsep (1837)**. Administration: Arthashashtra's **saptanga theory**, mahamatras, dhamma mahamatras, rajukas, and the **Sarnath lion capital** as the state emblem. Megasthenes' *Indica*; Junagadh rock inscription of Rudradaman on the **Sudarshana lake**.",
+          "s": "Ancient Indian history"
+        },
+        {
+          "t": "Guptas and the classical age",
+          "d": "**c. 320-550 CE** — Chandragupta I, **Samudragupta (Prayag Prashasti by Harisena)**, Chandragupta II Vikramaditya (Fa-Hien's visit; the **Mehrauli iron pillar**). Achievements: **Aryabhata (zero, decimal place value, heliocentric hints, Aryabhatiya, 499 CE)**, Varahamihira, Kalidasa, the **Nalanda mahavihara**, Dashavatara temple at Deogarh and the Bhitargaon brick temple — the **first structural temples**. Also the beginnings of **land grants (agrahara/brahmadeya)** and, on one reading, of Indian feudalism.",
+          "s": "Ancient Indian history"
+        },
+        {
+          "t": "South Indian polities",
+          "d": "**Cholas** — Rajaraja I and **Rajendra I (Gangaikonda Cholapuram, naval expedition to Srivijaya, 1025)**; the **Uttaramerur inscription** records **kudavolai** election to village sabhas, India's oldest documented electoral procedure; **nadu, ur, sabha, nagaram** as local bodies. **Vijayanagara (1336, Harihara and Bukka; Krishnadevaraya; Hampi)** and the **Battle of Talikota (1565)**; **amara-nayaka system**. **Pallavas, Pandyas, Chalukyas, Rashtrakutas, Satavahanas**.",
+          "s": "South Indian history"
+        },
+        {
+          "t": "Delhi Sultanate and Mughals",
+          "d": "**Sultanate 1206-1526** — Slave, Khalji (**Alauddin's market control and the first standing army**), Tughlaq (**Muhammad bin Tughlaq's token currency and capital transfer**; **Firoz Shah's** canals and jizya), Sayyid, Lodi; **iqta system**. **Mughals 1526-1857** — **Babur (Panipat I, 1526)**, Humayun, **Akbar (mansabdari, zabti/dahsala revenue with Todar Mal, Din-i-Ilahi, sulh-i-kul, abolition of jizya 1564)**, Jahangir, Shah Jahan, **Aurangzeb (reimposed jizya 1679, Deccan campaigns)**. **Shivaji's coronation 1674; ashtapradhan; chauth and sardeshmukhi**.",
+          "s": "Medieval Indian history"
+        }
       ]
     },
     {
       "g": "Modern India — the colonial encounter",
       "items": [
-        {"t": "The company's rise", "d": "**Plassey 1757** (Clive, Mir Jafar) → **Buxar 1764** → **Diwani of Bengal 1765**, which gave the Company revenue authority and produced the **dual government**; **Regulating Act 1773**, **Pitt's India Act 1784**, **Charter Acts 1813 (trade monopoly ended except tea/China, ₹1 lakh for education), 1833 (Governor-General of India, end of commercial functions) and 1853 (open competition for the covered services)**; **Government of India Act 1858** transferred power to the Crown.", "s": "Colonial constitutional history"},
-        {"t": "Land revenue systems", "d": "**Permanent Settlement (1793, Cornwallis, Bengal-Bihar-Odisha)** — zamindar as owner, fixed revenue, the **sunset clause**; **Ryotwari (Munro/Read, Madras and Bombay)** — direct settlement with the cultivator, periodically revised; **Mahalwari (Holt Mackenzie, 1822, North-West Provinces and Punjab)** — village or *mahal* as the unit. Consequence: **commercialisation of agriculture, sub-infeudation, and the rise of moneylender-driven indebtedness** behind the **Deccan Riots (1875)**.", "s": "Colonial economic history"},
-        {"t": "The drain of wealth", "d": "**Dadabhai Naoroji's** *Poverty and Un-British Rule in India* (1901) and the drain theory; **R.C. Dutt's** *Economic History of India*; **M.G. Ranade** on industrialisation. Components: home charges, remittances, expenditure on Indian troops abroad and the trade surplus that bought nothing in return. **Deindustrialisation** of textiles and the shift to raw-material export — the economic critique that preceded the political demand.", "s": "Economic nationalism"},
-        {"t": "1857 and after", "d": "**Revolt of 1857** — Mangal Pandey (Barrackpore, 29 March), Meerut (10 May), Bahadur Shah Zafar proclaimed; leaders Nana Saheb (Kanpur), Rani Lakshmibai (Jhansi), Begum Hazrat Mahal (Lucknow), Kunwar Singh (Bihar), Bakht Khan (Delhi). Causes ran from the **Doctrine of Lapse** and annexation of Awadh (1856) to the greased cartridge. Consequences: Crown rule, **Queen's Proclamation 1858**, army reorganisation on the **'martial races'** theory and one-third European ratio, and the end of annexation.", "s": "Modern Indian history"},
-        {"t": "Social reform movements", "d": "**Raja Rammohan Roy — Brahmo Samaj (1828)**, sati abolition (1829, with William Bentinck); **Derozio and Young Bengal**; **Ishwar Chandra Vidyasagar** — Widow Remarriage Act 1856; **Dayanand Saraswati — Arya Samaj (1875)**, 'back to the Vedas', shuddhi; **Jyotirao Phule — Satyashodhak Samaj (1873)** and *Gulamgiri*; **Savitribai Phule** — first school for girls (1848); **Periyar E.V. Ramasamy — Self-Respect Movement (1925)**; **Narayana Guru — SNDP (1903)**, 'one caste, one religion, one God'; **Sir Syed Ahmed Khan — Aligarh movement (1875)**; **Annie Besant and the Theosophical Society**; **Vivekananda — Ramakrishna Mission (1897)**.", "s": "Social reform"},
-        {"t": "Education and press", "d": "**Macaulay's Minute (1835)** and the downward filtration theory; **Wood's Despatch (1854)** — the 'Magna Carta of English education', vernacular primary schooling and the 1857 universities of Calcutta, Bombay and Madras; **Hunter Commission (1882)**; **Indian Universities Act 1904 (Curzon's control)**; **Sadler Commission (1917)**. Press: **Vernacular Press Act 1878 (Lytton)**, repealed 1882; **Newspaper Act 1908**, **Indian Press Act 1910**.", "s": "Colonial policy"}
+        {
+          "t": "The company's rise",
+          "d": "**Plassey 1757** (Clive, Mir Jafar) → **Buxar 1764** → **Diwani of Bengal 1765**, which gave the Company revenue authority and produced the **dual government**; **Regulating Act 1773**, **Pitt's India Act 1784**, **Charter Acts 1813 (trade monopoly ended except tea/China, ₹1 lakh for education), 1833 (Governor-General of India, end of commercial functions) and 1853 (open competition for the covered services)**; **Government of India Act 1858** transferred power to the Crown.",
+          "s": "Colonial constitutional history"
+        },
+        {
+          "t": "Land revenue systems",
+          "d": "**Permanent Settlement (1793, Cornwallis, Bengal-Bihar-Odisha)** — zamindar as owner, fixed revenue, the **sunset clause**; **Ryotwari (Munro/Read, Madras and Bombay)** — direct settlement with the cultivator, periodically revised; **Mahalwari (Holt Mackenzie, 1822, North-West Provinces and Punjab)** — village or *mahal* as the unit. Consequence: **commercialisation of agriculture, sub-infeudation, and the rise of moneylender-driven indebtedness** behind the **Deccan Riots (1875)**.",
+          "s": "Colonial economic history"
+        },
+        {
+          "t": "The drain of wealth",
+          "d": "**Dadabhai Naoroji's** *Poverty and Un-British Rule in India* (1901) and the drain theory; **R.C. Dutt's** *Economic History of India*; **M.G. Ranade** on industrialisation. Components: home charges, remittances, expenditure on Indian troops abroad and the trade surplus that bought nothing in return. **Deindustrialisation** of textiles and the shift to raw-material export — the economic critique that preceded the political demand.",
+          "s": "Economic nationalism"
+        },
+        {
+          "t": "1857 and after",
+          "d": "**Revolt of 1857** — Mangal Pandey (Barrackpore, 29 March), Meerut (10 May), Bahadur Shah Zafar proclaimed; leaders Nana Saheb (Kanpur), Rani Lakshmibai (Jhansi), Begum Hazrat Mahal (Lucknow), Kunwar Singh (Bihar), Bakht Khan (Delhi). Causes ran from the **Doctrine of Lapse** and annexation of Awadh (1856) to the greased cartridge. Consequences: Crown rule, **Queen's Proclamation 1858**, army reorganisation on the **'martial races'** theory and one-third European ratio, and the end of annexation.",
+          "s": "Modern Indian history"
+        },
+        {
+          "t": "Social reform movements",
+          "d": "**Raja Rammohan Roy — Brahmo Samaj (1828)**, sati abolition (1829, with William Bentinck); **Derozio and Young Bengal**; **Ishwar Chandra Vidyasagar** — Widow Remarriage Act 1856; **Dayanand Saraswati — Arya Samaj (1875)**, 'back to the Vedas', shuddhi; **Jyotirao Phule — Satyashodhak Samaj (1873)** and *Gulamgiri*; **Savitribai Phule** — first school for girls (1848); **Periyar E.V. Ramasamy — Self-Respect Movement (1925)**; **Narayana Guru — SNDP (1903)**, 'one caste, one religion, one God'; **Sir Syed Ahmed Khan — Aligarh movement (1875)**; **Annie Besant and the Theosophical Society**; **Vivekananda — Ramakrishna Mission (1897)**.",
+          "s": "Social reform"
+        },
+        {
+          "t": "Education and press",
+          "d": "**Macaulay's Minute (1835)** and the downward filtration theory; **Wood's Despatch (1854)** — the 'Magna Carta of English education', vernacular primary schooling and the 1857 universities of Calcutta, Bombay and Madras; **Hunter Commission (1882)**; **Indian Universities Act 1904 (Curzon's control)**; **Sadler Commission (1917)**. Press: **Vernacular Press Act 1878 (Lytton)**, repealed 1882; **Newspaper Act 1908**, **Indian Press Act 1910**.",
+          "s": "Colonial policy"
+        }
       ]
     },
     {
       "g": "The national movement",
       "items": [
-        {"t": "Moderates to Extremists", "d": "**INC founded 1885 (A.O. Hume, W.C. Bonnerjee presiding at Bombay)**. Moderates (1885-1905): Naoroji, Gokhale, Ranade, Pherozeshah Mehta — 'prayer, petition, protest', the constitutional method. Extremists (1905-1919): **Lal-Bal-Pal and Aurobindo** — swadeshi, boycott, national education, passive resistance. **Surat Split 1907**, reunion at **Lucknow 1916** with the **Lucknow Pact** between Congress and the Muslim League.", "s": "Freedom struggle"},
-        {"t": "Key years to fix", "d": "**1905** Partition of Bengal, Swadeshi; **1906** Muslim League (Dhaka), Calcutta session's swaraj demand; **1909** Morley-Minto — **separate electorates**; **1911** annulment of partition, capital to Delhi; **1915** Gandhi returns; **1916** Home Rule Leagues (Tilak and Besant); **1917** Champaran; **1918** Kheda and Ahmedabad; **1919** Rowlatt, **Jallianwala Bagh (13 April)**, Montagu-Chelmsford (**dyarchy**); **1920-22** Non-Cooperation with Khilafat, ended after **Chauri Chaura (Feb 1922)**.", "s": "Freedom struggle"},
-        {"t": "1927-1935", "d": "**1927** Simon Commission (all-white) and the boycott; **1928** **Nehru Report** (dominion status, no separate electorates) and Jinnah's **Fourteen Points**; **1929** Lahore session — **Purna Swaraj**, 26 January 1930 as Independence Day; **1930** **Dandi March (12 March-6 April, 385 km)** and Civil Disobedience, **Dharasana satyagraha**; **1931** Gandhi-Irwin Pact and the Second Round Table; **1932** **Communal Award** and the **Poona Pact** (reserved seats in joint electorates instead of separate electorates for the Depressed Classes); **1935** Government of India Act — provincial autonomy, federation (never implemented), and the Reserve Bank.", "s": "Freedom struggle"},
-        {"t": "1939-1947", "d": "**1939** Congress ministries resign; **1940** August Offer, Lahore Resolution (Pakistan); **1942** **Cripps Mission** ('a post-dated cheque'), **Quit India (8 August, 'Do or Die')**, and the **INA under Subhas Chandra Bose** (Azad Hind, 21 October 1943; the **INA trials at the Red Fort, 1945-46**, defended by Bhulabhai Desai, Tej Bahadur Sapru, Asaf Ali and Nehru); **1946** Cabinet Mission, Direct Action Day, **Naval Ratings' Mutiny**, Constituent Assembly convened 9 December; **1947** Mountbatten Plan (3 June), **Indian Independence Act (18 July)**, **Radcliffe Line**.", "s": "Freedom struggle"},
-        {"t": "The peasant, tribal and worker movements", "d": "**Tribal**: Santhal Hool (1855-56, Sidhu-Kanhu), **Munda Ulgulan (1899-1900, Birsa Munda)**, Rampa rebellion (Alluri Sitarama Raju, 1922-24), Bhil and Koya uprisings. **Peasant**: Indigo revolt (1859-60), Deccan Riots (1875), Champaran (1917), **Kisan Sabha in Awadh (Baba Ramchandra)**, Moplah (1921), Bardoli satyagraha (1928, Vallabhbhai Patel earns 'Sardar'), **Tebhaga (1946-47)** and **Telangana (1946-51)**. **Workers**: AITUC (1920, Lala Lajpat Rai as first president).", "s": "Freedom struggle"},
-        {"t": "Post-independence consolidation", "d": "**Integration of 565 princely states** by Patel and V.P. Menon through the Instrument of Accession — with **Junagadh (plebiscite), Hyderabad (Operation Polo, 1948) and Kashmir (Instrument of Accession, 26 October 1947)** as the exceptions. **Linguistic reorganisation**: Potti Sriramulu's fast and the creation of **Andhra (1953)**, the **Fazl Ali States Reorganisation Commission (1955)** and the **States Reorganisation Act, 1956** (14 states, 6 UTs), then Bombay's split (1960), Punjab-Haryana (1966), the North-Eastern reorganisation (1971-87), and **Chhattisgarh, Uttarakhand, Jharkhand (2000)** and **Telangana (2014)**.", "s": "Post-independence India"}
+        {
+          "t": "Moderates to Extremists",
+          "d": "**INC founded 1885 (A.O. Hume, W.C. Bonnerjee presiding at Bombay)**. Moderates (1885-1905): Naoroji, Gokhale, Ranade, Pherozeshah Mehta — 'prayer, petition, protest', the constitutional method. Extremists (1905-1919): **Lal-Bal-Pal and Aurobindo** — swadeshi, boycott, national education, passive resistance. **Surat Split 1907**, reunion at **Lucknow 1916** with the **Lucknow Pact** between Congress and the Muslim League.",
+          "s": "Freedom struggle"
+        },
+        {
+          "t": "Key years to fix",
+          "d": "**1905** Partition of Bengal, Swadeshi; **1906** Muslim League (Dhaka), Calcutta session's swaraj demand; **1909** Morley-Minto — **separate electorates**; **1911** annulment of partition, capital to Delhi; **1915** Gandhi returns; **1916** Home Rule Leagues (Tilak and Besant); **1917** Champaran; **1918** Kheda and Ahmedabad; **1919** Rowlatt, **Jallianwala Bagh (13 April)**, Montagu-Chelmsford (**dyarchy**); **1920-22** Non-Cooperation with Khilafat, ended after **Chauri Chaura (Feb 1922)**.",
+          "s": "Freedom struggle"
+        },
+        {
+          "t": "1927-1935",
+          "d": "**1927** Simon Commission (all-white) and the boycott; **1928** **Nehru Report** (dominion status, no separate electorates) and Jinnah's **Fourteen Points**; **1929** Lahore session — **Purna Swaraj**, 26 January 1930 as Independence Day; **1930** **Dandi March (12 March-6 April, 385 km)** and Civil Disobedience, **Dharasana satyagraha**; **1931** Gandhi-Irwin Pact and the Second Round Table; **1932** **Communal Award** and the **Poona Pact** (reserved seats in joint electorates instead of separate electorates for the Depressed Classes); **1935** Government of India Act — provincial autonomy, federation (never implemented), and the Reserve Bank.",
+          "s": "Freedom struggle"
+        },
+        {
+          "t": "1939-1947",
+          "d": "**1939** Congress ministries resign; **1940** August Offer, Lahore Resolution (Pakistan); **1942** **Cripps Mission** ('a post-dated cheque'), **Quit India (8 August, 'Do or Die')**, and the **INA under Subhas Chandra Bose** (Azad Hind, 21 October 1943; the **INA trials at the Red Fort, 1945-46**, defended by Bhulabhai Desai, Tej Bahadur Sapru, Asaf Ali and Nehru); **1946** Cabinet Mission, Direct Action Day, **Naval Ratings' Mutiny**, Constituent Assembly convened 9 December; **1947** Mountbatten Plan (3 June), **Indian Independence Act (18 July)**, **Radcliffe Line**.",
+          "s": "Freedom struggle"
+        },
+        {
+          "t": "The peasant, tribal and worker movements",
+          "d": "**Tribal**: Santhal Hool (1855-56, Sidhu-Kanhu), **Munda Ulgulan (1899-1900, Birsa Munda)**, Rampa rebellion (Alluri Sitarama Raju, 1922-24), Bhil and Koya uprisings. **Peasant**: Indigo revolt (1859-60), Deccan Riots (1875), Champaran (1917), **Kisan Sabha in Awadh (Baba Ramchandra)**, Moplah (1921), Bardoli satyagraha (1928, Vallabhbhai Patel earns 'Sardar'), **Tebhaga (1946-47)** and **Telangana (1946-51)**. **Workers**: AITUC (1920, Lala Lajpat Rai as first president).",
+          "s": "Freedom struggle"
+        },
+        {
+          "t": "Post-independence consolidation",
+          "d": "**Integration of 565 princely states** by Patel and V.P. Menon through the Instrument of Accession — with **Junagadh (plebiscite), Hyderabad (Operation Polo, 1948) and Kashmir (Instrument of Accession, 26 October 1947)** as the exceptions. **Linguistic reorganisation**: Potti Sriramulu's fast and the creation of **Andhra (1953)**, the **Fazl Ali States Reorganisation Commission (1955)** and the **States Reorganisation Act, 1956** (14 states, 6 UTs), then Bombay's split (1960), Punjab-Haryana (1966), the North-Eastern reorganisation (1971-87), and **Chhattisgarh, Uttarakhand, Jharkhand (2000)** and **Telangana (2014)**.",
+          "s": "Post-independence India"
+        }
       ]
     },
     {
       "g": "World history",
       "items": [
-        {"t": "Revolutions", "d": "**American (1776)** — 'no taxation without representation', Boston Tea Party (1773), the first written republican constitution with a bill of rights and federalism. **French (1789)** — Estates-General, Tennis Court Oath, Bastille (14 July), **Declaration of the Rights of Man**, liberty-equality-fraternity (the Preamble's source), the Terror, and Napoleon's **Civil Code (1804)**. **Russian (1917)** — February and October, Lenin's 'Peace, Land and Bread', the first socialist state, and the model for planned development India partly borrowed.", "s": "World history"},
-        {"t": "Industrial Revolution", "d": "Britain first (c. 1760-1840) — coal, steam (Watt), textiles (spinning jenny, water frame, power loom), railways; consequences: **urbanisation, the factory system, child labour and the Mines Act 1842**, imperialism for raw materials and markets, and the intellectual reactions of **Adam Smith, Malthus, Ricardo and Marx**. For India: **deindustrialisation and the conversion into a raw-material supplier**.", "s": "World history"},
-        {"t": "Nationalism and unification", "d": "**Germany** — Zollverein (1834), **Frankfurt Parliament (1848)**, Bismarck's blood and iron, unification 1871. **Italy** — Mazzini (Young Italy), Cavour (diplomacy), Garibaldi (Red Shirts), 1861/1870. **Ausgleich (1867)** creating Austria-Hungary. Compare with anti-colonial nationalism in Asia and Africa, which was **built against an external ruler rather than for internal unification** — the standard comparative point.", "s": "World history"},
-        {"t": "The wars and after", "d": "**WWI (1914-18)** — MAIN causes, Versailles (1919) and its war-guilt clause, the **League of Nations** and its failure of collective security. **WWII (1939-45)** — appeasement, Munich (1938), the **Atlantic Charter (1941)** and its self-determination promise, the **UN (1945)**, Bretton Woods (IMF and World Bank, 1944) and the **GATT (1947)**. **Decolonisation**: **UN Declaration on Granting Independence to Colonial Countries (1960)**, and the Suez crisis (1956) as the marker of the end of European primacy.", "s": "World history"},
-        {"t": "Cold War and non-alignment", "d": "**Truman Doctrine and Marshall Plan (1947-48)**, NATO (1949) and the Warsaw Pact (1955), Cuban Missile Crisis (1962), détente, and the collapse of the USSR (1991). **NAM** — **Bandung Conference (1955)** and the Panchsheel principles (1954, in the India-China Tibet agreement), founded at **Belgrade (1961)** by Nehru, Tito, Nasser, Sukarno and Nkrumah. India's post-1991 formulation is **strategic autonomy** and multi-alignment rather than non-alignment.", "s": "World history"}
+        {
+          "t": "Revolutions",
+          "d": "**American (1776)** — 'no taxation without representation', Boston Tea Party (1773), the first written republican constitution with a bill of rights and federalism. **French (1789)** — Estates-General, Tennis Court Oath, Bastille (14 July), **Declaration of the Rights of Man**, liberty-equality-fraternity (the Preamble's source), the Terror, and Napoleon's **Civil Code (1804)**. **Russian (1917)** — February and October, Lenin's 'Peace, Land and Bread', the first socialist state, and the model for planned development India partly borrowed.",
+          "s": "World history"
+        },
+        {
+          "t": "Industrial Revolution",
+          "d": "Britain first (c. 1760-1840) — coal, steam (Watt), textiles (spinning jenny, water frame, power loom), railways; consequences: **urbanisation, the factory system, child labour and the Mines Act 1842**, imperialism for raw materials and markets, and the intellectual reactions of **Adam Smith, Malthus, Ricardo and Marx**. For India: **deindustrialisation and the conversion into a raw-material supplier**.",
+          "s": "World history"
+        },
+        {
+          "t": "Nationalism and unification",
+          "d": "**Germany** — Zollverein (1834), **Frankfurt Parliament (1848)**, Bismarck's blood and iron, unification 1871. **Italy** — Mazzini (Young Italy), Cavour (diplomacy), Garibaldi (Red Shirts), 1861/1870. **Ausgleich (1867)** creating Austria-Hungary. Compare with anti-colonial nationalism in Asia and Africa, which was **built against an external ruler rather than for internal unification** — the standard comparative point.",
+          "s": "World history"
+        },
+        {
+          "t": "The wars and after",
+          "d": "**WWI (1914-18)** — MAIN causes, Versailles (1919) and its war-guilt clause, the **League of Nations** and its failure of collective security. **WWII (1939-45)** — appeasement, Munich (1938), the **Atlantic Charter (1941)** and its self-determination promise, the **UN (1945)**, Bretton Woods (IMF and World Bank, 1944) and the **GATT (1947)**. **Decolonisation**: **UN Declaration on Granting Independence to Colonial Countries (1960)**, and the Suez crisis (1956) as the marker of the end of European primacy.",
+          "s": "World history"
+        },
+        {
+          "t": "Cold War and non-alignment",
+          "d": "**Truman Doctrine and Marshall Plan (1947-48)**, NATO (1949) and the Warsaw Pact (1955), Cuban Missile Crisis (1962), détente, and the collapse of the USSR (1991). **NAM** — **Bandung Conference (1955)** and the Panchsheel principles (1954, in the India-China Tibet agreement), founded at **Belgrade (1961)** by Nehru, Tito, Nasser, Sukarno and Nkrumah. India's post-1991 formulation is **strategic autonomy** and multi-alignment rather than non-alignment.",
+          "s": "World history"
+        }
+      ]
+    },
+    {
+      "g": "Static recall — dynasties, texts and firsts",
+      "items": [
+        {
+          "t": "Vedic to Mahajanapada",
+          "d": "**16 Mahajanapadas** (Anguttara Nikaya) with **Magadha** ascendant under Haryanka, Shishunaga and Nanda dynasties; causes of Magadha's rise: **iron in Chotanagpur, fertile Gangetic alluvium, river routes, elephants, and able rulers**. Second urbanisation, punch-marked coins, and the rise of Buddhism and Jainism belong to the same window.",
+          "s": "Ancient history"
+        },
+        {
+          "t": "Foreign accounts, matched",
+          "d": "**Megasthenes** (*Indica*, Chandragupta), **Fa-Hien** (Chandragupta II), **Hiuen Tsang** (Harsha), **I-Tsing**, **Al-Biruni** (*Kitab-ul-Hind*, with Mahmud of Ghazni), **Marco Polo** (Pandya), **Ibn Battuta** (*Rehla*, Muhammad bin Tughlaq), **Abdur Razzaq** and **Nicolo Conti** and **Domingo Paes** (Vijayanagara), **Bernier** and **Tavernier** (Mughal). Matching traveller to ruler is a standing question type.",
+          "s": "Historiography"
+        },
+        {
+          "t": "Sangam-age polity",
+          "d": "**Cheras, Cholas and Pandyas**; the **Pattini cult**, the **hero stone (nadukal)**, and the port of **Puhar/Kaveripattinam**. The Sangam corpus is the main source for early South Indian society and its **tinai** landscape scheme.",
+          "s": "Sangam literature"
+        },
+        {
+          "t": "Bhakti chronology",
+          "d": "**Alvars (Vaishnava) and Nayanars (Shaiva)**, Tamil, 6th-9th c., who preceded and shaped the northern movement — the sequence south-then-north is the part most answers reverse.",
+          "s": "Medieval religion"
+        },
+        {
+          "t": "Sultanate administration",
+          "d": "**Iqta** (revenue assignment), **khalisa** (crown land), **diwan-i-arz** (military), **diwan-i-risalat**, **barid** (intelligence), and **Alauddin's market control** with its four markets, price schedules and the **dagh (branding) and chehra (descriptive roll)** for the standing army.",
+          "s": "Delhi Sultanate"
+        },
+        {
+          "t": "Mughal land revenue",
+          "d": "**Zabti/dahsala** under Todar Mal — ten-year average of produce and prices, revenue in cash; alternatives were **ghalla-bakhshi** (crop-sharing), **nasaq** and **kankut**. Mansabdars held **zat** (personal rank) and **sawar** (cavalry) numbers, paid by **jagir** assignment.",
+          "s": "Mughal administration"
+        },
+        {
+          "t": "Colonial 'firsts' worth knowing",
+          "d": "First railway **Bombay-Thane, 1853**; first telegraph line same year; first census **1872 (non-synchronous) and 1881 (synchronous)**; Archaeological Survey **1861 (Cunningham)**; first university acts **1857**; first factory act **1881**; first Indian ICS officer **Satyendranath Tagore, 1863**.",
+          "s": "Colonial India"
+        },
+        {
+          "t": "The four Round Table gaps",
+          "d": "The **Communal Award (1932)** granted separate electorates to the Depressed Classes; the **Poona Pact** replaced them with reserved seats in joint electorates and raised the number from 71 to **148**. Getting the direction of that trade right is the mark.",
+          "s": "Freedom struggle"
+        }
       ]
     }
   ]

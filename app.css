@@ -939,3 +939,56 @@ body.feed-open .app-dock button{min-width:58px;padding:5px 8px}
   font-weight:600;letter-spacing:.02em}
 .comp-readrow .facts-readbar{flex:1 0 100%;padding:0}
 #comptopic .reading-now{border-radius:8px}
+
+/* ══════════ Highlighter, inline edit, and the home highlights panel ══════════ */
+/* Four marker colours drawn from the app's own role hues, so a highlight never
+   introduces a colour the reader has to learn. */
+.fj-hl{flex:0 0 auto;width:30px;height:30px;border:1px solid var(--line);border-radius:9px;
+  background:var(--card);color:var(--faint);font-size:13px;line-height:1;cursor:pointer}
+.fj-hl:hover{color:var(--ink);border-color:var(--gold)}
+.fj-hl.on[data-c=gold]{color:var(--gold);border-color:var(--gold);background:color-mix(in srgb,var(--gold) 16%,var(--card))}
+.fj-hl.on[data-c=blue]{color:var(--blue);border-color:var(--blue);background:color-mix(in srgb,var(--blue) 16%,var(--card))}
+.fj-hl.on[data-c=green]{color:var(--green);border-color:var(--green);background:color-mix(in srgb,var(--green) 16%,var(--card))}
+.fj-hl.on[data-c=lav]{color:var(--lav);border-color:var(--lav);background:color-mix(in srgb,var(--lav) 16%,var(--card))}
+.facts-hlbar{display:flex;align-items:center;gap:7px;padding:0 0 7px}
+.facts-hlbar[hidden]{display:none}
+.hl-sw{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--line);cursor:pointer}
+.hl-sw[data-c=gold]{background:color-mix(in srgb,var(--gold) 52%,transparent)}
+.hl-sw[data-c=blue]{background:color-mix(in srgb,var(--blue) 46%,transparent)}
+.hl-sw[data-c=green]{background:color-mix(in srgb,var(--green) 46%,transparent)}
+.hl-sw[data-c=lav]{background:color-mix(in srgb,var(--lav) 52%,transparent)}
+.hl-sw.on{border-color:var(--ink);box-shadow:0 0 0 2px var(--bg),0 0 0 3px var(--ink)}
+.hl-hint{font-family:var(--ui-font);font-size:10.5px;color:var(--faint)}
+/* The mark itself: a wash, not a block — the text must stay the thing you read. */
+mark.hl{border-radius:3px;padding:0 1px;color:inherit;background:color-mix(in srgb,var(--gold) 34%,transparent)}
+mark.hl[data-c=blue]{background:color-mix(in srgb,var(--blue) 30%,transparent)}
+mark.hl[data-c=green]{background:color-mix(in srgb,var(--green) 30%,transparent)}
+mark.hl[data-c=lav]{background:color-mix(in srgb,var(--lav) 36%,transparent)}
+body.hl-on #facts-body .fi{cursor:text}
+body.hl-on #facts-body mark.hl{cursor:pointer}
+body.hl-on #facts-body mark.hl:hover{outline:1px dashed var(--ghost)}
+/* Editing */
+.fi.editing{border-color:var(--blue);background:color-mix(in srgb,var(--blue) 7%,var(--card))}
+.fi.editing [contenteditable]{outline:none;background:color-mix(in srgb,var(--blue) 9%,transparent);border-radius:5px}
+.fi-edit{display:block;margin-top:7px;font-family:var(--ui-font);font-size:10.5px;color:var(--faint)}
+.fi-edit b{color:var(--blue);cursor:pointer;font-weight:700}
+.fi-edit b:hover{text-decoration:underline}
+/* Home panel */
+.hl-panel{margin:18px 0 4px;padding:14px 15px;border-radius:14px;background:var(--card);
+  border:1px solid color-mix(in srgb,var(--gold) 24%,var(--line))}
+.hl-panel[hidden]{display:none}
+.hl-head{display:flex;align-items:baseline;gap:9px;margin-bottom:10px;font-family:var(--ui-font)}
+.hl-head b{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+.hl-head span{font-size:10.5px;color:var(--faint)}
+.hl-clear{margin-left:auto;font-size:10.5px;color:var(--faint);border:1px solid var(--line);
+  border-radius:7px;padding:3px 8px}
+.hl-clear:hover{color:var(--t1);border-color:var(--t1)}
+.hl-paper{margin-bottom:12px}
+.hl-paper>h3{margin:0 0 6px;font-family:var(--ui-font);font-size:11.5px;font-weight:700;color:var(--blue)}
+.hl-sec{margin:0 0 8px 2px;padding-left:9px;border-left:2px solid color-mix(in srgb,var(--blue) 26%,var(--line))}
+.hl-sec>h4{margin:0 0 4px;font-family:var(--ui-font);font-size:10.5px;font-weight:600;
+  text-transform:uppercase;letter-spacing:.05em;color:var(--faint)}
+.hl-entry{display:block;text-decoration:none;padding:4px 0;font-family:var(--read-font);
+  font-size:13.5px;line-height:1.5;color:var(--ink)}
+.hl-entry>b{display:block;font-family:var(--ui-font);font-size:11px;color:var(--gold);margin-bottom:1px}
+.hl-entry:hover{background:color-mix(in srgb,var(--gold) 6%,transparent);border-radius:7px}

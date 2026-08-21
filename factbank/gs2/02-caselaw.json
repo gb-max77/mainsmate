@@ -5,125 +5,516 @@
     {
       "g": "Amendment and basic structure",
       "items": [
-        {"t": "Shankari Prasad (1951)", "d": "Held a constitutional amendment is **'law' under Article 13? No** — 'law' in Art. 13 means ordinary law, so **Parliament can amend Fundamental Rights**. Upheld the First Amendment and the Ninth Schedule.", "s": "Supreme Court"},
-        {"t": "Sajjan Singh (1965)", "d": "Reaffirmed *Shankari Prasad*, but **Justices Hidayatullah and Mudholkar dissented** — Mudholkar first used the phrase **'basic features'**, the seed of the doctrine.", "s": "Supreme Court"},
-        {"t": "Golaknath (1967)", "d": "By 6:5, **reversed** the earlier position: Fundamental Rights are **transcendental and immutable**, Parliament cannot abridge them. Applied the **doctrine of prospective overruling** for the first time in India. Provoked the 24th Amendment.", "s": "Supreme Court"},
-        {"t": "Kesavananda Bharati (1973)", "d": "**13-judge bench, 7:6.** Parliament can amend any part of the Constitution **but cannot destroy its basic structure**. Elements named across the judgments: **supremacy of the Constitution, republican and democratic form of government, secular character, separation of powers, federal character, sovereignty and unity and integrity, welfare state (Parts III-IV balance), judicial review, free and fair elections, rule of law, and the dignity of the individual**. Overruled *Golaknath*; upheld 24th, partly struck down 25th.", "s": "Kesavananda Bharati v. State of Kerala (1973)"},
-        {"t": "Indira Nehru Gandhi v. Raj Narain (1975)", "d": "Struck down **Clause 4 of the 39th Amendment**, which had put the election of the PM and Speaker beyond judicial scrutiny — **free and fair elections and judicial review are basic features**. First application of basic structure to strike down an amendment.", "s": "Supreme Court"},
-        {"t": "Minerva Mills (1980)", "d": "Struck down 42nd Amendment clauses: **limited amending power is itself a basic feature**, and the **balance between Fundamental Rights and Directive Principles** is basic structure. Bhagwati/Chandrachud: 'the Constitution is a precious heritage; therefore you cannot destroy its identity.' Source of the **'golden triangle' of Articles 14, 19 and 21**.", "s": "Supreme Court"},
-        {"t": "Waman Rao (1981)", "d": "Fixed **24 April 1973 — the date of *Kesavananda* — as the cut-off**: laws placed in the **Ninth Schedule before** that date are immune; those added **after** are open to basic-structure review.", "s": "Supreme Court"},
-        {"t": "I.R. Coelho (2007)", "d": "Nine-judge bench confirming *Waman Rao*: any law inserted into the **Ninth Schedule after 24 April 1973 is testable against the basic structure**, applying the **'rights test' and the 'essence of rights' test**. Ninth Schedule is not a constitutional blank cheque.", "s": "Supreme Court"},
-        {"t": "SR Bommai (1994)", "d": "Nine judges. **Article 356 proclamation is justiciable**; majority is tested **only on the floor of the House**; the Assembly may be dissolved **only after both Houses approve**; the Court can restore a dismissed government; and **secularism is a basic feature**.", "s": "Supreme Court"},
-        {"t": "Supreme Court Advocates-on-Record (NJAC, 2015)", "d": "Struck down the **99th Amendment and the NJAC Act** 4:1 — **primacy of the judiciary in judicial appointments is part of the independence of the judiciary and hence basic structure**. Restored the collegium; the promised Memorandum of Procedure remains unfinalised, which is the live reform question.", "s": "Fourth Judges case (2015)"}
+        {
+          "t": "Shankari Prasad (1951)",
+          "d": "Held a constitutional amendment is **'law' under Article 13? No** — 'law' in Art. 13 means ordinary law, so **Parliament can amend Fundamental Rights**. Upheld the First Amendment and the Ninth Schedule.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Sajjan Singh (1965)",
+          "d": "Reaffirmed *Shankari Prasad*, but **Justices Hidayatullah and Mudholkar dissented** — Mudholkar first used the phrase **'basic features'**, the seed of the doctrine.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Golaknath (1967)",
+          "d": "By 6:5, **reversed** the earlier position: Fundamental Rights are **transcendental and immutable**, Parliament cannot abridge them. Applied the **doctrine of prospective overruling** for the first time in India. Provoked the 24th Amendment.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Kesavananda Bharati (1973)",
+          "d": "**13-judge bench, 7:6.** Parliament can amend any part of the Constitution **but cannot destroy its basic structure**. Elements named across the judgments: **supremacy of the Constitution, republican and democratic form of government, secular character, separation of powers, federal character, sovereignty and unity and integrity, welfare state (Parts III-IV balance), judicial review, free and fair elections, rule of law, and the dignity of the individual**. Overruled *Golaknath*; upheld 24th, partly struck down 25th.",
+          "s": "Kesavananda Bharati v. State of Kerala (1973)"
+        },
+        {
+          "t": "Indira Nehru Gandhi v. Raj Narain (1975)",
+          "d": "Struck down **Clause 4 of the 39th Amendment**, which had put the election of the PM and Speaker beyond judicial scrutiny — **free and fair elections and judicial review are basic features**. First application of basic structure to strike down an amendment.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Minerva Mills (1980)",
+          "d": "Struck down 42nd Amendment clauses: **limited amending power is itself a basic feature**, and the **balance between Fundamental Rights and Directive Principles** is basic structure. Bhagwati/Chandrachud: 'the Constitution is a precious heritage; therefore you cannot destroy its identity.' Source of the **'golden triangle' of Articles 14, 19 and 21**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Waman Rao (1981)",
+          "d": "Fixed **24 April 1973 — the date of *Kesavananda* — as the cut-off**: laws placed in the **Ninth Schedule before** that date are immune; those added **after** are open to basic-structure review.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "I.R. Coelho (2007)",
+          "d": "Nine-judge bench confirming *Waman Rao*: any law inserted into the **Ninth Schedule after 24 April 1973 is testable against the basic structure**, applying the **'rights test' and the 'essence of rights' test**. Ninth Schedule is not a constitutional blank cheque.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "SR Bommai (1994)",
+          "d": "Nine judges. **Article 356 proclamation is justiciable**; majority is tested **only on the floor of the House**; the Assembly may be dissolved **only after both Houses approve**; the Court can restore a dismissed government; and **secularism is a basic feature**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Supreme Court Advocates-on-Record (NJAC, 2015)",
+          "d": "Struck down the **99th Amendment and the NJAC Act** 4:1 — **primacy of the judiciary in judicial appointments is part of the independence of the judiciary and hence basic structure**. Restored the collegium; the promised Memorandum of Procedure remains unfinalised, which is the live reform question.",
+          "s": "Fourth Judges case (2015)"
+        }
       ]
     },
     {
       "g": "Judicial review, PIL and the judicial process",
       "items": [
-        {"t": "A.K. Gopalan (1950)", "d": "Read the Fundamental Rights as **watertight compartments** and upheld preventive detention — 'procedure established by law' meant any enacted procedure. **Overruled in substance by *Maneka Gandhi*.** Fazl Ali J.'s lone dissent later became the law.", "s": "Supreme Court"},
-        {"t": "Maneka Gandhi (1978)", "d": "Passport impounding case. Articles **14, 19 and 21 are interlinked** and any procedure under Art. 21 must be **'right, just and fair, and not arbitrary, fanciful or oppressive'** — imported **substantive due process** and made *audi alteram partem* implicit in Art. 21. The most cited case in Indian constitutional law.", "s": "Supreme Court"},
-        {"t": "ADM Jabalpur (1976)", "d": "The **Habeas Corpus case** — held during the Emergency that the right to move a court under Art. 21 stands suspended, so even an illegal detention could not be challenged. **Justice H.R. Khanna's lone dissent** cost him the Chief Justiceship. **Expressly overruled in *Puttaswamy* (2017)** and called 'seriously flawed'. The 44th Amendment made Art. 20 and 21 non-suspendable.", "s": "Supreme Court"},
-        {"t": "S.P. Gupta (1981)", "d": "**First Judges case** — diluted 'consultation' with the CJI to mere consultation, and, more importantly, **relaxed *locus standi* to found Public Interest Litigation**: any public-spirited person may move the court on behalf of those unable to. Bhagwati J.'s judgment is the charter of PIL.", "s": "Supreme Court"},
-        {"t": "Second Judges (1993) and Third Judges (1998)", "d": "**1993** created the **collegium**, reading 'consultation' as **'concurrence'** and giving the judiciary primacy; **1998**, on a Presidential reference under Art. 143, expanded the collegium to the **CJI plus four senior-most judges** and made the process one of **plurality of opinion recorded in writing**.", "s": "Supreme Court"},
-        {"t": "L. Chandra Kumar (1997)", "d": "Judicial review under **Articles 32 and 226/227 is part of the basic structure**; tribunals may act as courts of first instance but **cannot exclude the High Court's writ jurisdiction** — appeals lie to a **Division Bench of the High Court**, not directly to the Supreme Court. Struck down the exclusion clauses of Arts. 323A(2)(d) and 323B(3)(d).", "s": "Supreme Court"},
-        {"t": "Madras Bar Association (2014, 2020, 2021) and Rojer Mathew (2019)", "d": "The tribunal line: the **National Tax Tribunal** was struck down as an encroachment on High Court jurisdiction (2014); tribunal rules were struck down for excessive executive control over **appointment, tenure and service conditions** (*Rojer Mathew*, 2019); and the Court has repeatedly directed a **National Tribunals Commission**. Also flagged the **money-bill route** for tribunal provisions as doubtful.", "s": "Supreme Court"},
-        {"t": "Vineet Narain (1997)", "d": "**Jain hawala case** — issued 'continuing mandamus'; gave the CBI Director a **minimum two-year tenure**, created the **Central Vigilance Commission's supervisory role** over the CBI (later statutory under the CVC Act, 2003), and struck at the 'Single Directive'. The foundational judgment on investigative-agency autonomy.", "s": "Supreme Court"},
-        {"t": "Rupa Ashok Hurra (2002)", "d": "Created the **curative petition** — a final remedy after dismissal of a review, to be certified by a senior counsel and heard by the three senior-most judges plus the judges who passed the order. Basis of the *Bhopal* and *Ayodhya* curative attempts.", "s": "Supreme Court"},
-        {"t": "Anita Kushwaha v. Pushap Sudan (2016)", "d": "**Access to justice is a fundamental right under Articles 14 and 21**, with four facets: the state must provide an **adjudicatory mechanism**, it must be **accessible in location**, the process must be **speedy**, and it must be **affordable**.", "s": "Supreme Court"},
-        {"t": "Hussainara Khatoon (1979)", "d": "The first PIL on undertrials in Bihar — **speedy trial is part of Article 21**, and free legal aid is a state obligation. Led to the release of thousands of undertrials and to the Legal Services Authorities Act, 1987.", "s": "Supreme Court"}
+        {
+          "t": "A.K. Gopalan (1950)",
+          "d": "Read the Fundamental Rights as **watertight compartments** and upheld preventive detention — 'procedure established by law' meant any enacted procedure. **Overruled in substance by *Maneka Gandhi*.** Fazl Ali J.'s lone dissent later became the law.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Maneka Gandhi (1978)",
+          "d": "Passport impounding case. Articles **14, 19 and 21 are interlinked** and any procedure under Art. 21 must be **'right, just and fair, and not arbitrary, fanciful or oppressive'** — imported **substantive due process** and made *audi alteram partem* implicit in Art. 21. The most cited case in Indian constitutional law.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "ADM Jabalpur (1976)",
+          "d": "The **Habeas Corpus case** — held during the Emergency that the right to move a court under Art. 21 stands suspended, so even an illegal detention could not be challenged. **Justice H.R. Khanna's lone dissent** cost him the Chief Justiceship. **Expressly overruled in *Puttaswamy* (2017)** and called 'seriously flawed'. The 44th Amendment made Art. 20 and 21 non-suspendable.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "S.P. Gupta (1981)",
+          "d": "**First Judges case** — diluted 'consultation' with the CJI to mere consultation, and, more importantly, **relaxed *locus standi* to found Public Interest Litigation**: any public-spirited person may move the court on behalf of those unable to. Bhagwati J.'s judgment is the charter of PIL.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Second Judges (1993) and Third Judges (1998)",
+          "d": "**1993** created the **collegium**, reading 'consultation' as **'concurrence'** and giving the judiciary primacy; **1998**, on a Presidential reference under Art. 143, expanded the collegium to the **CJI plus four senior-most judges** and made the process one of **plurality of opinion recorded in writing**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "L. Chandra Kumar (1997)",
+          "d": "Judicial review under **Articles 32 and 226/227 is part of the basic structure**; tribunals may act as courts of first instance but **cannot exclude the High Court's writ jurisdiction** — appeals lie to a **Division Bench of the High Court**, not directly to the Supreme Court. Struck down the exclusion clauses of Arts. 323A(2)(d) and 323B(3)(d).",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Madras Bar Association (2014, 2020, 2021) and Rojer Mathew (2019)",
+          "d": "The tribunal line: the **National Tax Tribunal** was struck down as an encroachment on High Court jurisdiction (2014); tribunal rules were struck down for excessive executive control over **appointment, tenure and service conditions** (*Rojer Mathew*, 2019); and the Court has repeatedly directed a **National Tribunals Commission**. Also flagged the **money-bill route** for tribunal provisions as doubtful.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Vineet Narain (1997)",
+          "d": "**Jain hawala case** — issued 'continuing mandamus'; gave the CBI Director a **minimum two-year tenure**, created the **Central Vigilance Commission's supervisory role** over the CBI (later statutory under the CVC Act, 2003), and struck at the 'Single Directive'. The foundational judgment on investigative-agency autonomy.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Rupa Ashok Hurra (2002)",
+          "d": "Created the **curative petition** — a final remedy after dismissal of a review, to be certified by a senior counsel and heard by the three senior-most judges plus the judges who passed the order. Basis of the *Bhopal* and *Ayodhya* curative attempts.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Anita Kushwaha v. Pushap Sudan (2016)",
+          "d": "**Access to justice is a fundamental right under Articles 14 and 21**, with four facets: the state must provide an **adjudicatory mechanism**, it must be **accessible in location**, the process must be **speedy**, and it must be **affordable**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Hussainara Khatoon (1979)",
+          "d": "The first PIL on undertrials in Bihar — **speedy trial is part of Article 21**, and free legal aid is a state obligation. Led to the release of thousands of undertrials and to the Legal Services Authorities Act, 1987.",
+          "s": "Supreme Court"
+        }
       ]
     },
     {
       "g": "Executive, Governor and federalism",
       "items": [
-        {"t": "Ram Jawaya Kapur (1955)", "d": "Executive power **need not rest on a prior statute** — it extends to all matters on which the legislature can legislate, provided it does not violate the Constitution or infringe rights. Also stated that India does not follow a rigid separation of powers.", "s": "Supreme Court"},
-        {"t": "Shamsher Singh (1974)", "d": "Seven judges: the **President and Governor are constitutional heads** who exercise powers **only on the aid and advice** of the Council of Ministers, except in the few situations of constitutional discretion. Settled Indian parliamentary convention.", "s": "Supreme Court"},
-        {"t": "Nabam Rebia (2016)", "d": "Arunachal Pradesh: the **Governor cannot summon, prorogue or dissolve the House at his own discretion** or advance an Assembly session against ministerial advice; **Article 163 does not give a general discretionary power**. Restored the dismissed government — the first such restoration since *Bommai*.", "s": "Supreme Court"},
-        {"t": "Subhash Desai (2023)", "d": "Maharashtra: the **Governor was wrong to call a floor test** on the material available, since a party's internal dissent is not a loss of confidence; a **Whip is appointed by the political party, not the legislature party**; but the Court could **not restore the government** because the CM had resigned without facing the test.", "s": "Supreme Court"},
-        {"t": "State of Punjab v. Principal Secretary to the Governor (2023)", "d": "The Governor **cannot sit indefinitely on bills** — the first proviso to Art. 200 requires a return 'as soon as possible', and inaction is 'not a constitutionally permissible course'. Governors are **unelected heads and cannot thwart the elected legislature**.", "s": "Supreme Court"},
-        {"t": "State of Tamil Nadu v. Governor (2025)", "d": "Held the Governor's reservation of ten re-passed bills illegal, deemed them assented, and read **timelines** into Articles 200-201. The Union then made a **Presidential Reference under Article 143** on whether courts may prescribe such timelines — the live federal controversy on the paper.", "s": "Supreme Court / Presidential Reference, 2025"},
-        {"t": "Government of NCT of Delhi v. Union of India (2018, 2023)", "d": "2018: the LG is **bound by the aid and advice** of the Delhi government except on police, public order and land, and has **no independent decision-making power**; 'anarchy must give way to collaborative federalism'. 2023: the **elected government controls services** in Delhi — reversed within days by an **Ordinance and the GNCTD (Amendment) Act, 2023**, now under challenge.", "s": "Supreme Court"},
-        {"t": "Mohit Minerals (2022)", "d": "**GST Council recommendations are recommendatory, not binding** — Parliament and state legislatures have **simultaneous power under Art. 246A**, and Indian federalism involves **'dialogue between cooperative and uncooperative federalism'**. Also struck down IGST on ocean freight as double taxation.", "s": "Supreme Court"},
-        {"t": "State of West Bengal v. Union of India (2024)", "d": "Held the state's suit under **Article 131** against the CBI's investigation without general consent to be **maintainable** — a major federal ruling on the DSPE Act, 1946 and the withdrawal of general consent by several states.", "s": "Supreme Court"},
-        {"t": "Mineral Area Development Authority (2024)", "d": "Nine-judge bench, 8:1: **royalty is not a tax**, and **states have the power to levy taxes on mineral rights** — one of the largest fiscal-federalism wins for states, applied with limited retrospectivity from 1 April 2005.", "s": "Supreme Court"},
-        {"t": "In Re: Article 370 (2023)", "d": "Upheld the abrogation: **Article 370 was a temporary provision**, Jammu & Kashmir **retained no element of internal sovereignty** after accession, and the President's power under 370(3) survived the dissolution of the Constituent Assembly. Directed **restoration of statehood** and **elections** — held in 2024.", "s": "Supreme Court"}
+        {
+          "t": "Ram Jawaya Kapur (1955)",
+          "d": "Executive power **need not rest on a prior statute** — it extends to all matters on which the legislature can legislate, provided it does not violate the Constitution or infringe rights. Also stated that India does not follow a rigid separation of powers.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Shamsher Singh (1974)",
+          "d": "Seven judges: the **President and Governor are constitutional heads** who exercise powers **only on the aid and advice** of the Council of Ministers, except in the few situations of constitutional discretion. Settled Indian parliamentary convention.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Nabam Rebia (2016)",
+          "d": "Arunachal Pradesh: the **Governor cannot summon, prorogue or dissolve the House at his own discretion** or advance an Assembly session against ministerial advice; **Article 163 does not give a general discretionary power**. Restored the dismissed government — the first such restoration since *Bommai*.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Subhash Desai (2023)",
+          "d": "Maharashtra: the **Governor was wrong to call a floor test** on the material available, since a party's internal dissent is not a loss of confidence; a **Whip is appointed by the political party, not the legislature party**; but the Court could **not restore the government** because the CM had resigned without facing the test.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "State of Punjab v. Principal Secretary to the Governor (2023)",
+          "d": "The Governor **cannot sit indefinitely on bills** — the first proviso to Art. 200 requires a return 'as soon as possible', and inaction is 'not a constitutionally permissible course'. Governors are **unelected heads and cannot thwart the elected legislature**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "State of Tamil Nadu v. Governor (2025)",
+          "d": "Held the Governor's reservation of ten re-passed bills illegal, deemed them assented, and read **timelines** into Articles 200-201. The Union then made a **Presidential Reference under Article 143** on whether courts may prescribe such timelines — the live federal controversy on the paper.",
+          "s": "Supreme Court / Presidential Reference, 2025"
+        },
+        {
+          "t": "Government of NCT of Delhi v. Union of India (2018, 2023)",
+          "d": "2018: the LG is **bound by the aid and advice** of the Delhi government except on police, public order and land, and has **no independent decision-making power**; 'anarchy must give way to collaborative federalism'. 2023: the **elected government controls services** in Delhi — reversed within days by an **Ordinance and the GNCTD (Amendment) Act, 2023**, now under challenge.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Mohit Minerals (2022)",
+          "d": "**GST Council recommendations are recommendatory, not binding** — Parliament and state legislatures have **simultaneous power under Art. 246A**, and Indian federalism involves **'dialogue between cooperative and uncooperative federalism'**. Also struck down IGST on ocean freight as double taxation.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "State of West Bengal v. Union of India (2024)",
+          "d": "Held the state's suit under **Article 131** against the CBI's investigation without general consent to be **maintainable** — a major federal ruling on the DSPE Act, 1946 and the withdrawal of general consent by several states.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Mineral Area Development Authority (2024)",
+          "d": "Nine-judge bench, 8:1: **royalty is not a tax**, and **states have the power to levy taxes on mineral rights** — one of the largest fiscal-federalism wins for states, applied with limited retrospectivity from 1 April 2005.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "In Re: Article 370 (2023)",
+          "d": "Upheld the abrogation: **Article 370 was a temporary provision**, Jammu & Kashmir **retained no element of internal sovereignty** after accession, and the President's power under 370(3) survived the dissolution of the Constituent Assembly. Directed **restoration of statehood** and **elections** — held in 2024.",
+          "s": "Supreme Court"
+        }
       ]
     },
     {
       "g": "Parliament, privilege, defection and elections",
       "items": [
-        {"t": "Kihoto Hollohan (1992)", "d": "Upheld the **Tenth Schedule** but struck down Paragraph 7 (the ouster of judicial review) for want of ratification; the **Speaker acts as a tribunal** and the decision is subject to judicial review on grounds of mala fides, perversity or violation of natural justice, though **not at an interlocutory stage**.", "s": "Supreme Court"},
-        {"t": "Keisham Meghachandra (2020)", "d": "Speakers should decide disqualification petitions **within three months** save in exceptional circumstances, and Parliament should **consider an independent tribunal headed by a retired judge** because a Speaker belongs to a party.", "s": "Supreme Court"},
-        {"t": "Raja Ram Pal (2007)", "d": "'Cash for query' expulsions — Parliament **has the power to expel members**, but the exercise of privilege is **subject to judicial review** for illegality or unconstitutionality. Privilege is not absolute.", "s": "Supreme Court"},
-        {"t": "Keshav Singh (1965)", "d": "The classic advisory opinion on the conflict between the **UP Assembly's privileges and the High Court's jurisdiction** — held that the House cannot be the sole judge of its privileges when fundamental rights and the courts' powers are engaged.", "s": "Supreme Court (Advisory)"},
-        {"t": "P.V. Narasimha Rao (1998) → Sita Soren (2024)", "d": "1998 had granted **immunity to a legislator who took a bribe and then voted**, an outcome widely criticised as immunising corruption. **Sita Soren (2024), seven judges, unanimously overruled it** — bribery is not protected by Arts. 105/194 because it is **not essential to casting a vote or making a speech**, and the offence is complete on acceptance.", "s": "Supreme Court"},
-        {"t": "Mohinder Singh Gill (1978)", "d": "The **Election Commission's plenary power under Article 324** fills gaps in the law, but must be exercised **consistently with natural justice and the rule of law**; also the principle that an order must be judged by the reasons recorded in it, not by later affidavits.", "s": "Supreme Court"},
-        {"t": "Anoop Baranwal (2023)", "d": "Constitution Bench directed appointment of the **CEC and ECs by a committee of the PM, Leader of Opposition and CJI** until Parliament legislated. Parliament responded with the **CEC and Other ECs Act, 2023**, replacing the CJI with a **Union Cabinet Minister** — the live controversy on ECI independence.", "s": "Supreme Court"},
-        {"t": "Association for Democratic Reforms (2002) and PUCL (2003)", "d": "Candidates must disclose **assets, liabilities, education and criminal antecedents** — the voter's **right to know is part of Article 19(1)(a)**; the attempt to nullify it through Section 33B of the RPA was struck down. **PUCL (2013)** added **NOTA**.", "s": "Supreme Court"},
-        {"t": "Lily Thomas (2013)", "d": "Struck down **Section 8(4) of the RPA, 1951**: a convicted legislator is **disqualified immediately on conviction**, with no three-month protection to file an appeal. Paired with *Public Interest Foundation* (2018), which requires publication of criminal antecedents by candidates and parties.", "s": "Supreme Court"},
-        {"t": "Electoral Bonds — ADR v. Union of India (2024)", "d": "Struck down the **Electoral Bond Scheme** unanimously: anonymous corporate funding violates the **voter's right to information under Art. 19(1)(a)**, and the removal of the **7.5% profit cap** on company donations was **manifestly arbitrary**. Directed the SBI to disclose all bond data to the ECI. The leading recent judgment on political finance.", "s": "Supreme Court"},
-        {"t": "Abhiram Singh (2017)", "d": "By 4:3, read **Section 123(3) of the RPA** purposively: an appeal for votes on grounds of **religion, race, caste, community or language — of the candidate *or the voter* — is a corrupt practice**. Elections are a 'secular exercise'.", "s": "Supreme Court"},
-        {"t": "Kuldip Nayar (2006)", "d": "Upheld the removal of the **domicile requirement for Rajya Sabha members** and the shift to **open ballot** — held that the RS is not a federal chamber in a rigid sense and that an open ballot curbs cross-voting without violating free and fair elections.", "s": "Supreme Court"}
+        {
+          "t": "Kihoto Hollohan (1992)",
+          "d": "Upheld the **Tenth Schedule** but struck down Paragraph 7 (the ouster of judicial review) for want of ratification; the **Speaker acts as a tribunal** and the decision is subject to judicial review on grounds of mala fides, perversity or violation of natural justice, though **not at an interlocutory stage**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Keisham Meghachandra (2020)",
+          "d": "Speakers should decide disqualification petitions **within three months** save in exceptional circumstances, and Parliament should **consider an independent tribunal headed by a retired judge** because a Speaker belongs to a party.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Raja Ram Pal (2007)",
+          "d": "'Cash for query' expulsions — Parliament **has the power to expel members**, but the exercise of privilege is **subject to judicial review** for illegality or unconstitutionality. Privilege is not absolute.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Keshav Singh (1965)",
+          "d": "The classic advisory opinion on the conflict between the **UP Assembly's privileges and the High Court's jurisdiction** — held that the House cannot be the sole judge of its privileges when fundamental rights and the courts' powers are engaged.",
+          "s": "Supreme Court (Advisory)"
+        },
+        {
+          "t": "P.V. Narasimha Rao (1998) → Sita Soren (2024)",
+          "d": "1998 had granted **immunity to a legislator who took a bribe and then voted**, an outcome widely criticised as immunising corruption. **Sita Soren (2024), seven judges, unanimously overruled it** — bribery is not protected by Arts. 105/194 because it is **not essential to casting a vote or making a speech**, and the offence is complete on acceptance.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Mohinder Singh Gill (1978)",
+          "d": "The **Election Commission's plenary power under Article 324** fills gaps in the law, but must be exercised **consistently with natural justice and the rule of law**; also the principle that an order must be judged by the reasons recorded in it, not by later affidavits.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Anoop Baranwal (2023)",
+          "d": "Constitution Bench directed appointment of the **CEC and ECs by a committee of the PM, Leader of Opposition and CJI** until Parliament legislated. Parliament responded with the **CEC and Other ECs Act, 2023**, replacing the CJI with a **Union Cabinet Minister** — the live controversy on ECI independence.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Association for Democratic Reforms (2002) and PUCL (2003)",
+          "d": "Candidates must disclose **assets, liabilities, education and criminal antecedents** — the voter's **right to know is part of Article 19(1)(a)**; the attempt to nullify it through Section 33B of the RPA was struck down. **PUCL (2013)** added **NOTA**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Lily Thomas (2013)",
+          "d": "Struck down **Section 8(4) of the RPA, 1951**: a convicted legislator is **disqualified immediately on conviction**, with no three-month protection to file an appeal. Paired with *Public Interest Foundation* (2018), which requires publication of criminal antecedents by candidates and parties.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Electoral Bonds — ADR v. Union of India (2024)",
+          "d": "Struck down the **Electoral Bond Scheme** unanimously: anonymous corporate funding violates the **voter's right to information under Art. 19(1)(a)**, and the removal of the **7.5% profit cap** on company donations was **manifestly arbitrary**. Directed the SBI to disclose all bond data to the ECI. The leading recent judgment on political finance.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Abhiram Singh (2017)",
+          "d": "By 4:3, read **Section 123(3) of the RPA** purposively: an appeal for votes on grounds of **religion, race, caste, community or language — of the candidate *or the voter* — is a corrupt practice**. Elections are a 'secular exercise'.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Kuldip Nayar (2006)",
+          "d": "Upheld the removal of the **domicile requirement for Rajya Sabha members** and the shift to **open ballot** — held that the RS is not a federal chamber in a rigid sense and that an open ballot curbs cross-voting without violating free and fair elections.",
+          "s": "Supreme Court"
+        }
       ]
     },
     {
       "g": "Equality, reservation and social justice",
       "items": [
-        {"t": "Champakam Dorairajan (1951)", "d": "Communal caste-based reservation in college admissions was struck down as violating Art. 29(2) — provoking the **First Amendment, 1951**, which added **Article 15(4)**. The first Constitutional amendment traceable to a judgment.", "s": "Supreme Court"},
-        {"t": "Indra Sawhney (1992)", "d": "**Mandal case, nine judges.** Upheld 27% OBC reservation; **caste can be a starting point for identifying a class**; excluded the **creamy layer**; capped total reservation at **50% save in extraordinary circumstances**; barred reservation in **promotions** (later reversed by the 77th Amendment) and held that reservation cannot apply to **super-speciality posts**. The single most important social-justice judgment.", "s": "Supreme Court"},
-        {"t": "M. Nagaraj (2006)", "d": "Upheld reservation in promotion but subjected it to three conditions — the state must show **backwardness, inadequacy of representation, and no impairment of administrative efficiency**, with quantifiable data.", "s": "Supreme Court"},
-        {"t": "Jarnail Singh (2018, 2022)", "d": "**Removed the requirement to prove the backwardness of SC/STs** (following *Indra Sawhney*'s logic that SC/STs are presumed backward), but **applied the creamy-layer principle to SC/STs for promotions**. 2022 clarified that the unit for collecting data is the **cadre**.", "s": "Supreme Court"},
-        {"t": "Janhit Abhiyan (2022)", "d": "Upheld the **103rd Amendment's 10% EWS quota** 3:2 — reservation solely on **economic criteria is permissible**, the **50% ceiling is not inviolable**, and excluding SC/ST/OBC from EWS does not violate the basic structure. The dissents (Bhat and Lalit JJ.) called the exclusion 'exclusionary and discriminatory'.", "s": "Supreme Court"},
-        {"t": "State of Punjab v. Davinder Singh (2024)", "d": "Seven judges, 6:1, **overruled E.V. Chinnaiah (2005)**: **sub-classification within Scheduled Castes is permissible** because SCs are not a homogenous class, provided it rests on **quantifiable data and not political expediency**; several judges also urged applying the **creamy layer** to SCs/STs.", "s": "Supreme Court"},
-        {"t": "Maratha Reservation — Jaishri Patil (2021)", "d": "Struck down Maharashtra's SEBC quota for **breaching the 50% ceiling without extraordinary circumstances**, and held that after the **102nd Amendment only the President could notify SEBCs** — reversed by the **105th Amendment, 2021**, restoring state power.", "s": "Supreme Court"},
-        {"t": "Vishaka (1997) → Aureliano Fernandes (2023)", "d": "*Vishaka* laid down binding guidelines against **sexual harassment at the workplace**, drawing on **CEDAW** — judicial legislation to fill a statutory vacuum; codified as the **POSH Act, 2013**. *Aureliano Fernandes* (2023) noted the 'sorry state of affairs' in the constitution of Internal Complaints Committees and directed compliance audits.", "s": "Supreme Court"},
-        {"t": "Vineeta Sharma (2020)", "d": "A **daughter is a coparcener by birth** under the amended Section 6 of the Hindu Succession Act — the right is **unobstructed heritage**, so it applies **whether or not the father was alive on 9 September 2005**. Settled the conflict between *Prakash v. Phulavati* and *Danamma*.", "s": "Supreme Court"},
-        {"t": "Rajive Raturi (2024)", "d": "**Accessibility is a component of Article 21** — directed that the **mandatory accessibility standards** under the RPwD Act, 2016 be framed and enforced, distinguishing **non-negotiable rules from aspirational guidelines**. The leading disability-rights judgment after the shift to the social model of disability.", "s": "Supreme Court"},
-        {"t": "National Legal Services Authority — NALSA (2014)", "d": "Recognised **transgender persons as a third gender**, upheld the **right to self-identification of gender** as part of Arts. 14, 15, 19 and 21, and directed OBC-style reservation in education and employment. Statutory follow-up: **Transgender Persons (Protection of Rights) Act, 2019**.", "s": "Supreme Court"}
+        {
+          "t": "Champakam Dorairajan (1951)",
+          "d": "Communal caste-based reservation in college admissions was struck down as violating Art. 29(2) — provoking the **First Amendment, 1951**, which added **Article 15(4)**. The first Constitutional amendment traceable to a judgment.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Indra Sawhney (1992)",
+          "d": "**Mandal case, nine judges.** Upheld 27% OBC reservation; **caste can be a starting point for identifying a class**; excluded the **creamy layer**; capped total reservation at **50% save in extraordinary circumstances**; barred reservation in **promotions** (later reversed by the 77th Amendment) and held that reservation cannot apply to **super-speciality posts**. The single most important social-justice judgment.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "M. Nagaraj (2006)",
+          "d": "Upheld reservation in promotion but subjected it to three conditions — the state must show **backwardness, inadequacy of representation, and no impairment of administrative efficiency**, with quantifiable data.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Jarnail Singh (2018, 2022)",
+          "d": "**Removed the requirement to prove the backwardness of SC/STs** (following *Indra Sawhney*'s logic that SC/STs are presumed backward), but **applied the creamy-layer principle to SC/STs for promotions**. 2022 clarified that the unit for collecting data is the **cadre**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Janhit Abhiyan (2022)",
+          "d": "Upheld the **103rd Amendment's 10% EWS quota** 3:2 — reservation solely on **economic criteria is permissible**, the **50% ceiling is not inviolable**, and excluding SC/ST/OBC from EWS does not violate the basic structure. The dissents (Bhat and Lalit JJ.) called the exclusion 'exclusionary and discriminatory'.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "State of Punjab v. Davinder Singh (2024)",
+          "d": "Seven judges, 6:1, **overruled E.V. Chinnaiah (2005)**: **sub-classification within Scheduled Castes is permissible** because SCs are not a homogenous class, provided it rests on **quantifiable data and not political expediency**; several judges also urged applying the **creamy layer** to SCs/STs.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Maratha Reservation — Jaishri Patil (2021)",
+          "d": "Struck down Maharashtra's SEBC quota for **breaching the 50% ceiling without extraordinary circumstances**, and held that after the **102nd Amendment only the President could notify SEBCs** — reversed by the **105th Amendment, 2021**, restoring state power.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Vishaka (1997) → Aureliano Fernandes (2023)",
+          "d": "*Vishaka* laid down binding guidelines against **sexual harassment at the workplace**, drawing on **CEDAW** — judicial legislation to fill a statutory vacuum; codified as the **POSH Act, 2013**. *Aureliano Fernandes* (2023) noted the 'sorry state of affairs' in the constitution of Internal Complaints Committees and directed compliance audits.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Vineeta Sharma (2020)",
+          "d": "A **daughter is a coparcener by birth** under the amended Section 6 of the Hindu Succession Act — the right is **unobstructed heritage**, so it applies **whether or not the father was alive on 9 September 2005**. Settled the conflict between *Prakash v. Phulavati* and *Danamma*.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Rajive Raturi (2024)",
+          "d": "**Accessibility is a component of Article 21** — directed that the **mandatory accessibility standards** under the RPwD Act, 2016 be framed and enforced, distinguishing **non-negotiable rules from aspirational guidelines**. The leading disability-rights judgment after the shift to the social model of disability.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "National Legal Services Authority — NALSA (2014)",
+          "d": "Recognised **transgender persons as a third gender**, upheld the **right to self-identification of gender** as part of Arts. 14, 15, 19 and 21, and directed OBC-style reservation in education and employment. Statutory follow-up: **Transgender Persons (Protection of Rights) Act, 2019**.",
+          "s": "Supreme Court"
+        }
       ]
     },
     {
       "g": "Liberty, privacy, dignity and speech",
       "items": [
-        {"t": "K.S. Puttaswamy (2017)", "d": "Nine judges, unanimous: **privacy is a fundamental right intrinsic to Article 21 and the whole of Part III**, with informational, bodily and decisional autonomy dimensions. Any restriction must pass the **four-fold proportionality test — legality, legitimate aim, necessity/rational connection, and least restrictive means with procedural safeguards**. Overruled *M.P. Sharma* and *Kharak Singh*; expressly overruled *ADM Jabalpur*.", "s": "Supreme Court"},
-        {"t": "Puttaswamy (Aadhaar, 2018)", "d": "Upheld Aadhaar for **subsidies, benefits and services funded from the Consolidated Fund and for PAN/income tax**, but struck down **Section 57** (private-party use) and the mandatory bank/mobile linkage; upheld its passage as a **money bill** 4:1 — the point Chandrachud J. called 'a fraud on the Constitution' in dissent.", "s": "Supreme Court"},
-        {"t": "Shreya Singhal (2015)", "d": "Struck down **Section 66A of the IT Act** as vague and overbroad — distinguished **advocacy from incitement**, held that only incitement can be restricted under Art. 19(2); read down **Section 79** and the intermediary rules to require a **court or government order** for takedown. The foundational online-speech judgment.", "s": "Supreme Court"},
-        {"t": "Anuradha Bhasin (2020)", "d": "Kashmir internet shutdown: **freedom of speech and of trade over the internet is protected under Arts. 19(1)(a) and 19(1)(g)**; **indefinite suspension is impermissible**; every order must be **published, reasoned and subject to periodic review** by a committee. India remains the country with the most internet shutdowns globally.", "s": "Supreme Court"},
-        {"t": "Kedar Nath Singh (1962)", "d": "Upheld **sedition (IPC 124A) but read it down** — only speech with a **tendency to incite violence or public disorder** is criminal, not mere criticism of government. The section was kept in abeyance in 2022 (*S.G. Vombatkere*) and reappears as **Section 152 of the Bharatiya Nyaya Sanhita, 2023** ('acts endangering sovereignty, unity and integrity').", "s": "Supreme Court"},
-        {"t": "Kaushal Kishor (2023)", "d": "By 4:1: **no additional restrictions on free speech beyond Art. 19(2)** can be imposed on ministers; a statement by a minister is **not vicariously attributable to the government**; and **fundamental rights under Arts. 19 and 21 are enforceable even against private persons** — a significant horizontal-application ruling.", "s": "Supreme Court"},
-        {"t": "Navtej Singh Johar (2018)", "d": "Decriminalised consensual same-sex relations by reading down **Section 377** — 'constitutional morality must prevail over social morality'; identity, autonomy and dignity are protected. Chandrachud J.: the Constitution protects the **'right to love'**. Later, *Supriyo* (2023) declined to recognise same-sex **marriage** as a matter for the legislature.", "s": "Supreme Court"},
-        {"t": "Joseph Shine (2018)", "d": "Struck down **adultery (IPC 497)** — it treated the wife as the husband's property, denied women agency and was **manifestly arbitrary**; 'a husband is not the master of his wife'.", "s": "Supreme Court"},
-        {"t": "Common Cause (2018)", "d": "Recognised the **right to die with dignity** as part of Art. 21 — **passive euthanasia and advance medical directives ('living wills')** are permissible, with safeguards simplified in the 2023 clarification.", "s": "Supreme Court"},
-        {"t": "D.K. Basu (1997) and Nilabati Behera (1993)", "d": "*D.K. Basu* laid down **eleven binding requirements for arrest and detention** (memo of arrest, informing a relative, medical examination, right to counsel) — now largely in the CrPC/BNSS. *Nilabati Behera* established **compensation in public law for custodial death** as a remedy under Arts. 32/226, distinct from a civil suit, and rejected sovereign immunity.", "s": "Supreme Court"},
-        {"t": "Ameena Begum (2023)", "d": "On **preventive detention**: it is 'a draconian measure and an exception to Articles 19 and 21'; the courts must satisfy themselves of the **live and proximate link** between the grounds and the order, and **ordinary criminal law must be shown to be inadequate**. The best recent citation for a preventive-detention answer.", "s": "Supreme Court"},
-        {"t": "M.K. Ranjitsinh (2024)", "d": "Great Indian Bustard case: recognised the **right to be free from the adverse effects of climate change** as part of **Articles 14 and 21**, drawing on Arts. 48A and 51A(g) — the first explicit constitutional climate right in India. Also balanced species conservation against India's renewable-energy commitments.", "s": "Supreme Court"}
+        {
+          "t": "K.S. Puttaswamy (2017)",
+          "d": "Nine judges, unanimous: **privacy is a fundamental right intrinsic to Article 21 and the whole of Part III**, with informational, bodily and decisional autonomy dimensions. Any restriction must pass the **four-fold proportionality test — legality, legitimate aim, necessity/rational connection, and least restrictive means with procedural safeguards**. Overruled *M.P. Sharma* and *Kharak Singh*; expressly overruled *ADM Jabalpur*.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Puttaswamy (Aadhaar, 2018)",
+          "d": "Upheld Aadhaar for **subsidies, benefits and services funded from the Consolidated Fund and for PAN/income tax**, but struck down **Section 57** (private-party use) and the mandatory bank/mobile linkage; upheld its passage as a **money bill** 4:1 — the point Chandrachud J. called 'a fraud on the Constitution' in dissent.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Shreya Singhal (2015)",
+          "d": "Struck down **Section 66A of the IT Act** as vague and overbroad — distinguished **advocacy from incitement**, held that only incitement can be restricted under Art. 19(2); read down **Section 79** and the intermediary rules to require a **court or government order** for takedown. The foundational online-speech judgment.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Anuradha Bhasin (2020)",
+          "d": "Kashmir internet shutdown: **freedom of speech and of trade over the internet is protected under Arts. 19(1)(a) and 19(1)(g)**; **indefinite suspension is impermissible**; every order must be **published, reasoned and subject to periodic review** by a committee. India remains the country with the most internet shutdowns globally.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Kedar Nath Singh (1962)",
+          "d": "Upheld **sedition (IPC 124A) but read it down** — only speech with a **tendency to incite violence or public disorder** is criminal, not mere criticism of government. The section was kept in abeyance in 2022 (*S.G. Vombatkere*) and reappears as **Section 152 of the Bharatiya Nyaya Sanhita, 2023** ('acts endangering sovereignty, unity and integrity').",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Kaushal Kishor (2023)",
+          "d": "By 4:1: **no additional restrictions on free speech beyond Art. 19(2)** can be imposed on ministers; a statement by a minister is **not vicariously attributable to the government**; and **fundamental rights under Arts. 19 and 21 are enforceable even against private persons** — a significant horizontal-application ruling.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Navtej Singh Johar (2018)",
+          "d": "Decriminalised consensual same-sex relations by reading down **Section 377** — 'constitutional morality must prevail over social morality'; identity, autonomy and dignity are protected. Chandrachud J.: the Constitution protects the **'right to love'**. Later, *Supriyo* (2023) declined to recognise same-sex **marriage** as a matter for the legislature.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Joseph Shine (2018)",
+          "d": "Struck down **adultery (IPC 497)** — it treated the wife as the husband's property, denied women agency and was **manifestly arbitrary**; 'a husband is not the master of his wife'.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Common Cause (2018)",
+          "d": "Recognised the **right to die with dignity** as part of Art. 21 — **passive euthanasia and advance medical directives ('living wills')** are permissible, with safeguards simplified in the 2023 clarification.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "D.K. Basu (1997) and Nilabati Behera (1993)",
+          "d": "*D.K. Basu* laid down **eleven binding requirements for arrest and detention** (memo of arrest, informing a relative, medical examination, right to counsel) — now largely in the CrPC/BNSS. *Nilabati Behera* established **compensation in public law for custodial death** as a remedy under Arts. 32/226, distinct from a civil suit, and rejected sovereign immunity.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Ameena Begum (2023)",
+          "d": "On **preventive detention**: it is 'a draconian measure and an exception to Articles 19 and 21'; the courts must satisfy themselves of the **live and proximate link** between the grounds and the order, and **ordinary criminal law must be shown to be inadequate**. The best recent citation for a preventive-detention answer.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "M.K. Ranjitsinh (2024)",
+          "d": "Great Indian Bustard case: recognised the **right to be free from the adverse effects of climate change** as part of **Articles 14 and 21**, drawing on Arts. 48A and 51A(g) — the first explicit constitutional climate right in India. Also balanced species conservation against India's renewable-energy commitments.",
+          "s": "Supreme Court"
+        }
       ]
     },
     {
       "g": "Religion, minorities and personal law",
       "items": [
-        {"t": "Shirur Mutt (1954)", "d": "Origin of the **'essential religious practices' doctrine** — the state may regulate secular activities associated with religion but not what is **essential to the religion itself**, and what is essential is decided by reference to the doctrines of that religion. Criticised for making judges arbiters of theology.", "s": "Supreme Court"},
-        {"t": "S.R. Bommai on secularism (1994)", "d": "**Secularism is a basic feature**; the state has no religion, and religion cannot be mixed with **secular activities of the state**. Indian secularism is 'principled distance' — equal respect rather than the Western wall of separation.", "s": "Supreme Court"},
-        {"t": "Sabarimala — Indian Young Lawyers Association (2018)", "d": "4:1: the exclusion of women aged 10-50 was **not an essential religious practice** and violated Arts. 14, 15, 17, 21 and 25; **constitutional morality prevails over social morality**. Justice Indu Malhotra's dissent — that courts should not test the rationality of faith — is essential for balance. Referred to a nine-judge bench on larger questions in 2020.", "s": "Supreme Court"},
-        {"t": "Shah Bano (1985)", "d": "A divorced Muslim woman is entitled to maintenance under **Section 125 CrPC**, a secular provision. Reversed by the **Muslim Women (Protection of Rights on Divorce) Act, 1986**, but *Danial Latifi* (2001) read the Act to require a **reasonable and fair provision for life**. *Shabana Bano* and later rulings confirm access to Section 125 (now **Section 144 BNSS**).", "s": "Supreme Court"},
-        {"t": "Sarla Mudgal (1995) and John Vallamattom (2003)", "d": "Both judgments **urged a Uniform Civil Code** under Art. 44 — *Sarla Mudgal* held that conversion to Islam does not dissolve a Hindu marriage and a second marriage is bigamy; *John Vallamattom* struck down Section 118 of the Indian Succession Act as discriminating against Christians.", "s": "Supreme Court"},
-        {"t": "Shayara Bano (2017)", "d": "By 3:2, struck down **instant triple talaq (talaq-e-biddat)** — held **manifestly arbitrary** under Art. 14 by the majority; codified as the **Muslim Women (Protection of Rights on Marriage) Act, 2019**, which made the practice a criminal offence.", "s": "Supreme Court"},
-        {"t": "Aligarh Muslim University (2024)", "d": "Seven judges, 4:3, **overruled *Azeez Basha* (1968)**: an institution does not lose minority status merely because it was **created by statute**; the test is who **founded** it and for whose benefit — the **indicia test** of establishment and administration. The question of AMU's own status was left to a regular bench.", "s": "Supreme Court"},
-        {"t": "T.M.A. Pai (2002) and P.A. Inamdar (2005)", "d": "Eleven judges: minority status is determined **state-wise**; unaided private institutions have **autonomy in admissions and fees** subject to the prohibition of profiteering and capitation fees; the state cannot impose quotas on unaided private institutions — which prompted the **93rd Amendment (Art. 15(5))**.", "s": "Supreme Court"},
-        {"t": "Places of Worship Act, 1991 line", "d": "The **Places of Worship (Special Provisions) Act, 1991** freezes the religious character of places of worship as on **15 August 1947** (excepting Ayodhya). *Ayodhya* (2019) called the Act a legislative instrument that **protects secularism as a basic feature**; its validity and the maintainability of suits under it are pending.", "s": "Ayodhya (2019) / pending petitions"}
+        {
+          "t": "Shirur Mutt (1954)",
+          "d": "Origin of the **'essential religious practices' doctrine** — the state may regulate secular activities associated with religion but not what is **essential to the religion itself**, and what is essential is decided by reference to the doctrines of that religion. Criticised for making judges arbiters of theology.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "S.R. Bommai on secularism (1994)",
+          "d": "**Secularism is a basic feature**; the state has no religion, and religion cannot be mixed with **secular activities of the state**. Indian secularism is 'principled distance' — equal respect rather than the Western wall of separation.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Sabarimala — Indian Young Lawyers Association (2018)",
+          "d": "4:1: the exclusion of women aged 10-50 was **not an essential religious practice** and violated Arts. 14, 15, 17, 21 and 25; **constitutional morality prevails over social morality**. Justice Indu Malhotra's dissent — that courts should not test the rationality of faith — is essential for balance. Referred to a nine-judge bench on larger questions in 2020.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Shah Bano (1985)",
+          "d": "A divorced Muslim woman is entitled to maintenance under **Section 125 CrPC**, a secular provision. Reversed by the **Muslim Women (Protection of Rights on Divorce) Act, 1986**, but *Danial Latifi* (2001) read the Act to require a **reasonable and fair provision for life**. *Shabana Bano* and later rulings confirm access to Section 125 (now **Section 144 BNSS**).",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Sarla Mudgal (1995) and John Vallamattom (2003)",
+          "d": "Both judgments **urged a Uniform Civil Code** under Art. 44 — *Sarla Mudgal* held that conversion to Islam does not dissolve a Hindu marriage and a second marriage is bigamy; *John Vallamattom* struck down Section 118 of the Indian Succession Act as discriminating against Christians.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Shayara Bano (2017)",
+          "d": "By 3:2, struck down **instant triple talaq (talaq-e-biddat)** — held **manifestly arbitrary** under Art. 14 by the majority; codified as the **Muslim Women (Protection of Rights on Marriage) Act, 2019**, which made the practice a criminal offence.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Aligarh Muslim University (2024)",
+          "d": "Seven judges, 4:3, **overruled *Azeez Basha* (1968)**: an institution does not lose minority status merely because it was **created by statute**; the test is who **founded** it and for whose benefit — the **indicia test** of establishment and administration. The question of AMU's own status was left to a regular bench.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "T.M.A. Pai (2002) and P.A. Inamdar (2005)",
+          "d": "Eleven judges: minority status is determined **state-wise**; unaided private institutions have **autonomy in admissions and fees** subject to the prohibition of profiteering and capitation fees; the state cannot impose quotas on unaided private institutions — which prompted the **93rd Amendment (Art. 15(5))**.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Places of Worship Act, 1991 line",
+          "d": "The **Places of Worship (Special Provisions) Act, 1991** freezes the religious character of places of worship as on **15 August 1947** (excepting Ayodhya). *Ayodhya* (2019) called the Act a legislative instrument that **protects secularism as a basic feature**; its validity and the maintainability of suits under it are pending.",
+          "s": "Ayodhya (2019) / pending petitions"
+        }
       ]
     },
     {
       "g": "Transparency, accountability and service",
       "items": [
-        {"t": "Anjali Bhardwaj (2019)", "d": "On the RTI Act's own institutions — directed **transparent appointment of Information Commissioners**, publication of vacancies and criteria, and timely filling of posts; noted that vacancies were themselves defeating the Act. High vacancy in Information Commissions remains the standing critique.", "s": "Supreme Court"},
-        {"t": "Girish Ramchandra Deshpande (2012) and CPIO v. Subhash Chandra Agarwal (2019)", "d": "*Deshpande* held that service records and personal details are **exempt under Section 8(1)(j)** unless a larger public interest is shown — the most-cited exemption ruling. *Subhash Chandra Agarwal* held that the **CJI's office is a public authority under the RTI Act**, with judicial independence to be balanced against transparency.", "s": "Supreme Court"},
-        {"t": "Prakash Singh (2006)", "d": "Seven binding directives on **police reform**: State Security Commission, **minimum two-year tenure for the DGP and field officers**, **separation of investigation from law and order**, a **Police Establishment Board** for transfers, a **Police Complaints Authority**, and a National Security Commission. Compliance by states remains partial — the model example of judicial direction without executive follow-through.", "s": "Supreme Court"},
-        {"t": "T.S.R. Subramanian (2013)", "d": "Directed a **Civil Services Board** to advise on transfers and postings, a **minimum fixed tenure** for civil servants, and that **oral instructions be recorded in writing** — the judicial answer to political interference in administration.", "s": "Supreme Court"},
-        {"t": "E.P. Royappa (1974)", "d": "Introduced the **arbitrariness doctrine**: 'equality is a dynamic concept... it cannot be cribbed, cabined and confined within traditional and doctrinaire limits'; **equality and arbitrariness are sworn enemies**. Arose from a Chief Secretary's transfer — a service matter that changed Article 14 jurisprudence.", "s": "Supreme Court"},
-        {"t": "Union of India v. Tulsiram Patel (1985)", "d": "On the second proviso to **Article 311(2)**: the three exceptions (conviction on a criminal charge, impracticability of holding an inquiry, and security of the state) dispense with the inquiry, but the decision must be based on **recorded reasons** and is subject to judicial review.", "s": "Supreme Court"},
-        {"t": "Noel Harper (2022)", "d": "Upheld the **FCRA (Amendment) Act, 2020** — including the bar on **sub-granting** and the mandatory SBI New Delhi account — holding that **no one has a fundamental right to receive foreign contribution** and that foreign funding can affect the political and public interest. The key case on the NGO regulation question.", "s": "Supreme Court"},
-        {"t": "Common Cause v. Union of India (2018, CBI Director)", "d": "The line of cases on the **CBI Director's appointment and tenure** — appointment by a committee of the **PM, Leader of Opposition and CJI** under the DSPE Act, and the controversy over the divestiture of powers, which the Court held could not be done without the committee's concurrence.", "s": "Supreme Court"}
+        {
+          "t": "Anjali Bhardwaj (2019)",
+          "d": "On the RTI Act's own institutions — directed **transparent appointment of Information Commissioners**, publication of vacancies and criteria, and timely filling of posts; noted that vacancies were themselves defeating the Act. High vacancy in Information Commissions remains the standing critique.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Girish Ramchandra Deshpande (2012) and CPIO v. Subhash Chandra Agarwal (2019)",
+          "d": "*Deshpande* held that service records and personal details are **exempt under Section 8(1)(j)** unless a larger public interest is shown — the most-cited exemption ruling. *Subhash Chandra Agarwal* held that the **CJI's office is a public authority under the RTI Act**, with judicial independence to be balanced against transparency.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Prakash Singh (2006)",
+          "d": "Seven binding directives on **police reform**: State Security Commission, **minimum two-year tenure for the DGP and field officers**, **separation of investigation from law and order**, a **Police Establishment Board** for transfers, a **Police Complaints Authority**, and a National Security Commission. Compliance by states remains partial — the model example of judicial direction without executive follow-through.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "T.S.R. Subramanian (2013)",
+          "d": "Directed a **Civil Services Board** to advise on transfers and postings, a **minimum fixed tenure** for civil servants, and that **oral instructions be recorded in writing** — the judicial answer to political interference in administration.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "E.P. Royappa (1974)",
+          "d": "Introduced the **arbitrariness doctrine**: 'equality is a dynamic concept... it cannot be cribbed, cabined and confined within traditional and doctrinaire limits'; **equality and arbitrariness are sworn enemies**. Arose from a Chief Secretary's transfer — a service matter that changed Article 14 jurisprudence.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Union of India v. Tulsiram Patel (1985)",
+          "d": "On the second proviso to **Article 311(2)**: the three exceptions (conviction on a criminal charge, impracticability of holding an inquiry, and security of the state) dispense with the inquiry, but the decision must be based on **recorded reasons** and is subject to judicial review.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Noel Harper (2022)",
+          "d": "Upheld the **FCRA (Amendment) Act, 2020** — including the bar on **sub-granting** and the mandatory SBI New Delhi account — holding that **no one has a fundamental right to receive foreign contribution** and that foreign funding can affect the political and public interest. The key case on the NGO regulation question.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Common Cause v. Union of India (2018, CBI Director)",
+          "d": "The line of cases on the **CBI Director's appointment and tenure** — appointment by a committee of the **PM, Leader of Opposition and CJI** under the DSPE Act, and the controversy over the divestiture of powers, which the Court held could not be done without the committee's concurrence.",
+          "s": "Supreme Court"
+        }
+      ]
+    },
+    {
+      "g": "Static recall — judgments cited by name",
+      "items": [
+        {
+          "t": "A.K. Gopalan to Maneka, the shift",
+          "d": "*Gopalan* (1950) read Articles 19, 21 and 22 as **watertight compartments**; *R.C. Cooper* (1970, bank nationalisation) broke that by holding that a law must satisfy **every** relevant right; *Maneka* (1978) completed the shift. Naming *R.C. Cooper* as the bridge is the sophisticated move.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Berubari and Article 143",
+          "d": "The Presidential Reference that held **cession of Indian territory to a foreign state requires a constitutional amendment**, not merely executive action — and that the **Preamble is not part of the Constitution**, a view reversed in *Kesavananda*.",
+          "s": "Berubari Union (1960)"
+        },
+        {
+          "t": "Selvi (2010)",
+          "d": "**Narco-analysis, polygraph and brain-mapping without consent violate Article 20(3) and Article 21** — compelled testimony extends beyond the spoken word. The leading case on forensic technique and self-incrimination.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Olga Tellis (1985)",
+          "d": "Pavement dwellers' case — the **right to livelihood is part of the right to life**, since no person can live without the means of living; eviction must follow fair procedure. The foundation of socio-economic rights under Article 21.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Unni Krishnan (1993)",
+          "d": "Held **education up to 14 to be a fundamental right** flowing from Article 21, which the **86th Amendment** later made explicit as Article 21A. The judicial step that preceded the constitutional one.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Vellore and the precautionary principle",
+          "d": "*Vellore Citizens* (1996) imported the **precautionary principle and polluter pays** as part of Indian law; *M.C. Mehta v. Kamal Nath* (1997) added the **public trust doctrine**. Cite both when the question is on environmental governance rather than a single dispute.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Aruna Shanbaug (2011) → Common Cause (2018)",
+          "d": "*Aruna Shanbaug* first permitted **passive euthanasia** with High Court supervision; *Common Cause* (2018) recognised **advance directives** and the right to die with dignity; *Harish Rana* (2026) applied it definitively. A three-step line worth writing out.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Indian Young Lawyers to the nine-judge reference",
+          "d": "*Sabarimala* (2018) was referred in 2020 to a **nine-judge bench** on larger questions — the interplay of Articles 25 and 26, the limits of essential religious practices, and whether a court may test the rationality of faith. The reference is pending, which is the current position to state.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Zakia Jafri and the limits of PIL",
+          "d": "The Court has repeatedly warned against PIL as **'publicity, private or political interest litigation'**, imposing costs and cautioning on locus. Any PIL answer that only praises the jurisdiction has read half the record.",
+          "s": "Supreme Court"
+        },
+        {
+          "t": "Sub-committee on Judicial Accountability",
+          "d": "Held that the **Judges (Inquiry) Act, 1968** process is the only route to removal and that a motion once admitted is a **parliamentary process the Court will not interdict** — the reason no judge has yet been removed despite motions being moved.",
+          "s": "Supreme Court"
+        }
       ]
     }
   ]

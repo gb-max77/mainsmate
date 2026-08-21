@@ -5,24 +5,121 @@
     {
       "g": "Physical geography — term and instance",
       "items": [
-        {"t": "Plate tectonics and India", "d": "The **Indian plate moves north-east at ~5 cm a year**, colliding with the Eurasian plate — hence the rising Himalaya and the seismicity of **Zone V (North-East, Kashmir, Kutch, Andamans)**. **59% of India's landmass is earthquake-prone**. The **Deccan Traps** are flood basalt from the Reunion hotspot at the K-Pg boundary; the **Bhuj earthquake (2001)** occurred on an intraplate fault.", "s": "Geology"},
-        {"t": "Himalayan structure", "d": "Three parallel ranges — **Greater Himalaya (Himadri)**, **Lesser Himalaya (Himachal — Pir Panjal, Dhauladhar, Mahabharat)** and **Shivalik**, separated by the **MCT** and **MBT**; longitudinal valleys called **duns** (Dehradun, Kotli dun) and the Kashmir **karewas** (lacustrine deposits, saffron). **Syntaxial bends** at Nanga Parbat and Namcha Barwa. Rivers older than the mountains cut **antecedent gorges** — Indus, Satluj, Brahmaputra.", "s": "Physical geography"},
-        {"t": "Monsoon mechanism", "d": "Explanations: the **thermal (Halley) theory**, the **dynamic theory** — the **ITCZ** shift with the **Tibetan Plateau's heating**, the **Sub-Tropical Jet Stream's** withdrawal and the **Tropical Easterly Jet**, the **Somali/Findlater Jet**, and the **Mascarene High**. Modulators: **El Niño (deficit) / La Niña (surplus)**, the **Indian Ocean Dipole (a positive IOD offsets El Niño)**, **Madden-Julian Oscillation**, and **Eurasian snow cover (Blanford's hypothesis)**. Withdrawal from Rajasthan by September; the **retreating monsoon brings the North-East monsoon rains to Tamil Nadu (Oct-Dec)** — the reason Tamil Nadu's rainfall regime is anomalous.", "s": "IMD / climatology"},
-        {"t": "Local storms and phenomena", "d": "**Kalbaisakhi/Nor'westers** (Bengal, pre-monsoon), **Bardoli Chheerha** (Assam), **Mango showers** (Kerala/Karnataka, aiding mango ripening), **Blossom showers** (coffee), **Loo** (northern plains), **Cherry blossom showers**, **Norwesters**, **October heat**, and **Western Disturbances** — extratropical cyclones from the Mediterranean that bring winter rain to the north-west, critical for the **rabi wheat crop**.", "s": "Climatology"},
-        {"t": "Soils", "d": "**Alluvial (~40% of the area, khadar vs bhangar)**, **Black/regur** (Deccan lava, moisture-retentive, self-ploughing, ideal for cotton), **Red and yellow** (crystalline igneous, iron-rich), **Laterite** (heavy rain and leaching, poor in humus, used as brick — Kerala, Karnataka), **Arid**, **Forest/mountain**, **Peaty/marshy** and **Saline/alkaline (reh, kallar)**. Degradation: **~30% of India's land is degraded** (ISRO's Desertification Atlas) — the number to quote for UNCCD questions.", "s": "ICAR / ISRO Desertification Atlas"},
-        {"t": "Ocean and coastal terms", "d": "**Upwelling** (nutrient-rich water rising, sustaining fisheries — the Somali coast during the SW monsoon), **thermocline**, **coral bleaching** (zooxanthellae expulsion above threshold temperature — the Gulf of Mannar and Lakshadweep), **atoll/fringing/barrier reefs**, **estuary versus delta** (Narmada and Tapi form estuaries because they flow through rift valleys with fast gradients), **tombolo, spit and lagoon** (Chilika — Asia's largest brackish lagoon; Vembanad — India's longest lake).", "s": "Oceanography"},
-        {"t": "Cyclones", "d": "Form over water above **26.5°C** with low vertical wind shear and a **Coriolis force away from the equator (5°+)**; the **Bay of Bengal gets ~4 times more cyclones than the Arabian Sea** because of higher SST, freshwater-driven stratification and monsoon-trough interaction — though warming has increased Arabian Sea intensity. Anatomy: **eye, eyewall and rain bands**; **storm surge causes most deaths**, and IMD names storms from a 13-country list.", "s": "IMD"}
+        {
+          "t": "Plate tectonics and India",
+          "d": "The **Indian plate moves north-east at ~5 cm a year**, colliding with the Eurasian plate — hence the rising Himalaya and the seismicity of **Zone V (North-East, Kashmir, Kutch, Andamans)**. **59% of India's landmass is earthquake-prone**. The **Deccan Traps** are flood basalt from the Reunion hotspot at the K-Pg boundary; the **Bhuj earthquake (2001)** occurred on an intraplate fault.",
+          "s": "Geology"
+        },
+        {
+          "t": "Himalayan structure",
+          "d": "Three parallel ranges — **Greater Himalaya (Himadri)**, **Lesser Himalaya (Himachal — Pir Panjal, Dhauladhar, Mahabharat)** and **Shivalik**, separated by the **MCT** and **MBT**; longitudinal valleys called **duns** (Dehradun, Kotli dun) and the Kashmir **karewas** (lacustrine deposits, saffron). **Syntaxial bends** at Nanga Parbat and Namcha Barwa. Rivers older than the mountains cut **antecedent gorges** — Indus, Satluj, Brahmaputra.",
+          "s": "Physical geography"
+        },
+        {
+          "t": "Monsoon mechanism",
+          "d": "Explanations: the **thermal (Halley) theory**, the **dynamic theory** — the **ITCZ** shift with the **Tibetan Plateau's heating**, the **Sub-Tropical Jet Stream's** withdrawal and the **Tropical Easterly Jet**, the **Somali/Findlater Jet**, and the **Mascarene High**. Modulators: **El Niño (deficit) / La Niña (surplus)**, the **Indian Ocean Dipole (a positive IOD offsets El Niño)**, **Madden-Julian Oscillation**, and **Eurasian snow cover (Blanford's hypothesis)**. Withdrawal from Rajasthan by September; the **retreating monsoon brings the North-East monsoon rains to Tamil Nadu (Oct-Dec)** — the reason Tamil Nadu's rainfall regime is anomalous.",
+          "s": "IMD / climatology"
+        },
+        {
+          "t": "Local storms and phenomena",
+          "d": "**Kalbaisakhi/Nor'westers** (Bengal, pre-monsoon), **Bardoli Chheerha** (Assam), **Mango showers** (Kerala/Karnataka, aiding mango ripening), **Blossom showers** (coffee), **Loo** (northern plains), **Cherry blossom showers**, **Norwesters**, **October heat**, and **Western Disturbances** — extratropical cyclones from the Mediterranean that bring winter rain to the north-west, critical for the **rabi wheat crop**.",
+          "s": "Climatology"
+        },
+        {
+          "t": "Soils",
+          "d": "**Alluvial (~40% of the area, khadar vs bhangar)**, **Black/regur** (Deccan lava, moisture-retentive, self-ploughing, ideal for cotton), **Red and yellow** (crystalline igneous, iron-rich), **Laterite** (heavy rain and leaching, poor in humus, used as brick — Kerala, Karnataka), **Arid**, **Forest/mountain**, **Peaty/marshy** and **Saline/alkaline (reh, kallar)**. Degradation: **~30% of India's land is degraded** (ISRO's Desertification Atlas) — the number to quote for UNCCD questions.",
+          "s": "ICAR / ISRO Desertification Atlas"
+        },
+        {
+          "t": "Ocean and coastal terms",
+          "d": "**Upwelling** (nutrient-rich water rising, sustaining fisheries — the Somali coast during the SW monsoon), **thermocline**, **coral bleaching** (zooxanthellae expulsion above threshold temperature — the Gulf of Mannar and Lakshadweep), **atoll/fringing/barrier reefs**, **estuary versus delta** (Narmada and Tapi form estuaries because they flow through rift valleys with fast gradients), **tombolo, spit and lagoon** (Chilika — Asia's largest brackish lagoon; Vembanad — India's longest lake).",
+          "s": "Oceanography"
+        },
+        {
+          "t": "Cyclones",
+          "d": "Form over water above **26.5°C** with low vertical wind shear and a **Coriolis force away from the equator (5°+)**; the **Bay of Bengal gets ~4 times more cyclones than the Arabian Sea** because of higher SST, freshwater-driven stratification and monsoon-trough interaction — though warming has increased Arabian Sea intensity. Anatomy: **eye, eyewall and rain bands**; **storm surge causes most deaths**, and IMD names storms from a 13-country list.",
+          "s": "IMD"
+        }
       ]
     },
     {
       "g": "Resource and economic geography",
       "items": [
-        {"t": "Cropping regions", "d": "**Rice** — over 1,000 mm or irrigated: West Bengal, UP, Punjab (though Punjab is climatically unsuited, sustained by free power and MSP). **Wheat** — 50-75 cm and cool winters: UP, MP, Punjab. **Cotton** — black soil: Gujarat, Maharashtra, Telangana. **Sugarcane** — UP (largest area) but **Maharashtra has higher recovery**. **Tea** — well-drained slopes, Assam and Darjeeling; **coffee** — Karnataka (~70%), grown under shade. **Jute** — West Bengal, needing high humidity and retting water.", "s": "Agricultural geography"},
-        {"t": "Minerals and their belts", "d": "**North-Eastern Plateau (Chota Nagpur)** — the richest: iron ore, coal, manganese, bauxite, mica; **South-Western (Karnataka-Goa)** — iron and manganese but little coal; **North-Western (Rajasthan-Gujarat)** — non-ferrous (zinc, copper), petroleum. Coal: **Gondwana (~98% of reserves, Jharkhand-Odisha-Chhattisgarh-WB) versus Tertiary (Assam, Meghalaya)**. India imports nearly all its **cobalt, lithium, nickel and most copper** — hence the **30 critical minerals list**, the **National Critical Mineral Mission (₹16,300 crore)** and **KABIL** for overseas assets.", "s": "Ministry of Mines"},
-        {"t": "Industrial location", "d": "**Weber's least-cost theory** (transport, labour, agglomeration) and **Losch's market-area** approach. Indian instances: iron and steel at raw-material sites (Jamshedpur, Bhilai, Rourkela), **cotton textiles at the market and port (Mumbai, Ahmedabad)**, sugar shifting to Maharashtra for **higher sucrose recovery and cooperative organisation**, IT at **footloose** knowledge locations (Bengaluru, Hyderabad, Pune) where the input is human capital.", "s": "Economic geography"},
-        {"t": "World geography anchors", "d": "**Ring of Fire** (75% of the world's volcanoes); **Sahel** (desertification, Great Green Wall); **Amazon** (deforestation and the 'flying rivers'); **Arctic** (sea-ice loss, the Northern Sea Route, India's **Himadri station and Arctic Policy 2022**); **Antarctica** (Maitri, Bharati, and the new Maitri-II; the Antarctic Treaty and India's **Antarctic Act, 2022**); **Strait chokepoints** — Hormuz (~20% of world oil), Malacca (India's 'Malacca dilemma'), Bab-el-Mandeb (Red Sea shipping disruption), Suez and Panama (drought-driven transit cuts).", "s": "World geography"},
-        {"t": "Population geography", "d": "**Demographic transition** — India is in **Stage 3**, with TFR at 1.9 and falling; the **demographic dividend window runs to ~2055**, peaking in the 2030s, and is **state-asymmetric**: Kerala and Tamil Nadu have aged while Bihar and UP are still young — which makes **internal migration the mechanism that redistributes the dividend**, and delimitation the political flashpoint.", "s": "Demography"},
-        {"t": "Urban geography", "d": "**Primate city** (Kolkata, Chennai in their regions), **rank-size rule**, **conurbation** (Delhi NCR), **million-plus cities: 53 in 2011, projected 68-70 by 2031**, **census towns**, **peri-urban interface**, **urban heat island** (Delhi's core runs several degrees above its periphery), and **urban flooding** — Chennai 2015, Mumbai 2005 and 2021, Bengaluru 2022 — caused by encroached wetlands and stormwater drains, addressed by the **NDMA Urban Flooding Guidelines (2010)**, the first of their kind in the world.", "s": "Urban geography / NDMA"}
+        {
+          "t": "Cropping regions",
+          "d": "**Rice** — over 1,000 mm or irrigated: West Bengal, UP, Punjab (though Punjab is climatically unsuited, sustained by free power and MSP). **Wheat** — 50-75 cm and cool winters: UP, MP, Punjab. **Cotton** — black soil: Gujarat, Maharashtra, Telangana. **Sugarcane** — UP (largest area) but **Maharashtra has higher recovery**. **Tea** — well-drained slopes, Assam and Darjeeling; **coffee** — Karnataka (~70%), grown under shade. **Jute** — West Bengal, needing high humidity and retting water.",
+          "s": "Agricultural geography"
+        },
+        {
+          "t": "Minerals and their belts",
+          "d": "**North-Eastern Plateau (Chota Nagpur)** — the richest: iron ore, coal, manganese, bauxite, mica; **South-Western (Karnataka-Goa)** — iron and manganese but little coal; **North-Western (Rajasthan-Gujarat)** — non-ferrous (zinc, copper), petroleum. Coal: **Gondwana (~98% of reserves, Jharkhand-Odisha-Chhattisgarh-WB) versus Tertiary (Assam, Meghalaya)**. India imports nearly all its **cobalt, lithium, nickel and most copper** — hence the **30 critical minerals list**, the **National Critical Mineral Mission (₹16,300 crore)** and **KABIL** for overseas assets.",
+          "s": "Ministry of Mines"
+        },
+        {
+          "t": "Industrial location",
+          "d": "**Weber's least-cost theory** (transport, labour, agglomeration) and **Losch's market-area** approach. Indian instances: iron and steel at raw-material sites (Jamshedpur, Bhilai, Rourkela), **cotton textiles at the market and port (Mumbai, Ahmedabad)**, sugar shifting to Maharashtra for **higher sucrose recovery and cooperative organisation**, IT at **footloose** knowledge locations (Bengaluru, Hyderabad, Pune) where the input is human capital.",
+          "s": "Economic geography"
+        },
+        {
+          "t": "World geography anchors",
+          "d": "**Ring of Fire** (75% of the world's volcanoes); **Sahel** (desertification, Great Green Wall); **Amazon** (deforestation and the 'flying rivers'); **Arctic** (sea-ice loss, the Northern Sea Route, India's **Himadri station and Arctic Policy 2022**); **Antarctica** (Maitri, Bharati, and the new Maitri-II; the Antarctic Treaty and India's **Antarctic Act, 2022**); **Strait chokepoints** — Hormuz (~20% of world oil), Malacca (India's 'Malacca dilemma'), Bab-el-Mandeb (Red Sea shipping disruption), Suez and Panama (drought-driven transit cuts).",
+          "s": "World geography"
+        },
+        {
+          "t": "Population geography",
+          "d": "**Demographic transition** — India is in **Stage 3**, with TFR at 1.9 and falling; the **demographic dividend window runs to ~2055**, peaking in the 2030s, and is **state-asymmetric**: Kerala and Tamil Nadu have aged while Bihar and UP are still young — which makes **internal migration the mechanism that redistributes the dividend**, and delimitation the political flashpoint.",
+          "s": "Demography"
+        },
+        {
+          "t": "Urban geography",
+          "d": "**Primate city** (Kolkata, Chennai in their regions), **rank-size rule**, **conurbation** (Delhi NCR), **million-plus cities: 53 in 2011, projected 68-70 by 2031**, **census towns**, **peri-urban interface**, **urban heat island** (Delhi's core runs several degrees above its periphery), and **urban flooding** — Chennai 2015, Mumbai 2005 and 2021, Bengaluru 2022 — caused by encroached wetlands and stormwater drains, addressed by the **NDMA Urban Flooding Guidelines (2010)**, the first of their kind in the world.",
+          "s": "Urban geography / NDMA"
+        }
+      ]
+    },
+    {
+      "g": "Static recall — locations, types and named examples",
+      "items": [
+        {
+          "t": "Himalayan passes, matched",
+          "d": "**Zoji La** (Srinagar-Leh), **Rohtang and Baralacha La** (Himachal), **Shipki La and Lipulekh and Mana and Niti** (Uttarakhand-Tibet), **Nathu La and Jelep La** (Sikkim), **Bomdi La and Diphu and Se La** (Arunachal), **Banihal** (Jawahar tunnel). Pass-to-state matching is a recurring prelims-style demand inside a mains answer.",
+          "s": "Physical geography"
+        },
+        {
+          "t": "Peninsular rivers, the exceptions",
+          "d": "East-flowing into the Bay: **Mahanadi, Godavari, Krishna, Kaveri** (deltas). West-flowing into the Arabian Sea: **Narmada, Tapi** (estuaries, rift valleys) and **Mahi, Sabarmati, Luni**. The **Luni** is India's only major inland-drainage river of note, ending in the Rann.",
+          "s": "Drainage"
+        },
+        {
+          "t": "Lakes, by type",
+          "d": "**Tectonic** — Wular (largest freshwater in India); **oxbow** — along the Ganga plain; **lagoon** — Chilika (largest brackish), Pulicat, Vembanad (longest); **crater** — Lonar (basaltic, Maharashtra); **glacial** — Tsomgo, Pangong; **saline** — Sambhar (largest inland salt lake).",
+          "s": "Physical geography"
+        },
+        {
+          "t": "Soils and crops, matched",
+          "d": "**Regur** → cotton; **alluvial** → rice, wheat, sugarcane; **red-yellow** → millets, pulses, groundnut; **laterite** → cashew, tea, coffee, rubber; **desert** → bajra with irrigation; **peaty** → rice in Kerala's Kuttanad below sea level.",
+          "s": "ICAR"
+        },
+        {
+          "t": "Biosphere reserves and hotspots",
+          "d": "**18 biosphere reserves**, of which **12 are on UNESCO's World Network** — Nilgiri (first, 1986), Gulf of Mannar, Sundarban, Nanda Devi, Nokrek, Pachmarhi, Similipal, Achanakmar-Amarkantak, Great Nicobar, Agasthyamala, Khangchendzonga, Panna. India has **4 of 36 global biodiversity hotspots**.",
+          "s": "MoEFCC / UNESCO"
+        },
+        {
+          "t": "Industrial regions, named",
+          "d": "**Mumbai-Pune, Hooghly, Bengaluru-Chennai, Gujarat (Ahmedabad-Vadodara), Chotanagpur, Vishakhapatnam-Guntur, Gurugram-Delhi-Meerut, Kollam-Thiruvananthapuram**. Naming the region and its locating factor together is what converts a listing into geography.",
+          "s": "Economic geography"
+        },
+        {
+          "t": "Ocean currents that matter to India",
+          "d": "The **monsoon-reversing North Indian Ocean circulation** — clockwise in summer, anticlockwise in winter — is unique among ocean basins and is why the **Somali upwelling** and its fishery appear only in the south-west monsoon.",
+          "s": "Oceanography"
+        },
+        {
+          "t": "World physical anchors",
+          "d": "**Great Rift Valley** (East Africa), **Andes** (longest fold mountain), **Atacama** (driest), **Amazon** (largest basin), **Congo** (crosses the equator twice), **Great Barrier Reef**, **Siberian taiga**, **Prairies/Pampas/Steppes/Downs/Veld** as the temperate grassland set — the last is a standing one-liner in world geography.",
+          "s": "World geography"
+        }
       ]
     }
   ]
