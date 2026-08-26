@@ -2333,6 +2333,240 @@ $('#hl-body')?.addEventListener('click', e => {
 });
 $('#go-hl')?.addEventListener('click', () => go('#/hl'));
 
+/* ══════════════════ FINALE DE PUBAD ══════════════════
+   The optional as examiner-ready blocks, one syllabus unit at a time. Two filters
+   beyond search: the themes UPSC keeps returning to, and what looks likely to
+   matter in 2026 — both authored judgements, carried on each block. */
+let FIN = null;
+const fin = {
+  pid: localStorage.getItem('mm-fin-paper') || 'pubad1',
+  q: '', filter: '', unit: 0
+};
+async function loadFin() {
+  if (!FIN) FIN = await fetch('data/finale.json').then(r => r.json()).catch(() => ({}));
+  return FIN;
+}
+const finText = b => `${b.t} ${b.x} ${b.th || ''} ${b.in || ''} ${b.gl || ''} ${b.w || ''}`.toLowerCase();
+const finPass = b => !fin.filter
+  || (fin.filter === 'pyq' && (b.pyq || 0) >= 3)
+  || (fin.filter === 'y26' && b.y26);
+
+function finBlockHTML(b, q) {
+  const mk = t => factMark(t, q);
+  const tags = [];
+  if ((b.pyq || 0) >= 3) tags.push('<span class="fin-tag hot">★★ most asked</span>');
+  else if ((b.pyq || 0) === 2) tags.push('<span class="fin-tag">★ often asked</span>');
+  if (b.y26) tags.push('<span class="fin-tag y26">2026</span>');
+  if (b.link) tags.push(`<span class="fin-tag link">↔ ${esc(b.link)}</span>`);
+  return `<article class="fin-b" tabindex="0">
+    <h4>${mk(b.t)}${tags.join('')}</h4>
+    <p class="fin-x">${mk(b.x)}</p>
+    <dl class="fin-parts">
+      ${b.th ? `<div><dt>Thinker</dt><dd>${mk(b.th)}</dd></div>` : ''}
+      ${b.in ? `<div><dt>India</dt><dd>${mk(b.in)}</dd></div>` : ''}
+      ${b.gl ? `<div><dt>World</dt><dd>${mk(b.gl)}</dd></div>` : ''}
+      ${b.w ? `<div class="fin-write"><dt>Write</dt><dd>${mk(b.w)}</dd></div>` : ''}
+    </dl></article>`;
+}
+
+async function renderFin(arg) {
+  await loadFin();
+  if (arg && FIN[arg]) fin.pid = arg;
+  localStorage.setItem('mm-fin-paper', fin.pid);
+  if (finRead.on) finRead.stop();
+  const d = FIN[fin.pid];
+  const q = fin.q.trim().toLowerCase();
+  $('#fin-papers').innerHTML = Object.entries(FIN).map(([pid, p]) =>
+    `<button class="chip${pid === fin.pid ? ' on' : ''}" data-fp2="${pid}">${esc(p.label.split(' — ')[0])}</button>`).join('');
+  const all = (d?.units || []).flatMap(u => u.blocks);
+  const nPyq = all.filter(b => (b.pyq || 0) >= 3).length, n26 = all.filter(b => b.y26).length;
+  $('#fin-filters').innerHTML =
+    `<button class="chip${fin.filter ? '' : ' on'}" data-ff="">All ${all.length}</button>`
+    + `<button class="chip${fin.filter === 'pyq' ? ' on' : ''}" data-ff="pyq">★ PYQ most asked ${nPyq}</button>`
+    + `<button class="chip${fin.filter === 'y26' ? ' on' : ''}" data-ff="y26">2026 likely ${n26}</button>`;
+  let shown = 0, html = '';
+  for (const u of d?.units || []) {
+    const blocks = u.blocks.filter(b => finPass(b) && (!q || finText(b).includes(q)));
+    if (!blocks.length) continue;
+    shown += blocks.length;
+    html += `<section class="fin-u"><h2>${esc(u.u)}</h2>`
+      + blocks.map(b => finBlockHTML(b, fin.q.trim())).join('') + `</section>`;
+  }
+  $('#fin-body').innerHTML = html || `<p class="fs-none">Nothing matches here.</p>`;
+  $('#fin-count').textContent = (q || fin.filter) ? `${shown} of ${all.length} shown` : `${all.length} blocks`;
+  buildFinJump();
+}
+
+// Unit navigation, same shape as the bank's: one row, arrows step units.
+function buildFinJump() {
+  const sel = $('#fin-sel'); if (!sel) return;
+  const secs = [...$('#fin-body').querySelectorAll('.fin-u')];
+  sel.innerHTML = secs.map((sec, i) => {
+    const h = sec.querySelector('h2'); h.id = `finx-${i}`;
+    return `<option value="finx-${i}">${esc(h.textContent)}</option>`;
+  }).join('');
+  finJump.list = secs.map((sec, i) => ({ id: `finx-${i}`, el: sec.querySelector('h2') }));
+  finJump.sync(true);
+}
+const finJump = {
+  list: [], cur: '', pend: '', pendAt: 0, queued: false, top: 130,
+  measure() {
+    const st = document.querySelector('#fin-stick');
+    if (!st) return;
+    this.top = Math.round((parseFloat(getComputedStyle(st).top) || 56)
+      + st.getBoundingClientRect().height) + 8;
+    document.documentElement.style.setProperty('--fstick', `${this.top}px`);
+  },
+  mark(id) { this.cur = id; const s = $('#fin-sel'); if (s && s.value !== id) s.value = id; },
+  sync(force) {
+    if (!this.list.length) return;
+    this.measure();
+    if (this.pend && !force) {
+      const a = this.list.find(x => x.id === this.pend);
+      const done = !a || Math.abs(a.el.getBoundingClientRect().top - this.top) < 12
+        || Date.now() - this.pendAt > 2500;
+      if (!done) { this.mark(this.pend); return; }
+      this.pend = '';
+    }
+    let best = this.list[0];
+    for (const a of this.list) { if (a.el.getBoundingClientRect().top <= this.top + 16) best = a; else break; }
+    this.mark(best.id);
+  },
+  onScroll() {
+    if (this.queued) return; this.queued = true;
+    requestAnimationFrame(() => { this.queued = false; this.sync(); });
+  },
+  go(id) {
+    const a = this.list.find(x => x.id === id); if (!a) return;
+    this.pend = id; this.pendAt = Date.now(); this.mark(id);
+    a.el.scrollIntoView({ block: 'start', behavior: 'smooth' });
+  },
+  step(dir) {
+    const i = this.list.findIndex(x => x.id === this.cur);
+    const to = this.list[Math.min(this.list.length - 1, Math.max(0, (i < 0 ? 0 : i) + dir))];
+    if (to) this.go(to.id);
+  }
+};
+window.addEventListener('scroll', () => {
+  if ($('#view-fin')?.classList.contains('active')) finJump.onScroll();
+}, { passive: true });
+
+/* Read Along over the blocks of the optional. */
+const finRead = {
+  on: false, paused: false, run: 0, i: 0, nodes: [],
+  collect() { this.nodes = [...($('#fin-body')?.querySelectorAll('.fin-b') || [])]; },
+  nearestToView() {
+    let best = 0;
+    for (let n = 0; n < this.nodes.length; n++) {
+      if (this.nodes[n].getBoundingClientRect().top <= finJump.top + 40) best = n; else break;
+    }
+    return best;
+  },
+  start(i) {
+    if (!canSpeak()) return this.stop('This browser cannot speak.');
+    this.collect();
+    if (!this.nodes.length) return this.stop('Nothing to read.');
+    if (readAlong) stopReadAlong();
+    if (factRead.on) factRead.stop();
+    if (compRead.on) compRead.stop();
+    feedStop?.();
+    this.on = true; this.paused = false;
+    this.i = Math.max(0, Math.min(this.nodes.length - 1, i ?? this.nearestToView()));
+    this.speak();
+  },
+  speak() {
+    if (!this.on) return;
+    const node = this.nodes[this.i];
+    if (!node) return this.stop('End of the paper.');
+    $('#fin-body').querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+    node.classList.add('reading-now');
+    node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    const run = ++this.run;
+    this.paint();
+    const text = cleanSpeech(node.innerText.replace(/\n+/g, '. '));
+    if (!text.trim()) { this.i++; return this.speak(); }
+    const u = new SpeechSynthesisUtterance(text);
+    const voice = preferredVoice(speechSynthesis.getVoices());
+    u.lang = voice?.lang || 'en-IN';
+    u.rate = readSpeed; u.pitch = 1;
+    if (voice) u.voice = voice;
+    const on = () => { if (this.on && run === this.run) { this.i++; this.speak(); } };
+    u.onend = on; u.onerror = on;
+    speechSynthesis.speak(u);
+  },
+  step(dir) {
+    if (!this.on) return;
+    this.run++; speechSynthesis.cancel();
+    this.i = Math.max(0, Math.min(this.nodes.length - 1, this.i + dir));
+    this.speak();
+  },
+  togglePause() {
+    if (!this.on) return;
+    this.paused = !this.paused;
+    if (this.paused) speechSynthesis.pause(); else speechSynthesis.resume();
+    this.paint();
+  },
+  toggle() { this.on ? this.stop() : this.start(); },
+  stop(message = '') {
+    this.on = false; this.paused = false; this.run++;
+    if (canSpeak()) speechSynthesis.cancel();
+    $('#fin-body')?.querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+    this.paint(message);
+  },
+  paint(message = '') {
+    const btn = $('#fin-read'), bar = $('#fin-readbar');
+    if (!btn || !bar) return;
+    btn.setAttribute('aria-pressed', String(this.on));
+    btn.classList.toggle('on', this.on);
+    bar.hidden = !this.on && !message;
+    if (message && !this.on) { $('#fin-readpos').textContent = message; return; }
+    if (!this.on) return;
+    $('#fin-readpos').textContent = `${this.i + 1} / ${this.nodes.length}`;
+    $('#fin-readpause').textContent = this.paused ? '▶ Resume' : '❚❚ Pause';
+    finJump.measure();
+  }
+};
+
+$('#fin-papers')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-fp2]'); if (!b) return;
+  fin.pid = b.dataset.fp2; fin.filter = ''; renderFin(); window.scrollTo(0, 0);
+});
+$('#fin-filters')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-ff]'); if (!b) return;
+  fin.filter = b.dataset.ff; renderFin();
+});
+$('#fin-q')?.addEventListener('input', e => { fin.q = e.target.value; renderFin(); });
+$('#fin-sel')?.addEventListener('change', e => finJump.go(e.target.value));
+$('#fin-jump')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-fjump]'); if (!b) return;
+  finJump.step(b.dataset.fjump === 'next' ? 1 : -1);
+});
+$('#fin-read')?.addEventListener('click', () => finRead.toggle());
+$('#fin-readbar')?.addEventListener('click', e => {
+  const id = e.target.id;
+  if (id === 'fin-readpause') finRead.togglePause();
+  else if (id === 'fin-readnext') finRead.step(1);
+  else if (id === 'fin-readprev') finRead.step(-1);
+  else if (id === 'fin-readstop') finRead.stop();
+});
+$('#fin-body')?.addEventListener('click', e => {
+  const b = e.target.closest('.fin-b'); if (!b || !finRead.on) return;
+  if (hlGesture()) return;
+  finRead.collect();
+  const i = finRead.nodes.indexOf(b);
+  if (i >= 0) { finRead.run++; speechSynthesis.cancel(); finRead.i = i; finRead.speak(); }
+});
+addEventListener('keydown', e => {
+  if (!$('#view-fin')?.classList.contains('active')) return;
+  if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) return;
+  if (e.code === 'Space') { e.preventDefault(); finRead.on ? finRead.togglePause() : finRead.start(); return; }
+  if (e.key === 'ArrowRight') { e.preventDefault(); finJump.step(1); return; }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); finJump.step(-1); return; }
+  if (finRead.on && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+    e.preventDefault(); finRead.step(e.key === 'ArrowDown' ? 1 : -1);
+  }
+});
+
 /* ══════════════════ ROUTER ══════════════════ */
 function go(hash) { location.hash = hash; }
 
@@ -2376,6 +2610,7 @@ async function route() {
   const [, kind, arg] = h.split('/');
   if (kind !== 'a' && readAlong) stopReadAlong();
   if (kind !== 'facts' && factRead.on) factRead.stop();
+  if (kind !== 'fin' && finRead.on) finRead.stop();
   if (!(kind === 'c' && h.split('/').length > 3) && compRead.on) compRead.stop();
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.body.dataset.mode = mode;
@@ -2399,6 +2634,10 @@ async function route() {
   } else if (kind === 'hl') {
     $('#view-hl').classList.add('active');
     renderHighlights();
+  } else if (kind === 'fin') {
+    $('#view-fin').classList.add('active');
+    syncTopbarHeight();
+    await renderFin(arg);
   } else if (kind === 'facts') {
     $('#view-facts').classList.add('active');
     syncTopbarHeight();          // the frozen block and the rail hang off the topbar
@@ -2440,6 +2679,7 @@ $('#app-dock').onclick = e => {
 };
 $('#go-notes').onclick = () => go('#/n');
 $('#go-facts').onclick = () => go('#/facts');
+$('#go-fin').onclick = () => go('#/fin');
 $('#go-comp').onclick = () => go('#/c');
 $('#go-feed').onclick = () => go('#/feed');
 

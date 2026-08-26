@@ -1004,3 +1004,42 @@ body.hl-on #answer mark.hl{cursor:pointer}
 .hl-drop{float:right;width:18px;height:18px;border-radius:6px;border:1px solid var(--line);
   background:var(--card);color:var(--ghost);font-size:10px;line-height:1;padding:0}
 .hl-drop:hover{color:var(--t1);border-color:var(--t1)}
+
+/* ══════════════════ FINALE DE PUBAD ══════════════════ */
+.fin-cta .ic{color:var(--gold)}
+#fin-papers .chip.on{border-color:var(--gold);color:var(--gold);
+  background:color-mix(in srgb,var(--gold) 14%,var(--card))}
+#fin-filters{margin:-8px 0 16px}
+#fin-filters .chip{font-size:11.5px;padding:5px 10px}
+#fin-filters .chip.on{border-color:var(--green);color:var(--green);
+  background:color-mix(in srgb,var(--green) 14%,var(--card))}
+#fin-count{color:var(--gold);font-weight:600;white-space:nowrap}
+.fin-u{margin-bottom:30px}
+.fin-u>h2{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--gold);
+  font-weight:700;margin:0 0 14px;padding-bottom:8px;font-family:var(--ui-font);
+  border-bottom:1.5px solid color-mix(in srgb,var(--gold) 34%,var(--line));scroll-margin-top:var(--fstick,130px)}
+/* One block = one idea. The five parts always sit in the same order, so the eye
+   learns where to look and recall follows position. */
+.fin-b{display:block;margin:0 0 10px;padding:12px 14px;border-radius:12px;
+  background:var(--card);border:1px solid var(--line);
+  border-left:3px solid color-mix(in srgb,var(--blue) 55%,var(--line));
+  font-family:var(--read-font);max-width:80ch}
+.fin-b:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.fin-b.reading-now{border-left-color:var(--green)}
+.fin-b>h4{margin:0 0 6px;font-family:var(--ui-font);font-size:13px;font-weight:700;
+  color:var(--gold);display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.fin-tag{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  padding:1px 6px;border-radius:5px;color:var(--faint);border:1px solid var(--line)}
+.fin-tag.hot{color:var(--t1);border-color:color-mix(in srgb,var(--t1) 45%,var(--line))}
+.fin-tag.y26{color:var(--green);border-color:color-mix(in srgb,var(--green) 45%,var(--line))}
+.fin-tag.link{color:var(--blue);border-color:color-mix(in srgb,var(--blue) 40%,var(--line))}
+.fin-x{margin:0 0 8px;font-size:15px;line-height:1.6;color:var(--ink)}
+.fin-x b,.fin-parts b{color:color-mix(in srgb,var(--blue) 78%,var(--ink))}
+.fin-parts{margin:0;display:grid;gap:4px}
+.fin-parts>div{display:grid;grid-template-columns:58px 1fr;gap:8px;align-items:baseline}
+.fin-parts dt{font-family:var(--ui-font);font-size:9.5px;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--faint)}
+.fin-parts dd{margin:0;font-size:13.5px;line-height:1.5;color:var(--dim)}
+.fin-write dt{color:var(--green)}
+.fin-write dd{color:var(--ink)}
+@media (max-width:560px){ .fin-parts>div{grid-template-columns:1fr;gap:0} .fin-parts dt{margin-top:4px} }

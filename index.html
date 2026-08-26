@@ -33,6 +33,11 @@
     <span class="nm"><b>Model Compendium</b><small>177 topics · GS-1, GS-2, GS-3 · Tier 1 &amp; Tier 2</small></span>
     <span class="arw">›</span>
   </button>
+  <button class="notes-cta fin-cta" id="go-fin">
+    <span class="ic">♛</span>
+    <span class="nm"><b>Finale De PubAd</b><small>The whole optional, in examiner-ready blocks</small></span>
+    <span class="arw">›</span>
+  </button>
   <button class="notes-cta" id="go-facts">
     <span class="ic">◈</span>
     <span class="nm"><b>FactnStat</b><small>Articles, cases, committees, schemes, data — paper-wise</small></span>
@@ -115,6 +120,32 @@
   <div id="comptopic"></div>
   <aside class="fns" id="fns-c" aria-label="Relevant facts and evidence" hidden></aside>
   <div class="done-wrap"><button id="comp-done">Mark as completed</button></div>
+</main>
+
+<main id="view-fin" class="view">
+  <h1>♛ Finale De PubAd</h1>
+  <p class="facts-sub">Every concept the optional asks for, as one block: the idea, its thinker, the Indian application, a comparative instance, and the line to write. <span id="fin-count"></span></p>
+  <div class="chips" id="fin-papers"></div>
+  <div class="chips" id="fin-filters"></div>
+  <div class="facts-stick" id="fin-stick">
+    <label class="sb-search facts-search"><span aria-hidden="true">⌕</span><input id="fin-q" type="search" placeholder="Search thinkers, concepts, committees, examples" aria-label="Search the optional"></label>
+    <div class="facts-jump" id="fin-jump">
+      <button class="fj-arw" data-fjump="prev" aria-label="Previous unit">‹</button>
+      <select id="fin-sel" aria-label="Jump to a syllabus unit"></select>
+      <button class="fj-arw" data-fjump="next" aria-label="Next unit">›</button>
+      <button class="fj-read" id="fin-read" type="button" aria-pressed="false" title="Read this unit aloud (Spacebar)">◉</button>
+    </div>
+    <div class="facts-readbar" id="fin-readbar" role="status" aria-live="polite" hidden>
+      <span class="read-pulse" aria-hidden="true"></span>
+      <span id="fin-readpos"></span>
+      <button id="fin-readprev" type="button" title="Previous block">‹</button>
+      <button id="fin-readpause" type="button">❚❚ Pause</button>
+      <button id="fin-readnext" type="button" title="Next block">›</button>
+      <button id="fin-readstop" type="button">Stop</button>
+      <span class="fr-hint">Tap a block to read from there</span>
+    </div>
+  </div>
+  <div id="fin-body"></div>
 </main>
 
 <main id="view-hl" class="view">
