@@ -74,7 +74,7 @@ norm = lambda t: re.sub(r'[^a-z0-9]+', ' ', t.lower()).strip()
 
 
 def main():
-    pods, seen, dupes, long_ = [], {}, [], []
+    pods, pool, seen, dupes, long_ = [], [], {}, [], []
     kc, sc, tc, uc = Counter(), Counter(), Counter(), Counter()
     by_unit = defaultdict(lambda: defaultdict(list))     # unit -> group name -> blocks
     total = 0
@@ -102,9 +102,10 @@ def main():
                 if b.get('s'): o['s'] = b['s'].strip()
                 if b.get('x'): o['x'] = b['x'].strip()
                 kc[b['k']] += 1; sc[b['sl']] += 1; tc[int(b['tr'])] += 1; uc[b['u']] += 1
-                blocks.append(o); n += 1
-                by_unit[b['u']][g['g']].append(o)
-            groups.append({'g': g['g'], 'items': blocks})
+                idx = len(pool); pool.append(o)
+                blocks.append(idx); n += 1
+                by_unit[b['u']][g['g']].append(idx)
+            groups.append({'g': g['g'], 'i': blocks})
         pods.append({'u': p['id'], 'name': p['pod'], 'tag': ' · '.join(p['units']), 'sel': p['pod'],
                      'blurb': p.get('blurb', ''), 'groups': groups, 'n': n})
         total += n
@@ -113,9 +114,9 @@ def main():
         units = []
         for u in unit_ids:
             if u not in by_unit: continue
-            gs = [{'g': g, 'items': items} for g, items in by_unit[u].items()]
+            gs = [{'g': g, 'i': items} for g, items in by_unit[u].items()]
             units.append({'u': u, 'name': UNITS[u], 'tag': u, 'sel': f'{u} — {UNITS[u]}',
-                          'groups': gs, 'n': sum(len(x['items']) for x in gs)})
+                          'groups': gs, 'n': sum(len(x['i']) for x in gs)})
         return units
 
     books = [
@@ -127,6 +128,7 @@ def main():
         bk['n'] = sum(u['n'] for u in bk['units'])
 
     OUT.write_text(json.dumps({
+        'b': pool,
         'books': books,
         'kinds': {k: {'label': v[0], 'hint': v[1]} for k, v in KINDS.items()},
         'slots': {k: {'label': v[0], 'hint': v[1]} for k, v in SLOTS.items()},

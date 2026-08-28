@@ -1829,37 +1829,50 @@ const factRead = {
 /* The right-edge rail: how much of the filtered bank is behind you, how much is left.
    Entry offsets are cached per render and the lookup is a binary search, so this
    stays cheap even at a thousand entries. */
-const factRail = {
-  tops: [], total: 0, hide: 0,
-  index() {                                   // entries whose top has passed the read line
-    const y = window.scrollY + factJump.top;
-    let lo = 0, hi = this.tops.length;
-    while (lo < hi) { const mid = (lo + hi) >> 1; if (this.tops[mid] <= y) lo = mid + 1; else hi = mid; }
-    return lo;
-  },
-  measure() {
-    const nodes = $('#facts-body')?.querySelectorAll('.fi') || [];
-    this.tops = [...nodes].map(n => n.getBoundingClientRect().top + window.scrollY);
-    this.total = this.tops.length;
-    this.paint();
-  },
-  paint() {
-    const rail = $('#facts-rail'); if (!rail) return;
-    if (!this.total) { rail.classList.remove('live'); rail.querySelector('i').style.height = '0'; return; }
-    const seen = this.index();
-    const frac = Math.min(1, seen / this.total);
-    rail.querySelector('i').style.height = `${(frac * 100).toFixed(1)}%`;
-    const left = this.total - seen;
-    const label = rail.querySelector('span');
-    label.textContent = left ? `${left} left` : 'end';
-    label.style.top = `${(frac * 100).toFixed(1)}%`;
-    // The count shows while you move and fades once you settle to read, so it
-    // never sits over the text you are actually on.
-    rail.classList.add('live');
-    clearTimeout(this.hide);
-    this.hide = setTimeout(() => rail.classList.remove('live'), 1100);
-  }
-};
+/* ── the reading-progress rail ──
+   One rail, two surfaces. It reports how far through the rendered list you are:
+   the fill is the fraction of items whose top has passed the reading line, and
+   the count rides the fill while you scroll, then fades so it never sits over
+   the text you are on. `label` is what the caller wants written on it. */
+function makeRail(cfg) {
+  return {
+    tops: [], total: 0, hide: 0, queued: false,
+    index() {
+      const y = window.scrollY + cfg.jump().top;
+      let lo = 0, hi = this.tops.length;
+      while (lo < hi) { const mid = (lo + hi) >> 1; if (this.tops[mid] <= y) lo = mid + 1; else hi = mid; }
+      return lo;
+    },
+    measure() {
+      const nodes = $(cfg.body)?.querySelectorAll(cfg.item) || [];
+      this.tops = [...nodes].map(n => n.getBoundingClientRect().top + window.scrollY);
+      this.total = this.tops.length;
+      this.paint();
+    },
+    paint() {
+      const rail = $(cfg.rail); if (!rail) return;
+      const fill = rail.querySelector('i'), label = rail.querySelector('span');
+      if (!this.total) { rail.classList.remove('live', 'done'); fill.style.height = '0'; return; }
+      const seen = this.index();
+      const pct = `${(Math.min(1, seen / this.total) * 100).toFixed(1)}%`;
+      fill.style.height = pct;
+      rail.classList.toggle('done', seen >= this.total);
+      label.textContent = cfg.label(seen, this.total);
+      label.style.top = pct;
+      rail.classList.add('live');
+      clearTimeout(this.hide);
+      this.hide = setTimeout(() => rail.classList.remove('live'), 1200);
+    },
+    onScroll() {
+      if (this.queued) return; this.queued = true;
+      requestAnimationFrame(() => { this.queued = false; cfg.jump().measure(); this.paint(); });
+    }
+  };
+}
+const factRail = makeRail({
+  body: '#facts-body', item: '.fi', rail: '#facts-rail', jump: () => factJump,
+  label: (seen, total) => (total - seen ? `${total - seen} left` : 'end')
+});
 $('#facts-sel')?.addEventListener('change', e => factJump.go(e.target.value));
 $('#facts-jump')?.addEventListener('click', e => {
   const b = e.target.closest('[data-jump]'); if (!b) return;
@@ -1894,8 +1907,9 @@ $('#facts-body')?.addEventListener('click', e => {
 /* ── highlighter: select to mark, click a mark to remove.
    Marking is independent of edit mode — it touches nothing but the marks store,
    and while it is on, tap-to-copy stands down so a drag-select cannot fire it. ── */
-$('#facts-hl')?.addEventListener('click', () => hl.toggle());
-$('#ans-hl')?.addEventListener('click', () => hl.toggle());
+// Every surface that shows the pen can toggle it; hl.paint() keeps them in step.
+for (const sel of ['#facts-hl', '#ans-hl', '#mx-hl'])
+  $(sel)?.addEventListener('click', () => hl.toggle());
 document.addEventListener('click', e => {
   const b = e.target.closest('.facts-hlbar [data-c]'); if (b) hl.setColour(b.dataset.c);
 });
@@ -1965,6 +1979,15 @@ $('#answer')?.addEventListener('click', e => {
   const mark = e.target.closest('.hl'); if (!mark || !hl.on || !cur) return;
   e.stopPropagation();
   hlStore.remove(`a::${cur.qid}`, mark.textContent);
+  const p = mark.parentNode; p.replaceChild(document.createTextNode(mark.textContent), mark); p.normalize();
+}, true);
+// And for a mark inside a Maximus block. Unwrap in place rather than re-rendering,
+// so removing a mark does not throw away the reader's scroll position.
+$('#mx-body')?.addEventListener('click', e => {
+  const mark = e.target.closest('.hl'); if (!mark || !hl.on) return;
+  e.stopPropagation();
+  const blk = mark.closest('.mx-b'); if (!blk) return;
+  hlStore.remove(blk.dataset.key, mark.textContent);
   const p = mark.parentNode; p.replaceChild(document.createTextNode(mark.textContent), mark); p.normalize();
 }, true);
 addEventListener('keydown', e => {
@@ -2376,10 +2399,12 @@ const mxSave = () => {
   localStorage.setItem('mm-mx-slots', JSON.stringify([...mx.slots]));
 };
 const mxBook = () => MX.books.find(b => b.id === mx.book) || MX.books[0];
+// Groups carry indices into the shared pool, so Joint costs nothing to re-cut.
+const mxItems = g => g.i.map(n => MX.b[n]);
 // "*" is the whole book read straight through — every section, in order.
 const mxAllUnit = bk => ({
   u: '*', name: `All of ${bk.label}`, tag: 'everything', sel: `All of ${bk.label}`, n: bk.n,
-  groups: bk.units.flatMap(u => u.groups.map(g => ({ g: `${u.tag} · ${g.g}`, items: g.items })))
+  groups: bk.units.flatMap(u => u.groups.map(g => ({ g: `${u.tag} · ${g.g}`, i: g.i })))
 });
 const mxUnit = () => {
   const bk = mxBook();
@@ -2436,7 +2461,7 @@ async function renderMx(arg) {
   $('#mx-blurb').textContent = mx.book === 'joint' ? (unit.blurb || '') : '';
 
   // Chip counts come from this section only, so a chip never promises rows it cannot show.
-  const all = unit.groups.flatMap(g => g.items);
+  const all = unit.groups.flatMap(mxItems);
   const chip = (map, sel, attr, chosen) => Object.entries(map).map(([k, v]) => {
     const n = all.filter(b => b[attr] === k).length; if (!n) return '';
     return `<button class="mx-th" data-${sel}="${k}" data-k="${k}" aria-pressed="${chosen.has(k)}"
@@ -2457,7 +2482,7 @@ async function renderMx(arg) {
 
   let shown = 0, words = 0, html = '';
   for (const g of unit.groups) {
-    const items = g.items.filter(b => mxPass(b) && (!q || mxText(b).includes(q)));
+    const items = mxItems(g).filter(b => mxPass(b) && (!q || mxText(b).includes(q)));
     if (!items.length) continue;
     shown += items.length;
     words += items.reduce((s, b) => s + b.n, 0);
@@ -2521,40 +2546,10 @@ function mxStepUnit(dir) {
   if (!to) return;
   mx.unit = to.u; renderMx(); window.scrollTo(0, 0);
 }
-const mxRail = {
-  tops: [], total: 0, hide: 0, queued: false,
-  index() {                                 // blocks whose top has passed the reading line
-    const y = window.scrollY + mxJump.top;
-    let lo = 0, hi = this.tops.length;
-    while (lo < hi) { const mid = (lo + hi) >> 1; if (this.tops[mid] <= y) lo = mid + 1; else hi = mid; }
-    return lo;
-  },
-  measure() {
-    const nodes = $('#mx-body')?.querySelectorAll('.mx-b') || [];
-    this.tops = [...nodes].map(n => n.getBoundingClientRect().top + window.scrollY);
-    this.total = this.tops.length;
-    this.paint();
-  },
-  paint() {
-    const rail = $('#mx-rail'); if (!rail) return;
-    const fill = rail.querySelector('i'), label = rail.querySelector('span');
-    if (!this.total) { rail.classList.remove('live'); fill.style.height = '0'; return; }
-    const seen = this.index();
-    const frac = Math.min(1, seen / this.total);
-    fill.style.height = `${(frac * 100).toFixed(1)}%`;
-    rail.classList.toggle('done', frac >= 1);
-    label.textContent = seen >= this.total ? 'end' : `${seen} / ${this.total}`;
-    label.style.top = `${(frac * 100).toFixed(1)}%`;
-    // The count rides the fill while you move and fades once you settle to read.
-    rail.classList.add('live');
-    clearTimeout(this.hide);
-    this.hide = setTimeout(() => rail.classList.remove('live'), 1200);
-  },
-  onScroll() {
-    if (this.queued) return; this.queued = true;
-    requestAnimationFrame(() => { this.queued = false; mxJump.measure(); this.paint(); });
-  }
-};
+const mxRail = makeRail({
+  body: '#mx-body', item: '.mx-b', rail: '#mx-rail', jump: () => mxJump,
+  label: (seen, total) => (seen >= total ? 'end' : `${seen} / ${total}`)
+});
 window.addEventListener('scroll', () => {
   if ($('#view-mx')?.classList.contains('active')) mxRail.onScroll();
 }, { passive: true });

@@ -9,15 +9,12 @@ Each paper is a directory of section files, merged in filename order:
                       "items": [ {"t": term, "d": detail, "s": source, "k": kind?} ] } ] }
 
 `k` on the section is the default kind for its items; an item may override it.
-Papers with no authored sections yet fall back to the legacy string bank so the
-site keeps working while the rebuild lands paper by paper.
 """
 import json, pathlib, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SRC = ROOT / 'factbank'
 OUT = ROOT / 'data' / 'factnstat.json'
-LEGACY = ROOT / 'data' / 'factnstat.legacy.json'
 
 PAPERS = [
     ('universal', 'Cross-cutting'),
@@ -63,30 +60,15 @@ def load_paper(pid):
     return sections
 
 
-def legacy_paper(pid, legacy):
-    """Wrap legacy plain strings as untyped items so nothing disappears mid-rebuild."""
-    d = legacy.get(pid)
-    if not d:
-        return []
-    return [{'h': s['h'], 'groups': [
-        {'g': g['g'], 'items': [{'t': '', 'd': t, 'k': 'data'} for t in g['items']]}
-        for g in s['groups'] if g['items']]} for s in d['sections']]
-
-
 def main():
-    legacy = json.loads(LEGACY.read_text()) if LEGACY.exists() else {}
     out, report = {}, []
     for pid, label in PAPERS:
         secs = load_paper(pid)
-        src = 'authored'
         if not secs:
-            secs = legacy_paper(pid, legacy)
-            src = 'LEGACY'
+            sys.exit(f'{pid}: no authored sections in factbank/{pid}/')
         n = sum(len(g['items']) for s in secs for g in s['groups'])
-        if not secs:
-            continue
         out[pid] = {'label': label, 'sections': secs}
-        report.append(f'{label:14} {n:5} entries  {len(secs)} sections  [{src}]')
+        report.append(f'{label:14} {n:5} entries  {len(secs)} sections')
     OUT.write_text(json.dumps(out, ensure_ascii=False, separators=(',', ':')))
     total = sum(len(g['items']) for p in out.values() for s in p['sections'] for g in s['groups'])
     print('\n'.join(report))

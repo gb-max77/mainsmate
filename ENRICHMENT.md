@@ -209,3 +209,54 @@ https://gb-max77.github.io/mainsmate/ — repo `gb-max77/mainsmate`, GitHub
 Pages from `main`. PWA + site, day/night themes, Model Answer/Scan views, Read
 Along (TTS, spacebar, voice/speed, flip-independent), tier-filterable
 navigation (T1/T2/T3 toggle — see below), flip diagrams.
+
+---
+
+# Maximus Weberus — the optional's revision pod
+
+A separate content system from the model answers above. Source of truth is
+`maximus/NN-theme.json`; **never hand-edit `data/maximus.json`** — run
+`tools/build-maximus.py`, which validates and rebuilds it.
+
+## Block schema
+
+```json
+{ "t": "lead term", "d": "content, **bold** on load-bearing keywords",
+  "k": "kind", "sl": "answer slot", "tr": 0|1|2|3, "u": "I-9",
+  "s": "source (optional)", "x": "interlink note (optional)",
+  "pyq": "2024 Q7(b) — metadata only, never rendered" }
+```
+
+- **k — what the evidence is**: `concept thinker critique cmte prov inst sch
+  data case eg quote link`. The line between them: `prov` states what an
+  Article or section says; `cmte` is a named commission's recommendation;
+  `inst` is a standing body or machinery; `sch` is a programme in operation.
+- **sl — where it goes in an answer**: `open argue prove attack close`.
+- **tr — the 2026 prediction**: `0` the core to own, `1` high priority,
+  `2` syllabus core, `3` the long tail.
+- **u — the UPSC syllabus unit**, `I-1`…`II-14` or `Cross`. This is what lets
+  the same blocks be re-cut by paper.
+
+## Content rules
+
+- **No year citations in the text.** The point must answer variants, not one
+  paper's phrasing. Citations live in `pyq`, unrendered.
+- **No exam-craft.** No word budgets, no "say this", no directive glossaries —
+  subject matter and its application only.
+- **Length follows the point**, as in FactnStat. The build warns past 80 words
+  and fails past 120; there is no floor.
+- **Number a set only where the count must be recalled** — Hood's seven
+  doctrines, Nolan's seven principles. Sets carrying their own mnemonic
+  (POSDCORB, the 4 Ps, the 3 Es) stay as prose.
+
+## Output shape
+
+`data/maximus.json` holds every block once in a flat pool `b[]`; the three
+books reference them by index, so Joint costs nothing to re-cut:
+
+- **Paper I** — units I-1…I-12, strict syllabus order
+- **Paper II** — units II-1…II-14
+- **Joint** — the 19 authored themes, each Paper-I unit beside its Paper-II twin
+
+The build prints the tier, kind and slot spread and asserts every syllabus unit
+is covered; it fails on a duplicate block body or an over-length block.
