@@ -1,6 +1,9 @@
 // ── MainsMate ── one module, no build step. Data in, reader out.
 const $ = s => document.querySelector(s);
 const el = (t, c, h) => { const n = document.createElement(t); if (c) n.className = c; if (h != null) n.innerHTML = h; return n; };
+// Stamped by tools/release.py so a deploy never serves stale data from the
+// browser's own cache; read off this module's own URL.
+const ASSET_V = new URL(import.meta.url).searchParams.get('v') || '0';
 const esc = s => String(s ?? '').replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[m]));
 // **gold** spans are the load-bearing keywords used for rapid visual scanning.
 const md = s => esc(s)
@@ -1188,7 +1191,7 @@ const comp = { pid: localStorage.getItem('mm-comp-paper') || 'gs2',
                tier: localStorage.getItem('mm-comp-tier') || 'all', q: '' };
 
 async function loadComp() {
-  if (!COMP) COMP = await fetch('data/compendium.json').then(r => r.json()).catch(() => ({}));
+  if (!COMP) COMP = await fetch(`data/compendium.json?v=${ASSET_V}`).then(r => r.json()).catch(() => ({}));
   return COMP;
 }
 const compKey = (pid, n) => `c:${pid}-${n}`;
@@ -1455,7 +1458,7 @@ const facts = { pid: localStorage.getItem('mm-facts-paper') || 'gs2', q: '', k: 
 
 async function loadFacts() {
   if (FACTS) return FACTS;
-  FACTS = await fetch('data/factnstat.json').then(r => r.json()).catch(() => ({}));
+  FACTS = await fetch(`data/factnstat.json?v=${ASSET_V}`).then(r => r.json()).catch(() => ({}));
   return FACTS;
 }
 
@@ -2388,7 +2391,7 @@ const mx = {
   lens: localStorage.getItem('mm-mx-lens') === '1'
 };
 async function loadMx() {
-  if (!MX) MX = await fetch('data/maximus.json').then(r => r.json()).catch(() => null);
+  if (!MX) MX = await fetch(`data/maximus.json?v=${ASSET_V}`).then(r => r.json()).catch(() => null);
   return MX;
 }
 const mxSave = () => {
