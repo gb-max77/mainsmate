@@ -1209,27 +1209,20 @@ body.hl-on #answer mark.hl{cursor:pointer}
 }
 
 /* ── the right-edge progress rail ──
-   Wider and warmer than the bank's hairline, because this is the pod you read
-   straight through: the fill is how much of the section is behind you, and the
-   count rides the top of the fill while you move. */
-#mx-rail{position:fixed;right:5px;top:calc(var(--tb,56px) + 6px);bottom:92px;width:6px;z-index:5;
-  border-radius:6px;background:color-mix(in srgb,var(--line) 60%,transparent);pointer-events:none}
-#mx-rail>i{display:block;position:relative;overflow:hidden;width:100%;height:0;border-radius:6px;
-  background:linear-gradient(180deg,var(--gold),color-mix(in srgb,var(--green) 62%,var(--gold)));
-  box-shadow:0 0 10px color-mix(in srgb,var(--gold) 45%,transparent);
-  transition:height .22s cubic-bezier(.22,.9,.3,1)}
-/* A slow sheen travels the filled length, so the bar reads as live rather than static. */
-#mx-rail>i::after{content:"";position:absolute;left:0;right:0;height:26px;border-radius:6px;
-  background:linear-gradient(180deg,transparent,#fff6,transparent);opacity:.5;
-  animation:mx-sheen 2.6s ease-in-out infinite}
-#mx-rail.done>i{background:var(--green);box-shadow:0 0 12px color-mix(in srgb,var(--green) 55%,transparent)}
-#mx-rail.done>i::after{animation:none;opacity:0}
-@keyframes mx-sheen{0%{top:0}50%{top:calc(100% - 26px)}100%{top:0}}
-#mx-rail>span{position:absolute;right:12px;transform:translateY(-50%);
-  font-family:var(--ui-font);font-size:9.5px;font-weight:700;letter-spacing:.05em;
-  color:var(--dim);background:var(--card);border:1px solid var(--line);
-  padding:2px 6px;border-radius:6px;box-shadow:var(--shadow-soft);
-  white-space:nowrap;font-variant-numeric:tabular-nums;opacity:0;transition:opacity .25s,top .22s}
-#mx-rail.live>span{opacity:1}
-@media (prefers-reduced-motion:reduce){ #mx-rail>i::after{animation:none} }
-@media (max-width:620px){ #mx-rail{right:2px;width:4px;bottom:88px} #mx-rail>span{right:9px} }
+   It reports how much of the section is behind you and otherwise stays out of
+   the way: a hairline in a muted ink, no glow and no idle animation, since
+   anything that moves on its own competes with the text for attention. The
+   only motion is the fill itself following the scroll. */
+#mx-rail{position:fixed;right:4px;top:calc(var(--tb,56px) + 6px);bottom:92px;width:3px;z-index:5;
+  border-radius:3px;background:color-mix(in srgb,var(--line) 55%,transparent);pointer-events:none}
+#mx-rail>i{display:block;width:100%;height:0;border-radius:3px;
+  background:color-mix(in srgb,var(--gold) 55%,var(--line));
+  transition:height .2s ease-out,background .3s}
+#mx-rail.done>i{background:color-mix(in srgb,var(--green) 55%,var(--line))}
+#mx-rail>span{position:absolute;right:10px;transform:translateY(-50%);
+  font-family:var(--ui-font);font-size:9px;font-weight:600;letter-spacing:.04em;
+  color:var(--faint);background:var(--card);border:1px solid var(--line);
+  padding:1px 5px;border-radius:5px;white-space:nowrap;font-variant-numeric:tabular-nums;
+  opacity:0;transition:opacity .3s,top .2s}
+#mx-rail.live>span{opacity:.72}
+@media (max-width:620px){ #mx-rail{right:2px;width:2px;bottom:88px} #mx-rail>span{right:8px} }
