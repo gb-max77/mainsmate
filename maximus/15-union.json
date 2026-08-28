@@ -4,23 +4,23 @@
  "units": [
   "II-4"
  ],
- "blurb": "The machinery at the top: PM, Cabinet Secretariat, PMO, ministries, and the boards and commissions around them. The PM's power and the PMO's role are the repeated slots — 2023 and 2024 both carried one.",
+ "blurb": "The machinery at the top: the Prime Minister and Cabinet, the Cabinet Secretariat and the PMO, ministries and their field organisations, and the boards and commissions around them.",
  "groups": [
   {
    "g": "The Prime Minister and the Cabinet",
    "items": [
     {
-     "t": "The constitutional basis",
+     "t": "The constitutional basis of the Council",
      "d": "**Article 74** — a Council of Ministers with the **Prime Minister at the head** to aid and advise the President, who **shall act** in accordance with that advice (**42nd Amendment**), with **one reconsideration** permitted (**44th**). **Article 75** — ministers appointed by the President on the PM's advice, **collectively responsible** to the House of the People.",
      "k": "prov",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4"
     },
     {
      "t": "The three tiers of the Council",
      "d": "**Cabinet Ministers** (the inner body that decides), **Ministers of State** (with or without independent charge), and **Deputy Ministers**. The **Cabinet is not mentioned in the original Constitution** — it entered through **Article 352's** reference inserted by the **44th Amendment**. **91st Amendment (2003)** capped the Council at **15% of the House**.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "argue",
      "tr": 2,
      "u": "II-4"
@@ -39,7 +39,7 @@
      "d": "**A written Constitution names him** (Article 74). He is **sole channel of communication** with the President (Article 78). India has **no elected upper chamber with real veto**, **no separate head-of-state convention constraining him**, a **larger patronage in appointments** through the ACC, and — decisively — **command of a federation's central transfers**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4",
      "pyq": "2023 Q2(a)"
     },
@@ -54,7 +54,7 @@
     {
      "t": "The Cabinet committees",
      "d": "The real decision-making sites: **Cabinet Committee on Security**, **on Economic Affairs**, **on Political Affairs**, **on Appointments (ACC)**, **on Parliamentary Affairs**, **on Investment and Growth**, **on Employment and Skill Development**. The **ACC** — PM and Home Minister — decides every senior appointment, and is where the political-permanent interface is actually managed.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "prove",
      "tr": 1,
      "u": "II-4"
@@ -75,15 +75,15 @@
     {
      "t": "The Cabinet Secretariat",
      "d": "The **Cabinet Secretary** is the **senior-most civil servant**, head of the **civil services**, ex-officio chairman of the **Committee of Secretaries**, and secretary to the Cabinet. Its function is **coordination**, not policy origination: it circulates Cabinet Notes, records decisions, monitors implementation and resolves inter-ministerial disagreement.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4"
     },
     {
      "t": "Its three wings",
      "d": "**Civil** (Cabinet coordination, the Rules of Business); **Military** (Military Affairs, and the Chief of Defence Staff's interface); **Intelligence** (the **Directorate General of Security** and **R&AW**, which report through the Cabinet Secretariat). It also houses the **Performance Management Division** that ran the **RFD** from 2009 to 2014.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-4"
@@ -99,9 +99,9 @@
     {
      "t": "The Prime Minister's Office",
      "d": "**Not a constitutional or statutory body** — an office of the PM's personal staff, headed by a **Principal Secretary**, with additional and joint secretaries, and no allocated subjects of its own. Its power is entirely **derived**: it is influential because the PM is, and to the degree the PM chooses.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4"
     },
     {
@@ -117,7 +117,7 @@
      "d": "The critique is about **accountability**: an office with great influence and **no departmental answerability** — no Demand for Grants of substance, no Standing Committee, no minister answerable for its decisions in the House. The defence is that **executive coordination** at scale requires an apex staff, and its output is the PM's own responsibility.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4",
      "pyq": "2024 Q1(d)"
     },
@@ -126,7 +126,7 @@
      "d": "**Pro-Active Governance and Timely Implementation (2015)** — a **PM-chaired, multi-modal, video-conference** platform where the PM reviews stalled projects and grievances **directly with Union Secretaries and State Chief Secretaries**, on geo-tagged and dashboard data. It works because **the apex leader personally uses the data** — the strongest available instance of **Mayo's** attention effect at institutional scale.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4"
     },
     {
@@ -147,13 +147,13 @@
      "d": "The **Secretariat** frames policy, prepares legislation, allocates resources and evaluates; **executive agencies, attached and subordinate offices** implement. It is **Gulick's** policy-implementation split, adopted from the British model, and it is the reason a Secretary is not personally accountable for delivery in the field.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4"
     },
     {
      "t": "The office hierarchy",
      "d": "**Secretary → Additional Secretary → Joint Secretary → Director → Deputy Secretary → Under Secretary → Section Officer → Assistant Section Officer.** The **Joint Secretary** is the pivotal level — the first at which a file can effectively be settled and the first with a defined **charge** of subjects.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 2,
      "u": "II-4"
@@ -161,7 +161,7 @@
     {
      "t": "Attached versus subordinate offices",
      "d": "**Attached offices** provide **executive direction** and technical advice to the ministry on the implementation of its policies — the Directorate General of Health Services, the Central Water Commission. **Subordinate offices** are the **field agencies** that actually execute — customs houses, income tax circles, post offices.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-4"
@@ -171,7 +171,7 @@
      "d": "Recommended by **ARC-I (1968)** and again by the **2nd ARC's 13th Report**: replace the **section with a hierarchy of clerks** by a **desk manned by an officer** who handles a subject end-to-end, cutting the file's journey from six or seven levels to **three**. Adopted **partially and reversibly** — the standing example of a structural reform that never landed.",
      "k": "cmte",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-4"
     },
     {
@@ -186,7 +186,7 @@
     {
      "t": "The boards",
      "d": "**CBDT and CBIC** under the Central Boards of Revenue Act, 1963; the **Railway Board**. A board is used where the function is **technical, quasi-judicial and continuous**, and where **collective deliberation** is preferable to a single officer's decision — the classic case for **plural headship**.",
-     "k": "prov",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-4"
@@ -194,7 +194,7 @@
     {
      "t": "Recruitment and appointment machinery at the top",
      "d": "**Appointments Committee of the Cabinet** for senior posts; **empanelment** at Joint Secretary and above, using **360-degree** inputs alongside the PAR; **Central Staffing Scheme** governing deputation to the Union; **Public Enterprises Selection Board** for CPSE boards; and **UPSC** for direct recruitment and lateral entry selection.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "prove",
      "tr": 2,
      "u": "II-4"

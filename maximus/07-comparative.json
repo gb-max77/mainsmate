@@ -4,7 +4,7 @@
  "units": [
   "I-7"
  ],
- "blurb": "Roughly one Paper-I question in twelve, and Riggs appears in some form almost every year — 2021, 2024 and 2025 each carried a Riggs question. The ecology argument is also the best explanation available for why Indian reform under-delivers.",
+ "blurb": "Why an administrative system that works in one society fails in another. The ecological approach, Riggs's prismatic model, and what makes a bureaucracy developmental rather than merely large.",
  "groups": [
   {
    "g": "CPA — origin, purpose, current status",
@@ -14,7 +14,7 @@
      "d": "**Post-war decolonisation** and **US technical assistance**: American models transplanted into new states **did not work**, and nobody could say why. The **Comparative Administration Group (CAG, 1960-71)**, chaired by **Fred Riggs** and funded by the **Ford Foundation**, was built to find out.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -46,7 +46,7 @@
      "d": "Its **elitist and west-centric orientation** treated the Western system as the endpoint; it built **typologies rather than testable theory**; it was **funding-dependent** and collapsed when Ford withdrew in **1971**; and its concepts were **descriptive, not predictive** — they named the disease without prescribing.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7",
      "pyq": "2019 Q5(b) · 2020 Q5(a)"
     },
@@ -96,7 +96,7 @@
      "d": "Administration is **shaped by, and shapes, its environment** — economic, social, political, communication and symbolic. **John Gaus (1947)** listed the ecological factors: **people, place, physical technology, social technology, wishes and ideas, catastrophe, personality**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -104,7 +104,7 @@
      "d": "It explains **why a well-designed reform fails**: the design assumed a literacy level, a banking density, a caste-neutral village, a functioning land record — and the ecology did not supply it.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7",
      "pyq": "2021 Q5(a) · 2024 Q5(e) · 2024 Q6(c)"
     },
@@ -113,7 +113,7 @@
      "d": "The two **ideal-type** poles. **Agraria** — **ascriptive** status, **particularistic** relations, **diffuse** roles, subsistence economy, few specialised structures. **Industria** — **achievement**-based, **universalistic**, **specific** roles, market economy, highly differentiated structures. Neither exists in pure form.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -168,7 +168,7 @@
      "d": "**Fused** society = white light entering (agraria, undifferentiated). **Prismatic** = light inside the prism, **diffracting but not yet separated**. **Diffracted** = the emerging spectrum (industria, highly specialised). The **transitional** society sits **inside** the prism — and Riggs's claim is that this is a **stable condition**, not a way-station.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -176,7 +176,7 @@
      "d": "The **gap between the prescriptive and the descriptive** — between what the law says and what actually happens. Not simple non-compliance: the **form is maintained** while the substance is absent, and everybody knows it. **India's single most usable diagnostic term.**",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -184,7 +184,7 @@
      "d": "**RTI Section 4** disclosure mandated and patchily done; **Citizen's Charters** without remedies; **State Finance Commissions** constituted years late; **District Planning Committees** that exist but do not plan; **penalties imposed in about 3% of disposed RTI cases**. The form is impeccable; the substance is absent.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -192,7 +192,7 @@
      "d": "The **simultaneous presence of different systems, practices and viewpoints** in one society. A district holds a **software park and bonded labour**, a **faceless tax assessment and a patwari's field book**. Administration must operate on all of them **with one set of rules**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -200,7 +200,7 @@
      "d": "**Formal structures exist but are dominated by informal ones.** The formal panchayat decision passes through the **caste or khap** reality; the formal transfer procedure passes through the **recommendation letter**. The structure is **differentiated on paper and fused in operation**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7"
     },
     {
@@ -253,7 +253,7 @@
      "d": "**Excessively gloomy** — the model has no route out of the prism; **technically complex** — the neologisms obscure rather than explain; **ideal-typical and untestable**; **Western-normative** — diffraction is treated as the goal; and **static** — it does not explain **change**, only describes a condition.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7",
      "pyq": "2024 Q7(a)"
     },
@@ -279,7 +279,7 @@
      "d": "**Formalism** now appears as **digital formalism** — a portal that exists and is not used, a dashboard green while delivery fails. **Overlapping** as **elite capture of digital access**. **Heterogeneity** as the **digital divide**. The concepts survived; the terrain changed.",
      "k": "link",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-7",
      "pyq": "2021 Q6(b)"
     },

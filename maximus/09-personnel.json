@@ -5,7 +5,7 @@
   "I-9",
   "II-8"
  ],
- "blurb": "Paper I's personnel theory and Paper II's civil services are the same syllabus written twice. Appraisal, training, neutrality and ethics rotate through Paper I every year; Paper II adds the constitutional position and the political-permanent interface.",
+ "blurb": "Personnel theory and the Indian services are the same syllabus written twice. Recruitment, classification, training, appraisal, pay, conduct and discipline — then neutrality, activism and the political-permanent interface.",
  "groups": [
   {
    "g": "Human resource development and the personnel function",
@@ -29,7 +29,7 @@
     {
      "t": "The personnel machinery of the Union",
      "d": "**Department of Personnel and Training (DoPT)** under the **PMO** — cadre controlling authority for the **IAS**, policy on recruitment, training, conduct and vigilance. **UPSC** for recruitment and disciplinary advice; **Staff Selection Commission** for Group B and C; **MHA** for the **IPS**, **MoEFCC** for the **IFoS**.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 2,
      "u": "II-8"
@@ -39,7 +39,7 @@
      "d": "**All India Services as on 1 January 2025** — **IAS sanctioned 6,877, in position 5,577, vacant 1,300**; **IPS sanctioned 5,099, vacant 505**; **IFoS sanctioned 3,193, vacant 1,029**. Close to a fifth of the sanctioned IAS simply does not exist.",
      "k": "data",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -53,9 +53,9 @@
     {
      "t": "The constitutional position of the services",
      "d": "**Article 308-314, Part XIV.** **Article 309** — Parliament or the legislature may regulate recruitment and conditions; until then, **rules by the President or Governor**. **Article 310** — the **doctrine of pleasure**. **Article 311** — the **procedural protection**. **Article 312** — Rajya Sabha may create a **new All India Service** by **two-thirds** resolution.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -63,7 +63,7 @@
      "d": "**Sardar Patel's** case in the Constituent Assembly — a service with a **national outlook** serving under States is the **link that holds a federation of continental scale together**. \"An efficient, disciplined and contented service... is a **sine qua non** of sound administration under a democratic regime **even more than under an authoritarian** rule.\"",
      "k": "quote",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     }
    ]
@@ -82,9 +82,9 @@
     {
      "t": "The UPSC's constitutional insulation",
      "d": "**Articles 315-323.** Members appointed by the **President**, removable only for **misbehaviour on a Supreme Court reference**, **expenses charged on the Consolidated Fund**, **no further employment under government** after office (Chairman barred entirely).",
-     "k": "scheme",
+     "k": "prov",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8",
      "pyq": "2024 Q5(a)"
     },
@@ -109,7 +109,7 @@
      "d": "**Kingsley's** concept: a bureaucracy that **mirrors the society** it serves. **Passive** representation (composition) is expected to produce **active** representation (responsive decisions). India's instruments are **reservation under Articles 16(4) and 335**, and the **AIS insider-outsider cadre allocation** balancing State representation.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -126,7 +126,7 @@
      "d": "The live controversy. Introduced for **Joint Secretary, Director and Deputy Secretary** posts through UPSC-conducted selection from **2018**; the **2024 advertisement for 45 posts was withdrawn** after objections that **contract appointments carried no reservation**. The unresolved questions are **reservation, conflict of interest and cooling-off**.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -156,7 +156,7 @@
      "d": "The **post** is classified by **duties and responsibilities**, and pay attaches to the **post**. Gives **equal pay for equal work**, precise **job descriptions** and **specialisation**. Used in the **United States**. Its cost is **rigidity** — mobility across posts is hard because each is separately defined.",
      "k": "concept",
      "sl": "open",
-     "tr": 3,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -164,7 +164,7 @@
      "d": "The **person** carries a **rank** and pay follows the rank wherever posted. Gives **mobility, generalist career development and easy redeployment**. Used in **Britain, France and India**. Its cost is that **pay is disconnected from the job** — the same rank does very different work in Delhi and in a district.",
      "k": "concept",
      "sl": "argue",
-     "tr": 3,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -180,7 +180,7 @@
      "d": "**Generalist** — trained mind, coordination, breadth, political sense, resistance to capture. **Specialist** — domain competence, credibility with the sector. The Indian answer since **ARC-I** has been to keep generalist leadership and add **domain specialisation after mid-career**, which **Hota (2004)** and **Mission Karmayogi** both pursue.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -208,7 +208,7 @@
     {
      "t": "The Indian training institutions",
      "d": "**LBSNAA Mussoorie** (IAS and the common Foundation Course); **SVPNPA Hyderabad** (IPS); **NADT Nagpur** (IRS); **IGNFA Dehradun** (IFoS); **ISTM** for Secretariat staff; **NIRDPR** for rural development; **State ATIs**; and the **National Training Policy, 2012** requiring an annual training plan and a training manager in every department.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 1,
      "u": "II-8"
@@ -216,15 +216,15 @@
     {
      "t": "Mission Karmayogi",
      "d": "**National Programme for Civil Services Capacity Building, September 2020.** Its shift is from **rule-based to role-based** training: **FRAC** (Framework of Roles, Activities and Competencies) defines the competencies a post needs; **iGOT-Karmayogi** delivers online; **behaviour, functional and domain** competencies are tracked per official.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
      "t": "The Capacity Building Commission",
      "d": "Established **2021** — it approves **Annual Capacity Building Plans**, harmonises training institutions, audits their quality, and builds shared learning resources. It is **recommendatory to ministries**, which is the structural limit on what it can enforce.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-8",
@@ -251,7 +251,7 @@
      "d": "**Training** is **individual, skill-focused, episodic and course-shaped**. **Capacity building** is **institutional** — it includes **systems, data, processes, structures and organisational culture** as well as people. A fully trained officer in a broken institution still cannot deliver.",
      "k": "concept",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8",
      "pyq": "2025 Q8(b)"
     },
@@ -289,9 +289,9 @@
     {
      "t": "The Indian appraisal system",
      "d": "**Performance Appraisal Report**, online through **SPARROW**; **numerical grading on a 1-10 scale**; **self-appraisal with targets**; **reporting, reviewing and accepting** authorities; adverse remarks **communicated with a right of representation** following **Dev Dutt v. Union of India (2008)**, which held even a 'good' entry must be communicated if it affects promotion.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -299,7 +299,7 @@
      "d": "Ratings **cluster at the top** because an adverse entry invites litigation and damages a career irreversibly; the reporting officer changes **before the year ends**; and the **cost of honesty is borne by the reporter**. The result is a document that **cannot rank** — which is why **empanelment relies on the 360-degree input instead**.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -342,7 +342,7 @@
      "d": "**Central Pay Commissions** roughly every ten years. The **7th CPC (2016)** replaced pay bands and grade pay with a **Pay Matrix**, set a **minimum pay** using the **Aykroyd formula**, and rationalised allowances. The **8th CPC** — ToR notified **3 November 2025**, **Justice Ranjana Prakash Desai**, report within **18 months** — covers about **50 lakh employees and 69 lakh pensioners**.",
      "k": "data",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -350,7 +350,7 @@
      "d": "Operational **1 April 2025**. Assured payout of **50% of average basic pay of the last twelve months** for **25 years'** service, **minimum ₹10,000 a month**, government contribution **18.5%**. It settles the **OPS-versus-NPS** fiscal argument by giving **assurance without an unfunded liability** — the design compromise worth naming.",
      "k": "data",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-9"
     }
    ]
@@ -363,7 +363,7 @@
      "d": "**AIS (Conduct) Rules, 1968** and **CCS (Conduct) Rules, 1964**. **Rule 3** — every member shall maintain **absolute integrity**, **devotion to duty**, and do nothing **unbecoming**; and shall maintain **political neutrality**. **Rule 3(3)(iii)** requires **oral directions to be confirmed in writing**.",
      "k": "prov",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -379,7 +379,7 @@
      "d": "A **code of conduct** is a **list of prohibitions** — enforceable, specific, and silent on everything it does not mention. A **code of ethics** states **values that guide judgement** in the cases no rule anticipated. India has an elaborate code of conduct and **no code of ethics**; the **2nd ARC's fourth report** proposed one.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -393,17 +393,17 @@
     {
      "t": "Article 311's two protections",
      "d": "**311(1)** — no dismissal or removal by an authority **subordinate to the appointing authority**. **311(2)** — no dismissal, removal or **reduction in rank** except after an **inquiry** in which the charges are communicated and a **reasonable opportunity of being heard** is given.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
      "t": "The three exceptions to Article 311(2)",
      "d": "**(a)** conviction on a **criminal charge**; **(b)** where the authority is satisfied that holding an inquiry is **not reasonably practicable**, for **reasons to be recorded in writing**; **(c)** where the **President or Governor** is satisfied that in the **interest of the security of the State** an inquiry is not expedient. Each requires a **recorded, reviewable** satisfaction.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -440,7 +440,7 @@
      "d": "Not indifference to **outcomes** but **impartiality between parties**: the civil servant serves the **government of the day** with equal energy, gives **frank advice in private**, and **executes the lawful decision in public**. The **Whitehall** convention, imported with the ICS and preserved by **Rule 3**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -457,7 +457,7 @@
      "d": "The 1970s debate, still live. **Committed** — an administration must share the **constitutional and developmental commitment** of the elected government to implement it energetically. **Neutral** — commitment to a **government** is indistinguishable in practice from commitment to a **party**. Resolve it as **committed to the Constitution, neutral between parties**.",
      "k": "concept",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -473,7 +473,7 @@
      "d": "**T.S.R. Subramanian v. Union of India (2013)** — a **Civil Services Board** to recommend transfers and postings, a **minimum tenure** of two years, and **oral instructions to be recorded in writing**. States were directed to comply; **compliance has been partial and reversible**, since the Board's advice can be overridden with reasons.",
      "k": "case",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -481,7 +481,7 @@
      "d": "The **single most consequential** personnel issue in India. Frequent, mid-tenure, punitive transfers destroy **institutional memory**, remove the **incentive to start anything**, and are the **enforcement mechanism** for every other pressure. **Fix tenure and half the neutrality problem resolves itself.**",
      "k": "critique",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-8"
     },
     {
@@ -500,7 +500,12 @@
      "sl": "close",
      "tr": 1,
      "u": "II-8"
-    },
+    }
+   ]
+  },
+  {
+   "g": "Employee relations and political rights",
+   "items": [
     {
      "t": "Political rights of civil servants",
      "d": "They may **vote**; they may **not** join or assist a political party, canvass, contest, or express public political views. The justification is that the **appearance of impartiality** is part of the service's capital. The counter is that a **blanket bar on all political expression** is disproportionate to that end.",
@@ -513,7 +518,7 @@
     {
      "t": "Staff associations and the JCM",
      "d": "**Joint Consultative Machinery (1966)** — **National, Departmental and Office Councils**, with **compulsory arbitration** on pay, allowances and hours; recognised associations under the **CCS (RSA) Rules, 1993**. **Strikes are not a right** — **All India Bank Employees Association (1962)** held there is no fundamental right to strike.",
-     "k": "prov",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-8"
@@ -554,7 +559,7 @@
      "d": "**Selflessness, integrity, objectivity, accountability, openness, honesty, leadership** — from the **Committee on Standards in Public Life (1995)**. The most quotable ethical checklist in the syllabus, and the model the **2nd ARC** used for its proposed **Code of Ethics** and **Public Services Bill**.",
      "k": "cmte",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -568,7 +573,7 @@
     {
      "t": "Innovative practices in administrative ethics",
      "d": "Working instances: **integrity pacts** in procurement (Transparency International's model, adopted by the CVC); **asset and interest disclosure**; **cooling-off periods**; **e-procurement removing the discretionary interface**; **behavioural nudges** in tax compliance; and **preventive vigilance** as against punitive vigilance.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 1,
      "u": "I-9",
@@ -579,7 +584,7 @@
      "d": "**T.N. Seshan** — statutory authority used to its constitutional edge. **Ashok Khemka** — mutation cancellation and the cost paid in transfers. **Satyendra Dubey** and **Shanmugam Manjunath** — killed for reporting corruption, and the reason whistleblower protection is not academic. **S.R. Sankaran** — the officer who made bonded-labour release his career.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-9"
     },
     {
@@ -594,7 +599,7 @@
     {
      "t": "Institutionalising ethical values",
      "d": "At the **political** level: a **code of conduct for ministers** with an independent adjudicator ( ), **election funding transparency**, and **asset declaration**. At the **administrative** level: a **Code of Ethics**, an **Ethics Commissioner**, **whistleblower protection in force**, and **conflict-of-interest rules with a cooling-off period**.",
-     "k": "scheme",
+     "k": "critique",
      "sl": "close",
      "tr": 1,
      "u": "II-14",

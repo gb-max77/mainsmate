@@ -5,7 +5,7 @@
   "I-8",
   "II-11"
  ],
- "blurb": "Paper I's development theory and Paper II's panchayats are one argument about whether the poor can direct the machinery that serves them. Women and development appears in Paper I almost every year; the 73rd Amendment is Paper II's most reliable slot.",
+ "blurb": "Development theory and the panchayat are one argument — whether the poor can direct the machinery that serves them. The capability approach, the anti-development thesis, women and development, and the 73rd Amendment's fiscal hollowness.",
  "groups": [
   {
    "g": "The concept of development",
@@ -15,7 +15,7 @@
      "d": "**Growth** is an increase in output; **development** is a change in **capabilities, distribution and institutions**. **Dudley Seers'** test — ask what has happened to **poverty, unemployment and inequality**; if all three have worsened, this has not been development even if income per head rose.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -23,7 +23,7 @@
      "d": "\"**Development can be seen as a process of expanding the real freedoms that people enjoy.**\" The measure is not **income** or even **utility** but **capability** — what a person is actually able to **do and be**. Income is a means; **agency** is the end.",
      "k": "quote",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -31,7 +31,7 @@
      "d": "**NITI Aayog's National Multidimensional Poverty Index** — health, education and standard of living, on the **Alkire-Foster** method. **Headcount fell from 29.17% (2013-14) to 11.28% (2022-23)**, about **24.8 crore** people out of multidimensional poverty. **NFSA, RTE and PM-JAY** are capability instruments, not income transfers.",
      "k": "data",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -86,7 +86,7 @@
      "d": "Administration oriented to **planned change** rather than order maintenance: **goal-oriented, change-oriented, client-oriented, innovative, temporally committed** and **participative**. **Weidner** — administration directed toward **progressive political, economic and social objectives**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -94,7 +94,7 @@
      "d": "**Development administration** (administration **of** development — delivering programmes) and the **administration of development** in its second sense, **administrative development** (building the **capacity** to deliver). The two are **mutually reinforcing** and India has consistently invested in the first while starving the second.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -102,7 +102,7 @@
      "d": "Development administration needs **flexibility, risk-taking and speed**; **general administration** needs **rule-adherence, uniformity and caution**. The **same officer** carries both roles — the Collector who must both **innovate** and **not deviate from the GFR**.",
      "k": "link",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8",
      "pyq": "2019 Q6(a)"
     },
@@ -128,7 +128,7 @@
      "d": "**RTI (2005), NREGA (2005), FRA (2006), RTE (2009), NFSA (2013)** created **justiciable entitlements** with an aggrieved citizen able to sue. **Missions** — Karmayogi, Aspirational Blocks, Jal Jeevan, VB-G RAM G — deliver by **target and dashboard** and create **no enforceable claim**. Speed rose; **standing fell**.",
      "k": "critique",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -158,7 +158,7 @@
      "d": "Its claim is **epistemological**, not managerial: development is a **discourse** invented after 1945 that reconstituted two-thirds of the world as **'underdeveloped'** and made Western modernity the only imaginable destination. **Arturo Escobar, Encountering Development (1995)**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8",
      "pyq": "2024 Q5(a)"
     },
@@ -199,7 +199,7 @@
      "d": "The evidence points to **symbiosis**, not choice: every successful market economy rests on a **strong state** supplying contract enforcement, property rights, competition regulation, human capital and infrastructure. **Weak states produce weak markets**, not free ones.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8",
      "pyq": "2021 Q6(c) · 2024 Q7(c) · 2025 Q6(b)"
     },
@@ -238,7 +238,7 @@
      "d": "**Women in Development** (1970s, after **Ester Boserup**) — add women to existing programmes. **Women and Development** — the problem is the **terms** of their inclusion. **Gender and Development** — the object is not women but the **gendered relations of power**, so men and institutions are part of the target.",
      "k": "concept",
      "sl": "open",
-     "tr": 2,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -246,7 +246,7 @@
      "d": "**Caroline Moser** — women carry **reproductive, productive and community-managing** roles simultaneously, so any programme that adds work without removing any **intensifies their burden**. Her distinction between **practical gender needs** (water, fuel, income) and **strategic gender interests** (control, voice, property) is the sharpest planning tool available.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -254,15 +254,15 @@
      "d": "**Naila Kabeer** — empowerment is the **expansion of the ability to make strategic life choices** by those previously denied it, and has three inseparable dimensions: **resources**, **agency** and **achievements**. A transfer that raises resources without agency is **not** empowerment.",
      "k": "thinker",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
      "t": "The SHG movement",
      "d": "**NABARD's SHG-Bank Linkage (1992)**, scaled through **NRLM/Aajeevika (2011)** and now **Lakhpati Didi**. **Kudumbashree** in Kerala is the most complete instance — neighbourhood groups federated to area and community development societies, with a **formal interface with the panchayat**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-8"
     },
     {
@@ -317,7 +317,7 @@
     {
      "t": "Why the Community Development Programme failed",
      "d": "Launched **2 October 1952** with the **National Extension Service (1953)**. **Balwantrai Mehta (1957)** diagnosed it precisely: it was **bureaucratically driven with no popular participation**, the **Village Level Worker** was overloaded, and benefits were **captured by dominant groups** — **Selznick's co-optation** in a village.",
-     "k": "scheme",
+     "k": "critique",
      "sl": "open",
      "tr": 1,
      "u": "II-11"
@@ -325,9 +325,9 @@
     {
      "t": "Balwantrai Mehta's prescription",
      "d": "**Democratic decentralisation** through **three tiers** — village panchayat, **panchayat samiti** (the executive tier, at block level), zila parishad (advisory and coordinating); **indirect elections** to the upper tiers; **genuine transfer of resources and authority**; and a **five-year term**. Rajasthan implemented first, **Nagaur, 2 October 1959**.",
-     "k": "scheme",
+     "k": "cmte",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-11"
     },
     {
@@ -335,7 +335,7 @@
      "d": "**1977-78** — **two tiers** (zila parishad as the executive body, and **mandal panchayat** for 15,000-20,000 people); **open participation of political parties**; **compulsory taxation powers**; **reservation for SC/ST**; a **social audit** by a district-level agency; and a **Minister for Panchayati Raj** in the State Cabinet.",
      "k": "cmte",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-11"
     },
     {
@@ -351,7 +351,7 @@
      "d": "**1992, in force 24 April 1993.** **Gram Sabha (243A)**; **three tiers** above 20 lakh population (243B); **direct election** to all seats (243C); **reservation for SC/ST in proportion, and one-third for women** (243D); **five-year term with elections within six months of dissolution** (243E); a **State Election Commission** (243K); a **State Finance Commission every five years** (243I).",
      "k": "prov",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-11"
     },
     {
@@ -359,7 +359,7 @@
      "d": "This is where the answer sits. **Article 243G** — the legislature **'may' endow** panchayats with powers over the **29 subjects of the Eleventh Schedule**. **Article 243H** — the State **'may' authorise** taxes. **District Planning Committee (243ZD)** is mandatory but toothless. **Devolution was made a State choice, and most States chose not to.**",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "II-11"
     },
     {
@@ -367,7 +367,7 @@
      "d": "Devolution means **Functions, Funds and Functionaries**. Most States transferred **functions on paper**, some **funds** as tied grants, and almost no **functionaries** — line department staff remain answerable to their department, not to the panchayat that supposedly directs them. **Without the third F, the first two are decorative.**",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-11"
     },
     {
@@ -383,7 +383,7 @@
      "d": "**PRIs raise about 1% of their receipts from own taxes**; roughly **80% comes as central grants** and **15% from States**; average **own tax revenue per panchayat is about ₹21,000 a year**. There are about **2.55 lakh gram panchayats** and **31 lakh+ elected representatives**, of whom about **46% are women**.",
      "k": "data",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-11"
     },
     {
@@ -398,7 +398,7 @@
     {
      "t": "Gram swaraj and the Gram Sabha",
      "d": "The **Gram Sabha** is the only **direct democracy** institution in the Constitution and holds real statutory power — **approval of the annual plan and budget**, **beneficiary selection**, **social audit under MGNREGA Section 17**, and **consent under FRA and PESA**. Its weakness is **quorum, capture and the frequency of meetings**.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-11",
@@ -429,7 +429,7 @@
     {
      "t": "The institutional architecture",
      "d": "**Ministry of Rural Development** with the **Departments of Rural Development and Land Resources**; **Ministry of Panchayati Raj**; **NABARD (1982)** for rural credit and RIDF; **DRDA** at district level; **NIRDPR** for training; **SIRDs** in States. The recurring problem is that **each mission builds its own society**, bypassing the panchayat.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "open",
      "tr": 3,
      "u": "II-11"
@@ -445,9 +445,9 @@
     {
      "t": "MGNREGA's design innovations",
      "d": "**Legal guarantee** of **100 days**; **self-selection** through a statutory wage; **unemployment allowance** if work is not provided in **15 days**; **Gram Sabha** as the planning and audit authority; **one-third participation for women**; and **social audit under Section 17**. Its elasticity was proved in **2020-21** with **1.75 crore new job cards**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-11"
     },
     {
@@ -469,7 +469,7 @@
     {
      "t": "Mission Antyodaya",
      "d": "A **gram-panchayat-level survey and ranking** across infrastructure and service parameters, used to target the weakest panchayats and to converge schemes on them. Its value is as a **diagnostic layer**; its limit is that **ranking is not resourcing** — identification without an untied fund changes little.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "II-11",
@@ -478,7 +478,7 @@
     {
      "t": "Rurban",
      "d": "**Shyama Prasad Mukherji Rurban Mission (2016)** — clusters of **contiguous villages** developed with urban amenities and rural livelihoods, through **convergence of existing schemes** plus a **Critical Gap Fund** of up to 30%. It targets the **rural-urban continuum** the 73rd/74th split ignores.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "II-11",
@@ -496,7 +496,7 @@
     {
      "t": "Land reform — the unfinished agenda",
      "d": "**Abolition of intermediaries** largely succeeded; **tenancy reform and ceiling** largely failed — evasion through **benami and family partition**, and **poor land records**. The current answer is **records, not redistribution**: **SVAMITVA** with **2.5 crore+ property cards**, and **Digital India Land Records Modernisation**.",
-     "k": "scheme",
+     "k": "critique",
      "sl": "argue",
      "tr": 3,
      "u": "II-11"

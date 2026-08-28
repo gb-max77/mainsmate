@@ -5,7 +5,7 @@
   "I-10",
   "II-5"
  ],
- "blurb": "Policy theory in Paper I and India's planning machinery in Paper II describe the same chain — from agenda to outcome. Implementation and evaluation are the reliably asked slots; NITI Aayog's limited effectiveness is Paper II's live question.",
+ "blurb": "From agenda to outcome. Policy models, agenda-setting, implementation and evaluation on one side; India's planning machinery, NITI Aayog and decentralised planning on the other.",
  "groups": [
   {
    "g": "What policy is, and the models",
@@ -15,7 +15,7 @@
      "d": "Policy is \"**whatever governments choose to do or not to do**.\" The value of the second half is the whole point — **non-decision is policy**. India's failure to enact a **Public Services Bill** or a national **grievance redress law** is a policy, made by omission and rarely examined as one.",
      "k": "quote",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -23,7 +23,7 @@
      "d": "**Demands and supports** enter as **inputs**; the political system is the **black box** where conversion occurs; **outputs** are policies; **feedback** alters the next round of inputs. **Withinputs** are demands generated **inside** the system by officials themselves — the concept most useful for India.",
      "k": "concept",
      "sl": "argue",
-     "tr": 3,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -56,7 +56,7 @@
      "d": "**Problem, policy and politics** streams flow independently. A **policy window** opens when a **focusing event** or a change of government couples them, and a **policy entrepreneur** who has kept a solution ready pushes it through. This is the sharpest model for explaining **timing**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -64,7 +64,7 @@
      "d": "**GST (2016)** — a solution debated since 2000 that passed when a **political window** opened. **IBC (2016)** — the **twin balance sheet** problem coupled to a ready draft. **Aadhaar**, the **2020 farm laws and their repeal**, and the **Nirbhaya**-driven **Criminal Law Amendment, 2013** all follow the same shape.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -80,7 +80,7 @@
      "d": "**Rittel and Webber** — a wicked problem has **no definitive formulation**, **no stopping rule**, solutions that are **better or worse, not true or false**, **no immediate test**, every attempt is **consequential**, and each is **essentially unique**. Climate adaptation, urban air quality and antimicrobial resistance are wicked.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10",
      "pyq": "2021 Q7(a)"
     },
@@ -110,14 +110,14 @@
      "d": "**Bachrach and Baratz's second face of power** — the ability to **keep an issue off the agenda** entirely, so no decision is ever taken and no conflict is ever visible. asked about groups denying others the opportunity; this is the concept it wanted.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10",
      "pyq": "2021 Q8(b)"
     },
     {
      "t": "Policy formulation in India",
      "d": "The chain: **ministry drafts → inter-ministerial consultation → Ministry of Law and Finance concurrence → Cabinet Note → Committee of Secretaries → Cabinet or its committee → legislation or executive order**. **NITI Aayog** enters as adviser, and the **PMO** increasingly as originator.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "argue",
      "tr": 2,
      "u": "I-10"
@@ -125,7 +125,7 @@
     {
      "t": "Pre-legislative consultation",
      "d": "The **Pre-Legislative Consultation Policy, 2014** requires draft legislation and subordinate rules to be placed in the public domain for **30 days** with an explanatory note and a summary of feedback. It is a **policy, not a statute**, and compliance is inconsistent — one of the cheapest available governance upgrades.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
      "tr": 2,
      "u": "I-10"
@@ -174,7 +174,7 @@
      "d": "**Implementation (1973)** — the **complexity of joint action**. With many **clearance points**, each requiring agreement, the probability of completion **collapses multiplicatively**: even 90% agreement at each of ten points leaves about a **35%** chance of success. Their subtitle says it: **great expectations dashed**.",
      "k": "thinker",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -182,7 +182,7 @@
      "d": "A centrally sponsored scheme passes **Union ministry → State department → district → block → panchayat**, with **funds, guidelines, staff and approvals** each moving separately. **Jal Jeevan Mission's** convergence problem is Pressman and Wildavsky at scale — and **PFMS** exists to shorten exactly this chain.",
      "k": "link",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -190,7 +190,7 @@
      "d": "**Top-down (Sabatier and Mazmanian)** — start from the statute's objectives and ask why they were not met; fix by clearer goals and tighter control. **Bottom-up (Lipsky, Hjern)** — start from the **street-level actor** and ask what she actually faces; fix by discretion, resources and realistic norms.",
      "k": "concept",
      "sl": "argue",
-     "tr": 2,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -198,7 +198,7 @@
      "d": "\"The decisions of street-level bureaucrats... **effectively become the public policies they carry out**.\" Facing **demand that always exceeds resources**, they develop **coping routines** — rationing, creaming, routinising, stereotyping — and those routines **are** the policy the citizen experiences.",
      "k": "quote",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -206,7 +206,7 @@
      "d": "The **ASHA**, the **Anganwadi worker**, the **patwari**, the **PDS dealer**, the **constable**, the **primary school teacher**, the **electricity lineman**. Policy is written for them and experienced **as them**. Any implementation answer that does not name them stays abstract.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -230,7 +230,7 @@
      "d": "Be specific and evidence-led: **DBT** removed intermediation — **₹3.48 lakh crore** cumulative savings and subsidy share down to about **9%**; **PFMS** made release traceable; **Aadhaar-based authentication** cut duplication; **PRAGATI** created apex-level unblocking; **geo-tagged asset monitoring** made physical verification cheap.",
      "k": "data",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -238,7 +238,7 @@
      "d": "The honest counter. **Authentication failure excludes** the very poorest — the elderly, manual labourers with worn fingerprints, those without connectivity. **Efficiency in disbursement is not the same as accuracy in entitlement**, and exclusion errors are less visible than inclusion errors because the excluded do not appear in the data.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "I-10"
     }
    ]
@@ -251,7 +251,7 @@
      "d": "**Monitoring** is **continuous** and asks whether the plan is being followed — inputs, outputs, timelines. **Evaluation** is **periodic** and asks whether it **worked** — outcomes, impact, attribution, and whether the theory behind the design was right. Monitoring cannot substitute for evaluation, and India does far more of it.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-10"
     },
     {
@@ -273,7 +273,7 @@
     {
      "t": "India's evaluation machinery",
      "d": "**Development Monitoring and Evaluation Office (DMEO)** in NITI Aayog, successor to the **Programme Evaluation Organisation (1952)**; the **Output–Outcome Monitoring Framework** with the Finance Ministry; **CAG performance audits**; and **social audit**. Coverage remains thin relative to the number of schemes.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 2,
      "u": "I-10"
@@ -330,15 +330,15 @@
     {
      "t": "The Planning Commission",
      "d": "Created by a **Cabinet Resolution, 15 March 1950** — **never a constitutional or statutory body**. Chaired by the **Prime Minister**, with a Deputy Chairman of Cabinet rank. It formulated the Plans, allocated **Plan assistance** to States, and evaluated implementation through the **PEO**.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-5"
     },
     {
      "t": "The National Development Council",
      "d": "Also created by **resolution (1952)** — **PM, all Chief Ministers, Union ministers and Planning Commission members**. It **approved** the Plan, reviewed its working and recommended measures for national resources. Its purpose was **federal legitimation** of a Plan drafted centrally; in practice it **ratified rather than shaped**.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-5"
@@ -346,7 +346,7 @@
     {
      "t": "The Gadgil formula",
      "d": "The basis of **Plan assistance** to States from **1969**, revised as **Gadgil–Mukherjee (1991)**: **population 60%, per capita income 25%, fiscal performance 7.5%, special problems 7.5%**. It mattered because the Planning Commission — a **non-statutory body** — was distributing **transfers** alongside the constitutional **Finance Commission**.",
-     "k": "cmte",
+     "k": "sch",
      "sl": "prove",
      "tr": 3,
      "u": "II-5"
@@ -364,7 +364,7 @@
      "d": "The **French model** adopted from the **Eighth Plan (1992)**. The state ceased **directing** and began **signalling** — projections, priorities and incentives to guide private investment rather than allocate it. The Plan became a **statement of intent** with the **budget** as its only enforcement.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-5"
     },
     {
@@ -392,7 +392,7 @@
     {
      "t": "NITI Aayog's composition",
      "d": "**Cabinet Resolution, 1 January 2015.** **PM as Chairperson**; a **Vice-Chairperson**; **full-time and ex-officio members**; **special invitees**; a **CEO** of Secretary rank; the **Governing Council** of all Chief Ministers and Lieutenant Governors; and **Regional Councils** for specific issues.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "open",
      "tr": 1,
      "u": "II-5"
@@ -402,7 +402,7 @@
      "d": "From **allocation to advice** — no funds to distribute, so no leverage. From **top-down to 'cooperative and competitive federalism'**. From **five-year plans to strategy documents** — the **Three-Year Action Agenda**, **Seven-Year Strategy**, **Fifteen-Year Vision**, now **Viksit Bharat @2047**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-5"
     },
     {
@@ -416,7 +416,7 @@
     {
      "t": "The National Data and Analytics Platform",
      "d": "A single interoperable portal for government datasets with standardised metadata and open access — its claim is the **democratisation of data**, letting States, researchers and citizens use the same evidence base as the Union. Its limits are **data quality at source, update frequency and coverage of State data**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "II-5",
@@ -427,7 +427,7 @@
      "d": "It has **no funds** and therefore no leverage; its recommendations are **not binding**; the **Finance Ministry** controls transfers and the **PMO** sets priorities; the **Governing Council** meets infrequently; and an **index without a consequence** changes behaviour only where a State chooses to care about rank.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "II-5",
      "pyq": "2025 Q1(d)"
     },
@@ -442,9 +442,9 @@
     {
      "t": "Centrally sponsored schemes",
      "d": "The real fiscal instrument that replaced Plan transfers. **Chaturvedi Committee (2011)** and the **Sub-Group of Chief Ministers (Shivraj Singh Chouhan, 2015)** rationalised them into **core of the core, core and optional**, with **60:40** sharing (**90:10** for North-Eastern and Himalayan States). States argue they **crowd out State priorities** through mandatory matching.",
-     "k": "cmte",
+     "k": "sch",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-5"
     },
     {
@@ -464,7 +464,7 @@
     {
      "t": "The constitutional mandate",
      "d": "**Article 243ZD** — every State shall constitute a **District Planning Committee** to consolidate the plans prepared by panchayats and municipalities into a **draft district development plan**, with **four-fifths of members elected** from among panchayat and municipal members. **Article 243ZE** requires a **Metropolitan Planning Committee** for areas above ten lakh.",
-     "k": "cmte",
+     "k": "prov",
      "sl": "open",
      "tr": 1,
      "u": "II-5"
@@ -499,13 +499,13 @@
      "d": "**Signature argument.** The **73rd and 74th Amendments** made local bodies **planning authorities**; the **fiscal and administrative system** kept planning **central**. Money arrives as **tied scheme funds** with pre-set components, so the panchayat's plan can only **ratify** what has already been decided.",
      "k": "critique",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-5"
     },
     {
      "t": "What would fix it",
      "d": "**Untied funds** as a meaningful share of local receipts — which is exactly what **16th Finance Commission local body grants** could become if largely untied; **technical planning support** at block level; **activity mapping** that assigns each of the 29 subjects to a specific tier; and **making the DPC's plan a statutory input** to the State budget.",
-     "k": "cmte",
+     "k": "critique",
      "sl": "close",
      "tr": 2,
      "u": "II-5"

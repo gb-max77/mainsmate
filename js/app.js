@@ -2778,10 +2778,10 @@ addEventListener('keydown', e => {
   }
   if (e.key === 't' || e.key === 'T') {
     e.preventDefault();
-    const order = ['1', '2', '3'];
+    const order = ['0', '1', '2', '3'];
     const cur = order.findIndex(t => mx.tiers.size === 1 && mx.tiers.has(t));
     mx.tiers.clear();
-    if (cur < 2) mx.tiers.add(order[cur + 1]);
+    if (cur < order.length - 1) mx.tiers.add(order[cur + 1]);
     renderMx();
     return;
   }

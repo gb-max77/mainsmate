@@ -4,7 +4,7 @@
  "units": [
   "I-2"
  ],
- "blurb": "The currency of Paper I. Every answer should carry two thinkers — one classical, one contemporary — each doing work in the sentence rather than decorating it. Follett, Barnard and Simon are the three most repeatedly asked.",
+ "blurb": "The thinkers, in the order the discipline met them: scientific management, the classical school, Weber and his critics, Follett, human relations, Barnard, Simon, and the participative school.",
  "groups": [
   {
    "g": "Scientific Management — Taylor and the shop floor",
@@ -14,7 +14,7 @@
      "d": "**Develop a science** for each element of work; **scientifically select and train** the worker; **heartily cooperate** with workers; **near-equal division of work and responsibility** between management and men. Source: **The Principles of Scientific Management, 1911**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -78,9 +78,9 @@
     {
      "t": "Taylorism inside Indian administration",
      "d": "The **O&M Division (1954)** in the Cabinet Secretariat on **Appleby's** advice, moved to the **Department of Administrative Reforms (1964)**, today **DARPG**; the **Staff Inspection Unit (1964)** in the Finance Ministry sets **staffing norms by work measurement**; Railways run **Industrial Engineering** cells.",
-     "k": "cmte",
+     "k": "link",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -109,7 +109,7 @@
      "d": "**POCCC — Planning, Organising, Commanding, Coordinating, Controlling** — from **Administration Industrielle et Générale (1916)**. Fayol looked at the organisation **from the top down**; Taylor looked **from the shop floor up**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2",
      "pyq": "2021 Q1(e)"
     },
@@ -134,15 +134,15 @@
      "d": "**Gulick and Urwick (1937)** — **Planning, Organising, Staffing, Directing, COordinating, Reporting, Budgeting**. It answers *what the chief executive does*; **Simon's** objection is that it never says *what government is for*.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
      "t": "The four Ps of departmentalisation",
      "d": "**Purpose, Process, Persons (clientele), Place.** Indian examples in one line: **Purpose** — Ministry of Health; **Process** — CPWD and the Directorate of Printing; **Persons** — Ministries of Tribal Affairs, Minority Affairs, WCD; **Place** — Ministry of DoNER, the Andaman and Nicobar Administration.",
-     "k": "scheme",
+     "k": "link",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -164,9 +164,9 @@
     {
      "t": "India's span-of-control problem",
      "d": "A Secretariat file typically climbs **Section Officer → Under Secretary → Deputy Secretary → Director → Joint Secretary → Additional Secretary → Secretary**. The **2nd ARC's 13th Report** recommended **three levels** and a **desk officer system** — first proposed by **ARC-I in 1968** and still unimplemented.",
-     "k": "cmte",
+     "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -180,7 +180,7 @@
     {
      "t": "Classical theory in Indian rules",
      "d": "**POSDCORB is written into Indian law**: the **Government of India (Allocation of Business) Rules, 1961** distribute *purpose*; the **Transaction of Business Rules, 1961** prescribe *process*; the **Secretariat–executive agency** split is Gulick's **policy-versus-implementation** distinction in statutory form.",
-     "k": "prov",
+     "k": "link",
      "sl": "prove",
      "tr": 1,
      "u": "I-2"
@@ -204,7 +204,7 @@
      "d": "**Traditional** (sanctity of custom — the hereditary ruler), **charismatic** (devotion to an exceptional person), **legal-rational** (belief in the legality of enacted rules). **Bureaucracy is the administrative apparatus of legal-rational authority.**",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -212,7 +212,7 @@
      "d": "**Fixed jurisdictional areas**; **hierarchy of offices**; management by **written documents** — the file; **expert training**; the official's **full working capacity**; **stable, exhaustive rules**; **impersonality**; a **career** with tenure and fixed salary; **office separated from the person** of the incumbent.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -228,7 +228,7 @@
      "d": "**Stahlhartes Gehäuse** — rationalisation traps its makers: \"**specialists without spirit, sensualists without heart**.\" And the political warning: \"**the ruled cannot dispense with or replace the bureaucratic apparatus of authority once it exists**.\"",
      "k": "quote",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -236,7 +236,7 @@
      "d": "The commonest error in a Weber answer. The ideal type is a **methodological construct** — a deliberate **exaggeration of essential features** built to **measure deviation**. Criticising Weber because real bureaucracies are inefficient **misses what an ideal type is for**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -252,7 +252,7 @@
      "d": "**Article 309** (recruitment and conditions), **Article 310** (pleasure doctrine), **Article 311** (procedural protection against dismissal), the **CCS (Conduct) Rules, 1964** and **CCS (CCA) Rules, 1965**. The **steel frame** is Weber's **career service with tenure** written into a Constitution.",
      "k": "prov",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -260,7 +260,7 @@
      "d": "In a society of **ascriptive hierarchy**, **impersonality is emancipatory**: the rule that ignores caste is what lets a Dalit applicant be served. Every argument for **flexibility and discretion** must answer this — discretion in an unequal society **restores the very particularism** the rules removed.",
      "k": "link",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -290,7 +290,7 @@
      "d": "**'Bureaucratic Structure and Personality' (1940)** — the rules that secure **reliability** produce **overconformity**. Training in one method becomes an **incapacity** in changed conditions; the **means displace the ends**; the official becomes a **bureaucratic virtuoso** who serves the file, not the citizen.",
      "k": "critique",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -298,7 +298,7 @@
      "d": "The **RTI reply** that answers the question asked and not the one meant; **grievance 'disposal' rates** on **CPGRAMS** counted as redress; a scheme measured by **funds utilised** rather than **outcomes**. Merton's mechanism is the single most usable critique in Indian answers.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -306,7 +306,7 @@
      "d": "**TVA and the Grass Roots (1949)** — an organisation absorbs **hostile external elements into its leadership** to secure survival, and is **changed by them**. **Formal** co-optation confers visible participation; **informal** co-optation transfers real power. Result: **sub-goal formation** and the \"**unanticipated consequences of purposive social action**.\"",
      "k": "critique",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -331,7 +331,7 @@
      "d": "**The Bureaucratic Phenomenon (1964)** — bureaucracy is \"**an organisation that cannot correct its behaviour by learning from its errors**.\" Impersonal rules remove discretion; the remaining **zones of uncertainty** become **power resources**; officials defend them; the response is **more rules**. The circle tightens.",
      "k": "critique",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -378,7 +378,7 @@
      "d": "**Follett's** central move: **depersonalise the order**. Neither party gives orders to the other; **both take their orders from the situation**. Authority derives from the **facts of the case**, not the **position of the speaker** — which is why she calls it **power-with**, not **power-over**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -427,7 +427,7 @@
      "d": "The **GST Council** is integration in constitutional form — **Article 279A**, weighted voting, but decisions overwhelmingly by **consensus** because either side's veto is worthless. **PRAGATI** works by **direct contact at the earliest stage**; the **Incident Response System** applies the **law of the situation** in a disaster.",
      "k": "link",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -448,7 +448,7 @@
      "d": "**Western Electric, 1924-32**, four phases: **illumination experiments** (output rose whatever the lighting), **relay assembly test room**, **mass interviewing programme** (20,000 interviews), **bank wiring observation room**. Conducted by **Elton Mayo, Roethlisberger and Dickson**.",
      "k": "concept",
      "sl": "open",
-     "tr": 2,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -504,7 +504,7 @@
     {
      "t": "Human relations inside Indian administration",
      "d": "The **Joint Consultative Machinery (1966)** institutionalises staff voice through **National, Departmental and Office Councils** with **compulsory arbitration**; **service associations** are the informal group made formal; the **behavioural competencies** of **Mission Karmayogi's FRAC** are Mayo's insight in a training framework.",
-     "k": "scheme",
+     "k": "link",
      "sl": "prove",
      "tr": 2,
      "u": "I-2"
@@ -535,7 +535,7 @@
      "d": "**Authority resides in the subordinate, not the office.** A communication is authoritative only if the receiver **understands** it, believes it **consistent with organisational purpose** and with **personal interest**, and is **mentally and physically able** to comply. **The one who obeys confers the authority.**",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -543,7 +543,7 @@
      "d": "The band of orders a subordinate obeys **without conscious question**. Its **width** is the real measure of managerial authority — widened by **inducements, fairness and legitimacy**, narrowed by **arbitrary or unlawful** commands. The **illegal transfer order** narrows it for everyone who watches.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -589,7 +589,7 @@
      "d": "**Simon (1947)** — **decision-making is the heart of administration**. The unit of analysis is not the **task** but the **decision premise**, and the organisation's real function is to **supply the premises** on which its members decide.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -605,7 +605,7 @@
      "d": "Human rationality is **bounded** by incomplete knowledge of alternatives, inability to foresee all consequences, and limited **computational capacity**. The decision-maker constructs a **simplified model** of the situation and behaves rationally **with respect to that model**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2"
     },
     {
@@ -613,7 +613,7 @@
      "d": "Because search is costly, we do not **maximise** — we set an **aspiration level** and take the **first alternative that is good enough**. **Administrative man satisfices; economic man maximises.** administrative man bridges the **psychological** and the **rational** man.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2",
      "pyq": "2020 Q1(e)"
     },
@@ -669,7 +669,7 @@
      "d": "**McGregor (The Human Side of Enterprise, 1960)** — **X** assumes people **dislike work**, avoid responsibility and need **coercion and control**; **Y** assumes work is as natural as play, people exercise **self-direction** toward committed objectives, and seek responsibility.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-2",
      "pyq": "2024 Q2(a)"
     },
@@ -716,7 +716,7 @@
     {
      "t": "Participation in Indian administration",
      "d": "**Joint Consultative Machinery** for staff; **Gram Sabha** and **ward committees** for citizens; **Mission Karmayogi's** shift from **rule-based to role-based** competency; the **360-degree** input at empanelment. Each is **System 3 consultative**, rarely **System 4**.",
-     "k": "scheme",
+     "k": "link",
      "sl": "prove",
      "tr": 2,
      "u": "I-2"

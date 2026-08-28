@@ -4,7 +4,7 @@
  "units": [
   "I-3"
  ],
- "blurb": "Roughly one Paper-I question in ten, and reliably one 10-marker. Decision models, motivation and leadership rotate; communication and morale are the under-prepared slots where marks are cheapest.",
+ "blurb": "How administrators actually decide, are moved to act, lead, communicate and fall out. Decision models beyond Simon, the content and process theories of motivation, leadership, communication, morale and conflict.",
  "groups": [
   {
    "g": "Decision-making beyond Simon",
@@ -22,7 +22,7 @@
      "d": "**'The Science of Muddling Through' (1959)** — **successive limited comparisons**. Only alternatives **marginally different from the status quo** are examined; means and ends are chosen **together**; the test of a good policy is **agreement**, not correspondence to an objective.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -38,7 +38,7 @@
      "d": "Two lenses. A **broad-angle** scan for **fundamental** decisions (direction, at low detail) and a **zoom** for **incremental** ones inside that frame. It rescues incrementalism from **conservatism** and rationalism from **paralysis** — the practical Indian model.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -62,7 +62,7 @@
      "d": "**Cohen, March and Olsen (1972)** — in an **organised anarchy** (unclear goals, unclear technology, fluid participation), **problems, solutions, participants and choice opportunities** are dumped into a can and coupled by **timing, not logic**. Solutions often **precede** problems.",
      "k": "concept",
      "sl": "argue",
-     "tr": 2,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -86,7 +86,7 @@
      "d": "**Rational** — what we should do; **incremental** — what we can agree on; **mixed scanning** — how to do both at two altitudes; **garbage can** — what actually happens when nobody is in charge.",
      "k": "concept",
      "sl": "close",
-     "tr": 2,
+     "tr": 0,
      "u": "I-3"
     }
    ]
@@ -99,7 +99,7 @@
      "d": "**Physiological → safety → social → esteem → self-actualisation**, each **prepotent** over the next; a **satisfied need ceases to motivate**. Its administrative use is diagnostic: an officer stuck at **safety** (transfer insecurity) cannot be motivated by **esteem** appeals.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -116,7 +116,7 @@
      "d": "**Hygiene factors** — pay, policy, supervision, conditions, security — remove **dissatisfaction** but do not motivate. **Motivators** — achievement, recognition, the work itself, responsibility, advancement — produce **satisfaction**. The two are **not opposite ends of one scale**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3",
      "pyq": "2023 Q4(b)"
     },
@@ -133,7 +133,7 @@
      "d": "**Achievement (nAch)** — moderate risk, personal responsibility, immediate feedback; **Affiliation (nAff)** — warm relationships; **Power (nPow)**. His crucial distinction: **personalised power** (dominance) versus **socialised power** (influence used for group ends) — the second is what a good administrator has.",
      "k": "concept",
      "sl": "argue",
-     "tr": 2,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -167,7 +167,7 @@
      "d": "Same **object** — the energising of behaviour; different **question**. **Content** asks **what** motivates (Maslow, Herzberg, McClelland, Alderfer); **process** asks **how** motivation is formed and sustained (Vroom, Adams, Locke, Skinner).",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3",
      "pyq": "2020 Q4(b)"
     }
@@ -181,7 +181,7 @@
      "d": "**Motivation = Expectancy × Instrumentality × Valence.** Effort must be believed to produce **performance**; performance to produce a **reward**; the reward must be **wanted**. Any term at zero makes the product zero — the cleanest diagnostic in the whole motivation literature.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -205,7 +205,7 @@
      "d": "People compare their **outcome-to-input ratio** with a **referent other**. Perceived **inequity** produces tension resolved by reducing effort, inflating perceived inputs, changing the referent, or leaving. Explains **cadre grievances** over **pay parity and empanelment** better than any absolute measure.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -239,7 +239,7 @@
    "items": [
     {
      "t": "The trait to behaviour to contingency progression",
-     "d": "**Traits** (great men) → **behaviour** (what leaders do) → **contingency** (what works, when).",
+     "d": "**Traits** (great men) → **behaviour** (what leaders do) → **contingency** (what works, when) → **transformational** (what leaders change). Each school answers the failure of the one before it: traits could not predict, behaviour could not travel, contingency could not inspire.",
      "k": "concept",
      "sl": "open",
      "tr": 2,
@@ -291,7 +291,7 @@
      "d": "**James MacGregor Burns (1978)**, developed by **Bass**. **Transactional** — contingent reward and management by exception. **Transformational** — **idealised influence, inspirational motivation, intellectual stimulation, individualised consideration**. Burns: leaders and followers \"**raise one another to higher levels of motivation and morality**.\"",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -355,7 +355,7 @@
      "d": "**Downward carries authority** — orders, policy, feedback — and is **distorted by dilution** through each level. **Upward carries information** — reports, grievances, dissent — and is **distorted by filtering**: subordinates edit out what displeases. **Horizontal carries coordination** and is the weakest in a hierarchy.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -429,7 +429,7 @@
      "d": "**Morale is a group condition; motivation is an individual state.** Morale is about **attitude to the organisation**; motivation about **drive toward a task**. High morale with low motivation gives a **contented, idle office**; the reverse gives **burnout**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {
@@ -445,7 +445,7 @@
      "d": "**Irving Janis** — cohesive groups under stress suppress dissent. Symptoms: **illusion of invulnerability, collective rationalisation, stereotyping of outsiders, self-censorship, illusion of unanimity, direct pressure on doubters, self-appointed mindguards**. Antidotes: a **devil's advocate**, minuted **dissent**, and a leader who **speaks last**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-3"
     },
     {

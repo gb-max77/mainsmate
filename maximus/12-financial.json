@@ -5,7 +5,7 @@
   "I-12",
   "II-9"
  ],
- "blurb": "Budget theory in Paper I and the Indian budget process in Paper II. Reliably two to three questions a year across both papers, and the one pod where a dated figure — 16th FC, Budget 2026-27 — converts a good answer into a scoring one.",
+ "blurb": "Budget theory and the Indian budget. Monetary and fiscal policy, public debt, the forms of budget, the parliamentary process, accounts and audit, and the fiscal federalism the Finance Commission arbitrates.",
  "groups": [
   {
    "g": "Monetary and fiscal policy",
@@ -15,14 +15,14 @@
      "d": "**Monetary policy** is the **central bank's** control of **money supply and the price of credit** — repo rate, CRR, SLR, open market operations. **Fiscal policy** is the **government's** use of **taxation, expenditure and borrowing**. Both regulate demand; only fiscal policy can change **who** bears the cost.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12",
      "pyq": "2023 Q5(d)"
     },
     {
      "t": "India's monetary framework",
      "d": "**Flexible inflation targeting** since the **RBI Act amendment, 2016** — CPI inflation at **4% with a ±2% band**, set by the government in consultation with the RBI every five years, and delivered by a **six-member Monetary Policy Committee** (three RBI, three external), decisions by majority with the **Governor's casting vote**.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "I-12"
@@ -32,7 +32,7 @@
      "d": "**Musgrave's** classification: **allocation** (supplying public goods the market will not), **distribution** (altering the pattern of income and wealth), and **stabilisation** (countering the cycle). — Musgrave is the frame that answer needs.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12",
      "pyq": "2021 Q6(a)"
     },
@@ -48,7 +48,7 @@
     {
      "t": "Direct and indirect tax reform",
      "d": "**Direct** — the **Income-tax Act, 2025** replacing the 1961 Act; faceless assessment; corporate rate cuts (2019); **BEPS Pillar Two** global minimum tax. **Indirect** — **GST (2017)** subsuming seventeen taxes and thirteen cesses. Direct tax reform matters more for **equity**, because indirect taxes cannot discriminate by ability to pay.",
-     "k": "prov",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "I-12",
@@ -76,7 +76,7 @@
      "d": "**Total expenditure ₹53.5 lakh crore; capital expenditure ₹12.2 lakh crore; fiscal deficit 4.3% of GDP; debt 55.6% of GDP; net tax receipts ₹28.7 lakh crore; Finance Commission grants to States ₹1.4 lakh crore.** Always **date the figure** — an undated number reads as recall, a dated one as scholarship.",
      "k": "data",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -84,7 +84,7 @@
      "d": "**FRBM Act, 2003** — annual targets, a **Medium Term Fiscal Policy Statement**, and an escape clause. The **N.K. Singh Review Committee (2017)** proposed a **debt anchor of 60% of GDP** (Centre 40, States 20) and an **independent Fiscal Council** — the Council was **never created**, which is the standing gap in India's fiscal architecture.",
      "k": "prov",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12"
     }
    ]
@@ -94,7 +94,7 @@
    "items": [
     {
      "t": "Public debt classified",
-     "d": "**Internal** versus **external**; **funded** (long-term, with a sinking fund) versus **unfunded** (short-term); **productive** (self-liquidating, financing an asset that yields a return) versus **unproductive** (financing consumption, war or deficit). The **productive-unproductive** distinction is the one an examiner wants.",
+     "d": "**Internal** versus **external**; **funded** (long-term, with a sinking fund) versus **unfunded** (short-term); **productive** (self-liquidating, financing an asset that yields a return) versus **unproductive** (financing consumption, war or deficit). The **productive-unproductive** distinction is the one that decides whether the borrowing is defensible.",
      "k": "concept",
      "sl": "open",
      "tr": 3,
@@ -105,7 +105,7 @@
      "d": "**No, for internal debt** in the classical view — we owe it to ourselves, so it is a **transfer**, not a net burden. **Yes, in three real senses**: **interest payments pre-empt** future budgets, **distributional transfer** runs from taxpayers to bondholders, and **crowding out** reduces the capital stock future citizens inherit.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12",
      "pyq": "2024 Q8(b)"
     },
@@ -120,7 +120,7 @@
     {
      "t": "The constitutional provisions",
      "d": "**Article 292** — the Union may borrow on the security of the Consolidated Fund within limits Parliament may fix (Parliament has **never** fixed them). **Article 293** — States may borrow within India, but need the **Union's consent** while indebted to it, which is the Centre's principal lever over State finance.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
      "tr": 2,
      "u": "I-12"
@@ -151,7 +151,7 @@
      "d": "The traditional form: appropriation by **object of expenditure** — salaries, travel, supplies. Its virtues are **control and accountability**; you can see exactly what was sanctioned and audit against it. Its defect is that it tells you **what was bought and nothing about what was achieved**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12"
     },
     {
@@ -159,7 +159,7 @@
      "d": "Classifies expenditure by **function, programme and activity**, linking **inputs to outputs** with physical targets and unit costs. Introduced in India from **1968-69** on **ARC-I's** recommendation, following the **Hoover Commission (1949)** in the United States. It asks what the money **does**, not what it **buys**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12"
     },
     {
@@ -184,7 +184,7 @@
      "d": "**Peter Pyhrr at Texas Instruments; Jimmy Carter in Georgia and then federally.** Every activity must be **rejustified from zero** each cycle through **decision units**, **decision packages** at alternative service levels, and **ranking**. India adopted it formally in **1986-87**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12",
      "pyq": "2023 Q6(c)"
     },
@@ -193,7 +193,7 @@
      "d": "Because the **workload is impossible** — no organisation can rejustify everything annually — decision units are defined at a **level of aggregation that hides choices**, and rankings **reproduce last year's order**. ZBB produced a **rejustification of the base**, which is incrementalism with more paperwork.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12",
      "pyq": "2021 Q7(b)"
     },
@@ -208,17 +208,17 @@
     {
      "t": "Outcome budgeting in India",
      "d": "From **2005-06**, now the **Output–Outcome Monitoring Framework** run by **NITI Aayog** with the Finance Ministry. Every major scheme carries **output indicators** (what was produced) and **outcome indicators** (what changed) against its outlay. It is performance budgeting's **surviving descendant**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12"
     },
     {
      "t": "Gender budgeting",
-     "d": "**2019-family and a reliable 10-marker.** It is **not a separate budget for women** — it is an **accountability device**: **Statement 13** of the Expenditure Budget reports **Part A** (100% women-specific allocations) and **Part B** (schemes with at least 30% for women). Introduced **2005-06**, with **Gender Budget Cells** in ministries.",
-     "k": "scheme",
+     "d": "It is **not a separate budget for women** — it is an **accountability device**: **Statement 13** of the Expenditure Budget reports **Part A** (100% women-specific allocations) and **Part B** (schemes with at least 30% for women). Introduced **2005-06**, with **Gender Budget Cells** in ministries.",
+     "k": "sch",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12"
     },
     {
@@ -237,15 +237,15 @@
     {
      "t": "The constitutional foundation",
      "d": "**Article 112** — the **Annual Financial Statement**. **Article 113** — Demands for Grants, moved only on the **President's recommendation**. **Article 114** — the **Appropriation Bill**; no money may be withdrawn from the **Consolidated Fund** except under an appropriation made by law. **Article 266** Consolidated and Public Accounts; **Article 267** Contingency Fund.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
      "t": "The stages in Parliament",
      "d": "**Presentation** (1 February since 2017); **general discussion**; **Standing Committee scrutiny** of Demands during a recess; **voting on Demands** with **cut motions** — policy cut (₹1), economy cut (specified reduction), token cut (₹100); the **guillotine**; the **Appropriation Bill**; the **Finance Bill** within **75 days**.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-9"
@@ -253,7 +253,7 @@
     {
      "t": "The three cut motions",
      "d": "**Disapproval of policy cut** — 'that the amount be reduced to ₹1', a challenge to the policy itself. **Economy cut** — a specified reduction, arguing waste. **Token cut** — 'reduced by ₹100', to ventilate a **specific grievance**. All three are devices for **discussion**, since none has passed in decades.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 3,
      "u": "II-9"
@@ -261,7 +261,7 @@
     {
      "t": "Vote on account and the other grants",
      "d": "**Vote on account (Article 116)** — an advance for part of the year pending completion of the process. **Supplementary, additional and excess grants (Article 115)** — excess grants require **PAC** examination first. **Token grant** for a new service. **Vote of credit** and **exceptional grant** for unforeseen or non-routine demands.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "argue",
      "tr": 3,
      "u": "II-9"
@@ -269,15 +269,15 @@
     {
      "t": "Charged versus voted expenditure",
      "d": "**Charged on the Consolidated Fund** — not submitted to the vote: **interest and debt charges**, the **salaries of the President, Speaker, judges, CAG, UPSC Chairman**, and **court decrees**. It exists to protect **independence** and **contractual obligation** from an annual majority — but it also places a large share of expenditure **beyond the vote**.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
      "t": "The Finance Ministry's role",
      "d": "**Department of Economic Affairs** — budget formulation, macro policy, capital markets, external finance. **Department of Expenditure** — sanctions, the **GFR 2017**, PFMS, pay. **Department of Revenue** — CBDT and CBIC. **DIPAM** — disinvestment. **DFS** — banking and insurance. It is both **guardian of the purse** and **macro-policy authority**.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-9"
@@ -285,7 +285,7 @@
     {
      "t": "The recent budget process reforms",
      "d": "**Advancement to 1 February (2017)** so appropriation is complete before the financial year begins and departments can spend from April; **merger of the Railway Budget** into the general Budget; **abolition of the Plan–non-Plan** distinction; and a **Treasury Single Account** with **PFMS** just-in-time release.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 2,
      "u": "II-9"
@@ -295,7 +295,7 @@
      "d": "\"**Budgeting is incremental, not comprehensive.**\" The base is accepted and attention focuses on the **increment**, because comprehensive review is **cognitively impossible** and **politically explosive**. **Aaron Wildavsky, The Politics of the Budgetary Process (1964)** — the most quotable line in the whole unit.",
      "k": "quote",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-12"
     },
     {
@@ -340,7 +340,7 @@
     {
      "t": "The safeguards against fiscal populism",
      "d": "Institutional, not exhortatory: **FRBM targets** with a transparent escape clause; an **independent Fiscal Council** costing announcements (**N.K. Singh, 2017** — still not created); **medium-term expenditure frameworks**; **RBI's** State finance report as a public benchmark; and **Article 293's** borrowing consent.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "close",
      "tr": 2,
      "u": "II-9"
@@ -362,15 +362,15 @@
     {
      "t": "The three funds",
      "d": "**Consolidated Fund (Article 266(1))** — all revenues, loans raised and loan recoveries; nothing leaves it without an **appropriation by law**. **Public Account (266(2))** — money where government acts as a **banker** (provident funds, small savings); no appropriation needed. **Contingency Fund (267)** — at the **President's disposal** for urgent unforeseen expenditure, later regularised.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
      "t": "The separation of accounts from audit",
      "d": "Completed at the Union in **1976**. Previously the **CAG both kept the accounts and audited them** — auditing his own work. Now the **Controller General of Accounts** in the Finance Ministry compiles accounts; the CAG **audits** them. In the **Railways, Posts and Defence**, departmentalised accounting applies.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-9"
@@ -394,7 +394,7 @@
     {
      "t": "PFMS and the Treasury Single Account",
      "d": "**Public Financial Management System** tracks a release from sanction to **the beneficiary's account**, ending **float** parked in implementing-agency accounts. The **Treasury Single Account** for autonomous bodies means money is drawn only when needed. Together they addressed the oldest Indian problem: **released is not the same as spent**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 1,
      "u": "II-9"
@@ -402,7 +402,7 @@
     {
      "t": "Computerisation of treasuries",
      "d": "It delivered **real-time expenditure data**, ended **ways-and-means surprises** for States, made **bill-passing time measurable**, and cut the **March rush** somewhat. It did not change **what** was budgeted or **why** — an efficiency gain in **execution**, not in **allocation**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "II-9",
@@ -411,7 +411,7 @@
     {
      "t": "The internal control layer",
      "d": "**General Financial Rules, 2017** as the procedural code; **Delegation of Financial Powers Rules**; **internal audit** by the Chief Controller of Accounts; **Financial Adviser** in each ministry, reporting to both the Secretary and the Finance Ministry; and the **Integrated Financial Advice** scheme. Internal control **precedes** external audit and is the weaker of the two in India.",
-     "k": "prov",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-9"
@@ -424,9 +424,9 @@
     {
      "t": "The CAG's constitutional position",
      "d": "**Articles 148-151.** Appointed by the **President**; removable only **like a Supreme Court judge**; **salary and expenses charged** on the Consolidated Fund; **ineligible for further office** under the Union or any State after demitting. **Ambedkar** called the CAG \"probably the **most important officer** in the Constitution of India\".",
-     "k": "scheme",
+     "k": "prov",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -434,7 +434,7 @@
      "d": "**Regularity or compliance** — was the expenditure within the sanction and the rules? **Propriety** — was it wise, faithful and economical, even if lawful? **Performance** — did the programme achieve **economy, efficiency and effectiveness**? The third is where the CAG's real influence now lies.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -448,7 +448,7 @@
     {
      "t": "How CAG reports secure accountability",
      "d": "The chain: **CAG audits → reports to the President or Governor (Article 151) → laid before the legislature → examined by PAC or COPU → Action Taken Notes from the ministry → further PAC report.** Executive answerability to Parliament in finance runs through this chain and nowhere else.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 1,
      "u": "II-9",
@@ -459,7 +459,7 @@
      "d": "Reports are **tabled late**, sometimes years after the transaction; the **PAC's** capacity limits it to a fraction of paragraphs; **Action Taken Notes** are delayed or perfunctory; the CAG's findings are **recommendatory** with no power to **surcharge or disallow**; and **audit follows the money after it is gone**.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -504,9 +504,9 @@
     {
      "t": "The Finance Commission's mandate",
      "d": "**Article 280** — constituted every **five years**, it recommends the **distribution of net tax proceeds between Union and States** (vertical), the **allocation among States** (horizontal), the **principles of grants-in-aid under Article 275**, and measures to **augment State funds to supplement the resources of panchayats and municipalities**.",
-     "k": "cmte",
+     "k": "prov",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -514,7 +514,7 @@
      "d": "**Dr Arvind Panagariya**, report tabled **1 February 2026** for the award period **2026-31**. **Devolution held at 41%.** Horizontal weights: **income distance 42.5%, population (2011) 17.5%, demographic performance 10%, area 10%, forest and ecology 10%, contribution to GDP 10%.**",
      "k": "data",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -522,7 +522,7 @@
      "d": "The examinable change: a **new 10% weight for contribution to GDP** — rewarding the larger producing States — and the **dropping of tax effort** as a criterion. It is a partial answer to southern States' long complaint that the formula **penalised those that performed on demography and growth**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 2,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -538,7 +538,7 @@
      "d": "The sharpest States' grievance. **Cesses and surcharges are not part of the divisible pool** under **Article 270**, so their rising share means the States' **effective** receipt is **below the notified 41%**. The award can be honoured in full while the shareable base itself shrinks.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "II-9"
     },
     {
@@ -562,9 +562,9 @@
     {
      "t": "GST and the federal balance",
      "d": "**Article 279A** — the **GST Council**, with the Union holding **one-third** and all States together **two-thirds** of the weighted vote, and a **three-fourths** majority required. States surrendered the **power to tax goods and services independently** — the largest single transfer of fiscal sovereignty since 1950 — in exchange for a **seat in a joint decision-making body**.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-9",
      "pyq": "2024 Q1(e)"
     },

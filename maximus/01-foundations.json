@@ -4,52 +4,35 @@
  "units": [
   "I-1"
  ],
- "blurb": "The single largest slice of Paper I — roughly one question in six since 2019. Paradigms, the dichotomy, and the NPA → NPM → NPS → NPG chain are asked every year in some form.",
+ "blurb": "Where the discipline came from and what it now claims to be. The dichotomy, the paradigm chain — NPA to NPM to New Public Service to New Public Governance — public choice, good governance, and the state-market-civil society triangle.",
  "groups": [
   {
-   "g": "What the subject is — and the dichotomy that made it",
+   "g": "What the subject is",
    "items": [
     {
      "t": "Wilson's founding claim",
      "d": "**Woodrow Wilson (1887), 'The Study of Administration'** — \"It is getting to be harder to run a **constitution** than to frame one.\" Administration is **'government in action'**, a **field of business** removed from the hurry and strife of politics.",
      "k": "thinker",
      "sl": "open",
-     "tr": 2,
+     "tr": 0,
      "u": "I-1",
      "s": "Wilson 1887"
     },
     {
-     "t": "The politics–administration dichotomy",
-     "d": "Politics sets **ends**, administration supplies **means**. Built by **Wilson** and **Frank Goodnow (Politics and Administration, 1900)** to protect a **merit** service from the **spoils system** after the **Pendleton Act, 1883**. It was a **reform slogan** before it was a theory.",
-     "k": "concept",
+     "t": "L.D. White and Marshall Dimock",
+     "d": "**White (1926)** wrote the **first textbook** — administration is \"the **management of men and materials** in the accomplishment of the purposes of the state.\" **Dimock** widened it: administration is \"the **what and the how** of government,\" and \"**the concern of all**.\"",
+     "k": "thinker",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
-     "t": "Why the dichotomy collapsed",
-     "d": "**Appleby (Policy and Administration, 1949)** — \"**Public administration is policy making**.\" Administrators exercise **discretion**, draft the law, and choose between values. **Waldo** added that the dichotomy hid a **political theory** pretending to be a technique.",
-     "k": "critique",
-     "sl": "argue",
+     "t": "Waldo's Administrative State",
+     "d": "**Dwight Waldo (1948)** — the efficiency orthodoxy is itself a **value choice**, so \"**public administration is a form of political theory**.\" Every claim to be merely technical conceals a **preference about who gets what**.",
+     "k": "thinker",
+     "sl": "attack",
      "tr": 2,
      "u": "I-1"
-    },
-    {
-     "t": "The dichotomy in Indian practice",
-     "d": "It collapses visibly: the **Secretary is principal policy adviser** under the **Allocation of Business Rules, 1961**; officers draft **Cabinet Notes**; **NITI Aayog** officials shape policy openly. Yet it survives as an **operating convention** — the basis of **neutrality** and of **Article 311** protection.",
-     "k": "prov",
-     "sl": "argue",
-     "tr": 2,
-     "u": "I-1"
-    },
-    {
-     "t": "The dichotomy is not dead — it is normative",
-     "d": "Write: as **description** it is false; as **norm** it is indispensable. Without it there is no defence against **politicisation of transfers**, no ground for a civil servant to record **written dissent**, and no line for the **Election Commission** to police.",
-     "k": "critique",
-     "sl": "close",
-     "tr": 1,
-     "u": "I-1",
-     "pyq": "2024 Q1(a)"
     },
     {
      "t": "Public versus private administration",
@@ -76,22 +59,6 @@
      "u": "I-1"
     },
     {
-     "t": "L.D. White and Marshall Dimock",
-     "d": "**White (1926)** wrote the **first textbook** — administration is \"the **management of men and materials** in the accomplishment of the purposes of the state.\" **Dimock** widened it: administration is \"the **what and the how** of government,\" and \"**the concern of all**.\"",
-     "k": "thinker",
-     "sl": "open",
-     "tr": 3,
-     "u": "I-1"
-    },
-    {
-     "t": "Waldo's Administrative State",
-     "d": "**Dwight Waldo (1948)** — the efficiency orthodoxy is itself a **value choice**, so \"**public administration is a form of political theory**.\" Every claim to be merely technical conceals a **preference about who gets what**.",
-     "k": "thinker",
-     "sl": "attack",
-     "tr": 2,
-     "u": "I-1"
-    },
-    {
      "t": "Is public administration a science?",
      "d": "**Simon** wanted a **value-free science** of administrative behaviour. **Waldo** replied that its subject matter is **normative**. Settle it: it is a **social science with a professional purpose** — like medicine, judged by whether its prescriptions **work in a specific ecology**.",
      "k": "concept",
@@ -111,6 +78,44 @@
    ]
   },
   {
+   "g": "The politics–administration dichotomy",
+   "items": [
+    {
+     "t": "The politics–administration dichotomy",
+     "d": "Politics sets **ends**, administration supplies **means**. Built by **Wilson** and **Frank Goodnow (Politics and Administration, 1900)** to protect a **merit** service from the **spoils system** after the **Pendleton Act, 1883**. It was a **reform slogan** before it was a theory.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 0,
+     "u": "I-1"
+    },
+    {
+     "t": "Why the dichotomy collapsed",
+     "d": "**Appleby (Policy and Administration, 1949)** — \"**Public administration is policy making**.\" Administrators exercise **discretion**, draft the law, and choose between values. **Waldo** added that the dichotomy hid a **political theory** pretending to be a technique.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 0,
+     "u": "I-1"
+    },
+    {
+     "t": "The dichotomy in Indian practice",
+     "d": "It collapses visibly: the **Secretary is principal policy adviser** under the **Allocation of Business Rules, 1961**; officers draft **Cabinet Notes**; **NITI Aayog** officials shape policy openly. Yet it survives as an **operating convention** — the basis of **neutrality** and of **Article 311** protection.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 0,
+     "u": "I-1"
+    },
+    {
+     "t": "The dichotomy is not dead — it is normative",
+     "d": "Write: as **description** it is false; as **norm** it is indispensable. Without it there is no defence against **politicisation of transfers**, no ground for a civil servant to record **written dissent**, and no line for the **Election Commission** to police.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 0,
+     "u": "I-1",
+     "pyq": "2024 Q1(a)"
+    }
+   ]
+  },
+  {
    "g": "The paradigms — the spine of every 'evolution' answer",
    "items": [
     {
@@ -118,7 +123,7 @@
      "d": "**(1)** Politics–administration dichotomy **1900-26**; **(2)** Principles of administration **1927-37**; **(3)** Public administration as **political science** 1950-70; **(4)** as **management** 1956-70; **(5)** as **public administration** 1970-.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1",
      "s": "Henry, Public Administration and Public Affairs"
     },
@@ -135,7 +140,7 @@
      "d": "**Simon (1946)** — the principles are **proverbs**, arriving in **mutually contradictory pairs**: specialise, but maintain **unity of command**; **narrow the span of control**, but keep the hierarchy **flat**. A principle that cannot say which of two rules applies is not a principle.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -177,13 +182,13 @@
      "d": "The chain runs **PA (rule) → NPA (equity) → NPM (market) → NPS (citizenship) → NPG (network) → DEG (platform)**. Each corrects the previous one's **blind spot**; none replaces the **Weberian core** underneath.",
      "k": "concept",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
      "t": "The Indian discipline's own milestones",
      "d": "**IIPA, 1954** on **Appleby's** recommendation; **O&M Division** in the Cabinet Secretariat, 1954; **Department of Administrative Reforms, 1964**; **ARC-I, 1966**; the **Indian Journal of Public Administration**. Indian public administration was born as **reform practice**, not as theory — which is its strength and its limitation.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "prove",
      "tr": 3,
      "u": "I-1"
@@ -206,7 +211,7 @@
      "d": "**Frederickson's 4 Rs — Relevance, Values, Equity, Change.** Its distinctive claim: to **economy and efficiency** add **social equity** as a **third pillar**. The question is no longer 'is the service efficient?' but '**efficient for whom?**'",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -228,9 +233,9 @@
     {
      "t": "Social equity, Indian constitutional form",
      "d": "**Article 46** (DPSP, promotion of educational and economic interests of weaker sections), **Articles 15(4), 16(4) and 335** — India wrote **Frederickson's third pillar into the Constitution eighteen years before Minnowbrook**.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -244,7 +249,7 @@
     {
      "t": "Equity in the budget line",
      "d": "**Development Action Plan for SCs (DAPSC)** and **for STs (DAPST)** — the successors to the **Scheduled Caste Sub-Plan / Tribal Sub-Plan**, earmarking outlays in proportion to population. **Gender Budget Statement 13** does the same for women. Earmarking is equity made **auditable**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 3,
      "u": "I-1",
@@ -276,7 +281,7 @@
      "d": "The application of **economic method to non-market decision-making**: **methodological individualism**, **rational utility maximisation**, and the claim that officials maximise **their own** utility — budget, staff, prestige — not the **public interest**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -292,7 +297,7 @@
      "d": "**Niskanen (1971)** — the bureau is a **bilateral monopoly** facing a sponsor who cannot observe its true cost, so it secures a budget up to **twice** the efficient level.",
      "k": "thinker",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1",
      "pyq": "2019 Q6(c)"
     },
@@ -340,7 +345,7 @@
     {
      "t": "Competitive federalism as public choice",
      "d": "**NITI Aayog's indices** — **SDG India Index, Fiscal Health Index, Composite Water Management Index, Export Preparedness** — and **DPIIT's Business Reforms Action Plan** create a **quasi-market among states**, substituting **reputational competition** for the Planning Commission's command.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 2,
      "u": "I-1",
@@ -365,7 +370,7 @@
      "d": "**Christopher Hood (1991), 'A Public Management for All Seasons?'** — hands-on **professional management**; explicit **standards and measures**; **output controls**; **disaggregation** of units; greater **competition**; **private-sector styles**; **discipline and parsimony** in resource use.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -373,7 +378,7 @@
      "d": "**Reinventing Government (1992)** — government should be **'steering, not rowing'**: catalytic, community-owned, competitive, **mission-driven** rather than rule-driven, **results-oriented**, customer-driven, enterprising, anticipatory, decentralised, market-oriented.",
      "k": "quote",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -389,13 +394,13 @@
      "d": "The **Results Framework Document (RFD)** system, **2009-10 to 2014**, run by the **Performance Management Division** of the Cabinet Secretariat under **Prajapati Trivedi** — ministries signed measurable targets and were **scored**. It was **discontinued in 2014**: the cleanest evidence that NPM in India was **adopted rhetorically, not structurally**.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
      "t": "Outcome budgeting, the survivor",
      "d": "**Outcome Budget from 2005-06**, now the **Output–Outcome Monitoring Framework (OOMF)** run by **NITI Aayog** with the **Ministry of Finance** — every scheme carries **output and outcome indicators** against its outlay. NPM's measurement logic survived where its structural logic did not.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 2,
      "u": "I-1",
@@ -404,7 +409,7 @@
     {
      "t": "Citizen's Charters and Sevottam",
      "d": "Charters from the **1997 Conference of Chief Ministers**; **Sevottam (2005, DARPG)** adds three modules — **Charter, Grievance Redress, Service Delivery Capability**. The answer turns on **remedy**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "I-1",
@@ -421,7 +426,7 @@
     {
      "t": "Disinvestment as NPM in India",
      "d": "**New Public Sector Enterprise Policy, 2021** — **four strategic sectors**, bare-minimum state presence, exit elsewhere; **National Monetisation Pipeline (2021)** and **NMP 2.0** monetise brownfield assets without transferring ownership.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 2,
      "u": "I-1",
@@ -471,13 +476,13 @@
      "d": "**Denhardt and Denhardt (2000)** — **serve citizens, not customers**; seek the **public interest**; value **citizenship over entrepreneurship**; **think strategically, act democratically**; recognise **accountability is not simple**; **serve rather than steer**; value **people, not just productivity**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
      "t": "NPS's Indian instruments",
      "d": "**RTI Act, 2005**; **social audit** under **MGNREGA Section 17**; the **Gram Sabha** as the deliberative unit; **Jan Sunwai** public hearings pioneered by **MKSS in Rajasthan**. India built the NPS architecture **before the theory reached the syllabus**.",
-     "k": "prov",
+     "k": "inst",
      "sl": "prove",
      "tr": 2,
      "u": "I-1"
@@ -487,7 +492,7 @@
      "d": "**Stephen Osborne (2006)** — the state is **plural** (many actors deliver) and **pluralist** (many processes shape policy). The unit of analysis is the **inter-organisational network** and the currency is **trust and relational contract**, not price.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1",
      "pyq": "2024 Q4(c) · 2025 Q2(a)"
     },
@@ -548,7 +553,7 @@
      "d": "**Patrick Dunleavy (2006)** — \"**NPM is dead — long live digital era governance**.\" Three moves that **reverse** NPM: **reintegration** of fragmented agencies, **needs-based holism** around the citizen's life event, and **digitisation** of the process itself.",
      "k": "thinker",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -556,7 +561,7 @@
      "d": "**India Stack** — **Aadhaar** (identity), **UPI**, **DigiLocker**, **Account Aggregator**, **ONDC**, **Bhashini**. **Reintegration**: one **Jan Dhan-Aadhaar-Mobile** rail replaced hundreds of departmental payment systems. **Needs-based holism**: **UMANG** organises services by **life event**, not by ministry.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-1"
     },
     {
@@ -623,14 +628,6 @@
      "u": "I-1"
     },
     {
-     "t": "Corruption Perceptions Index 2025",
-     "d": "**India 91st of 182, score 39/100** — up from **96th in 2024**; global average **42** (**Transparency International, released 16 February 2026**). **Control of corruption remains the weakest of India's WGI dimensions** despite a decade of process reform.",
-     "k": "data",
-     "sl": "prove",
-     "tr": 1,
-     "u": "I-1"
-    },
-    {
      "t": "The state–market–civil society triad",
      "d": "**UNDP (1997)** — governance is the exercise of **economic, political and administrative authority**, and the three domains must **balance**. Each has a distinct failure: **state failure** (rigidity), **market failure** (externalities, public goods), **civil society failure** (unrepresentativeness, funding capture).",
      "k": "concept",
@@ -659,7 +656,7 @@
     {
      "t": "The regulatory state replaces the producer state",
      "d": "**Majone's 'regulatory state'** — the state stops **owning** and starts **rule-making**. India's architecture: **SEBI (1992), TRAI (1997), CERC (Electricity Act, 2003), IRDAI, CCI (2002, amended 2023), IBBI (2016), Data Protection Board (DPDP Act 2023, Rules 2025)**.",
-     "k": "prov",
+     "k": "inst",
      "sl": "argue",
      "tr": 2,
      "u": "I-1",

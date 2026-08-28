@@ -5,7 +5,7 @@
   "I-11",
   "II-10"
  ],
- "blurb": "Paper I asks about the tools — O&M, MIS, network analysis, e-governance — almost every year, usually as a 10-marker. Paper II asks why the reforms those tools were meant to serve were never implemented. India's answer: it reformed processes, not structures.",
+ "blurb": "The tools of administrative improvement and the reforms they were built to serve. O&M and work study, network techniques, MIS, e-governance and digital public infrastructure — then why India reformed processes and not structures.",
  "groups": [
   {
    "g": "Organisation and methods, work study",
@@ -15,7 +15,7 @@
      "d": "**Work study** seeks efficiency in **method** — how a specific task is done. **Organisation and methods** seeks efficiency in **structure and procedure** — how work flows between posts and units. The first optimises a step; the second asks whether the step should exist.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11"
     },
     {
@@ -38,7 +38,7 @@
     {
      "t": "India's O&M machinery",
      "d": "The **O&M Division** in the **Cabinet Secretariat (1954)**, created on **Appleby's** recommendation, moved to the **Department of Administrative Reforms (1964)**, now **DARPG**. The **Staff Inspection Unit (1964)** in the Ministry of Finance fixes **staffing norms** for Union offices by work measurement.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "prove",
      "tr": 1,
      "u": "I-11"
@@ -48,7 +48,7 @@
      "d": "GPR asks the question work study does not: **should this process exist at all?** It **redesigns from the outcome backwards** rather than optimising existing steps. The **2nd ARC's 11th Report (Promoting e-Governance)** insisted GPR must **precede** computerisation — otherwise you **automate an unnecessary procedure**.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10",
      "pyq": "2025 Q7(c)"
     },
@@ -63,7 +63,7 @@
     {
      "t": "The Special Campaign",
      "d": "**SCDPM (DARPG)**, run annually — **record weeding, space released, files closed, pending references disposed, scrap disposal revenue**. It is **O&M in contemporary form**: unglamorous, measurable, and the kind of housekeeping that determines whether a department can find anything.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 3,
      "u": "II-10"
@@ -86,7 +86,7 @@
      "d": "**PERT (US Navy Polaris, 1958)** — **probabilistic**, event-oriented, for projects whose activity times are **uncertain**, using **optimistic, most likely and pessimistic** estimates in a weighted formula. **CPM (DuPont, 1957)** — **deterministic**, activity-oriented, for **repetitive** projects with known times, and it costs the time-cost trade-off.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11"
     },
     {
@@ -94,7 +94,7 @@
      "d": "The **longest path** through the network, and therefore the **shortest possible project duration**. Activities on it have **zero float** — delay any one and the whole project slips. Everything off it has **slack**, which is where resources can be borrowed from without cost.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11",
      "pyq": "2024 Q5(c)"
     },
@@ -150,7 +150,7 @@
      "d": "An **integrated system** that converts data from internal and external sources into **information**, delivered at the **right level, in the right form, at the right time**, to support **planning, control and decision-making**. Note the emphasis: not data storage but **decision support**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11"
     },
     {
@@ -166,7 +166,7 @@
      "d": "The system is built for **upward reporting** rather than for the **level that acts**; data is **entered but not used**, so quality decays; there is **no process redesign** alongside; and **fear of exposure** produces defensive reporting. **Garbage in, gospel out.**",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11",
      "pyq": "2019 Q5(d)"
     },
@@ -182,7 +182,7 @@
     {
      "t": "Indian MIS that carry real weight",
      "d": "**PFMS** — tracking every release to the beneficiary; **NREGASoft** with muster rolls online; **CCTNS** linking police stations; **e-Hospital and ABDM**; **UDISE+** for schools; **PRAGATI** with geo-tagged project data; **National Judicial Data Grid** making pendency publicly visible.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 2,
      "u": "I-11"
@@ -214,7 +214,7 @@
      "d": "**G2C** (citizen services — passports, DBT, land records), **G2B** (business — GeM, single-window clearance, GST), **G2G** (inter-government — e-Office, PFMS, treasury), **G2E** (employees — iGOT, e-HRMS). Sorting a question into one of these four is the fastest way to structure the answer.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11"
     },
     {
@@ -222,7 +222,7 @@
      "d": "**Broadcasting** (information dissemination); **critical flow** (targeted release of critical information to those who can act); **comparative analysis** (benchmarking against best practice); **e-advocacy or mobilisation and lobbying** (networked civil action); **interactive service** delivery.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11",
      "pyq": "2025 Q5(a)"
     },
@@ -246,7 +246,7 @@
     {
      "t": "India's e-governance trajectory",
      "d": "**NICNET (1987)** → **National e-Governance Plan (2006)** with mission-mode projects and the **CSC** last mile → **Digital India (2015)** with its nine pillars → **India Stack and Digital Public Infrastructure**. The shift is from **departmental computerisation** to **shared population-scale rails**.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "I-11"
@@ -256,7 +256,7 @@
      "d": "**Partly.** It removed **discretion at the interface** — faceless assessment, online allotment — and **flattened information access**. It did **not** flatten hierarchy: approvals still climb the same levels, now in **e-Office**. It **relocated** bureaucratic power to whoever **designs the workflow and owns the data**.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "I-11",
      "pyq": "2019 Q5(e)"
     },
@@ -274,13 +274,13 @@
      "d": "The necessary counterweight. **Connectivity and device access** are unequal; **digital literacy** more so; **authentication failure** excludes the elderly and manual workers; **language** narrows reach — which **Bhashini** addresses; and **assisted access through CSCs** reintroduces an **intermediary** with the discretion the system was meant to remove.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "I-11"
     },
     {
      "t": "Cyber security as an administrative problem",
      "d": "The vulnerability is **behavioural, not technical** — phishing, shared credentials, unpatched systems, personal devices on official work. Instruments: **CERT-In** directions, **CISO** in every ministry, **cyber crisis management plans**, the **National Critical Information Infrastructure Protection Centre**, and mandatory **iGOT** cyber-hygiene modules.",
-     "k": "scheme",
+     "k": "critique",
      "sl": "prove",
      "tr": 1,
      "u": "II-10",
@@ -304,7 +304,7 @@
      "d": "**Interoperable, open, population-scale digital rails** on which both government and private services are built — **identity, payments and data exchange** as public goods rather than departmental assets. Its administrative significance is **reuse**: one rail, many services, no rebuilding.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10"
     },
     {
@@ -312,7 +312,7 @@
      "d": "**Identity** — Aadhaar, e-KYC, e-Sign, **140 crore+ enrolments**. **Payments** — UPI, **20 billion+ monthly transactions** at 2025-26 peaks and **80%+** of retail digital payment volume. **Data empowerment** — DigiLocker (**45 crore+ users**), Account Aggregator, consent artefacts. **Commerce** — ONDC. **Language** — Bhashini.",
      "k": "data",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10"
     },
     {
@@ -329,14 +329,14 @@
      "d": "**For** — deduplication, portability of entitlement, DBT at scale, financial inclusion through JAM. **Against** — **authentication failure and exclusion**, function creep beyond the original purpose, and privacy. **Puttaswamy (2018)** upheld it for **subsidies and taxation** under a law, and struck down **Section 57**'s private-party mandate.",
      "k": "case",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10",
      "pyq": "2025 Q6(b)"
     },
     {
      "t": "GeM",
      "d": "A public procurement marketplace producing **price discovery, transparency and MSME participation**. Its implementation problems: **specification gaming** to favour a supplier, **quality assurance** at the point of receipt, **payment delays** to sellers, **seller verification and counterfeits**, and **State adoption** that remains uneven.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "II-10",
@@ -347,7 +347,7 @@
      "d": "Live uses: **grievance routing on CPGRAMS**, **judicial translation (SUVAS) and transcription**, **crop-yield and flood forecasting**, **GST fraud analytics**, **faceless assessment allocation**, and **Bhashini** for multilingual delivery.",
      "k": "eg",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10",
      "pyq": "2023 Q7(c) · 2025 Q8(c)"
     },
@@ -356,13 +356,13 @@
      "d": "The 2026 argument to have ready. **Opacity** — a citizen cannot be told why a claim was rejected, defeating the **reasoned order** requirement. **Bias** — trained on historical data, it reproduces historical exclusion. **Accountability** — **who is the officer** when the model decides? The answer must be that **AI advises and a named official decides**.",
      "k": "critique",
      "sl": "close",
-     "tr": 2,
+     "tr": 0,
      "u": "II-10"
     },
     {
      "t": "The governance framework for AI",
      "d": "**IndiaAI Mission**; **NITI's Responsible AI for All** principles (safety, equality, inclusivity, privacy, transparency, accountability); **DPDP Act** obligations on the training data; **sectoral regulators** (RBI on model risk, SEBI on algo-trading). India's stated position is **pro-innovation regulation** rather than a single horizontal AI Act.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 2,
      "u": "II-10"
@@ -377,7 +377,7 @@
      "d": "Administrative reform is \"**the artificial inducement of administrative transformation against resistance**.\" Every word is doing work: **artificial** (deliberate, not evolutionary), **transformation** (not adjustment), and **against resistance** — resistance is **constitutive**, not an obstacle that competent design avoids.",
      "k": "thinker",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10",
      "pyq": "2020 Q7(c)"
     },
@@ -386,7 +386,7 @@
      "d": "**Interest-based** — the reform removes someone's discretion, rent or status. **Cognitive** — officials cannot see how the new way would work. **Cultural** — the change conflicts with the organisation's self-image. **Structural** — statutes, service rules and federal division make the change legally slow.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10"
     },
     {
@@ -410,7 +410,7 @@
      "d": "Know at least five by name and number: **1st RTI**, **4th Ethics in Governance**, **5th Public Order**, **10th Refurbishing of Personnel Administration**, **11th Promoting e-Governance**, **12th Citizen Centric Administration**, **13th Organisational Structure of Government of India**, **15th State and District Administration**.",
      "k": "cmte",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10"
     },
     {
@@ -418,7 +418,7 @@
      "d": "**India reformed processes, not structures.** Every demonstrable gain since 2005 — **RTI, DBT, UPI, GeM, PFMS, faceless assessment** — came from **re-engineering transactions**. Every **structural** recommendation — the **three-level secretariat**, **executive agencies**, a **Public Services Bill**, a **Fiscal Council**, a **multi-member CAG** — remains unimplemented.",
      "k": "critique",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10"
     },
     {
@@ -426,7 +426,7 @@
      "d": "Process reform is **technocratic**: it can be done by executive order, shows measurable results within a term, and **creates no identifiable loser at the top**. Structural reform **redistributes authority** — it needs legislation, federal consent, and asks the political executive to give up **the discretion it most values**.",
      "k": "critique",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-10"
     },
     {
@@ -449,7 +449,7 @@
     {
      "t": "What a serious reform agenda would contain",
      "d": "Close with these five: a **Public Services Bill** codifying values and tenure; a **three-level secretariat** with the **desk officer system**; **independent evaluation with sunset clauses** on schemes; a **National Tribunals Commission**; and **fiscal empowerment of the third tier**. Each has an authoritative recommendation behind it and none needs a new idea.",
-     "k": "scheme",
+     "k": "critique",
      "sl": "close",
      "tr": 1,
      "u": "II-10"

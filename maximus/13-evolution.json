@@ -4,7 +4,7 @@
  "units": [
   "II-1"
  ],
- "blurb": "Paper II opens on this unit almost every year — Kautilya was asked in 2023, 2024 and 2025 running. The scoring move is to treat the past as an explanation of present structure, not as narration.",
+ "blurb": "The administrative inheritance: Kautilya's statecraft, the Mughal mansabdari and revenue systems, and the British construction of the district, the civil service and the constitutional framework.",
  "groups": [
   {
    "g": "Kautilya's Arthashastra",
@@ -14,7 +14,7 @@
      "d": "A **treatise on statecraft**, not a work of political philosophy — a manual of **administration, revenue, war, law and espionage** written for a working ruler. **Arthashastra** literally means the science of **artha**: material well-being, the livelihood of the people and the means of acquiring and protecting it.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1",
      "pyq": "2023 Q1(a) · 2025 Q1(c)"
     },
@@ -23,7 +23,7 @@
      "d": "The state as **seven limbs (prakritis)** in order of importance: **Swami** (ruler), **Amatya** (ministers and officials), **Janapada** (territory and people), **Durga** (fortified capital), **Kosha** (treasury), **Danda** (army and coercive force), **Mitra** (allies). The **organic** metaphor — weakness in any limb weakens the whole.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1"
     },
     {
@@ -31,13 +31,13 @@
      "d": "\"In the **happiness of his subjects** lies the king's happiness; in their **welfare** his welfare. He shall not consider as good only that which pleases him but treat as beneficial to him **whatever pleases his subjects**.\" The **yogakshema** duty — acquisition and protection of the people's welfare.",
      "k": "quote",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1"
     },
     {
      "t": "The administrative machinery",
      "d": "**Amatyas** selected by **upadha** — tests of integrity against religious, monetary, romantic and fear-based temptation. **Adhyakshas** as departmental superintendents (about **30 departments**); **Samaharta** for revenue; **Sannidhata** as treasurer; **Gopa and Sthanika** in local administration; the **Mahamatras** at the top.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-1"
@@ -52,7 +52,7 @@
      "pyq": "2024 Q1(a)"
     },
     {
-     "t": "The modern parallels to draw",
+     "t": "The modern parallels",
      "d": "**Upadha** ≈ **integrity testing and vigilance**; **rotation of adhyakshas** ≈ **transfer policy against entrenchment**; **espionage on officials** ≈ **preventive vigilance and CVO reporting**; the **Samaharta's** revenue survey ≈ the **land record and revenue administration** the Collector still runs; **danda** ≈ **the state's legitimate monopoly of force**.",
      "k": "link",
      "sl": "prove",
@@ -84,23 +84,23 @@
     {
      "t": "The Mansabdari system",
      "d": "**Akbar's** system of ranked service: **zat** (personal rank, status and pay) and **sawar** (cavalry obligation). Mansabdars were **paid in cash or through jagir** (assignment of revenue, not land), were **transferable**, and their **assignments were non-hereditary and resumed on death** — a **service nobility**, not a feudal aristocracy.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1"
     },
     {
      "t": "The land revenue system",
      "d": "**Todar Mal's Zabti or Bandobast** — **measurement (paimaish)**, classification of land by continuity of cultivation (**polaj, parauti, chachar, banjar**), a **ten-year average of produce and prices (dahsala)**, and a fixed **cash** demand of about **one-third**. Revenue administration became **survey-based and record-based** — the direct ancestor of the Indian revenue system.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1"
     },
     {
      "t": "The central departments",
      "d": "**Diwan** (revenue and finance, the highest official), **Mir Bakshi** (military pay and mansabdar records, and effectively the intelligence head), **Mir Saman** (imperial household and karkhanas), **Sadr-us-Sudur** (religious endowments and charity), **Qazi-ul-Quzat** (judiciary). Provinces mirrored this in the **subah**.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-1"
@@ -108,7 +108,7 @@
     {
      "t": "The territorial hierarchy",
      "d": "**Subah** under a **Subahdar**, with a **Diwan** as a **parallel revenue authority reporting separately to the centre** — a deliberate **check on the governor**. **Sarkar** under a **Faujdar** (law and order) and **Amalguzar** (revenue); **Pargana** with **Shiqdar, Amil, Qanungo and Patwari**; the **village** left largely to itself.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-1"
@@ -118,7 +118,7 @@
      "d": "**Centralised in design** — mansabdars appointed and transferred by the emperor, non-hereditary assignments, parallel reporting by the provincial Diwan, a uniform revenue method. **Decentralised in practice** — **zamindars** collected on the ground, the **village community** was untouched, and distance made **local autonomy** inevitable.",
      "k": "critique",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1",
      "pyq": "2024 Q1(b)"
     },
@@ -139,16 +139,16 @@
     {
      "t": "How the trader became a magistrate",
      "d": "**Diwani of Bengal, Bihar and Orissa (1765)** gave the Company **revenue** authority while the Nawab retained **nizamat** — the **dual government** that collapsed by 1772 when **Warren Hastings** brought both under the Company. **The revenue collector acquired magisterial power because revenue collection required coercion.**",
-     "k": "scheme",
+     "k": "inst",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1",
      "pyq": "2025 Q2(c)"
     },
     {
      "t": "The Permanent Settlement and its alternatives",
      "d": "**Permanent Settlement (Cornwallis, 1793)** in Bengal — the **zamindar** made proprietor, revenue **fixed in perpetuity**. **Ryotwari (Munro, Read)** in Madras and Bombay — settlement **directly with the cultivator**, periodically revised. **Mahalwari (Holt Mackenzie, R.M. Bird)** in the North-West — settlement with the **village community**. Each produced a different **agrarian structure** that outlived it.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-1"
@@ -156,7 +156,7 @@
     {
      "t": "The Cornwallis reforms",
      "d": "**Separation of revenue and judicial** functions; **abolition of the Collector's judicial powers** (later restored in part); **Europeanisation** of the higher services on the premise that Indians were corrupt; **increased salaries** to end private trade; and the **Code of 1793** — the origin of the **rule-bound, written, hierarchical** Indian civil service.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-1"
@@ -164,9 +164,9 @@
     {
      "t": "The Indian Civil Service",
      "d": "**Haileybury** training from 1806; the **Charter Act, 1853** introduced **open competition**; examinations held in **London only** until **1922**, when simultaneous examination began in **Allahabad**. **Satyendranath Tagore** was the first Indian, in **1864**. **Lloyd George (1922)** called it \"**the steel frame** of the whole structure\".",
-     "k": "prov",
+     "k": "inst",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1"
     },
     {
@@ -180,7 +180,7 @@
     {
      "t": "The constitutional milestones",
      "d": "**Regulating Act 1773** (Governor-General of Bengal, Supreme Court at Calcutta); **Pitt's India Act 1784** (Board of Control — dual government); **Charter Act 1833** (Governor-General of India, all-India legislation, Law Member); **1858** (Crown rule, Secretary of State); **Morley-Minto 1909**; **Montagu-Chelmsford 1919** (**dyarchy**); **Government of India Act 1935**.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
      "tr": 1,
      "u": "II-1"
@@ -188,7 +188,7 @@
     {
      "t": "Dyarchy under the 1919 Act",
      "d": "Provincial subjects split into **transferred** (education, health, local government, agriculture — administered by **ministers responsible to the legislature**) and **reserved** (police, land revenue, justice, irrigation — administered by the **Governor with executive councillors**). It failed because **finance stayed reserved**: ministers held responsibility **without money**.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "argue",
      "tr": 1,
      "u": "II-1"
@@ -198,7 +198,7 @@
      "d": "It supplied the **structural template** of the Indian Constitution: **federal division through three lists**, **provincial autonomy** replacing dyarchy, a **Federal Court**, an **RBI**, **Governor's discretionary powers**, and **emergency provisions**. About **two-thirds** of the Constitution's provisions descend from it — including **Article 356**'s ancestor, **Section 93**.",
      "k": "link",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1"
     },
     {
@@ -206,7 +206,7 @@
      "d": "The surviving features: the **district as the unit of administration** with a **generalist Collector**; **land revenue records** as the state's basic dataset; a **regulatory rather than developmental** orientation in police and revenue law; **secrecy** (**Official Secrets Act, 1923**); and **rank classification with a generalist elite service**.",
      "k": "critique",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-1",
      "pyq": "2025 Q2(c)"
     },

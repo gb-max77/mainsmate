@@ -5,7 +5,7 @@
   "I-6",
   "II-13"
  ],
- "blurb": "Administrative law is the theory of controlling discretion; law-and-order administration is the hardest place India applies it. Paper I asks about delegated legislation and tribunals almost every year; Paper II asks about police reform.",
+ "blurb": "Administrative law is the theory of controlling discretion; law and order is the hardest place India applies it. Dicey, delegated legislation, tribunals, the ombudsman — then the colonial police design and the reform that has never landed.",
  "groups": [
   {
    "g": "Administrative law — meaning, scope, Dicey",
@@ -15,7 +15,7 @@
      "d": "The **powers, procedures and liabilities of administrative authorities**, and the **remedies** available against them. **Wade** — it is \"the law relating to the **control of governmental power**\". Its subject is not what the state does but **on what terms it may do it**.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -32,7 +32,7 @@
      "d": "**A.V. Dicey (1885)** claimed England had **no administrative law** — his **rule of law** required (i) **supremacy of regular law** over arbitrary power, (ii) **equality before the ordinary law** for officials and citizens alike, and (iii) rights derived from **judicial decisions**, not a written charter.",
      "k": "thinker",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -56,7 +56,7 @@
      "d": "**Red light** (Dicey, Hewart) — administrative law exists to **control and restrain** the state; courts are the guardians. **Green light** (Robson, Griffith) — the state is a **force for good**; administrative law should **facilitate** effective administration and improve it from within.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6",
      "pyq": "2019 Q3(b)"
     },
@@ -65,7 +65,7 @@
      "d": "**Harlow and Rawlings'** synthesis of red and green light: neither pure control nor pure facilitation. Courts intervene where **rights and procedure** are at stake and defer where **polycentric policy judgement** is involved. India is an amber-light system — **Wednesbury deference** on policy, **strict scrutiny** on liberty and procedure.",
      "k": "concept",
      "sl": "close",
-     "tr": 2,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -73,9 +73,26 @@
      "d": "**E.P. Royappa (1974)** — \"equality is antithetic to **arbitrariness**\"; arbitrary state action violates **Article 14** without more. **Maneka Gandhi (1978)** made procedure **fair, just and reasonable**. Arbitrariness in the application of law is not merely bad governance — it is **unconstitutional**.",
      "k": "case",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6",
      "pyq": "2020 Q1(c)"
+    },
+    {
+     "t": "Natural justice — the two rules",
+     "d": "**Nemo judex in causa sua** — no one a judge in his own cause (bias: pecuniary, personal, official, policy). **Audi alteram partem** — hear the other side (notice, disclosure of material, opportunity to be heard, reasoned order). **A.K. Kraipak (1969)** extended both from **quasi-judicial to administrative** action.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 0,
+     "u": "I-6"
+    },
+    {
+     "t": "Is administrative law now more constitutional than the Constitution?",
+     "d": "In one sense yes: **Article 14 and 21 jurisprudence** — **Kraipak**, **Royappa**, **Maneka** — has made administrative fairness a **constitutional** requirement, so the ordinary citizen's daily encounter with the state is governed by **constitutional standards** rather than statute alone.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-6",
+     "pyq": "2020 Q4(a)"
     }
    ]
   },
@@ -95,7 +112,7 @@
      "d": "**Essential legislative function cannot be delegated.** The legislature must itself lay down the **policy** and the **standard**; only the **filling in of detail** may be delegated. **In re Delhi Laws Act (1951)** settled this; **Hamdard Dawakhana (1960)** struck down delegation without a guiding standard.",
      "k": "case",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -103,7 +120,7 @@
      "d": "**Skeleton legislation** that leaves everything to rules; **Henry VIII clauses** allowing the executive to modify the parent Act; **sub-delegation**; **retrospective** rules; **inadequate publication**; and rules made **years after** the Act, or not at all — a statute in force with no machinery.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -118,7 +135,7 @@
     {
      "t": "Parliamentary control of delegated legislation",
      "d": "**Laying** on the table — simple, negative (annulment within **30 days**) or affirmative resolution; the **Committee on Subordinate Legislation** in each House (**15 members**), which examines whether rules are **within the power conferred**; and scrutiny during passage of the **enabling clause** itself.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "prove",
      "tr": 1,
      "u": "I-6"
@@ -134,7 +151,7 @@
     {
      "t": "Procedural safeguards worth prescribing",
      "d": "**Prior publication and public consultation** — the **Pre-Legislative Consultation Policy, 2014** requires draft rules to be placed for **30 days**, and is honoured inconsistently. Add **mandatory laying**, a **time limit for framing rules**, and **regulatory impact assessment**, which the **FSLRC** recommended.",
-     "k": "scheme",
+     "k": "critique",
      "sl": "close",
      "tr": 3,
      "u": "I-6"
@@ -153,7 +170,7 @@
      "d": "Discretion is controlled at **three points**: at **conferment** (a guiding standard in the statute), at **exercise** (relevant considerations, no mala fides, no fettering by rigid rules, no non-application of mind), and **after** (reasons recorded, appeal, judicial review). **Recording reasons** is the cheapest and most effective of the three.",
      "k": "concept",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6"
     }
    ]
@@ -166,16 +183,16 @@
      "d": "**Speed**, **low cost**, **expertise**, **flexible procedure** free of the Evidence Act, and relief of the **court backlog**. the welfare state generates disputes of **volume and technicality** that ordinary courts are structurally unsuited to handle.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6",
      "pyq": "2024 Q3(b)"
     },
     {
-     "t": "The constitutional basis",
+     "t": "The constitutional basis for tribunals",
      "d": "**Articles 323A and 323B**, inserted by the **42nd Amendment (1976)**. **323A** — Parliament may create tribunals for **public service matters** (hence the **Administrative Tribunals Act, 1985**, and the **CAT**). **323B** — legislatures may create them for **specified subjects** including taxation, land reform and elections.",
      "k": "prov",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -183,7 +200,7 @@
      "d": "**L. Chandra Kumar v. Union of India (1997)** — **judicial review under Articles 226 and 32 is basic structure** and cannot be excluded. Tribunals are **supplemental**, not substitutional; their orders are subject to **High Court division-bench review**. This is the single most quotable tribunal case.",
      "k": "case",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -191,7 +208,7 @@
      "d": "**Appointments dominated by the executive** — which is often the **litigant**; **short tenures** breeding dependence; **administrative members** without judicial training; **vacancies** paralysing benches; and the **Chandra Kumar** appeal route reintroducing the delay tribunals were meant to remove.",
      "k": "critique",
      "sl": "attack",
-     "tr": 2,
+     "tr": 0,
      "u": "I-6"
     },
     {
@@ -208,23 +225,6 @@
      "k": "cmte",
      "sl": "close",
      "tr": 3,
-     "u": "I-6"
-    },
-    {
-     "t": "Is administrative law now more constitutional than the Constitution?",
-     "d": "In one sense yes: **Article 14 and 21 jurisprudence** — **Kraipak**, **Royappa**, **Maneka** — has made administrative fairness a **constitutional** requirement, so the ordinary citizen's daily encounter with the state is governed by **constitutional standards** rather than statute alone.",
-     "k": "concept",
-     "sl": "close",
-     "tr": 1,
-     "u": "I-6",
-     "pyq": "2020 Q4(a)"
-    },
-    {
-     "t": "Natural justice — the two rules",
-     "d": "**Nemo judex in causa sua** — no one a judge in his own cause (bias: pecuniary, personal, official, policy). **Audi alteram partem** — hear the other side (notice, disclosure of material, opportunity to be heard, reasoned order). **A.K. Kraipak (1969)** extended both from **quasi-judicial to administrative** action.",
-     "k": "case",
-     "sl": "prove",
-     "tr": 1,
      "u": "I-6"
     }
    ]
@@ -251,7 +251,7 @@
     {
      "t": "India's route to the Lokpal",
      "d": "**ARC-I (1966)** proposed **Lokpal** (ministers and secretaries) and **Lokayukta** (other officials). Bills failed **eight times** between 1968 and 2011. The **Lokpal and Lokayuktas Act, 2013** followed mass mobilisation; the **chairperson was appointed in March 2019**, six years after enactment.",
-     "k": "prov",
+     "k": "inst",
      "sl": "prove",
      "tr": 1,
      "u": "I-6"
@@ -298,7 +298,7 @@
      "d": "Framed after **1857** on the **Irish Constabulary** model — a **colonial, armed, regime-loyal** force answerable to the district executive, not the community. Its logic was **control of the population**, not **service to the citizen**, and its architecture governs Indian policing to this day.",
      "k": "prov",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-13"
     },
     {
@@ -315,13 +315,13 @@
      "d": "**Entry 2, List II** — police and public order are **State** subjects; **Entry 1, List II** is public order. The Union acts through **Entry 8, List I** (CBI's parent DSPE), **Article 355** (duty to protect States), **central armed police forces on request**, and **advisories** with no binding force.",
      "k": "prov",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-13"
     },
     {
      "t": "The police hierarchy and the dual desk",
      "d": "**DGP → ADGP/IGP → DIG (range) → SP (district) → SDPO/DySP → SHO (police station)**. In the district, the **SP** commands the force while the **District Magistrate** holds **magisterial** powers — the **dual control** that the National Police Commission wanted diluted and that the executive has always defended.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 2,
      "u": "II-13"
@@ -336,16 +336,16 @@
     },
     {
      "t": "The measured capacity gap",
-     "d": "Sanctioned strength about **26-27 lakh**, actual **20-21 lakh** — a **20-22% vacancy sustained for a decade**. Police-population ratio about **152-155 per lakh** against the **UN-referenced 222**. Women about **12%** against the **MHA's 33% advisory**. Quote these; they convert an opinion into a finding.",
+     "d": "Sanctioned strength about **26-27 lakh**, actual **20-21 lakh** — a **20-22% vacancy sustained for a decade**. Police-population ratio about **152-155 per lakh** against the **UN-referenced 222**. Women about **12%** against the **MHA's 33% advisory**. The gap is a **capacity** problem before it is a **behaviour** problem.",
      "k": "data",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "II-13"
     },
     {
      "t": "The new criminal law codes",
      "d": "**Bharatiya Nyaya Sanhita**, **Bharatiya Nagarik Suraksha Sanhita** and **Bharatiya Sakshya Adhiniyam**, in force **1 July 2024**. Administratively significant: **mandatory forensic visit** for offences above seven years, **timelines** for investigation and judgment, **e-FIR and zero FIR**, and **videography of search and seizure**.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
      "tr": 2,
      "u": "II-13"
@@ -368,7 +368,7 @@
      "d": "**Dharma Vira, 1977-81, eight reports** — the foundation text. Its core proposals: a **State Security Commission** to insulate the force from illegitimate political direction, a **fixed tenure** for the DGP, **separation of investigation from law and order**, and a **new Police Act** replacing 1861. **Not one State enacted the Model Bill.**",
      "k": "cmte",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-13"
     },
     {
@@ -384,7 +384,7 @@
      "d": "**Prakash Singh v. Union of India (2006)** — a **State Security Commission**; **DGP selected from a UPSC panel with a two-year minimum tenure**; **two-year tenure** for operational field officers; **separation of investigation from law and order**; a **Police Establishment Board** for transfers and postings; **Police Complaints Authorities**; a **National Security Commission**.",
      "k": "case",
      "sl": "prove",
-     "tr": 1,
+     "tr": 0,
      "u": "II-13"
     },
     {
@@ -392,7 +392,7 @@
      "d": "States legislated **new Police Acts that reproduce executive control**: Security Commissions with **government majorities** and **recommendatory** status; **DGP selection diluted**; **Complaints Authorities unconstituted or without independent members**; transfer boards **overridden**. The reform removes precisely the discretion the political executive most values.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "II-13",
      "pyq": "2023 Q7(b)"
     },
@@ -401,7 +401,7 @@
      "d": "Every police reform proposal since **1979** asks the political executive to surrender control over **postings and transfers**. It has not been resisted for want of funds or expertise — it has been resisted because it is a **transfer of power**. The obstacle is **interest**, not capacity.",
      "k": "critique",
      "sl": "close",
-     "tr": 1,
+     "tr": 0,
      "u": "II-13"
     },
     {
@@ -416,7 +416,7 @@
     {
      "t": "Smart policing",
      "d": "**S**trict-**S**ensitive, **M**odern-**M**obile, **A**lert-**A**ccountable, **R**eliable-**R**esponsive, **T**echno-savvy-**T**rained. Its instruments: **CCTNS** and the **Interoperable Criminal Justice System**, **e-FIR**, **Dial 112 ERSS**, and **NAFIS** fingerprints.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 1,
      "u": "II-13",
@@ -463,7 +463,7 @@
     {
      "t": "The central agency map",
      "d": "**NIA** (NIA Act, 2008, post-26/11; amended **2019** for extraterritorial reach); **ED** under **PMLA and FEMA**; **NCB** for narcotics; **IB** for intelligence; **MAC** for multi-agency coordination; **NATGRID** for data linkage; **NCTC**, proposed in 2012, **never created** after States objected on federal grounds.",
-     "k": "prov",
+     "k": "inst",
      "sl": "argue",
      "tr": 1,
      "u": "II-13"
@@ -471,7 +471,7 @@
     {
      "t": "The central armed police forces",
      "d": "**CRPF** — the internal security reserve, largest; **BSF, ITBP, SSB** — border guarding; **CISF** — installations and airports; **Assam Rifles** — a dual-control force under **MHA administratively, Army operationally**. Their deployment is at State **request**, which is the constitutional hinge.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
      "tr": 3,
      "u": "II-13"
@@ -496,7 +496,7 @@
     {
      "t": "The counter-terror legal framework",
      "d": "**UAPA, 1967**, amended **2019** to allow designation of an **individual** as a terrorist; **NIA** for investigation; **special courts**; **FATF** compliance driving the **PMLA** architecture. The administrative tension is between **preventive detention powers** and **conviction rates**, which remain low.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
      "tr": 2,
      "u": "II-13"

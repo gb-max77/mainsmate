@@ -4,7 +4,7 @@
  "units": [
   "II-7"
  ],
- "blurb": "Paper II's most reliably examined field unit — 2023 and 2025 each carried multiple district questions. The Collector's changing role is the standing theme; treat it as a question about which of his hats still fits.",
+ "blurb": "The district: the unit of Indian administration since the Mughal sarkar. The Collector's four hats, the magisterial powers, the reform debate over what he should still hold, and the district as a delivery platform.",
  "groups": [
   {
    "g": "The district and its officer",
@@ -14,37 +14,37 @@
      "d": "It has been the **unit of Indian administration** since the Mughal **sarkar**, survived the Company, the Crown and independence, and remains the level at which **land, law and order, elections, disaster and welfare delivery** converge on one accountable officer. **No reform has ever proposed abolishing it** — which is itself the argument for its fitness.",
      "k": "concept",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-7"
     },
     {
      "t": "The three hats, and the fourth",
      "d": "**Collector** — land revenue, land records, acquisition, treasury. **District Magistrate** — law and order, preventive powers, licensing, jail supervision, executive magistracy. **Deputy Commissioner** — development coordination, scheme implementation, chair of committees. The **fourth hat** is now **Chairperson of the District Disaster Management Authority** under **Section 25 of the DM Act, 2005**.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-7"
     },
     {
      "t": "The magisterial powers",
      "d": "Under the **BNSS (in force 1 July 2024)** — orders in urgent cases of nuisance or apprehended danger (the successor to **Section 144 CrPC**), **security proceedings**, **dispersal of unlawful assembly**, **requisition of armed force**, and **executive magistracy** distinct from the judicial magistracy separated by **Article 50** and the 1973 Code.",
-     "k": "scheme",
+     "k": "prov",
      "sl": "prove",
-     "tr": 2,
+     "tr": 0,
      "u": "II-7"
     },
     {
      "t": "The Collector's revenue core",
      "d": "Still the office's legal foundation: **maintenance of land records** (khatauni, jamabandi, mutation), **settlement operations**, **land acquisition** under the **RFCTLARR Act, 2013**, **recovery of public dues as arrears of land revenue**, **relief and remission** in calamity, and **custody of the district treasury**.",
-     "k": "prov",
+     "k": "inst",
      "sl": "argue",
-     "tr": 1,
+     "tr": 0,
      "u": "II-7"
     },
     {
      "t": "The coordinating role",
      "d": "Where the modern Collector actually spends his time: chairing the **District Development Coordination and Monitoring Committee (DISHA)** with MPs, the **DDMA**, the **district grievance forum**, and the **district-level bankers' committee**; and acting as **District Election Officer**, **District Census Officer** and **returning officer**.",
-     "k": "cmte",
+     "k": "inst",
      "sl": "argue",
      "tr": 2,
      "u": "II-7"
@@ -52,7 +52,7 @@
     {
      "t": "The subdivision and below",
      "d": "**Sub-Divisional Magistrate / Sub-Divisional Officer** at the subdivision; **Tehsildar / Mamlatdar** at the tehsil with revenue and executive magisterial powers; **Kanungo** and **Patwari / Talathi / Village Accountant** at the base — the **Mughal-named** officers who still hold the land record on which most of the district's work rests.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 3,
      "u": "II-7"
@@ -67,7 +67,7 @@
      "d": "Four pressures: **panchayats and municipalities** now hold constitutional functions the Collector once discharged; **parastatals and missions** deliver outside his chain; **regulatory bodies and courts** have taken parts of his discretion; and **DBT and digital delivery** removed the intermediation that made him the citizen's point of access.",
      "k": "critique",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-7",
      "pyq": "2023 Q4(b)"
     },
@@ -109,7 +109,7 @@
      "d": "The average district tenure in many States is well under two years. Its consequences are exact: **no incentive to begin anything that outlasts the posting**, **loss of local knowledge**, and **the transfer as the enforcement mechanism** for every improper pressure. **T.S.R. Subramanian (2013)** ordered a two-year minimum; compliance is partial.",
      "k": "critique",
      "sl": "attack",
-     "tr": 1,
+     "tr": 0,
      "u": "II-7"
     },
     {
@@ -138,9 +138,9 @@
     {
      "t": "The Aspirational Districts Programme",
      "d": "**2018, 112 districts**, on five themes — health and nutrition, education, agriculture and water, financial inclusion and skill development, basic infrastructure. Its method is **delta ranking**: scoring **improvement, not level**, so the weakest can top the table. **Converge, collaborate, compete**, with a **central prabhari officer** attached to each district.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "open",
-     "tr": 1,
+     "tr": 0,
      "u": "II-7"
     },
     {
@@ -154,7 +154,7 @@
     {
      "t": "The Aspirational Blocks Programme",
      "d": "**2023, 500 blocks** — the same method taken one tier down, on the finding that **district averages conceal block-level deprivation**. Watch it as the natural exam case: does delta ranking survive at a level with **no dedicated officer, no separate budget and far weaker data**?",
-     "k": "scheme",
+     "k": "sch",
      "sl": "argue",
      "tr": 2,
      "u": "II-7"
@@ -162,7 +162,7 @@
     {
      "t": "The district disaster machinery",
      "d": "**DDMA** under **Section 25, DM Act 2005** — chaired by the **District Magistrate**, with the elected district head as co-chair. It prepares the **District Disaster Management Plan**, and in an emergency the **Incident Response System** assigns pre-designated roles so command does not have to be improvised. The **2025 amendment** strengthened planning and urban arrangements.",
-     "k": "scheme",
+     "k": "inst",
      "sl": "prove",
      "tr": 2,
      "u": "II-7"
@@ -170,7 +170,7 @@
     {
      "t": "Digital delivery at district level",
      "d": "**Common Service Centres** as the assisted last mile; **e-District** for certificates; **SVAMITVA** property cards (**2.5 crore+** issued); **land record digitisation** under DILRMP; **geo-tagged** asset monitoring for MGNREGA; **CPGRAMS** feeding district grievance review. The district became a **data node**, not merely a field office.",
-     "k": "scheme",
+     "k": "sch",
      "sl": "prove",
      "tr": 2,
      "u": "II-7"
@@ -180,7 +180,7 @@
      "d": "The honest closing critique. The Collector **chairs** many committees and **commands** only the revenue establishment. Line department officers answer to their **directorate**; mission societies to the **State**; parastatals to their **board**. He carries **responsibility without authority**, which is why the office's effectiveness varies so sharply with the individual.",
      "k": "critique",
      "sl": "close",
-     "tr": 2,
+     "tr": 0,
      "u": "II-7"
     }
    ]

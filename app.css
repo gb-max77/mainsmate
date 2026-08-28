@@ -1079,8 +1079,11 @@ body.hl-on #answer mark.hl{cursor:pointer}
 .mx-ico:hover{color:var(--ink);border-color:var(--gold)}
 .mx-ico.on{color:var(--gold);border-color:var(--gold);background:color-mix(in srgb,var(--gold) 13%,var(--bg2))}
 .mx-tier{display:flex;flex:0 0 auto}
-.mx-tier button{width:26px;height:30px;font-size:11px;font-weight:600;
+.mx-tier button{width:24px;height:30px;font-size:11px;font-weight:600;
   background:var(--bg2);border:1px solid var(--line);color:var(--ghost)}
+/* Tier 0 is the one worth signalling — it is the set you revise last. */
+.mx-tier button[data-tier="0"]{color:var(--gold)}
+.mx-tier button[data-tier="0"][aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#1a1206}
 .mx-tier button:first-child{border-radius:8px 0 0 8px}
 .mx-tier button:last-child{border-radius:0 8px 8px 0}
 .mx-tier button+button{border-left:0}
@@ -1191,6 +1194,7 @@ body.hl-on #answer mark.hl{cursor:pointer}
 .mx-b[data-k=link] .mx-kind{color:var(--k-link)}
 .mx-f .mx-src{text-transform:none;letter-spacing:.01em;font-style:italic}
 .mx-f .mx-tr{margin-left:auto}
+.mx-b[data-tr="0"] .mx-tr{color:var(--gold);opacity:.9;font-weight:700}
 
 .mx-b.reading-now{border-color:var(--gold);background:var(--bg2);
   box-shadow:0 0 0 1px color-mix(in srgb,var(--gold) 26%,transparent)}

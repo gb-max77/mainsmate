@@ -33,9 +33,10 @@ KINDS = {
     'concept':  ('Concept',   'The theory itself — definition, model, typology'),
     'thinker':  ('Thinker',   'A named scholar doing work in the sentence'),
     'critique': ('Critique',  'The limitation, the counter-argument, the dysfunction'),
-    'cmte':     ('Committee', 'A commission or report, and what it recommended'),
-    'prov':     ('Provision', 'An Article, section, schedule or rule'),
-    'scheme':   ('Scheme',    'A programme, institution or instrument in operation'),
+    'cmte':     ('Committee',  'A named commission or report, and what it recommended'),
+    'prov':     ('Provision',  'An Article, section, schedule, rule or Act'),
+    'inst':     ('Institution','A standing body, office or machinery — who does this'),
+    'sch':      ('Scheme',     'A programme, policy or instrument in operation'),
     'data':     ('Data',      'A dated figure you can quote'),
     'case':     ('Case law',  'A judgment with its year and its holding'),
     'eg':       ('Example',   'A real Indian instance, named'),
@@ -85,7 +86,7 @@ def main():
             blocks = []
             for b in g['items']:
                 for req in ('t', 'd', 'k', 'sl', 'tr', 'u'):
-                    if not b.get(req):
+                    if b.get(req) is None or b.get(req) == '':
                         sys.exit(f'{f.name}: block {b.get("t")!r} missing {req}')
                 if b['k'] not in KINDS: sys.exit(f'{f.name}: {b["t"]!r} bad kind {b["k"]!r}')
                 if b['sl'] not in SLOTS: sys.exit(f'{f.name}: {b["t"]!r} bad slot {b["sl"]!r}')
@@ -135,7 +136,7 @@ def main():
     for bk in books:
         print(f'{bk["label"]:<9} {bk["n"]:>4} blocks in {len(bk["units"]):>2} sections')
     print(f'\nTOTAL {total} blocks   ·   {OUT.stat().st_size // 1024} KB')
-    print('tiers  ' + '  '.join(f'T{t} {tc[t]}' for t in (1, 2, 3)))
+    print('tiers  ' + '  '.join(f'T{t} {tc[t]}' for t in (0, 1, 2, 3)))
     print('kinds  ' + '  '.join(f'{k} {kc[k]}' for k in KINDS if kc[k]))
     print('slots  ' + '  '.join(f'{s} {sc[s]}' for s in SLOTS if sc[s]))
     missing = [u for u in P1 + P2 if u not in by_unit]
