@@ -2141,7 +2141,7 @@ function syncTopbarHeight() {
 addEventListener('resize', () => {
   if ($('#view-feed')?.classList.contains('active')) syncTopbarHeight();
   if ($('#view-facts')?.classList.contains('active')) { syncTopbarHeight(); factJump.measure(); factRail.measure(); }
-  if ($('#view-mx')?.classList.contains('active')) { syncTopbarHeight(); mxJump.measure(); }
+  if ($('#view-mx')?.classList.contains('active')) { syncTopbarHeight(); mxJump.measure(); mxRail.measure(); }
 });
 
 function renderFeed() {
@@ -2472,6 +2472,7 @@ async function renderMx(arg) {
     : `${all.length} blocks here · ${bk.n} in ${bk.label} · ${MX.n} in all`;
   $('#mx-left').textContent = `${shown} blocks · ${mxSpokenTime(words)} read aloud`;
   mxJump.build();
+  requestAnimationFrame(() => mxRail.measure());
 }
 
 /* Roughly 150 words a minute at 1×; scale with the chosen speed. Whole sections
@@ -2520,8 +2521,42 @@ function mxStepUnit(dir) {
   if (!to) return;
   mx.unit = to.u; renderMx(); window.scrollTo(0, 0);
 }
+const mxRail = {
+  tops: [], total: 0, hide: 0, queued: false,
+  index() {                                 // blocks whose top has passed the reading line
+    const y = window.scrollY + mxJump.top;
+    let lo = 0, hi = this.tops.length;
+    while (lo < hi) { const mid = (lo + hi) >> 1; if (this.tops[mid] <= y) lo = mid + 1; else hi = mid; }
+    return lo;
+  },
+  measure() {
+    const nodes = $('#mx-body')?.querySelectorAll('.mx-b') || [];
+    this.tops = [...nodes].map(n => n.getBoundingClientRect().top + window.scrollY);
+    this.total = this.tops.length;
+    this.paint();
+  },
+  paint() {
+    const rail = $('#mx-rail'); if (!rail) return;
+    const fill = rail.querySelector('i'), label = rail.querySelector('span');
+    if (!this.total) { rail.classList.remove('live'); fill.style.height = '0'; return; }
+    const seen = this.index();
+    const frac = Math.min(1, seen / this.total);
+    fill.style.height = `${(frac * 100).toFixed(1)}%`;
+    rail.classList.toggle('done', frac >= 1);
+    label.textContent = seen >= this.total ? 'end' : `${seen} / ${this.total}`;
+    label.style.top = `${(frac * 100).toFixed(1)}%`;
+    // The count rides the fill while you move and fades once you settle to read.
+    rail.classList.add('live');
+    clearTimeout(this.hide);
+    this.hide = setTimeout(() => rail.classList.remove('live'), 1200);
+  },
+  onScroll() {
+    if (this.queued) return; this.queued = true;
+    requestAnimationFrame(() => { this.queued = false; mxJump.measure(); this.paint(); });
+  }
+};
 window.addEventListener('scroll', () => {
-  if ($('#view-mx')?.classList.contains('active')) mxJump.measure();
+  if ($('#view-mx')?.classList.contains('active')) mxRail.onScroll();
 }, { passive: true });
 
 /* ══ Read Along ══
@@ -2660,7 +2695,7 @@ const mxRead = {
     if (fill) fill.style.width = `${total ? Math.round(done / total * 100) : 0}%`;
     $('#mx-times').innerHTML = `<span title="Left in this group">◐ group ${mxSpokenTime(gLeft)}</span>`
       + `<span title="Left in this section">◉ section ${mxSpokenTime(sLeft)}</span>`;
-    mxJump.measure();
+    mxJump.measure(); mxRail.paint();
   }
 };
 
