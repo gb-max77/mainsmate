@@ -1,0 +1,217 @@
+{
+ "id": "p13",
+ "pod": "Evolution of Indian Administration",
+ "units": [
+  "II-1"
+ ],
+ "blurb": "Paper II opens on this unit almost every year — Kautilya was asked in 2023, 2024 and 2025 running. The scoring move is to treat the past as an explanation of present structure, not as narration.",
+ "groups": [
+  {
+   "g": "Kautilya's Arthashastra",
+   "items": [
+    {
+     "t": "What the Arthashastra is",
+     "d": "**2023 Q1(a), 2025 Q1(c).** A **treatise on statecraft**, not a work of political philosophy — a manual of **administration, revenue, war, law and espionage** written for a working ruler. **Arthashastra** literally means the science of **artha**: material well-being, the livelihood of the people and the means of acquiring and protecting it.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The Saptanga theory",
+     "d": "The state as **seven limbs (prakritis)** in order of importance: **Swami** (ruler), **Amatya** (ministers and officials), **Janapada** (territory and people), **Durga** (fortified capital), **Kosha** (treasury), **Danda** (army and coercive force), **Mitra** (allies). The **organic** metaphor — weakness in any limb weakens the whole.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "Kautilya's ethic of rule",
+     "d": "\"In the **happiness of his subjects** lies the king's happiness; in their **welfare** his welfare. He shall not consider as good only that which pleases him but treat as beneficial to him **whatever pleases his subjects**.\" The **yogakshema** duty — acquisition and protection of the people's welfare.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The administrative machinery",
+     "d": "**Amatyas** selected by **upadha** — tests of integrity against religious, monetary, romantic and fear-based temptation. **Adhyakshas** as departmental superintendents (about **30 departments**); **Samaharta** for revenue; **Sannidhata** as treasurer; **Gopa and Sthanika** in local administration; the **Mahamatras** at the top.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-1"
+    },
+    {
+     "t": "Ethics in public service, Kautilya's version",
+     "d": "**2024 Q1(a) asked precisely this.** He is **realistic rather than moralistic**: \"just as it is impossible not to taste honey placed on the tongue, so it is impossible for a government servant **not to eat up at least a bit of the king's revenue**.\" Hence **forty ways of embezzlement** enumerated, **rotation of officials**, **espionage** and **graded punishment**.",
+     "k": "quote",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The modern parallels to draw",
+     "d": "**Upadha** ≈ **integrity testing and vigilance**; **rotation of adhyakshas** ≈ **transfer policy against entrenchment**; **espionage on officials** ≈ **preventive vigilance and CVO reporting**; the **Samaharta's** revenue survey ≈ the **land record and revenue administration** the Collector still runs; **danda** ≈ **the state's legitimate monopoly of force**.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-1"
+    },
+    {
+     "t": "Is it theory or manual?",
+     "d": "**2023 Q1(a) framed it as a 'theoretical work on the State and Statecraft'.** Both. It contains **theory** — saptanga, mandala, the four upayas (**sama, dana, danda, bheda**), the sources of law (**dharma, vyavahara, charitra, rajasasana**). It is delivered as **operational instruction** with rates, staffing, penalties and procedures.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The honest critique",
+     "d": "Its ethic is **instrumental** — the ruler's welfare duty is justified by the **stability it buys**, not by the subject's right. It is **authoritarian**, resting on surveillance and graded punishment, and it is **hierarchical** on varna. Say this; an uncritical Kautilya answer reads as devotional rather than analytical.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 3,
+     "u": "II-1"
+    }
+   ]
+  },
+  {
+   "g": "Mughal administration",
+   "items": [
+    {
+     "t": "The Mansabdari system",
+     "d": "**Akbar's** system of ranked service: **zat** (personal rank, status and pay) and **sawar** (cavalry obligation). Mansabdars were **paid in cash or through jagir** (assignment of revenue, not land), were **transferable**, and their **assignments were non-hereditary and resumed on death** — a **service nobility**, not a feudal aristocracy.",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The land revenue system",
+     "d": "**Todar Mal's Zabti or Bandobast** — **measurement (paimaish)**, classification of land by continuity of cultivation (**polaj, parauti, chachar, banjar**), a **ten-year average of produce and prices (dahsala)**, and a fixed **cash** demand of about **one-third**. Revenue administration became **survey-based and record-based** — the direct ancestor of the Indian revenue system.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The central departments",
+     "d": "**Diwan** (revenue and finance, the highest official), **Mir Bakshi** (military pay and mansabdar records, and effectively the intelligence head), **Mir Saman** (imperial household and karkhanas), **Sadr-us-Sudur** (religious endowments and charity), **Qazi-ul-Quzat** (judiciary). Provinces mirrored this in the **subah**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-1"
+    },
+    {
+     "t": "The territorial hierarchy",
+     "d": "**Subah** under a **Subahdar**, with a **Diwan** as a **parallel revenue authority reporting separately to the centre** — a deliberate **check on the governor**. **Sarkar** under a **Faujdar** (law and order) and **Amalguzar** (revenue); **Pargana** with **Shiqdar, Amil, Qanungo and Patwari**; the **village** left largely to itself.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-1"
+    },
+    {
+     "t": "Was Mughal administration centralised?",
+     "d": "**2024 Q1(b).** **Centralised in design** — mansabdars appointed and transferred by the emperor, non-hereditary assignments, parallel reporting by the provincial Diwan, a uniform revenue method. **Decentralised in practice** — **zamindars** collected on the ground, the **village community** was untouched, and distance made **local autonomy** inevitable.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The Mughal legacy in the district",
+     "d": "**2025 Q1(a)-family.** The **sarkar** became the **district**; the **faujdar's** law-and-order function and the **amalguzar's** revenue function were **fused in one officer** by the British — which is precisely how the **Collector-cum-District Magistrate** acquired both hats. The **patwari and qanungo** survive under their Mughal names.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-1"
+    }
+   ]
+  },
+  {
+   "g": "The British legacy",
+   "items": [
+    {
+     "t": "How the trader became a magistrate",
+     "d": "**2025 Q2(c) asked exactly this.** **Diwani of Bengal, Bihar and Orissa (1765)** gave the Company **revenue** authority while the Nawab retained **nizamat** — the **dual government** that collapsed by 1772 when **Warren Hastings** brought both under the Company. **The revenue collector acquired magisterial power because revenue collection required coercion.**",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The Permanent Settlement and its alternatives",
+     "d": "**Permanent Settlement (Cornwallis, 1793)** in Bengal — the **zamindar** made proprietor, revenue **fixed in perpetuity**. **Ryotwari (Munro, Read)** in Madras and Bombay — settlement **directly with the cultivator**, periodically revised. **Mahalwari (Holt Mackenzie, R.M. Bird)** in the North-West — settlement with the **village community**. Each produced a different **agrarian structure** that outlived it.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The Cornwallis reforms",
+     "d": "**Separation of revenue and judicial** functions; **abolition of the Collector's judicial powers** (later restored in part); **Europeanisation** of the higher services on the premise that Indians were corrupt; **increased salaries** to end private trade; and the **Code of 1793** — the origin of the **rule-bound, written, hierarchical** Indian civil service.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The Indian Civil Service",
+     "d": "**Haileybury** training from 1806; the **Charter Act, 1853** introduced **open competition**; examinations held in **London only** until **1922**, when simultaneous examination began in **Allahabad**. **Satyendranath Tagore** was the first Indian, in **1864**. **Lloyd George (1922)** called it \"**the steel frame** of the whole structure\".",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "Nehru's verdict on the ICS",
+     "d": "\"The **ICS** is neither **Indian**, nor **civil**, nor a **service**.\" Set it against **Patel's** insistence in the Constituent Assembly that the successor service was the **sine qua non** of sound administration. The two positions together are the whole debate about continuity in 1947.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The constitutional milestones",
+     "d": "**Regulating Act 1773** (Governor-General of Bengal, Supreme Court at Calcutta); **Pitt's India Act 1784** (Board of Control — dual government); **Charter Act 1833** (Governor-General of India, all-India legislation, Law Member); **1858** (Crown rule, Secretary of State); **Morley-Minto 1909**; **Montagu-Chelmsford 1919** (**dyarchy**); **Government of India Act 1935**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "Dyarchy under the 1919 Act",
+     "d": "Provincial subjects split into **transferred** (education, health, local government, agriculture — administered by **ministers responsible to the legislature**) and **reserved** (police, land revenue, justice, irrigation — administered by the **Governor with executive councillors**). It failed because **finance stayed reserved**: ministers held responsibility **without money**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "Why the 1935 Act matters most",
+     "d": "It supplied the **structural template** of the Indian Constitution: **federal division through three lists**, **provincial autonomy** replacing dyarchy, a **Federal Court**, an **RBI**, **Governor's discretionary powers**, and **emergency provisions**. About **two-thirds** of the Constitution's provisions descend from it — including **Article 356**'s ancestor, **Section 93**.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The colonial legacy's administrative residue",
+     "d": "**2025 Q2(c).** Name the surviving features: the **district as the unit of administration** with a **generalist Collector**; **land revenue records** as the state's basic dataset; a **regulatory rather than developmental** orientation in police and revenue law; **secrecy** (**Official Secrets Act, 1923**); and **rank classification with a generalist elite service**.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-1"
+    },
+    {
+     "t": "The balanced verdict on the legacy",
+     "d": "Write both. It bequeathed **institutional continuity, a professional civil service, a codified legal system, an audited treasury and an independent judiciary's foundations** — assets most post-colonial states lacked. It also bequeathed a machinery designed for **extraction and order**, which had to be **redirected to development** without being rebuilt.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-1"
+    }
+   ]
+  }
+ ]
+}

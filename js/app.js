@@ -1539,7 +1539,7 @@ const hl = {
   paint() {
     const btn = $('#facts-hl'), bar = $('#facts-hlbar');
     if (!btn) return;
-    for (const b of [btn, $('#ans-hl')]) {
+    for (const b of [btn, $('#ans-hl'), $('#mx-hl')]) {
       if (!b) continue;
       b.setAttribute('aria-pressed', String(this.on));
       b.classList.toggle('on', this.on);
@@ -1904,11 +1904,19 @@ document.addEventListener('click', e => {
 function hlSurface(node) {
   const li = node?.parentElement?.closest?.('.fi');
   if (li) return { host: li, key: li.dataset.key };
+  const mb = node?.parentElement?.closest?.('.mx-b');
+  if (mb) return { host: mb, key: mb.dataset.key };
   const blk = node?.parentElement?.closest?.('#answer .abox');
   if (blk && cur) return { host: blk, key: `a::${cur.qid}` };
   return null;
 }
 function hlMeta(host, key) {
+  if (key.startsWith('mx::')) {
+    const bk = MX?.books.find(b => b.id === mx.book);
+    return { pid: 'pubad1', label: 'Maximus', sec: `${bk?.label || ''} · ${mxUnit()?.name || ''}`,
+             grp: host.closest('.mx-g')?.querySelector('h2')?.firstChild.textContent || '',
+             term: host.querySelector('.mx-t')?.textContent || '', href: `#/mx/${mx.book}` };
+  }
   if (key.startsWith('a::')) {
     const p = paperOf(cur.pid);
     return { pid: cur.pid, label: PAPER_TAG[cur.pid] || cur.pid, sec: cur.sec || p?.short || '',
@@ -1962,7 +1970,13 @@ $('#answer')?.addEventListener('click', e => {
 addEventListener('keydown', e => {
   const onFacts = $('#view-facts')?.classList.contains('active');
   const onAnswer = $('#view-answer')?.classList.contains('active');
-  if (!onFacts && !onAnswer) return;
+  const onMx = $('#view-mx')?.classList.contains('active');
+  if (!onFacts && !onAnswer && !onMx) return;
+  if (onMx) {
+    if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) return;
+    if (e.key === 'h' || e.key === 'H') { e.preventDefault(); hl.toggle(); }
+    return;
+  }
   if (onAnswer) {
     if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) return;
     if (e.key === 'h' || e.key === 'H') { e.preventDefault(); hl.toggle(); }
@@ -2127,6 +2141,7 @@ function syncTopbarHeight() {
 addEventListener('resize', () => {
   if ($('#view-feed')?.classList.contains('active')) syncTopbarHeight();
   if ($('#view-facts')?.classList.contains('active')) { syncTopbarHeight(); factJump.measure(); factRail.measure(); }
+  if ($('#view-mx')?.classList.contains('active')) { syncTopbarHeight(); mxJump.measure(); }
 });
 
 function renderFeed() {
@@ -2333,132 +2348,209 @@ $('#hl-body')?.addEventListener('click', e => {
 });
 $('#go-hl')?.addEventListener('click', () => go('#/hl'));
 
-/* ══════════════════ FINALE DE PUBAD ══════════════════
-   The optional as examiner-ready blocks, one syllabus unit at a time. Two filters
-   beyond search: the themes UPSC keeps returning to, and what looks likely to
-   matter in 2026 — both authored judgements, carried on each block. */
-let FIN = null;
-const fin = {
-  pid: localStorage.getItem('mm-fin-paper') || 'pubad1',
-  q: '', filter: '', unit: 0
+/* ══════════════════ MAXIMUS WEBERUS ══════════════════
+   The final revision pod for the optional. The same blocks are cut three ways —
+   Paper I and Paper II in strict syllabus order, and Joint, where each Paper-I
+   unit sits beside the Paper-II twin it explains. Within a book the select walks
+   the syllabus; the theme chips cut across it by what a block IS, and the ⚙ lens
+   by where it GOES in an answer. */
+let MX = null;
+const mx = {
+  book: localStorage.getItem('mm-mx-book') || 'p1',
+  unit: localStorage.getItem('mm-mx-unit') || '',
+  q: '',
+  tiers: new Set(JSON.parse(localStorage.getItem('mm-mx-tiers') || '[]')),
+  kinds: new Set(JSON.parse(localStorage.getItem('mm-mx-kinds') || '[]')),
+  slots: new Set(JSON.parse(localStorage.getItem('mm-mx-slots') || '[]')),
+  lens: localStorage.getItem('mm-mx-lens') === '1'
 };
-async function loadFin() {
-  if (!FIN) FIN = await fetch('data/finale.json').then(r => r.json()).catch(() => ({}));
-  return FIN;
+async function loadMx() {
+  if (!MX) MX = await fetch('data/maximus.json').then(r => r.json()).catch(() => null);
+  return MX;
 }
-const finText = b => `${b.t} ${b.x} ${b.th || ''} ${b.in || ''} ${b.gl || ''} ${b.w || ''}`.toLowerCase();
-const finPass = b => !fin.filter
-  || (fin.filter === 'pyq' && (b.pyq || 0) >= 3)
-  || (fin.filter === 'y26' && b.y26);
+const mxSave = () => {
+  localStorage.setItem('mm-mx-book', mx.book);
+  localStorage.setItem('mm-mx-unit', mx.unit);
+  localStorage.setItem('mm-mx-tiers', JSON.stringify([...mx.tiers]));
+  localStorage.setItem('mm-mx-kinds', JSON.stringify([...mx.kinds]));
+  localStorage.setItem('mm-mx-slots', JSON.stringify([...mx.slots]));
+};
+const mxBook = () => MX.books.find(b => b.id === mx.book) || MX.books[0];
+const mxUnit = () => { const bk = mxBook(); return bk.units.find(u => u.u === mx.unit) || bk.units[0]; };
 
-function finBlockHTML(b, q) {
+const mxText = b => `${b.t} ${b.d} ${b.u} ${b.s || ''}`.toLowerCase();
+// Empty filter set means "everything" — chips are additive, never exclusive.
+const mxPass = b =>
+  (!mx.tiers.size || mx.tiers.has(String(b.tr))) &&
+  (!mx.kinds.size || mx.kinds.has(b.k)) &&
+  (!mx.slots.size || mx.slots.has(b.sl));
+const mxFilters = () => mx.tiers.size + mx.kinds.size + mx.slots.size;
+
+/* The lead term and the bolded keywords are the event; what a block is and where
+   it goes are hairline marks that must never compete with them for attention. */
+function mxBlockHTML(b, q) {
   const mk = t => factMark(t, q);
-  const tags = [];
-  if ((b.pyq || 0) >= 3) tags.push('<span class="fin-tag hot">★★ most asked</span>');
-  else if ((b.pyq || 0) === 2) tags.push('<span class="fin-tag">★ often asked</span>');
-  if (b.y26) tags.push('<span class="fin-tag y26">2026</span>');
-  if (b.link) tags.push(`<span class="fin-tag link">↔ ${esc(b.link)}</span>`);
-  return `<article class="fin-b" tabindex="0">
-    <h4>${mk(b.t)}${tags.join('')}</h4>
-    <p class="fin-x">${mk(b.x)}</p>
-    <dl class="fin-parts">
-      ${b.th ? `<div><dt>Thinker</dt><dd>${mk(b.th)}</dd></div>` : ''}
-      ${b.in ? `<div><dt>India</dt><dd>${mk(b.in)}</dd></div>` : ''}
-      ${b.gl ? `<div><dt>World</dt><dd>${mk(b.gl)}</dd></div>` : ''}
-      ${b.w ? `<div class="fin-write"><dt>Write</dt><dd>${mk(b.w)}</dd></div>` : ''}
-    </dl></article>`;
+  const key = `mx::${factSlug(b.t)}`;
+  return `<article class="mx-b" tabindex="0" data-key="${key}" data-k="${b.k}" data-sl="${b.sl}" data-tr="${b.tr}">
+    <b class="mx-t">${mk(b.t)}</b>
+    <p class="mx-d">${mk(b.d)}</p>
+    ${b.x ? `<p class="mx-x">↔ ${mk(b.x)}</p>` : ''}
+    <footer class="mx-f">
+      <span class="mx-kind">${esc(MX.kinds[b.k]?.label || b.k)}</span>
+      <span class="mx-slot">${esc(MX.slots[b.sl]?.label || b.sl)}</span>
+      <span class="mx-unit">${esc(b.u)}</span>
+      ${b.s ? `<span class="mx-src">${mk(b.s)}</span>` : ''}
+      <span class="mx-tr" title="Tier ${b.tr}">T${b.tr}</span>
+    </footer>
+  </article>`;
 }
 
-async function renderFin(arg) {
-  await loadFin();
-  if (arg && FIN[arg]) fin.pid = arg;
-  localStorage.setItem('mm-fin-paper', fin.pid);
-  if (finRead.on) finRead.stop();
-  const d = FIN[fin.pid];
-  const q = fin.q.trim().toLowerCase();
-  $('#fin-papers').innerHTML = Object.entries(FIN).map(([pid, p]) =>
-    `<button class="chip${pid === fin.pid ? ' on' : ''}" data-fp2="${pid}">${esc(p.label.split(' — ')[0])}</button>`).join('');
-  const all = (d?.units || []).flatMap(u => u.blocks);
-  const nPyq = all.filter(b => (b.pyq || 0) >= 3).length, n26 = all.filter(b => b.y26).length;
-  $('#fin-filters').innerHTML =
-    `<button class="chip${fin.filter ? '' : ' on'}" data-ff="">All ${all.length}</button>`
-    + `<button class="chip${fin.filter === 'pyq' ? ' on' : ''}" data-ff="pyq">★ PYQ most asked ${nPyq}</button>`
-    + `<button class="chip${fin.filter === 'y26' ? ' on' : ''}" data-ff="y26">2026 likely ${n26}</button>`;
-  let shown = 0, html = '';
-  for (const u of d?.units || []) {
-    const blocks = u.blocks.filter(b => finPass(b) && (!q || finText(b).includes(q)));
-    if (!blocks.length) continue;
-    shown += blocks.length;
-    html += `<section class="fin-u"><h2>${esc(u.u)}</h2>`
-      + blocks.map(b => finBlockHTML(b, fin.q.trim())).join('') + `</section>`;
-  }
-  $('#fin-body').innerHTML = html || `<p class="fs-none">Nothing matches here.</p>`;
-  $('#fin-count').textContent = (q || fin.filter) ? `${shown} of ${all.length} shown` : `${all.length} blocks`;
-  buildFinJump();
-}
+async function renderMx(arg) {
+  await loadMx();
+  if (!MX) { $('#mx-body').innerHTML = '<p class="fs-none">Could not load the pod.</p>'; return; }
+  if (arg && MX.books.some(b => b.id === arg)) mx.book = arg;
+  if (mxRead.on) mxRead.stop();
 
-// Unit navigation, same shape as the bank's: one row, arrows step units.
-function buildFinJump() {
-  const sel = $('#fin-sel'); if (!sel) return;
-  const secs = [...$('#fin-body').querySelectorAll('.fin-u')];
-  sel.innerHTML = secs.map((sec, i) => {
-    const h = sec.querySelector('h2'); h.id = `finx-${i}`;
-    return `<option value="finx-${i}">${esc(h.textContent)}</option>`;
+  const bk = mxBook();
+  if (!bk.units.some(u => u.u === mx.unit)) mx.unit = bk.units[0].u;
+  const unit = mxUnit();
+  mxSave();
+  const q = mx.q.trim().toLowerCase();
+
+  $('#mx-books').innerHTML = MX.books.map(b =>
+    `<button class="mx-bk${b.id === mx.book ? ' on' : ''}" data-book="${b.id}" role="tab"
+      aria-selected="${b.id === mx.book}"><b>${esc(b.label)}</b><small>${esc(b.sub)} · ${b.n}</small></button>`).join('');
+  $('#mx-sel').innerHTML = bk.units.map(u =>
+    `<option value="${u.u}"${u.u === mx.unit ? ' selected' : ''}>${esc(u.sel)}${mx.book === 'joint' ? ` · ${esc(u.tag)}` : ''} (${u.n})</option>`).join('');
+  $('#mx-blurb').textContent = mx.book === 'joint' ? (unit.blurb || '') : '';
+
+  // Chip counts come from this section only, so a chip never promises rows it cannot show.
+  const all = unit.groups.flatMap(g => g.items);
+  const chip = (map, sel, attr, chosen) => Object.entries(map).map(([k, v]) => {
+    const n = all.filter(b => b[attr] === k).length; if (!n) return '';
+    return `<button class="mx-th" data-${sel}="${k}" data-k="${k}" aria-pressed="${chosen.has(k)}"
+      title="${esc(v.hint)}">${esc(v.label)}<i>${n}</i></button>`;
   }).join('');
-  finJump.list = secs.map((sec, i) => ({ id: `finx-${i}`, el: sec.querySelector('h2') }));
-  finJump.sync(true);
+  $('#mx-kinds').innerHTML = chip(MX.kinds, 'kind', 'k', mx.kinds);
+  $('#mx-slots').innerHTML = chip(MX.slots, 'slot', 'sl', mx.slots);
+  [...$('#mx-tier').children].forEach(b =>
+    b.setAttribute('aria-pressed', String(mx.tiers.has(b.dataset.tier))));
+  $('#mx-lensbtn').classList.toggle('on', !!mx.slots.size);
+  $('#mx-lens').hidden = !mx.lens;
+  $('#mx-lensbtn').setAttribute('aria-expanded', String(mx.lens));
+
+  let shown = 0, words = 0, html = '';
+  for (const g of unit.groups) {
+    const items = g.items.filter(b => mxPass(b) && (!q || mxText(b).includes(q)));
+    if (!items.length) continue;
+    shown += items.length;
+    words += items.reduce((s, b) => s + b.n, 0);
+    html += `<section class="mx-g"><h2>${esc(g.g)}<span>${items.length}</span></h2>`
+      + items.map(b => mxBlockHTML(b, mx.q.trim())).join('') + '</section>';
+  }
+  $('#mx-body').innerHTML = html || `<p class="fs-none">Nothing in this section matches. <button class="mx-inline" data-mxclear>Clear the filters</button></p>`;
+  $('#mx-body').querySelectorAll('.mx-b').forEach(el => applyHighlights(el, el.dataset.key));
+  const nf = mxFilters();
+  $('#mx-count').textContent = (q || nf)
+    ? `${shown} of ${all.length} shown here · ${MX.n} across the optional`
+    : `${all.length} blocks here · ${bk.n} in ${bk.label} · ${MX.n} in all`;
+  $('#mx-left').textContent = `${shown} blocks · ${mxSpokenTime(words)} read aloud`;
+  mxJump.build();
 }
-const finJump = {
+
+/* Roughly 150 words a minute at 1×; scale with the chosen speed. */
+const mxSpokenTime = words => {
+  const secs = Math.round(words / (150 * (readSpeed || .9)) * 60) + 1;
+  return `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`;
+};
+
+/* ── group navigation inside the section; the select walks whole sections ── */
+const mxJump = {
   list: [], cur: '', pend: '', pendAt: 0, queued: false, top: 130,
+  build() {
+    const secs = [...$('#mx-body').querySelectorAll('.mx-g')];
+    secs.forEach((sec, i) => { sec.querySelector('h2').id = `mxx-${i}`; });
+    this.list = secs.map((sec, i) => ({ id: `mxx-${i}`, el: sec.querySelector('h2') }));
+    this.measure();
+  },
   measure() {
-    const st = document.querySelector('#fin-stick');
-    if (!st) return;
+    const st = $('#mx-stick'); if (!st) return;
     this.top = Math.round((parseFloat(getComputedStyle(st).top) || 56)
       + st.getBoundingClientRect().height) + 8;
-    document.documentElement.style.setProperty('--fstick', `${this.top}px`);
-  },
-  mark(id) { this.cur = id; const s = $('#fin-sel'); if (s && s.value !== id) s.value = id; },
-  sync(force) {
-    if (!this.list.length) return;
-    this.measure();
-    if (this.pend && !force) {
-      const a = this.list.find(x => x.id === this.pend);
-      const done = !a || Math.abs(a.el.getBoundingClientRect().top - this.top) < 12
-        || Date.now() - this.pendAt > 2500;
-      if (!done) { this.mark(this.pend); return; }
-      this.pend = '';
-    }
-    let best = this.list[0];
-    for (const a of this.list) { if (a.el.getBoundingClientRect().top <= this.top + 16) best = a; else break; }
-    this.mark(best.id);
-  },
-  onScroll() {
-    if (this.queued) return; this.queued = true;
-    requestAnimationFrame(() => { this.queued = false; this.sync(); });
+    document.documentElement.style.setProperty('--mxstick', `${this.top}px`);
   },
   go(id) {
     const a = this.list.find(x => x.id === id); if (!a) return;
-    this.pend = id; this.pendAt = Date.now(); this.mark(id);
-    a.el.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    this.cur = id; a.el.scrollIntoView({ block: 'start', behavior: 'smooth' });
   },
+  // Step through the groups of this section, then roll on to the next section.
   step(dir) {
-    const i = this.list.findIndex(x => x.id === this.cur);
-    const to = this.list[Math.min(this.list.length - 1, Math.max(0, (i < 0 ? 0 : i) + dir))];
-    if (to) this.go(to.id);
+    if (!this.list.length) return mxStepUnit(dir);
+    let i = 0;
+    for (let n = 0; n < this.list.length; n++) {
+      if (this.list[n].el.getBoundingClientRect().top <= this.top + 16) i = n; else break;
+    }
+    const to = this.list[i + dir];
+    if (to) this.go(to.id); else mxStepUnit(dir);
   }
 };
+function mxStepUnit(dir) {
+  const bk = mxBook(); if (!bk) return;
+  const i = bk.units.findIndex(u => u.u === mx.unit);
+  const to = bk.units[i + dir];
+  if (!to) return;
+  mx.unit = to.u; renderMx(); window.scrollTo(0, 0);
+}
 window.addEventListener('scroll', () => {
-  if ($('#view-fin')?.classList.contains('active')) finJump.onScroll();
+  if ($('#view-mx')?.classList.contains('active')) mxJump.measure();
 }, { passive: true });
 
-/* Read Along over the blocks of the optional. */
-const finRead = {
-  on: false, paused: false, run: 0, i: 0, nodes: [],
-  collect() { this.nodes = [...($('#fin-body')?.querySelectorAll('.fin-b') || [])]; },
+/* ══ Read Along ══
+   One utterance per SENTENCE, not per block, so the highlighter can track what is
+   actually being said. The sentence is marked with a Range through the CSS Custom
+   Highlight API — no DOM mutation, so pen marks and search hits survive narration. */
+const MXHL = 'mx-speaking';
+function mxSentences(el) {
+  const nodes = [], walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+  let text = '', n;
+  while ((n = walk.nextNode())) {
+    if (n.parentElement.closest('.mx-f')) continue;   // the footer marks are not read
+    nodes.push({ n, at: text.length }); text += n.nodeValue;
+  }
+  const out = [];
+  for (const m of text.matchAll(/[^.!?…]+(?:[.!?…]+["'’”)]*|$)/g)) {
+    if (!m[0].trim()) continue;
+    out.push({ text: m[0].trim(), from: m.index, to: m.index + m[0].length, nodes });
+  }
+  return out.length ? out : [{ text: text.trim(), from: 0, to: text.length, nodes }];
+}
+function mxRange(s) {
+  const pick = off => {
+    let last = s.nodes[0];
+    for (const e of s.nodes) { if (e.at <= off) last = e; else break; }
+    return { node: last.n, offset: Math.max(0, Math.min(last.n.nodeValue.length, off - last.at)) };
+  };
+  try {
+    const a = pick(s.from), b = pick(Math.max(s.from, s.to - 1));
+    const r = document.createRange();
+    r.setStart(a.node, a.offset);
+    r.setEnd(b.node, Math.min(b.node.nodeValue.length, b.offset + 1));
+    return r;
+  } catch { return null; }
+}
+const mxPaintSentence = s => {
+  if (!('highlights' in CSS)) return;
+  const r = s && mxRange(s);
+  if (r) CSS.highlights.set(MXHL, new Highlight(r)); else CSS.highlights.delete(MXHL);
+};
+
+const mxRead = {
+  on: false, paused: false, run: 0, i: 0, si: 0, sents: [], nodes: [],
+  collect() { this.nodes = [...($('#mx-body')?.querySelectorAll('.mx-b') || [])]; },
   nearestToView() {
     let best = 0;
     for (let n = 0; n < this.nodes.length; n++) {
-      if (this.nodes[n].getBoundingClientRect().top <= finJump.top + 40) best = n; else break;
+      if (this.nodes[n].getBoundingClientRect().top <= mxJump.top + 40) best = n; else break;
     }
     return best;
   },
@@ -2472,33 +2564,39 @@ const finRead = {
     feedStop?.();
     this.on = true; this.paused = false;
     this.i = Math.max(0, Math.min(this.nodes.length - 1, i ?? this.nearestToView()));
-    this.speak();
+    this.si = 0; this.speak();
   },
   speak() {
     if (!this.on) return;
     const node = this.nodes[this.i];
-    if (!node) return this.stop('End of the paper.');
-    $('#fin-body').querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
-    node.classList.add('reading-now');
-    node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    if (!node) return this.stop('End of the section.');
+    if (this.si === 0) {
+      $('#mx-body').querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+      node.classList.add('reading-now');
+      node.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      this.sents = mxSentences(node);
+    }
+    if (this.si >= this.sents.length) { this.i++; this.si = 0; return this.speak(); }
+    const s = this.sents[this.si];
+    mxPaintSentence(s);
     const run = ++this.run;
     this.paint();
-    const text = cleanSpeech(node.innerText.replace(/\n+/g, '. '));
-    if (!text.trim()) { this.i++; return this.speak(); }
+    const text = cleanSpeech(s.text);
+    if (!text.trim()) { this.si++; return this.speak(); }
     const u = new SpeechSynthesisUtterance(text);
     const voice = preferredVoice(speechSynthesis.getVoices());
     u.lang = voice?.lang || 'en-IN';
     u.rate = readSpeed; u.pitch = 1;
     if (voice) u.voice = voice;
-    const on = () => { if (this.on && run === this.run) { this.i++; this.speak(); } };
-    u.onend = on; u.onerror = on;
+    const next = () => { if (this.on && run === this.run) { this.si++; this.speak(); } };
+    u.onend = next; u.onerror = next;
     speechSynthesis.speak(u);
   },
   step(dir) {
     if (!this.on) return;
     this.run++; speechSynthesis.cancel();
     this.i = Math.max(0, Math.min(this.nodes.length - 1, this.i + dir));
-    this.speak();
+    this.si = 0; this.speak();
   },
   togglePause() {
     if (!this.on) return;
@@ -2510,61 +2608,129 @@ const finRead = {
   stop(message = '') {
     this.on = false; this.paused = false; this.run++;
     if (canSpeak()) speechSynthesis.cancel();
-    $('#fin-body')?.querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
+    mxPaintSentence(null);
+    $('#mx-body')?.querySelectorAll('.reading-now').forEach(n => n.classList.remove('reading-now'));
     this.paint(message);
   },
+  // Time left is counted in words still to be spoken — in this group, and in the section.
   paint(message = '') {
-    const btn = $('#fin-read'), bar = $('#fin-readbar');
+    const btn = $('#mx-read'), bar = $('#mx-readbar');
     if (!btn || !bar) return;
     btn.setAttribute('aria-pressed', String(this.on));
     btn.classList.toggle('on', this.on);
     bar.hidden = !this.on && !message;
-    if (message && !this.on) { $('#fin-readpos').textContent = message; return; }
+    if (message && !this.on) { $('#mx-readpos').textContent = message; $('#mx-times').textContent = ''; return; }
     if (!this.on) return;
-    $('#fin-readpos').textContent = `${this.i + 1} / ${this.nodes.length}`;
-    $('#fin-readpause').textContent = this.paused ? '▶ Resume' : '❚❚ Pause';
-    finJump.measure();
+    const words = el => (el.querySelector('.mx-d')?.textContent || '').split(/\s+/).length;
+    const group = this.nodes[this.i]?.closest('.mx-g');
+    let gLeft = 0, sLeft = 0;
+    this.nodes.forEach((el, n) => {
+      if (n < this.i) return;
+      sLeft += words(el);
+      if (el.closest('.mx-g') === group) gLeft += words(el);
+    });
+    $('#mx-readpos').textContent = `${this.i + 1} / ${this.nodes.length}`;
+    $('#mx-readpause').textContent = this.paused ? '▶' : '❚❚';
+    $('#mx-times').innerHTML = `<span title="Left in this group">◐ ${mxSpokenTime(gLeft)}</span>`
+      + `<span title="Left in this section">◉ ${mxSpokenTime(sLeft)}</span>`;
+    mxJump.measure();
   }
 };
 
-$('#fin-papers')?.addEventListener('click', e => {
-  const b = e.target.closest('[data-fp2]'); if (!b) return;
-  fin.pid = b.dataset.fp2; fin.filter = ''; renderFin(); window.scrollTo(0, 0);
+/* ── wiring ── */
+$('#mx-books')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-book]'); if (!b) return;
+  mx.book = b.dataset.book; mx.unit = ''; renderMx(); window.scrollTo(0, 0);
 });
-$('#fin-filters')?.addEventListener('click', e => {
-  const b = e.target.closest('[data-ff]'); if (!b) return;
-  fin.filter = b.dataset.ff; renderFin();
+$('#mx-sel')?.addEventListener('change', e => {
+  mx.unit = e.target.value; renderMx(); window.scrollTo(0, 0);
 });
-$('#fin-q')?.addEventListener('input', e => { fin.q = e.target.value; renderFin(); });
-$('#fin-sel')?.addEventListener('change', e => finJump.go(e.target.value));
-$('#fin-jump')?.addEventListener('click', e => {
-  const b = e.target.closest('[data-fjump]'); if (!b) return;
-  finJump.step(b.dataset.fjump === 'next' ? 1 : -1);
+$('#mx-tier')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-tier]'); if (!b) return;
+  mx.tiers.has(b.dataset.tier) ? mx.tiers.delete(b.dataset.tier) : mx.tiers.add(b.dataset.tier);
+  renderMx();
 });
-$('#fin-read')?.addEventListener('click', () => finRead.toggle());
-$('#fin-readbar')?.addEventListener('click', e => {
-  const id = e.target.id;
-  if (id === 'fin-readpause') finRead.togglePause();
-  else if (id === 'fin-readnext') finRead.step(1);
-  else if (id === 'fin-readprev') finRead.step(-1);
-  else if (id === 'fin-readstop') finRead.stop();
+$('#mx-kinds')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-kind]'); if (!b) return;
+  mx.kinds.has(b.dataset.kind) ? mx.kinds.delete(b.dataset.kind) : mx.kinds.add(b.dataset.kind);
+  renderMx();
 });
-$('#fin-body')?.addEventListener('click', e => {
-  const b = e.target.closest('.fin-b'); if (!b || !finRead.on) return;
+$('#mx-slots')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-slot]'); if (!b) return;
+  mx.slots.has(b.dataset.slot) ? mx.slots.delete(b.dataset.slot) : mx.slots.add(b.dataset.slot);
+  renderMx();
+});
+function mxClearFilters() {
+  mx.tiers.clear(); mx.kinds.clear(); mx.slots.clear();
+  mx.q = ''; const q = $('#mx-q'); if (q) q.value = '';
+  renderMx();
+}
+$('#mx-clear')?.addEventListener('click', mxClearFilters);
+$('#mx-body')?.addEventListener('click', e => {
+  if (e.target.closest('[data-mxclear]')) return mxClearFilters();
+  const b = e.target.closest('.mx-b'); if (!b || !mxRead.on) return;
   if (hlGesture()) return;
-  finRead.collect();
-  const i = finRead.nodes.indexOf(b);
-  if (i >= 0) { finRead.run++; speechSynthesis.cancel(); finRead.i = i; finRead.speak(); }
+  mxRead.collect();
+  const i = mxRead.nodes.indexOf(b);
+  if (i >= 0) { mxRead.run++; speechSynthesis.cancel(); mxRead.i = i; mxRead.si = 0; mxRead.speak(); }
+});
+function mxToggleLens() {
+  mx.lens = !mx.lens;
+  localStorage.setItem('mm-mx-lens', mx.lens ? '1' : '0');
+  $('#mx-lens').hidden = !mx.lens;
+  $('#mx-lensbtn').setAttribute('aria-expanded', String(mx.lens));
+  mxJump.measure();
+}
+$('#mx-lensbtn')?.addEventListener('click', mxToggleLens);
+$('#mx-q')?.addEventListener('input', e => { mx.q = e.target.value; renderMx(); });
+$('#mx-stick')?.addEventListener('click', e => {
+  const b = e.target.closest('[data-mjump]'); if (!b) return;
+  mxJump.step(b.dataset.mjump === 'next' ? 1 : -1);
+});
+$('#mx-read')?.addEventListener('click', () => mxRead.toggle());
+$('#mx-readbar')?.addEventListener('click', e => {
+  const id = e.target.id;
+  if (id === 'mx-readpause') mxRead.togglePause();
+  else if (id === 'mx-readnext') mxRead.step(1);
+  else if (id === 'mx-readprev') mxRead.step(-1);
+  else if (id === 'mx-readstop') mxRead.stop();
 });
 addEventListener('keydown', e => {
-  if (!$('#view-fin')?.classList.contains('active')) return;
-  if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) return;
-  if (e.code === 'Space') { e.preventDefault(); finRead.on ? finRead.togglePause() : finRead.start(); return; }
-  if (e.key === 'ArrowRight') { e.preventDefault(); finJump.step(1); return; }
-  if (e.key === 'ArrowLeft') { e.preventDefault(); finJump.step(-1); return; }
-  if (finRead.on && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
-    e.preventDefault(); finRead.step(e.key === 'ArrowDown' ? 1 : -1);
+  if (!$('#view-mx')?.classList.contains('active')) return;
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.target?.closest?.('input,select,textarea,[contenteditable="true"]')) {
+    if (e.key === 'Escape') e.target.blur();
+    return;
   }
+  if (e.code === 'Space') { e.preventDefault(); mxRead.on ? mxRead.togglePause() : mxRead.start(); return; }
+  if (e.key === 'ArrowRight') { e.preventDefault(); mxJump.step(1); return; }
+  if (e.key === 'ArrowLeft') { e.preventDefault(); mxJump.step(-1); return; }
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    e.preventDefault();
+    const d = e.key === 'ArrowDown' ? 1 : -1;
+    mxRead.on ? mxRead.step(d) : (mxRead.collect(), mxRead.start(mxRead.nearestToView() + d));
+    return;
+  }
+  // [ and ] step syllabus sections; p cycles the paper; t cycles the tier.
+  if (e.key === '[' || e.key === ']') { e.preventDefault(); mxStepUnit(e.key === ']' ? 1 : -1); return; }
+  if (e.key === 'p' || e.key === 'P') {
+    e.preventDefault();
+    const i = MX.books.findIndex(b => b.id === mx.book);
+    mx.book = MX.books[(i + 1) % MX.books.length].id; mx.unit = '';
+    renderMx(); window.scrollTo(0, 0);
+    return;
+  }
+  if (e.key === 't' || e.key === 'T') {
+    e.preventDefault();
+    const order = ['1', '2', '3'];
+    const cur = order.findIndex(t => mx.tiers.size === 1 && mx.tiers.has(t));
+    mx.tiers.clear();
+    if (cur < 2) mx.tiers.add(order[cur + 1]);
+    renderMx();
+    return;
+  }
+  if (e.key === 'l' || e.key === 'L') { e.preventDefault(); mxToggleLens(); return; }
+  if (e.key === '/') { e.preventDefault(); $('#mx-q')?.focus(); }
 });
 
 /* ══════════════════ ROUTER ══════════════════ */
@@ -2610,7 +2776,7 @@ async function route() {
   const [, kind, arg] = h.split('/');
   if (kind !== 'a' && readAlong) stopReadAlong();
   if (kind !== 'facts' && factRead.on) factRead.stop();
-  if (kind !== 'fin' && finRead.on) finRead.stop();
+  if (kind !== 'mx' && mxRead.on) mxRead.stop();
   if (!(kind === 'c' && h.split('/').length > 3) && compRead.on) compRead.stop();
   document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
   document.body.dataset.mode = mode;
@@ -2634,10 +2800,10 @@ async function route() {
   } else if (kind === 'hl') {
     $('#view-hl').classList.add('active');
     renderHighlights();
-  } else if (kind === 'fin') {
-    $('#view-fin').classList.add('active');
+  } else if (kind === 'mx') {
+    $('#view-mx').classList.add('active');
     syncTopbarHeight();
-    await renderFin(arg);
+    await renderMx(arg);
   } else if (kind === 'facts') {
     $('#view-facts').classList.add('active');
     syncTopbarHeight();          // the frozen block and the rail hang off the topbar
@@ -2679,7 +2845,7 @@ $('#app-dock').onclick = e => {
 };
 $('#go-notes').onclick = () => go('#/n');
 $('#go-facts').onclick = () => go('#/facts');
-$('#go-fin').onclick = () => go('#/fin');
+$('#go-mx').onclick = () => go('#/mx');
 $('#go-comp').onclick = () => go('#/c');
 $('#go-feed').onclick = () => go('#/feed');
 

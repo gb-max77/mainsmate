@@ -1,0 +1,185 @@
+{
+ "id": "p18",
+ "pod": "Urban Local Government",
+ "units": [
+  "II-12"
+ ],
+ "blurb": "Under-asked relative to its importance and therefore cheap to prepare — 2024 and 2025 each carried one. Municipal finance is the strongest available data story in the whole optional; use it.",
+ "groups": [
+  {
+   "g": "The 74th Amendment",
+   "items": [
+    {
+     "t": "The mandatory provisions",
+     "d": "**1992, in force 1 June 1993.** **Three types of municipality (243Q)** — **Nagar Panchayat** for a transitional area, **Municipal Council** for a smaller urban area, **Municipal Corporation** for a larger one. **Wards Committees** above three lakh (243S); **reservation including one-third for women** (243T); **five-year term** (243U); **State Election Commission** (243ZA); **State Finance Commission** (243Y).",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "The Twelfth Schedule",
+     "d": "**Eighteen functions** the legislature **may** devolve under **Article 243W** — urban planning, regulation of land use, roads and bridges, water supply, public health and sanitation, fire services, urban forestry, slum improvement, urban poverty alleviation, parks, burial grounds, and **planning for economic development and social justice**.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "The permissive defect, repeated",
+     "d": "As with the 73rd, the **functional devolution is enabling, not mandatory**. States retained **urban planning and land use** — the two functions that decide a city's future — in **development authorities** answerable to the State. The municipality got **sanitation and streetlights** and the authority got the **master plan**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "The Metropolitan Planning Committee",
+     "d": "**Article 243ZE** — mandatory for every metropolitan area above **ten lakh**, with **two-thirds of members elected** from municipalities and panchayats in the area, to prepare a **draft development plan** for the metropolitan area as a whole. **Most metropolitan areas either lack one or have one that does not plan.**",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-12"
+    },
+    {
+     "t": "The District Planning Committee's urban half",
+     "d": "**Article 243ZD** requires the DPC to consolidate **panchayat and municipal** plans into one district plan, taking account of **spatial planning, shared water and physical resources, and infrastructure and environmental conservation**. It is the only constitutional mechanism that treats **rural and urban as one planning problem** — and it is largely unused.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-12"
+    }
+   ]
+  },
+  {
+   "g": "Municipal finance",
+   "items": [
+    {
+     "t": "The comparative number to quote",
+     "d": "**RBI Report on Municipal Finances (November 2024)** — Indian municipal revenue is about **0.6-0.7% of GDP**, against **Brazil's 7.4%** and **South Africa's 6%**. One sentence that settles any 'urban local bodies lack resources' argument with evidence rather than assertion.",
+     "k": "data",
+     "sl": "open",
+     "tr": 2,
+     "u": "II-12"
+    },
+    {
+     "t": "The composition of municipal revenue",
+     "d": "**Property tax** is only **0.09-0.11% of GDP** and about **15% of municipal revenue**; **own revenue** is **60-65%** of receipts; **transfers 32-39%**, of which **central transfers are under 5%**; and **municipal bonds are under 10%** of municipal borrowings. The picture is **own revenue that is large in share and tiny in absolute terms**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "Why property tax under-performs",
+     "d": "**Outdated valuations** rarely revised; **low coverage** — a large share of properties unassessed; **exemptions** for government and institutional property; **weak collection** with no consequence for default; and **political reluctance** to revise rates. The fix is technical and available: **GIS-based property mapping, unit-area assessment and periodic indexation**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "The other revenue instruments",
+     "d": "**User charges** for water, solid waste and parking — the most under-used lever; **advertisement and entertainment** levies; **development charges and betterment levies** capturing land value the city itself created; **Transferable Development Rights** and **land value capture** around transit; and **municipal bonds** (Ahmedabad 1998 first; Pune, Indore and others since).",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-12"
+    },
+    {
+     "t": "The financial-autonomy critique",
+     "d": "**2024 Q7(b).** Without own revenue a municipality cannot **plan beyond one year**, cannot **borrow** (no creditworthiness), cannot **maintain** what it builds, and cannot **refuse** a State-directed project. **Constitutional status without fiscal capacity produces responsibility without resources** — the same sentence that indicts the 73rd Amendment.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "The 16th Finance Commission's urban grant",
+     "d": "Local body grants of **₹7.91 lakh crore** for **2026-31**, of which **urban ₹3.56 lakh crore**. Its effect depends entirely on **how much is untied** and on whether the conditions — **online publication of audited accounts** and **property tax floor rates** — are enforced. This is the single largest live lever on the urban fiscal problem.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-12"
+    }
+   ]
+  },
+  {
+   "g": "Metropolitan and city governance",
+   "items": [
+    {
+     "t": "The metropolitan governance problem",
+     "d": "**2025 Q8(a).** A metropolitan area is governed by **overlapping authorities with no single accountable head** — the municipal corporation, a development authority for planning, separate water and transport boards, a cantonment or two, a police commissionerate, and several State parastatals. **Nobody is responsible for the city as a whole.**",
+     "k": "critique",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "Why cities matter fiscally",
+     "d": "Urban India generates the larger share of **national output and of tax revenue** while its governments are the **weakest tier fiscally**. That mismatch is the argument: the places producing the wealth have the **least control over the infrastructure** their productivity depends on.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-12"
+    },
+    {
+     "t": "The directly elected mayor debate",
+     "d": "**For** — a **single accountable executive** with a **five-year term**, visible to citizens, able to negotiate with the State. **Against** — conflict with the State government, and the fact that a strong mayor without **funds, functions and functionaries** is a **figurehead with a bigger office**. Most Indian mayors serve **one year, indirectly elected**, with the **Municipal Commissioner** holding executive power.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-12"
+    },
+    {
+     "t": "Commissioner versus Mayor",
+     "d": "The structural fault. The **Municipal Commissioner** is a **State-appointed IAS officer** holding the executive power; the **Mayor** is the **elected head** with largely ceremonial and presiding functions. Executive authority therefore runs **upward to the State**, not **downward from the electorate** — the reverse of what the 74th Amendment intended.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "Ward Committees and Area Sabhas",
+     "d": "**Article 243S** requires Ward Committees above three lakh; the **Model Nagara Raj Bill (2006)** under JNNURM proposed **Area Sabhas** as the urban equivalent of the Gram Sabha. **Kerala and West Bengal** implemented meaningfully; most States constituted committees **covering several wards each**, which defeats the purpose.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-12"
+    },
+    {
+     "t": "The urban missions",
+     "d": "**JNNURM (2005)** — reform-linked funding, the first serious conditionality on municipal reform. **AMRUT** and **AMRUT 2.0** — water and sewerage. **Smart Cities Mission (2015)** — **100 cities**, area-based development through **SPVs**. **PMAY-Urban**, **Swachh Bharat Urban**, **NULM**, **PM SVANidhi** for street vendors, **National Urban Digital Mission**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "The SPV critique of Smart Cities",
+     "d": "The scoring paragraph. The mission delivered projects through **Special Purpose Vehicles** — companies under the Companies Act with **State and municipal shareholding** and a **CEO answerable to a board**, not to the elected council. Efficient delivery, purchased by **bypassing the elected local body the 74th Amendment created**. **Rhodes's hollowing out**, one tier down.",
+     "k": "link",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-12"
+    },
+    {
+     "t": "The urban capacity deficit",
+     "d": "The under-argued point. Indian municipalities are **critically short of qualified staff** — urban planners, engineers, finance officers, public health specialists — with sanctioned posts vacant for years and **no dedicated municipal cadre** in most States. **Mission Karmayogi has onboarded 1.75 lakh ULB officials**, which addresses training, not **numbers**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-12"
+    },
+    {
+     "t": "What would actually strengthen cities",
+     "d": "Close with five: **transfer urban planning and land use** to the elected body; a **directly elected mayor with a five-year term** and executive authority; a **professional municipal cadre**; **property tax reform with GIS mapping and indexation**; and **untied Finance Commission grants** conditioned on **published audited accounts**.",
+     "k": "scheme",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-12"
+    }
+   ]
+  }
+ ]
+}

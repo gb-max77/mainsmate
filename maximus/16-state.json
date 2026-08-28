@@ -1,0 +1,161 @@
+{
+ "id": "p16",
+ "pod": "State Government and Administration",
+ "units": [
+  "II-6"
+ ],
+ "blurb": "The tier that actually delivers — police, health, education, revenue and land are State subjects. The Secretariat–Directorate relationship and coalition administration are the recurring slots.",
+ "groups": [
+  {
+   "g": "The political executive in the State",
+   "items": [
+    {
+     "t": "The aid-and-advice provision",
+     "d": "**2023 Q4(a) quoted Article 163 directly.** \"There shall be a Council of Ministers with the **Chief Minister at the head** to **aid and advise** the Governor in the exercise of his functions, **except in so far as he is by or under this Constitution required to exercise any of his functions in his discretion**.\" The whole federal argument sits in that exception.",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "Why the exception is contested",
+     "d": "**Article 163(2)** makes the Governor's own view on **whether a matter falls within his discretion** final, and **not questionable on the ground that he ought or ought not to have acted in his discretion**. **Shamsher Singh (1974)** narrowed discretion to what the Constitution **expressly or by necessary implication** requires — but the clause remains a **self-certifying** power.",
+     "k": "case",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-6"
+    },
+    {
+     "t": "The Chief Minister's position",
+     "d": "**Article 164** — appointed by the Governor; ministers hold office during the Governor's pleasure; the Council is **collectively responsible to the Legislative Assembly**. In practice the CM's power exceeds the PM's within the State, because **transfers and postings of the entire State cadre** are effectively at his disposal.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "The Chief Secretary",
+     "d": "The **administrative head** of the State — principal adviser to the CM, head of the State civil services, chairman of coordination committees, and the **crisis manager** in disaster and law-and-order emergencies. Like the Cabinet Secretary he is **staff, not line**: influence flows from **proximity to the Chief Minister**, not from command.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "The State Secretariat",
+     "d": "Departments headed by **Principal Secretary or Secretary**, mirroring the Union's structure. Its functions are **policy, legislation, budget, personnel and coordination**. Its characteristic weakness is that it is **staffed largely by generalists** on short tenures supervising **technical directorates** with career specialists.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-6"
+    },
+    {
+     "t": "Coalition dynamics in the States",
+     "d": "**2023 Q5(c).** They vary with the **nature of leadership** (a dominant leader can hold a coalition that a consensual one cannot), the **character of the parties** (ideological versus regional-personal), and **conditions** — pre-poll alliances behave differently from post-poll arrangements. Administratively the effect is **departmental fiefdoms** and slower Cabinet decisions.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-6"
+    }
+   ]
+  },
+  {
+   "g": "Secretariat and Directorate",
+   "items": [
+    {
+     "t": "The division of function",
+     "d": "**Secretariat** — policy formulation, legislation, budget, rules, personnel and control. **Directorate** — technical advice, execution, field supervision, and the **professional memory** of the department. Health, education, agriculture, PWD and police each have this **two-headed** structure.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "Why the demarcation blurs",
+     "d": "**2025 Q5(a).** There is **no statutory allocation** between the two; the Secretariat drifts into **case work and transfers**, and the Directorate is drawn into **policy notes**. Both then do **each other's work badly** — the generalist decides technical questions and the technical head spends the day on files.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "The consequences of the blur",
+     "d": "**Delay** — the same file is examined twice; **demoralisation** of the technical cadre, whose advice can be overturned without reasons; **diffused accountability** when a programme fails; and **loss of technical memory**, because the officer who decided is transferred and the one who knew was not asked.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-6"
+    },
+    {
+     "t": "The reform positions",
+     "d": "Three, and they conflict. **Merge** the two at the top so one officer both advises and executes (the **integrated** or **Bihar** pattern). **Separate** them sharply, giving the Directorate statutory delegation. Or **shrink** the Secretariat to policy alone, as the **2nd ARC's 15th Report on State and District Administration** proposed.",
+     "k": "scheme",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-6"
+    },
+    {
+     "t": "The generalist–specialist question at State level",
+     "d": "It bites harder here than at the Union, because State departments are **overwhelmingly technical** — irrigation, power, health, forests. The workable answer is **specialist headship of the Directorate with statutory delegation**, generalist headship of the Secretariat, and **domain-trained generalists** through Mission Karmayogi's competency framework.",
+     "k": "link",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-6"
+    }
+   ]
+  },
+  {
+   "g": "State-level machinery and State–local relations",
+   "items": [
+    {
+     "t": "The State Public Service Commission",
+     "d": "**Articles 315-323** apply to States as to the Union — appointment by the **Governor**, removal only by the **President** on a Supreme Court reference, expenses **charged** on the State's Consolidated Fund. Yet several SPSCs have faced **recruitment scandals, prolonged vacancies and delayed results** — insulation of tenure without insulation of process.",
+     "k": "cmte",
+     "sl": "open",
+     "tr": 3,
+     "u": "II-6"
+    },
+    {
+     "t": "State-level regulatory and quasi-judicial bodies",
+     "d": "**State Electricity Regulatory Commissions** under the Electricity Act, 2003; **State Information Commissions**; **State Human Rights Commissions**; **Lokayuktas**; **State Consumer Commissions**; **State Election Commissions** under Article 243K. Their common failure mode is **vacancy** — a body that exists on paper and cannot sit.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-6"
+    },
+    {
+     "t": "The State Finance Commission's place",
+     "d": "**Article 243I and 243Y** — the constitutional bridge between the State and its local bodies, and the weakest link in Indian fiscal federalism. Late constitution, delayed reports, **no action-taken memorandum laid before the legislature**, and recommendations **routinely not accepted** — the third tier's fiscal fate is decided here and mostly by default.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "Parastatals and the bypass problem",
+     "d": "The structural critique to write. **Water boards, housing boards, development authorities, Smart City SPVs, mission societies and DRDAs** carry out functions listed for local bodies in the **Eleventh and Twelfth Schedules**, and report to the State, not the elected local body. **Rhodes's hollowing out**, applied downward inside a federation.",
+     "k": "link",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "Activity mapping",
+     "d": "The technical fix that would matter most. For each of the **29 and 18 subjects**, specify which **activity** within it belongs to which **tier** — planning, execution, maintenance, supervision, financing — and attach the **funds and functionaries** to that assignment. **Kerala and Karnataka** did it; most States published a list of subjects and stopped.",
+     "k": "scheme",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-6"
+    },
+    {
+     "t": "The State's real administrative weight",
+     "d": "Quote the proportion when arguing about capacity: States carry **roughly 60% of general government expenditure**, employ the overwhelming majority of public servants, and own the subjects that touch the citizen daily — **police, land, health, education, water, agriculture**. **Reform that does not reach the State does not reach the citizen.**",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-6"
+    }
+   ]
+  }
+ ]
+}

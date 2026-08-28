@@ -1,0 +1,403 @@
+{
+ "id": "p19",
+ "pod": "Cross-cutting and the 2026 Evidence",
+ "units": [
+  "Cross-cutting"
+ ],
+ "blurb": "Material that belongs to neither paper alone: the theory-to-India interlinks that identify a Public Administration script, the year's dated evidence, the quotable lines, the drawable models, and the discipline's own vocabulary.",
+ "groups": [
+  {
+   "g": "The vocabulary that carries the marks",
+   "items": [
+    {
+     "t": "The discipline’s own vocabulary",
+     "d": "**Administrative discretion · zone of indifference · goal displacement · bounded rationality · satisficing · formalism · overlapping · heterogeneity · agency capture · principal-agent problem · hollow state · network governance · co-production · street-level bureaucracy · policy entrepreneur · incrementalism · wicked problem · path dependence · trained incapacity · bureau-pathology · legitimation deficit · steering not rowing.**",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    }
+   ]
+  },
+  {
+   "g": "Models worth drawing",
+   "items": [
+    {
+     "t": "Riggs's prism",
+     "d": "One elongated box in three zones — **Fused (agraria)** → **Prismatic** → **Diffracted (industria)** — with **formalism, overlapping, heterogeneity** written **inside** the prismatic zone and one Indian instance under each. **Forty-five seconds.** The single highest-return sketch in Paper I.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Simon's decision funnel",
+     "d": "A funnel narrowing left to right: **Intelligence → Design → Choice → Review**, with **bounded rationality** labelled as the constraint that narrows it and **satisficing** marked at the point of choice. Add **Cabinet Note** under Design to make it Indian.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 3,
+     "u": "Cross"
+    },
+    {
+     "t": "Easton's systems model",
+     "d": "A box labelled **conversion**, arrows in for **demands and supports**, an arrow marked **withinputs** entering from inside, an arrow out for **outputs**, and a **feedback** loop back to inputs. Label an Indian institution at each node — **civil society → ministry → statute → district → CAG**.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 3,
+     "u": "Cross"
+    },
+    {
+     "t": "Klitgaard's equation box",
+     "d": "Write **C = M + D − A** across the top, and beneath each term a box with **two Indian interventions**: under M, **e-auction and GeM**; under D, **faceless assessment and DBT**; under A, **RTI and social audit**. The cleanest anti-corruption diagram available, and it takes thirty seconds.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "The 3F devolution triangle",
+     "d": "A triangle with **Functions**, **Funds** and **Functionaries** at the vertices; mark the **Devolution Index 2024** score at Functions, **1% own revenue** at Funds, and **staff report to line departments** at Functionaries. It shows the failure is at **one vertex**, which is the whole argument.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "The accountability wheel",
+     "d": "The administrator at the hub, with five spokes — **legislative** (PAC, questions), **executive** (CVC, hierarchy), **judicial** (writs, review), **citizen** (RTI, social audit) and **media**. Mark each spoke's **weakness** at its rim: post-facto, internal, case-by-case, unenforced, episodic.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "The policy cycle with Indian institutions",
+     "d": "A circle — **agenda-setting → formulation → adoption → implementation → evaluation** — with the responsible Indian body at each node: **media and civil society → ministry and NITI → Parliament → district and PRI → CAG and DMEO**. It converts a generic model into a Paper II answer.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "The fiscal federalism flow",
+     "d": "A downward chain: **divisible pool → 41% vertical devolution → six horizontal criteria → State → State Finance Commission → local body**, with a **break marked at the SFC** and **cesses shown leaking out before the pool**. Two annotations carry the entire critique.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "The district's four hats",
+     "d": "One officer at the centre with four labelled boxes — **Collector** (revenue), **District Magistrate** (law and order), **Deputy Commissioner** (development), **Chairperson DDMA** (disaster, Section 25). Under each, the statute that confers it. Thirty seconds, and it answers half the district questions by itself.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Moore's strategic triangle",
+     "d": "Three vertices — **public value**, **authorising environment**, **operational capacity** — with the programme in the middle. Use it to explain a failure by marking **which vertex was missing**: the RFD had capacity and lost authorisation; Aspirational Districts had all three.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 3,
+     "u": "Cross"
+    }
+   ]
+  },
+  {
+   "g": "Cross-paper interlinks — the mark of a Public Administration candidate",
+   "items": [
+    {
+     "t": "Devolution failure → Riggs",
+     "d": "When writing on **panchayats, RTI compliance, Citizen's Charters or SFCs**, insert: this is **formalism** — Riggs's gap between the **prescriptive and the descriptive**, where the form is maintained and the substance is absent. It converts a list of failures into a **diagnosis**.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "PSU performance → Evans",
+     "d": "When writing on **public enterprises or industrial policy**, insert **embedded autonomy**: space and atomic energy had a bureaucracy **autonomous** enough to resist capture and **embedded** enough to know the sector; the licensing system had embeddedness **without** autonomy, and became capture.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Budget behaviour → Wildavsky",
+     "d": "When writing on the **Indian budget, ZBB or expenditure reform**, insert **incrementalism**: the base is accepted and attention goes to the increment, because comprehensive review is cognitively impossible and politically explosive. It explains why every non-incremental technique became incremental.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Frontline delivery → Lipsky",
+     "d": "When writing on **MGNREGA, PDS, policing, ASHA or teachers**, insert **street-level bureaucracy**: facing demand that always exceeds resources, frontline staff develop **coping routines** — rationing, creaming, routinising — and those routines **are** the policy the citizen experiences.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Scheme implementation → Pressman and Wildavsky",
+     "d": "When writing on **centrally sponsored schemes or convergence**, insert the **complexity of joint action**: with many clearance points each requiring agreement, the probability of completion collapses multiplicatively — which is why **PFMS** and **direct transfer** shorten the chain rather than improve any link in it.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Bureaucratic behaviour → Merton and Crozier",
+     "d": "When writing on **red tape, file culture or risk aversion**, insert **goal displacement** and the **vicious circle**: rules made for reliability produce rigidity, the remaining zones of uncertainty become power resources, and the response is more rules. The organisation \"**cannot correct its behaviour by learning from its errors**\".",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "GST Council and disaster response → Follett",
+     "d": "When writing on the **GST Council, Inter-State Council, PRAGATI or the Incident Response System**, insert **integration** and the **law of the situation** — both parties take their orders from the facts of the case rather than from each other's rank. It is the theory of consensus decision-making in a federation.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Digital governance → Dunleavy and Weber",
+     "d": "When writing on **India Stack, DBT, faceless assessment or AI**, insert **Digital Era Governance** — reintegration, needs-based holism, digitisation. Then turn it: algorithmic decision-making is **legal-rational authority automated**, which perfects Weber's **iron cage** and removes the official who could be argued with.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Elite capture → Selznick",
+     "d": "When writing on **Water User Associations, forest committees, the Community Development Programme or sarpanch pati**, insert **co-optation**: the organisation absorbs external elements into its leadership to survive and is **changed by them**, producing **sub-goal formation** and the unanticipated consequences of purposive social action.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Regulators and parastatals → Rhodes",
+     "d": "When writing on **regulatory bodies, Smart City SPVs, mission societies or PPP**, insert the **hollowing out of the state** and **governance without government**: functions move to self-organising networks with significant autonomy, and the elected body is left with **responsibility and no instrument**.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Written orders and transfers → Barnard",
+     "d": "When writing on **neutrality, the political-permanent interface or Conduct Rule 3(3)(iii)**, insert the **zone of indifference**: an arbitrary or unlawful command **narrows** it for everyone who watches, and the requirement to record oral instructions in writing is an institutional device for defending its boundary.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    }
+   ]
+  },
+  {
+   "g": "2026 — the year's changed facts",
+   "items": [
+    {
+     "t": "16th Finance Commission",
+     "d": "**Dr Arvind Panagariya**, report tabled **1 February 2026**, award **2026-31**. **Devolution 41%**; horizontal weights **income distance 42.5, population (2011) 17.5, demographic performance 10, area 10, forest and ecology 10, contribution to GDP 10**. **Local body grants ₹7.91 lakh crore**; **disaster corpus ₹2,04,401 crore**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "Budget 2026-27",
+     "d": "**Total expenditure ₹53.5 lakh crore**; **capex ₹12.2 lakh crore**; **fiscal deficit 4.3% of GDP**; **debt 55.6% of GDP**; **net tax receipts ₹28.7 lakh crore**; **Finance Commission grants to States ₹1.4 lakh crore**. Centre's deficit target **3.5% by 2030-31**, States **3% of GSDP**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "The 8th Central Pay Commission",
+     "d": "Terms of reference notified **3 November 2025**; Chairperson **Justice Ranjana Prakash Desai**; report due within **18 months**; covering about **50 lakh employees and 69 lakh pensioners**. **Implementation date not yet notified** — so write about its **terms and expected direction**, not its award.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "VB-G RAM G replaces MGNREGA",
+     "d": "**Viksit Bharat–Gramin Rozgar Aur Aajeevika Mission** gazetted **21 December 2025**, in force **1 July 2026**. **125-day** guarantee; **60:40** Centre-State (**90:10** for NE and Himalayan States); **9%** administrative ceiling; seasonal pause up to **60 days**; **₹95,692 crore** Centre allocation for 2026-27.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "The Presidential Reference on assent",
+     "d": "**November 2025** — the Supreme Court's advisory opinion declined to impose **judicially fixed timelines** on the Governor or the President under **Articles 200 and 201**, unsettling the earlier Tamil Nadu approach. The single most examinable federal development of the year.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "The RTI–DPDP collision",
+     "d": "**Section 44(3) of the DPDP Act, 2023** rewrites **RTI Section 8(1)(j)** to exempt **all personal information** without the earlier **public-interest override**. With **DPDP Rules notified in 2025**, this is the live transparency question of 2026 — and the strongest available example of two rights-based statutes colliding.",
+     "k": "critique",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Corruption Perceptions Index 2025",
+     "d": "**India 91st of 182, score 39/100**, up from **96th in 2024**; global average **42**; released **16 February 2026** by Transparency International. Use it to argue that **transactional corruption fell with digitisation** while **grand and political corruption** is untouched by process reform.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "NITI's Fiscal Health Index",
+     "d": "First edition **January 2025** — **Odisha** first among 18 major States; the **2026 edition released 11 March 2026**. It is competitive federalism's newest instrument and a usable illustration of **public choice applied to a federation**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "The new criminal codes in force",
+     "d": "**Bharatiya Nyaya Sanhita**, **Bharatiya Nagarik Suraksha Sanhita** and **Bharatiya Sakshya Adhiniyam** replaced the IPC, CrPC and Evidence Act on **1 July 2024**. Administratively: **mandatory forensic visit** above seven years, **statutory timelines** for investigation and judgment, **zero and e-FIR**, and **videographed search and seizure**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "The Unified Pension Scheme",
+     "d": "Operational **1 April 2025** — assured payout of **50% of the average basic pay of the last twelve months** for **25 years'** service, **minimum ₹10,000 a month**, government contribution **18.5%**. The design answer to the OPS-versus-NPS argument: **assurance without an unfunded liability**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "Deregulation and Jan Vishwas",
+     "d": "**Jan Vishwas (Amendment of Provisions) Act, 2023** decriminalised **183 provisions across 42 Acts**; the **2026 Act** extends decriminalisation and rationalises penalties, alongside a **Deregulation Commission** agenda. A live instance of **reforming process rather than structure** — and the best current example for a regulatory-burden question.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Simultaneous elections in Parliament",
+     "d": "The **129th Constitution Amendment Bill** with the accompanying Union Territories legislation, before a **Joint Parliamentary Committee**. The **Ram Nath Kovind Committee (2024)** design: an **appointed date**, Lok Sabha and Assemblies together, local bodies within **100 days**, and mid-term houses serving only the **unexpired term**.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Digital scale in 2026",
+     "d": "**Aadhaar 140 crore+** enrolments; **UPI 20 billion+** monthly transactions at 2025-26 peaks and **80%+** of retail digital payment volume; **DigiLocker 45 crore+** users; **CSCs 5 lakh+**; **SVAMITVA 2.5 crore+** property cards; **PM Gati Shakti 40+ ministries and 1,600+ data layers**; **e-Courts Phase III ₹7,210 crore**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "Cross"
+    },
+    {
+     "t": "What to watch before the exam",
+     "d": "Verify before quoting: the **8th CPC's** report and implementation date; the **JPC report** on simultaneous elections; **DPDP Rules** enforcement and any RTI amendment; **VB-G RAM G's** first months of operation; the **Census and delimitation** timeline governing the **106th Amendment**; and the next **Devolution Index**.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "Cross"
+    }
+   ]
+  },
+  {
+   "g": "Lines to open and close with",
+   "items": [
+    {
+     "t": "Lord Acton on power",
+     "d": "\"**Power tends to corrupt, and absolute power corrupts absolutely.**\" The default opener for **accountability, corruption and discretion** questions — and better used as the **premise** for a structural argument than as a conclusion.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Lord Denning on administrative power",
+     "d": "\"**Properly exercised the new powers of the executive lead to the Welfare State; but abused they lead to the Totalitarian State.**\" The single best line to open an **administrative law, delegated legislation or discretion** answer — it states the entire subject in one sentence.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Gandhi's talisman",
+     "d": "\"**Recall the face of the poorest and the weakest man whom you may have seen, and ask yourself if the step you contemplate is going to be of any use to him.**\" The decision rule for **development, equity and welfare** answers — and the Indian counterpart to Frederickson's social equity.",
+     "k": "quote",
+     "sl": "close",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Lindblom on policy",
+     "d": "\"**Policy is not made once and for all; it is made and re-made endlessly.**\" Use to close any question on **policy formulation, review or reform** — it makes the case for **evaluation and iteration** without sounding like a recommendation list.",
+     "k": "quote",
+     "sl": "close",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Kofi Annan on governance",
+     "d": "\"**Good governance is perhaps the single most important factor in eradicating poverty and promoting development.**\" A safe, authoritative close for **good governance, SDG and development administration** answers.",
+     "k": "quote",
+     "sl": "close",
+     "tr": 3,
+     "u": "Cross"
+    },
+    {
+     "t": "Bagehot on the Cabinet",
+     "d": "The Cabinet is the \"**efficient secret**\" of the constitution — \"a **hyphen which joins, a buckle which fastens**, the legislative part of the state to the executive part.\" Use for **parliamentary executive, collective responsibility and the political-permanent interface**.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 3,
+     "u": "Cross"
+    },
+    {
+     "t": "Laski on decentralisation",
+     "d": "\"**We cannot realise the full benefit of democratic government unless we begin by the admission that all problems are not central problems, and that the results of problems not central in their incidence require decision at the place, and by the persons, where and by whom the incidence is most deeply felt.**\"",
+     "k": "quote",
+     "sl": "open",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Woodrow Wilson on the difficulty of administration",
+     "d": "\"It is getting to be harder to run a constitution than to frame one\" is the famous half. The useful other half: administration is \"the most **obvious part of government**; it is government **in action**\" — the sentence that founded the discipline's claim to be studied at all.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 3,
+     "u": "Cross"
+    },
+    {
+     "t": "Nehru on the public sector",
+     "d": "The public enterprises were to be the \"**temples of modern India**\". Set it against the **New Public Sector Enterprise Policy, 2021** — four strategic sectors and a bare-minimum presence — and you have a **seventy-year arc in two sentences** for any PSU question.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 2,
+     "u": "Cross"
+    },
+    {
+     "t": "Sen on famine and democracy",
+     "d": "\"**No famine has ever taken place in the history of the world in a functioning democracy.**\" Use it to argue that **accountability is not a luxury added to development but a condition of it** — the sharpest available close on RTI, social audit or press freedom.",
+     "k": "quote",
+     "sl": "close",
+     "tr": 2,
+     "u": "Cross"
+    }
+   ]
+  }
+ ]
+}

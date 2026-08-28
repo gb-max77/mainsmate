@@ -1,0 +1,581 @@
+{
+ "id": "p05",
+ "pod": "Accountability, Control and Integrity",
+ "units": [
+  "I-5",
+  "II-14"
+ ],
+ "blurb": "Paper I's control mechanisms and Paper II's 'significant issues' are the same argument at two altitudes. India's accountability is dense but ineffective — procedural rather than consequential. Make that the spine.",
+ "groups": [
+  {
+   "g": "What accountability is",
+   "items": [
+    {
+     "t": "Accountability versus control versus responsibility",
+     "d": "**Control** is **prior and continuous** — the power to direct. **Accountability** is **posterior** — the duty to render an account and face consequences. **Responsibility** is **internal** — the obligation felt. A system can be heavy on control and empty of accountability, which describes India.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The Friedrich–Finer debate",
+     "d": "**Finer** — accountability must be **external and enforceable**: \"the servants of the public are **not to decide their own course**; they are to be **responsible to the elected representatives**.\" **Friedrich** — the modern administrator's expertise makes external control impossible, so rely on the **inner check** of professional standards and public sentiment.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Resolving Friedrich and Finer",
+     "d": "Neither alone works. **Finer's** external controls arrive **too late** and cannot judge technical choices; **Friedrich's** inner check is **unverifiable**. The workable answer is **Finer's institutions plus Friedrich's ethics** — codes and training to shape judgement, audit and courts to catch failure.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "Koppell's five dimensions",
+     "d": "**Transparency, liability, controllability, responsibility, responsiveness.** His warning is the useful part — **multiple accountabilities disorder**: an agency answerable on all five to different masters satisfies none and becomes **paralysed** or **arbitrary**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-5"
+    },
+    {
+     "t": "Romzek and Dubnick's four types",
+     "d": "**Hierarchical** (supervisory, low discretion), **legal** (external, low discretion), **professional** (internal, high discretion), **political** (external, high discretion). Naming which type a question is about **prevents the answer becoming a list**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-5"
+    },
+    {
+     "t": "The problem of many hands",
+     "d": "**Dennis Thompson** — where a decision passes through many officials, **no one is individually blameworthy** and accountability dissolves. It is the standing defence in every Indian inquiry report, and the reason **recorded, attributable noting** matters more than any oversight body.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-5"
+    },
+    {
+     "t": "Why technical administration resists accountability",
+     "d": "The more specialised the decision, the fewer the people competent to review it. **Parliamentary questions cannot audit an algorithm**; a **CAG** auditor cannot second-guess a spectrum valuation model. The remedy is **procedural** — publish the method, the assumptions and the dissent — not substantive review.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "India's accountability paradox — the signature argument",
+     "d": "India has **more** accountability institutions than most democracies and **less** consequence. Files are audited, grievances are **'disposed'**, commissions report — and almost nobody is penalised. **RTI penalties are imposed in about 3% of disposed cases.** Accountability here is **procedural, not consequential**.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-5"
+    }
+   ]
+  },
+  {
+   "g": "Legislative control",
+   "items": [
+    {
+     "t": "The instruments, in order of bite",
+     "d": "**Financial** — Budget, Demands for Grants, cut motions, the **PAC, Estimates Committee and COPU**. **Deliberative** — question hour, half-an-hour discussion, calling attention, adjournment motion, no-confidence. **Legislative** — the **Committee on Subordinate Legislation**. **Departmental Standing Committees** — 24, doing the real scrutiny.",
+     "k": "cmte",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Why legislative control is weak",
+     "d": "**2024 Q3(c).** **Declining sitting days**; the **anti-defection law** removing the individual MP's independence; **guillotine** disposing of most Demands undiscussed; **ordinances**; **money-bill routing**; committees whose reports are **not binding**; and technical matter no generalist committee can penetrate.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The Public Accounts Committee",
+     "d": "**22 members (15 Lok Sabha, 7 Rajya Sabha)**, chaired by a member of the **Opposition** by convention; examines the **CAG's** reports **after the money is spent**. Its strength is **non-partisan continuity**; its limits are **post-facto** timing and the absence of any **power to penalise**.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The three financial committees compared",
+     "d": "**PAC** — audits **past** expenditure against sanction. **Estimates Committee (30, Lok Sabha only)** — suggests **economies** in **proposed** estimates; called the 'continuous economy committee'. **COPU (22)** — examines **public undertakings**, which the other two cannot reach.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-5"
+    },
+    {
+     "t": "Departmentally Related Standing Committees",
+     "d": "**24 committees, 31 members each (21 Lok Sabha, 10 Rajya Sabha)**, since **1993**. They examine **demands for grants, bills, annual reports and long-term policy**. They work **outside the glare of the House**, which is exactly why they are the most substantive scrutiny Parliament does.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "Parliamentary control over expenditure is declining",
+     "d": "**2024 Q5(d).** The evidence: a shrinking share of **Demands actually discussed**, routine use of the **guillotine**, growing reliance on **supplementary demands**, expenditure through **off-budget borrowing and parastatals**, and **fewer bills** sent to committee.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-5",
+     "x": "Budget process in I-12"
+    },
+    {
+     "t": "The guillotine",
+     "d": "**2025 Q5(d).** On the last allotted day the Speaker puts **all outstanding Demands for Grants to vote together, without discussion**. It guarantees the **timeline** the Constitution requires and sacrifices the **scrutiny** the Constitution intends — a trade of **form for substance** that has become routine.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "What would actually strengthen it",
+     "d": "A **statutory minimum of sitting days**; a **Budget Office** giving members independent costing capacity; **mandatory committee reference** of every bill; **pre-legislative consultation** as a rule; and the **2nd ARC's** proposal to place the **CAG's** reports before committees within a **fixed time**.",
+     "k": "scheme",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-5"
+    }
+   ]
+  },
+  {
+   "g": "Executive and judicial control",
+   "items": [
+    {
+     "t": "Executive control mechanisms",
+     "d": "**Budgetary** (sanction, re-appropriation, Finance Ministry concurrence); **personnel** (appointment, transfer, promotion, discipline under CCS-CCA Rules); **hierarchical** (supervision, inspection, review); **coordination** (Cabinet Secretariat, committees of secretaries); and **audit** through internal audit and the CVC-CVO chain.",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-5"
+    },
+    {
+     "t": "Judicial review — the grounds",
+     "d": "**Illegality** (acting beyond power — *ultra vires*), **irrationality** (**Wednesbury** unreasonableness), **procedural impropriety** (breach of **natural justice** or of a mandatory procedure), and increasingly **proportionality**. **Lord Diplock's** classification, adopted in Indian practice.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The writs",
+     "d": "**Habeas corpus** (produce the body), **mandamus** (perform the public duty), **prohibition** (stop exceeding jurisdiction, before), **certiorari** (quash, after), **quo warranto** (by what authority do you hold this office). **Article 32** against the Supreme Court, **Article 226** — wider — against a High Court.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Judicial activism as reform agency",
+     "d": "**Signature argument.** Courts wrote the administrative reform legislatures would not: **Vineet Narain (1997)** gave the **CVC** statutory footing and single-directive protection; **Prakash Singh (2006)** ordered **seven police reforms**; **T.S.R. Subramanian (2013)** ordered a **Civil Services Board**, **minimum tenure** and **written orders**.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The limits of judicial control",
+     "d": "Courts act **only when moved**, decide **the case not the system**, cannot supply **funds or personnel**, and are themselves **overloaded** — about **4.76 crore cases pending (NJDG, 2026)**. And every reform they order depends on an executive **willing to comply**; **Prakash Singh compliance has been nominal for nineteen years**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "The judiciary mandating rather than restraining",
+     "d": "**2023 Q1(d).** Review has moved from **negative** (striking down) to **positive** (directing what must be done) — continuing mandamus, guidelines with the force of law under **Article 141**, monitored implementation. **Vishaka (1997)** legislated in the legislature's silence.",
+     "k": "case",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The 2025 judicial retreat",
+     "d": "The **Presidential Reference opinion (November 2025)** declined to impose **judicially fixed timelines on the Governor's assent** under **Articles 200 and 201**, unsettling the earlier **State of Tamil Nadu** approach. Read it as a deliberate step back toward **political and cooperative-federal remedies** — which raises whether the **Inter-State Council** can be revived.",
+     "k": "case",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-5",
+     "x": "Federalism in II-2"
+    },
+    {
+     "t": "Checks and balances",
+     "d": "**2025 Q3(c).** India has **separation of functions**, not of personnel — the executive sits in the legislature. The balance is carried instead by **judicial review**, the **basic structure doctrine**, **independent constitutional offices** (CAG, EC, UPSC), and **federal division**. Say that, rather than reciting Montesquieu.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-5"
+    }
+   ]
+  },
+  {
+   "g": "Right to information and transparency",
+   "items": [
+    {
+     "t": "The RTI architecture",
+     "d": "**Section 2(h)** public authority; **Section 4** **suo motu** disclosure — the section that would make most applications unnecessary; **Section 6** the application, no reasons required; **Section 7** thirty days, **48 hours** where life or liberty is involved; **Section 8** exemptions; **Section 19** appeals; **Section 20** penalty up to **₹25,000**.",
+     "k": "prov",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Where RTI came from",
+     "d": "Not from Parliament first. **MKSS** in **Rajasthan** ran **jan sunwais** from 1990 demanding muster rolls and bills; **Tamil Nadu (1997)** and eight other states legislated before the Centre; the **Freedom of Information Act, 2002** was never notified; the **RTI Act, 2005** followed the **NCPRI** campaign.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "RTI's measured stress",
+     "d": "**Over 4 lakh appeals and complaints pending** across information commissions; **seven commissions non-functional** at points in 2024-25, **Jharkhand's defunct since May 2020**; penalties imposed in about **3% of disposed cases**; several State Commissions would take **four to five years** to reach a fresh appeal.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "The backlash against RTI",
+     "d": "**2023 Q3(c).** **RTI (Amendment) Act, 2019** moved the **tenure, salary and service conditions** of Information Commissioners from **statute to executive rules** — the independence that came from a fixed five-year term is now at the government's discretion. **Vacancies** do the rest without any amendment at all.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The DPDP amendment to Section 8(1)(j)",
+     "d": "The **live 2026 issue.** **Section 44(3) of the DPDP Act, 2023** rewrites **RTI's Section 8(1)(j)** to exempt **all personal information** without the earlier **public-interest override**. Critics say it removes the basis for **beneficiary lists, muster rolls and officials' asset disclosures** — the very records RTI was built for.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "Protecting the user, not just the right",
+     "d": "The unfinished agenda: no working protection for **RTI activists**, with dozens killed since 2005. The **Whistle Blowers Protection Act, 2014** was passed and **never brought into force**; its 2015 amendment bill would have **narrowed** it to exclude disclosures touching Section 8(1) categories.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "The Section 4 fix",
+     "d": "The highest-value reform is the cheapest: **enforce suo motu disclosure**. If **budgets, beneficiary lists, works, inspection reports and file notings** were published as a matter of course, most applications would not be filed, and the **backlog problem would shrink at its source**.",
+     "k": "prov",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "Riggs explains the RTI gap",
+     "d": "**Formalism** — the gap between the **prescriptive** and the **descriptive**. The Act is world-class on paper; **Section 4 compliance** is patchy, **penalties** near-notional, **commissions** unstaffed. India legislates the **norm** and under-supplies the **institution** — the single most reusable Paper II sentence.",
+     "k": "link",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "Transparency's other instruments",
+     "d": "**e-Procurement through GeM and CPP Portal**; **PFMS** tracing every rupee to the beneficiary; **faceless assessment** removing the officer-taxpayer interface; **open data on data.gov.in** and NITI's **National Data and Analytics Platform**. Transparency by **design** now outperforms transparency by **request**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-5"
+    }
+   ]
+  },
+  {
+   "g": "Social audit and the citizen interface",
+   "items": [
+    {
+     "t": "What social audit is",
+     "d": "Verification of a public work or scheme **by the community that received it**, using **official records read aloud in a public assembly**, with **findings recorded and acted upon**. It converts accountability from an **audit trail** into a **face-to-face account**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Social audit's statutory base",
+     "d": "**Section 17 of MGNREGA** makes the **Gram Sabha** the audit authority; the **MGNREGA Audit of Schemes Rules, 2011** require **independent Social Audit Units**; **Meghalaya's Community Participation and Public Services Social Audit Act, 2017** is the first **general** social audit law in India.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Why social audit works where audit does not",
+     "d": "**2024 Q3(a).** It reaches the **only fact that matters** — did the work happen and did the wage arrive — which no ledger can verify from a state capital. It is **timely**, **local**, and **hard to capture** where the assembly is genuinely open.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Where social audit fails",
+     "d": "**SAUs are funded by the department they audit**; **elite capture** silences the assembly; **findings are recorded and not acted on**; and coverage outside MGNREGA is thin. Andhra Pradesh's SSAAT is the working model precisely because it has **separate funding and trained village social auditors**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "The citizen–administration interface",
+     "d": "Four modes: the citizen as **applicant** (a service to be obtained), as **complainant** (CPGRAMS), as **participant** (Gram Sabha, ward committee, MyGov), and as **co-producer** (community forest management, school management committees). Indian reform has invested heavily in the first two and thinly in the last two.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-14"
+    },
+    {
+     "t": "Grievance redress as a system",
+     "d": "**CPGRAMS** with an **AI-based grievance routing** layer, feedback call centres, and a **DARPG** ranking of ministries by **disposal time and quality**. The measured shortfall is that **'disposal' is counted rather than resolution** — Goodhart's law inside the grievance machine.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 3,
+     "u": "II-14"
+    },
+    {
+     "t": "The missing grievance statute",
+     "d": "The **Right of Citizens for Time Bound Delivery of Goods and Services and Redressal of their Grievances Bill, 2011** lapsed. Without it, a Citizen's Charter creates **no enforceable right**. The **2nd ARC's 12th Report, Citizen Centric Administration**, remains the reference design.",
+     "k": "scheme",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-14"
+    },
+    {
+     "t": "Participation as an administrative technique",
+     "d": "**Arnstein's ladder** — from **manipulation and therapy** (non-participation), through **informing, consultation and placation** (tokenism), to **partnership, delegated power and citizen control**. Most Indian participation sits at **consultation**; **social audit and the Gram Sabha's approval of plans** reach **delegated power**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-14"
+    }
+   ]
+  },
+  {
+   "g": "Media, interest groups and civil society",
+   "items": [
+    {
+     "t": "The media's accountability function",
+     "d": "**Agenda-setting** (what the public thinks about), **watchdog** (exposure), and **forum** (deliberation). Its comparative advantage over formal control is **speed and reach**; its weakness is that it is **episodic** and pursues the **spectacular** over the **structural**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "'The fourth estate is in chains'",
+     "d": "**2019 Q4(c), 2025 Q1(c) and 2024 Q1(e) all in this family.** The pressures: **ownership concentration**, **advertising dependence including government advertising**, **paid news and the Press Council's own findings**, **defamation and sedition-adjacent charges**, and **regulatory leverage over broadcasters**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "From institutional lens to societal lens",
+     "d": "**2024 Q1(e).** Media once trained its attention on **institutions** — the file, the tender, the committee. It now largely reflects **society back to itself** — identity, outrage, personality. The shift matters administratively: **institutional failure goes unreported** unless it produces a **visible victim**.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Social media's double effect",
+     "d": "It **lowered the cost of exposure** — a single video can move an administration in hours — and **removed verification**. The administrative consequences are real: **rumour-driven law-and-order incidents**, and the **IT Rules, 2021** fact-check provisions, whose **state-as-arbiter** design the **Bombay High Court** struck down in the **Kunal Kamra** case (2024).",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "Interest groups in agenda-setting",
+     "d": "**2021 Q8(b).** They **elevate** issues onto the agenda and, more consequentially, **deny others the opportunity** — **Bachrach and Baratz's** non-decision-making. In India, **organised** interests (industry associations, employee unions, farmer bodies) are heard; **unorganised** ones (informal workers, tenants) are not.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "Civil society's contribution, named",
+     "d": "**MKSS** produced the RTI; **SEWA** organised informal women workers; **Pratham's ASER** created the learning-outcomes debate; **AIDWA and allied groups** shaped the Domestic Violence Act; **Bachpan Bachao Andolan** on child labour. Name organisations, not 'NGOs'.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-5"
+    },
+    {
+     "t": "When civil society restricts rather than assists",
+     "d": "**2021 Q1(d).** Genuine tensions: **litigation delaying** infrastructure; **unrepresentative** office-bearers claiming to speak for communities; **donor agendas** displacing local priorities; and **accountability of the accountability-seeker** — most NGOs publish less than the departments they audit.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-5"
+    },
+    {
+     "t": "The receptive-state condition",
+     "d": "**2025 Q8(a) is precisely this.** CSO effectiveness is a **function of state structure**: statutory entry points make CSOs productive — **Gram Sabha, social audit, pre-legislative consultation, PIL, the Forest Rights Act's gram sabha consent**. Where entry points are absent, CSOs are pushed to **protest and litigation**, which the state then reads as obstruction.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-5"
+    }
+   ]
+  },
+  {
+   "g": "Corruption and the integrity institutions",
+   "items": [
+    {
+     "t": "Klitgaard's equation",
+     "d": "**Corruption = Monopoly + Discretion − Accountability.** The most usable analytic frame in the syllabus: it turns 'reduce corruption' into three **operable** levers, and lets you show which lever each Indian reform pulls.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "Klitgaard applied to Indian reforms",
+     "d": "**Monopoly reduced** — competitive **e-auction** of coal and spectrum, **GeM's** open marketplace. **Discretion reduced** — **faceless assessment**, algorithmic case allocation, **DBT** removing the intermediary. **Accountability raised** — RTI, CVC, social audit. The **first two carried the gains**; the third lagged.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-14"
+    },
+    {
+     "t": "The anti-corruption statutes",
+     "d": "**Prevention of Corruption Act, 1988**, amended **2018** — **bribe-giving criminalised**, **prior approval** required to investigate a public servant, **timelines** for trial. **Prevention of Money Laundering Act, 2002**. **Benami Transactions (Prohibition) Amendment Act, 2016**. **Lokpal and Lokayuktas Act, 2013**.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "The 2018 amendment's double edge",
+     "d": "It closed a real gap by criminalising the **giver** and requiring **timely trial**; it also restored a **prior-approval shield** akin to the **single directive** the Supreme Court struck down in **Vineet Narain (1997)** and again in **Subramanian Swamy (2014)**. Protection against harassment and protection from investigation are hard to separate.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-14"
+    },
+    {
+     "t": "The CVC",
+     "d": "Recommended by the **Santhanam Committee (1962-64)**, created **1964**, given **statutory** status by the **CVC Act, 2003** after **Vineet Narain**. **Multi-member**, appointed by a committee of **PM, Home Minister and Leader of Opposition**; supervises the **CBI's** anti-corruption work; **advisory** on departmental action — which is its central weakness.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "The Lokpal's record",
+     "d": "Enacted **2013** after the **India Against Corruption** mobilisation, chairperson appointed only in **March 2019**. **389 complaints in 2025-26.** Its problems are structural: it **depends on CBI and CVC** for inquiry, has **no independent investigating machinery of scale**, and **most States' Lokayuktas** are weaker still.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "UNCAC and India's compliance gap",
+     "d": "**2023 Q8(b).** India ratified the **UN Convention against Corruption in 2011**. Gaps that remain: **no law on private-sector bribery** beyond limited provisions, **no effective whistleblower protection in force**, **no asset-recovery framework** matching Chapter V, and **no regulation of lobbying or political funding transparency**.",
+     "k": "scheme",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "The 2nd ARC's ethics architecture",
+     "d": "The **fourth report, Ethics in Governance** — a **Code of Ethics** distinct from the Code of Conduct, an **Office of Ethics Commissioner**, **partial funding of elections**, **confiscation of illegally acquired assets**, **integrity pacts** in procurement, **conflict-of-interest and cooling-off rules**, and **serious-offence fast-tracking**.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "Corruption Perceptions Index 2025",
+     "d": "**India 91st of 182, score 39/100**, improved from **96th in 2024**; global average **42** (**Transparency International, 16 February 2026**). Use it to argue that **transactional** corruption fell with digitisation while **grand and political** corruption is untouched by process reform.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "Values in public service",
+     "d": "**Nolan's seven principles** — **selflessness, integrity, objectivity, accountability, openness, honesty, leadership**. India's equivalents: the **AIS (Conduct) Rules, Rule 3** duty to maintain **integrity, devotion to duty and political neutrality**; the never-enacted **Public Services Bill** with its proposed values charter.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-14"
+    }
+   ]
+  },
+  {
+   "g": "Coalitions, human rights and disaster",
+   "items": [
+    {
+     "t": "Administration under coalition regimes",
+     "d": "**2024 Q8(c), 2023 Q5(c).** The effects are specific: **portfolio allocation by party rather than fit**; **ministries becoming party fiefdoms** with parallel personnel policies; **slower Cabinet decision-making**; **larger councils of ministers** before the 91st Amendment; and a **Chief Secretary or Cabinet Secretary** who must broker rather than coordinate.",
+     "k": "critique",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "The compensating virtues of coalitions",
+     "d": "Write both sides. Coalitions produce **greater federal consultation**, **more legislative scrutiny** (governments cannot guillotine at will), and **regional interests represented at the Union table**. The **91st Amendment** capped the Council of Ministers at **15% of the House** and ended defection-by-split, curbing the worst instability.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-14"
+    },
+    {
+     "t": "The National Human Rights Commission",
+     "d": "**Protection of Human Rights Act, 1993**. Chairperson a **former Chief Justice of India or a Supreme Court judge** (after the **2019 amendment**), with a fixed **three-year** term. Powers: **inquiry, civil-court powers, visits to custodial institutions, intervention in court proceedings**.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-14"
+    },
+    {
+     "t": "The NHRC's structural weaknesses",
+     "d": "Its findings are **recommendatory**; it **cannot investigate armed forces** beyond seeking a report under **Section 19**; a **one-year limitation** bars older complaints; it relies on **police to investigate police**; and **GANHRI accreditation review** has repeatedly questioned its **pluralism and appointment process**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-14"
+    },
+    {
+     "t": "Disaster management's institutional chain",
+     "d": "**Disaster Management Act, 2005** — **NDMA** chaired by the **Prime Minister**, **SDMA** by the **Chief Minister**, **DDMA** by the **District Magistrate**; **NDRF**; **NIDM** for training; **NDMA guidelines** as the binding standard. The **2025 amendment** strengthened the authorities' planning role and urban disaster arrangements.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-14"
+    },
+    {
+     "t": "The shift from relief to risk reduction",
+     "d": "**Sendai Framework 2015-30** — four priorities: **understanding risk, strengthening governance, investing in resilience, enhancing preparedness for build back better**. India's move is visible in the **16th FC's disaster corpus of ₹2,04,401 crore** and in **heat action plans** treating heat as a notified local disaster.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-14"
+    },
+    {
+     "t": "AI in disaster administration",
+     "d": "**2025 Q8(c) asked it.** Working Indian instances: **IMD's** impact-based cyclone forecasting; **Common Alerting Protocol** cell-broadcast warnings; **satellite and drone damage assessment** for rapid loss estimation; **flood forecasting** models; and **Bhashini** for multilingual alerts. The limits are **data quality, last-mile reach and accountability for a wrong prediction**.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-14"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,721 @@
+{
+ "id": "p02",
+ "pod": "Administrative Thought",
+ "units": [
+  "I-2"
+ ],
+ "blurb": "The currency of Paper I. Every answer should carry two thinkers — one classical, one contemporary — each doing work in the sentence rather than decorating it. Follett, Barnard and Simon are the three most repeatedly asked.",
+ "groups": [
+  {
+   "g": "Scientific Management — Taylor and the shop floor",
+   "items": [
+    {
+     "t": "Taylor's four principles",
+     "d": "**Develop a science** for each element of work; **scientifically select and train** the worker; **heartily cooperate** with workers; **near-equal division of work and responsibility** between management and men. Source: **The Principles of Scientific Management, 1911**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Taylor's techniques",
+     "d": "**Time and motion study**; **functional foremanship** (eight foremen, four planning and four doing); the **differential piece-rate**; **standardisation** of tools and conditions; the **exception principle** — management attends only to deviations.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "The mental revolution",
+     "d": "Taylor's own defence before the **1912 House Committee**: scientific management requires \"**a complete mental revolution**\" on **both** sides — labour must stop **soldiering**, management must stop **guessing**. The surplus from science makes the wage-profit fight unnecessary.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "'The system must be first'",
+     "d": "\"**In the past the man has been first; in the future the system must be first.**\" One sentence that carries both Taylor's achievement — **method over intuition** — and his indictment: the worker as an **appendage to method**.",
+     "k": "quote",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Taylor's associates",
+     "d": "**Henry Gantt** — the **Gantt chart** and the **task-and-bonus** wage. **Frank and Lillian Gilbreth** — **therbligs** and fatigue study; Lillian, the **'first lady of management'**, brought psychology in. **Harrington Emerson** — **twelve principles of efficiency**. **Morris Cooke** — Taylorism applied to **municipal administration**.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Analysis versus action",
+     "d": "**2020 Q1(b).** Taylor never separated **principles of analysis** (how to study work scientifically) from **principles of action** (what management should therefore do). He presented an **empirical method** and a **managerial prescription** as one thing — which is why criticising the prescription looked like rejecting the science.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Who decides what work is worth doing?",
+     "d": "Taylor optimised **means** and never asked about **ends**. Scientific management can make an **unnecessary** procedure efficient — the standing critique of process reform that leaves the **process itself** unexamined. **Government Process Re-engineering** exists precisely to ask this question first.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2",
+     "x": "Links to I-11 GPR"
+    },
+    {
+     "t": "The standard critiques of Taylor",
+     "d": "**Drucker** — Taylor **separated planning from doing**, deskilling the worker. The **Hoxie Report (1915)** to the US Commission on Industrial Relations found it **anti-union**. **Oliver Sheldon** demanded a **philosophy** of management. The core charge: the **machine model of man**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Taylorism inside Indian administration",
+     "d": "The **O&M Division (1954)** in the Cabinet Secretariat on **Appleby's** advice, moved to the **Department of Administrative Reforms (1964)**, today **DARPG**; the **Staff Inspection Unit (1964)** in the Finance Ministry sets **staffing norms by work measurement**; Railways run **Industrial Engineering** cells.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Taylorism's human cost, in a live Indian example",
+     "d": "**MGNREGA Schedule of Rates** are built on **time-and-motion measurement** of earthwork. Where the norms are set unattainably high, a full day's labour earns **below the notified minimum wage** — Taylor's exact failure, reproduced in a rights-based statute.",
+     "k": "eg",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Taylorism's contemporary form",
+     "d": "**e-Office** file-movement time standards; **Special Campaign for Disposal of Pending Matters (SCDPM, DARPG)** measured in files closed and space freed; **algorithmic work allocation** in **faceless assessment**. Time-and-motion did not die — it **moved into software**.",
+     "k": "link",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "The classical school — Fayol, Gulick, Urwick",
+   "items": [
+    {
+     "t": "Fayol's five elements",
+     "d": "**POCCC — Planning, Organising, Commanding, Coordinating, Controlling** — from **Administration Industrielle et Générale (1916)**. Fayol looked at the organisation **from the top down**; Taylor looked **from the shop floor up**. **2021 Q1(e) turned on exactly this contrast.**",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "The fourteen principles worth naming",
+     "d": "**Unity of command** (one boss), **unity of direction** (one plan), **scalar chain** with the **gangplank** for lateral communication, **centralisation** as a question of degree, **esprit de corps**, **stability of tenure**, and **equity**. Name three that fit the question, not all fourteen.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Fayol's gangplank",
+     "d": "A **lateral bridge** across the scalar chain, permitted when superiors authorise it, so a matter need not climb and descend the whole hierarchy. India's institutional version is the **desk officer system** and, in the field, the **Incident Response System** under the **DM Act, 2005**.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "POSDCORB",
+     "d": "**Gulick and Urwick (1937)** — **Planning, Organising, Staffing, Directing, COordinating, Reporting, Budgeting**. It answers *what the chief executive does*; **Simon's** objection is that it never says *what government is for*.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "The four Ps of departmentalisation",
+     "d": "**Purpose, Process, Persons (clientele), Place.** Indian examples in one line: **Purpose** — Ministry of Health; **Process** — CPWD and the Directorate of Printing; **Persons** — Ministries of Tribal Affairs, Minority Affairs, WCD; **Place** — Ministry of DoNER, the Andaman and Nicobar Administration.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Gulick on work division",
+     "d": "\"**Work division is the foundation of organization; indeed, the reason for organization.**\" And his efficiency axiom: \"**efficiency is axiom number one in the value scale of administration**\" — the sentence **Waldo** spent a book demolishing.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Span of control",
+     "d": "**Graicunas** showed relationships multiply **geometrically** as subordinates rise arithmetically; **Urwick** proposed **five or six** at the top. The trade-off is fixed: a **narrow span** builds a **tall hierarchy** with long delays; a **wide span** builds a **flat one** with thin supervision.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "India's span-of-control problem",
+     "d": "A Secretariat file typically climbs **Section Officer → Under Secretary → Deputy Secretary → Director → Joint Secretary → Additional Secretary → Secretary**. The **2nd ARC's 13th Report** recommended **three levels** and a **desk officer system** — first proposed by **ARC-I in 1968** and still unimplemented.",
+     "k": "cmte",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Mooney and Reiley",
+     "d": "**Onward Industry (1931)** — organisation rests on the **coordinative principle**, expressed through the **scalar process** and producing the **functional effect**. Their contribution is the claim that **coordination is the first principle**, from which hierarchy and specialisation follow.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Classical theory in Indian rules",
+     "d": "**POSDCORB is written into Indian law**: the **Government of India (Allocation of Business) Rules, 1961** distribute *purpose*; the **Transaction of Business Rules, 1961** prescribe *process*; the **Secretariat–executive agency** split is Gulick's **policy-versus-implementation** distinction in statutory form.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "The scientific-management versus human-relations contrast",
+     "d": "**2024 Q4(b).** Same goal — **efficiency**; opposite route. Taylor: efficiency through **method, measurement and money**. Mayo: through **attention, group norms and belonging**. Neither is complete — which is why **Herzberg** later separated the two into **hygiene** and **motivators**.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "Weber — the bureaucratic model",
+   "items": [
+    {
+     "t": "Weber's three types of authority",
+     "d": "**Traditional** (sanctity of custom — the hereditary ruler), **charismatic** (devotion to an exceptional person), **legal-rational** (belief in the legality of enacted rules). **Bureaucracy is the administrative apparatus of legal-rational authority.**",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "The characteristics of the ideal type",
+     "d": "**Fixed jurisdictional areas**; **hierarchy of offices**; management by **written documents** — the file; **expert training**; the official's **full working capacity**; **stable, exhaustive rules**; **impersonality**; a **career** with tenure and fixed salary; **office separated from the person** of the incumbent.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Weber's own claim for it",
+     "d": "Bureaucracy is \"**capable of attaining the highest degree of efficiency** and is in this sense **formally the most rational** known means of exercising **authority over human beings**.\" Note the word **formally** — Weber claims **procedural**, not substantive, rationality.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "The iron cage",
+     "d": "**Stahlhartes Gehäuse** — rationalisation traps its makers: \"**specialists without spirit, sensualists without heart**.\" And the political warning: \"**the ruled cannot dispense with or replace the bureaucratic apparatus of authority once it exists**.\"",
+     "k": "quote",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "The ideal type is a yardstick, not a portrait",
+     "d": "The commonest error in a Weber answer. The ideal type is a **methodological construct** — a deliberate **exaggeration of essential features** built to **measure deviation**. Criticising Weber because real bureaucracies are inefficient **misses what an ideal type is for**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Routinisation of charisma",
+     "d": "Charismatic authority is **inherently unstable** — it dies with the leader. To survive, it must be **routinised** into traditional or legal-rational forms. Indian instance: a **movement-led scheme** surviving only once it acquires **rules, cadre and a budget line**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Weber's model in Indian constitutional form",
+     "d": "**Article 309** (recruitment and conditions), **Article 310** (pleasure doctrine), **Article 311** (procedural protection against dismissal), the **CCS (Conduct) Rules, 1964** and **CCS (CCA) Rules, 1965**. The **steel frame** is Weber's **career service with tenure** written into a Constitution.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Why India cannot simply de-Weberise",
+     "d": "In a society of **ascriptive hierarchy**, **impersonality is emancipatory**: the rule that ignores caste is what lets a Dalit applicant be served. Every argument for **flexibility and discretion** must answer this — discretion in an unequal society **restores the very particularism** the rules removed.",
+     "k": "link",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Marx on bureaucracy",
+     "d": "**2025 Q4(c) quoted it:** bureaucracy \"constitutes the **imaginary state** beside the real state; it is the **spiritualism of the state**.\" For Marx it is an **instrument of the dominant class** that mistakes its **own interest** for the **general interest** — the sharpest counter to Weber's neutrality claim.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Weber and the algorithm",
+     "d": "The **2026 frontier.** Algorithmic decision-making is **legal-rational authority automated**: fixed jurisdiction, written rule, impersonality, no discretion. It perfects the **iron cage** — and removes the **human official** who could be argued with, appealed to, or held accountable.",
+     "k": "link",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "The critics and post-Weberian developments",
+   "items": [
+    {
+     "t": "Merton — trained incapacity",
+     "d": "**'Bureaucratic Structure and Personality' (1940)** — the rules that secure **reliability** produce **overconformity**. Training in one method becomes an **incapacity** in changed conditions; the **means displace the ends**; the official becomes a **bureaucratic virtuoso** who serves the file, not the citizen.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Goal displacement, seen in India",
+     "d": "The **RTI reply** that answers the question asked and not the one meant; **grievance 'disposal' rates** on **CPGRAMS** counted as redress; a scheme measured by **funds utilised** rather than **outcomes**. Merton's mechanism is the single most usable critique in Indian answers.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Selznick — co-optation",
+     "d": "**TVA and the Grass Roots (1949)** — an organisation absorbs **hostile external elements into its leadership** to secure survival, and is **changed by them**. **Formal** co-optation confers visible participation; **informal** co-optation transfers real power. Result: **sub-goal formation** and the \"**unanticipated consequences of purposive social action**.\"",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Co-optation in Indian institutions",
+     "d": "**Elite capture** of Water User Associations and forest committees; the **Community Development Programme's** absorption by dominant rural castes — the failure **Balwantrai Mehta** diagnosed in 1957; **sarpanch pati** substituting for the elected woman representative.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-2",
+     "x": "Feeds II-11"
+    },
+    {
+     "t": "Gouldner — three bureaucratic patterns",
+     "d": "**Patterns of Industrial Bureaucracy (1954)** — **mock bureaucracy** (rules nobody enforces, e.g. the no-smoking sign), **representative bureaucracy** (rules both sides accept, e.g. safety rules), **punishment-centred bureaucracy** (rules one side imposes on the other). Also the **indulgency pattern** — selective non-enforcement that buys compliance.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Crozier — the vicious circle",
+     "d": "**The Bureaucratic Phenomenon (1964)** — bureaucracy is \"**an organisation that cannot correct its behaviour by learning from its errors**.\" Impersonal rules remove discretion; the remaining **zones of uncertainty** become **power resources**; officials defend them; the response is **more rules**. The circle tightens.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Michels — the iron law of oligarchy",
+     "d": "\"**Who says organisation says oligarchy.**\" Any large organisation, however democratic in purpose, generates a **specialised leadership** that acquires an interest in its **own continuance**. Use it on **political parties, trade unions, cooperatives** — and on **panchayat federations**.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Bureau-pathology",
+     "d": "**2019 Q1(b): \"Bureau pathology denigrates competence in organization.\"** The cluster of dysfunctions — **red tape, buck-passing, rule-worship, empire-building, over-caution, secrecy**. Its damage is that it **penalises the competent**: the officer who decides is exposed, the one who circulates the file is safe.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Post-bureaucratic organisational forms",
+     "d": "**Warren Bennis** predicted the **death of bureaucracy** and its replacement by **organic-adaptive, temporary task systems** — **adhocracy**. **Toffler** named it; **Mintzberg** placed it among his configurations. **2020 Q2(b) quoted Bennis directly.**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Why bureaucracy did not die",
+     "d": "Bennis was wrong on the timetable and right on the direction. **Missions, SPVs, societies and task forces** proliferated **around** the permanent structure — **NHM societies, Smart City SPVs, NDMA's Incident Response System** — but the **Secretariat, the cadre and the file survived intact**. Adhocracy became a **layer**, not a **replacement**.",
+     "k": "link",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "Follett — dynamic administration",
+   "items": [
+    {
+     "t": "The law of the situation",
+     "d": "**Follett's** central move: **depersonalise the order**. Neither party gives orders to the other; **both take their orders from the situation**. Authority derives from the **facts of the case**, not the **position of the speaker** — which is why she calls it **power-with**, not **power-over**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Integration over domination and compromise",
+     "d": "Three ways to settle a conflict — **domination** (one side wins), **compromise** (both give up something), **integration** (a solution in which **neither side sacrifices anything**, found by uncovering the **real underlying demands**). Only integration is **constructive**; conflict becomes **creative**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Follett on either-or",
+     "d": "\"**We should never allow ourselves to be bullied by an 'either-or'.**\" And on authority: \"**Authority should go with knowledge and experience... no matter whether it is up the line or down.**\" Two quotations that fit any conflict, leadership or expertise question.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Her other contributions",
+     "d": "**Circular response** — the parties change each other continuously, so behaviour is never one-directional; **the group principle** — the individual is realised **through** the group; **coordination as a continuous process** by **direct contact**, at the **earliest stage**, through **reciprocal relating**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Why she is called the prophet of management",
+     "d": "**Drucker** named her that. Writing in the **1920s**, she anticipated **human relations** (before Hawthorne), **participative management**, **conflict as constructive**, **matrix authority** and **stakeholder thinking** — from a background in **political science and social work**, not engineering.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Follett bridges classical and behavioural",
+     "d": "**2025 Q2(b) and 2023 Q2(a) both asked this.** She accepted the classical concern with **coordination and authority** but relocated both in **psychology and group process** — making her the **hinge** between Taylor's mechanics and Mayo's sociology.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Follett in Indian institutions",
+     "d": "The **GST Council** is integration in constitutional form — **Article 279A**, weighted voting, but decisions overwhelmingly by **consensus** because either side's veto is worthless. **PRAGATI** works by **direct contact at the earliest stage**; the **Incident Response System** applies the **law of the situation** in a disaster.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "The limit of integration",
+     "d": "It presumes a **discoverable common interest**. Where the conflict is **distributive** — **river water between Karnataka and Tamil Nadu**, a **land acquisition** — there may be no integrative solution, and Follett offers no procedure for deciding **who loses**. That is what **adjudication and politics** are for.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "Human relations — Mayo and Hawthorne",
+   "items": [
+    {
+     "t": "The Hawthorne studies",
+     "d": "**Western Electric, 1924-32**, four phases: **illumination experiments** (output rose whatever the lighting), **relay assembly test room**, **mass interviewing programme** (20,000 interviews), **bank wiring observation room**. Conducted by **Elton Mayo, Roethlisberger and Dickson**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "What Hawthorne actually found",
+     "d": "Output is a function of **social relations**, not physical conditions. The **informal group** sets its own **production norms** and enforces them — the bank wiring room punished the **rate-buster** and the **chiseller** alike. **Non-economic rewards** shape behaviour more than the piece-rate.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "The Hawthorne effect",
+     "d": "Behaviour changes because subjects know they are **being observed**. Its administrative use is double-edged: **attention itself** improves performance — which explains why **PRAGATI review** and **inspection** work, and why their effect **decays** once attention moves elsewhere.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Mayo's rabble hypothesis",
+     "d": "Mayo rejected the **'rabble hypothesis'** — the classical assumption that society is a horde of unorganised individuals each acting from self-interest. Man is a **social animal** seeking **belonging**; industrial society's disease is **anomie**, and the workplace group is the remedy.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Formal organisations are made of informal groups",
+     "d": "**2024 Q1(b).** The informal organisation is **not a defect** of the formal one — it is the **condition of its working**. It supplies **speed** (the phone call that pre-clears the file), **information** (the grapevine), and **social control**. Suppress it and the formal system **slows and hardens**.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "The standard critiques of human relations",
+     "d": "**Pro-management bias** — happier workers as a route to output, not a good in themselves. **No place for conflict** or unions — **Clark Kerr's** \"**cow sociology**\": contented cows give more milk. **Methodologically weak** — small samples, observer effect, **Carey's** re-analysis found the data unsupportive.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Is Mayo still relevant?",
+     "d": "**2020 Q2(c).** Yes, but relocated. **Hybrid and platform work** has hollowed out the informal group; **team belonging** must now be **deliberately designed**. In Indian administration the informal group is the **batch, the cadre and the mess** — which explains both **cohesion** and **cadre parochialism**.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Human relations inside Indian administration",
+     "d": "The **Joint Consultative Machinery (1966)** institutionalises staff voice through **National, Departmental and Office Councils** with **compulsory arbitration**; **service associations** are the informal group made formal; the **behavioural competencies** of **Mission Karmayogi's FRAC** are Mayo's insight in a training framework.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "Barnard — functions of the executive",
+   "items": [
+    {
+     "t": "Barnard's definition of organisation",
+     "d": "\"A system of **consciously coordinated activities or forces of two or more persons**.\" Note what is coordinated — **activities, not people**. The organisation is a **cooperative system**, and it survives only while cooperation is **willingly renewed**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "The three executive functions",
+     "d": "**Maintain a system of communication**; **secure essential services from individuals**; **formulate and define purpose**. Barnard puts **communication first** — an organisation exists to the extent that its members can **reach one another**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Acceptance theory of authority",
+     "d": "**Authority resides in the subordinate, not the office.** A communication is authoritative only if the receiver **understands** it, believes it **consistent with organisational purpose** and with **personal interest**, and is **mentally and physically able** to comply. **The one who obeys confers the authority.**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "The zone of indifference",
+     "d": "The band of orders a subordinate obeys **without conscious question**. Its **width** is the real measure of managerial authority — widened by **inducements, fairness and legitimacy**, narrowed by **arbitrary or unlawful** commands. The **illegal transfer order** narrows it for everyone who watches.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Efficiency versus effectiveness, Barnard's sense",
+     "d": "**Effectiveness** = the **organisation's purpose** is achieved. **Efficiency** = the **individual's motives** are satisfied, so cooperation continues. **2023 Q1(b) quoted this**: efficiency is the capacity to offer **effective inducements in sufficient quantity** to maintain **equilibrium**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Economy of incentives",
+     "d": "Material incentives are **weak** beyond subsistence. Barnard ranks **non-material** ones higher — **prestige, participation, ideal benefaction, associational attractiveness** — and adds **persuasion**: changing what people **want**, not just what they **get**. The case against pay as the sole lever.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "The executive as moral creator",
+     "d": "The executive's distinctive task is \"**the creation of moral codes for others**\" — resolving conflicts between **codes** (legal, professional, personal, organisational) by **inventing a higher one**. This is Barnard's answer to \"**I was only obeying orders**\", and the reason he belongs in an ethics answer.",
+     "k": "quote",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Barnard applied to the Indian officer",
+     "d": "**CCS (Conduct) Rule 3(3)(iii)** requires oral directions to be **confirmed in writing** — an institutional device for **narrowing the zone of indifference** to unlawful commands. **T.S.R. Subramanian v. Union of India (2013)** directed exactly this, plus a **Civil Services Board** and **minimum tenure**.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "Simon — the decision-making school",
+   "items": [
+    {
+     "t": "Administrative Behavior's central claim",
+     "d": "**Simon (1947)** — **decision-making is the heart of administration**. The unit of analysis is not the **task** but the **decision premise**, and the organisation's real function is to **supply the premises** on which its members decide.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Fact and value premises",
+     "d": "Every decision mixes a **factual** premise (testable — will this work?) and a **value** premise (not testable — should it be done?). Administration can be **scientific** about facts; values come from **politics**. This is Simon's reconstruction of the dichotomy on a **defensible** footing.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Bounded rationality",
+     "d": "Human rationality is **bounded** by incomplete knowledge of alternatives, inability to foresee all consequences, and limited **computational capacity**. The decision-maker constructs a **simplified model** of the situation and behaves rationally **with respect to that model**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Satisficing",
+     "d": "Because search is costly, we do not **maximise** — we set an **aspiration level** and take the **first alternative that is good enough**. **Administrative man satisfices; economic man maximises.** **2020 Q1(e)**: administrative man bridges the **psychological** and the **rational** man.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Programmed and non-programmed decisions",
+     "d": "**2021 Q1(b).** **Programmed** — repetitive, handled by **habit, standard operating procedure and rules**; increasingly by **software**. **Non-programmed** — novel, ill-structured, handled by **judgement, intuition and heuristics**. Simon's two-dimensional taxonomy pairs each with its **traditional** and **modern** technique.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Decision-making as narrowing choice",
+     "d": "**2023 Q1(c) quoted it:** \"the process of decisions... is largely a **technique of narrowing choices**.\" Organisation narrows by **hierarchy, rules, training, communication channels and the vocabulary of the file** — long before the officer consciously deliberates.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Simon's phases of decision",
+     "d": "**Intelligence** (finding occasions for decision) → **Design** (developing alternatives) → **Choice** (selecting one) → **Review**. Drawn as a **funnel narrowing under bounded rationality**, this is one of the few diagrams that genuinely earns its space.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "Criticisms of Simon",
+     "d": "**Chris Argyris** — Simon's rationality **suppresses emotion and self-actualisation**, producing the very passivity he describes. **Waldo** — a value-free science of administration is impossible. **Others** — it explains **how** decisions are made, not **whose interests** they serve.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Simon inside the Indian file",
+     "d": "The **Cabinet Note** is a **premise-supplying device**: it fixes the alternatives before the Cabinet meets. **Incremental budgeting** is satisficing with a **previous year's base** as the aspiration level. The **Economic Survey's nudge chapter** is Simon's psychology arriving as official policy.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-2"
+    }
+   ]
+  },
+  {
+   "g": "Participative management — McGregor, Likert, Argyris",
+   "items": [
+    {
+     "t": "Theory X and Theory Y",
+     "d": "**McGregor (The Human Side of Enterprise, 1960)** — **X** assumes people **dislike work**, avoid responsibility and need **coercion and control**; **Y** assumes work is as natural as play, people exercise **self-direction** toward committed objectives, and seek responsibility. **2024 Q2(a).**",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-2"
+    },
+    {
+     "t": "Why Theory X is self-fulfilling",
+     "d": "The real force of McGregor's argument. Treat staff as untrustworthy — **multiple countersignatures, no delegation, punishment for error** — and they will **stop taking decisions**, confirming the assumption. India's **file culture** is a **Theory X system** that then complains of a **risk-averse bureaucracy**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Likert's four systems",
+     "d": "**System 1 exploitative-authoritative**, **2 benevolent-authoritative**, **3 consultative**, **4 participative group**. **System 4** performs best. Its mechanism is the **linking pin** — every supervisor is a **member of two groups**, carrying influence **upward** as well as downward.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Argyris's immaturity–maturity continuum",
+     "d": "Adults move from **passivity to activity**, **dependence to independence**, **shallow to deep interests**, **short to long time perspective**, **subordinate to equal position**, **low to high self-awareness**. Formal organisation **demands the immature end** — and gets **apathy, defensiveness and exit**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Argyris on organisational learning",
+     "d": "**Single-loop learning** corrects the **error**; **double-loop learning** questions the **governing rule** that produced it. Bureaucracies excel at the first and avoid the second — which is Crozier's vicious circle stated in learning terms.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-2"
+    },
+    {
+     "t": "The common thread",
+     "d": "All three argue that **structure shapes personality**, not the reverse. The apathetic official is a **product of the organisation's design**. Therefore the reform lever is **job design, delegation and participation**, not exhortation or training alone.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "Participation in Indian administration",
+     "d": "**Joint Consultative Machinery** for staff; **Gram Sabha** and **ward committees** for citizens; **Mission Karmayogi's** shift from **rule-based to role-based** competency; the **360-degree** input at empanelment. Each is **System 3 consultative**, rarely **System 4**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-2"
+    },
+    {
+     "t": "The limits of participative management in government",
+     "d": "Government has features the theory does not model: **statutory duties that cannot be delegated**, **hierarchical answerability to Parliament**, and decisions with **coercive effect on third parties**. Participation can democratise **how** a duty is performed; it cannot democratise **whether** it is performed.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 3,
+     "u": "I-2"
+    }
+   ]
+  }
+ ]
+}

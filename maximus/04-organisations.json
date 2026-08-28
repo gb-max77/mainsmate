@@ -1,0 +1,535 @@
+{
+ "id": "p04",
+ "pod": "Organisations and the Public Sector",
+ "units": [
+  "I-4",
+  "II-3"
+ ],
+ "blurb": "Paper I's organisation theory and Paper II's public undertakings are one subject: both ask what form an activity should take and who then answers for it. Read the theory and the Indian form side by side — the examiner rewards the candidate who shows they are the same question.",
+ "groups": [
+  {
+   "g": "Theories of organisation",
+   "items": [
+    {
+     "t": "The three streams",
+     "d": "**Classical** — structure, principles, one best way. **Neo-classical** — the informal group and human need inside that structure. **Modern** — **systems** and **contingency**: the organisation as an **open system** with **no single best design**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Systems theory",
+     "d": "**Katz and Kahn**, on **Bertalanffy's** general systems theory. The organisation **imports energy, throughputs, exports output** and takes **feedback**; it exhibits **negative entropy**, **homeostasis** and **equifinality** — the same end state reachable by **different routes**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "Why 'open system' matters administratively",
+     "d": "**2025 Q1(d).** A closed-system view treats failure as **internal** — bad staff, poor rules. An open-system view forces the **environmental** question: the scheme failed because the **ecology** — literacy, banking density, caste structure — did not supply what the design assumed.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-4",
+     "x": "Straight into I-7 ecology"
+    },
+    {
+     "t": "The socio-technical system",
+     "d": "**Trist and Bamforth's Tavistock** coal-mining studies — technical and social subsystems must be **jointly optimised**. Change the technology alone and performance falls. The direct Indian lesson: **digitising a process without redesigning the roles around it** reliably disappoints.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Contingency theory",
+     "d": "**2019 Q4(a), reprised in 2023 Q3(a).** There is **no one best way**; the right structure depends on **environment, technology and size**. **Burns and Stalker** — **mechanistic** structures suit stable environments, **organic** ones suit turbulence.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "External fit and internal fit",
+     "d": "**External fit** — structure matched to the **environment's** rate of change. **Internal fit** — the **subsystems consistent with one another**. **Lawrence and Lorsch** showed the trade-off: the greater the **differentiation** required by the environment, the harder and more costly the **integration**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "Woodward and Thompson on technology",
+     "d": "**Joan Woodward** — structure follows **production technology** (unit, mass, process). **James Thompson** — three **interdependence** types: **pooled** (coordinate by rules), **sequential** (by plans), **reciprocal** (by mutual adjustment). Use Thompson to say **why** a coordination mechanism fails.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Organisation theory is a loose set, not a theory",
+     "d": "**2023 Q3(a) quoted it.** Concede it and turn it: the field's plurality is **appropriate to its object**. A single theory of organisation would have to be **indifferent to purpose, technology, scale and culture** — and would therefore say nothing usable about any actual organisation.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "Contingency in Indian administrative design",
+     "d": "**Mechanistic** where predictability is the value — **treasury, examination, land records**. **Organic** where the environment is turbulent — **disaster response under the Incident Response System**, **war-room COVID management**, **Aspirational Districts** teams. The failure mode is running a **mechanistic** structure against an **organic** problem.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "The limits of contingency theory",
+     "d": "It is **descriptive, not predictive** — it names the variables without ranking them; it assumes managers can **choose** structure, when in government the structure is **statutory**; and it under-weights **power**, treating design as a technical rather than a **political** choice.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-4"
+    }
+   ]
+  },
+  {
+   "g": "Structure and forms of organisation",
+   "items": [
+    {
+     "t": "The three organisational forms compared",
+     "d": "**Department** — full ministerial control, budgeted through the legislature, no separate legal personality. **Corporation** — created by a **special statute**, autonomy defined by that statute. **Company** — incorporated under the **Companies Act, 2013**, flexible, easy to create and to wind up.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "Departmental undertaking",
+     "d": "**Maximum control, minimum flexibility.** Financed by the **Consolidated Fund**, staffed by **civil servants**, audited by the **CAG**, answerable through the minister. Examples: **Railways**, **Posts**, **All India Radio**, the **ordnance factories** before their 2021 corporatisation.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "Statutory corporation",
+     "d": "Created by a **special Act** which fixes its powers, finances and accountability — so autonomy is **as wide as the statute makes it**. Examples: **LIC (1956), FCI (1964), Airports Authority, Damodar Valley Corporation (1948)**, India's first. Its weakness: **amending the Act to change anything**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "Government company",
+     "d": "**Section 2(45), Companies Act 2013** — not less than **51%** paid-up capital held by government. Easy to form by executive decision, flexible on staffing and pay. The critique is constitutional: it **escapes legislative scrutiny** at birth — a public enterprise created **without a debate**.",
+     "k": "prov",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "Boards and commissions",
+     "d": "**2020 Q1(d).** A **board** is **plural-headed** for **deliberation and expertise** — CBDT, CBIC, Railway Board. A **commission** is usually **plural and independent** for functions requiring **insulation from the executive** — UPSC, EC, CIC, NHRC. Plurality buys **impartiality** and costs **speed**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "Single versus plural headship",
+     "d": "**Single** gives **promptness, clear responsibility, decisiveness** and is right for **executive** work. **Plural** gives **deliberation, representation of interests and protection from arbitrariness** and is right for **quasi-judicial, regulatory and advisory** work. Match the form to the **function**, not to the fashion.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Line, staff and auxiliary agencies",
+     "d": "**Line** performs the primary purpose (a district administration, a police station). **Staff** advises and plans **without command authority** (Cabinet Secretariat, planning cells). **Auxiliary** supplies common services (**GeM**, **CPWD**, Directorate of Printing). Confusing **line and staff authority** is the classic source of conflict.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "Chief executive — the four distinctions",
+     "d": "**Political** versus **permanent**; **single** versus **plural**; **real** versus **nominal**; and the **directly elected, indirectly elected, appointed** variants. In India the political executive is **real** and the permanent executive advises — the position settled in **Shamsher Singh v. State of Punjab (1974)**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Ad hoc and advisory bodies",
+     "d": "**Commissions of inquiry** under the **Commissions of Inquiry Act, 1952**; **task forces**; **committees of secretaries**; **standing advisory councils**. Their value is **speed and specialist input**; their risk is **decision avoidance** — appointing a committee **is** a decision, usually to postpone one.",
+     "k": "prov",
+     "sl": "attack",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Matrix and project structures",
+     "d": "**Dual reporting** — functional and project. It fits **time-bound, multi-disciplinary** work and violates **unity of command** by design. Indian instances: **Smart City SPVs**, **mission directorates**, the **District Disaster Management Authority** pulling line departments under one incident commander.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-4"
+    }
+   ]
+  },
+  {
+   "g": "Headquarters and field",
+   "items": [
+    {
+     "t": "The division of labour between them",
+     "d": "**Headquarters** — policy, rules, standards, resource allocation, evaluation. **Field** — application to the concrete case, local intelligence, delivery. The relationship fails when headquarters does **case work** and the field is left doing **reporting**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Deconcentration is not decentralisation",
+     "d": "A field office is **headquarters relocated**, not authority transferred. **Deconcentration** disperses **offices**; **decentralisation** transfers **decisions**. Most Indian 'decentralisation' announcements are the first kind — a distinction worth a mark by itself.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "Why field agencies are necessary",
+     "d": "**Local knowledge**, **speed of response**, **adaptation to variation**, and the **legitimacy of a visible official**. **2025 Q2(b) asked it of MGNREGA and Swachh Bharat**: no central design survives contact with **11 agro-climatic zones and 2.55 lakh gram panchayats** without field discretion.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "The recurring HQ–field pathologies",
+     "d": "**Over-reporting** (the field spends its day feeding dashboards), **rule rigidity** (no room for local variation), **resource dependence** (funds released late in the year), and **status distance** (the field officer is heard as a subordinate, not as a source of facts).",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "How India tries to fix it",
+     "d": "**Video-conferencing review (PRAGATI)** puts the field directly before the apex; **Aspirational Districts** central prabhari officers **live in the district**; **DISHA** committees chaired by MPs review at district level; **e-Office** removes the physical file's delay. Distance shrank; **status distance did not**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-4"
+    },
+    {
+     "t": "Delegation, deconcentration, decentralisation, devolution",
+     "d": "**Delegation** — specified powers transferred, responsibility retained, **revocable**. **Deconcentration** — field offices without transfer of authority. **Decentralisation** — genuine transfer to lower levels. **Devolution** — **statutory** transfer of **functions, funds and functionaries** to an **autonomous elected body**, as in the **73rd and 74th Amendments**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-4"
+    }
+   ]
+  },
+  {
+   "g": "Regulatory authorities",
+   "items": [
+    {
+     "t": "Why regulators exist",
+     "d": "**Natural monopoly** (transmission, ports), **information asymmetry** (drugs, insurance), **externalities** (pollution), and the need for a **credible commitment** that policy will not change with the government. Regulation substitutes **rule-making** for **ownership**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "The Indian regulatory map",
+     "d": "**RBI**; **SEBI (1992)**; **TRAI (1997)**; **CERC and SERCs** under the **Electricity Act, 2003**; **IRDAI**; **PNGRB**; **CCI** under the **Competition Act, 2002**, amended **2023** with **deal-value thresholds**; **FSSAI**; **IBBI (2016)**; the **Data Protection Board** under the **DPDP Act, 2023**, Rules notified **2025**.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "The regulator's three functions in one body",
+     "d": "It **makes** rules, **administers** them and **adjudicates** disputes — legislative, executive and judicial power fused. That fusion is its **efficiency** and its **constitutional problem**: the safeguard is **appeal to a tribunal** (TDSAT, APTEL, SAT, NCLAT) and **judicial review**.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "Are regulators independent?",
+     "d": "**2024 Q2(c) and 2019 Q3(c) both asked.** On paper — fixed tenure, statutory powers, funded by fees. In practice — **appointments by government**, **policy directions** the parent ministry may issue, **post-retirement placements**, and the **revolving door** with the regulated industry.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "Regulatory capture",
+     "d": "**Stigler** — regulation is **acquired by the industry** and operated for its benefit, because the industry has **concentrated interest and superior information** while consumers are **diffuse**. **Cultural capture** is subtler: the regulator adopts the industry's **frame of the problem** without any corruption.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "The demise of the arbitrator state?",
+     "d": "**2019 Q3(c).** The state did not withdraw — it **changed instruments**. It stopped **producing** and started **rule-making**, and in doing so acquired **more** points of intervention. Regulation is the **arbitrator state intensified**, not abolished.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "India's missing regulatory law",
+     "d": "The **2nd ARC's 13th Report** and the **FSLRC (Justice B.N. Srikrishna, 2013)** both found **overlap, weak accountability and no common statute**. FSLRC's **Indian Financial Code** and unified regulator were never enacted; the **NITI Aayog** paper on a common regulatory framework remains a paper.",
+     "k": "cmte",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "TRAI as the examinable instance",
+     "d": "**2024 Q5(c) asked it directly.** TRAI protects consumers through **tariff orders**, **quality-of-service regulations**, **mobile number portability**, the **Do Not Disturb** framework, and consultation papers with **mandatory public comment**. Its recommendations on **licensing** are **not binding** on the government — the limit of its independence.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-4"
+    }
+   ]
+  },
+  {
+   "g": "Public-private partnership",
+   "items": [
+    {
+     "t": "What a PPP actually is",
+     "d": "A **long-term contract** in which a private partner **finances, builds and operates** an asset and is repaid over the concession from **user charges or annuity**, with **risk allocated to whoever can bear it best**. It is a **mode of delivery**, not a source of money.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "Kelkar Committee's governing principle",
+     "d": "**Committee on Revisiting and Revitalising the PPP Model (Vijay Kelkar, 2015)** — \"**PPP should not be seen as a source of funding but as a mode of delivering better services**.\" It recommended an **Infrastructure PPP Adjudication Tribunal**, an independent regulator, and **renegotiation as a normal event**, not a scandal.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "The Indian PPP toolkit",
+     "d": "**Viability Gap Funding**; **Model Concession Agreements**; the **Hybrid Annuity Model** in highways (**40% construction support, 60% annuity**) which restored bankability after BOT-toll failures; **PPPAC** appraisal; **InvITs** for recycling completed assets.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "Where PPP fails",
+     "d": "**Optimistic traffic and demand forecasts**; **renegotiation** after award, which converts competitive bidding into a fiction; **contingent liabilities** that never appear in the budget; and **thin markets** where two bidders make competition notional.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-4"
+    },
+    {
+     "t": "The accountability question",
+     "d": "**2023 Q2(c) and 2021 Q2(c).** The citizen's remedy against a concessionaire is **contractual**, not **constitutional** — no **RTI** as of right, no **Article 226** against a private party except where it discharges a **public function**, no **CAG** audit unless the contract provides for it.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "PPP as a governance form",
+     "d": "**2021 Q2(c) framed it this way.** It has moved from a **procurement technique** to a **structure of governance**: the state becomes **contract manager**, and its critical capability shifts from **engineering to negotiation, risk pricing and enforcement** — capacities Indian departments were never built to hold.",
+     "k": "link",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "The 2nd ARC on PPP",
+     "d": "**2023 Q8(a) asked exactly this.** The 2nd ARC supported PPP for infrastructure but insisted on **transparent competitive bidding**, **clear risk-sharing written into the concession**, an **independent regulator** for each sector, and **grievance redress for users** rather than for parties alone.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-4"
+    },
+    {
+     "t": "PPP and the entropy of models",
+     "d": "**2025 Q2(c).** A **closed** model is self-contained and predictable; an **open** one exchanges with its environment and resists decay. PPP forces a **closed** bureaucratic organisation into an **open** contractual environment — importing **market energy** and also **market risk** it cannot price.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-4"
+    }
+   ]
+  },
+  {
+   "g": "The public sector in India",
+   "items": [
+    {
+     "t": "Why India built a public sector",
+     "d": "**Industrial Policy Resolution, 1956** and the **Mahalanobis** second plan: **capital scarcity**, the need for **heavy industry** no private investor would fund, **balanced regional development**, **employment** and the avoidance of **concentration of economic power**. Nehru's \"**temples of modern India**.\"",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "The 1956 Resolution's three schedules",
+     "d": "**Schedule A** — 17 industries exclusively for the state (arms, atomic energy, railways, heavy industry). **Schedule B** — 12 industries progressively state-owned. **Schedule C** — the rest, left to the private sector. This is the architecture the **1991 policy** dismantled.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-3"
+    },
+    {
+     "t": "The 1991 turn",
+     "d": "**New Industrial Policy, 1991** — reserved industries cut from **17 to 8**, then to **2** (atomic energy, railways) by 2001; **licensing abolished** except for a short list; **MRTP** pre-approval scrapped; loss-making units referred to the **BIFR**; **disinvestment** begun.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-3"
+    },
+    {
+     "t": "The current policy",
+     "d": "**New Public Sector Enterprise Policy, 2021** — **four strategic sectors** (atomic energy/space/defence; transport and telecom; power, petroleum, coal and minerals; banking, insurance and financial services) with a **bare-minimum** presence; **privatisation or closure** everywhere else.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "Maharatna, Navratna, Miniratna",
+     "d": "A **graded autonomy** scheme rather than a status symbol. **Maharatna** may invest up to **₹5,000 crore** or **15% of net worth** in a single project without government approval; **Navratna** up to **₹1,000 crore**; **Miniratna I** up to **₹500 crore**. Autonomy here means **financial delegation**, nothing more.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "The MoU system",
+     "d": "**Arjun Sengupta Committee, 1987-88** — a negotiated **performance contract** between the enterprise and its ministry, scored annually on **financial and non-financial** parameters. India's earliest and most durable **NPM** device, now run by the **Department of Public Enterprises**.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 3,
+     "u": "II-3"
+    },
+    {
+     "t": "Performance beyond the balance sheet",
+     "d": "**2019 Q7(a).** A PSU carries **social obligations** a private firm does not — universal service, strategic supply, regional development, employment. Judge it on **capacity utilisation, technology absorption, safety, energy intensity, CSR under Section 135** and **social cost-benefit**, not profit alone.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "The public sector's real record",
+     "d": "Both things are true. It built **capabilities no private firm would have** — **ISRO, BHEL, ONGC, IOCL, the DRDO chain, LIC's household savings mobilisation**. It also produced **chronic loss-makers**, **overstaffing** and a **licence-era rent structure**. Concede both before taking a position.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-3"
+    },
+    {
+     "t": "Evans's embedded autonomy",
+     "d": "**Peter Evans (Embedded Autonomy, 1995)** — a developmental state needs a bureaucracy **autonomous** enough to resist capture and **embedded** enough in industry to know what it needs. India's **space and atomic energy** programmes had both; the **licensing system** had embeddedness without autonomy — and became **capture**.",
+     "k": "link",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-3"
+    }
+   ]
+  },
+  {
+   "g": "Autonomy, accountability and disinvestment",
+   "items": [
+    {
+     "t": "Is autonomy a myth?",
+     "d": "**2024 Q1(c).** Largely, yes. Autonomy is granted by **executive delegation, not statute**; the **administrative ministry** controls the **board's composition**, the **capex approval**, and the **CMD's appointment through the PESB**. What exists is **delegated financial power**, not independence.",
+     "k": "critique",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "The autonomy–accountability paradox",
+     "d": "The classic statement: **the more autonomy an enterprise is given, the weaker the citizen's chain of accountability becomes**; the tighter the accountability, the less it can behave commercially. There is **no design that removes the tension** — only choices about where to sit on it.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "How PSUs are actually controlled",
+     "d": "**Parliament** — the **Committee on Public Undertakings (COPU)**, 22 members, no ministers. **CAG** — commercial audit under **Section 143(5)-(6), Companies Act 2013**, including **supplementary audit** and the **non-review certificate**. **Executive** — DPE guidelines, presidential directives, the **PESB** for appointments.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "Appleby's dissent on PSU audit",
+     "d": "Worth quoting because it cuts against the grain: **Appleby opposed bringing public enterprises under CAG audit**, arguing that an audit designed for **regularity** would smother **commercial risk-taking**. The counter-argument is that **public money without public audit** is indefensible.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 3,
+     "u": "II-3"
+    },
+    {
+     "t": "Disinvestment — the four routes",
+     "d": "**Minority stake sale** (revenue, no control change); **strategic sale** with transfer of management (**Air India to Tata, 2022**; **VSNL, BALCO, Hindustan Zinc** earlier); **ETF route** (**CPSE ETF, Bharat 22**); and **asset monetisation** under the **NMP**, which transfers **operation** without **ownership**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "The case for and against disinvestment",
+     "d": "**For** — fiscal space, better capital allocation, exposure to competition, and the state exiting sectors where it has **no comparative advantage**. **Against** — sale of **profit-making** assets to meet a **revenue** target, loss of the **strategic and social obligation** layer, and **employment** effects. **2024 Q4(a).**",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "Has liberalisation improved efficiency?",
+     "d": "**2025 Q4(a).** Evidence is mixed and should be written that way: competition **did** force efficiency in **telecom and aviation**; **listed CPSEs** improved governance under **SEBI's LODR**. But **valuation timing**, **strategic sale to a thin market**, and the **absence of a post-privatisation regulator** repeatedly weakened outcomes.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-3"
+    },
+    {
+     "t": "PSU board governance",
+     "d": "**SEBI's LODR** requires listed CPSEs to have **independent directors**, but a large share of positions stay **vacant** and independent directors are **appointed by the same ministry** that owns the shares. **Independence appointed by the controlling shareholder is a contradiction in terms.**",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 3,
+     "u": "II-3"
+    },
+    {
+     "t": "The disinvestment reform agenda",
+     "d": "**Disinvestment Commission (G.V. Ramakrishna, 1996)** — a **National Investment Fund** ring-fencing proceeds so they finance **capital**, not **revenue** deficit; professional boards insulated from the ministry; and **DIPAM** as a single, transparent, calendared process rather than a year-end scramble.",
+     "k": "cmte",
+     "sl": "close",
+     "tr": 3,
+     "u": "II-3"
+    },
+    {
+     "t": "Departmental to corporate — a live instance",
+     "d": "The **ordnance factories** were converted into **seven Defence PSUs (2021)** — the largest recent transfer of form. Watch it as the natural exam case: did **corporatisation** deliver **autonomy**, or reproduce the same ministry control through a **shareholding department**?",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-3"
+    }
+   ]
+  }
+ ]
+}

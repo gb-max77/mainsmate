@@ -1,0 +1,502 @@
+{
+ "id": "p10",
+ "pod": "Public Policy and Planning",
+ "units": [
+  "I-10",
+  "II-5"
+ ],
+ "blurb": "Policy theory in Paper I and India's planning machinery in Paper II describe the same chain — from agenda to outcome. Implementation and evaluation are the reliably asked slots; NITI Aayog's limited effectiveness is Paper II's live question.",
+ "groups": [
+  {
+   "g": "What policy is, and the models",
+   "items": [
+    {
+     "t": "Dye's definition",
+     "d": "Policy is \"**whatever governments choose to do or not to do**.\" The value of the second half is the whole point — **non-decision is policy**. India's failure to enact a **Public Services Bill** or a national **grievance redress law** is a policy, made by omission and rarely examined as one.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Easton's systems model",
+     "d": "**Demands and supports** enter as **inputs**; the political system is the **black box** where conversion occurs; **outputs** are policies; **feedback** alters the next round of inputs. **Withinputs** are demands generated **inside** the system by officials themselves — the concept most useful for India.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-10"
+    },
+    {
+     "t": "The institutional and group models",
+     "d": "**Institutional** — policy is whatever the institution's structure and procedure permit; change the institution and you change the policy. **Group (Bentley, Truman)** — policy is the **equilibrium** reached in the struggle between interest groups, and shifts as their relative power shifts.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-10"
+    },
+    {
+     "t": "Elite theory",
+     "d": "**Mills, Mosca, Pareto** — policy reflects the **preferences of a governing elite** and flows **downward**, not upward from mass demand. Its Indian bite: policy on **land, capital and taxation** has been consistently more responsive to **organised** than to **numerous** interests.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-10"
+    },
+    {
+     "t": "Rational choice and the maximum social gain",
+     "d": "**2019 Q5(c).** The rational model's test is **maximum social gain** — no policy should be adopted whose costs exceed its benefits, and among alternatives choose the greatest **net** benefit. It is rarely achieved because gains and costs fall on **different people**, and no politically neutral way exists to weigh them.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Kingdon's multiple streams",
+     "d": "**Problem, policy and politics** streams flow independently. A **policy window** opens when a **focusing event** or a change of government couples them, and a **policy entrepreneur** who has kept a solution ready pushes it through. This is the sharpest model for explaining **timing**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Kingdon proved in Indian policy",
+     "d": "**GST (2016)** — a solution debated since 2000 that passed when a **political window** opened. **IBC (2016)** — the **twin balance sheet** problem coupled to a ready draft. **Aadhaar**, the **2020 farm laws and their repeal**, and the **Nirbhaya**-driven **Criminal Law Amendment, 2013** all follow the same shape.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Punctuated equilibrium",
+     "d": "**Baumgartner and Jones** — policy is **long stability punctuated by rapid change**, because attention is scarce and issues rise onto the agenda in bursts. It reconciles **incrementalism** (most years) with **transformation** (rare years), which neither model alone can explain.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-10"
+    },
+    {
+     "t": "Wicked problems",
+     "d": "**2021 Q7(a).** **Rittel and Webber** — a wicked problem has **no definitive formulation**, **no stopping rule**, solutions that are **better or worse, not true or false**, **no immediate test**, every attempt is **consequential**, and each is **essentially unique**. Climate adaptation, urban air quality and antimicrobial resistance are wicked.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Is the Indian state prepared for wicked problems?",
+     "d": "Partly. It handles **tame problems at scale** superbly — vaccination, elections, DBT. Wicked problems need **cross-ministry authority**, **long time horizons beyond electoral cycles**, **tolerance of failure**, and **adaptive, iterative delivery** — none of which the **annual budget, transferable officer and audit regime** supply.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-10"
+    }
+   ]
+  },
+  {
+   "g": "Agenda setting and formulation",
+   "items": [
+    {
+     "t": "Who sets the agenda",
+     "d": "**Cobb and Elder** distinguish the **systemic agenda** (issues the public discusses) from the **institutional agenda** (issues government is actually acting on). Movement between the two is the political act — and most issues never make the crossing.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-10"
+    },
+    {
+     "t": "Non-decision making",
+     "d": "**Bachrach and Baratz's second face of power** — the ability to **keep an issue off the agenda** entirely, so no decision is ever taken and no conflict is ever visible. **2021 Q8(b)** asked about groups denying others the opportunity; this is the concept it wanted.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Policy formulation in India",
+     "d": "The chain: **ministry drafts → inter-ministerial consultation → Ministry of Law and Finance concurrence → Cabinet Note → Committee of Secretaries → Cabinet or its committee → legislation or executive order**. **NITI Aayog** enters as adviser, and the **PMO** increasingly as originator.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "Pre-legislative consultation",
+     "d": "The **Pre-Legislative Consultation Policy, 2014** requires draft legislation and subordinate rules to be placed in the public domain for **30 days** with an explanatory note and a summary of feedback. It is a **policy, not a statute**, and compliance is inconsistent — one of the cheapest available governance upgrades.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "Evidence-based policy",
+     "d": "**2020 Q6(c).** Its instruments in India: **NSSO/PLFS/NFHS** survey data, **NITI's National Data and Analytics Platform**, **randomised evaluations** (J-PAL's work on Haryana immunisation), and **DMEO** evaluations. Its enemies are **timeliness**, **data gaps**, and the fact that **evidence arrives after the decision**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Why political realities defeat evidence",
+     "d": "Evidence answers **'what works'**; politics answers **'for whom, when and at whose cost'** — a different question. Where evidence recommends a policy with **concentrated losses and diffuse gains** (subsidy reform, user charges, land pooling), it loses reliably, and calling that irrational misdescribes it.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "Tacit knowledge in policy",
+     "d": "**2025 Q8(b).** **Polanyi** — \"we know more than we can tell.\" The field officer's judgement about which village will cooperate, the veteran's sense of when an order will be resisted: real knowledge, **not codifiable**, lost when tenure is short. It complements evidence; it cannot **substitute** for it, because it is **unverifiable and prone to bias**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "State theories and policy formulation",
+     "d": "**Pluralist** — the state as a neutral arena for competing groups. **Elitist** — a cohesive elite decides. **Marxist** — the state as an instrument or a **relatively autonomous** manager of the interests of capital (**Poulantzas**). **Neo-liberal** — a state whose job is to secure markets. **The theory you hold determines which reform you think possible.**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-10"
+    }
+   ]
+  },
+  {
+   "g": "Implementation",
+   "items": [
+    {
+     "t": "Pressman and Wildavsky",
+     "d": "**Implementation (1973)** — the **complexity of joint action**. With many **clearance points**, each requiring agreement, the probability of completion **collapses multiplicatively**: even 90% agreement at each of ten points leaves about a **35%** chance of success. Their subtitle says it: **great expectations dashed**.",
+     "k": "thinker",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Clearance points, Indian version",
+     "d": "A centrally sponsored scheme passes **Union ministry → State department → district → block → panchayat**, with **funds, guidelines, staff and approvals** each moving separately. **Jal Jeevan Mission's** convergence problem is Pressman and Wildavsky at scale — and **PFMS** exists to shorten exactly this chain.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "Top-down and bottom-up",
+     "d": "**Top-down (Sabatier and Mazmanian)** — start from the statute's objectives and ask why they were not met; fix by clearer goals and tighter control. **Bottom-up (Lipsky, Hjern)** — start from the **street-level actor** and ask what she actually faces; fix by discretion, resources and realistic norms.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "Lipsky's street-level bureaucracy",
+     "d": "\"The decisions of street-level bureaucrats... **effectively become the public policies they carry out**.\" Facing **demand that always exceeds resources**, they develop **coping routines** — rationing, creaming, routinising, stereotyping — and those routines **are** the policy the citizen experiences.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "India's street-level bureaucrats, named",
+     "d": "The **ASHA**, the **Anganwadi worker**, the **patwari**, the **PDS dealer**, the **constable**, the **primary school teacher**, the **electricity lineman**. Policy is written for them and experienced **as them**. Any implementation answer that does not name them stays abstract.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Sabatier's advocacy coalition framework",
+     "d": "Policy change occurs within a **subsystem** of competing **advocacy coalitions** bound by shared **core beliefs**, over a horizon of **a decade or more**, driven by **external shocks** and **policy-oriented learning**. It explains why some debates — the OPS-NPS argument, forest rights — never resolve, only realign.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-10"
+    },
+    {
+     "t": "The classic implementation gaps in India",
+     "d": "**Funds** arriving late in the financial year; **functionaries** absent or answerable elsewhere; **guidelines** too rigid for local variation; **capacity** at the last mile; **information** not reaching the beneficiary; and **no consequence** for non-delivery. Name the gap the question is about.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "What has actually improved implementation",
+     "d": "Be specific and evidence-led: **DBT** removed intermediation — **₹3.48 lakh crore** cumulative savings and subsidy share down to about **9%**; **PFMS** made release traceable; **Aadhaar-based authentication** cut duplication; **PRAGATI** created apex-level unblocking; **geo-tagged asset monitoring** made physical verification cheap.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "The cost of that improvement",
+     "d": "The honest counter. **Authentication failure excludes** the very poorest — the elderly, manual labourers with worn fingerprints, those without connectivity. **Efficiency in disbursement is not the same as accuracy in entitlement**, and exclusion errors are less visible than inclusion errors because the excluded do not appear in the data.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-10"
+    }
+   ]
+  },
+  {
+   "g": "Monitoring, evaluation and review",
+   "items": [
+    {
+     "t": "Monitoring versus evaluation",
+     "d": "**Monitoring** is **continuous** and asks whether the plan is being followed — inputs, outputs, timelines. **Evaluation** is **periodic** and asks whether it **worked** — outcomes, impact, attribution, and whether the theory behind the design was right. Monitoring cannot substitute for evaluation, and India does far more of it.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "The evaluation types",
+     "d": "**Formative** (during, to improve design), **summative** (after, to judge worth), **process** (was it implemented as intended), **impact** (what changed because of it), **cost-benefit and cost-effectiveness**, and **participatory** evaluation by the beneficiaries themselves.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-10"
+    },
+    {
+     "t": "The attribution problem",
+     "d": "The hardest question in evaluation: would the outcome have occurred **anyway**? The answer requires a **counterfactual** — randomised assignment, difference-in-differences, regression discontinuity. Without one, a rising indicator proves **correlation with a scheme**, not its effect, however large the dashboard number.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "India's evaluation machinery",
+     "d": "**Development Monitoring and Evaluation Office (DMEO)** in NITI Aayog, successor to the **Programme Evaluation Organisation (1952)**; the **Output–Outcome Monitoring Framework** with the Finance Ministry; **CAG performance audits**; and **social audit**. Coverage remains thin relative to the number of schemes.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-10"
+    },
+    {
+     "t": "Without evaluation, formulation is redundant",
+     "d": "**2024 Q8(c).** The argument: a policy system without evaluation **cannot learn**, so it repeats designs that failed and cannot defend those that worked. **Argyris's** single-loop learning at best. The corrective is a **statutory evaluation requirement with published results** and a **sunset clause** on schemes that fail it.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Policy analysis and its limits",
+     "d": "**2025 Q5(c), 2020 Q5(c).** Analysis is crippled when it **omits alternatives** — comparing a scheme only against doing nothing — and when it **truncates outcomes**, counting the intended effect and ignoring displacement, substitution and distributional consequences.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Policy analysis as legitimation",
+     "d": "**2020 Q5(c) put it sharply.** Analysis commissioned **after** a decision, with terms of reference that foreclose the answer, becomes a **legitimation device** — the appearance of rigour attached to a settled conclusion. The safeguard is **independence of the evaluator and publication of the terms of reference**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-10"
+    },
+    {
+     "t": "Cost-benefit analysis",
+     "d": "**2023 Q5(c).** It **forces the alternatives to be compared in one unit** and makes assumptions explicit. Its limits: valuing **non-marketed goods** (a life, a forest, a heritage site), choosing the **discount rate** — which decides how much the future counts — and its silence on **who** bears costs and who takes benefits.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-10"
+    }
+   ]
+  },
+  {
+   "g": "The planning machinery in India",
+   "items": [
+    {
+     "t": "Planning before independence",
+     "d": "**M. Visvesvaraya's Planned Economy for India (1934)**; the **National Planning Committee (1938)** under **Nehru**; the **Bombay Plan (1944)** by eight industrialists; **M.N. Roy's People's Plan**; **Gandhian Plan (S.N. Agarwal)**. India had a **planning consensus before it had a state** — worth one line in any planning answer.",
+     "k": "cmte",
+     "sl": "open",
+     "tr": 3,
+     "u": "II-5"
+    },
+    {
+     "t": "The Planning Commission",
+     "d": "Created by a **Cabinet Resolution, 15 March 1950** — **never a constitutional or statutory body**. Chaired by the **Prime Minister**, with a Deputy Chairman of Cabinet rank. It formulated the Plans, allocated **Plan assistance** to States, and evaluated implementation through the **PEO**.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "The National Development Council",
+     "d": "Also created by **resolution (1952)** — **PM, all Chief Ministers, Union ministers and Planning Commission members**. It **approved** the Plan, reviewed its working and recommended measures for national resources. Its purpose was **federal legitimation** of a Plan drafted centrally; in practice it **ratified rather than shaped**.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "The Gadgil formula",
+     "d": "The basis of **Plan assistance** to States from **1969**, revised as **Gadgil–Mukherjee (1991)**: **population 60%, per capita income 25%, fiscal performance 7.5%, special problems 7.5%**. It mattered because the Planning Commission — a **non-statutory body** — was distributing **transfers** alongside the constitutional **Finance Commission**.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 3,
+     "u": "II-5"
+    },
+    {
+     "t": "Why the Planning Commission was criticised",
+     "d": "**No constitutional standing** yet real allocative power; **one-size-fits-all** schemes imposed on very different States; a **Plan–non-Plan** distinction that starved **maintenance** to fund new assets; **duplication** with the Finance Commission; and irrelevance to a **liberalised economy** where the state no longer directed investment.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-5"
+    },
+    {
+     "t": "Indicative planning",
+     "d": "The **French model** adopted from the **Eighth Plan (1992)**. The state ceased **directing** and began **signalling** — projections, priorities and incentives to guide private investment rather than allocate it. The Plan became a **statement of intent** with the **budget** as its only enforcement.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "The end of the Plan–non-Plan distinction",
+     "d": "**Rangarajan Committee (2011)** recommended abolition; implemented from **2017-18**. The distinction had produced a perverse incentive — build a school (Plan) and underfund its teachers and repairs (non-Plan). Expenditure is now classified as **revenue and capital**, which is the economically meaningful split.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-5"
+    },
+    {
+     "t": "The unified plan problem",
+     "d": "**2023 Q3(b).** Preparing one holistic national plan is hard because most subjects are on the **State List**, States have **divergent capacities and priorities**, data arrives at **different frequencies**, and **electoral cycles differ** across the federation. A single plan requires a **uniformity the Constitution deliberately denies**.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    }
+   ]
+  },
+  {
+   "g": "NITI Aayog and the post-Plan era",
+   "items": [
+    {
+     "t": "NITI Aayog's composition",
+     "d": "**Cabinet Resolution, 1 January 2015.** **PM as Chairperson**; a **Vice-Chairperson**; **full-time and ex-officio members**; **special invitees**; a **CEO** of Secretary rank; the **Governing Council** of all Chief Ministers and Lieutenant Governors; and **Regional Councils** for specific issues.",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "What changed with NITI",
+     "d": "From **allocation to advice** — no funds to distribute, so no leverage. From **top-down to 'cooperative and competitive federalism'**. From **five-year plans to strategy documents** — the **Three-Year Action Agenda**, **Seven-Year Strategy**, **Fifteen-Year Vision**, now **Viksit Bharat @2047**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "NITI's actual instruments",
+     "d": "**Indices** — SDG India Index, Composite Water Management, School Education Quality, Health, Export Preparedness, **Fiscal Health Index** (first edition **January 2025**, Odisha first among 18 major States; **2026 edition released 11 March 2026**). Plus **Aspirational Districts and Blocks**, **DMEO** evaluation, and the **National Data and Analytics Platform**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "The National Data and Analytics Platform",
+     "d": "**2024 Q2(a) asked it directly.** A single interoperable portal for government datasets with standardised metadata and open access — its claim is the **democratisation of data**, letting States, researchers and citizens use the same evidence base as the Union. Its limits are **data quality at source, update frequency and coverage of State data**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "Why NITI's effectiveness is limited",
+     "d": "**2025 Q1(d) asked it.** It has **no funds** and therefore no leverage; its recommendations are **not binding**; the **Finance Ministry** controls transfers and the **PMO** sets priorities; the **Governing Council** meets infrequently; and an **index without a consequence** changes behaviour only where a State chooses to care about rank.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "The case that NITI works as designed",
+     "d": "Argue the other side too. It was **never meant** to allocate — that was the criticism of its predecessor. As a **think tank plus federal convener**, it produced the **MPI**, the **SDG index**, **Aspirational Districts** (a genuinely new delivery model), and a **language of competitive federalism** that States now use themselves.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-5"
+    },
+    {
+     "t": "Centrally sponsored schemes",
+     "d": "The real fiscal instrument that replaced Plan transfers. **Chaturvedi Committee (2011)** and the **Sub-Group of Chief Ministers (Shivraj Singh Chouhan, 2015)** rationalised them into **core of the core, core and optional**, with **60:40** sharing (**90:10** for North-Eastern and Himalayan States). States argue they **crowd out State priorities** through mandatory matching.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "Political interference in the development process",
+     "d": "**2023 Q3(c).** Its specific administrative forms: **scheme naming and launch timing** around elections, **beneficiary selection pressure**, **project location** decided by constituency rather than need, and **transfer of the officer who resists**. The structural remedies are **objective targeting criteria, published allocation formulas and social audit**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-5"
+    }
+   ]
+  },
+  {
+   "g": "Decentralised planning",
+   "items": [
+    {
+     "t": "The constitutional mandate",
+     "d": "**Article 243ZD** — every State shall constitute a **District Planning Committee** to consolidate the plans prepared by panchayats and municipalities into a **draft district development plan**, with **four-fifths of members elected** from among panchayat and municipal members. **Article 243ZE** requires a **Metropolitan Planning Committee** for areas above ten lakh.",
+     "k": "cmte",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "Why DPCs do not plan",
+     "d": "They are **constituted late or not at all** in several States; they lack **technical planning staff**; the **funds they would plan for are tied** to scheme guidelines set elsewhere; **parastatals and mission societies** bypass them entirely; and the **draft plan** they produce has no statutory consequence.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-5"
+    },
+    {
+     "t": "Decentralised planning done properly",
+     "d": "**Kerala's People's Plan Campaign (1996)** devolved **35-40% of the State Plan outlay** to local bodies with **untied funds**, mass **Gram Sabha** participation, **volunteer resource persons** and technical **expert committees** to vet projects. It is the reference case because it transferred **money and technical capacity together**.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-5"
+    },
+    {
+     "t": "Decentralised planning and social justice",
+     "d": "**2025 Q5(b).** It **is** context-sensitive — local bodies know which hamlet lacks water. But **local politics reproduces local inequality**: the dominant caste's ward is prioritised, and the marginalised may be **better protected by a rule made far away** than by a decision made nearby. Decentralisation needs **earmarking and social audit** to be equitable.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "The planning-devolution gap",
+     "d": "**Signature argument.** The **73rd and 74th Amendments** made local bodies **planning authorities**; the **fiscal and administrative system** kept planning **central**. Money arrives as **tied scheme funds** with pre-set components, so the panchayat's plan can only **ratify** what has already been decided.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-5"
+    },
+    {
+     "t": "What would fix it",
+     "d": "**Untied funds** as a meaningful share of local receipts — which is exactly what **16th Finance Commission local body grants** could become if largely untied; **technical planning support** at block level; **activity mapping** that assigns each of the 29 subjects to a specific tier; and **making the DPC's plan a statutory input** to the State budget.",
+     "k": "cmte",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-5"
+    }
+   ]
+  }
+ ]
+}

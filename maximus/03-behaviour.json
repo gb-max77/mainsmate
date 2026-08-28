@@ -1,0 +1,498 @@
+{
+ "id": "p03",
+ "pod": "Administrative Behaviour",
+ "units": [
+  "I-3"
+ ],
+ "blurb": "Roughly one Paper-I question in ten, and reliably one 10-marker. Decision models, motivation and leadership rotate; communication and morale are the under-prepared slots where marks are cheapest.",
+ "groups": [
+  {
+   "g": "Decision-making beyond Simon",
+   "items": [
+    {
+     "t": "The rational-comprehensive model",
+     "d": "Define the problem, rank **all** goals, list **all** alternatives, cost **all** consequences, choose the **optimum**. It is the standard against which every other model is a **retreat** — and it is impossible for exactly the reasons **Simon** gave.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Lindblom's incrementalism",
+     "d": "**'The Science of Muddling Through' (1959)** — **successive limited comparisons**. Only alternatives **marginally different from the status quo** are examined; means and ends are chosen **together**; the test of a good policy is **agreement**, not correspondence to an objective.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Partisan mutual adjustment",
+     "d": "Lindblom's answer to the charge of drift: **coordination without a coordinator**. Many partisans, each watching a **different** value, adjust to one another; the resulting policy attends to **more** interests than any central planner could hold in mind.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Etzioni's mixed scanning",
+     "d": "Two lenses. A **broad-angle** scan for **fundamental** decisions (direction, at low detail) and a **zoom** for **incremental** ones inside that frame. It rescues incrementalism from **conservatism** and rationalism from **paralysis** — the practical Indian model.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Mixed scanning, Indian illustration",
+     "d": "**Viksit Bharat @2047** and NITI's strategy documents are the **broad scan**; the **annual budget** is the **incremental zoom** inside it. The **National Education Policy 2020** set the frame; **curricular and regulatory orders** fill it year by year.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Dror's normative-optimum model",
+     "d": "**Yehezkel Dror** attacked incrementalism as **pro-inertia** and useless where there is **no past** to build on. His model adds **meta-policymaking** — deciding **how to decide** — and gives an explicit place to **extra-rational** elements: **judgement, creativity, intuition**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "The garbage can model",
+     "d": "**Cohen, March and Olsen (1972)** — in an **organised anarchy** (unclear goals, unclear technology, fluid participation), **problems, solutions, participants and choice opportunities** are dumped into a can and coupled by **timing, not logic**. Solutions often **precede** problems.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Where the garbage can fits India",
+     "d": "A **pre-existing scheme design** attaching itself to a **new crisis**; a **ready technology** searching for a mandate. **Aadhaar** began as a **solution** and successively found problems — subsidy leakage, banking, KYC, welfare targeting — over a decade.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Behavioural insights and the nudge",
+     "d": "**Kahneman and Tversky's** prospect theory; **Thaler and Sunstein's** choice architecture and **libertarian paternalism**. **Default rules** do more than exhortation: **Ujjwala's** LPG **Give-It-Up** appeal, **Swachh Bharat's** shame-and-pride messaging, the **Economic Survey 2018-19** nudge chapter.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "The decision models compared, in one line",
+     "d": "**Rational** — what we should do; **incremental** — what we can agree on; **mixed scanning** — how to do both at two altitudes; **garbage can** — what actually happens when nobody is in charge. Pick the model the **question's verb** implies.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-3"
+    }
+   ]
+  },
+  {
+   "g": "Motivation — the content theories",
+   "items": [
+    {
+     "t": "Maslow's hierarchy",
+     "d": "**Physiological → safety → social → esteem → self-actualisation**, each **prepotent** over the next; a **satisfied need ceases to motivate**. Its administrative use is diagnostic: an officer stuck at **safety** (transfer insecurity) cannot be motivated by **esteem** appeals.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Alderfer's ERG",
+     "d": "**2024 Q4(a).** Collapses Maslow into **Existence, Relatedness, Growth**, and adds two corrections: **more than one need can operate at once**, and a **frustration–regression** hypothesis — blocked **growth** intensifies demand for **existence** rewards. Explains why a stalled cadre fights over **pay and allowances**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Herzberg's two-factor theory",
+     "d": "**Hygiene factors** — pay, policy, supervision, conditions, security — remove **dissatisfaction** but do not motivate. **Motivators** — achievement, recognition, the work itself, responsibility, advancement — produce **satisfaction**. The two are **not opposite ends of one scale**. **2023 Q4(b).**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Herzberg applied to Indian services",
+     "d": "Successive **Pay Commissions** work almost entirely on **hygiene**. The **8th CPC** (ToR notified **3 November 2025**, **Justice Ranjana Prakash Desai**, ~**50 lakh employees and 69 lakh pensioners**) will remove dissatisfaction; it will not motivate. **Job enrichment** — real delegation and challenging postings — is the untouched lever.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "McClelland's three needs",
+     "d": "**Achievement (nAch)** — moderate risk, personal responsibility, immediate feedback; **Affiliation (nAff)** — warm relationships; **Power (nPow)**. His crucial distinction: **personalised power** (dominance) versus **socialised power** (influence used for group ends) — the second is what a good administrator has.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Public service motivation",
+     "d": "**2021 Q1(c).** **Perry and Wise** — a distinctive predisposition to serve, with **rational** (policy-making attraction), **norm-based** (duty, public interest) and **affective** (compassion) foundations. It explains why officers accept **hardship postings** that no pay differential covers.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "The crowding-out warning",
+     "d": "**Frey's motivation crowding theory** — **extrinsic** rewards can **destroy** intrinsic ones. Pay a citizen to do what she did from duty and she stops doing it for free. This is the strongest argument against **crude performance pay** in the public service. **2023 Q3(b).**",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Money is the weakest lever in Indian government",
+     "d": "Salary is **fixed by grade**, promotion largely by **seniority**, and dismissal is **hard**. Real motivators are the ones the system controls informally — **posting, empanelment, recognition, and a superior who will back a decision**. Say this; it converts theory into an administrative claim.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Content versus process theories",
+     "d": "**2020 Q4(b) asked whether the focus is the same.** Same **object** — the energising of behaviour; different **question**. **Content** asks **what** motivates (Maslow, Herzberg, McClelland, Alderfer); **process** asks **how** motivation is formed and sustained (Vroom, Adams, Locke, Skinner).",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    }
+   ]
+  },
+  {
+   "g": "Motivation — the process theories",
+   "items": [
+    {
+     "t": "Vroom's expectancy theory",
+     "d": "**Motivation = Expectancy × Instrumentality × Valence.** Effort must be believed to produce **performance**; performance to produce a **reward**; the reward must be **wanted**. Any term at zero makes the product zero — the cleanest diagnostic in the whole motivation literature.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Expectancy failure in Indian government",
+     "d": "**Instrumentality is near zero**: performance and reward are weakly linked when **promotion follows seniority** and appraisal ratings **cluster at 'outstanding'**. The **Surinder Nath (2003)** and **Hota (2004)** committees attacked precisely this link.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Porter and Lawler's extension",
+     "d": "They add that **performance causes satisfaction** — not the reverse — and only when the reward is seen as **equitable**. They also insert **abilities** and **role perception**: an officer who misreads the role produces effort that yields no performance.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Adams's equity theory",
+     "d": "People compare their **outcome-to-input ratio** with a **referent other**. Perceived **inequity** produces tension resolved by reducing effort, inflating perceived inputs, changing the referent, or leaving. Explains **cadre grievances** over **pay parity and empanelment** better than any absolute measure.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Locke's goal-setting theory",
+     "d": "**Specific and difficult** goals, if **accepted**, produce higher performance than 'do your best' — provided there is **feedback** and **commitment**. The theoretical basis of **outcome budgeting**, **RFD** and the **Aspirational Districts** delta ranking.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Reinforcement and behaviour modification",
+     "d": "**Skinner** — behaviour is shaped by its **consequences**. **Positive reinforcement**, **negative reinforcement**, **punishment**, **extinction**; **schedules** matter more than magnitude. Indian administration relies almost wholly on **punishment and extinction**, which suppress error and also **suppress initiative**.",
+     "k": "concept",
+     "sl": "attack",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Self-determination theory",
+     "d": "**Deci and Ryan** — intrinsic motivation needs **autonomy, competence and relatedness**. It is the theoretical ground for **Mission Karmayogi's** competency approach and for the argument that **minimum tenure** motivates more than an increment: a transferred officer loses **all three** at once.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 3,
+     "u": "I-3"
+    }
+   ]
+  },
+  {
+   "g": "Leadership",
+   "items": [
+    {
+     "t": "The trait to behaviour to contingency progression",
+     "d": "**Traits** (great men) → **behaviour** (what leaders do) → **contingency** (what works, when). Say this in one line and then pick the school the question needs; a leadership answer that narrates all three has no room left to argue.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "The Ohio and Michigan studies",
+     "d": "**Ohio State** isolated two independent dimensions — **initiating structure** and **consideration** — so a leader may be high on both. **Michigan** framed the same as **production-centred** versus **employee-centred**, and (unlike Ohio) treated them as **opposite ends of one scale**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Blake and Mouton's managerial grid",
+     "d": "**Concern for production** against **concern for people**, each 1-9. **1,1 impoverished; 9,1 task; 1,9 country club; 5,5 middle-of-the-road; 9,9 team**. Their claim — **9,9 is universally best** — is what contingency theorists reject.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Reddin's 3-D theory",
+     "d": "**2023 Q4(a).** Reddin adds a **third dimension — effectiveness** — to task and relationship orientation. The same style is **effective or ineffective depending on the situation**: 'dedicated' becomes **benevolent autocrat** or **autocrat**; 'integrated' becomes **executive** or **compromiser**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Fiedler's contingency model",
+     "d": "Style is **fixed** (measured by the **Least Preferred Co-worker** scale), so match the **situation** to the leader. Three situational variables: **leader-member relations, task structure, position power**. **Task-oriented** leaders excel in **very favourable and very unfavourable** situations; **relationship-oriented** in the **middle**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Hersey and Blanchard's situational leadership",
+     "d": "Style follows follower **readiness**: **telling → selling → participating → delegating**. Directly usable on **cadre management** — a probationer needs *telling*, a Collector of ten years' standing needs *delegating*, and reversing the two destroys both.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Transactional versus transformational",
+     "d": "**James MacGregor Burns (1978)**, developed by **Bass**. **Transactional** — contingent reward and management by exception. **Transformational** — **idealised influence, inspirational motivation, intellectual stimulation, individualised consideration**. Burns: leaders and followers \"**raise one another to higher levels of motivation and morality**.\"",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Servant leadership",
+     "d": "**Robert Greenleaf** — the leader is **servant first**. \"The best test is: **do those served grow as persons?**\" The natural Indian pairing is **Gandhi's talisman** and the district officer whose measure is whether the **weakest citizen** in the district is better placed.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Strategic leadership",
+     "d": "**2021 Q4(c) quoted:** \"nothing in public administration is more important, interesting or mysterious than **leadership**.\" Strategic leadership is **anticipatory** — it manages the **authorising environment** and builds **capacity for the next problem**, which is **Mark Moore's** strategic triangle in behavioural form.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Leadership and accountability for failure",
+     "d": "**2025 Q4(b).** The test of leadership is **ownership of failure**, not appropriation of success. Administratively this means **recording reasons**, accepting **audit and parliamentary scrutiny**, and protecting subordinates who acted on lawful orders — the opposite of **blame-shifting down the hierarchy**.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Leadership migrating to the aggressive",
+     "d": "**2025 Q3(a).** In conflict, **assertiveness is mistaken for competence** and the emotionally mature are read as weak. The correction is **structural, not exhortatory** — chairing rules, minuted dissent, written orders — so that the **loudest voice does not become the decision**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Named Indian administrative leadership",
+     "d": "**E. Sreedharan** at DMRC — deadlines, delegation, resignation offered for a single accident. **T.N. Seshan** — statutory power used to its constitutional edge. **Armstrong Pame**, the 'people's IAS officer', built a road by crowdfunding. One named instance beats a paragraph of adjectives.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-3"
+    }
+   ]
+  },
+  {
+   "g": "Communication",
+   "items": [
+    {
+     "t": "Communication as the first executive function",
+     "d": "**Barnard** placed it first because an organisation **is** its communication system. **Deutsch** went further — government is a **steering system** and **information is the steering**. A structure that cannot carry accurate upward information **cannot correct itself**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Downward, upward and horizontal",
+     "d": "**Downward carries authority** — orders, policy, feedback — and is **distorted by dilution** through each level. **Upward carries information** — reports, grievances, dissent — and is **distorted by filtering**: subordinates edit out what displeases. **Horizontal carries coordination** and is the weakest in a hierarchy.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Why upward communication fails",
+     "d": "Not because the channel is missing but because the **incentive is inverted**: reporting a problem invites blame for having it. India's institutional workarounds are **inspection**, **social audit**, **CPGRAMS**, and the **PMO's PRAGATI**, where the apex leader **looks at the data directly**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "The grapevine",
+     "d": "**2024 Q1(c): 'a necessary evil'.** It is **fast, filters gaps left by formal channels, and carries morale information** management never receives. It also **carries rumour and cannot be corrected**. The administrative response is not suppression but **speed** — occupy the space with **timely formal information**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Bavelas's communication networks",
+     "d": "**Wheel** — fast, accurate, high leader-emergence, **low member satisfaction**. **Chain** — hierarchical, slow. **Circle** — slow, but high satisfaction. **All-channel** — best for **complex, non-routine** problems. Match the network to the **task**, and note that the file system is a **chain**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Barriers to communication",
+     "d": "**Semantic** (jargon, language), **physical** (distance, technology), **psychological** (fear, selective perception), **organisational** (hierarchy, span, secrecy), and **cultural** (status distance). In Indian administration, **status distance and English** are the two most consequential.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Headquarters–field communication",
+     "d": "**2024 Q1(d).** Headquarters holds **rules and money**; the field holds **facts and consequences**. Healthy relations require **two-way flow** — field discretion for local variation, headquarters feedback that is **substantive rather than compliance-seeking**. **Video conferencing collapsed distance, not status distance**.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3",
+     "x": "Structure in I-4"
+    },
+    {
+     "t": "A narrow view of information",
+     "d": "**2019 Q5(d).** Treating information as **data to be stored** rather than **intelligence to be used** is why **MIS** implementations fail: the system is built for **upward reporting**, not for **decision support at the level that acts**.",
+     "k": "link",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-3",
+     "x": "Detail in I-11"
+    },
+    {
+     "t": "Communication in Indian statutory form",
+     "d": "**RTI Section 4** makes **suo motu disclosure** a duty — communication as a **right**, not a courtesy. The **Official Secrets Act, 1923** pulls the other way; the **2nd ARC's first report** recommended repealing it and folding residual provisions into the **National Security Act**.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-3"
+    }
+   ]
+  },
+  {
+   "g": "Morale, conflict and personality at work",
+   "items": [
+    {
+     "t": "Morale and motivation distinguished",
+     "d": "**Morale is a group condition; motivation is an individual state.** Morale is about **attitude to the organisation**; motivation about **drive toward a task**. High morale with low motivation gives a **contented, idle office**; the reverse gives **burnout**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "What determines morale",
+     "d": "**Fairness of the reward system**, **security of tenure**, **quality of supervision**, **group cohesion**, **the sense that the work matters**, and **the organisation's public reputation**. In the Indian services, **arbitrary transfers** damage all six at once.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Groupthink",
+     "d": "**Irving Janis** — cohesive groups under stress suppress dissent. Symptoms: **illusion of invulnerability, collective rationalisation, stereotyping of outsiders, self-censorship, illusion of unanimity, direct pressure on doubters, self-appointed mindguards**. Antidotes: a **devil's advocate**, minuted **dissent**, and a leader who **speaks last**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "The value of the dissenting note",
+     "d": "The Indian file's **noting system** is a **structural antidote to groupthink** — a recorded, attributable, dissenting opinion. It is also what **oral instructions** destroy, which is why **CCS Conduct Rule 3(3)(iii)** and its written-confirmation requirement matter behaviourally, not just legally.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Sources of organisational conflict",
+     "d": "**Structural** — line versus staff, overlapping jurisdiction, scarce resources; **interpersonal** — personality, status; **role-based** — role ambiguity, role conflict, role overload. Name the **type** before prescribing; the remedy differs entirely.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Thomas's five conflict-handling modes",
+     "d": "On axes of **assertiveness** and **cooperativeness**: **competing, accommodating, avoiding, compromising, collaborating**. **Collaborating** is Follett's **integration**; **avoiding** is the file that is never put up. Each has a legitimate use — the error is having only one.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "Conflict is not always dysfunctional",
+     "d": "The **interactionist** view: too little conflict produces **stagnation and groupthink**; too much produces **paralysis**. The administrative task is **managing conflict to an optimum**, and **institutionalising** it — which is what **Inter-State Council**, **GST Council** and **tribunals** exist to do.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-3"
+    },
+    {
+     "t": "Emotional intelligence",
+     "d": "**Goleman's five components** — **self-awareness, self-regulation, motivation, empathy, social skill**. In administration it is what converts **legal authority into acceptance**: the same eviction order, delivered with or without empathy, produces cooperation or a law-and-order problem.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-3"
+    },
+    {
+     "t": "Personality and administrative behaviour",
+     "d": "**Type A/B**; the **Big Five** (openness, conscientiousness, extraversion, agreeableness, neuroticism — **conscientiousness** predicts job performance best); **Rotter's locus of control** — internals take initiative, externals attribute outcomes to circumstance. **FRAC** competencies under Mission Karmayogi try to select for these.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-3"
+    },
+    {
+     "t": "The behavioural approach's own limits",
+     "d": "**2021 Q2(a).** It privileges the **observable and measurable**, so it under-reads **power, class and ideology**; it borrows **laboratory findings** into settings with **statutory duty and coercive power**; and it is **culture-bound** — a Western-derived instrument applied without validation in Indian conditions.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-3"
+    }
+   ]
+  }
+ ]
+}

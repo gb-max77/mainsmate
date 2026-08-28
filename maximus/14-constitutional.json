@@ -1,0 +1,310 @@
+{
+ "id": "p14",
+ "pod": "Constitutional and Federal Framework",
+ "units": [
+  "II-2"
+ ],
+ "blurb": "Paper II's single largest unit — roughly one question in seven since 2023, and 2025 carried four. Centre-State relations, the Governor and fiscal federalism are the live 2026 slots. Treat this as public administration, not GS-2: the provision, not the institution.",
+ "groups": [
+  {
+   "g": "The philosophical and constitutional base",
+   "items": [
+    {
+     "t": "The Preamble as an administrative mandate",
+     "d": "**Justice — social, economic and political; Liberty; Equality; Fraternity.** For an administrator these are not sentiments but **decision rules**: where two lawful courses are open, the one advancing social and economic justice is the one the Constitution prefers. **Kesavananda (1973)** made this part of the **basic structure**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "The DPSPs as the administrative charter",
+     "d": "**Article 37** — not enforceable by any court, yet **fundamental in the governance of the country** and a **duty of the State to apply in making laws**. **Articles 38, 39, 39A, 41, 43, 46, 47, 48A, 50** are the specific mandates that every welfare scheme, legal aid programme and environmental regulation traces back to.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The Fundamental Rights–DPSP relationship",
+     "d": "**Champakam Dorairajan (1951)** — rights prevail. **Kesavananda (1973)** — harmonious construction. **Minerva Mills (1980)** — the **balance between them is itself basic structure**; neither may be sacrificed to the other. This is the doctrinal ground on which every reservation and land reform question is settled.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Article 12 and who is 'the State'",
+     "d": "The administrator's own question. **State** includes the government, Parliament, legislatures, **local authorities** and **other authorities**. **Ajay Hasia (1981)** laid down tests for a body being an instrumentality — financial control, deep state control, monopoly status, public function. **Zee Telefilms (2005)** limited it. **It decides whether a body faces writ jurisdiction at all.**",
+     "k": "case",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-2"
+    },
+    {
+     "t": "Constitutional morality",
+     "d": "**Ambedkar**, quoting Grote, warned that constitutional morality is \"**not a natural sentiment; it has to be cultivated**\". His companion warning is the one to quote: \"**however good a Constitution may be, it is sure to turn out bad because those who are called to work it happen to be a bad lot.**\"",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "Who upholds constitutional values in practice",
+     "d": "**2025 Q3(c) asked exactly this.** The text supplies a **framework**; the working depends on **institutions** (EC, CAG, UPSC, courts), **civil society** (RTI users, PILs, social audit), and **citizens** (voting, participation, dissent). Frame it as **Riggs's formalism**: the strength of the framework and the weakness of practice are the same country.",
+     "k": "link",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The parliamentary system's administrative implication",
+     "d": "**2023 Q1(e).** The **elected head is the real executive** — **Article 74** makes the President bound by ministerial advice (after the **42nd and 44th Amendments**, with one reconsideration), and **Shamsher Singh (1974)** settled that Governors likewise act on advice. Administratively this means **ministerial responsibility**, and therefore **an anonymous, permanent civil service** behind it.",
+     "k": "case",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The statutory and constitutional bodies",
+     "d": "Know which is which. **Constitutional** — EC, CAG, UPSC and SPSCs, Finance Commission, AG, NCSC, NCST, NCBC (**102nd Amendment, 2018**), Special Officer for Linguistic Minorities. **Statutory** — NHRC, CIC, CVC, Lokpal, NCW, NGT, TRAI. The distinction decides how the body may be **abolished or altered**.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-2"
+    }
+   ]
+  },
+  {
+   "g": "The federal design",
+   "items": [
+    {
+     "t": "India's federal character",
+     "d": "**Ambedkar**: the Constitution is \"**federal in structure and unitary in spirit**\"; **K.C. Wheare** called it \"**quasi-federal**\"; **Granville Austin**, \"**cooperative federalism**\". The textual evidence for the centralising tilt: **single citizenship, integrated judiciary, All India Services, Article 3, emergency provisions, residuary powers with the Union**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The legislative distribution",
+     "d": "**Seventh Schedule** — **Union List (97 entries)**, **State List (66)**, **Concurrent List (47)**. **Article 246** gives Union primacy; **Article 254** resolves repugnancy in favour of Union law unless the State law received **Presidential assent**. **Article 248** places residuary power with Parliament — the reverse of the American arrangement.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "How the Union reaches State subjects",
+     "d": "**2025 Q3(a) asked it.** **Article 249** (Rajya Sabha resolution in national interest); **Article 250** (during Emergency); **Article 252** (two or more States request); **Article 253** (treaty implementation); **Article 256-257** (directions to States); and, most consequentially, **centrally sponsored schemes** — spending power reaching subjects legislative power cannot.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The pros and cons of Union spending on State subjects",
+     "d": "**For** — **national minimum standards** in health and education, **fiscal capacity** States lack, **externalities** across borders, and **counter-cyclical** capacity. **Against** — **matching contributions crowd out State priorities**, **one-size guidelines** ignore variation, and it makes States **implementing agencies** for programmes they did not design.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "Administrative relations",
+     "d": "**Article 256** — States shall ensure compliance with Union laws. **Article 257** — Union may give directions, including on **means of communication of national importance** and **protection of railways**. **Article 258** — Union may entrust functions to a State. **Article 355** — Union duty to protect States against external aggression and **internal disturbance**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "Centre–State relations are undergoing drastic change",
+     "d": "**2024 Q3(b), 2025 Q4(b).** Name the drivers: **GST** removing independent taxation; **cesses shrinking the divisible pool**; **direct benefit transfer bypassing States** to reach the citizen; **centrally sponsored schemes** dominating social-sector spending; and **agency withdrawal of consent** under the DSPE Act as a new site of friction.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Cooperative federalism's instruments",
+     "d": "**Inter-State Council (Article 263)**, constituted **1990** on **Sarkaria's** recommendation and meeting rarely; **Zonal Councils** under the States Reorganisation Act, 1956; the **GST Council (279A)**; **NITI's Governing Council**; and **National Development Council**, now largely dormant. Note which of these **actually meets and decides** — only the GST Council does.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "What blocks cooperative federalism",
+     "d": "**2025 Q3(b).** **Divergent political interests** — different parties at the two levels turn every coordination question into a contest. **Financial constraints** — States carry **about 60% of general government expenditure** on a smaller share of receipts. Add **asymmetric information**, and forums that are **consultative without being decisional**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Competitive federalism",
+     "d": "The 2015-onward alternative: instead of bargaining in a council, States compete on **published indices** — **SDG India Index, Fiscal Health Index, Ease of Doing Business/BRAP, Composite Water Management**. It is **public choice applied to a federation** — reputational competition substituting for central direction. Its limit is that **rank without resources changes only the willing**.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Asymmetric federalism",
+     "d": "India's federation is **not uniform**. **Article 371** and its variants for Maharashtra, Gujarat, Nagaland, Assam, Manipur, Andhra, Sikkim, Mizoram, Arunachal, Goa and Karnataka; the **Fifth and Sixth Schedules** for tribal areas; **special category** treatment in transfers; **UTs with and without legislatures**. Asymmetry is the device that held a plural federation together.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-2"
+    }
+   ]
+  },
+  {
+   "g": "The Governor and the federal flashpoints",
+   "items": [
+    {
+     "t": "The Governor's constitutional position",
+     "d": "Appointed by the **President** under **Article 155**, holding office **during the President's pleasure (156)** — no fixed tenure. Acts on the aid and advice of the Council of Ministers (**163**), **except** where the Constitution requires **discretion**. **Shamsher Singh (1974)** confined that discretion narrowly.",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Where the Governor has real discretion",
+     "d": "**Appointing a Chief Minister** in a hung house; **dismissing a ministry that has lost confidence**; **recommending President's Rule (356)**; **reserving a bill for the President (200)**; **reporting on the State's administration**; and, in specified States, functions under **Article 371** and the **Sixth Schedule**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The assent question",
+     "d": "**Article 200** — the Governor may **assent**, **withhold assent**, **return** a non-money bill for reconsideration (and **must assent** if it is passed again), or **reserve** it for the President. **The Article prescribes no time limit**, and indefinite inaction — the 'pocket veto' — is the flashpoint of the last three years.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The 2025 Presidential Reference",
+     "d": "The **live 2026 issue.** After the **State of Tamil Nadu** litigation on delayed assent, the **Supreme Court's advisory opinion of November 2025** declined to impose **judicially fixed timelines** on the Governor or the President under **Articles 200 and 201**. Read it as the Court **returning the question to political and cooperative-federal channels**.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Strained Governor–State relations",
+     "d": "**2024 Q3(c).** The recurring sites: **delayed assent**; **timing of floor tests**; **appointments as Chancellor of State universities**; **prosecution sanction**; **speeches and public commentary**; and **reports to the Centre**. The structural cause is that the office is **appointed by, removable by, and dependent for its next post on the Union**.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The reform recommendations on the Governor",
+     "d": "**Sarkaria (1988)** — appoint an **eminent person from outside the State**, not recently in active politics, in **consultation with the Chief Minister**; a **five-year tenure** not disturbed except for compelling reasons. **Punchhi (2010)** — a **fixed tenure**, **impeachment-style removal by the State legislature**, deletion of the 'pleasure' doctrine, and **no Chancellorship of universities**.",
+     "k": "cmte",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Article 356 and its discipline",
+     "d": "**S.R. Bommai (1994)** is the controlling authority: the **floor of the House** is the sole test of majority; the proclamation is **justiciable**; the **Assembly may only be dissolved after both Houses of Parliament approve**; and the power is **not available for a mere failure of law and order or corruption**. Its use fell sharply thereafter.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "The Sarkaria and Punchhi frame",
+     "d": "**Sarkaria (1983-88)** — **247 recommendations**, the **Inter-State Council** (created 1990), sparing use of Article 356, consultation before **Article 200** reservation, and **All India Services strengthened, not weakened**. **Punchhi (2007-10)** — a **localised emergency** confined to a district or part of a State, and **fixed tenure** for the Governor.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-2"
+    }
+   ]
+  },
+  {
+   "g": "The live constitutional debates of 2026",
+   "items": [
+    {
+     "t": "Simultaneous elections",
+     "d": "The **129th Constitution Amendment Bill** and the accompanying Union Territories law, examined by a **Joint Parliamentary Committee**. The **Ram Nath Kovind Committee (2024)** recommended a two-step move — Lok Sabha and Assemblies together, local bodies within **100 days** — with an **appointed date** and mid-term houses serving only the **unexpired term**.",
+     "k": "prov",
+     "sl": "open",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "The administrative argument on simultaneous elections",
+     "d": "**For** — the **model code** freezes new schemes repeatedly through the cycle; **security forces and teachers** are diverted several times a year; **expenditure** duplicates. **Against** — it needs **curtailment or extension of assembly terms**, weakens the **accountability of a government to a mid-term verdict**, and requires **ratification by half the States**.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "The Election Commission's administrative role",
+     "d": "**Article 324** — superintendence, direction and control of elections, held to be a **plenary reservoir of power** where the law is silent (**Mohinder Singh Gill, 1978**). The **Model Code of Conduct** binds by consent and convention, not statute — the largest exercise of **non-statutory administrative authority** in India.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Electoral roll revision",
+     "d": "The **Special Intensive Revision** exercises of 2025-26 raised the classic administrative-law questions in a live setting: **burden of proof** on the elector, **adequacy of notice**, **time for objections**, and the **remedy for wrongful deletion**. It is the best current illustration of why **procedural fairness in a mass administrative process** is a constitutional question.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "Appointment of Election Commissioners",
+     "d": "**Anoop Baranwal (2023)** directed appointment by a committee of **PM, Leader of Opposition and the Chief Justice of India** until Parliament legislated. The **CEC and Other ECs (Appointment) Act, 2023** replaced the CJI with a **Union Cabinet Minister** — restoring an executive majority on the panel, and now itself under challenge.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-2"
+    },
+    {
+     "t": "The collegium debate",
+     "d": "**2024 Q4(b).** **Second Judges (1993)** and **Third Judges (1998)** created the collegium; the **99th Amendment and NJAC Act** were struck down in **2015** as violating **judicial independence**, itself basic structure. The unresolved issue is the **Memorandum of Procedure**, and the **transparency and delay** in the collegium's own working.",
+     "k": "case",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Judicial efficiency as an administrative problem",
+     "d": "**2023 Q2(c).** About **4.76 crore cases pending (NJDG, 2026)**. The administrative levers: **judge strength and vacancies**, **court infrastructure**, **e-Courts Phase III (₹7,210 crore)**, **National Judicial Data Grid** making pendency public, **mediation under the Mediation Act, 2023**, and **government as the largest litigant** — the **National Litigation Policy** target that has never been met.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Data protection and the constitutional turn",
+     "d": "**Puttaswamy (2017)** held **privacy** a fundamental right under Article 21, with a **three-fold test** — legality, legitimate aim, proportionality. The **DPDP Act, 2023** with **Rules 2025** is its statutory expression, and its **Section 44(3)** amendment to **RTI Section 8(1)(j)** is where privacy and transparency now collide.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-2"
+    },
+    {
+     "t": "Development and social justice",
+     "d": "**2024 Q2(c).** The constitutional position is that they are **not in tension**: **Article 38(2)** requires the State to minimise inequalities in income, status, facilities and opportunities. Administratively the tension is real — **land acquisition, forest diversion and urban renewal** all trade aggregate gain against concentrated loss, which is why **RFCTLARR 2013 and FRA 2006** attach **consent and compensation** conditions.",
+     "k": "link",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-2"
+    }
+   ]
+  }
+ ]
+}

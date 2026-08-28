@@ -23,6 +23,11 @@
 <main id="view-home" class="view">
   <div class="countdown" id="countdown"></div>
   <div class="papers" id="papers"></div>
+  <button class="notes-cta mx-cta" id="go-mx">
+    <span class="ic">♛</span>
+    <span class="nm"><b>Maximus Weberus</b><small id="mx-sub-home">The final revision pod — the whole optional in examiner-ready blocks</small></span>
+    <span class="arw">›</span>
+  </button>
   <button class="notes-cta feed-cta" id="go-feed">
     <span class="ic">⚡</span>
     <span class="nm"><b>Revision feed</b><small>Scroll the whole syllabus, card by card</small></span>
@@ -31,11 +36,6 @@
   <button class="notes-cta" id="go-comp">
     <span class="ic">❖</span>
     <span class="nm"><b>Model Compendium</b><small>177 topics · GS-1, GS-2, GS-3 · Tier 1 &amp; Tier 2</small></span>
-    <span class="arw">›</span>
-  </button>
-  <button class="notes-cta fin-cta" id="go-fin">
-    <span class="ic">♛</span>
-    <span class="nm"><b>Finale De PubAd</b><small>The whole optional, in examiner-ready blocks</small></span>
     <span class="arw">›</span>
   </button>
   <button class="notes-cta" id="go-facts">
@@ -122,30 +122,55 @@
   <div class="done-wrap"><button id="comp-done">Mark as completed</button></div>
 </main>
 
-<main id="view-fin" class="view">
-  <h1>♛ Finale De PubAd</h1>
-  <p class="facts-sub">Every concept the optional asks for, as one block: the idea, its thinker, the Indian application, a comparative instance, and the line to write. <span id="fin-count"></span></p>
-  <div class="chips" id="fin-papers"></div>
-  <div class="chips" id="fin-filters"></div>
-  <div class="facts-stick" id="fin-stick">
-    <label class="sb-search facts-search"><span aria-hidden="true">⌕</span><input id="fin-q" type="search" placeholder="Search thinkers, concepts, committees, examples" aria-label="Search the optional"></label>
-    <div class="facts-jump" id="fin-jump">
-      <button class="fj-arw" data-fjump="prev" aria-label="Previous unit">‹</button>
-      <select id="fin-sel" aria-label="Jump to a syllabus unit"></select>
-      <button class="fj-arw" data-fjump="next" aria-label="Next unit">›</button>
-      <button class="fj-read" id="fin-read" type="button" aria-pressed="false" title="Read this unit aloud (Spacebar)">◉</button>
+<main id="view-mx" class="view">
+  <div class="mx-head">
+    <h1>♛ Maximus Weberus</h1>
+    <p class="mx-sub">The whole optional as blocks you can reproduce in the hall. <span id="mx-count"></span></p>
+  </div>
+
+  <div class="mx-books" id="mx-books" role="tablist" aria-label="Paper"></div>
+  <p class="mx-blurb" id="mx-blurb"></p>
+
+  <div class="mx-stick" id="mx-stick">
+    <div class="mx-row">
+      <label class="mx-search"><span aria-hidden="true">⌕</span><input id="mx-q" type="search" placeholder="Search thinkers, provisions, committees, examples" aria-label="Search the optional"></label>
+      <div class="mx-tier" id="mx-tier" role="group" aria-label="Filter by tier">
+        <button type="button" data-tier="1" aria-pressed="false" title="Tier 1 — learn these first">1</button>
+        <button type="button" data-tier="2" aria-pressed="false" title="Tier 2 — the syllabus core">2</button>
+        <button type="button" data-tier="3" aria-pressed="false" title="Tier 3 — the long tail">3</button>
+      </div>
+      <button class="mx-ico" id="mx-lensbtn" type="button" aria-expanded="false" title="Where a block goes in an answer (l)">⚙</button>
     </div>
-    <div class="facts-readbar" id="fin-readbar" role="status" aria-live="polite" hidden>
+
+    <div class="mx-row">
+      <button class="mx-ico" data-mjump="prev" aria-label="Previous section">‹</button>
+      <select id="mx-sel" aria-label="Jump to a syllabus section"></select>
+      <button class="mx-ico" data-mjump="next" aria-label="Next section">›</button>
+      <button class="mx-ico mx-go" id="mx-read" type="button" aria-pressed="false" title="Read aloud (Spacebar)">◉</button>
+      <button class="mx-ico" id="mx-hl" type="button" aria-pressed="false" data-c="gold" title="Highlighter (h)">▮</button>
+    </div>
+
+    <div class="mx-themes" id="mx-kinds" role="group" aria-label="Filter by what a block is"></div>
+
+    <div class="mx-lens" id="mx-lens" hidden>
+      <span class="mx-lenslab">Where it goes in the answer</span>
+      <div class="mx-themes" id="mx-slots" role="group" aria-label="Filter by answer slot"></div>
+      <button type="button" id="mx-clear">Clear</button>
+    </div>
+
+    <div class="mx-readbar" id="mx-readbar" role="status" aria-live="polite" hidden>
       <span class="read-pulse" aria-hidden="true"></span>
-      <span id="fin-readpos"></span>
-      <button id="fin-readprev" type="button" title="Previous block">‹</button>
-      <button id="fin-readpause" type="button">❚❚ Pause</button>
-      <button id="fin-readnext" type="button" title="Next block">›</button>
-      <button id="fin-readstop" type="button">Stop</button>
-      <span class="fr-hint">Tap a block to read from there</span>
+      <span class="mx-rpos" id="mx-readpos"></span>
+      <button id="mx-readprev" type="button" title="Previous block (↑)">‹</button>
+      <button id="mx-readpause" type="button">❚❚</button>
+      <button id="mx-readnext" type="button" title="Next block (↓)">›</button>
+      <button id="mx-readstop" type="button">Stop</button>
+      <span class="mx-times" id="mx-times"></span>
     </div>
   </div>
-  <div id="fin-body"></div>
+
+  <div id="mx-body"></div>
+  <div class="facts-rail" id="mx-rail" aria-hidden="true"><i></i><span id="mx-left"></span></div>
 </main>
 
 <main id="view-hl" class="view">

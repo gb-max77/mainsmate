@@ -1,0 +1,185 @@
+{
+ "id": "p17",
+ "pod": "District Administration",
+ "units": [
+  "II-7"
+ ],
+ "blurb": "Paper II's most reliably examined field unit — 2023 and 2025 each carried multiple district questions. The Collector's changing role is the standing theme; treat it as a question about which of his hats still fits.",
+ "groups": [
+  {
+   "g": "The district and its officer",
+   "items": [
+    {
+     "t": "Why the district endures",
+     "d": "It has been the **unit of Indian administration** since the Mughal **sarkar**, survived the Company, the Crown and independence, and remains the level at which **land, law and order, elections, disaster and welfare delivery** converge on one accountable officer. **No reform has ever proposed abolishing it** — which is itself the argument for its fitness.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "The three hats, and the fourth",
+     "d": "**Collector** — land revenue, land records, acquisition, treasury. **District Magistrate** — law and order, preventive powers, licensing, jail supervision, executive magistracy. **Deputy Commissioner** — development coordination, scheme implementation, chair of committees. The **fourth hat** is now **Chairperson of the District Disaster Management Authority** under **Section 25 of the DM Act, 2005**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "The magisterial powers",
+     "d": "Under the **BNSS (in force 1 July 2024)** — orders in urgent cases of nuisance or apprehended danger (the successor to **Section 144 CrPC**), **security proceedings**, **dispersal of unlawful assembly**, **requisition of armed force**, and **executive magistracy** distinct from the judicial magistracy separated by **Article 50** and the 1973 Code.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "The Collector's revenue core",
+     "d": "Still the office's legal foundation: **maintenance of land records** (khatauni, jamabandi, mutation), **settlement operations**, **land acquisition** under the **RFCTLARR Act, 2013**, **recovery of public dues as arrears of land revenue**, **relief and remission** in calamity, and **custody of the district treasury**.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "The coordinating role",
+     "d": "Where the modern Collector actually spends his time: chairing the **District Development Coordination and Monitoring Committee (DISHA)** with MPs, the **DDMA**, the **district grievance forum**, and the **district-level bankers' committee**; and acting as **District Election Officer**, **District Census Officer** and **returning officer**.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "The subdivision and below",
+     "d": "**Sub-Divisional Magistrate / Sub-Divisional Officer** at the subdivision; **Tehsildar / Mamlatdar** at the tehsil with revenue and executive magisterial powers; **Kanungo** and **Patwari / Talathi / Village Accountant** at the base — the **Mughal-named** officers who still hold the land record on which most of the district's work rests.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 3,
+     "u": "II-7"
+    }
+   ]
+  },
+  {
+   "g": "The changing role and the reform debate",
+   "items": [
+    {
+     "t": "Why the role must be redefined",
+     "d": "**2023 Q4(b).** Four pressures: **panchayats and municipalities** now hold constitutional functions the Collector once discharged; **parastatals and missions** deliver outside his chain; **regulatory bodies and courts** have taken parts of his discretion; and **DBT and digital delivery** removed the intermediation that made him the citizen's point of access.",
+     "k": "critique",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "The two reform positions",
+     "d": "**Divest** — strip development functions to the elected **Zila Parishad**, leaving the Collector with **regulation, revenue, law and order and disaster** (the **G.V.K. Rao** direction, with a separate **District Development Commissioner**). **Retain and reorient** — keep him as the **single coordinating authority**, because no other office can convene every department in a crisis.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "The 2nd ARC's position",
+     "d": "Its **15th Report, State and District Administration**, favoured **strengthening the elected district government** while retaining the Collector for **regulatory, law-and-order, land and disaster** functions, and recommended a **minimum tenure**, a clear **activity map** between him and the Zila Parishad, and a **District Council chaired by an elected head**.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "Teamwork over hierarchy",
+     "d": "**2025 Q2(a) asked this directly.** The case: modern district work is **multi-departmental and time-critical** — a heatwave, an epidemic, an aspirational-district target — and hierarchy cannot move at that speed. **Follett's law of the situation** and the **Incident Response System** are the theory; the practical form is a **district team with pre-assigned incident roles**.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "The limit of the teamwork argument",
+     "d": "Necessary balance. Hierarchy exists in the district for reasons that have not disappeared: **statutory powers vest in a named officer**, **coercive decisions need a single accountable signature**, and in a **law-and-order emergency** consensus is a luxury. The answer is **hierarchy for authority, teams for delivery** — not one replacing the other.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "Tenure — the decisive variable",
+     "d": "The average district tenure in many States is well under two years. Its consequences are exact: **no incentive to begin anything that outlasts the posting**, **loss of local knowledge**, and **the transfer as the enforcement mechanism** for every improper pressure. **T.S.R. Subramanian (2013)** ordered a two-year minimum; compliance is partial.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "District reorganisation",
+     "d": "**2025 Q4(c).** The administrative case for smaller districts is **span of control and access** — travel time to headquarters, population per officer. The critique is that the actual drivers are **politico-populist** — a new district as an electoral promise — and the costs are real: **new establishment, split cadres, divided records and thinner senior staffing across more units**.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "The district training question",
+     "d": "**2023 Q5(a).** The district phase of IAS induction is where **field judgement** is formed — revenue cases decided, magistracy exercised, a subdivision independently run. The critique is that it has become **shorter, more ceremonial and less supervised**, so officers reach senior posts without having been **personally answerable for a decision** in the field.",
+     "k": "link",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-7"
+    }
+   ]
+  },
+  {
+   "g": "The district as a delivery platform",
+   "items": [
+    {
+     "t": "The Aspirational Districts Programme",
+     "d": "**2018, 112 districts**, on five themes — health and nutrition, education, agriculture and water, financial inclusion and skill development, basic infrastructure. Its method is **delta ranking**: scoring **improvement, not level**, so the weakest can top the table. **Converge, collaborate, compete**, with a **central prabhari officer** attached to each district.",
+     "k": "scheme",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-7"
+    },
+    {
+     "t": "Why the Aspirational model worked",
+     "d": "It supplied the four things district programmes usually lack: **a small number of measurable indicators**, **real-time data with public ranking**, **a senior officer with a personal stake**, and **peer competition** rather than central direction. **Mark Moore's** strategic triangle — public value, authorising environment and operational capacity — aligned for once.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "The Aspirational Blocks Programme",
+     "d": "**2023, 500 blocks** — the same method taken one tier down, on the finding that **district averages conceal block-level deprivation**. Watch it as the natural exam case: does delta ranking survive at a level with **no dedicated officer, no separate budget and far weaker data**?",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "The district disaster machinery",
+     "d": "**DDMA** under **Section 25, DM Act 2005** — chaired by the **District Magistrate**, with the elected district head as co-chair. It prepares the **District Disaster Management Plan**, and in an emergency the **Incident Response System** assigns pre-designated roles so command does not have to be improvised. The **2025 amendment** strengthened planning and urban arrangements.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "Digital delivery at district level",
+     "d": "**Common Service Centres** as the assisted last mile; **e-District** for certificates; **SVAMITVA** property cards (**2.5 crore+** issued); **land record digitisation** under DILRMP; **geo-tagged** asset monitoring for MGNREGA; **CPGRAMS** feeding district grievance review. The district became a **data node**, not merely a field office.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-7"
+    },
+    {
+     "t": "The district's coordination deficit",
+     "d": "The honest closing critique. The Collector **chairs** many committees and **commands** only the revenue establishment. Line department officers answer to their **directorate**; mission societies to the **State**; parastatals to their **board**. He carries **responsibility without authority**, which is why the office's effectiveness varies so sharply with the individual.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-7"
+    }
+   ]
+  }
+ ]
+}

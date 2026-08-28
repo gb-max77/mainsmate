@@ -1,0 +1,310 @@
+{
+ "id": "p07",
+ "pod": "Comparative Public Administration",
+ "units": [
+  "I-7"
+ ],
+ "blurb": "Roughly one Paper-I question in twelve, and Riggs appears in some form almost every year — 2021, 2024 and 2025 each carried a Riggs question. The ecology argument is also the best explanation available for why Indian reform under-delivers.",
+ "groups": [
+  {
+   "g": "CPA — origin, purpose, current status",
+   "items": [
+    {
+     "t": "Why CPA was born",
+     "d": "**Post-war decolonisation** and **US technical assistance**: American models transplanted into new states **did not work**, and nobody could say why. The **Comparative Administration Group (CAG, 1960-71)**, chaired by **Fred Riggs** and funded by the **Ford Foundation**, was built to find out.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Robert Dahl's founding challenge",
+     "d": "**'The Science of Public Administration: Three Problems' (1947)** — a science of administration cannot exist until it confronts **values**, **human behaviour** and above all **cross-national transferability**: principles derived from one **social setting** cannot be assumed to hold in another.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-7"
+    },
+    {
+     "t": "Heady's three purposes",
+     "d": "**Ferrel Heady** — CPA exists for **theory building** (a general theory of administration), for **improved administrative technology** (what transfers and what does not), and out of **intellectual curiosity** about how other systems work. Most CPA delivered the second and failed at the first.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "Riggs's three trends",
+     "d": "CPA moved from **normative to empirical** (from what administration ought to be to what it is), from **ideographic to nomothetic** (from single-case description to generalisation), and from **non-ecological to ecological** (from studying administration alone to studying it inside its environment).",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "Why CPA declined",
+     "d": "**2019 Q5(b) and 2020 Q5(a).** Its **elitist and west-centric orientation** treated the Western system as the endpoint; it built **typologies rather than testable theory**; it was **funding-dependent** and collapsed when Ford withdrew in **1971**; and its concepts were **descriptive, not predictive** — they named the disease without prescribing.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "'It started with no paradigm and developed none'",
+     "d": "**2020 Q5(a) quoted this.** Concede the charge and qualify it: CPA produced **no paradigm** but delivered a **durable analytical vocabulary** — formalism, overlapping, heterogeneity, ecology, prismatic — that every subsequent development literature uses without acknowledgment.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "The revival in the 1980s and 1990s",
+     "d": "**2023 Q6(a).** New objective, new orientation: the driver became **NPM diffusion** and **World Bank governance conditionality**; the method became **quantitative and index-based** — **WGI, Doing Business, Government Effectiveness**; and the object shifted from **bureaucracy** to **governance and institutional quality**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "From institutional to political-economy comparison",
+     "d": "**2025 Q7(b).** The evolution: **institutional** description (structures) → **behavioural** comparison → **ecological** analysis → **political-economy** approaches asking who benefits and which coalition sustains the arrangement. The last has explanatory power the earlier ones lacked, but still no **general theory**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "NPM and ICT as comparative forces",
+     "d": "**2020 Q6(a).** Both create **convergence pressure**: NPM through **donor conditionality and policy transfer**, ICT through **shared platforms and international standards**. Both also expose **divergence** — the same e-governance tool produces different outcomes in different **ecologies**, which is Riggs's point restated.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-7"
+    }
+   ]
+  },
+  {
+   "g": "The ecological approach",
+   "items": [
+    {
+     "t": "What the ecological approach claims",
+     "d": "Administration is **shaped by, and shapes, its environment** — economic, social, political, communication and symbolic. **John Gaus (1947)** listed the ecological factors: **people, place, physical technology, social technology, wishes and ideas, catastrophe, personality**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Why it matters for developing countries",
+     "d": "**2021 Q5(a), 2024 Q5(e) and 2024 Q6(c) are the same question.** It explains **why a well-designed reform fails**: the design assumed a literacy level, a banking density, a caste-neutral village, a functioning land record — and the ecology did not supply it.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Riggs's Agraria and Industria",
+     "d": "The two **ideal-type** poles. **Agraria** — **ascriptive** status, **particularistic** relations, **diffuse** roles, subsistence economy, few specialised structures. **Industria** — **achievement**-based, **universalistic**, **specific** roles, market economy, highly differentiated structures. Neither exists in pure form.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Why Riggs abandoned the two-pole model",
+     "d": "Real transitional societies were not simply 'between' the two — they showed **both simultaneously**, and the mix was **stable rather than transitional**. That failure produced the **prismatic** model, which is the reason it exists.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "Industria as a precursor to post-modern administration",
+     "d": "**2025 Q6(a) asked this unusual angle.** Industria's features — **high differentiation, universalism, interdependence, a market-permeated society** — anticipate the **networked, contracted-out, interdependent** state that post-modern public administration describes. The interdependent economy is Industria's defining trait, not merely its technology.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "The ecology of Indian administration",
+     "d": "The **specific factors** to name: **caste and kinship** cutting across formal roles; **linguistic federalism**; **agrarian dependence** in most districts; **electoral competition at four levels**; **judicial activism**; and a **legal-rational structure inherited before the society that would sustain it had formed**.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-7"
+    },
+    {
+     "t": "Social and historical factors shaping administration",
+     "d": "**2024 Q6(c).** Write it as three: the **colonial inheritance** (a revenue-and-order state, generalist-led); the **freedom struggle's** normative legacy (welfare obligation, DPSPs); and the **social structure** (hierarchy, plurality, patronage) into which both were placed. Design that ignores any one of the three fails.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "The limit of ecological explanation",
+     "d": "It can slide into **determinism** and into **excuse** — if the ecology explains everything, no administrator is responsible for anything. The corrective is that administration **also shapes** its ecology: **RTI, panchayats, DBT and universal schooling** changed the very environment that constrained them.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-7"
+    }
+   ]
+  },
+  {
+   "g": "Riggs's prismatic model",
+   "items": [
+    {
+     "t": "The prism",
+     "d": "**Fused** society = white light entering (agraria, undifferentiated). **Prismatic** = light inside the prism, **diffracting but not yet separated**. **Diffracted** = the emerging spectrum (industria, highly specialised). The **transitional** society sits **inside** the prism — and Riggs's claim is that this is a **stable condition**, not a way-station.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Formalism",
+     "d": "The **gap between the prescriptive and the descriptive** — between what the law says and what actually happens. Not simple non-compliance: the **form is maintained** while the substance is absent, and everybody knows it. **India's single most usable diagnostic term.**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Formalism, proved in Indian numbers",
+     "d": "**RTI Section 4** disclosure mandated and patchily done; **Citizen's Charters** without remedies; **State Finance Commissions** constituted years late; **District Planning Committees** that exist but do not plan; **penalties imposed in about 3% of disposed RTI cases**. The form is impeccable; the substance is absent.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Heterogeneity",
+     "d": "The **simultaneous presence of different systems, practices and viewpoints** in one society. A district holds a **software park and bonded labour**, a **faceless tax assessment and a patwari's field book**. Administration must operate on all of them **with one set of rules**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Overlapping",
+     "d": "**Formal structures exist but are dominated by informal ones.** The formal panchayat decision passes through the **caste or khap** reality; the formal transfer procedure passes through the **recommendation letter**. The structure is **differentiated on paper and fused in operation**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "The Sala model",
+     "d": "The prismatic society's **administrative sub-system** — a **sala** is neither the **chamber** of fused society nor the **bureau** of diffracted society. Its officials wield **power based on personal and family standing** as much as office, and **nepotism and poly-communalism** coexist with formal merit rules.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "The bazaar-canteen model",
+     "d": "The prismatic **economy**: prices are **not fixed by the market** but by the **relationship between the parties**. The same service costs differently depending on who asks. Its administrative form is the **speed money** economy — a payment that buys **priority in a queue**, not an illegal outcome.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "Poly-normativism and poly-communalism",
+     "d": "**Poly-normativism** — **several conflicting norms** operate at once, so nobody can say which rule truly governs. **Poly-communalism** — **multiple communities** whose members treat each other by different standards, producing a **dominant community** occupying the bureaucracy and 'pariah' communities excluded from it.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "Riggs's other prismatic traits",
+     "d": "**Attainment norms** (achievement rhetoric with ascriptive practice); **motility** (movement without change of status); **price indeterminacy**; **clects** (associations using modern form for traditional ends — a caste association registered as a trust); and a **strong intellectual output with weak institutional capacity**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "How to draw the prism",
+     "d": "One box, three zones: **Fused (agraria)** → **Prismatic** → **Diffracted (industria)**, with **formalism, heterogeneity and overlapping** labelled **inside** the prismatic zone, and one **Indian instance** written under each. Forty-five seconds; it earns the presentation mark because it **compresses** a paragraph.",
+     "k": "concept",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-7"
+    }
+   ]
+  },
+  {
+   "g": "Riggs criticised, and Riggs today",
+   "items": [
+    {
+     "t": "The standard critiques",
+     "d": "**Excessively gloomy** — the model has no route out of the prism; **technically complex** — the neologisms obscure rather than explain; **ideal-typical and untestable**; **Western-normative** — diffraction is treated as the goal; and **static** — it does not explain **change**, only describes a condition. **2024 Q7(a) named the first two.**",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Arora and Braibanti's objections",
+     "d": "**Ramesh K. Arora** — the model is **not operationalisable**: it cannot be measured, so it cannot be tested. **Ralph Braibanti** — it **under-weights the positive** capacity of transitional bureaucracies, which in India delivered **elections, famine prevention, green revolution and universal immunisation**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "Why Riggs remains a useful starting point",
+     "d": "**2024 Q7(a) invites exactly this balance.** It supplies the **only vocabulary** that names the specific pathology of a state with **modern law and traditional society**; and its diagnosis is **empirically visible** in devolution indices, RTI compliance and scheme leakage. A weak theory with strong descriptive purchase.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Riggsian terms in new forms",
+     "d": "**2021 Q6(b) asked this directly.** **Formalism** now appears as **digital formalism** — a portal that exists and is not used, a dashboard green while delivery fails. **Overlapping** as **elite capture of digital access**. **Heterogeneity** as the **digital divide**. The concepts survived; the terrain changed.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "Bureaucracy in developing countries",
+     "d": "**2024 Q8(a).** The recurring challenges: **weak political control combined with political interference**; **generalist dominance** over technical work; **capacity and vacancy deficits**; **procedural risk aversion**; **corruption at the interface**; and **weak coordination** across a proliferation of agencies.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-7"
+    },
+    {
+     "t": "What makes a bureaucracy developmental",
+     "d": "**Evans's embedded autonomy**; **Weberianness** — Evans and Rauch found **meritocratic recruitment and predictable careers** statistically associated with growth; a **pilot agency** with authority (Japan's MITI, Korea's EPB); and **performance discipline** on the firms it supports. India had this in **space and atomic energy**, not in industrial licensing.",
+     "k": "link",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-7"
+    },
+    {
+     "t": "Administration and politics compared",
+     "d": "Three contrasting configurations worth naming: **Britain** — parliamentary, generalist, ministerial responsibility, no separate administrative court. **France** — statist, **grands corps** trained at ENA/INSP, a distinct **droit administratif** under the **Conseil d'État**. **USA** — separated powers, **spoils-to-merit** history, **political appointees** to several thousand senior posts.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-7"
+    },
+    {
+     "t": "The French minister and party leadership",
+     "d": "**2023 Q5(a) asked this oddity.** The French Constitution does **not** bar a minister from leading a party; the **convention** that they should not exists to protect the **impartiality of the administration** they head. Use it to make the general point: **conventions**, not only text, carry administrative neutrality.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-7"
+    }
+   ]
+  }
+ ]
+}

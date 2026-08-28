@@ -1,0 +1,672 @@
+{
+ "id": "p01",
+ "pod": "Foundations of the Discipline",
+ "units": [
+  "I-1"
+ ],
+ "blurb": "The single largest slice of Paper I — roughly one question in six since 2019. Paradigms, the dichotomy, and the NPA → NPM → NPS → NPG chain are asked every year in some form.",
+ "groups": [
+  {
+   "g": "What the subject is — and the dichotomy that made it",
+   "items": [
+    {
+     "t": "Wilson's founding claim",
+     "d": "**Woodrow Wilson (1887), 'The Study of Administration'** — \"It is getting to be harder to run a **constitution** than to frame one.\" Administration is **'government in action'**, a **field of business** removed from the hurry and strife of politics.",
+     "k": "thinker",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-1",
+     "s": "Wilson 1887"
+    },
+    {
+     "t": "The politics–administration dichotomy",
+     "d": "Politics sets **ends**, administration supplies **means**. Built by **Wilson** and **Frank Goodnow (Politics and Administration, 1900)** to protect a **merit** service from the **spoils system** after the **Pendleton Act, 1883**. It was a **reform slogan** before it was a theory.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Why the dichotomy collapsed",
+     "d": "**Appleby (Policy and Administration, 1949)** — \"**Public administration is policy making**.\" Administrators exercise **discretion**, draft the law, and choose between values. **Waldo** added that the dichotomy hid a **political theory** pretending to be a technique.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "The dichotomy in Indian practice",
+     "d": "It collapses visibly: the **Secretary is principal policy adviser** under the **Allocation of Business Rules, 1961**; officers draft **Cabinet Notes**; **NITI Aayog** officials shape policy openly. Yet it survives as an **operating convention** — the basis of **neutrality** and of **Article 311** protection.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "The dichotomy is not dead — it is normative",
+     "d": "**2024 Q1(a) asked exactly this.** Write: as **description** it is false; as **norm** it is indispensable. Without it there is no defence against **politicisation of transfers**, no ground for a civil servant to record **written dissent**, and no line for the **Election Commission** to police.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Public versus private administration",
+     "d": "**Appleby's three differences** — breadth of **scope, impact and consideration**; **public accountability**; **political character**. **Sir Josiah Stamp** adds **uniformity, external financial control, ministerial responsibility** and the **marginal-utility** test of service.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Sayre's Law",
+     "d": "**Wallace Sayre** — public and private administration are \"**alike in all unimportant respects**.\" Use it as a one-line opener: the similarity is in **technique**, the difference is in **purpose, publicness and the impossibility of exit**.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "The publicness test in India",
+     "d": "A private insurer may refuse a bad risk; **LIC** cannot abandon universal reach. **CAG audits NHAI**; a concessionaire audits itself. **Passport issuance** is a **sovereign monopoly with no exit** — the citizen cannot shop elsewhere, which is why **service standards must be imposed, not competed for**.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "L.D. White and Marshall Dimock",
+     "d": "**White (1926)** wrote the **first textbook** — administration is \"the **management of men and materials** in the accomplishment of the purposes of the state.\" **Dimock** widened it: administration is \"the **what and the how** of government,\" and \"**the concern of all**.\"",
+     "k": "thinker",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "Waldo's Administrative State",
+     "d": "**Dwight Waldo (1948)** — the efficiency orthodoxy is itself a **value choice**, so \"**public administration is a form of political theory**.\" Every claim to be merely technical conceals a **preference about who gets what**.",
+     "k": "thinker",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Is public administration a science?",
+     "d": "**Simon** wanted a **value-free science** of administrative behaviour. **Waldo** replied that its subject matter is **normative**. Settle it: it is a **social science with a professional purpose** — like medicine, judged by whether its prescriptions **work in a specific ecology**.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Why the discipline keeps reinventing itself",
+     "d": "**2019 Q1(a).** Because it is **contextual**: it borrows its problems from the state, and the state's form keeps changing — **welfare state → market state → regulatory state → digital state**. **Henry's five paradigms** are the frame; each is a response to a **legitimacy crisis**, not an intellectual advance.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    }
+   ]
+  },
+  {
+   "g": "The paradigms — the spine of every 'evolution' answer",
+   "items": [
+    {
+     "t": "Nicholas Henry's five paradigms",
+     "d": "**(1)** Politics–administration dichotomy **1900-26**; **(2)** Principles of administration **1927-37**; **(3)** Public administration as **political science** 1950-70; **(4)** as **management** 1956-70; **(5)** as **public administration** 1970-. Use this as the skeleton of any evolution question.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1",
+     "s": "Henry, Public Administration and Public Affairs"
+    },
+    {
+     "t": "The golden age of principles",
+     "d": "**Willoughby (1927)** claimed there are **fundamental principles of administration** as in the physical sciences; **Gulick and Urwick (1937)** codified them. This is the discipline's high point of confidence — and the target Simon destroyed nine years later.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "Simon's 'Proverbs of Administration'",
+     "d": "**Simon (1946)** — the principles are **proverbs**, arriving in **mutually contradictory pairs**: specialise, but maintain **unity of command**; **narrow the span of control**, but keep the hierarchy **flat**. A principle that cannot say which of two rules applies is not a principle.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Robert Dahl's three problems",
+     "d": "**Dahl (1947)** — a science of administration must confront **values**, **human behaviour** and **cross-cultural transferability**. His third problem founded **Comparative Public Administration**; his first vindicated **Waldo**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1",
+     "x": "Runs into I-7"
+    },
+    {
+     "t": "The identity crisis",
+     "d": "**Waldo (1968)** named the discipline's chronic problem — is it a **profession, a science, or a branch of political science?** Its answer has been **eclecticism**: it borrows method from economics, psychology and management, and keeps only its **object** — the **public** in administration.",
+     "k": "concept",
+     "sl": "attack",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "Minnowbrook I, II, III",
+     "d": "**I (1968, Syracuse, convened by Waldo)** — relevance, values, **social equity**, change. **II (1988)** — ethics, professionalism, deregulation. **III (2008)** — **globalisation, networked governance, collaborative public management**, and a generational handover to empirical, regionally grounded research.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Minnowbrook III's actual consensus",
+     "d": "**2023 Q2(b) and 2021 Q2(b) both asked this.** Its finding: theory must be **empirically tested and regionally tailored** — a single Western canon cannot travel. Administration is a **socially embedded process of relationship, dialogue and action**, not a toolkit.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "The paradigm ladder in one line",
+     "d": "Write it as a chain: **PA (rule) → NPA (equity) → NPM (market) → NPS (citizenship) → NPG (network) → DEG (platform)**. Each corrects the previous one's **blind spot**; none replaces the **Weberian core** underneath.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "The Indian discipline's own milestones",
+     "d": "**IIPA, 1954** on **Appleby's** recommendation; **O&M Division** in the Cabinet Secretariat, 1954; **Department of Administrative Reforms, 1964**; **ARC-I, 1966**; the **Indian Journal of Public Administration**. Indian public administration was born as **reform practice**, not as theory — which is its strength and its limitation.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "Public administration and the citizen",
+     "d": "The relationship has moved through four stages — **subject** (colonial), **beneficiary** (welfare), **customer** (NPM), **citizen and co-producer** (NPS). India shows all four simultaneously: a **subject** at the police station, a **customer** at a **Passport Seva Kendra**, a **co-producer** in a **Gram Sabha social audit**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    }
+   ]
+  },
+  {
+   "g": "New Public Administration — equity as the third pillar",
+   "items": [
+    {
+     "t": "NPA's four anchors",
+     "d": "**Frederickson's 4 Rs — Relevance, Values, Equity, Change.** Its distinctive claim: to **economy and efficiency** add **social equity** as a **third pillar**. The question is no longer 'is the service efficient?' but '**efficient for whom?**'",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Frederickson on why equity is not optional",
+     "d": "\"A public administration which **fails to work for changes** which try to redress the deprivation of minorities will likely be **eventually used to repress those minorities**.\" Neutral administration in an unequal society **reproduces the inequality**.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "The proactive administrator",
+     "d": "NPA rejects the **neutral instrument** model. The administrator is a **change agent** with a **client focus**, expected to advocate for the **disadvantaged** inside the machine — which is exactly the tension a **committed versus neutral bureaucracy** question turns on.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "Social equity, Indian constitutional form",
+     "d": "**Article 46** (DPSP, promotion of educational and economic interests of weaker sections), **Articles 15(4), 16(4) and 335** — India wrote **Frederickson's third pillar into the Constitution eighteen years before Minnowbrook**. Say this; examiners reward the indigenous grounding.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Equity as an administrative programme",
+     "d": "**Aspirational Districts Programme (2018)** — 112 districts; **Aspirational Blocks Programme (2023)** — 500 blocks. The **delta ranking** method scores **improvement, not level**, so the poorest can win — operationalising equity through **converge, collaborate, compete**.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Equity in the budget line",
+     "d": "**Development Action Plan for SCs (DAPSC)** and **for STs (DAPST)** — the successors to the **Scheduled Caste Sub-Plan / Tribal Sub-Plan**, earmarking outlays in proportion to population. **Gender Budget Statement 13** does the same for women. Earmarking is equity made **auditable**.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-1",
+     "x": "Also I-12 gender budgeting"
+    },
+    {
+     "t": "Golembiewski's verdict on NPA",
+     "d": "\"**Radicalism in words, status quo in skills**.\" NPA supplied a **moral vocabulary** without a **method**: equity is normatively compelling but **administratively indeterminate** — it cannot tell an officer how to rank two deserving villages.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Where NPA still bites in 2026",
+     "d": "Every **algorithmic** allocation decision — **DBT** exclusion for a failed **Aadhaar** authentication, an **AI**-scored beneficiary list — is an equity question wearing an efficiency costume. NPA's question, '**efficient for whom?**', is the sharpest closing line available on digital governance.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-1"
+    }
+   ]
+  },
+  {
+   "g": "Public Choice — the market critique of bureaucracy",
+   "items": [
+    {
+     "t": "Public choice in one sentence",
+     "d": "The application of **economic method to non-market decision-making**: **methodological individualism**, **rational utility maximisation**, and the claim that officials maximise **their own** utility — budget, staff, prestige — not the **public interest**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Vincent Ostrom's attack",
+     "d": "**The Intellectual Crisis in American Public Administration (1973)** — Wilsonian **monocentric bureaucracy** is not the only efficient form. He proposed **democratic administration**: **polycentricity**, overlapping jurisdictions, and **fragmented authority** as a feature, not a defect.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Niskanen's budget-maximising bureaucrat",
+     "d": "**Niskanen (1971)** — the bureau is a **bilateral monopoly** facing a sponsor who cannot observe its true cost, so it secures a budget up to **twice** the efficient level. **2019 Q6(c) asked whether it still holds.**",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Answering Niskanen today",
+     "d": "It is **half-right**. Bureaus do pad, but **fiscal rules** now bind: **FRBM**, **outcome budgets**, **Treasury Single Account**, **PFMS** real-time release. The modern bureaucrat maximises **discretion and turf**, not budget — the shape of rent-seeking changed when the money got watched.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Downs' bureaucratic personalities",
+     "d": "**Inside Bureaucracy (1967)** — **climbers** (power and income), **conservers** (security), **zealots** (one narrow policy), **advocates** (their whole bureau), **statesmen** (society at large). A usable typology for any **motivation** or **leadership** answer about the services.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-1",
+     "x": "Usable in I-3"
+    },
+    {
+     "t": "Buchanan, Tullock and rent-seeking",
+     "d": "**The Calculus of Consent (1962)** — constitutional rules should be chosen behind uncertainty about one's own future position. **Tullock's** rent-seeking: resources spent **capturing** a licence are a **pure social waste** — the intellectual case against the **licence-permit raj**.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "Elinor Ostrom's answer to the commons",
+     "d": "**Governing the Commons (1990), Nobel 2009** — communities do solve commons problems, given **eight design principles**: clear boundaries, congruent rules, collective choice, **monitoring**, **graduated sanctions**, cheap conflict resolution, recognised right to organise, **nested enterprises**.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Ostrom's principles working in India",
+     "d": "**Van Panchayats** of Uttarakhand (1931); **Pani Panchayats** of Maharashtra (**Vilasrao Salunkhe**); **Joint Forest Management** (1990 circular); **Water User Associations** under the **AP Farmers' Management of Irrigation Systems Act, 1997**. Community institutions outperform both **state** and **market** here.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Competitive federalism as public choice",
+     "d": "**NITI Aayog's indices** — **SDG India Index, Fiscal Health Index, Composite Water Management Index, Export Preparedness** — and **DPIIT's Business Reforms Action Plan** create a **quasi-market among states**, substituting **reputational competition** for the Planning Commission's command.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1",
+     "x": "Carries into II-5"
+    },
+    {
+     "t": "The limits of exit and voice",
+     "d": "**Hirschman's exit-voice-loyalty** is the hinge. Public choice assumes **exit**; **Ranson and Stewart** reply that citizens are **not consumers**. In India the poor cannot exit the **PDS**, the government school or the primary health centre — so **voice**, not choice, is the only lever. **2025 Q1(a).**",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-1"
+    }
+   ]
+  },
+  {
+   "g": "New Public Management — the market decade",
+   "items": [
+    {
+     "t": "Hood's seven doctrines",
+     "d": "**Christopher Hood (1991), 'A Public Management for All Seasons?'** — hands-on **professional management**; explicit **standards and measures**; **output controls**; **disaggregation** of units; greater **competition**; **private-sector styles**; **discipline and parsimony** in resource use.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Osborne and Gaebler's slogan",
+     "d": "**Reinventing Government (1992)** — government should be **'steering, not rowing'**: catalytic, community-owned, competitive, **mission-driven** rather than rule-driven, **results-oriented**, customer-driven, enterprising, anticipatory, decentralised, market-oriented.",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "The three Es and the missing fourth",
+     "d": "NPM's test is **economy, efficiency, effectiveness**. **NPA's equity is the fourth E** — and its absence is the standing critique. A **fifth**, **ethics**, is now routinely added in Indian writing after the **2nd ARC's fourth report**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "India's most explicit NPM import",
+     "d": "The **Results Framework Document (RFD)** system, **2009-10 to 2014**, run by the **Performance Management Division** of the Cabinet Secretariat under **Prajapati Trivedi** — ministries signed measurable targets and were **scored**. It was **discontinued in 2014**: the cleanest evidence that NPM in India was **adopted rhetorically, not structurally**.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Outcome budgeting, the survivor",
+     "d": "**Outcome Budget from 2005-06**, now the **Output–Outcome Monitoring Framework (OOMF)** run by **NITI Aayog** with the **Ministry of Finance** — every scheme carries **output and outcome indicators** against its outlay. NPM's measurement logic survived where its structural logic did not.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1",
+     "x": "Detail in I-12"
+    },
+    {
+     "t": "Citizen's Charters and Sevottam",
+     "d": "Charters from the **1997 Conference of Chief Ministers**; **Sevottam (2005, DARPG)** adds three modules — **Charter, Grievance Redress, Service Delivery Capability**. **2023 Q1(e) asked whether charters empower.** The answer turns on **remedy**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "A charter without a remedy",
+     "d": "It is a **statement of intent**, not a right. The fix exists: **Right to Public Services Acts** — **Madhya Pradesh first (2010)**, **Bihar (2011)** with penalties on the **designated officer**, **Karnataka's Sakala**. The central **Right of Citizens for Time Bound Delivery Bill, 2011 lapsed** — no national law.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Disinvestment as NPM in India",
+     "d": "**New Public Sector Enterprise Policy, 2021** — **four strategic sectors**, bare-minimum state presence, exit elsewhere; **National Monetisation Pipeline (2021)** and **NMP 2.0** monetise brownfield assets without transferring ownership.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1",
+     "x": "Full treatment in II-3"
+    },
+    {
+     "t": "Hood and Peters on NPM's paradox",
+     "d": "**'The Middle Aging of New Public Management: Into the Age of Paradox' (2004)** — NPM produced **unintended reversals**: more measurement created **more auditors**, disaggregation created **more coordination units**, contracting created **more contract lawyers**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "The NPM paradox in Indian numbers",
+     "d": "**2025 Q7(a) asked it directly:** LPG and NPM promised a **smaller state**, yet **Union expenditure is ₹53.5 lakh crore (Budget 2026-27)** and ministries have multiplied. Regulation **substitutes for** ownership; the state stopped **rowing** and hired a **larger crew to steer**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Goodhart's Law as the NPM disease",
+     "d": "\"**When a measure becomes a target, it ceases to be a good measure.**\" Indian instances: **ODF declarations** without usage, **learning outcomes** flat while enrolment targets were met, **grievance 'disposal'** counted rather than **resolution** on **CPGRAMS**.",
+     "k": "quote",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Has NPM failed democracy?",
+     "d": "**2019 Q2(c).** Split the citizen: as **customer** she gained **speed and choice** — passports, tax refunds, GeM. As **citizen** she lost **standing**: a customer complains, a citizen **participates**. NPM improved **transactions** and thinned **deliberation**.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-1"
+    }
+   ]
+  },
+  {
+   "g": "After NPM — NPS, New Public Governance, Neo-Weberian, digital",
+   "items": [
+    {
+     "t": "New Public Service — the seven maxims",
+     "d": "**Denhardt and Denhardt (2000)** — **serve citizens, not customers**; seek the **public interest**; value **citizenship over entrepreneurship**; **think strategically, act democratically**; recognise **accountability is not simple**; **serve rather than steer**; value **people, not just productivity**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "NPS's Indian instruments",
+     "d": "**RTI Act, 2005**; **social audit** under **MGNREGA Section 17**; the **Gram Sabha** as the deliberative unit; **Jan Sunwai** public hearings pioneered by **MKSS in Rajasthan**. India built the NPS architecture **before the theory reached the syllabus**.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "New Public Governance",
+     "d": "**Stephen Osborne (2006)** — the state is **plural** (many actors deliver) and **pluralist** (many processes shape policy). The unit of analysis is the **inter-organisational network** and the currency is **trust and relational contract**, not price. **2024 Q4(c), 2025 Q2(a).**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "NPG against NPM in one line",
+     "d": "**NPM** asks *who can deliver this cheapest?* **NPG** asks *who must be at the table for this to work at all?* The first is a **procurement** question, the second a **legitimacy** question.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Rhodes on governance without government",
+     "d": "\"Governance refers to **self-organising, inter-organisational networks** characterised by **interdependence, resource exchange, rules of the game and significant autonomy from the state**.\" **2021 Q1(a) quoted him.**",
+     "k": "quote",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "The hollow state and third-party government",
+     "d": "**Rhodes' 'hollowing out'**; **Milward and Provan's hollow state**; **Salamon's third-party government** — the state **funds and regulates** but does not deliver. **2020 Q2(a) asked whether this drives the move to governance.**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "India's hollow state, named",
+     "d": "**National Health Mission** delivered by **NGOs and empanelled private hospitals** under **PM-JAY**; **mid-day meals** by **Akshaya Patra**; **skilling** through **PPP** under **NSDC**; roads by **SPVs** under **NHAI**. The **Collector** now **convenes** more than he **commands**.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1",
+     "x": "Feeds II-7"
+    },
+    {
+     "t": "The Neo-Weberian State",
+     "d": "**Pollitt and Bouckaert** — Europe's answer to NPM: **keep** the Weberian core (law, career service, distinct public ethos) and **add** citizen orientation, results and professionalism. \"**Neo**\" modernises; \"**Weberian**\" refuses to dismantle. **2021 Q4(b).**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "India as a Neo-Weberian case",
+     "d": "The **steel frame stayed** — **Articles 309-311**, the **AIS**, seniority — while **e-governance, outcome frameworks and Mission Karmayogi** were layered on. India never had an **NPM phase**; it went from **Weberian** to **Neo-Weberian-digital** without dismantling anything.",
+     "k": "link",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Digital Era Governance",
+     "d": "**Patrick Dunleavy (2006)** — \"**NPM is dead — long live digital era governance**.\" Three moves that **reverse** NPM: **reintegration** of fragmented agencies, **needs-based holism** around the citizen's life event, and **digitisation** of the process itself.",
+     "k": "thinker",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "DEG proved in India",
+     "d": "**India Stack** — **Aadhaar** (identity), **UPI**, **DigiLocker**, **Account Aggregator**, **ONDC**, **Bhashini**. **Reintegration**: one **Jan Dhan-Aadhaar-Mobile** rail replaced hundreds of departmental payment systems. **Needs-based holism**: **UMANG** organises services by **life event**, not by ministry.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "The public value frame",
+     "d": "**Mark Moore's strategic triangle** — a manager must simultaneously secure **public value**, an **authorising environment** and **operational capacity**. Use it to explain why a technically sound scheme fails: **capacity without authorisation**, or **authorisation without capacity**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-1"
+    }
+   ]
+  },
+  {
+   "g": "Good governance, and the state–market–civil society triangle",
+   "items": [
+    {
+     "t": "The World Bank's origin of the term",
+     "d": "**Governance and Development (1992)** — governance is \"**the manner in which power is exercised** in the management of a country's economic and social resources for development.\" Four pillars: **public sector management, accountability, a legal framework for development, information and transparency**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "UNESCAP's eight characteristics",
+     "d": "**Participatory, consensus-oriented, accountable, transparent, responsive, effective and efficient, equitable and inclusive, and following the rule of law.** The cleanest checklist to structure a good-governance body — one heading per cluster, not eight.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Worldwide Governance Indicators",
+     "d": "**Kaufmann and Kraay's six dimensions** — **voice and accountability; political stability; government effectiveness; regulatory quality; rule of law; control of corruption**. Useful because it lets you say **which** dimension India is weak on rather than that governance is 'poor'.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-1"
+    },
+    {
+     "t": "Good governance adds a normative layer",
+     "d": "**2024 Q2(b).** \"Governance\" describes a **process**; \"**good** governance\" **evaluates** it. That is its strength — it makes administration **assessable against declared standards** — and its weakness: the standards arrived as **donor conditionality**, not domestic deliberation.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Kautilya indigenises the idea",
+     "d": "\"In the **happiness of his subjects** lies the king's happiness; in their **welfare**, his welfare.\" Good governance is not a **1992 World Bank import** — **Arthashastra** states the **yogakshema** duty and prescribes **audit, espionage against corrupt officials and famine relief**.",
+     "k": "quote",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-1",
+     "x": "Full treatment in II-1"
+    },
+    {
+     "t": "India's good-governance instruments",
+     "d": "**RTI Act, 2005** — **Section 4** suo motu disclosure, **Section 8** exemptions, **Section 19** appeals, **Section 20** penalty up to **₹25,000**. **Good Governance Index (DARPG, 2019 and 2021)** — **10 sectors, 58 indicators**. **PRAGATI (2015)** — the PM-chaired multi-modal review.",
+     "k": "prov",
+     "sl": "prove",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Corruption Perceptions Index 2025",
+     "d": "**India 91st of 182, score 39/100** — up from **96th in 2024**; global average **42** (**Transparency International, released 16 February 2026**). Use it to argue that **control of corruption remains the weakest of India's WGI dimensions** despite process reform.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "The state–market–civil society triad",
+     "d": "**UNDP (1997)** — governance is the exercise of **economic, political and administrative authority**, and the three domains must **balance**. Each has a distinct failure: **state failure** (rigidity), **market failure** (externalities, public goods), **civil society failure** (unrepresentativeness, funding capture).",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Why government must supply some goods",
+     "d": "**2021 Q5(d).** **Non-rivalry and non-excludability** (defence, street lighting), **externalities** (vaccination, education), **natural monopoly** (transmission, water networks), **information asymmetry** (drug safety), and **equity** — the market allocates by **purchasing power**, not need.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "Civil society's double edge",
+     "d": "**2021 Q1(d), 2025 Q8(a).** CSOs supply **information, mobilisation and reach** — **MKSS** produced the RTI, **SEWA** organised informal workers. But they can be **unrepresentative, donor-driven and obstructive**; **FCRA amendments (2020)** cut foreign funding sharply. Effectiveness depends on the state being **receptive**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "I-1"
+    },
+    {
+     "t": "The regulatory state replaces the producer state",
+     "d": "**Majone's 'regulatory state'** — the state stops **owning** and starts **rule-making**. India's architecture: **SEBI (1992), TRAI (1997), CERC (Electricity Act, 2003), IRDAI, CCI (2002, amended 2023), IBBI (2016), Data Protection Board (DPDP Act 2023, Rules 2025)**.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 2,
+     "u": "I-1",
+     "x": "Detail in I-4 and I-6"
+    },
+    {
+     "t": "Regulatory capture and the missing common law",
+     "d": "**Stigler's capture theory**; **Rhodes' agencification**. India's gap: the **2nd ARC's 13th Report** and the **FSLRC (Justice B.N. Srikrishna, 2013)** both flagged **overlap, weak accountability and the absence of a common regulatory statute**. FSLRC's **Indian Financial Code** was never enacted.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-1"
+    },
+    {
+     "t": "Globalisation and the administrative state",
+     "d": "**2019 Q3(a), 2020 Q7(a).** The **national policy agenda becomes international**: **WTO, BEPS Pillar Two, Basel III, ICAO, IHR 2005, Paris NDCs**. Domestic administration acquires a **treaty-compliance function**, and the **regulator becomes the point of contact** with global capital.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-1"
+    }
+   ]
+  }
+ ]
+}

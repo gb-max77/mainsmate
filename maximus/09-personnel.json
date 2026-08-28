@@ -1,0 +1,587 @@
+{
+ "id": "p09",
+ "pod": "Personnel and the Civil Services",
+ "units": [
+  "I-9",
+  "II-8"
+ ],
+ "blurb": "Paper I's personnel theory and Paper II's civil services are the same syllabus written twice. Appraisal, training, neutrality and ethics rotate through Paper I every year; Paper II adds the constitutional position and the political-permanent interface.",
+ "groups": [
+  {
+   "g": "Human resource development and the personnel function",
+   "items": [
+    {
+     "t": "Personnel administration to human resource development",
+     "d": "**Personnel administration** treats staff as **posts to be filled and controlled**; **HRD** treats them as a **capability to be built**. The shift is from **establishment work** — sanction, seniority, service records — to **competency, career design and performance**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-9"
+    },
+    {
+     "t": "Why HRD matters more in government",
+     "d": "Government cannot **hire and fire** to change its capability, cannot **pay differentially** for scarce skills, and holds staff for **thirty-five years**. Every capability it will have in 2040 is **already recruited**. That is why **training and career design**, not recruitment, are the operative levers.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-9"
+    },
+    {
+     "t": "The personnel machinery of the Union",
+     "d": "**Department of Personnel and Training (DoPT)** under the **PMO** — cadre controlling authority for the **IAS**, policy on recruitment, training, conduct and vigilance. **UPSC** for recruitment and disciplinary advice; **Staff Selection Commission** for Group B and C; **MHA** for the **IPS**, **MoEFCC** for the **IFoS**.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "The measured vacancy position",
+     "d": "**All India Services as on 1 January 2025** — **IAS sanctioned 6,877, in position 5,577, vacant 1,300**; **IPS sanctioned 5,099, vacant 505**; **IFoS sanctioned 3,193, vacant 1,029**. Quote these before arguing about capacity; a fifth of the IAS simply does not exist.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The Baswan finding on cadre strength",
+     "d": "**B.S. Baswan Committee (2016)** found the shortfall structural: **intake was cut in the 1990s** and the gap compounds for **thirty years**, since a missing 1996 batch is a missing 2026 Joint Secretary. **Promotee quotas** cannot close a deficit at the senior levels where it bites.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "The constitutional position of the services",
+     "d": "**Article 308-314, Part XIV.** **Article 309** — Parliament or the legislature may regulate recruitment and conditions; until then, **rules by the President or Governor**. **Article 310** — the **doctrine of pleasure**. **Article 311** — the **procedural protection**. **Article 312** — Rajya Sabha may create a **new All India Service** by **two-thirds** resolution.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Why India kept an All India Service",
+     "d": "**Sardar Patel's** case in the Constituent Assembly — a service with a **national outlook** serving under States is the **link that holds a federation of continental scale together**. \"An efficient, disciplined and contented service... is a **sine qua non** of sound administration under a democratic regime **even more than under an authoritarian** rule.\"",
+     "k": "quote",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    }
+   ]
+  },
+  {
+   "g": "Recruitment",
+   "items": [
+    {
+     "t": "The principles of public recruitment",
+     "d": "**Merit** (open competition), **equality of opportunity** (Article 16), **representativeness** (the service should resemble the society), **political neutrality of the recruiting body**, and **suitability** — the qualities tested must be those the job needs.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-9"
+    },
+    {
+     "t": "The UPSC's constitutional insulation",
+     "d": "**Articles 315-323.** Members appointed by the **President**, removable only for **misbehaviour on a Supreme Court reference**, **expenses charged on the Consolidated Fund**, **no further employment under government** after office (Chairman barred entirely). **2024 Q5(a) asked whether this delivers fair recruitment.**",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The limits of UPSC autonomy",
+     "d": "Insulation exists at the **appointment and tenure** end. It does not extend to **which posts are referred**, to **cadre strength**, to the **timing of requisitions**, or to State Public Service Commissions, several of which have faced **recruitment scandals and delayed appointments**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 3,
+     "u": "II-8"
+    },
+    {
+     "t": "The examination's design history",
+     "d": "**Kothari Committee (1976)** created the present **Preliminary–Main–Interview** structure with optionals. **Satish Chandra (1989)** added the **essay** and cut interview weightage. **Alagh (2001)** proposed a common aptitude test, producing **CSAT (2011)**. **Baswan (2016)** reviewed age, attempts and the optional's role.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 3,
+     "u": "II-8"
+    },
+    {
+     "t": "Representative bureaucracy",
+     "d": "**Kingsley's** concept: a bureaucracy that **mirrors the society** it serves. **Passive** representation (composition) is expected to produce **active** representation (responsive decisions). India's instruments are **reservation under Articles 16(4) and 335**, and the **AIS insider-outsider cadre allocation** balancing State representation.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Affirmative action in recruitment",
+     "d": "**2025 Q6(c) asked it in global context.** India uses **quotas** (a hard floor); the **US** uses **goals and timetables** after **Bakke** and **Grutter** limited quotas; **South Africa** uses **employment equity plans**; **Malaysia's** bumiputra policy is the closest analogue. The Indian design is unusual in being **constitutionally mandated rather than administratively adopted**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Lateral entry",
+     "d": "The live controversy. Introduced for **Joint Secretary, Director and Deputy Secretary** posts through UPSC-conducted selection from **2018**; the **2024 advertisement for 45 posts was withdrawn** after objections that **contract appointments carried no reservation**. The unresolved questions are **reservation, conflict of interest and cooling-off**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "The case for and against lateral entry",
+     "d": "**For** — domain depth in **finance, energy, digital and climate** that a generalist career cannot supply; contestability at the top. **Against** — it **bypasses reservation**, weakens the **career incentive** of the regular cadre, and risks **revolving-door capture** if the entrant returns to the sector he regulated.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "Merit without a fair civil service",
+     "d": "**2019 Q8(c).** The claim is defensible: where entry is **patronage-based**, the official's loyalty runs to the **patron**, not to the office. **Northcote-Trevelyan (1854)** and the **Pendleton Act (1883)** were both anti-corruption reforms first, and efficiency reforms second.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-9"
+    }
+   ]
+  },
+  {
+   "g": "Classification of posts",
+   "items": [
+    {
+     "t": "Position classification",
+     "d": "The **post** is classified by **duties and responsibilities**, and pay attaches to the **post**. Gives **equal pay for equal work**, precise **job descriptions** and **specialisation**. Used in the **United States**. Its cost is **rigidity** — mobility across posts is hard because each is separately defined.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 3,
+     "u": "I-9"
+    },
+    {
+     "t": "Rank classification",
+     "d": "The **person** carries a **rank** and pay follows the rank wherever posted. Gives **mobility, generalist career development and easy redeployment**. Used in **Britain, France and India**. Its cost is that **pay is disconnected from the job** — the same rank does very different work in Delhi and in a district.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-9"
+    },
+    {
+     "t": "The Indian hybrid",
+     "d": "India runs **rank classification** for the services with **position elements** grafted on: **cadre posts** listed against levels, the **Pay Matrix** of the 7th CPC, **Non-Functional Upgradation**, and **empanelment** for specific Union posts. The result carries the **rigidity of both** systems in places.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-9"
+    },
+    {
+     "t": "The generalist–specialist debate",
+     "d": "**Generalist** — trained mind, coordination, breadth, political sense, resistance to capture. **Specialist** — domain competence, credibility with the sector. The Indian answer since **ARC-I** has been to keep generalist leadership and add **domain specialisation after mid-career**, which **Hota (2004)** and **Mission Karmayogi** both pursue.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Resolving the debate honestly",
+     "d": "The dichotomy is false at the top. Senior posts require **judgement under political conditions** (generalist) and **command of the sector's evidence** (specialist). The design answer is **specialised career streams within a generalist service** plus **lateral depth** — not a choice between two cadres.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-8"
+    }
+   ]
+  },
+  {
+   "g": "Training and capacity building",
+   "items": [
+    {
+     "t": "What training must do",
+     "d": "**Training is not a short affair; it is a step-by-step process** of developing **skills, habits, knowledge and aptitude** — **2023 Q8(c) quoted this**. It runs **induction → in-service → mid-career → specialised → leadership**, and its object is **behaviour**, not information.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "The Indian training institutions",
+     "d": "**LBSNAA Mussoorie** (IAS and the common Foundation Course); **SVPNPA Hyderabad** (IPS); **NADT Nagpur** (IRS); **IGNFA Dehradun** (IFoS); **ISTM** for Secretariat staff; **NIRDPR** for rural development; **State ATIs**; and the **National Training Policy, 2012** requiring an annual training plan and a training manager in every department.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Mission Karmayogi",
+     "d": "**National Programme for Civil Services Capacity Building, September 2020.** Its shift is from **rule-based to role-based** training: **FRAC** (Framework of Roles, Activities and Competencies) defines the competencies a post needs; **iGOT-Karmayogi** delivers online; **behaviour, functional and domain** competencies are tracked per official.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The Capacity Building Commission",
+     "d": "**2024 Q6(c) asked what it has achieved.** Established **2021** — it approves **Annual Capacity Building Plans**, harmonises training institutions, audits their quality, and builds shared learning resources. It is **recommendatory to ministries**, which is the structural limit on what it can enforce.",
+     "k": "cmte",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Mission Karmayogi's measured progress",
+     "d": "**1.7 crore+ registered users (August 2026)**; about **10.5 lakh officials** trained under **Rashtriya Karmayogi Jan Seva** (Phase II ended **10 February 2026**) with **16,000+ master trainers**; MoUs with **30 States and UTs**; **1.75 lakh ULB officials** onboarded; **Amrit Gyaan Kosh** with **70+ case studies**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The honest critique of Karmayogi",
+     "d": "**Completion is not competence** — a course finished on a portal is an **output**, not an outcome. There is **no link to posting or promotion**, so the incentive is weak; **behavioural change** is untested; and the **course-hour metric** is a textbook instance of **Goodhart's law**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "Training versus capacity building",
+     "d": "**2025 Q8(b) asked exactly this.** **Training** is **individual, skill-focused, episodic and course-shaped**. **Capacity building** is **institutional** — it includes **systems, data, processes, structures and organisational culture** as well as people. A fully trained officer in a broken institution still cannot deliver.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "District training in the IAS",
+     "d": "**2023 Q5(a).** The district phase is where an officer acquires **field judgement** — revenue, magistracy, disaster, and the habit of being personally answerable. The critique is that it has become **shorter, more ceremonial, less supervised**, and that officers reach senior posts having **never independently run a subdivision**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Competency mapping and career development",
+     "d": "**2025 Q7(c).** Linking **FRAC competencies** to **postings and empanelment** would supply the **instrumentality** that **Vroom's** expectancy theory says is missing. The risks are real — **gaming, subjective assessment, and a competency framework that becomes a paper exercise** — so it must be **externally validated**.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    }
+   ]
+  },
+  {
+   "g": "Appraisal, promotion and pay",
+   "items": [
+    {
+     "t": "What performance appraisal is for",
+     "d": "Four purposes that pull against each other: **development** (feedback to improve), **administrative decisions** (promotion, posting), **documentation** (defending a decision in a tribunal), and **motivation**. A system optimised for the **third** — India's — cannot deliver the **first**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-9"
+    },
+    {
+     "t": "The Indian appraisal system",
+     "d": "**Performance Appraisal Report**, online through **SPARROW**; **numerical grading on a 1-10 scale**; **self-appraisal with targets**; **reporting, reviewing and accepting** authorities; adverse remarks **communicated with a right of representation** following **Dev Dutt v. Union of India (2008)**, which held even a 'good' entry must be communicated if it affects promotion.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Why it does not discriminate",
+     "d": "Ratings **cluster at the top** because an adverse entry invites litigation and damages a career irreversibly; the reporting officer changes **before the year ends**; and the **cost of honesty is borne by the reporter**. The result is a document that **cannot rank** — which is why **empanelment relies on the 360-degree input instead**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "I-9"
+    },
+    {
+     "t": "Appraisal must acknowledge the subjective",
+     "d": "**2019 Q6(b).** Administrative work is **not fully measurable** — integrity, judgement under pressure, willingness to record dissent, care for the weakest applicant. An appraisal obsessed with **countable targets** rewards the measurable and **silently penalises the valuable**. The remedy is **multi-source, moderated and narrative** assessment, not more numbers.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Appraisal is not only for promotion",
+     "d": "**2021 Q5(c).** Its other uses: **identifying training needs** (feeding FRAC), **matching officers to postings**, **succession planning**, **counselling the under-performer**, and **evidence for compulsory retirement** under **FR 56(j)**. A system used only for **vertical movement** wastes most of what it collects.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Performance management versus performance appraisal",
+     "d": "**2024 Q7(b).** **Appraisal** is a **periodic, individual, backward-looking judgement**. **Performance management** is a **continuous, organisational, forward-looking system** — goal setting, monitoring, feedback, development and organisational alignment, of which appraisal is one component. **The RFD was performance management; the PAR is appraisal.**",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "The committees on appraisal and empanelment",
+     "d": "**Surinder Nath Committee (2003)** — a **competency-based** PAR, disclosure of the full report, and empanelment on **domain competence**. **Hota (2004)** — **fixed tenure**, mid-career specialisation, and **compulsory retirement review at 15 and 25 years**. Both were partially adopted; the **disclosure** recommendation was the one that stuck.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 3,
+     "u": "I-9"
+    },
+    {
+     "t": "Pay determination",
+     "d": "**Central Pay Commissions** roughly every ten years. The **7th CPC (2016)** replaced pay bands and grade pay with a **Pay Matrix**, set a **minimum pay** using the **Aykroyd formula**, and rationalised allowances. The **8th CPC** — ToR notified **3 November 2025**, **Justice Ranjana Prakash Desai**, report within **18 months** — covers about **50 lakh employees and 69 lakh pensioners**.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "The Unified Pension Scheme",
+     "d": "Operational **1 April 2025**. Assured payout of **50% of average basic pay of the last twelve months** for **25 years'** service, **minimum ₹10,000 a month**, government contribution **18.5%**. It settles the **OPS-versus-NPS** fiscal argument by giving **assurance without an unfunded liability** — the design compromise worth naming.",
+     "k": "data",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-9"
+    }
+   ]
+  },
+  {
+   "g": "Conduct, discipline and Article 311",
+   "items": [
+    {
+     "t": "The conduct rules",
+     "d": "**AIS (Conduct) Rules, 1968** and **CCS (Conduct) Rules, 1964**. **Rule 3** — every member shall maintain **absolute integrity**, **devotion to duty**, and do nothing **unbecoming**; and shall maintain **political neutrality**. **Rule 3(3)(iii)** requires **oral directions to be confirmed in writing**.",
+     "k": "prov",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "What conduct rules actually restrain",
+     "d": "**Political activity and candidature**; **criticism of government policy** in public; **joining associations prejudicial to sovereignty**; **acceptance of gifts** beyond limits; **speculation in securities**; **private trade**; and **annual immovable property returns**. Note the pattern: they restrain **expression and association** far more than they compel **performance**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-8"
+    },
+    {
+     "t": "Code of ethics versus code of conduct",
+     "d": "A **code of conduct** is a **list of prohibitions** — enforceable, specific, and silent on everything it does not mention. A **code of ethics** states **values that guide judgement** in the cases no rule anticipated. India has an elaborate code of conduct and **no code of ethics**; the **2nd ARC's fourth report** proposed one.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Which is more effective?",
+     "d": "The answer is **both, in sequence**. Conduct rules set an **enforceable floor** and catch the clear case; a code of ethics **shapes discretion** where rules run out — which is where most administrative harm occurs. A conduct code alone produces **compliance without judgement**: 'I broke no rule.'",
+     "k": "concept",
+     "sl": "close",
+     "tr": 2,
+     "u": "I-9"
+    },
+    {
+     "t": "Article 311's two protections",
+     "d": "**311(1)** — no dismissal or removal by an authority **subordinate to the appointing authority**. **311(2)** — no dismissal, removal or **reduction in rank** except after an **inquiry** in which the charges are communicated and a **reasonable opportunity of being heard** is given.",
+     "k": "scheme",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The three exceptions to Article 311(2)",
+     "d": "**(a)** conviction on a **criminal charge**; **(b)** where the authority is satisfied that holding an inquiry is **not reasonably practicable**, for **reasons to be recorded in writing**; **(c)** where the **President or Governor** is satisfied that in the **interest of the security of the State** an inquiry is not expedient. Each requires a **recorded, reviewable** satisfaction.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The disciplinary process",
+     "d": "**CCS (CCA) Rules, 1965** — **minor penalties** (censure, withholding of increment or promotion, recovery) and **major penalties** (reduction in rank, compulsory retirement, removal, dismissal). Major penalties require a **charge sheet, inquiry officer, presenting officer, defence assistant, inquiry report and second-stage UPSC consultation**.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-8"
+    },
+    {
+     "t": "Why discipline fails in practice",
+     "d": "The proceedings take **years**, run in parallel with **criminal trials**, and are **appealable to a tribunal and then a High Court**. **Suspension** becomes the real penalty and is often prolonged. The net effect is that **procedural protection designed against arbitrariness has become protection against consequence**.",
+     "k": "critique",
+     "sl": "attack",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "Is Article 311 the problem?",
+     "d": "Take a careful position. It protects the officer who **refuses an unlawful order** — remove it and neutrality has no floor. The defect is not the **protection** but its **operation**: the answer is **time-bound inquiry, fewer stages, and independent inquiry officers**, plus honest use of **FR 56(j)** review, not repeal.",
+     "k": "critique",
+     "sl": "close",
+     "tr": 2,
+     "u": "II-8"
+    }
+   ]
+  },
+  {
+   "g": "Neutrality, activism and the political interface",
+   "items": [
+    {
+     "t": "What neutrality means",
+     "d": "Not indifference to **outcomes** but **impartiality between parties**: the civil servant serves the **government of the day** with equal energy, gives **frank advice in private**, and **executes the lawful decision in public**. The **Whitehall** convention, imported with the ICS and preserved by **Rule 3**.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "'Neutrality has become a myth'",
+     "d": "**2024 Q5(b).** The evidence for the charge: **transfer as a political instrument**, **empanelment sensitive to preference**, **post-retirement appointments** creating anticipatory alignment, and officers publicly identified with a regime's programmes. **2021 Q8(c)** put it as civil servants exhibiting their political masters' values.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Committed versus neutral bureaucracy",
+     "d": "The 1970s debate, still live. **Committed** — an administration must share the **constitutional and developmental commitment** of the elected government to implement it energetically. **Neutral** — commitment to a **government** is indistinguishable in practice from commitment to a **party**. Resolve it as **committed to the Constitution, neutral between parties**.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Civil service activism",
+     "d": "The officer who **publicly** pursues an agenda — through the press, social media or litigation. Defensible where it enforces **law against illegality** (**Ashok Khemka's** mutation cancellation, **T.N. Seshan's** enforcement of the model code); corrosive where it substitutes **personal preference for the elected government's mandate**.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "The T.S.R. Subramanian directions",
+     "d": "**T.S.R. Subramanian v. Union of India (2013)** — a **Civil Services Board** to recommend transfers and postings, a **minimum tenure** of two years, and **oral instructions to be recorded in writing**. States were directed to comply; **compliance has been partial and reversible**, since the Board's advice can be overridden with reasons.",
+     "k": "case",
+     "sl": "prove",
+     "tr": 2,
+     "u": "II-8"
+    },
+    {
+     "t": "Transfer as the core problem",
+     "d": "The **single most consequential** personnel issue in India. Frequent, mid-tenure, punitive transfers destroy **institutional memory**, remove the **incentive to start anything**, and are the **enforcement mechanism** for every other pressure. **Fix tenure and half the neutrality problem resolves itself.**",
+     "k": "critique",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The changing political-permanent relationship",
+     "d": "**2024 Q2(b), 2023 Q6(a).** Three drivers: **coalition and then single-party dominance** changing the space for advice; the **PMO and CMO** centralising decisions and reducing the Secretary's role; and **media and social media** pushing officers into visibility that the neutrality convention assumed they would not have.",
+     "k": "critique",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "The line between direction and interference",
+     "d": "The formulation to write. The political executive is **entitled to decide policy, set priorities and demand results**. It is not entitled to direct **who gets a licence, who is transferred, or how a case is investigated**. Every reform proposal — Civil Services Board, State Security Commission, PESB — is an attempt to **draw that line institutionally**.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Political rights of civil servants",
+     "d": "**2024 Q5(b).** They may **vote**; they may **not** join or assist a political party, canvass, contest, or express public political views. The justification is that the **appearance of impartiality** is part of the service's capital. The counter is that a **blanket bar on all political expression** is disproportionate to that end.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "II-8"
+    },
+    {
+     "t": "Staff associations and the JCM",
+     "d": "**Joint Consultative Machinery (1966)** — **National, Departmental and Office Councils**, with **compulsory arbitration** on pay, allowances and hours; recognised associations under the **CCS (RSA) Rules, 1993**. **Strikes are not a right** — **All India Bank Employees Association (1962)** held there is no fundamental right to strike.",
+     "k": "prov",
+     "sl": "argue",
+     "tr": 3,
+     "u": "II-8"
+    },
+    {
+     "t": "Employer-employee relations as mutual reliance",
+     "d": "**2023 Q5(e).** Government is a **monopoly employer** whose employees deliver essential services and **cannot strike lawfully**; that asymmetry makes **consultative machinery a duty, not a concession**. Where JCM works, disputes are resolved before they reach the street; where it is allowed to lapse, **agitation becomes the only channel**.",
+     "k": "concept",
+     "sl": "close",
+     "tr": 1,
+     "u": "I-9"
+    }
+   ]
+  },
+  {
+   "g": "Administrative ethics",
+   "items": [
+    {
+     "t": "Why ethics and not just rules",
+     "d": "Rules govern the **anticipated** case. Administrative discretion operates precisely where they run out — which resource-scarce claim to prefer, which enforcement to prioritise, what to record. **Ethics is what governs the space rules cannot reach**, and that space grows as administration becomes more discretionary.",
+     "k": "concept",
+     "sl": "open",
+     "tr": 2,
+     "u": "I-9"
+    },
+    {
+     "t": "'I was only obeying orders'",
+     "d": "**2019 Q7(b).** Administrative ethics is the antidote because it locates responsibility in the **person**, not the **chain**. **Barnard's** executive creates moral codes; the **Nuremberg** principle denies superior orders as a defence; **Rule 3(3)(iii)** operationalises it — **put the order in writing and the chain becomes attributable**.",
+     "k": "link",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Nolan's seven principles",
+     "d": "**Selflessness, integrity, objectivity, accountability, openness, honesty, leadership** — from the **Committee on Standards in Public Life (1995)**. The most quotable ethical checklist in the syllabus, and the model the **2nd ARC** used for its proposed **Code of Ethics** and **Public Services Bill**.",
+     "k": "cmte",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "The four ethical pressures on an administrator",
+     "d": "**Conflicting loyalties** (law, minister, public, subordinate); **conflict of interest** (personal, family, post-retirement); **information asymmetry** (what to disclose, when); and **the cost of dissent** (career risk for refusing). Naming which pressure a case involves converts a vague answer into an analytical one.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 3,
+     "u": "I-9"
+    },
+    {
+     "t": "Innovative practices in administrative ethics",
+     "d": "**2024 Q6(a).** Working instances: **integrity pacts** in procurement (Transparency International's model, adopted by the CVC); **asset and interest disclosure**; **cooling-off periods**; **e-procurement removing the discretionary interface**; **behavioural nudges** in tax compliance; and **preventive vigilance** as against punitive vigilance.",
+     "k": "scheme",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Named Indian exemplars",
+     "d": "**T.N. Seshan** — statutory authority used to its constitutional edge. **Ashok Khemka** — mutation cancellation and the cost paid in transfers. **Satyendra Dubey** and **Shanmugam Manjunath** — killed for reporting corruption, and the reason whistleblower protection is not academic. **S.R. Sankaran** — the officer who made bonded-labour release his career.",
+     "k": "eg",
+     "sl": "prove",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Ethics shaped by global practice",
+     "d": "**2025 Q5(d).** The channels are real: **UNCAC (ratified 2011)** and its conflict-of-interest obligations; **OECD** public integrity recommendations; **FATF** compliance shaping financial conduct; **Nolan** as the template for codes worldwide; and **ISO 37001** anti-bribery certification entering Indian PSUs.",
+     "k": "concept",
+     "sl": "argue",
+     "tr": 1,
+     "u": "I-9"
+    },
+    {
+     "t": "Institutionalising ethical values",
+     "d": "**2020 Q5(e).** At the **political** level: a **code of conduct for ministers** with an independent adjudicator (**2023 Q5(e)** asked this), **election funding transparency**, and **asset declaration**. At the **administrative** level: a **Code of Ethics**, an **Ethics Commissioner**, **whistleblower protection in force**, and **conflict-of-interest rules with a cooling-off period**.",
+     "k": "scheme",
+     "sl": "close",
+     "tr": 1,
+     "u": "II-14"
+    }
+   ]
+  }
+ ]
+}
