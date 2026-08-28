@@ -51,11 +51,12 @@
     },
     {
      "t": "Analysis versus action",
-     "d": "**2020 Q1(b).** Taylor never separated **principles of analysis** (how to study work scientifically) from **principles of action** (what management should therefore do). He presented an **empirical method** and a **managerial prescription** as one thing — which is why criticising the prescription looked like rejecting the science.",
+     "d": "Taylor never separated **principles of analysis** (how to study work scientifically) from **principles of action** (what management should therefore do). He presented an **empirical method** and a **managerial prescription** as one thing — which is why criticising the prescription looked like rejecting the science.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2020 Q1(b)"
     },
     {
      "t": "Who decides what work is worth doing?",
@@ -105,11 +106,12 @@
    "items": [
     {
      "t": "Fayol's five elements",
-     "d": "**POCCC — Planning, Organising, Commanding, Coordinating, Controlling** — from **Administration Industrielle et Générale (1916)**. Fayol looked at the organisation **from the top down**; Taylor looked **from the shop floor up**. **2021 Q1(e) turned on exactly this contrast.**",
+     "d": "**POCCC — Planning, Organising, Commanding, Coordinating, Controlling** — from **Administration Industrielle et Générale (1916)**. Fayol looked at the organisation **from the top down**; Taylor looked **from the shop floor up**.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2021 Q1(e)"
     },
     {
      "t": "The fourteen principles worth naming",
@@ -185,11 +187,12 @@
     },
     {
      "t": "The scientific-management versus human-relations contrast",
-     "d": "**2024 Q4(b).** Same goal — **efficiency**; opposite route. Taylor: efficiency through **method, measurement and money**. Mayo: through **attention, group norms and belonging**. Neither is complete — which is why **Herzberg** later separated the two into **hygiene** and **motivators**.",
+     "d": "Same goal — **efficiency**; opposite route. Taylor: efficiency through **method, measurement and money**. Mayo: through **attention, group norms and belonging**. Neither is complete — which is why **Herzberg** later separated the two into **hygiene** and **motivators**.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2024 Q4(b)"
     }
    ]
   },
@@ -262,11 +265,12 @@
     },
     {
      "t": "Marx on bureaucracy",
-     "d": "**2025 Q4(c) quoted it:** bureaucracy \"constitutes the **imaginary state** beside the real state; it is the **spiritualism of the state**.\" For Marx it is an **instrument of the dominant class** that mistakes its **own interest** for the **general interest** — the sharpest counter to Weber's neutrality claim.",
+     "d": "bureaucracy \"constitutes the **imaginary state** beside the real state; it is the **spiritualism of the state**.\" For Marx it is an **instrument of the dominant class** that mistakes its **own interest** for the **general interest** — the sharpest counter to Weber's neutrality claim.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2025 Q4(c)"
     },
     {
      "t": "Weber and the algorithm",
@@ -332,7 +336,7 @@
     },
     {
      "t": "Michels — the iron law of oligarchy",
-     "d": "\"**Who says organisation says oligarchy.**\" Any large organisation, however democratic in purpose, generates a **specialised leadership** that acquires an interest in its **own continuance**. Use it on **political parties, trade unions, cooperatives** — and on **panchayat federations**.",
+     "d": "\"**Who says organisation says oligarchy.**\" Any large organisation, however democratic in purpose, generates a **specialised leadership** that acquires an interest in its **own continuance**. It applies to **political parties, trade unions and cooperatives** — and to **panchayat federations**.",
      "k": "critique",
      "sl": "argue",
      "tr": 3,
@@ -340,19 +344,21 @@
     },
     {
      "t": "Bureau-pathology",
-     "d": "**2019 Q1(b): \"Bureau pathology denigrates competence in organization.\"** The cluster of dysfunctions — **red tape, buck-passing, rule-worship, empire-building, over-caution, secrecy**. Its damage is that it **penalises the competent**: the officer who decides is exposed, the one who circulates the file is safe.",
+     "d": "The cluster of dysfunctions — **red tape, buck-passing, rule-worship, empire-building, over-caution, secrecy**. Its damage is that it **penalises the competent**: the officer who decides is exposed, the one who circulates the file is safe.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2019 Q1(b)"
     },
     {
      "t": "Post-bureaucratic organisational forms",
-     "d": "**Warren Bennis** predicted the **death of bureaucracy** and its replacement by **organic-adaptive, temporary task systems** — **adhocracy**. **Toffler** named it; **Mintzberg** placed it among his configurations. **2020 Q2(b) quoted Bennis directly.**",
+     "d": "**Warren Bennis** predicted the **death of bureaucracy** and its replacement by **organic-adaptive, temporary task systems** — **adhocracy**. **Toffler** named it; **Mintzberg** placed it among his configurations.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2020 Q2(b)"
     },
     {
      "t": "Why bureaucracy did not die",
@@ -409,11 +415,12 @@
     },
     {
      "t": "Follett bridges classical and behavioural",
-     "d": "**2025 Q2(b) and 2023 Q2(a) both asked this.** She accepted the classical concern with **coordination and authority** but relocated both in **psychology and group process** — making her the **hinge** between Taylor's mechanics and Mayo's sociology.",
+     "d": "She accepted the classical concern with **coordination and authority** but relocated both in **psychology and group process** — making her the **hinge** between Taylor's mechanics and Mayo's sociology.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2025 Q2(b) · 2023 Q2(a)"
     },
     {
      "t": "Follett in Indian institutions",
@@ -470,11 +477,12 @@
     },
     {
      "t": "Formal organisations are made of informal groups",
-     "d": "**2024 Q1(b).** The informal organisation is **not a defect** of the formal one — it is the **condition of its working**. It supplies **speed** (the phone call that pre-clears the file), **information** (the grapevine), and **social control**. Suppress it and the formal system **slows and hardens**.",
+     "d": "The informal organisation is **not a defect** of the formal one — it is the **condition of its working**. It supplies **speed** (the phone call that pre-clears the file), **information** (the grapevine), and **social control**. Suppress it and the formal system **slows and hardens**.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2024 Q1(b)"
     },
     {
      "t": "The standard critiques of human relations",
@@ -486,11 +494,12 @@
     },
     {
      "t": "Is Mayo still relevant?",
-     "d": "**2020 Q2(c).** Yes, but relocated. **Hybrid and platform work** has hollowed out the informal group; **team belonging** must now be **deliberately designed**. In Indian administration the informal group is the **batch, the cadre and the mess** — which explains both **cohesion** and **cadre parochialism**.",
+     "d": "Yes, but relocated. **Hybrid and platform work** has hollowed out the informal group; **team belonging** must now be **deliberately designed**. In Indian administration the informal group is the **batch, the cadre and the mess** — which explains both **cohesion** and **cadre parochialism**.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2020 Q2(c)"
     },
     {
      "t": "Human relations inside Indian administration",
@@ -539,11 +548,12 @@
     },
     {
      "t": "Efficiency versus effectiveness, Barnard's sense",
-     "d": "**Effectiveness** = the **organisation's purpose** is achieved. **Efficiency** = the **individual's motives** are satisfied, so cooperation continues. **2023 Q1(b) quoted this**: efficiency is the capacity to offer **effective inducements in sufficient quantity** to maintain **equilibrium**.",
+     "d": "**Effectiveness** = the **organisation's purpose** is achieved. **Efficiency** = the **individual's motives** are satisfied, so cooperation continues. efficiency is the capacity to offer **effective inducements in sufficient quantity** to maintain **equilibrium**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2023 Q1(b)"
     },
     {
      "t": "Economy of incentives",
@@ -600,27 +610,30 @@
     },
     {
      "t": "Satisficing",
-     "d": "Because search is costly, we do not **maximise** — we set an **aspiration level** and take the **first alternative that is good enough**. **Administrative man satisfices; economic man maximises.** **2020 Q1(e)**: administrative man bridges the **psychological** and the **rational** man.",
+     "d": "Because search is costly, we do not **maximise** — we set an **aspiration level** and take the **first alternative that is good enough**. **Administrative man satisfices; economic man maximises.** administrative man bridges the **psychological** and the **rational** man.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2020 Q1(e)"
     },
     {
      "t": "Programmed and non-programmed decisions",
-     "d": "**2021 Q1(b).** **Programmed** — repetitive, handled by **habit, standard operating procedure and rules**; increasingly by **software**. **Non-programmed** — novel, ill-structured, handled by **judgement, intuition and heuristics**. Simon's two-dimensional taxonomy pairs each with its **traditional** and **modern** technique.",
+     "d": "**Programmed** — repetitive, handled by **habit, standard operating procedure and rules**; increasingly by **software**. **Non-programmed** — novel, ill-structured, handled by **judgement, intuition and heuristics**. Simon's two-dimensional taxonomy pairs each with its **traditional** and **modern** technique.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2021 Q1(b)"
     },
     {
      "t": "Decision-making as narrowing choice",
-     "d": "**2023 Q1(c) quoted it:** \"the process of decisions... is largely a **technique of narrowing choices**.\" Organisation narrows by **hierarchy, rules, training, communication channels and the vocabulary of the file** — long before the officer consciously deliberates.",
+     "d": "\"the process of decisions... is largely a **technique of narrowing choices**.\" Organisation narrows by **hierarchy, rules, training, communication channels and the vocabulary of the file** — long before the officer consciously deliberates.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2023 Q1(c)"
     },
     {
      "t": "Simon's phases of decision",
@@ -653,11 +666,12 @@
    "items": [
     {
      "t": "Theory X and Theory Y",
-     "d": "**McGregor (The Human Side of Enterprise, 1960)** — **X** assumes people **dislike work**, avoid responsibility and need **coercion and control**; **Y** assumes work is as natural as play, people exercise **self-direction** toward committed objectives, and seek responsibility. **2024 Q2(a).**",
+     "d": "**McGregor (The Human Side of Enterprise, 1960)** — **X** assumes people **dislike work**, avoid responsibility and need **coercion and control**; **Y** assumes work is as natural as play, people exercise **self-direction** toward committed objectives, and seek responsibility.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "I-2"
+     "u": "I-2",
+     "pyq": "2024 Q2(a)"
     },
     {
      "t": "Why Theory X is self-fulfilling",

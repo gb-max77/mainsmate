@@ -89,11 +89,12 @@
     },
     {
      "t": "Why legislative control is weak",
-     "d": "**2024 Q3(c).** **Declining sitting days**; the **anti-defection law** removing the individual MP's independence; **guillotine** disposing of most Demands undiscussed; **ordinances**; **money-bill routing**; committees whose reports are **not binding**; and technical matter no generalist committee can penetrate.",
+     "d": "**Declining sitting days**; the **anti-defection law** removing the individual MP's independence; **guillotine** disposing of most Demands undiscussed; **ordinances**; **money-bill routing**; committees whose reports are **not binding**; and technical matter no generalist committee can penetrate.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2024 Q3(c)"
     },
     {
      "t": "The Public Accounts Committee",
@@ -121,20 +122,22 @@
     },
     {
      "t": "Parliamentary control over expenditure is declining",
-     "d": "**2024 Q5(d).** The evidence: a shrinking share of **Demands actually discussed**, routine use of the **guillotine**, growing reliance on **supplementary demands**, expenditure through **off-budget borrowing and parastatals**, and **fewer bills** sent to committee.",
+     "d": "The evidence: a shrinking share of **Demands actually discussed**, routine use of the **guillotine**, growing reliance on **supplementary demands**, expenditure through **off-budget borrowing and parastatals**, and **fewer bills** sent to committee.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
      "u": "I-5",
-     "x": "Budget process in I-12"
+     "x": "Budget process in I-12",
+     "pyq": "2024 Q5(d)"
     },
     {
      "t": "The guillotine",
-     "d": "**2025 Q5(d).** On the last allotted day the Speaker puts **all outstanding Demands for Grants to vote together, without discussion**. It guarantees the **timeline** the Constitution requires and sacrifices the **scrutiny** the Constitution intends — a trade of **form for substance** that has become routine.",
+     "d": "On the last allotted day the Speaker puts **all outstanding Demands for Grants to vote together, without discussion**. It guarantees the **timeline** the Constitution requires and sacrifices the **scrutiny** the Constitution intends — a trade of **form for substance** that has become routine.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2025 Q5(d)"
     },
     {
      "t": "What would actually strengthen it",
@@ -191,15 +194,16 @@
     },
     {
      "t": "The judiciary mandating rather than restraining",
-     "d": "**2023 Q1(d).** Review has moved from **negative** (striking down) to **positive** (directing what must be done) — continuing mandamus, guidelines with the force of law under **Article 141**, monitored implementation. **Vishaka (1997)** legislated in the legislature's silence.",
+     "d": "Review has moved from **negative** (striking down) to **positive** (directing what must be done) — continuing mandamus, guidelines with the force of law under **Article 141**, monitored implementation. **Vishaka (1997)** legislated in the legislature's silence.",
      "k": "case",
      "sl": "argue",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2023 Q1(d)"
     },
     {
      "t": "The 2025 judicial retreat",
-     "d": "The **Presidential Reference opinion (November 2025)** declined to impose **judicially fixed timelines on the Governor's assent** under **Articles 200 and 201**, unsettling the earlier **State of Tamil Nadu** approach. Read it as a deliberate step back toward **political and cooperative-federal remedies** — which raises whether the **Inter-State Council** can be revived.",
+     "d": "The **Presidential Reference opinion (November 2025)** declined to impose **judicially fixed timelines on the Governor's assent** under **Articles 200 and 201**, unsettling the earlier **State of Tamil Nadu** approach. It is a deliberate step back toward **political and cooperative-federal remedies** — which raises whether the **Inter-State Council** can be revived.",
      "k": "case",
      "sl": "attack",
      "tr": 1,
@@ -208,11 +212,12 @@
     },
     {
      "t": "Checks and balances",
-     "d": "**2025 Q3(c).** India has **separation of functions**, not of personnel — the executive sits in the legislature. The balance is carried instead by **judicial review**, the **basic structure doctrine**, **independent constitutional offices** (CAG, EC, UPSC), and **federal division**. Say that, rather than reciting Montesquieu.",
+     "d": "India has **separation of functions**, not of personnel — the executive sits in the legislature. The balance is carried instead by **judicial review**, the **basic structure doctrine**, **independent constitutional offices** (CAG, EC, UPSC), and **federal division**. Say that, rather than reciting Montesquieu.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2025 Q3(c)"
     }
    ]
   },
@@ -245,11 +250,12 @@
     },
     {
      "t": "The backlash against RTI",
-     "d": "**2023 Q3(c).** **RTI (Amendment) Act, 2019** moved the **tenure, salary and service conditions** of Information Commissioners from **statute to executive rules** — the independence that came from a fixed five-year term is now at the government's discretion. **Vacancies** do the rest without any amendment at all.",
+     "d": "**RTI (Amendment) Act, 2019** moved the **tenure, salary and service conditions** of Information Commissioners from **statute to executive rules** — the independence that came from a fixed five-year term is now at the government's discretion. **Vacancies** do the rest without any amendment at all.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2023 Q3(c)"
     },
     {
      "t": "The DPDP amendment to Section 8(1)(j)",
@@ -314,11 +320,12 @@
     },
     {
      "t": "Why social audit works where audit does not",
-     "d": "**2024 Q3(a).** It reaches the **only fact that matters** — did the work happen and did the wage arrive — which no ledger can verify from a state capital. It is **timely**, **local**, and **hard to capture** where the assembly is genuinely open.",
+     "d": "It reaches the **only fact that matters** — did the work happen and did the wage arrive — which no ledger can verify from a state capital. It is **timely**, **local**, and **hard to capture** where the assembly is genuinely open.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2024 Q3(a)"
     },
     {
      "t": "Where social audit fails",
@@ -375,19 +382,21 @@
     },
     {
      "t": "'The fourth estate is in chains'",
-     "d": "**2019 Q4(c), 2025 Q1(c) and 2024 Q1(e) all in this family.** The pressures: **ownership concentration**, **advertising dependence including government advertising**, **paid news and the Press Council's own findings**, **defamation and sedition-adjacent charges**, and **regulatory leverage over broadcasters**.",
+     "d": "The pressures: **ownership concentration**, **advertising dependence including government advertising**, **paid news and the Press Council's own findings**, **defamation and sedition-adjacent charges**, and **regulatory leverage over broadcasters**.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2019 Q4(c) · 2025 Q1(c) · 2024 Q1(e)"
     },
     {
      "t": "From institutional lens to societal lens",
-     "d": "**2024 Q1(e).** Media once trained its attention on **institutions** — the file, the tender, the committee. It now largely reflects **society back to itself** — identity, outrage, personality. The shift matters administratively: **institutional failure goes unreported** unless it produces a **visible victim**.",
+     "d": "Media once trained its attention on **institutions** — the file, the tender, the committee. It now largely reflects **society back to itself** — identity, outrage, personality. The shift matters administratively: **institutional failure goes unreported** unless it produces a **visible victim**.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2024 Q1(e)"
     },
     {
      "t": "Social media's double effect",
@@ -399,11 +408,12 @@
     },
     {
      "t": "Interest groups in agenda-setting",
-     "d": "**2021 Q8(b).** They **elevate** issues onto the agenda and, more consequentially, **deny others the opportunity** — **Bachrach and Baratz's** non-decision-making. In India, **organised** interests (industry associations, employee unions, farmer bodies) are heard; **unorganised** ones (informal workers, tenants) are not.",
+     "d": "They **elevate** issues onto the agenda and, more consequentially, **deny others the opportunity** — **Bachrach and Baratz's** non-decision-making. In India, **organised** interests (industry associations, employee unions, farmer bodies) are heard; **unorganised** ones (informal workers, tenants) are not.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2021 Q8(b)"
     },
     {
      "t": "Civil society's contribution, named",
@@ -415,19 +425,21 @@
     },
     {
      "t": "When civil society restricts rather than assists",
-     "d": "**2021 Q1(d).** Genuine tensions: **litigation delaying** infrastructure; **unrepresentative** office-bearers claiming to speak for communities; **donor agendas** displacing local priorities; and **accountability of the accountability-seeker** — most NGOs publish less than the departments they audit.",
+     "d": "Genuine tensions: **litigation delaying** infrastructure; **unrepresentative** office-bearers claiming to speak for communities; **donor agendas** displacing local priorities; and **accountability of the accountability-seeker** — most NGOs publish less than the departments they audit.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2021 Q1(d)"
     },
     {
      "t": "The receptive-state condition",
-     "d": "**2025 Q8(a) is precisely this.** CSO effectiveness is a **function of state structure**: statutory entry points make CSOs productive — **Gram Sabha, social audit, pre-legislative consultation, PIL, the Forest Rights Act's gram sabha consent**. Where entry points are absent, CSOs are pushed to **protest and litigation**, which the state then reads as obstruction.",
+     "d": "CSO effectiveness is a **function of state structure**: statutory entry points make CSOs productive — **Gram Sabha, social audit, pre-legislative consultation, PIL, the Forest Rights Act's gram sabha consent**. Where entry points are absent, CSOs are pushed to **protest and litigation**, which the state then reads as obstruction.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-5"
+     "u": "I-5",
+     "pyq": "2025 Q8(a)"
     }
    ]
   },
@@ -484,11 +496,12 @@
     },
     {
      "t": "UNCAC and India's compliance gap",
-     "d": "**2023 Q8(b).** India ratified the **UN Convention against Corruption in 2011**. Gaps that remain: **no law on private-sector bribery** beyond limited provisions, **no effective whistleblower protection in force**, **no asset-recovery framework** matching Chapter V, and **no regulation of lobbying or political funding transparency**.",
+     "d": "India ratified the **UN Convention against Corruption in 2011**. Gaps that remain: **no law on private-sector bribery** beyond limited provisions, **no effective whistleblower protection in force**, **no asset-recovery framework** matching Chapter V, and **no regulation of lobbying or political funding transparency**.",
      "k": "scheme",
      "sl": "attack",
      "tr": 1,
-     "u": "II-14"
+     "u": "II-14",
+     "pyq": "2023 Q8(b)"
     },
     {
      "t": "The 2nd ARC's ethics architecture",
@@ -521,15 +534,16 @@
    "items": [
     {
      "t": "Administration under coalition regimes",
-     "d": "**2024 Q8(c), 2023 Q5(c).** The effects are specific: **portfolio allocation by party rather than fit**; **ministries becoming party fiefdoms** with parallel personnel policies; **slower Cabinet decision-making**; **larger councils of ministers** before the 91st Amendment; and a **Chief Secretary or Cabinet Secretary** who must broker rather than coordinate.",
+     "d": "The effects are specific: **portfolio allocation by party rather than fit**; **ministries becoming party fiefdoms** with parallel personnel policies; **slower Cabinet decision-making**; **larger councils of ministers** before the 91st Amendment; and a **Chief Secretary or Cabinet Secretary** who must broker rather than coordinate.",
      "k": "critique",
      "sl": "open",
      "tr": 1,
-     "u": "II-14"
+     "u": "II-14",
+     "pyq": "2024 Q8(c) · 2023 Q5(c)"
     },
     {
      "t": "The compensating virtues of coalitions",
-     "d": "Write both sides. Coalitions produce **greater federal consultation**, **more legislative scrutiny** (governments cannot guillotine at will), and **regional interests represented at the Union table**. The **91st Amendment** capped the Council of Ministers at **15% of the House** and ended defection-by-split, curbing the worst instability.",
+     "d": "Coalitions also produce **greater federal consultation**, **more legislative scrutiny** (governments cannot guillotine at will), and **regional interests represented at the Union table**. The **91st Amendment** capped the Council of Ministers at **15% of the House** and ended defection-by-split, curbing the worst instability.",
      "k": "concept",
      "sl": "argue",
      "tr": 3,
@@ -569,11 +583,12 @@
     },
     {
      "t": "AI in disaster administration",
-     "d": "**2025 Q8(c) asked it.** Working Indian instances: **IMD's** impact-based cyclone forecasting; **Common Alerting Protocol** cell-broadcast warnings; **satellite and drone damage assessment** for rapid loss estimation; **flood forecasting** models; and **Bhashini** for multilingual alerts. The limits are **data quality, last-mile reach and accountability for a wrong prediction**.",
+     "d": "Working Indian instances: **IMD's** impact-based cyclone forecasting; **Common Alerting Protocol** cell-broadcast warnings; **satellite and drone damage assessment** for rapid loss estimation; **flood forecasting** models; and **Bhashini** for multilingual alerts. The limits are **data quality, last-mile reach and accountability for a wrong prediction**.",
      "k": "eg",
      "sl": "prove",
      "tr": 1,
-     "u": "II-14"
+     "u": "II-14",
+     "pyq": "2025 Q8(c)"
     }
    ]
   }

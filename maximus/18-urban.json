@@ -88,11 +88,12 @@
     },
     {
      "t": "The financial-autonomy critique",
-     "d": "**2024 Q7(b).** Without own revenue a municipality cannot **plan beyond one year**, cannot **borrow** (no creditworthiness), cannot **maintain** what it builds, and cannot **refuse** a State-directed project. **Constitutional status without fiscal capacity produces responsibility without resources** — the same sentence that indicts the 73rd Amendment.",
+     "d": "Without own revenue a municipality cannot **plan beyond one year**, cannot **borrow** (no creditworthiness), cannot **maintain** what it builds, and cannot **refuse** a State-directed project. **Constitutional status without fiscal capacity produces responsibility without resources** — the same sentence that indicts the 73rd Amendment.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-12"
+     "u": "II-12",
+     "pyq": "2024 Q7(b)"
     },
     {
      "t": "The 16th Finance Commission's urban grant",
@@ -109,11 +110,12 @@
    "items": [
     {
      "t": "The metropolitan governance problem",
-     "d": "**2025 Q8(a).** A metropolitan area is governed by **overlapping authorities with no single accountable head** — the municipal corporation, a development authority for planning, separate water and transport boards, a cantonment or two, a police commissionerate, and several State parastatals. **Nobody is responsible for the city as a whole.**",
+     "d": "A metropolitan area is governed by **overlapping authorities with no single accountable head** — the municipal corporation, a development authority for planning, separate water and transport boards, a cantonment or two, a police commissionerate, and several State parastatals. **Nobody is responsible for the city as a whole.**",
      "k": "critique",
      "sl": "open",
      "tr": 1,
-     "u": "II-12"
+     "u": "II-12",
+     "pyq": "2025 Q8(a)"
     },
     {
      "t": "Why cities matter fiscally",

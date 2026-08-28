@@ -27,23 +27,25 @@
     },
     {
      "t": "Did the 91st Amendment right-size the Council?",
-     "d": "**2023 Q1(c).** **Yes at the margin** — it ended jumbo ministries in several States and, with the **anti-defection** provision disqualifying a defector from ministerial office, removed the incentive to buy loyalty with berths. **No in substance** — the 15% cap is generous for large houses, and **parliamentary secretaries** were used to evade it until courts intervened.",
+     "d": "**Yes at the margin** — it ended jumbo ministries in several States and, with the **anti-defection** provision disqualifying a defector from ministerial office, removed the incentive to buy loyalty with berths. **No in substance** — the 15% cap is generous for large houses, and **parliamentary secretaries** were used to evade it until courts intervened.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-4"
+     "u": "II-4",
+     "pyq": "2023 Q1(c)"
     },
     {
      "t": "Why the Indian PM is stronger than the British",
-     "d": "**2023 Q2(a).** **A written Constitution names him** (Article 74). He is **sole channel of communication** with the President (Article 78). India has **no elected upper chamber with real veto**, **no separate head-of-state convention constraining him**, a **larger patronage in appointments** through the ACC, and — decisively — **command of a federation's central transfers**.",
+     "d": "**A written Constitution names him** (Article 74). He is **sole channel of communication** with the President (Article 78). India has **no elected upper chamber with real veto**, **no separate head-of-state convention constraining him**, a **larger patronage in appointments** through the ACC, and — decisively — **command of a federation's central transfers**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "II-4"
+     "u": "II-4",
+     "pyq": "2023 Q2(a)"
     },
     {
      "t": "The countervailing constraints",
-     "d": "Write the other side. He is constrained by **coalition arithmetic** where it exists, **judicial review** far stronger than in Britain, **federal resistance** from opposition-ruled States, and the fact that most administrative subjects are on the **State List**. The British PM faces a **unitary state**; the Indian PM must **negotiate one**.",
+     "d": "He is constrained by **coalition arithmetic** where it exists, **judicial review** far stronger than in Britain, **federal resistance** from opposition-ruled States, and the fact that most administrative subjects are on the **State List**. The British PM faces a **unitary state**; the Indian PM must **negotiate one**.",
      "k": "critique",
      "sl": "attack",
      "tr": 2,
@@ -112,11 +114,12 @@
     },
     {
      "t": "'The people's PMO, not the Prime Minister's PMO'",
-     "d": "**2024 Q1(d).** The critique is about **accountability**: an office with great influence and **no departmental answerability** — no Demand for Grants of substance, no Standing Committee, no minister answerable for its decisions in the House. The defence is that **executive coordination** at scale requires an apex staff, and its output is the PM's own responsibility.",
+     "d": "The critique is about **accountability**: an office with great influence and **no departmental answerability** — no Demand for Grants of substance, no Standing Committee, no minister answerable for its decisions in the House. The defence is that **executive coordination** at scale requires an apex staff, and its output is the PM's own responsibility.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "II-4"
+     "u": "II-4",
+     "pyq": "2024 Q1(d)"
     },
     {
      "t": "PRAGATI",
@@ -173,11 +176,12 @@
     },
     {
      "t": "The field organisations' role",
-     "d": "**2025 Q2(b) asked it of MGNREGA and Swachh Bharat.** They supply **local knowledge**, **adaptation to variation**, **speed of response** and the **visible official** whose presence gives an order legitimacy. Without them a central design meets a country of **11 agro-climatic zones and 2.55 lakh gram panchayats** with a single template.",
+     "d": "They supply **local knowledge**, **adaptation to variation**, **speed of response** and the **visible official** whose presence gives an order legitimacy. Without them a central design meets a country of **11 agro-climatic zones and 2.55 lakh gram panchayats** with a single template.",
      "k": "link",
      "sl": "prove",
      "tr": 1,
-     "u": "II-4"
+     "u": "II-4",
+     "pyq": "2025 Q2(b)"
     },
     {
      "t": "The boards",

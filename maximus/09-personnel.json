@@ -36,7 +36,7 @@
     },
     {
      "t": "The measured vacancy position",
-     "d": "**All India Services as on 1 January 2025** — **IAS sanctioned 6,877, in position 5,577, vacant 1,300**; **IPS sanctioned 5,099, vacant 505**; **IFoS sanctioned 3,193, vacant 1,029**. Quote these before arguing about capacity; a fifth of the IAS simply does not exist.",
+     "d": "**All India Services as on 1 January 2025** — **IAS sanctioned 6,877, in position 5,577, vacant 1,300**; **IPS sanctioned 5,099, vacant 505**; **IFoS sanctioned 3,193, vacant 1,029**. Close to a fifth of the sanctioned IAS simply does not exist.",
      "k": "data",
      "sl": "prove",
      "tr": 1,
@@ -81,11 +81,12 @@
     },
     {
      "t": "The UPSC's constitutional insulation",
-     "d": "**Articles 315-323.** Members appointed by the **President**, removable only for **misbehaviour on a Supreme Court reference**, **expenses charged on the Consolidated Fund**, **no further employment under government** after office (Chairman barred entirely). **2024 Q5(a) asked whether this delivers fair recruitment.**",
+     "d": "**Articles 315-323.** Members appointed by the **President**, removable only for **misbehaviour on a Supreme Court reference**, **expenses charged on the Consolidated Fund**, **no further employment under government** after office (Chairman barred entirely).",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2024 Q5(a)"
     },
     {
      "t": "The limits of UPSC autonomy",
@@ -113,11 +114,12 @@
     },
     {
      "t": "Affirmative action in recruitment",
-     "d": "**2025 Q6(c) asked it in global context.** India uses **quotas** (a hard floor); the **US** uses **goals and timetables** after **Bakke** and **Grutter** limited quotas; **South Africa** uses **employment equity plans**; **Malaysia's** bumiputra policy is the closest analogue. The Indian design is unusual in being **constitutionally mandated rather than administratively adopted**.",
+     "d": "India uses **quotas** (a hard floor); the **US** uses **goals and timetables** after **Bakke** and **Grutter** limited quotas; **South Africa** uses **employment equity plans**; **Malaysia's** bumiputra policy is the closest analogue. The Indian design is unusual in being **constitutionally mandated rather than administratively adopted**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2025 Q6(c)"
     },
     {
      "t": "Lateral entry",
@@ -137,11 +139,12 @@
     },
     {
      "t": "Merit without a fair civil service",
-     "d": "**2019 Q8(c).** The claim is defensible: where entry is **patronage-based**, the official's loyalty runs to the **patron**, not to the office. **Northcote-Trevelyan (1854)** and the **Pendleton Act (1883)** were both anti-corruption reforms first, and efficiency reforms second.",
+     "d": "The claim is defensible: where entry is **patronage-based**, the official's loyalty runs to the **patron**, not to the office. **Northcote-Trevelyan (1854)** and the **Pendleton Act (1883)** were both anti-corruption reforms first, and efficiency reforms second.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2019 Q8(c)"
     }
    ]
   },
@@ -195,11 +198,12 @@
    "items": [
     {
      "t": "What training must do",
-     "d": "**Training is not a short affair; it is a step-by-step process** of developing **skills, habits, knowledge and aptitude** — **2023 Q8(c) quoted this**. It runs **induction → in-service → mid-career → specialised → leadership**, and its object is **behaviour**, not information.",
+     "d": "**Training is not a short affair; it is a step-by-step process** of developing **skills, habits, knowledge and aptitude** — It runs **induction → in-service → mid-career → specialised → leadership**, and its object is **behaviour**, not information.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2023 Q8(c)"
     },
     {
      "t": "The Indian training institutions",
@@ -219,11 +223,12 @@
     },
     {
      "t": "The Capacity Building Commission",
-     "d": "**2024 Q6(c) asked what it has achieved.** Established **2021** — it approves **Annual Capacity Building Plans**, harmonises training institutions, audits their quality, and builds shared learning resources. It is **recommendatory to ministries**, which is the structural limit on what it can enforce.",
+     "d": "Established **2021** — it approves **Annual Capacity Building Plans**, harmonises training institutions, audits their quality, and builds shared learning resources. It is **recommendatory to ministries**, which is the structural limit on what it can enforce.",
      "k": "cmte",
      "sl": "argue",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2024 Q6(c)"
     },
     {
      "t": "Mission Karmayogi's measured progress",
@@ -243,27 +248,30 @@
     },
     {
      "t": "Training versus capacity building",
-     "d": "**2025 Q8(b) asked exactly this.** **Training** is **individual, skill-focused, episodic and course-shaped**. **Capacity building** is **institutional** — it includes **systems, data, processes, structures and organisational culture** as well as people. A fully trained officer in a broken institution still cannot deliver.",
+     "d": "**Training** is **individual, skill-focused, episodic and course-shaped**. **Capacity building** is **institutional** — it includes **systems, data, processes, structures and organisational culture** as well as people. A fully trained officer in a broken institution still cannot deliver.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2025 Q8(b)"
     },
     {
      "t": "District training in the IAS",
-     "d": "**2023 Q5(a).** The district phase is where an officer acquires **field judgement** — revenue, magistracy, disaster, and the habit of being personally answerable. The critique is that it has become **shorter, more ceremonial, less supervised**, and that officers reach senior posts having **never independently run a subdivision**.",
+     "d": "The district phase is where an officer acquires **field judgement** — revenue, magistracy, disaster, and the habit of being personally answerable. The critique is that it has become **shorter, more ceremonial, less supervised**, and that officers reach senior posts having **never independently run a subdivision**.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2023 Q5(a)"
     },
     {
      "t": "Competency mapping and career development",
-     "d": "**2025 Q7(c).** Linking **FRAC competencies** to **postings and empanelment** would supply the **instrumentality** that **Vroom's** expectancy theory says is missing. The risks are real — **gaming, subjective assessment, and a competency framework that becomes a paper exercise** — so it must be **externally validated**.",
+     "d": "Linking **FRAC competencies** to **postings and empanelment** would supply the **instrumentality** that **Vroom's** expectancy theory says is missing. The risks are real — **gaming, subjective assessment, and a competency framework that becomes a paper exercise** — so it must be **externally validated**.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2025 Q7(c)"
     }
    ]
   },
@@ -296,27 +304,30 @@
     },
     {
      "t": "Appraisal must acknowledge the subjective",
-     "d": "**2019 Q6(b).** Administrative work is **not fully measurable** — integrity, judgement under pressure, willingness to record dissent, care for the weakest applicant. An appraisal obsessed with **countable targets** rewards the measurable and **silently penalises the valuable**. The remedy is **multi-source, moderated and narrative** assessment, not more numbers.",
+     "d": "Administrative work is **not fully measurable** — integrity, judgement under pressure, willingness to record dissent, care for the weakest applicant. An appraisal obsessed with **countable targets** rewards the measurable and **silently penalises the valuable**. The remedy is **multi-source, moderated and narrative** assessment, not more numbers.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2019 Q6(b)"
     },
     {
      "t": "Appraisal is not only for promotion",
-     "d": "**2021 Q5(c).** Its other uses: **identifying training needs** (feeding FRAC), **matching officers to postings**, **succession planning**, **counselling the under-performer**, and **evidence for compulsory retirement** under **FR 56(j)**. A system used only for **vertical movement** wastes most of what it collects.",
+     "d": "Its other uses: **identifying training needs** (feeding FRAC), **matching officers to postings**, **succession planning**, **counselling the under-performer**, and **evidence for compulsory retirement** under **FR 56(j)**. A system used only for **vertical movement** wastes most of what it collects.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2021 Q5(c)"
     },
     {
      "t": "Performance management versus performance appraisal",
-     "d": "**2024 Q7(b).** **Appraisal** is a **periodic, individual, backward-looking judgement**. **Performance management** is a **continuous, organisational, forward-looking system** — goal setting, monitoring, feedback, development and organisational alignment, of which appraisal is one component. **The RFD was performance management; the PAR is appraisal.**",
+     "d": "**Appraisal** is a **periodic, individual, backward-looking judgement**. **Performance management** is a **continuous, organisational, forward-looking system** — goal setting, monitoring, feedback, development and organisational alignment, of which appraisal is one component. **The RFD was performance management; the PAR is appraisal.**",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2024 Q7(b)"
     },
     {
      "t": "The committees on appraisal and empanelment",
@@ -434,11 +445,12 @@
     },
     {
      "t": "'Neutrality has become a myth'",
-     "d": "**2024 Q5(b).** The evidence for the charge: **transfer as a political instrument**, **empanelment sensitive to preference**, **post-retirement appointments** creating anticipatory alignment, and officers publicly identified with a regime's programmes. **2021 Q8(c)** put it as civil servants exhibiting their political masters' values.",
+     "d": "The evidence for the charge: **transfer as a political instrument**, **empanelment sensitive to preference**, **post-retirement appointments** creating anticipatory alignment, and officers publicly identified with a regime's programmes. put it as civil servants exhibiting their political masters' values.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2024 Q5(b) · 2021 Q8(c)"
     },
     {
      "t": "Committed versus neutral bureaucracy",
@@ -474,11 +486,12 @@
     },
     {
      "t": "The changing political-permanent relationship",
-     "d": "**2024 Q2(b), 2023 Q6(a).** Three drivers: **coalition and then single-party dominance** changing the space for advice; the **PMO and CMO** centralising decisions and reducing the Secretary's role; and **media and social media** pushing officers into visibility that the neutrality convention assumed they would not have.",
+     "d": "Three drivers: **coalition and then single-party dominance** changing the space for advice; the **PMO and CMO** centralising decisions and reducing the Secretary's role; and **media and social media** pushing officers into visibility that the neutrality convention assumed they would not have.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2024 Q2(b) · 2023 Q6(a)"
     },
     {
      "t": "The line between direction and interference",
@@ -490,11 +503,12 @@
     },
     {
      "t": "Political rights of civil servants",
-     "d": "**2024 Q5(b).** They may **vote**; they may **not** join or assist a political party, canvass, contest, or express public political views. The justification is that the **appearance of impartiality** is part of the service's capital. The counter is that a **blanket bar on all political expression** is disproportionate to that end.",
+     "d": "They may **vote**; they may **not** join or assist a political party, canvass, contest, or express public political views. The justification is that the **appearance of impartiality** is part of the service's capital. The counter is that a **blanket bar on all political expression** is disproportionate to that end.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "II-8"
+     "u": "II-8",
+     "pyq": "2024 Q5(b)"
     },
     {
      "t": "Staff associations and the JCM",
@@ -506,11 +520,12 @@
     },
     {
      "t": "Employer-employee relations as mutual reliance",
-     "d": "**2023 Q5(e).** Government is a **monopoly employer** whose employees deliver essential services and **cannot strike lawfully**; that asymmetry makes **consultative machinery a duty, not a concession**. Where JCM works, disputes are resolved before they reach the street; where it is allowed to lapse, **agitation becomes the only channel**.",
+     "d": "Government is a **monopoly employer** whose employees deliver essential services and **cannot strike lawfully**; that asymmetry makes **consultative machinery a duty, not a concession**. Where JCM works, disputes are resolved before they reach the street; where it is allowed to lapse, **agitation becomes the only channel**.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2023 Q5(e)"
     }
    ]
   },
@@ -527,11 +542,12 @@
     },
     {
      "t": "'I was only obeying orders'",
-     "d": "**2019 Q7(b).** Administrative ethics is the antidote because it locates responsibility in the **person**, not the **chain**. **Barnard's** executive creates moral codes; the **Nuremberg** principle denies superior orders as a defence; **Rule 3(3)(iii)** operationalises it — **put the order in writing and the chain becomes attributable**.",
+     "d": "Administrative ethics is the antidote because it locates responsibility in the **person**, not the **chain**. **Barnard's** executive creates moral codes; the **Nuremberg** principle denies superior orders as a defence; **Rule 3(3)(iii)** operationalises it — **put the order in writing and the chain becomes attributable**.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2019 Q7(b)"
     },
     {
      "t": "Nolan's seven principles",
@@ -551,11 +567,12 @@
     },
     {
      "t": "Innovative practices in administrative ethics",
-     "d": "**2024 Q6(a).** Working instances: **integrity pacts** in procurement (Transparency International's model, adopted by the CVC); **asset and interest disclosure**; **cooling-off periods**; **e-procurement removing the discretionary interface**; **behavioural nudges** in tax compliance; and **preventive vigilance** as against punitive vigilance.",
+     "d": "Working instances: **integrity pacts** in procurement (Transparency International's model, adopted by the CVC); **asset and interest disclosure**; **cooling-off periods**; **e-procurement removing the discretionary interface**; **behavioural nudges** in tax compliance; and **preventive vigilance** as against punitive vigilance.",
      "k": "scheme",
      "sl": "prove",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2024 Q6(a)"
     },
     {
      "t": "Named Indian exemplars",
@@ -567,19 +584,21 @@
     },
     {
      "t": "Ethics shaped by global practice",
-     "d": "**2025 Q5(d).** The channels are real: **UNCAC (ratified 2011)** and its conflict-of-interest obligations; **OECD** public integrity recommendations; **FATF** compliance shaping financial conduct; **Nolan** as the template for codes worldwide; and **ISO 37001** anti-bribery certification entering Indian PSUs.",
+     "d": "The channels are real: **UNCAC (ratified 2011)** and its conflict-of-interest obligations; **OECD** public integrity recommendations; **FATF** compliance shaping financial conduct; **Nolan** as the template for codes worldwide; and **ISO 37001** anti-bribery certification entering Indian PSUs.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-9"
+     "u": "I-9",
+     "pyq": "2025 Q5(d)"
     },
     {
      "t": "Institutionalising ethical values",
-     "d": "**2020 Q5(e).** At the **political** level: a **code of conduct for ministers** with an independent adjudicator (**2023 Q5(e)** asked this), **election funding transparency**, and **asset declaration**. At the **administrative** level: a **Code of Ethics**, an **Ethics Commissioner**, **whistleblower protection in force**, and **conflict-of-interest rules with a cooling-off period**.",
+     "d": "At the **political** level: a **code of conduct for ministers** with an independent adjudicator ( ), **election funding transparency**, and **asset declaration**. At the **administrative** level: a **Code of Ethics**, an **Ethics Commissioner**, **whistleblower protection in force**, and **conflict-of-interest rules with a cooling-off period**.",
      "k": "scheme",
      "sl": "close",
      "tr": 1,
-     "u": "II-14"
+     "u": "II-14",
+     "pyq": "2020 Q5(e) · 2023 Q5(e)"
     }
    ]
   }

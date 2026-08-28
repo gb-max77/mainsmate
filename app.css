@@ -1105,6 +1105,10 @@ body.hl-on #answer mark.hl{cursor:pointer}
   background:color-mix(in srgb,currentColor 15%,transparent);font-weight:600}
 .mx-th[aria-pressed=true]::before{opacity:1}
 .mx-th[aria-pressed=true] i{color:inherit;opacity:.75}
+.mx-th.mx-all{color:var(--dim);font-weight:600}
+.mx-th.mx-all::before{display:none}
+.mx-th.mx-all[aria-pressed=true]{color:var(--gold);border-color:var(--gold);
+  background:color-mix(in srgb,var(--gold) 14%,transparent)}
 
 .mx-lens{display:flex;align-items:center;gap:8px;padding:6px 9px;
   background:var(--bg2);border:1px solid var(--line);border-radius:9px}
@@ -1116,15 +1120,27 @@ body.hl-on #answer mark.hl{cursor:pointer}
 #mx-clear:hover{color:var(--ink)}
 .mx-inline{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 
-.mx-readbar{display:flex;align-items:center;gap:7px;padding:5px 9px;
+/* Read Along's own controls: transport, voice, speed, a progress bar and the count. */
+.mx-readbar{display:flex;flex-direction:column;gap:5px;padding:6px 9px;
   background:var(--bg2);border:1px solid color-mix(in srgb,var(--gold) 32%,var(--line));
   border-radius:9px;font-size:11px;color:var(--faint)}
 .mx-readbar[hidden]{display:none}
+.mx-rrow{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .mx-readbar button{padding:3px 8px;border:1px solid var(--line);border-radius:6px;
   background:var(--card);color:var(--dim);font-size:10.5px}
 .mx-readbar button:hover{color:var(--ink);border-color:var(--gold)}
-.mx-rpos{color:var(--gold);font-weight:600;font-variant-numeric:tabular-nums;min-width:52px}
-.mx-times{display:flex;gap:9px;margin-left:auto;font-variant-numeric:tabular-nums}
+.mx-rpos{color:var(--gold);font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.mx-rsel{display:flex;align-items:center;gap:4px;color:var(--ghost);font-size:10px}
+.mx-rsel:first-of-type{margin-left:auto}
+.mx-rsel span{text-transform:uppercase;letter-spacing:.07em}
+.mx-rsel select{max-width:130px;padding:2px 5px;background:var(--card);border:1px solid var(--line);
+  border-radius:5px;color:var(--dim);font:inherit;font-size:10px}
+.mx-rsel select:focus{outline:0;border-color:var(--gold)}
+.mx-rprog{display:flex;align-items:center;gap:9px}
+.mx-bar2{flex:1;height:3px;border-radius:99px;background:var(--line);overflow:hidden}
+.mx-bar2 i{display:block;height:100%;width:0;border-radius:99px;background:var(--gold);
+  transition:width .3s ease}
+.mx-times{display:flex;gap:10px;font-variant-numeric:tabular-nums;white-space:nowrap}
 
 /* ── the block: term, then the sentence, then the marks ── */
 .mx-g{margin:22px 0 0}

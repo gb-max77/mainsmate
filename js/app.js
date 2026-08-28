@@ -2376,7 +2376,16 @@ const mxSave = () => {
   localStorage.setItem('mm-mx-slots', JSON.stringify([...mx.slots]));
 };
 const mxBook = () => MX.books.find(b => b.id === mx.book) || MX.books[0];
-const mxUnit = () => { const bk = mxBook(); return bk.units.find(u => u.u === mx.unit) || bk.units[0]; };
+// "*" is the whole book read straight through — every section, in order.
+const mxAllUnit = bk => ({
+  u: '*', name: `All of ${bk.label}`, tag: 'everything', sel: `All of ${bk.label}`, n: bk.n,
+  groups: bk.units.flatMap(u => u.groups.map(g => ({ g: `${u.tag} · ${g.g}`, items: g.items })))
+});
+const mxUnit = () => {
+  const bk = mxBook();
+  if (mx.unit === '*') return mxAllUnit(bk);
+  return bk.units.find(u => u.u === mx.unit) || bk.units[0];
+};
 
 const mxText = b => `${b.t} ${b.d} ${b.u} ${b.s || ''}`.toLowerCase();
 // Empty filter set means "everything" — chips are additive, never exclusive.
@@ -2412,7 +2421,7 @@ async function renderMx(arg) {
   if (mxRead.on) mxRead.stop();
 
   const bk = mxBook();
-  if (!bk.units.some(u => u.u === mx.unit)) mx.unit = bk.units[0].u;
+  if (mx.unit !== '*' && !bk.units.some(u => u.u === mx.unit)) mx.unit = bk.units[0].u;
   const unit = mxUnit();
   mxSave();
   const q = mx.q.trim().toLowerCase();
@@ -2420,8 +2429,10 @@ async function renderMx(arg) {
   $('#mx-books').innerHTML = MX.books.map(b =>
     `<button class="mx-bk${b.id === mx.book ? ' on' : ''}" data-book="${b.id}" role="tab"
       aria-selected="${b.id === mx.book}"><b>${esc(b.label)}</b><small>${esc(b.sub)} · ${b.n}</small></button>`).join('');
-  $('#mx-sel').innerHTML = bk.units.map(u =>
-    `<option value="${u.u}"${u.u === mx.unit ? ' selected' : ''}>${esc(u.sel)}${mx.book === 'joint' ? ` · ${esc(u.tag)}` : ''} (${u.n})</option>`).join('');
+  $('#mx-sel').innerHTML =
+    `<option value="*"${mx.unit === '*' ? ' selected' : ''}>▦ All of ${esc(bk.label)} (${bk.n})</option>`
+    + bk.units.map(u =>
+      `<option value="${u.u}"${u.u === mx.unit ? ' selected' : ''}>${esc(u.sel)}${mx.book === 'joint' ? ` · ${esc(u.tag)}` : ''} (${u.n})</option>`).join('');
   $('#mx-blurb').textContent = mx.book === 'joint' ? (unit.blurb || '') : '';
 
   // Chip counts come from this section only, so a chip never promises rows it cannot show.
@@ -2431,8 +2442,13 @@ async function renderMx(arg) {
     return `<button class="mx-th" data-${sel}="${k}" data-k="${k}" aria-pressed="${chosen.has(k)}"
       title="${esc(v.hint)}">${esc(v.label)}<i>${n}</i></button>`;
   }).join('');
-  $('#mx-kinds').innerHTML = chip(MX.kinds, 'kind', 'k', mx.kinds);
-  $('#mx-slots').innerHTML = chip(MX.slots, 'slot', 'sl', mx.slots);
+  $('#mx-kinds').innerHTML =
+    `<button class="mx-th mx-all" data-kind="*" aria-pressed="${!mx.kinds.size}"
+      title="Every kind of block in this section">All<i>${all.length}</i></button>`
+    + chip(MX.kinds, 'kind', 'k', mx.kinds);
+  $('#mx-slots').innerHTML =
+    `<button class="mx-th mx-all" data-slot="*" aria-pressed="${!mx.slots.size}">All</button>`
+    + chip(MX.slots, 'slot', 'sl', mx.slots);
   [...$('#mx-tier').children].forEach(b =>
     b.setAttribute('aria-pressed', String(mx.tiers.has(b.dataset.tier))));
   $('#mx-lensbtn').classList.toggle('on', !!mx.slots.size);
@@ -2458,10 +2474,13 @@ async function renderMx(arg) {
   mxJump.build();
 }
 
-/* Roughly 150 words a minute at 1×; scale with the chosen speed. */
+/* Roughly 150 words a minute at 1×; scale with the chosen speed. Whole sections
+   run to hours, so anything past sixty minutes reads as hours, not as 284:29. */
 const mxSpokenTime = words => {
   const secs = Math.round(words / (150 * (readSpeed || .9)) * 60) + 1;
-  return `${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, '0')}`;
+  const m = Math.floor(secs / 60);
+  if (m >= 60) return `${Math.floor(m / 60)}h ${String(m % 60).padStart(2, '0')}m`;
+  return `${m}:${String(secs % 60).padStart(2, '0')}`;
 };
 
 /* ── group navigation inside the section; the select walks whole sections ── */
@@ -2495,7 +2514,7 @@ const mxJump = {
   }
 };
 function mxStepUnit(dir) {
-  const bk = mxBook(); if (!bk) return;
+  const bk = mxBook(); if (!bk || mx.unit === '*') return;
   const i = bk.units.findIndex(u => u.u === mx.unit);
   const to = bk.units[i + dir];
   if (!to) return;
@@ -2512,9 +2531,14 @@ window.addEventListener('scroll', () => {
 const MXHL = 'mx-speaking';
 function mxSentences(el) {
   const nodes = [], walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
-  let text = '', n;
+  let text = '', n, part = null;
   while ((n = walk.nextNode())) {
     if (n.parentElement.closest('.mx-f')) continue;   // the footer marks are not read
+    // The lead term ends a sentence of its own — it has no full stop, and without
+    // a break the highlighter would run it into the opening line of the body.
+    const owner = n.parentElement.closest('.mx-t,.mx-d,.mx-x');
+    if (part && owner !== part && !/[.!?…]\s*$/.test(text)) text += '. ';
+    part = owner;
     nodes.push({ n, at: text.length }); text += n.nodeValue;
   }
   const out = [];
@@ -2629,10 +2653,13 @@ const mxRead = {
       sLeft += words(el);
       if (el.closest('.mx-g') === group) gLeft += words(el);
     });
-    $('#mx-readpos').textContent = `${this.i + 1} / ${this.nodes.length}`;
+    const total = this.nodes.length, done = this.i;
+    $('#mx-readpos').textContent = `${done} of ${total} read`;
     $('#mx-readpause').textContent = this.paused ? '▶' : '❚❚';
-    $('#mx-times').innerHTML = `<span title="Left in this group">◐ ${mxSpokenTime(gLeft)}</span>`
-      + `<span title="Left in this section">◉ ${mxSpokenTime(sLeft)}</span>`;
+    const fill = $('#mx-fill');
+    if (fill) fill.style.width = `${total ? Math.round(done / total * 100) : 0}%`;
+    $('#mx-times').innerHTML = `<span title="Left in this group">◐ group ${mxSpokenTime(gLeft)}</span>`
+      + `<span title="Left in this section">◉ section ${mxSpokenTime(sLeft)}</span>`;
     mxJump.measure();
   }
 };
@@ -2652,12 +2679,14 @@ $('#mx-tier')?.addEventListener('click', e => {
 });
 $('#mx-kinds')?.addEventListener('click', e => {
   const b = e.target.closest('[data-kind]'); if (!b) return;
-  mx.kinds.has(b.dataset.kind) ? mx.kinds.delete(b.dataset.kind) : mx.kinds.add(b.dataset.kind);
+  if (b.dataset.kind === '*') mx.kinds.clear();
+  else mx.kinds.has(b.dataset.kind) ? mx.kinds.delete(b.dataset.kind) : mx.kinds.add(b.dataset.kind);
   renderMx();
 });
 $('#mx-slots')?.addEventListener('click', e => {
   const b = e.target.closest('[data-slot]'); if (!b) return;
-  mx.slots.has(b.dataset.slot) ? mx.slots.delete(b.dataset.slot) : mx.slots.add(b.dataset.slot);
+  if (b.dataset.slot === '*') mx.slots.clear();
+  else mx.slots.has(b.dataset.slot) ? mx.slots.delete(b.dataset.slot) : mx.slots.add(b.dataset.slot);
   renderMx();
 });
 function mxClearFilters() {
@@ -2686,6 +2715,33 @@ $('#mx-q')?.addEventListener('input', e => { mx.q = e.target.value; renderMx(); 
 $('#mx-stick')?.addEventListener('click', e => {
   const b = e.target.closest('[data-mjump]'); if (!b) return;
   mxJump.step(b.dataset.mjump === 'next' ? 1 : -1);
+});
+function mxFillVoices() {
+  const sel = $('#mx-voice');
+  if (!sel || !canSpeak()) return;
+  const voices = speechSynthesis.getVoices().filter(v => /^en/i.test(v.lang));
+  if (!voices.length) return;
+  sel.innerHTML = `<option value="auto-uk-female">Automatic</option>`
+    + voices.map(v => `<option value="${esc(v.voiceURI)}">${esc(v.name)} · ${esc(v.lang)}</option>`).join('');
+  if ([...sel.options].some(o => o.value === readVoiceURI)) sel.value = readVoiceURI;
+}
+if (canSpeak()) {
+  mxFillVoices();
+  speechSynthesis.addEventListener?.('voiceschanged', mxFillVoices);
+}
+$('#mx-speed') && ($('#mx-speed').value = String(readSpeed));
+$('#mx-voice')?.addEventListener('change', e => {
+  readVoiceURI = e.target.value;
+  localStorage.setItem('mm-read-voice', readVoiceURI);
+  const rv = $('#read-voice'); if (rv) rv.value = readVoiceURI;
+  if (mxRead.on) { mxRead.run++; speechSynthesis.cancel(); mxRead.si = 0; mxRead.speak(); }
+});
+$('#mx-speed')?.addEventListener('change', e => {
+  readSpeed = Number(e.target.value);
+  localStorage.setItem('mm-read-speed', String(readSpeed));
+  const rs = $('#read-speed'); if (rs) rs.value = String(readSpeed);
+  if (mxRead.on) { mxRead.run++; speechSynthesis.cancel(); mxRead.speak(); }
+  renderMx();                      // the read-aloud estimates move with the speed
 });
 $('#mx-read')?.addEventListener('click', () => mxRead.toggle());
 $('#mx-readbar')?.addEventListener('click', e => {

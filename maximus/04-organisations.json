@@ -28,12 +28,13 @@
     },
     {
      "t": "Why 'open system' matters administratively",
-     "d": "**2025 Q1(d).** A closed-system view treats failure as **internal** — bad staff, poor rules. An open-system view forces the **environmental** question: the scheme failed because the **ecology** — literacy, banking density, caste structure — did not supply what the design assumed.",
+     "d": "A closed-system view treats failure as **internal** — bad staff, poor rules. An open-system view forces the **environmental** question: the scheme failed because the **ecology** — literacy, banking density, caste structure — did not supply what the design assumed.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
      "u": "I-4",
-     "x": "Straight into I-7 ecology"
+     "x": "Straight into I-7 ecology",
+     "pyq": "2025 Q1(d)"
     },
     {
      "t": "The socio-technical system",
@@ -45,11 +46,12 @@
     },
     {
      "t": "Contingency theory",
-     "d": "**2019 Q4(a), reprised in 2023 Q3(a).** There is **no one best way**; the right structure depends on **environment, technology and size**. **Burns and Stalker** — **mechanistic** structures suit stable environments, **organic** ones suit turbulence.",
+     "d": "There is **no one best way**; the right structure depends on **environment, technology and size**. **Burns and Stalker** — **mechanistic** structures suit stable environments, **organic** ones suit turbulence.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2019 Q4(a) · 2023 Q3(a)"
     },
     {
      "t": "External fit and internal fit",
@@ -69,11 +71,12 @@
     },
     {
      "t": "Organisation theory is a loose set, not a theory",
-     "d": "**2023 Q3(a) quoted it.** Concede it and turn it: the field's plurality is **appropriate to its object**. A single theory of organisation would have to be **indifferent to purpose, technology, scale and culture** — and would therefore say nothing usable about any actual organisation.",
+     "d": "The field's plurality is **appropriate to its object**. A single theory of organisation would have to be **indifferent to purpose, technology, scale and culture** — and would therefore say nothing usable about any actual organisation.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2023 Q3(a)"
     },
     {
      "t": "Contingency in Indian administrative design",
@@ -130,11 +133,12 @@
     },
     {
      "t": "Boards and commissions",
-     "d": "**2020 Q1(d).** A **board** is **plural-headed** for **deliberation and expertise** — CBDT, CBIC, Railway Board. A **commission** is usually **plural and independent** for functions requiring **insulation from the executive** — UPSC, EC, CIC, NHRC. Plurality buys **impartiality** and costs **speed**.",
+     "d": "A **board** is **plural-headed** for **deliberation and expertise** — CBDT, CBIC, Railway Board. A **commission** is usually **plural and independent** for functions requiring **insulation from the executive** — UPSC, EC, CIC, NHRC. Plurality buys **impartiality** and costs **speed**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2020 Q1(d)"
     },
     {
      "t": "Single versus plural headship",
@@ -199,11 +203,12 @@
     },
     {
      "t": "Why field agencies are necessary",
-     "d": "**Local knowledge**, **speed of response**, **adaptation to variation**, and the **legitimacy of a visible official**. **2025 Q2(b) asked it of MGNREGA and Swachh Bharat**: no central design survives contact with **11 agro-climatic zones and 2.55 lakh gram panchayats** without field discretion.",
+     "d": "**Local knowledge**, **speed of response**, **adaptation to variation**, and the **legitimacy of a visible official**. no central design survives contact with **11 agro-climatic zones and 2.55 lakh gram panchayats** without field discretion.",
      "k": "link",
      "sl": "prove",
      "tr": 1,
-     "u": "II-3"
+     "u": "II-3",
+     "pyq": "2025 Q2(b)"
     },
     {
      "t": "The recurring HQ–field pathologies",
@@ -260,11 +265,12 @@
     },
     {
      "t": "Are regulators independent?",
-     "d": "**2024 Q2(c) and 2019 Q3(c) both asked.** On paper — fixed tenure, statutory powers, funded by fees. In practice — **appointments by government**, **policy directions** the parent ministry may issue, **post-retirement placements**, and the **revolving door** with the regulated industry.",
+     "d": "On paper — fixed tenure, statutory powers, funded by fees. In practice — **appointments by government**, **policy directions** the parent ministry may issue, **post-retirement placements**, and the **revolving door** with the regulated industry.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2024 Q2(c) · 2019 Q3(c)"
     },
     {
      "t": "Regulatory capture",
@@ -276,11 +282,12 @@
     },
     {
      "t": "The demise of the arbitrator state?",
-     "d": "**2019 Q3(c).** The state did not withdraw — it **changed instruments**. It stopped **producing** and started **rule-making**, and in doing so acquired **more** points of intervention. Regulation is the **arbitrator state intensified**, not abolished.",
+     "d": "The state did not withdraw — it **changed instruments**. It stopped **producing** and started **rule-making**, and in doing so acquired **more** points of intervention. Regulation is the **arbitrator state intensified**, not abolished.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2019 Q3(c)"
     },
     {
      "t": "India's missing regulatory law",
@@ -292,11 +299,12 @@
     },
     {
      "t": "TRAI as the examinable instance",
-     "d": "**2024 Q5(c) asked it directly.** TRAI protects consumers through **tariff orders**, **quality-of-service regulations**, **mobile number portability**, the **Do Not Disturb** framework, and consultation papers with **mandatory public comment**. Its recommendations on **licensing** are **not binding** on the government — the limit of its independence.",
+     "d": "TRAI protects consumers through **tariff orders**, **quality-of-service regulations**, **mobile number portability**, the **Do Not Disturb** framework, and consultation papers with **mandatory public comment**. Its recommendations on **licensing** are **not binding** on the government — the limit of its independence.",
      "k": "eg",
      "sl": "prove",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2024 Q5(c)"
     }
    ]
   },
@@ -337,35 +345,39 @@
     },
     {
      "t": "The accountability question",
-     "d": "**2023 Q2(c) and 2021 Q2(c).** The citizen's remedy against a concessionaire is **contractual**, not **constitutional** — no **RTI** as of right, no **Article 226** against a private party except where it discharges a **public function**, no **CAG** audit unless the contract provides for it.",
+     "d": "The citizen's remedy against a concessionaire is **contractual**, not **constitutional** — no **RTI** as of right, no **Article 226** against a private party except where it discharges a **public function**, no **CAG** audit unless the contract provides for it.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2023 Q2(c) · 2021 Q2(c)"
     },
     {
      "t": "PPP as a governance form",
-     "d": "**2021 Q2(c) framed it this way.** It has moved from a **procurement technique** to a **structure of governance**: the state becomes **contract manager**, and its critical capability shifts from **engineering to negotiation, risk pricing and enforcement** — capacities Indian departments were never built to hold.",
+     "d": "It has moved from a **procurement technique** to a **structure of governance**: the state becomes **contract manager**, and its critical capability shifts from **engineering to negotiation, risk pricing and enforcement** — capacities Indian departments were never built to hold.",
      "k": "link",
      "sl": "close",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2021 Q2(c)"
     },
     {
      "t": "The 2nd ARC on PPP",
-     "d": "**2023 Q8(a) asked exactly this.** The 2nd ARC supported PPP for infrastructure but insisted on **transparent competitive bidding**, **clear risk-sharing written into the concession**, an **independent regulator** for each sector, and **grievance redress for users** rather than for parties alone.",
+     "d": "The 2nd ARC supported PPP for infrastructure but insisted on **transparent competitive bidding**, **clear risk-sharing written into the concession**, an **independent regulator** for each sector, and **grievance redress for users** rather than for parties alone.",
      "k": "cmte",
      "sl": "prove",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2023 Q8(a)"
     },
     {
      "t": "PPP and the entropy of models",
-     "d": "**2025 Q2(c).** A **closed** model is self-contained and predictable; an **open** one exchanges with its environment and resists decay. PPP forces a **closed** bureaucratic organisation into an **open** contractual environment — importing **market energy** and also **market risk** it cannot price.",
+     "d": "A **closed** model is self-contained and predictable; an **open** one exchanges with its environment and resists decay. PPP forces a **closed** bureaucratic organisation into an **open** contractual environment — importing **market energy** and also **market risk** it cannot price.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-4"
+     "u": "I-4",
+     "pyq": "2025 Q2(c)"
     }
    ]
   },
@@ -422,15 +434,16 @@
     },
     {
      "t": "Performance beyond the balance sheet",
-     "d": "**2019 Q7(a).** A PSU carries **social obligations** a private firm does not — universal service, strategic supply, regional development, employment. Judge it on **capacity utilisation, technology absorption, safety, energy intensity, CSR under Section 135** and **social cost-benefit**, not profit alone.",
+     "d": "A PSU carries **social obligations** a private firm does not — universal service, strategic supply, regional development, employment. Judge it on **capacity utilisation, technology absorption, safety, energy intensity, CSR under Section 135** and **social cost-benefit**, not profit alone.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
-     "u": "II-3"
+     "u": "II-3",
+     "pyq": "2019 Q7(a)"
     },
     {
      "t": "The public sector's real record",
-     "d": "Both things are true. It built **capabilities no private firm would have** — **ISRO, BHEL, ONGC, IOCL, the DRDO chain, LIC's household savings mobilisation**. It also produced **chronic loss-makers**, **overstaffing** and a **licence-era rent structure**. Concede both before taking a position.",
+     "d": "Both things are true. It built **capabilities no private firm would have** — **ISRO, BHEL, ONGC, IOCL, the DRDO chain, LIC's household savings mobilisation**. It also produced **chronic loss-makers**, **overstaffing** and a **licence-era rent structure**.",
      "k": "critique",
      "sl": "attack",
      "tr": 2,
@@ -451,11 +464,12 @@
    "items": [
     {
      "t": "Is autonomy a myth?",
-     "d": "**2024 Q1(c).** Largely, yes. Autonomy is granted by **executive delegation, not statute**; the **administrative ministry** controls the **board's composition**, the **capex approval**, and the **CMD's appointment through the PESB**. What exists is **delegated financial power**, not independence.",
+     "d": "Largely, yes. Autonomy is granted by **executive delegation, not statute**; the **administrative ministry** controls the **board's composition**, the **capex approval**, and the **CMD's appointment through the PESB**. What exists is **delegated financial power**, not independence.",
      "k": "critique",
      "sl": "open",
      "tr": 1,
-     "u": "II-3"
+     "u": "II-3",
+     "pyq": "2024 Q1(c)"
     },
     {
      "t": "The autonomy–accountability paradox",
@@ -491,19 +505,21 @@
     },
     {
      "t": "The case for and against disinvestment",
-     "d": "**For** — fiscal space, better capital allocation, exposure to competition, and the state exiting sectors where it has **no comparative advantage**. **Against** — sale of **profit-making** assets to meet a **revenue** target, loss of the **strategic and social obligation** layer, and **employment** effects. **2024 Q4(a).**",
+     "d": "**For** — fiscal space, better capital allocation, exposure to competition, and the state exiting sectors where it has **no comparative advantage**. **Against** — sale of **profit-making** assets to meet a **revenue** target, loss of the **strategic and social obligation** layer, and **employment** effects.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "II-3"
+     "u": "II-3",
+     "pyq": "2024 Q4(a)"
     },
     {
      "t": "Has liberalisation improved efficiency?",
-     "d": "**2025 Q4(a).** Evidence is mixed and should be written that way: competition **did** force efficiency in **telecom and aviation**; **listed CPSEs** improved governance under **SEBI's LODR**. But **valuation timing**, **strategic sale to a thin market**, and the **absence of a post-privatisation regulator** repeatedly weakened outcomes.",
+     "d": "Evidence is mixed and should be written that way: competition **did** force efficiency in **telecom and aviation**; **listed CPSEs** improved governance under **SEBI's LODR**. But **valuation timing**, **strategic sale to a thin market**, and the **absence of a post-privatisation regulator** repeatedly weakened outcomes.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "II-3"
+     "u": "II-3",
+     "pyq": "2025 Q4(a)"
     },
     {
      "t": "PSU board governance",

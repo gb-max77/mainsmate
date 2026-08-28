@@ -12,11 +12,12 @@
    "items": [
     {
      "t": "The two policies distinguished",
-     "d": "**2023 Q5(d).** **Monetary policy** is the **central bank's** control of **money supply and the price of credit** — repo rate, CRR, SLR, open market operations. **Fiscal policy** is the **government's** use of **taxation, expenditure and borrowing**. Both regulate demand; only fiscal policy can change **who** bears the cost.",
+     "d": "**Monetary policy** is the **central bank's** control of **money supply and the price of credit** — repo rate, CRR, SLR, open market operations. **Fiscal policy** is the **government's** use of **taxation, expenditure and borrowing**. Both regulate demand; only fiscal policy can change **who** bears the cost.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2023 Q5(d)"
     },
     {
      "t": "India's monetary framework",
@@ -28,27 +29,30 @@
     },
     {
      "t": "The three functions of fiscal policy",
-     "d": "**Musgrave's** classification: **allocation** (supplying public goods the market will not), **distribution** (altering the pattern of income and wealth), and **stabilisation** (countering the cycle). **2021 Q6(a) argued that a cost-control obsession has crowded out reallocation, stabilisation and equity** — Musgrave is the frame that answer needs.",
+     "d": "**Musgrave's** classification: **allocation** (supplying public goods the market will not), **distribution** (altering the pattern of income and wealth), and **stabilisation** (countering the cycle). — Musgrave is the frame that answer needs.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2021 Q6(a)"
     },
     {
      "t": "Fiscal policy's three failings",
-     "d": "**2020 Q5(d) named them: inequity, intricacy and obscurantism.** **Inequity** — reliance on **indirect taxes**, which are regressive. **Intricacy** — exemptions, cesses and multiple rates raising compliance cost. **Obscurantism** — **off-budget borrowing, contingent liabilities and tax expenditures** that keep real fiscal position out of the headline number.",
+     "d": "**Inequity** — reliance on **indirect taxes**, which are regressive. **Intricacy** — exemptions, cesses and multiple rates raising compliance cost. **Obscurantism** — **off-budget borrowing, contingent liabilities and tax expenditures** that keep real fiscal position out of the headline number.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2020 Q5(d)"
     },
     {
      "t": "Direct and indirect tax reform",
-     "d": "**2019 Q7(c).** **Direct** — the **Income-tax Act, 2025** replacing the 1961 Act; faceless assessment; corporate rate cuts (2019); **BEPS Pillar Two** global minimum tax. **Indirect** — **GST (2017)** subsuming seventeen taxes and thirteen cesses. Direct tax reform matters more for **equity**, because indirect taxes cannot discriminate by ability to pay.",
+     "d": "**Direct** — the **Income-tax Act, 2025** replacing the 1961 Act; faceless assessment; corporate rate cuts (2019); **BEPS Pillar Two** global minimum tax. **Indirect** — **GST (2017)** subsuming seventeen taxes and thirteen cesses. Direct tax reform matters more for **equity**, because indirect taxes cannot discriminate by ability to pay.",
      "k": "prov",
      "sl": "argue",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2019 Q7(c)"
     },
     {
      "t": "The tax-to-GDP problem",
@@ -60,11 +64,12 @@
     },
     {
      "t": "Neo-liberalism and taxation",
-     "d": "**2025 Q5(b) asked an unusual angle.** Liberalisation **expanded** the tax opportunity even as it cut rates: a **larger formal economy**, **digitised transactions leaving an audit trail**, **new tax bases** (services, capital gains, digital transactions), and **international cooperation on evasion**. Lower rates on a wider, more visible base can raise more revenue.",
+     "d": "Liberalisation **expanded** the tax opportunity even as it cut rates: a **larger formal economy**, **digitised transactions leaving an audit trail**, **new tax bases** (services, capital gains, digital transactions), and **international cooperation on evasion**. Lower rates on a wider, more visible base can raise more revenue.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2025 Q5(b)"
     },
     {
      "t": "Budget 2026-27 — the figures to quote",
@@ -97,11 +102,12 @@
     },
     {
      "t": "Does debt burden future generations?",
-     "d": "**2024 Q8(b).** **No, for internal debt** in the classical view — we owe it to ourselves, so it is a **transfer**, not a net burden. **Yes, in three real senses**: **interest payments pre-empt** future budgets, **distributional transfer** runs from taxpayers to bondholders, and **crowding out** reduces the capital stock future citizens inherit.",
+     "d": "**No, for internal debt** in the classical view — we owe it to ourselves, so it is a **transfer**, not a net burden. **Yes, in three real senses**: **interest payments pre-empt** future budgets, **distributional transfer** runs from taxpayers to bondholders, and **crowding out** reduces the capital stock future citizens inherit.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2024 Q8(b)"
     },
     {
      "t": "When debt is justified",
@@ -129,7 +135,7 @@
     },
     {
      "t": "The 16th FC's fiscal path",
-     "d": "**Centre's fiscal deficit target 3.5% of GDP by 2030-31**; **States 3% of GSDP**. Quote it whenever a question turns on fiscal consolidation — it fixes the **glide path** the next five years of budgeting must follow, and it binds States as well as the Union.",
+     "d": "**Centre's fiscal deficit target 3.5% of GDP by 2030-31**; **States 3% of GSDP**. It fixes the **glide path** the next five years of budgeting must follow, and it binds States as well as the Union.",
      "k": "data",
      "sl": "prove",
      "tr": 2,
@@ -158,11 +164,12 @@
     },
     {
      "t": "Why performance budgeting under-delivered",
-     "d": "**2020 Q8(c).** It became a **parallel document** rather than the appropriation itself; **outputs** were measurable but **outcomes** were not; unit costs were rarely computed honestly; and it **never governed the allocation decision** — the line-item budget remained the one that was voted and audited.",
+     "d": "It became a **parallel document** rather than the appropriation itself; **outputs** were measurable but **outcomes** were not; unit costs were rarely computed honestly; and it **never governed the allocation decision** — the line-item budget remained the one that was voted and audited.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2020 Q8(c)"
     },
     {
      "t": "PPBS",
@@ -174,19 +181,21 @@
     },
     {
      "t": "Zero-base budgeting",
-     "d": "**Peter Pyhrr at Texas Instruments; Jimmy Carter in Georgia and then federally.** Every activity must be **rejustified from zero** each cycle through **decision units**, **decision packages** at alternative service levels, and **ranking**. India adopted it formally in **1986-87**. **2023 Q6(c) asked its advantages over traditional budgeting.**",
+     "d": "**Peter Pyhrr at Texas Instruments; Jimmy Carter in Georgia and then federally.** Every activity must be **rejustified from zero** each cycle through **decision units**, **decision packages** at alternative service levels, and **ranking**. India adopted it formally in **1986-87**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2023 Q6(c)"
     },
     {
      "t": "ZBB became the most incremental of approaches",
-     "d": "**2021 Q7(b) quoted this.** Because the **workload is impossible** — no organisation can rejustify everything annually — decision units are defined at a **level of aggregation that hides choices**, and rankings **reproduce last year's order**. ZBB produced a **rejustification of the base**, which is incrementalism with more paperwork.",
+     "d": "Because the **workload is impossible** — no organisation can rejustify everything annually — decision units are defined at a **level of aggregation that hides choices**, and rankings **reproduce last year's order**. ZBB produced a **rejustification of the base**, which is incrementalism with more paperwork.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2021 Q7(b)"
     },
     {
      "t": "When ZBB actually works",
@@ -304,11 +313,12 @@
    "items": [
     {
      "t": "Why the budget is political, not technical",
-     "d": "**2025 Q7(b).** It **allocates scarce resources between competing claims**, and each allocation names a **winner and a loser**. It is a **statement of priorities in numbers**, an instrument of **federal bargaining**, a **signal to markets**, and, at its most visible, an **electoral instrument**.",
+     "d": "It **allocates scarce resources between competing claims**, and each allocation names a **winner and a loser**. It is a **statement of priorities in numbers**, an instrument of **federal bargaining**, a **signal to markets**, and, at its most visible, an **electoral instrument**.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2025 Q7(b)"
     },
     {
      "t": "The budget's socio-economic implications",
@@ -320,11 +330,12 @@
     },
     {
      "t": "Populism and public finance",
-     "d": "**2023 Q8(a) — 'the prisoner of populist policies'.** Argue with discipline. The problem is not **welfare expenditure**, which is a constitutional obligation, but **unfunded, untargeted and unreviewed** commitments — **free power, farm loan waivers, old pension restoration** — that create a **permanent revenue liability** for a **one-time political return**.",
+     "d": "The problem is not **welfare expenditure**, which is a constitutional obligation, but **unfunded, untargeted and unreviewed** commitments — **free power, farm loan waivers, old pension restoration** — that create a **permanent revenue liability** for a **one-time political return**.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2023 Q8(a)"
     },
     {
      "t": "The safeguards against fiscal populism",
@@ -336,11 +347,12 @@
     },
     {
      "t": "The Niskanen question, revisited",
-     "d": "**2019 Q6(c).** Is the budget-maximising bureaucrat still real? **Not in the aggregate** — PFMS, TSA and outcome frameworks watch the money. **Yes in a modified form** — agencies maximise **staff strength, jurisdiction and scheme count** rather than budget, because those are the currencies that survived the fiscal controls.",
+     "d": "Is the budget-maximising bureaucrat still real? **Not in the aggregate** — PFMS, TSA and outcome frameworks watch the money. **Yes in a modified form** — agencies maximise **staff strength, jurisdiction and scheme count** rather than budget, because those are the currencies that survived the fiscal controls.",
      "k": "link",
      "sl": "close",
      "tr": 1,
-     "u": "I-12"
+     "u": "I-12",
+     "pyq": "2019 Q6(c)"
     }
    ]
   },
@@ -389,11 +401,12 @@
     },
     {
      "t": "Computerisation of treasuries",
-     "d": "**2023 Q5(d).** It delivered **real-time expenditure data**, ended **ways-and-means surprises** for States, made **bill-passing time measurable**, and cut the **March rush** somewhat. It did not change **what** was budgeted or **why** — an efficiency gain in **execution**, not in **allocation**.",
+     "d": "It delivered **real-time expenditure data**, ended **ways-and-means surprises** for States, made **bill-passing time measurable**, and cut the **March rush** somewhat. It did not change **what** was budgeted or **why** — an efficiency gain in **execution**, not in **allocation**.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2023 Q5(d)"
     },
     {
      "t": "The internal control layer",
@@ -434,11 +447,12 @@
     },
     {
      "t": "How CAG reports secure accountability",
-     "d": "**2023 Q7(a).** The chain: **CAG audits → reports to the President or Governor (Article 151) → laid before the legislature → examined by PAC or COPU → Action Taken Notes from the ministry → further PAC report.** Executive answerability to Parliament in finance runs through this chain and nowhere else.",
+     "d": "The chain: **CAG audits → reports to the President or Governor (Article 151) → laid before the legislature → examined by PAC or COPU → Action Taken Notes from the ministry → further PAC report.** Executive answerability to Parliament in finance runs through this chain and nowhere else.",
      "k": "scheme",
      "sl": "prove",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2023 Q7(a)"
     },
     {
      "t": "Where the chain breaks",
@@ -450,19 +464,21 @@
     },
     {
      "t": "The office under the public eye",
-     "d": "**2024 Q8(b).** Performance audits on **spectrum, coal blocks and the Commonwealth Games** put the CAG at the centre of public debate — and drew the counter-charge that **presumptive-loss** estimation strays from audit into **policy evaluation**. Note both: the same reports raised its salience and its exposure.",
+     "d": "Performance audits on **spectrum, coal blocks and the Commonwealth Games** put the CAG at the centre of public debate — and drew the counter-charge that **presumptive-loss** estimation strays from audit into **policy evaluation**. The same reports raised both its salience and its exposure.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2024 Q8(b)"
     },
     {
      "t": "'Auditing is not about finding faults'",
-     "d": "**2024 Q5(d).** The modern position: audit's purpose is **assurance and improvement** — confirming that accounts present a true picture, that controls work, and that lessons feed back into design. **Constructive audit** engages the auditee during the exercise; a purely adversarial audit produces **defensive record-keeping**, not better administration.",
+     "d": "The modern position: audit's purpose is **assurance and improvement** — confirming that accounts present a true picture, that controls work, and that lessons feed back into design. **Constructive audit** engages the auditee during the exercise; a purely adversarial audit produces **defensive record-keeping**, not better administration.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2024 Q5(d)"
     },
     {
      "t": "The reform agenda for the CAG",
@@ -503,7 +519,7 @@
     },
     {
      "t": "What is new in the 16th FC award",
-     "d": "The examinable change: a **new 10% weight for contribution to GDP** — rewarding the larger producing States — and the **dropping of tax effort** as a criterion. Read it as a partial answer to southern States' long complaint that the formula **penalised those that performed on demography and growth**.",
+     "d": "The examinable change: a **new 10% weight for contribution to GDP** — rewarding the larger producing States — and the **dropping of tax effort** as a criterion. It is a partial answer to southern States' long complaint that the formula **penalised those that performed on demography and growth**.",
      "k": "concept",
      "sl": "argue",
      "tr": 2,
@@ -527,27 +543,30 @@
     },
     {
      "t": "The State Finance Commission",
-     "d": "**2024 Q3(a).** **Article 243I and 243Y** require a **State Finance Commission every five years** to recommend the distribution between the State and its local bodies. In practice they are **constituted late**, **reports are not tabled with an action-taken memorandum**, and recommendations are **frequently not accepted** — the break in the fiscal chain.",
+     "d": "**Article 243I and 243Y** require a **State Finance Commission every five years** to recommend the distribution between the State and its local bodies. In practice they are **constituted late**, **reports are not tabled with an action-taken memorandum**, and recommendations are **frequently not accepted** — the break in the fiscal chain.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2024 Q3(a)"
     },
     {
      "t": "Is the Finance Commission strengthening local bodies?",
-     "d": "**2023 Q1(d).** **Yes** — successive Commissions have made local grants a **direct, formula-based, growing** transfer, conditioned on **audited accounts and own-revenue effort**. **No** — most of it is **tied** to water and sanitation, it **bypasses the State's own devolution failure**, and it cannot substitute for **functionaries and taxation powers**.",
+     "d": "**Yes** — successive Commissions have made local grants a **direct, formula-based, growing** transfer, conditioned on **audited accounts and own-revenue effort**. **No** — most of it is **tied** to water and sanitation, it **bypasses the State's own devolution failure**, and it cannot substitute for **functionaries and taxation powers**.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2023 Q1(d)"
     },
     {
      "t": "GST and the federal balance",
-     "d": "**2024 Q1(e).** **Article 279A** — the **GST Council**, with the Union holding **one-third** and all States together **two-thirds** of the weighted vote, and a **three-fourths** majority required. States surrendered the **power to tax goods and services independently** — the largest single transfer of fiscal sovereignty since 1950 — in exchange for a **seat in a joint decision-making body**.",
+     "d": "**Article 279A** — the **GST Council**, with the Union holding **one-third** and all States together **two-thirds** of the weighted vote, and a **three-fourths** majority required. States surrendered the **power to tax goods and services independently** — the largest single transfer of fiscal sovereignty since 1950 — in exchange for a **seat in a joint decision-making body**.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-9"
+     "u": "II-9",
+     "pyq": "2024 Q1(e)"
     },
     {
      "t": "How to judge the GST Council",

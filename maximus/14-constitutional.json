@@ -51,19 +51,21 @@
     },
     {
      "t": "Who upholds constitutional values in practice",
-     "d": "**2025 Q3(c) asked exactly this.** The text supplies a **framework**; the working depends on **institutions** (EC, CAG, UPSC, courts), **civil society** (RTI users, PILs, social audit), and **citizens** (voting, participation, dissent). Frame it as **Riggs's formalism**: the strength of the framework and the weakness of practice are the same country.",
+     "d": "The text supplies a **framework**; the working depends on **institutions** (EC, CAG, UPSC, courts), **civil society** (RTI users, PILs, social audit), and **citizens** (voting, participation, dissent). This is **Riggs's formalism**: the strength of the framework and the weakness of practice are the same country.",
      "k": "link",
      "sl": "close",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2025 Q3(c)"
     },
     {
      "t": "The parliamentary system's administrative implication",
-     "d": "**2023 Q1(e).** The **elected head is the real executive** — **Article 74** makes the President bound by ministerial advice (after the **42nd and 44th Amendments**, with one reconsideration), and **Shamsher Singh (1974)** settled that Governors likewise act on advice. Administratively this means **ministerial responsibility**, and therefore **an anonymous, permanent civil service** behind it.",
+     "d": "The **elected head is the real executive** — **Article 74** makes the President bound by ministerial advice (after the **42nd and 44th Amendments**, with one reconsideration), and **Shamsher Singh (1974)** settled that Governors likewise act on advice. Administratively this means **ministerial responsibility**, and therefore **an anonymous, permanent civil service** behind it.",
      "k": "case",
      "sl": "argue",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2023 Q1(e)"
     },
     {
      "t": "The statutory and constitutional bodies",
@@ -96,11 +98,12 @@
     },
     {
      "t": "How the Union reaches State subjects",
-     "d": "**2025 Q3(a) asked it.** **Article 249** (Rajya Sabha resolution in national interest); **Article 250** (during Emergency); **Article 252** (two or more States request); **Article 253** (treaty implementation); **Article 256-257** (directions to States); and, most consequentially, **centrally sponsored schemes** — spending power reaching subjects legislative power cannot.",
+     "d": "**Article 249** (Rajya Sabha resolution in national interest); **Article 250** (during Emergency); **Article 252** (two or more States request); **Article 253** (treaty implementation); **Article 256-257** (directions to States); and, most consequentially, **centrally sponsored schemes** — spending power reaching subjects legislative power cannot.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2025 Q3(a)"
     },
     {
      "t": "The pros and cons of Union spending on State subjects",
@@ -120,11 +123,12 @@
     },
     {
      "t": "Centre–State relations are undergoing drastic change",
-     "d": "**2024 Q3(b), 2025 Q4(b).** Name the drivers: **GST** removing independent taxation; **cesses shrinking the divisible pool**; **direct benefit transfer bypassing States** to reach the citizen; **centrally sponsored schemes** dominating social-sector spending; and **agency withdrawal of consent** under the DSPE Act as a new site of friction.",
+     "d": "The drivers: **GST** removing independent taxation; **cesses shrinking the divisible pool**; **direct benefit transfer bypassing States** to reach the citizen; **centrally sponsored schemes** dominating social-sector spending; and **agency withdrawal of consent** under the DSPE Act as a new site of friction.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2024 Q3(b) · 2025 Q4(b)"
     },
     {
      "t": "Cooperative federalism's instruments",
@@ -136,11 +140,12 @@
     },
     {
      "t": "What blocks cooperative federalism",
-     "d": "**2025 Q3(b).** **Divergent political interests** — different parties at the two levels turn every coordination question into a contest. **Financial constraints** — States carry **about 60% of general government expenditure** on a smaller share of receipts. Add **asymmetric information**, and forums that are **consultative without being decisional**.",
+     "d": "**Divergent political interests** — different parties at the two levels turn every coordination question into a contest. **Financial constraints** — States carry **about 60% of general government expenditure** on a smaller share of receipts. Add **asymmetric information**, and forums that are **consultative without being decisional**.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2025 Q3(b)"
     },
     {
      "t": "Competitive federalism",
@@ -189,7 +194,7 @@
     },
     {
      "t": "The 2025 Presidential Reference",
-     "d": "The **live 2026 issue.** After the **State of Tamil Nadu** litigation on delayed assent, the **Supreme Court's advisory opinion of November 2025** declined to impose **judicially fixed timelines** on the Governor or the President under **Articles 200 and 201**. Read it as the Court **returning the question to political and cooperative-federal channels**.",
+     "d": "The **live 2026 issue.** After the **State of Tamil Nadu** litigation on delayed assent, the **Supreme Court's advisory opinion of November 2025** declined to impose **judicially fixed timelines** on the Governor or the President under **Articles 200 and 201**. The Court is **returning the question to political and cooperative-federal channels**.",
      "k": "case",
      "sl": "prove",
      "tr": 1,
@@ -197,11 +202,12 @@
     },
     {
      "t": "Strained Governor–State relations",
-     "d": "**2024 Q3(c).** The recurring sites: **delayed assent**; **timing of floor tests**; **appointments as Chancellor of State universities**; **prosecution sanction**; **speeches and public commentary**; and **reports to the Centre**. The structural cause is that the office is **appointed by, removable by, and dependent for its next post on the Union**.",
+     "d": "The recurring sites: **delayed assent**; **timing of floor tests**; **appointments as Chancellor of State universities**; **prosecution sanction**; **speeches and public commentary**; and **reports to the Centre**. The structural cause is that the office is **appointed by, removable by, and dependent for its next post on the Union**.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2024 Q3(c)"
     },
     {
      "t": "The reform recommendations on the Governor",
@@ -274,19 +280,21 @@
     },
     {
      "t": "The collegium debate",
-     "d": "**2024 Q4(b).** **Second Judges (1993)** and **Third Judges (1998)** created the collegium; the **99th Amendment and NJAC Act** were struck down in **2015** as violating **judicial independence**, itself basic structure. The unresolved issue is the **Memorandum of Procedure**, and the **transparency and delay** in the collegium's own working.",
+     "d": "**Second Judges (1993)** and **Third Judges (1998)** created the collegium; the **99th Amendment and NJAC Act** were struck down in **2015** as violating **judicial independence**, itself basic structure. The unresolved issue is the **Memorandum of Procedure**, and the **transparency and delay** in the collegium's own working.",
      "k": "case",
      "sl": "argue",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2024 Q4(b)"
     },
     {
      "t": "Judicial efficiency as an administrative problem",
-     "d": "**2023 Q2(c).** About **4.76 crore cases pending (NJDG, 2026)**. The administrative levers: **judge strength and vacancies**, **court infrastructure**, **e-Courts Phase III (₹7,210 crore)**, **National Judicial Data Grid** making pendency public, **mediation under the Mediation Act, 2023**, and **government as the largest litigant** — the **National Litigation Policy** target that has never been met.",
+     "d": "About **4.76 crore cases pending (NJDG, 2026)**. The administrative levers: **judge strength and vacancies**, **court infrastructure**, **e-Courts Phase III (₹7,210 crore)**, **National Judicial Data Grid** making pendency public, **mediation under the Mediation Act, 2023**, and **government as the largest litigant** — the **National Litigation Policy** target that has never been met.",
      "k": "data",
      "sl": "prove",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2023 Q2(c)"
     },
     {
      "t": "Data protection and the constitutional turn",
@@ -298,11 +306,12 @@
     },
     {
      "t": "Development and social justice",
-     "d": "**2024 Q2(c).** The constitutional position is that they are **not in tension**: **Article 38(2)** requires the State to minimise inequalities in income, status, facilities and opportunities. Administratively the tension is real — **land acquisition, forest diversion and urban renewal** all trade aggregate gain against concentrated loss, which is why **RFCTLARR 2013 and FRA 2006** attach **consent and compensation** conditions.",
+     "d": "The constitutional position is that they are **not in tension**: **Article 38(2)** requires the State to minimise inequalities in income, status, facilities and opportunities. Administratively the tension is real — **land acquisition, forest diversion and urban renewal** all trade aggregate gain against concentrated loss, which is why **RFCTLARR 2013 and FRA 2006** attach **consent and compensation** conditions.",
      "k": "link",
      "sl": "close",
      "tr": 1,
-     "u": "II-2"
+     "u": "II-2",
+     "pyq": "2024 Q2(c)"
     }
    ]
   }

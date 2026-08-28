@@ -11,11 +11,12 @@
    "items": [
     {
      "t": "What the Arthashastra is",
-     "d": "**2023 Q1(a), 2025 Q1(c).** A **treatise on statecraft**, not a work of political philosophy — a manual of **administration, revenue, war, law and espionage** written for a working ruler. **Arthashastra** literally means the science of **artha**: material well-being, the livelihood of the people and the means of acquiring and protecting it.",
+     "d": "A **treatise on statecraft**, not a work of political philosophy — a manual of **administration, revenue, war, law and espionage** written for a working ruler. **Arthashastra** literally means the science of **artha**: material well-being, the livelihood of the people and the means of acquiring and protecting it.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "II-1"
+     "u": "II-1",
+     "pyq": "2023 Q1(a) · 2025 Q1(c)"
     },
     {
      "t": "The Saptanga theory",
@@ -43,11 +44,12 @@
     },
     {
      "t": "Ethics in public service, Kautilya's version",
-     "d": "**2024 Q1(a) asked precisely this.** He is **realistic rather than moralistic**: \"just as it is impossible not to taste honey placed on the tongue, so it is impossible for a government servant **not to eat up at least a bit of the king's revenue**.\" Hence **forty ways of embezzlement** enumerated, **rotation of officials**, **espionage** and **graded punishment**.",
+     "d": "He is **realistic rather than moralistic**: \"just as it is impossible not to taste honey placed on the tongue, so it is impossible for a government servant **not to eat up at least a bit of the king's revenue**.\" Hence **forty ways of embezzlement** enumerated, **rotation of officials**, **espionage** and **graded punishment**.",
      "k": "quote",
      "sl": "prove",
      "tr": 1,
-     "u": "II-1"
+     "u": "II-1",
+     "pyq": "2024 Q1(a)"
     },
     {
      "t": "The modern parallels to draw",
@@ -59,15 +61,16 @@
     },
     {
      "t": "Is it theory or manual?",
-     "d": "**2023 Q1(a) framed it as a 'theoretical work on the State and Statecraft'.** Both. It contains **theory** — saptanga, mandala, the four upayas (**sama, dana, danda, bheda**), the sources of law (**dharma, vyavahara, charitra, rajasasana**). It is delivered as **operational instruction** with rates, staffing, penalties and procedures.",
+     "d": "Both. It contains **theory** — saptanga, mandala, the four upayas (**sama, dana, danda, bheda**), the sources of law (**dharma, vyavahara, charitra, rajasasana**). It is delivered as **operational instruction** with rates, staffing, penalties and procedures.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "II-1"
+     "u": "II-1",
+     "pyq": "2023 Q1(a)"
     },
     {
      "t": "The honest critique",
-     "d": "Its ethic is **instrumental** — the ruler's welfare duty is justified by the **stability it buys**, not by the subject's right. It is **authoritarian**, resting on surveillance and graded punishment, and it is **hierarchical** on varna. Say this; an uncritical Kautilya answer reads as devotional rather than analytical.",
+     "d": "Its ethic is **instrumental** — the ruler's welfare duty is justified by the **stability it buys**, not by the subject's right. It is **authoritarian**, resting on surveillance and graded punishment, and it is **hierarchical** on varna.",
      "k": "critique",
      "sl": "attack",
      "tr": 3,
@@ -112,19 +115,21 @@
     },
     {
      "t": "Was Mughal administration centralised?",
-     "d": "**2024 Q1(b).** **Centralised in design** — mansabdars appointed and transferred by the emperor, non-hereditary assignments, parallel reporting by the provincial Diwan, a uniform revenue method. **Decentralised in practice** — **zamindars** collected on the ground, the **village community** was untouched, and distance made **local autonomy** inevitable.",
+     "d": "**Centralised in design** — mansabdars appointed and transferred by the emperor, non-hereditary assignments, parallel reporting by the provincial Diwan, a uniform revenue method. **Decentralised in practice** — **zamindars** collected on the ground, the **village community** was untouched, and distance made **local autonomy** inevitable.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "II-1"
+     "u": "II-1",
+     "pyq": "2024 Q1(b)"
     },
     {
      "t": "The Mughal legacy in the district",
-     "d": "**2025 Q1(a)-family.** The **sarkar** became the **district**; the **faujdar's** law-and-order function and the **amalguzar's** revenue function were **fused in one officer** by the British — which is precisely how the **Collector-cum-District Magistrate** acquired both hats. The **patwari and qanungo** survive under their Mughal names.",
+     "d": "The **sarkar** became the **district**; the **faujdar's** law-and-order function and the **amalguzar's** revenue function were **fused in one officer** by the British — which is precisely how the **Collector-cum-District Magistrate** acquired both hats. The **patwari and qanungo** survive under their Mughal names.",
      "k": "link",
      "sl": "prove",
      "tr": 1,
-     "u": "II-1"
+     "u": "II-1",
+     "pyq": "2025 Q1(a)"
     }
    ]
   },
@@ -133,11 +138,12 @@
    "items": [
     {
      "t": "How the trader became a magistrate",
-     "d": "**2025 Q2(c) asked exactly this.** **Diwani of Bengal, Bihar and Orissa (1765)** gave the Company **revenue** authority while the Nawab retained **nizamat** — the **dual government** that collapsed by 1772 when **Warren Hastings** brought both under the Company. **The revenue collector acquired magisterial power because revenue collection required coercion.**",
+     "d": "**Diwani of Bengal, Bihar and Orissa (1765)** gave the Company **revenue** authority while the Nawab retained **nizamat** — the **dual government** that collapsed by 1772 when **Warren Hastings** brought both under the Company. **The revenue collector acquired magisterial power because revenue collection required coercion.**",
      "k": "scheme",
      "sl": "open",
      "tr": 1,
-     "u": "II-1"
+     "u": "II-1",
+     "pyq": "2025 Q2(c)"
     },
     {
      "t": "The Permanent Settlement and its alternatives",
@@ -197,15 +203,16 @@
     },
     {
      "t": "The colonial legacy's administrative residue",
-     "d": "**2025 Q2(c).** Name the surviving features: the **district as the unit of administration** with a **generalist Collector**; **land revenue records** as the state's basic dataset; a **regulatory rather than developmental** orientation in police and revenue law; **secrecy** (**Official Secrets Act, 1923**); and **rank classification with a generalist elite service**.",
+     "d": "The surviving features: the **district as the unit of administration** with a **generalist Collector**; **land revenue records** as the state's basic dataset; a **regulatory rather than developmental** orientation in police and revenue law; **secrecy** (**Official Secrets Act, 1923**); and **rank classification with a generalist elite service**.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "II-1"
+     "u": "II-1",
+     "pyq": "2025 Q2(c)"
     },
     {
      "t": "The balanced verdict on the legacy",
-     "d": "Write both. It bequeathed **institutional continuity, a professional civil service, a codified legal system, an audited treasury and an independent judiciary's foundations** — assets most post-colonial states lacked. It also bequeathed a machinery designed for **extraction and order**, which had to be **redirected to development** without being rebuilt.",
+     "d": "It bequeathed **institutional continuity, a professional civil service, a codified legal system, an audited treasury and an independent judiciary's foundations** — assets most post-colonial states lacked. It also bequeathed a machinery designed for **extraction and order**, which had to be **redirected to development** without being rebuilt.",
      "k": "concept",
      "sl": "close",
      "tr": 2,

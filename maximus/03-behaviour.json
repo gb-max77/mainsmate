@@ -83,7 +83,7 @@
     },
     {
      "t": "The decision models compared, in one line",
-     "d": "**Rational** — what we should do; **incremental** — what we can agree on; **mixed scanning** — how to do both at two altitudes; **garbage can** — what actually happens when nobody is in charge. Pick the model the **question's verb** implies.",
+     "d": "**Rational** — what we should do; **incremental** — what we can agree on; **mixed scanning** — how to do both at two altitudes; **garbage can** — what actually happens when nobody is in charge.",
      "k": "concept",
      "sl": "close",
      "tr": 2,
@@ -104,19 +104,21 @@
     },
     {
      "t": "Alderfer's ERG",
-     "d": "**2024 Q4(a).** Collapses Maslow into **Existence, Relatedness, Growth**, and adds two corrections: **more than one need can operate at once**, and a **frustration–regression** hypothesis — blocked **growth** intensifies demand for **existence** rewards. Explains why a stalled cadre fights over **pay and allowances**.",
+     "d": "Collapses Maslow into **Existence, Relatedness, Growth**, and adds two corrections: **more than one need can operate at once**, and a **frustration–regression** hypothesis — blocked **growth** intensifies demand for **existence** rewards. Explains why a stalled cadre fights over **pay and allowances**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2024 Q4(a)"
     },
     {
      "t": "Herzberg's two-factor theory",
-     "d": "**Hygiene factors** — pay, policy, supervision, conditions, security — remove **dissatisfaction** but do not motivate. **Motivators** — achievement, recognition, the work itself, responsibility, advancement — produce **satisfaction**. The two are **not opposite ends of one scale**. **2023 Q4(b).**",
+     "d": "**Hygiene factors** — pay, policy, supervision, conditions, security — remove **dissatisfaction** but do not motivate. **Motivators** — achievement, recognition, the work itself, responsibility, advancement — produce **satisfaction**. The two are **not opposite ends of one scale**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2023 Q4(b)"
     },
     {
      "t": "Herzberg applied to Indian services",
@@ -136,23 +138,25 @@
     },
     {
      "t": "Public service motivation",
-     "d": "**2021 Q1(c).** **Perry and Wise** — a distinctive predisposition to serve, with **rational** (policy-making attraction), **norm-based** (duty, public interest) and **affective** (compassion) foundations. It explains why officers accept **hardship postings** that no pay differential covers.",
+     "d": "**Perry and Wise** — a distinctive predisposition to serve, with **rational** (policy-making attraction), **norm-based** (duty, public interest) and **affective** (compassion) foundations. It explains why officers accept **hardship postings** that no pay differential covers.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2021 Q1(c)"
     },
     {
      "t": "The crowding-out warning",
-     "d": "**Frey's motivation crowding theory** — **extrinsic** rewards can **destroy** intrinsic ones. Pay a citizen to do what she did from duty and she stops doing it for free. This is the strongest argument against **crude performance pay** in the public service. **2023 Q3(b).**",
+     "d": "**Frey's motivation crowding theory** — **extrinsic** rewards can **destroy** intrinsic ones. Pay a citizen to do what she did from duty and she stops doing it for free. This is the strongest argument against **crude performance pay** in the public service.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2023 Q3(b)"
     },
     {
      "t": "Money is the weakest lever in Indian government",
-     "d": "Salary is **fixed by grade**, promotion largely by **seniority**, and dismissal is **hard**. Real motivators are the ones the system controls informally — **posting, empanelment, recognition, and a superior who will back a decision**. Say this; it converts theory into an administrative claim.",
+     "d": "Salary is **fixed by grade**, promotion largely by **seniority**, and dismissal is **hard**. Real motivators are the ones the system controls informally — **posting, empanelment, recognition, and a superior who will back a decision**.",
      "k": "critique",
      "sl": "close",
      "tr": 2,
@@ -160,11 +164,12 @@
     },
     {
      "t": "Content versus process theories",
-     "d": "**2020 Q4(b) asked whether the focus is the same.** Same **object** — the energising of behaviour; different **question**. **Content** asks **what** motivates (Maslow, Herzberg, McClelland, Alderfer); **process** asks **how** motivation is formed and sustained (Vroom, Adams, Locke, Skinner).",
+     "d": "Same **object** — the energising of behaviour; different **question**. **Content** asks **what** motivates (Maslow, Herzberg, McClelland, Alderfer); **process** asks **how** motivation is formed and sustained (Vroom, Adams, Locke, Skinner).",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2020 Q4(b)"
     }
    ]
   },
@@ -234,7 +239,7 @@
    "items": [
     {
      "t": "The trait to behaviour to contingency progression",
-     "d": "**Traits** (great men) → **behaviour** (what leaders do) → **contingency** (what works, when). Say this in one line and then pick the school the question needs; a leadership answer that narrates all three has no room left to argue.",
+     "d": "**Traits** (great men) → **behaviour** (what leaders do) → **contingency** (what works, when).",
      "k": "concept",
      "sl": "open",
      "tr": 2,
@@ -258,11 +263,12 @@
     },
     {
      "t": "Reddin's 3-D theory",
-     "d": "**2023 Q4(a).** Reddin adds a **third dimension — effectiveness** — to task and relationship orientation. The same style is **effective or ineffective depending on the situation**: 'dedicated' becomes **benevolent autocrat** or **autocrat**; 'integrated' becomes **executive** or **compromiser**.",
+     "d": "Reddin adds a **third dimension — effectiveness** — to task and relationship orientation. The same style is **effective or ineffective depending on the situation**: 'dedicated' becomes **benevolent autocrat** or **autocrat**; 'integrated' becomes **executive** or **compromiser**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2023 Q4(a)"
     },
     {
      "t": "Fiedler's contingency model",
@@ -298,27 +304,30 @@
     },
     {
      "t": "Strategic leadership",
-     "d": "**2021 Q4(c) quoted:** \"nothing in public administration is more important, interesting or mysterious than **leadership**.\" Strategic leadership is **anticipatory** — it manages the **authorising environment** and builds **capacity for the next problem**, which is **Mark Moore's** strategic triangle in behavioural form.",
+     "d": "\"nothing in public administration is more important, interesting or mysterious than **leadership**.\" Strategic leadership is **anticipatory** — it manages the **authorising environment** and builds **capacity for the next problem**, which is **Mark Moore's** strategic triangle in behavioural form.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2021 Q4(c)"
     },
     {
      "t": "Leadership and accountability for failure",
-     "d": "**2025 Q4(b).** The test of leadership is **ownership of failure**, not appropriation of success. Administratively this means **recording reasons**, accepting **audit and parliamentary scrutiny**, and protecting subordinates who acted on lawful orders — the opposite of **blame-shifting down the hierarchy**.",
+     "d": "The test of leadership is **ownership of failure**, not appropriation of success. Administratively this means **recording reasons**, accepting **audit and parliamentary scrutiny**, and protecting subordinates who acted on lawful orders — the opposite of **blame-shifting down the hierarchy**.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2025 Q4(b)"
     },
     {
      "t": "Leadership migrating to the aggressive",
-     "d": "**2025 Q3(a).** In conflict, **assertiveness is mistaken for competence** and the emotionally mature are read as weak. The correction is **structural, not exhortatory** — chairing rules, minuted dissent, written orders — so that the **loudest voice does not become the decision**.",
+     "d": "In conflict, **assertiveness is mistaken for competence** and the emotionally mature are read as weak. The correction is **structural, not exhortatory** — chairing rules, minuted dissent, written orders — so that the **loudest voice does not become the decision**.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2025 Q3(a)"
     },
     {
      "t": "Named Indian administrative leadership",
@@ -359,11 +368,12 @@
     },
     {
      "t": "The grapevine",
-     "d": "**2024 Q1(c): 'a necessary evil'.** It is **fast, filters gaps left by formal channels, and carries morale information** management never receives. It also **carries rumour and cannot be corrected**. The administrative response is not suppression but **speed** — occupy the space with **timely formal information**.",
+     "d": "It is **fast, filters gaps left by formal channels, and carries morale information** management never receives. It also **carries rumour and cannot be corrected**. The administrative response is not suppression but **speed** — occupy the space with **timely formal information**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2024 Q1(c)"
     },
     {
      "t": "Bavelas's communication networks",
@@ -383,21 +393,23 @@
     },
     {
      "t": "Headquarters–field communication",
-     "d": "**2024 Q1(d).** Headquarters holds **rules and money**; the field holds **facts and consequences**. Healthy relations require **two-way flow** — field discretion for local variation, headquarters feedback that is **substantive rather than compliance-seeking**. **Video conferencing collapsed distance, not status distance**.",
+     "d": "Headquarters holds **rules and money**; the field holds **facts and consequences**. Healthy relations require **two-way flow** — field discretion for local variation, headquarters feedback that is **substantive rather than compliance-seeking**. **Video conferencing collapsed distance, not status distance**.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
      "u": "I-3",
-     "x": "Structure in I-4"
+     "x": "Structure in I-4",
+     "pyq": "2024 Q1(d)"
     },
     {
      "t": "A narrow view of information",
-     "d": "**2019 Q5(d).** Treating information as **data to be stored** rather than **intelligence to be used** is why **MIS** implementations fail: the system is built for **upward reporting**, not for **decision support at the level that acts**.",
+     "d": "Treating information as **data to be stored** rather than **intelligence to be used** is why **MIS** implementations fail: the system is built for **upward reporting**, not for **decision support at the level that acts**.",
      "k": "link",
      "sl": "attack",
      "tr": 1,
      "u": "I-3",
-     "x": "Detail in I-11"
+     "x": "Detail in I-11",
+     "pyq": "2019 Q5(d)"
     },
     {
      "t": "Communication in Indian statutory form",
@@ -446,7 +458,7 @@
     },
     {
      "t": "Sources of organisational conflict",
-     "d": "**Structural** — line versus staff, overlapping jurisdiction, scarce resources; **interpersonal** — personality, status; **role-based** — role ambiguity, role conflict, role overload. Name the **type** before prescribing; the remedy differs entirely.",
+     "d": "**Structural** — line versus staff, overlapping jurisdiction, scarce resources; **interpersonal** — personality, status; **role-based** — role ambiguity, role conflict, role overload. The **type** must be identified before any remedy is prescribed; each answers to a different fix.",
      "k": "concept",
      "sl": "argue",
      "tr": 2,
@@ -486,11 +498,12 @@
     },
     {
      "t": "The behavioural approach's own limits",
-     "d": "**2021 Q2(a).** It privileges the **observable and measurable**, so it under-reads **power, class and ideology**; it borrows **laboratory findings** into settings with **statutory duty and coercive power**; and it is **culture-bound** — a Western-derived instrument applied without validation in Indian conditions.",
+     "d": "It privileges the **observable and measurable**, so it under-reads **power, class and ideology**; it borrows **laboratory findings** into settings with **statutory duty and coercive power**; and it is **culture-bound** — a Western-derived instrument applied without validation in Indian conditions.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-3"
+     "u": "I-3",
+     "pyq": "2021 Q2(a)"
     }
    ]
   }

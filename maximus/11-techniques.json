@@ -28,11 +28,12 @@
     },
     {
      "t": "What work study delivers",
-     "d": "**2019 Q8(b).** **Staffing norms** grounded in measurement rather than precedent; **elimination of redundant steps**; **standardised procedure** that makes training and audit possible; and a **baseline** against which any later improvement can be proved. It is the only technique that produces a **defensible number** for how many staff a task needs.",
+     "d": "**Staffing norms** grounded in measurement rather than precedent; **elimination of redundant steps**; **standardised procedure** that makes training and audit possible; and a **baseline** against which any later improvement can be proved. It is the only technique that produces a **defensible number** for how many staff a task needs.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2019 Q8(b)"
     },
     {
      "t": "India's O&M machinery",
@@ -44,11 +45,12 @@
     },
     {
      "t": "Government Process Re-engineering",
-     "d": "**2025 Q7(c).** GPR asks the question work study does not: **should this process exist at all?** It **redesigns from the outcome backwards** rather than optimising existing steps. The **2nd ARC's 11th Report (Promoting e-Governance)** insisted GPR must **precede** computerisation — otherwise you **automate an unnecessary procedure**.",
+     "d": "GPR asks the question work study does not: **should this process exist at all?** It **redesigns from the outcome backwards** rather than optimising existing steps. The **2nd ARC's 11th Report (Promoting e-Governance)** insisted GPR must **precede** computerisation — otherwise you **automate an unnecessary procedure**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2025 Q7(c)"
     },
     {
      "t": "GPR that worked",
@@ -89,11 +91,12 @@
     },
     {
      "t": "The critical path",
-     "d": "**2024 Q5(c).** The **longest path** through the network, and therefore the **shortest possible project duration**. Activities on it have **zero float** — delay any one and the whole project slips. Everything off it has **slack**, which is where resources can be borrowed from without cost.",
+     "d": "The **longest path** through the network, and therefore the **shortest possible project duration**. Activities on it have **zero float** — delay any one and the whole project slips. Everything off it has **slack**, which is where resources can be borrowed from without cost.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2024 Q5(c)"
     },
     {
      "t": "Crashing and the time-cost trade-off",
@@ -113,19 +116,21 @@
     },
     {
      "t": "Why networks do not remove delay",
-     "d": "**2019-family question, and 2025 Q8(c) on management aid tools.** A network **schedules activity**; it cannot resolve the **uncertainty** that causes delay — land acquisition, forest clearance, litigation, contractor default, fund release. It **makes the delay visible and attributable**, which is valuable, and is often mistaken for preventing it.",
+     "d": "A network **schedules activity**; it cannot resolve the **uncertainty** that causes delay — land acquisition, forest clearance, litigation, contractor default, fund release. It **makes the delay visible and attributable**, which is valuable, and is often mistaken for preventing it.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2025 Q8(c)"
     },
     {
      "t": "The efficacy of management aid tools",
-     "d": "**2025 Q8(c).** State the governing principle: a tool's value depends on **fit between the tool and the problem**. Use **CPM** for a defined project with known steps; **PERT** where durations are uncertain; **cost-benefit** for choosing between alternatives; **MIS** for continuous control. Applying the wrong one produces **precision without relevance**.",
+     "d": "State the governing principle: a tool's value depends on **fit between the tool and the problem**. Use **CPM** for a defined project with known steps; **PERT** where durations are uncertain; **cost-benefit** for choosing between alternatives; **MIS** for continuous control. Applying the wrong one produces **precision without relevance**.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2025 Q8(c)"
     },
     {
      "t": "The other aid tools worth naming",
@@ -158,19 +163,21 @@
     },
     {
      "t": "Why MIS implementations fail",
-     "d": "**2019 Q5(d) — 'a narrow view of information'.** The system is built for **upward reporting** rather than for the **level that acts**; data is **entered but not used**, so quality decays; there is **no process redesign** alongside; and **fear of exposure** produces defensive reporting. **Garbage in, gospel out.**",
+     "d": "The system is built for **upward reporting** rather than for the **level that acts**; data is **entered but not used**, so quality decays; there is **no process redesign** alongside; and **fear of exposure** produces defensive reporting. **Garbage in, gospel out.**",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2019 Q5(d)"
     },
     {
      "t": "MIS's evolution beyond its traditional role",
-     "d": "**2021 Q5(e) and 2023 Q5(b).** It has moved from **periodic reports** to **real-time dashboards**, from **internal** data to **integrated external** feeds, from **descriptive** to **predictive** analytics, and from **specialist** access to **public** access — **data.gov.in**, the **NDAP**, scheme dashboards.",
+     "d": "It has moved from **periodic reports** to **real-time dashboards**, from **internal** data to **integrated external** feeds, from **descriptive** to **predictive** analytics, and from **specialist** access to **public** access — **data.gov.in**, the **NDAP**, scheme dashboards.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2021 Q5(e) · 2023 Q5(b)"
     },
     {
      "t": "Indian MIS that carry real weight",
@@ -182,11 +189,12 @@
     },
     {
      "t": "MIS and value creation",
-     "d": "**2023 Q5(b).** It adds value by **shortening the decision cycle**, **exposing exceptions** rather than reporting everything, **standardising definitions** so units can be compared, and **making performance visible** — which is also why it meets resistance from the units it renders visible.",
+     "d": "It adds value by **shortening the decision cycle**, **exposing exceptions** rather than reporting everything, **standardising definitions** so units can be compared, and **making performance visible** — which is also why it meets resistance from the units it renders visible.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2023 Q5(b)"
     },
     {
      "t": "The dashboard trap",
@@ -211,19 +219,21 @@
     },
     {
      "t": "The models of e-governance",
-     "d": "**Broadcasting** (information dissemination); **critical flow** (targeted release of critical information to those who can act); **comparative analysis** (benchmarking against best practice); **e-advocacy or mobilisation and lobbying** (networked civil action); **interactive service** delivery. **2025 Q5(a) asked about the e-advocacy model.**",
+     "d": "**Broadcasting** (information dissemination); **critical flow** (targeted release of critical information to those who can act); **comparative analysis** (benchmarking against best practice); **e-advocacy or mobilisation and lobbying** (networked civil action); **interactive service** delivery.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2025 Q5(a)"
     },
     {
      "t": "The e-advocacy model and democratisation",
-     "d": "**2025 Q5(a).** It **lowers the cost of collective action** — online consultation on **MyGov**, campaign mobilisation, crowdsourced evidence, RTI data used publicly. Its limits: the **digitally connected are not representative**, so it can **amplify already-heard voices**, and **manufactured consensus** is cheap.",
+     "d": "It **lowers the cost of collective action** — online consultation on **MyGov**, campaign mobilisation, crowdsourced evidence, RTI data used publicly. Its limits: the **digitally connected are not representative**, so it can **amplify already-heard voices**, and **manufactured consensus** is cheap.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2025 Q5(a)"
     },
     {
      "t": "The maturity stages",
@@ -243,19 +253,21 @@
     },
     {
      "t": "Has e-governance debureaucratised?",
-     "d": "**2019 Q5(e).** **Partly.** It removed **discretion at the interface** — faceless assessment, online allotment — and **flattened information access**. It did **not** flatten hierarchy: approvals still climb the same levels, now in **e-Office**. It **relocated** bureaucratic power to whoever **designs the workflow and owns the data**.",
+     "d": "**Partly.** It removed **discretion at the interface** — faceless assessment, online allotment — and **flattened information access**. It did **not** flatten hierarchy: approvals still climb the same levels, now in **e-Office**. It **relocated** bureaucratic power to whoever **designs the workflow and owns the data**.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2019 Q5(e)"
     },
     {
      "t": "The disruptive decade",
-     "d": "**2020 Q8(a), 2024 Q6(b).** What changed the contours: **mobile-first** rather than desktop; **cloud** (MeghRaj) removing per-department infrastructure; **API-based interoperability** rather than monolithic systems; **real-time payments**; and **AI/ML** moving from analysis to **decision support**.",
+     "d": "What changed the contours: **mobile-first** rather than desktop; **cloud** (MeghRaj) removing per-department infrastructure; **API-based interoperability** rather than monolithic systems; **real-time payments**; and **AI/ML** moving from analysis to **decision support**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-11"
+     "u": "I-11",
+     "pyq": "2020 Q8(a) · 2024 Q6(b)"
     },
     {
      "t": "The e-governance divide",
@@ -267,11 +279,12 @@
     },
     {
      "t": "Cyber security as an administrative problem",
-     "d": "**2025 Q5(c) asked about low cyber awareness.** The vulnerability is **behavioural, not technical** — phishing, shared credentials, unpatched systems, personal devices on official work. Instruments: **CERT-In** directions, **CISO** in every ministry, **cyber crisis management plans**, the **National Critical Information Infrastructure Protection Centre**, and mandatory **iGOT** cyber-hygiene modules.",
+     "d": "The vulnerability is **behavioural, not technical** — phishing, shared credentials, unpatched systems, personal devices on official work. Instruments: **CERT-In** directions, **CISO** in every ministry, **cyber crisis management plans**, the **National Critical Information Infrastructure Protection Centre**, and mandatory **iGOT** cyber-hygiene modules.",
      "k": "scheme",
      "sl": "prove",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2025 Q5(c)"
     },
     {
      "t": "Data protection and the administrator",
@@ -304,35 +317,39 @@
     },
     {
      "t": "DPI's development claim",
-     "d": "**2023 Q3(a) asked exactly this.** It **advanced development goals** (DBT reaching the beneficiary directly), **raised public sector efficiency** (authentication and payment as a shared service), and **unlocked private innovation** (fintech built on UPI). Frame it as **Dunleavy's reintegration and needs-based holism** delivered at scale.",
+     "d": "It **advanced development goals** (DBT reaching the beneficiary directly), **raised public sector efficiency** (authentication and payment as a shared service), and **unlocked private innovation** (fintech built on UPI). It is **Dunleavy's reintegration and needs-based holism** delivered at population scale.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2023 Q3(a)"
     },
     {
      "t": "Aadhaar and inclusive governance",
-     "d": "**2025 Q6(b).** **For** — deduplication, portability of entitlement, DBT at scale, financial inclusion through JAM. **Against** — **authentication failure and exclusion**, function creep beyond the original purpose, and privacy. **Puttaswamy (2018)** upheld it for **subsidies and taxation** under a law, and struck down **Section 57**'s private-party mandate.",
+     "d": "**For** — deduplication, portability of entitlement, DBT at scale, financial inclusion through JAM. **Against** — **authentication failure and exclusion**, function creep beyond the original purpose, and privacy. **Puttaswamy (2018)** upheld it for **subsidies and taxation** under a law, and struck down **Section 57**'s private-party mandate.",
      "k": "case",
      "sl": "argue",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2025 Q6(b)"
     },
     {
      "t": "GeM",
-     "d": "**2025 Q6(a).** A public procurement marketplace producing **price discovery, transparency and MSME participation**. Its implementation problems: **specification gaming** to favour a supplier, **quality assurance** at the point of receipt, **payment delays** to sellers, **seller verification and counterfeits**, and **State adoption** that remains uneven.",
+     "d": "A public procurement marketplace producing **price discovery, transparency and MSME participation**. Its implementation problems: **specification gaming** to favour a supplier, **quality assurance** at the point of receipt, **payment delays** to sellers, **seller verification and counterfeits**, and **State adoption** that remains uneven.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2025 Q6(a)"
     },
     {
      "t": "AI in Indian administration",
-     "d": "**2023 Q7(c) asked it in Paper I; 2025 Q8(c) in Paper II.** Live uses: **grievance routing on CPGRAMS**, **judicial translation (SUVAS) and transcription**, **crop-yield and flood forecasting**, **GST fraud analytics**, **faceless assessment allocation**, and **Bhashini** for multilingual delivery.",
+     "d": "Live uses: **grievance routing on CPGRAMS**, **judicial translation (SUVAS) and transcription**, **crop-yield and flood forecasting**, **GST fraud analytics**, **faceless assessment allocation**, and **Bhashini** for multilingual delivery.",
      "k": "eg",
      "sl": "prove",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2023 Q7(c) · 2025 Q8(c)"
     },
     {
      "t": "The administrative case against unexamined AI",
@@ -357,11 +374,12 @@
    "items": [
     {
      "t": "Caiden's definition",
-     "d": "**2020 Q7(c) quoted it.** Administrative reform is \"**the artificial inducement of administrative transformation against resistance**.\" Every word is doing work: **artificial** (deliberate, not evolutionary), **transformation** (not adjustment), and **against resistance** — resistance is **constitutive**, not an obstacle that competent design avoids.",
+     "d": "Administrative reform is \"**the artificial inducement of administrative transformation against resistance**.\" Every word is doing work: **artificial** (deliberate, not evolutionary), **transformation** (not adjustment), and **against resistance** — resistance is **constitutive**, not an obstacle that competent design avoids.",
      "k": "thinker",
      "sl": "open",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2020 Q7(c)"
     },
     {
      "t": "The nature of resistance",
@@ -413,11 +431,12 @@
     },
     {
      "t": "Reform depends on political will",
-     "d": "**2024 Q6(a).** True, but say something more precise. **Political will is not a personal virtue** — it is produced when the **political cost of not reforming exceeds the cost of reforming**. Reform succeeds where a **crisis, a court order, a fiscal constraint or an electoral incentive** creates that arithmetic: **GST, IBC, RTI, Aadhaar**.",
+     "d": "True, but say something more precise. **Political will is not a personal virtue** — it is produced when the **political cost of not reforming exceeds the cost of reforming**. Reform succeeds where a **crisis, a court order, a fiscal constraint or an electoral incentive** creates that arithmetic: **GST, IBC, RTI, Aadhaar**.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "II-10"
+     "u": "II-10",
+     "pyq": "2024 Q6(a)"
     },
     {
      "t": "Problems of implementation",

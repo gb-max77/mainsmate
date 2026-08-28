@@ -11,11 +11,12 @@
    "items": [
     {
      "t": "The aid-and-advice provision",
-     "d": "**2023 Q4(a) quoted Article 163 directly.** \"There shall be a Council of Ministers with the **Chief Minister at the head** to **aid and advise** the Governor in the exercise of his functions, **except in so far as he is by or under this Constitution required to exercise any of his functions in his discretion**.\" The whole federal argument sits in that exception.",
+     "d": "\"There shall be a Council of Ministers with the **Chief Minister at the head** to **aid and advise** the Governor in the exercise of his functions, **except in so far as he is by or under this Constitution required to exercise any of his functions in his discretion**.\" The whole federal argument sits in that exception.",
      "k": "scheme",
      "sl": "open",
      "tr": 1,
-     "u": "II-6"
+     "u": "II-6",
+     "pyq": "2023 Q4(a)"
     },
     {
      "t": "Why the exception is contested",
@@ -51,11 +52,12 @@
     },
     {
      "t": "Coalition dynamics in the States",
-     "d": "**2023 Q5(c).** They vary with the **nature of leadership** (a dominant leader can hold a coalition that a consensual one cannot), the **character of the parties** (ideological versus regional-personal), and **conditions** — pre-poll alliances behave differently from post-poll arrangements. Administratively the effect is **departmental fiefdoms** and slower Cabinet decisions.",
+     "d": "They vary with the **nature of leadership** (a dominant leader can hold a coalition that a consensual one cannot), the **character of the parties** (ideological versus regional-personal), and **conditions** — pre-poll alliances behave differently from post-poll arrangements. Administratively the effect is **departmental fiefdoms** and slower Cabinet decisions.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "II-6"
+     "u": "II-6",
+     "pyq": "2023 Q5(c)"
     }
    ]
   },
@@ -72,11 +74,12 @@
     },
     {
      "t": "Why the demarcation blurs",
-     "d": "**2025 Q5(a).** There is **no statutory allocation** between the two; the Secretariat drifts into **case work and transfers**, and the Directorate is drawn into **policy notes**. Both then do **each other's work badly** — the generalist decides technical questions and the technical head spends the day on files.",
+     "d": "There is **no statutory allocation** between the two; the Secretariat drifts into **case work and transfers**, and the Directorate is drawn into **policy notes**. Both then do **each other's work badly** — the generalist decides technical questions and the technical head spends the day on files.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-6"
+     "u": "II-6",
+     "pyq": "2025 Q5(a)"
     },
     {
      "t": "The consequences of the blur",

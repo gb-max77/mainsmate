@@ -60,19 +60,21 @@
     },
     {
      "t": "The development dilemma",
-     "d": "**2019 Q6(a).** The **concept** of development is inherently **participatory** — it is about people's own expansion of freedom. The **practice** has been **exclusionary** — expert-driven, displacement-generating, capital-intensive. That contradiction, not any implementation failure, is what makes it a **dilemma**.",
+     "d": "The **concept** of development is inherently **participatory** — it is about people's own expansion of freedom. The **practice** has been **exclusionary** — expert-driven, displacement-generating, capital-intensive. That contradiction, not any implementation failure, is what makes it a **dilemma**.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2019 Q6(a)"
     },
     {
      "t": "SDGs depend on actors' willingness to cooperate",
-     "d": "**2021 Q8(a).** SDG delivery is a **horizontal coordination** problem: no single ministry owns a goal, most targets are on the **State list**, and **local bodies** must execute. India's coordination instruments — **NITI's SDG index, state SDG cells, the localisation of SDGs through panchayat theme-based plans** — are exhortation without authority.",
+     "d": "SDG delivery is a **horizontal coordination** problem: no single ministry owns a goal, most targets are on the **State list**, and **local bodies** must execute. India's coordination instruments — **NITI's SDG index, state SDG cells, the localisation of SDGs through panchayat theme-based plans** — are exhortation without authority.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2021 Q8(a)"
     }
    ]
   },
@@ -97,19 +99,21 @@
     },
     {
      "t": "The dichotomy of development",
-     "d": "**2019 Q6(a) and the standard 20-marker frame.** Development administration needs **flexibility, risk-taking and speed**; **general administration** needs **rule-adherence, uniformity and caution**. The **same officer** carries both roles — the Collector who must both **innovate** and **not deviate from the GFR**.",
+     "d": "Development administration needs **flexibility, risk-taking and speed**; **general administration** needs **rule-adherence, uniformity and caution**. The **same officer** carries both roles — the Collector who must both **innovate** and **not deviate from the GFR**.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2019 Q6(a)"
     },
     {
      "t": "Weidner on output versus system change",
-     "d": "**2023 Q6(b) quoted him.** Change in **output** (more roads, more enrolment) is not change in the **system** that produces it. And \"**growth from one point of view may be decline from another**\" — an irrigation project that raises yields and destroys a commons.",
+     "d": "Change in **output** (more roads, more enrolment) is not change in the **system** that produces it. And \"**growth from one point of view may be decline from another**\" — an irrigation project that raises yields and destroys a commons.",
      "k": "thinker",
      "sl": "argue",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2023 Q6(b)"
     },
     {
      "t": "The changing profile",
@@ -129,11 +133,12 @@
     },
     {
      "t": "Bureaucracy as an impediment to development",
-     "d": "**II 2023 Q1(b).** The charge: **rule-orientation over result**, **generalist leadership** of technical work, **risk aversion** created by vigilance exposure, **transfer instability**, and the **file** as a device for **diffusing responsibility**. All true; none of it argues for **less** bureaucracy — it argues for a **differently incentivised** one.",
+     "d": "The charge: **rule-orientation over result**, **generalist leadership** of technical work, **risk aversion** created by vigilance exposure, **transfer instability**, and the **file** as a device for **diffusing responsibility**. All true; none of it argues for **less** bureaucracy — it argues for a **differently incentivised** one.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-11"
+     "u": "II-11",
+     "pyq": "2023 Q1(b)"
     },
     {
      "t": "Bureaucracy as the condition of development",
@@ -150,11 +155,12 @@
    "items": [
     {
      "t": "The anti-development thesis",
-     "d": "**2024 Q5(a) and 2012 Q asked it.** Its claim is **epistemological**, not managerial: development is a **discourse** invented after 1945 that reconstituted two-thirds of the world as **'underdeveloped'** and made Western modernity the only imaginable destination. **Arturo Escobar, Encountering Development (1995)**.",
+     "d": "Its claim is **epistemological**, not managerial: development is a **discourse** invented after 1945 that reconstituted two-thirds of the world as **'underdeveloped'** and made Western modernity the only imaginable destination. **Arturo Escobar, Encountering Development (1995)**.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2024 Q5(a)"
     },
     {
      "t": "Who makes the argument",
@@ -190,11 +196,12 @@
     },
     {
      "t": "Strong state versus the market",
-     "d": "**2021 Q6(c), 2024 Q7(c), 2025 Q6(b).** The evidence points to **symbiosis**, not choice: every successful market economy rests on a **strong state** supplying contract enforcement, property rights, competition regulation, human capital and infrastructure. **Weak states produce weak markets**, not free ones.",
+     "d": "The evidence points to **symbiosis**, not choice: every successful market economy rests on a **strong state** supplying contract enforcement, property rights, competition regulation, human capital and infrastructure. **Weak states produce weak markets**, not free ones.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2021 Q6(c) · 2024 Q7(c) · 2025 Q6(b)"
     },
     {
      "t": "The developmental state literature",
@@ -206,11 +213,12 @@
     },
     {
      "t": "Has the state's role been overemphasised?",
-     "d": "**2025 Q6(b).** Take a position and qualify it. The state's **direct production** role was overemphasised — that is the honest reading of the licensing era. Its **regulatory, capability-building and risk-absorbing** role was **under**emphasised, and is what **DPI, ISRO and the vaccine programme** show it does best.",
+     "d": "The state's **direct production** role was overemphasised — that is the honest reading of the licensing era. Its **regulatory, capability-building and risk-absorbing** role was **under**emphasised, and is what **DPI, ISRO and the vaccine programme** show it does best.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2025 Q6(b)"
     },
     {
      "t": "Liberalisation's effect on administration",
@@ -259,11 +267,12 @@
     },
     {
      "t": "Do SHGs play a marginal role?",
-     "d": "**2019 Q8(a).** Argue both sides. **Not marginal** — they moved **practical needs** (credit at non-usurious rates, savings, thrift) and produced **collective bargaining** where women had none. **Marginal on strategic interests** — they rarely touch **land title, inheritance or household decision-making**, and can add work without power.",
+     "d": "**Not marginal** — they moved **practical needs** (credit at non-usurious rates, savings, thrift) and produced **collective bargaining** where women had none. **Marginal on strategic interests** — they rarely touch **land title, inheritance or household decision-making**, and can add work without power.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2019 Q8(a)"
     },
     {
      "t": "Where SHGs became administratively significant",
@@ -275,27 +284,30 @@
     },
     {
      "t": "Affirmative action has not eliminated discrimination",
-     "d": "**2020 Q6(b).** Reservation delivers **presence**, not **power** — hence **sarpanch pati**, proxy candidature, and elected women who are not permitted to chair. The instruments that shift power are different: **capacity building, tenure security, independent staff, and social audit** by women's collectives.",
+     "d": "Reservation delivers **presence**, not **power** — hence **sarpanch pati**, proxy candidature, and elected women who are not permitted to chair. The instruments that shift power are different: **capacity building, tenure security, independent staff, and social audit** by women's collectives.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2020 Q6(b)"
     },
     {
      "t": "Economic development is not sufficient",
-     "d": "**2025 Q5(e).** India's **female labour force participation** rose sharply in recent PLFS rounds while **unpaid domestic work** and **safety constraints** remained; growth alone does not touch **son preference, mobility restriction, unpaid care or asset ownership**. Growth **enables**; it does not **deliver** gender equality.",
+     "d": "India's **female labour force participation** rose sharply in recent PLFS rounds while **unpaid domestic work** and **safety constraints** remained; growth alone does not touch **son preference, mobility restriction, unpaid care or asset ownership**. Growth **enables**; it does not **deliver** gender equality.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2025 Q5(e)"
     },
     {
      "t": "The Indian gender-equality architecture",
-     "d": "**Articles 14, 15(3), 16, 39(a) and (d), 42, 51A(e)**; **106th Amendment (2023)** reserving **one-third** of Lok Sabha and State Assembly seats, operative after the **census and delimitation**; **Gender Budget Statement 13**; the **POSH Act, 2013** after **Vishaka (1997)**; **Nirbhaya Fund**; **Mission Shakti**. **2025 Q1(e) asked exactly this.**",
+     "d": "**Articles 14, 15(3), 16, 39(a) and (d), 42, 51A(e)**; **106th Amendment (2023)** reserving **one-third** of Lok Sabha and State Assembly seats, operative after the **census and delimitation**; **Gender Budget Statement 13**; the **POSH Act, 2013** after **Vishaka (1997)**; **Nirbhaya Fund**; **Mission Shakti**.",
      "k": "prov",
      "sl": "prove",
      "tr": 1,
-     "u": "I-8"
+     "u": "I-8",
+     "pyq": "2025 Q1(e)"
     }
    ]
   },
@@ -376,19 +388,21 @@
     },
     {
      "t": "Competitive politics but not planning",
-     "d": "**2023 Q2(b) put it exactly.** Panchayats succeeded as **political institutions** — contested elections, new leadership from SC/ST and women, real local competition. They failed as **planning and delivery agencies** because they were given **neither untied funds, nor staff, nor an activity map** clear enough to plan against.",
+     "d": "Panchayats succeeded as **political institutions** — contested elections, new leadership from SC/ST and women, real local competition. They failed as **planning and delivery agencies** because they were given **neither untied funds, nor staff, nor an activity map** clear enough to plan against.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "II-11"
+     "u": "II-11",
+     "pyq": "2023 Q2(b)"
     },
     {
      "t": "Gram swaraj and the Gram Sabha",
-     "d": "**2024 Q6(b), 2025 Q5(e).** The **Gram Sabha** is the only **direct democracy** institution in the Constitution and holds real statutory power — **approval of the annual plan and budget**, **beneficiary selection**, **social audit under MGNREGA Section 17**, and **consent under FRA and PESA**. Its weakness is **quorum, capture and the frequency of meetings**.",
+     "d": "The **Gram Sabha** is the only **direct democracy** institution in the Constitution and holds real statutory power — **approval of the annual plan and budget**, **beneficiary selection**, **social audit under MGNREGA Section 17**, and **consent under FRA and PESA**. Its weakness is **quorum, capture and the frequency of meetings**.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-11"
+     "u": "II-11",
+     "pyq": "2024 Q6(b) · 2025 Q5(e)"
     },
     {
      "t": "PESA",
@@ -400,11 +414,12 @@
     },
     {
      "t": "Elected women representatives who cannot govern",
-     "d": "**2025 Q7(a).** The obstacles are specific: **proxy rule (sarpanch pati)**, **two-child and education disqualifications** that fall hardest on marginalised women, **no-confidence motions** used against them, **rotation of reserved seats** preventing a second term, and **secretariat staff who report elsewhere**. Fixes: **longer reservation cycles, capacity building, independent panchayat staff, and legal aid**.",
+     "d": "The obstacles are specific: **proxy rule (sarpanch pati)**, **two-child and education disqualifications** that fall hardest on marginalised women, **no-confidence motions** used against them, **rotation of reserved seats** preventing a second term, and **secretariat staff who report elsewhere**. Fixes: **longer reservation cycles, capacity building, independent panchayat staff, and legal aid**.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "II-11"
+     "u": "II-11",
+     "pyq": "2025 Q7(a)"
     }
    ]
   },
@@ -453,27 +468,30 @@
     },
     {
      "t": "Mission Antyodaya",
-     "d": "**2023 Q5(b).** A **gram-panchayat-level survey and ranking** across infrastructure and service parameters, used to target the weakest panchayats and to converge schemes on them. Its value is as a **diagnostic layer**; its limit is that **ranking is not resourcing** — identification without an untied fund changes little.",
+     "d": "A **gram-panchayat-level survey and ranking** across infrastructure and service parameters, used to target the weakest panchayats and to converge schemes on them. Its value is as a **diagnostic layer**; its limit is that **ranking is not resourcing** — identification without an untied fund changes little.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-11"
+     "u": "II-11",
+     "pyq": "2023 Q5(b)"
     },
     {
      "t": "Rurban",
-     "d": "**2023 Q8(c).** **Shyama Prasad Mukherji Rurban Mission (2016)** — clusters of **contiguous villages** developed with urban amenities and rural livelihoods, through **convergence of existing schemes** plus a **Critical Gap Fund** of up to 30%. It targets the **rural-urban continuum** the 73rd/74th split ignores.",
+     "d": "**Shyama Prasad Mukherji Rurban Mission (2016)** — clusters of **contiguous villages** developed with urban amenities and rural livelihoods, through **convergence of existing schemes** plus a **Critical Gap Fund** of up to 30%. It targets the **rural-urban continuum** the 73rd/74th split ignores.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-11"
+     "u": "II-11",
+     "pyq": "2023 Q8(c)"
     },
     {
      "t": "Swachh Bharat",
-     "d": "**2023 Q6(c).** Its administrative significance is **behaviour change at scale** — **all districts declared ODF by October 2019**, with **swachhagrahis**, community-led total sanitation, and **shame-and-pride messaging** rather than subsidy alone. **Phase II (ODF Plus)** shifted to **sustainability, solid and liquid waste** — the harder half.",
+     "d": "Its administrative significance is **behaviour change at scale** — **all districts declared ODF by October 2019**, with **swachhagrahis**, community-led total sanitation, and **shame-and-pride messaging** rather than subsidy alone. **Phase II (ODF Plus)** shifted to **sustainability, solid and liquid waste** — the harder half.",
      "k": "eg",
      "sl": "prove",
      "tr": 1,
-     "u": "II-11"
+     "u": "II-11",
+     "pyq": "2023 Q6(c)"
     },
     {
      "t": "Land reform — the unfinished agenda",

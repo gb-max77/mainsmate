@@ -64,11 +64,12 @@
    "items": [
     {
      "t": "Why the role must be redefined",
-     "d": "**2023 Q4(b).** Four pressures: **panchayats and municipalities** now hold constitutional functions the Collector once discharged; **parastatals and missions** deliver outside his chain; **regulatory bodies and courts** have taken parts of his discretion; and **DBT and digital delivery** removed the intermediation that made him the citizen's point of access.",
+     "d": "Four pressures: **panchayats and municipalities** now hold constitutional functions the Collector once discharged; **parastatals and missions** deliver outside his chain; **regulatory bodies and courts** have taken parts of his discretion; and **DBT and digital delivery** removed the intermediation that made him the citizen's point of access.",
      "k": "critique",
      "sl": "open",
      "tr": 1,
-     "u": "II-7"
+     "u": "II-7",
+     "pyq": "2023 Q4(b)"
     },
     {
      "t": "The two reform positions",
@@ -88,11 +89,12 @@
     },
     {
      "t": "Teamwork over hierarchy",
-     "d": "**2025 Q2(a) asked this directly.** The case: modern district work is **multi-departmental and time-critical** — a heatwave, an epidemic, an aspirational-district target — and hierarchy cannot move at that speed. **Follett's law of the situation** and the **Incident Response System** are the theory; the practical form is a **district team with pre-assigned incident roles**.",
+     "d": "The case: modern district work is **multi-departmental and time-critical** — a heatwave, an epidemic, an aspirational-district target — and hierarchy cannot move at that speed. **Follett's law of the situation** and the **Incident Response System** are the theory; the practical form is a **district team with pre-assigned incident roles**.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
-     "u": "II-7"
+     "u": "II-7",
+     "pyq": "2025 Q2(a)"
     },
     {
      "t": "The limit of the teamwork argument",
@@ -112,19 +114,21 @@
     },
     {
      "t": "District reorganisation",
-     "d": "**2025 Q4(c).** The administrative case for smaller districts is **span of control and access** — travel time to headquarters, population per officer. The critique is that the actual drivers are **politico-populist** — a new district as an electoral promise — and the costs are real: **new establishment, split cadres, divided records and thinner senior staffing across more units**.",
+     "d": "The administrative case for smaller districts is **span of control and access** — travel time to headquarters, population per officer. The critique is that the actual drivers are **politico-populist** — a new district as an electoral promise — and the costs are real: **new establishment, split cadres, divided records and thinner senior staffing across more units**.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-7"
+     "u": "II-7",
+     "pyq": "2025 Q4(c)"
     },
     {
      "t": "The district training question",
-     "d": "**2023 Q5(a).** The district phase of IAS induction is where **field judgement** is formed — revenue cases decided, magistracy exercised, a subdivision independently run. The critique is that it has become **shorter, more ceremonial and less supervised**, so officers reach senior posts without having been **personally answerable for a decision** in the field.",
+     "d": "The district phase of IAS induction is where **field judgement** is formed — revenue cases decided, magistracy exercised, a subdivision independently run. The critique is that it has become **shorter, more ceremonial and less supervised**, so officers reach senior posts without having been **personally answerable for a decision** in the field.",
      "k": "link",
      "sl": "attack",
      "tr": 1,
-     "u": "II-7"
+     "u": "II-7",
+     "pyq": "2023 Q5(a)"
     }
    ]
   },

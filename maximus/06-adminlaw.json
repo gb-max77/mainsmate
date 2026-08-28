@@ -20,11 +20,12 @@
     },
     {
      "t": "Why it grew",
-     "d": "The **welfare and regulatory state**. Legislatures cannot foresee every case, so they delegate; administration acquires **rule-making and adjudicatory** power; and the citizen needs a body of law governing that power. **2025 Q1(e)**: administrative law evolved from the need for **a system of public administration under law**.",
+     "d": "The **welfare and regulatory state**. Legislatures cannot foresee every case, so they delegate; administration acquires **rule-making and adjudicatory** power; and the citizen needs a body of law governing that power. administrative law evolved from the need for **a system of public administration under law**.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-6"
+     "u": "I-6",
+     "pyq": "2025 Q1(e)"
     },
     {
      "t": "Dicey's denial",
@@ -52,11 +53,12 @@
     },
     {
      "t": "Red light and green light theories",
-     "d": "**2019 Q3(b), and the sharpest frame available.** **Red light** (Dicey, Hewart) — administrative law exists to **control and restrain** the state; courts are the guardians. **Green light** (Robson, Griffith) — the state is a **force for good**; administrative law should **facilitate** effective administration and improve it from within.",
+     "d": "**Red light** (Dicey, Hewart) — administrative law exists to **control and restrain** the state; courts are the guardians. **Green light** (Robson, Griffith) — the state is a **force for good**; administrative law should **facilitate** effective administration and improve it from within.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-6"
+     "u": "I-6",
+     "pyq": "2019 Q3(b)"
     },
     {
      "t": "Amber light — the working synthesis",
@@ -68,11 +70,12 @@
     },
     {
      "t": "The rule of law and arbitrariness",
-     "d": "**2020 Q1(c).** **E.P. Royappa (1974)** — \"equality is antithetic to **arbitrariness**\"; arbitrary state action violates **Article 14** without more. **Maneka Gandhi (1978)** made procedure **fair, just and reasonable**. Arbitrariness in the application of law is not merely bad governance — it is **unconstitutional**.",
+     "d": "**E.P. Royappa (1974)** — \"equality is antithetic to **arbitrariness**\"; arbitrary state action violates **Article 14** without more. **Maneka Gandhi (1978)** made procedure **fair, just and reasonable**. Arbitrariness in the application of law is not merely bad governance — it is **unconstitutional**.",
      "k": "case",
      "sl": "prove",
      "tr": 1,
-     "u": "I-6"
+     "u": "I-6",
+     "pyq": "2020 Q1(c)"
     }
    ]
   },
@@ -105,11 +108,12 @@
     },
     {
      "t": "'A strategic tool in the hands of the executive'",
-     "d": "**2019 Q1(e).** The strategic use is real: the **substance** of a policy can be shifted into **rules** that never face a vote, changed by **notification**, and enforced before Parliament examines them. **2025 Q4(a)** asked how to confine it — the answer is the three controls below.",
+     "d": "The strategic use is real: the **substance** of a policy can be shifted into **rules** that never face a vote, changed by **notification**, and enforced before Parliament examines them. asked how to confine it — the answer is the three controls below.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "I-6"
+     "u": "I-6",
+     "pyq": "2019 Q1(e) · 2025 Q4(a)"
     },
     {
      "t": "Parliamentary control of delegated legislation",
@@ -137,11 +141,12 @@
     },
     {
      "t": "Subordinate legislation is also beneficial",
-     "d": "**2023 Q4(c) asked for the balance.** Without it, **technical standards** (drug schedules, emission norms, spectrum), **rates** (tariffs, duties), and **crisis response** would each require an Act. The remedy for its abuse is **scrutiny**, not abolition — no modern state can legislate every detail in primary law.",
+     "d": "Without it, **technical standards** (drug schedules, emission norms, spectrum), **rates** (tariffs, duties), and **crisis response** would each require an Act. The remedy for its abuse is **scrutiny**, not abolition — no modern state can legislate every detail in primary law.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-6"
+     "u": "I-6",
+     "pyq": "2023 Q4(c)"
     },
     {
      "t": "Administrative discretion and its control",
@@ -158,11 +163,12 @@
    "items": [
     {
      "t": "Why tribunals",
-     "d": "**Speed**, **low cost**, **expertise**, **flexible procedure** free of the Evidence Act, and relief of the **court backlog**. **2024 Q3(b)**: the welfare state generates disputes of **volume and technicality** that ordinary courts are structurally unsuited to handle.",
+     "d": "**Speed**, **low cost**, **expertise**, **flexible procedure** free of the Evidence Act, and relief of the **court backlog**. the welfare state generates disputes of **volume and technicality** that ordinary courts are structurally unsuited to handle.",
      "k": "concept",
      "sl": "open",
      "tr": 1,
-     "u": "I-6"
+     "u": "I-6",
+     "pyq": "2024 Q3(b)"
     },
     {
      "t": "The constitutional basis",
@@ -206,11 +212,12 @@
     },
     {
      "t": "Is administrative law now more constitutional than the Constitution?",
-     "d": "**2020 Q4(a).** In one sense yes: **Article 14 and 21 jurisprudence** — **Kraipak**, **Royappa**, **Maneka** — has made administrative fairness a **constitutional** requirement, so the ordinary citizen's daily encounter with the state is governed by **constitutional standards** rather than statute alone.",
+     "d": "In one sense yes: **Article 14 and 21 jurisprudence** — **Kraipak**, **Royappa**, **Maneka** — has made administrative fairness a **constitutional** requirement, so the ordinary citizen's daily encounter with the state is governed by **constitutional standards** rather than statute alone.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
-     "u": "I-6"
+     "u": "I-6",
+     "pyq": "2020 Q4(a)"
     },
     {
      "t": "Natural justice — the two rules",
@@ -296,11 +303,12 @@
     },
     {
      "t": "The colonial legacy in current form",
-     "d": "**2025 Q2(c) framed it as company agents becoming magistrates.** Three surviving features: **executive control** over postings and operations; the **constabulary** treated as a labour force rather than a professional cadre; and **thana-level policing** designed for order maintenance rather than investigation.",
+     "d": "Three surviving features: **executive control** over postings and operations; the **constabulary** treated as a labour force rather than a professional cadre; and **thana-level policing** designed for order maintenance rather than investigation.",
      "k": "link",
      "sl": "argue",
      "tr": 1,
-     "u": "II-13"
+     "u": "II-13",
+     "pyq": "2025 Q2(c)"
     },
     {
      "t": "Police as a State subject",
@@ -381,11 +389,12 @@
     },
     {
      "t": "Why compliance has been nominal",
-     "d": "**2023 Q7(b).** States legislated **new Police Acts that reproduce executive control**: Security Commissions with **government majorities** and **recommendatory** status; **DGP selection diluted**; **Complaints Authorities unconstituted or without independent members**; transfer boards **overridden**. The reform removes precisely the discretion the political executive most values.",
+     "d": "States legislated **new Police Acts that reproduce executive control**: Security Commissions with **government majorities** and **recommendatory** status; **DGP selection diluted**; **Complaints Authorities unconstituted or without independent members**; transfer boards **overridden**. The reform removes precisely the discretion the political executive most values.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "II-13"
+     "u": "II-13",
+     "pyq": "2023 Q7(b)"
     },
     {
      "t": "Whose discretion the reform would remove",
@@ -397,19 +406,21 @@
     },
     {
      "t": "Separating investigation from prosecution",
-     "d": "**2024 Q7(a).** **For** — specialist investigators freed from bandobast duty, better conviction rates, prosecutorial independence as a check on shoddy investigation. **Against** — coordination loss, **duplication in thin State cadres**, and a village station that cannot spare two wings. Most States have a **partial** separation in metros only.",
+     "d": "**For** — specialist investigators freed from bandobast duty, better conviction rates, prosecutorial independence as a check on shoddy investigation. **Against** — coordination loss, **duplication in thin State cadres**, and a village station that cannot spare two wings. Most States have a **partial** separation in metros only.",
      "k": "critique",
      "sl": "argue",
      "tr": 1,
-     "u": "II-13"
+     "u": "II-13",
+     "pyq": "2024 Q7(a)"
     },
     {
      "t": "Smart policing",
-     "d": "**2025 Q6(c).** **S**trict-**S**ensitive, **M**odern-**M**obile, **A**lert-**A**ccountable, **R**eliable-**R**esponsive, **T**echno-savvy-**T**rained. Its instruments: **CCTNS** and the **Interoperable Criminal Justice System**, **e-FIR**, **Dial 112 ERSS**, and **NAFIS** fingerprints.",
+     "d": "**S**trict-**S**ensitive, **M**odern-**M**obile, **A**lert-**A**ccountable, **R**eliable-**R**esponsive, **T**echno-savvy-**T**rained. Its instruments: **CCTNS** and the **Interoperable Criminal Justice System**, **e-FIR**, **Dial 112 ERSS**, and **NAFIS** fingerprints.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "II-13"
+     "u": "II-13",
+     "pyq": "2025 Q6(c)"
     },
     {
      "t": "Community policing that has worked",
@@ -421,11 +432,12 @@
     },
     {
      "t": "Police–public relations",
-     "d": "**2024 Q8(a).** Diagnosis first: the **1861 design**, **vacancies and 12-14 hour shifts**, **VIP security diverting strength**, **custodial violence**, and **social distance** from women, Dalits and minorities in a force that does not resemble the policed. Remedies: **representation**, **beat continuity**, **independent complaints authorities**, and **welfare and shift reform** for the constabulary.",
+     "d": "Diagnosis first: the **1861 design**, **vacancies and 12-14 hour shifts**, **VIP security diverting strength**, **custodial violence**, and **social distance** from women, Dalits and minorities in a force that does not resemble the policed. Remedies: **representation**, **beat continuity**, **independent complaints authorities**, and **welfare and shift reform** for the constabulary.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "II-13"
+     "u": "II-13",
+     "pyq": "2024 Q8(a)"
     }
    ]
   },
@@ -474,11 +486,12 @@
     },
     {
      "t": "AFSPA and the withdrawal question",
-     "d": "**2023 Q6(b).** The **Armed Forces (Special Powers) Act, 1958** confers powers to **search, arrest and use force** in a **disturbed area**, with **prior sanction required to prosecute**. Progressive withdrawal — **Tripura (2015)**, **Meghalaya (2018)**, phased reduction in Assam, Nagaland and Manipur — signals **normalisation**, and **Jeevan Reddy Committee (2005)** recommended repeal with safeguards folded into the UAPA.",
+     "d": "The **Armed Forces (Special Powers) Act, 1958** confers powers to **search, arrest and use force** in a **disturbed area**, with **prior sanction required to prosecute**. Progressive withdrawal — **Tripura (2015)**, **Meghalaya (2018)**, phased reduction in Assam, Nagaland and Manipur — signals **normalisation**, and **Jeevan Reddy Committee (2005)** recommended repeal with safeguards folded into the UAPA.",
      "k": "prov",
      "sl": "argue",
      "tr": 1,
-     "u": "II-13"
+     "u": "II-13",
+     "pyq": "2023 Q6(b)"
     },
     {
      "t": "The counter-terror legal framework",

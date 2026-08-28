@@ -44,11 +44,12 @@
     },
     {
      "t": "The dichotomy is not dead — it is normative",
-     "d": "**2024 Q1(a) asked exactly this.** Write: as **description** it is false; as **norm** it is indispensable. Without it there is no defence against **politicisation of transfers**, no ground for a civil servant to record **written dissent**, and no line for the **Election Commission** to police.",
+     "d": "Write: as **description** it is false; as **norm** it is indispensable. Without it there is no defence against **politicisation of transfers**, no ground for a civil servant to record **written dissent**, and no line for the **Election Commission** to police.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2024 Q1(a)"
     },
     {
      "t": "Public versus private administration",
@@ -100,11 +101,12 @@
     },
     {
      "t": "Why the discipline keeps reinventing itself",
-     "d": "**2019 Q1(a).** Because it is **contextual**: it borrows its problems from the state, and the state's form keeps changing — **welfare state → market state → regulatory state → digital state**. **Henry's five paradigms** are the frame; each is a response to a **legitimacy crisis**, not an intellectual advance.",
+     "d": "Because it is **contextual**: it borrows its problems from the state, and the state's form keeps changing — **welfare state → market state → regulatory state → digital state**. **Henry's five paradigms** are the frame; each is a response to a **legitimacy crisis**, not an intellectual advance.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2019 Q1(a)"
     }
    ]
   },
@@ -113,7 +115,7 @@
    "items": [
     {
      "t": "Nicholas Henry's five paradigms",
-     "d": "**(1)** Politics–administration dichotomy **1900-26**; **(2)** Principles of administration **1927-37**; **(3)** Public administration as **political science** 1950-70; **(4)** as **management** 1956-70; **(5)** as **public administration** 1970-. Use this as the skeleton of any evolution question.",
+     "d": "**(1)** Politics–administration dichotomy **1900-26**; **(2)** Principles of administration **1927-37**; **(3)** Public administration as **political science** 1950-70; **(4)** as **management** 1956-70; **(5)** as **public administration** 1970-.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
@@ -163,15 +165,16 @@
     },
     {
      "t": "Minnowbrook III's actual consensus",
-     "d": "**2023 Q2(b) and 2021 Q2(b) both asked this.** Its finding: theory must be **empirically tested and regionally tailored** — a single Western canon cannot travel. Administration is a **socially embedded process of relationship, dialogue and action**, not a toolkit.",
+     "d": "Its finding: theory must be **empirically tested and regionally tailored** — a single Western canon cannot travel. Administration is a **socially embedded process of relationship, dialogue and action**, not a toolkit.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2023 Q2(b) · 2021 Q2(b)"
     },
     {
      "t": "The paradigm ladder in one line",
-     "d": "Write it as a chain: **PA (rule) → NPA (equity) → NPM (market) → NPS (citizenship) → NPG (network) → DEG (platform)**. Each corrects the previous one's **blind spot**; none replaces the **Weberian core** underneath.",
+     "d": "The chain runs **PA (rule) → NPA (equity) → NPM (market) → NPS (citizenship) → NPG (network) → DEG (platform)**. Each corrects the previous one's **blind spot**; none replaces the **Weberian core** underneath.",
      "k": "concept",
      "sl": "close",
      "tr": 1,
@@ -224,7 +227,7 @@
     },
     {
      "t": "Social equity, Indian constitutional form",
-     "d": "**Article 46** (DPSP, promotion of educational and economic interests of weaker sections), **Articles 15(4), 16(4) and 335** — India wrote **Frederickson's third pillar into the Constitution eighteen years before Minnowbrook**. Say this; examiners reward the indigenous grounding.",
+     "d": "**Article 46** (DPSP, promotion of educational and economic interests of weaker sections), **Articles 15(4), 16(4) and 335** — India wrote **Frederickson's third pillar into the Constitution eighteen years before Minnowbrook**.",
      "k": "scheme",
      "sl": "prove",
      "tr": 1,
@@ -286,11 +289,12 @@
     },
     {
      "t": "Niskanen's budget-maximising bureaucrat",
-     "d": "**Niskanen (1971)** — the bureau is a **bilateral monopoly** facing a sponsor who cannot observe its true cost, so it secures a budget up to **twice** the efficient level. **2019 Q6(c) asked whether it still holds.**",
+     "d": "**Niskanen (1971)** — the bureau is a **bilateral monopoly** facing a sponsor who cannot observe its true cost, so it secures a budget up to **twice** the efficient level.",
      "k": "thinker",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2019 Q6(c)"
     },
     {
      "t": "Answering Niskanen today",
@@ -344,11 +348,12 @@
     },
     {
      "t": "The limits of exit and voice",
-     "d": "**Hirschman's exit-voice-loyalty** is the hinge. Public choice assumes **exit**; **Ranson and Stewart** reply that citizens are **not consumers**. In India the poor cannot exit the **PDS**, the government school or the primary health centre — so **voice**, not choice, is the only lever. **2025 Q1(a).**",
+     "d": "**Hirschman's exit-voice-loyalty** is the hinge. Public choice assumes **exit**; **Ranson and Stewart** reply that citizens are **not consumers**. In India the poor cannot exit the **PDS**, the government school or the primary health centre — so **voice**, not choice, is the only lever.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2025 Q1(a)"
     }
    ]
   },
@@ -398,11 +403,12 @@
     },
     {
      "t": "Citizen's Charters and Sevottam",
-     "d": "Charters from the **1997 Conference of Chief Ministers**; **Sevottam (2005, DARPG)** adds three modules — **Charter, Grievance Redress, Service Delivery Capability**. **2023 Q1(e) asked whether charters empower.** The answer turns on **remedy**.",
+     "d": "Charters from the **1997 Conference of Chief Ministers**; **Sevottam (2005, DARPG)** adds three modules — **Charter, Grievance Redress, Service Delivery Capability**. The answer turns on **remedy**.",
      "k": "scheme",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2023 Q1(e)"
     },
     {
      "t": "A charter without a remedy",
@@ -431,11 +437,12 @@
     },
     {
      "t": "The NPM paradox in Indian numbers",
-     "d": "**2025 Q7(a) asked it directly:** LPG and NPM promised a **smaller state**, yet **Union expenditure is ₹53.5 lakh crore (Budget 2026-27)** and ministries have multiplied. Regulation **substitutes for** ownership; the state stopped **rowing** and hired a **larger crew to steer**.",
+     "d": "LPG and NPM promised a **smaller state**, yet **Union expenditure is ₹53.5 lakh crore (Budget 2026-27)** and ministries have multiplied. Regulation **substitutes for** ownership; the state stopped **rowing** and hired a **larger crew to steer**.",
      "k": "data",
      "sl": "prove",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2025 Q7(a)"
     },
     {
      "t": "Goodhart's Law as the NPM disease",
@@ -447,11 +454,12 @@
     },
     {
      "t": "Has NPM failed democracy?",
-     "d": "**2019 Q2(c).** Split the citizen: as **customer** she gained **speed and choice** — passports, tax refunds, GeM. As **citizen** she lost **standing**: a customer complains, a citizen **participates**. NPM improved **transactions** and thinned **deliberation**.",
+     "d": "The answer splits the citizen. As **customer** she gained **speed and choice** — passports, tax refunds, GeM. As **citizen** she lost **standing**: a customer complains, a citizen **participates**. NPM improved **transactions** and thinned **deliberation**.",
      "k": "critique",
      "sl": "close",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2019 Q2(c)"
     }
    ]
   },
@@ -476,11 +484,12 @@
     },
     {
      "t": "New Public Governance",
-     "d": "**Stephen Osborne (2006)** — the state is **plural** (many actors deliver) and **pluralist** (many processes shape policy). The unit of analysis is the **inter-organisational network** and the currency is **trust and relational contract**, not price. **2024 Q4(c), 2025 Q2(a).**",
+     "d": "**Stephen Osborne (2006)** — the state is **plural** (many actors deliver) and **pluralist** (many processes shape policy). The unit of analysis is the **inter-organisational network** and the currency is **trust and relational contract**, not price.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2024 Q4(c) · 2025 Q2(a)"
     },
     {
      "t": "NPG against NPM in one line",
@@ -492,19 +501,21 @@
     },
     {
      "t": "Rhodes on governance without government",
-     "d": "\"Governance refers to **self-organising, inter-organisational networks** characterised by **interdependence, resource exchange, rules of the game and significant autonomy from the state**.\" **2021 Q1(a) quoted him.**",
+     "d": "\"Governance refers to **self-organising, inter-organisational networks** characterised by **interdependence, resource exchange, rules of the game and significant autonomy from the state**.\"",
      "k": "quote",
      "sl": "open",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2021 Q1(a)"
     },
     {
      "t": "The hollow state and third-party government",
-     "d": "**Rhodes' 'hollowing out'**; **Milward and Provan's hollow state**; **Salamon's third-party government** — the state **funds and regulates** but does not deliver. **2020 Q2(a) asked whether this drives the move to governance.**",
+     "d": "**Rhodes' 'hollowing out'**; **Milward and Provan's hollow state**; **Salamon's third-party government** — the state **funds and regulates** but does not deliver.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2020 Q2(a)"
     },
     {
      "t": "India's hollow state, named",
@@ -517,11 +528,12 @@
     },
     {
      "t": "The Neo-Weberian State",
-     "d": "**Pollitt and Bouckaert** — Europe's answer to NPM: **keep** the Weberian core (law, career service, distinct public ethos) and **add** citizen orientation, results and professionalism. \"**Neo**\" modernises; \"**Weberian**\" refuses to dismantle. **2021 Q4(b).**",
+     "d": "**Pollitt and Bouckaert** — Europe's answer to NPM: **keep** the Weberian core (law, career service, distinct public ethos) and **add** citizen orientation, results and professionalism. \"**Neo**\" modernises; \"**Weberian**\" refuses to dismantle.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2021 Q4(b)"
     },
     {
      "t": "India as a Neo-Weberian case",
@@ -549,7 +561,7 @@
     },
     {
      "t": "The public value frame",
-     "d": "**Mark Moore's strategic triangle** — a manager must simultaneously secure **public value**, an **authorising environment** and **operational capacity**. Use it to explain why a technically sound scheme fails: **capacity without authorisation**, or **authorisation without capacity**.",
+     "d": "**Mark Moore's strategic triangle** — a manager must simultaneously secure **public value**, an **authorising environment** and **operational capacity**. It explains why a technically sound scheme fails — **capacity without authorisation**, or **authorisation without capacity**.",
      "k": "concept",
      "sl": "argue",
      "tr": 3,
@@ -586,11 +598,12 @@
     },
     {
      "t": "Good governance adds a normative layer",
-     "d": "**2024 Q2(b).** \"Governance\" describes a **process**; \"**good** governance\" **evaluates** it. That is its strength — it makes administration **assessable against declared standards** — and its weakness: the standards arrived as **donor conditionality**, not domestic deliberation.",
+     "d": "\"Governance\" describes a **process**; \"**good** governance\" **evaluates** it. That is its strength — it makes administration **assessable against declared standards** — and its weakness: the standards arrived as **donor conditionality**, not domestic deliberation.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2024 Q2(b)"
     },
     {
      "t": "Kautilya indigenises the idea",
@@ -611,7 +624,7 @@
     },
     {
      "t": "Corruption Perceptions Index 2025",
-     "d": "**India 91st of 182, score 39/100** — up from **96th in 2024**; global average **42** (**Transparency International, released 16 February 2026**). Use it to argue that **control of corruption remains the weakest of India's WGI dimensions** despite process reform.",
+     "d": "**India 91st of 182, score 39/100** — up from **96th in 2024**; global average **42** (**Transparency International, released 16 February 2026**). **Control of corruption remains the weakest of India's WGI dimensions** despite a decade of process reform.",
      "k": "data",
      "sl": "prove",
      "tr": 1,
@@ -627,19 +640,21 @@
     },
     {
      "t": "Why government must supply some goods",
-     "d": "**2021 Q5(d).** **Non-rivalry and non-excludability** (defence, street lighting), **externalities** (vaccination, education), **natural monopoly** (transmission, water networks), **information asymmetry** (drug safety), and **equity** — the market allocates by **purchasing power**, not need.",
+     "d": "**Non-rivalry and non-excludability** (defence, street lighting), **externalities** (vaccination, education), **natural monopoly** (transmission, water networks), **information asymmetry** (drug safety), and **equity** — the market allocates by **purchasing power**, not need.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2021 Q5(d)"
     },
     {
      "t": "Civil society's double edge",
-     "d": "**2021 Q1(d), 2025 Q8(a).** CSOs supply **information, mobilisation and reach** — **MKSS** produced the RTI, **SEWA** organised informal workers. But they can be **unrepresentative, donor-driven and obstructive**; **FCRA amendments (2020)** cut foreign funding sharply. Effectiveness depends on the state being **receptive**.",
+     "d": "CSOs supply **information, mobilisation and reach** — **MKSS** produced the RTI, **SEWA** organised informal workers. But they can be **unrepresentative, donor-driven and obstructive**; **FCRA amendments (2020)** cut foreign funding sharply. Effectiveness depends on the state being **receptive**.",
      "k": "critique",
      "sl": "attack",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2021 Q1(d) · 2025 Q8(a)"
     },
     {
      "t": "The regulatory state replaces the producer state",
@@ -660,11 +675,12 @@
     },
     {
      "t": "Globalisation and the administrative state",
-     "d": "**2019 Q3(a), 2020 Q7(a).** The **national policy agenda becomes international**: **WTO, BEPS Pillar Two, Basel III, ICAO, IHR 2005, Paris NDCs**. Domestic administration acquires a **treaty-compliance function**, and the **regulator becomes the point of contact** with global capital.",
+     "d": "The **national policy agenda becomes international**: **WTO, BEPS Pillar Two, Basel III, ICAO, IHR 2005, Paris NDCs**. Domestic administration acquires a **treaty-compliance function**, and the **regulator becomes the point of contact** with global capital.",
      "k": "concept",
      "sl": "argue",
      "tr": 1,
-     "u": "I-1"
+     "u": "I-1",
+     "pyq": "2019 Q3(a) · 2020 Q7(a)"
     }
    ]
   }
