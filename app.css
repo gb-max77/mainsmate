@@ -1144,6 +1144,8 @@ body.hl-on #answer mark.hl{cursor:pointer}
 .mx-bar2 i{display:block;height:100%;width:0;border-radius:99px;background:var(--gold);
   transition:width .3s ease}
 .mx-times{display:flex;gap:10px;font-variant-numeric:tabular-nums;white-space:nowrap}
+/* The total is the quieter half of the pair — the elapsed figure is what moves. */
+.mx-times i{font-style:normal;color:var(--ghost);opacity:.8}
 
 /* ── the block: term, then the sentence, then the marks ── */
 .mx-g{margin:22px 0 0}

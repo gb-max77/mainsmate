@@ -2675,21 +2675,24 @@ const mxRead = {
     bar.hidden = !this.on && !message;
     if (message && !this.on) { $('#mx-readpos').textContent = message; $('#mx-times').textContent = ''; return; }
     if (!this.on) return;
+    // Both halves are counted in words still to be spoken, so the elapsed figure
+    // and the total move together when the speed changes.
     const words = el => (el.querySelector('.mx-d')?.textContent || '').split(/\s+/).length;
     const group = this.nodes[this.i]?.closest('.mx-g');
-    let gLeft = 0, sLeft = 0;
+    let gDone = 0, gAll = 0, sDone = 0, sAll = 0;
     this.nodes.forEach((el, n) => {
-      if (n < this.i) return;
-      sLeft += words(el);
-      if (el.closest('.mx-g') === group) gLeft += words(el);
+      const w = words(el), inGroup = el.closest('.mx-g') === group;
+      sAll += w; if (inGroup) gAll += w;
+      if (n < this.i) { sDone += w; if (inGroup) gDone += w; }
     });
     const total = this.nodes.length, done = this.i;
     $('#mx-readpos').textContent = `${done} of ${total} read`;
     $('#mx-readpause').textContent = this.paused ? '▶' : '❚❚';
     const fill = $('#mx-fill');
     if (fill) fill.style.width = `${total ? Math.round(done / total * 100) : 0}%`;
-    $('#mx-times').innerHTML = `<span title="Left in this group">◐ group ${mxSpokenTime(gLeft)}</span>`
-      + `<span title="Left in this section">◉ section ${mxSpokenTime(sLeft)}</span>`;
+    $('#mx-times').innerHTML =
+      `<span title="Elapsed and total for this group">◐ ${mxSpokenTime(gDone)} <i>/ ${mxSpokenTime(gAll)}</i></span>`
+      + `<span title="Elapsed and total for this section">◉ ${mxSpokenTime(sDone)} <i>/ ${mxSpokenTime(sAll)}</i></span>`;
     mxJump.measure(); mxRail.paint();
   }
 };
