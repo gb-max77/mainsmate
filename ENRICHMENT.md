@@ -260,3 +260,33 @@ books reference them by index, so Joint costs nothing to re-cut:
 
 The build prints the tier, kind and slot spread and asserts every syllabus unit
 is covered; it fails on a duplicate block body or an over-length block.
+
+## The keyword chain (print)
+
+`tools/keychain.py` renders the **Joint** book as a numbered keyword chain for
+last-minute revision, using `tools/keychain.css` as the print sheet:
+
+```
+python3 tools/keychain.py
+"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+  --no-pdf-header-footer --print-to-pdf-no-header \
+  --print-to-pdf="$PWD/build/Maximus_Weberus_Keyword_Chain.pdf" \
+  "file://$PWD/build/keychain.html"
+```
+
+The chain is not a summary: the blocks were authored with their load-bearing
+terms already in bold, so it is the same argument with the connective tissue
+stripped to whatever carries the logic. Four rules earn their keep:
+
+- a short link between two terms (*versus*, *not*, *so*, *yet*) is **kept**,
+  because it is the thinking;
+- a bare enumerator `**(3)**` is folded onto its item, whether the item is bold
+  or plain — otherwise numbered lists collapse to naked digits;
+- a parenthetical of a few words straight after a term is its **gloss** and
+  travels with it (`Kosha (treasury)`);
+- a block whose chain would fall below ~32% of its text, or under four terms,
+  **prints whole** — those carry their sense in the prose, and compressing them
+  destroys the point rather than condensing it.
+
+At the last build that split 914 blocks into 673 chains and 241 printed whole,
+over 57 A4 pages. Numbering is `section.group.block`; T0 lines carry a band.

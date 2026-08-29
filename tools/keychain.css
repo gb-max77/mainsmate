@@ -1,0 +1,86 @@
+/* Print sheet for the keyword chain. Dense two-column body, generous only where
+   the eye needs an anchor: the section rule, the number, the term. */
+@page { size: A4; margin: 13mm 11mm 14mm; }
+@page :first { margin-top: 18mm; }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  margin: 0; font: 8.4pt/1.42 "Iowan Old Style", Palatino, Georgia, serif;
+  color: #1b1a17; background: #fff;
+}
+b { font-weight: 700; color: #000; }
+i { font-style: normal; color: #8a6a1f; font-size: .93em; }
+s  { text-decoration: none; color: #b9b2a4; padding: 0 .5px; }
+
+/* ── cover ── */
+.cover { break-after: page; }
+.cover h1 { margin: 0; font-size: 30pt; letter-spacing: -.02em; font-weight: 700; }
+.cover .sub { margin: 2pt 0 0; font-size: 11pt; color: #6b6455; }
+.cover .meta { margin: 9pt 0 0; font-size: 8.6pt; color: #4a463c; max-width: 118mm; line-height: 1.55; }
+.cover .how {
+  margin: 12pt 0 0; padding: 8pt 10pt; font-size: 8.2pt; line-height: 1.6;
+  border-left: 2.2pt solid #a9750f; background: #faf6ec; max-width: 150mm;
+}
+.toc {
+  margin: 16pt 0 0; padding: 0; list-style: none;
+  columns: 2; column-gap: 12mm; font-size: 8.6pt;
+}
+.toc li {
+  display: flex; gap: 5pt; align-items: baseline; padding: 2.6pt 0;
+  border-bottom: .4pt dotted #ded7c8; break-inside: avoid;
+}
+.toc li b { flex: 0 0 12pt; text-align: right; color: #a9750f; }
+.toc li span { margin-left: auto; color: #97907f; font-size: 7.4pt; white-space: nowrap; }
+
+/* ── sections ── */
+.sec { break-before: page; }
+.sec h2 {
+  margin: 0 0 5pt; padding-bottom: 3.5pt; font-size: 13.5pt; font-weight: 700;
+  letter-spacing: -.01em; border-bottom: 1.4pt solid #1b1a17;
+  display: flex; align-items: baseline; gap: 7pt;
+}
+.sec h2 .n { color: #a9750f; font-size: 15pt; }
+.sec h2 em { margin-left: auto; font-style: normal; font-size: 7.6pt; color: #97907f;
+             letter-spacing: .06em; text-transform: uppercase; }
+.blurb { margin: 0 0 7pt; font-size: 8pt; line-height: 1.5; color: #625c4e; column-span: all; }
+
+.sec h3 {
+  margin: 8pt 0 3.5pt; font-size: 8.4pt; font-weight: 700; letter-spacing: .05em;
+  text-transform: uppercase; color: #6b6455;
+  border-bottom: .5pt solid #ded7c8; padding-bottom: 2pt;
+  break-after: avoid; break-inside: avoid;
+}
+.sec h3 .n { color: #a9750f; margin-right: 5pt; letter-spacing: 0; }
+
+/* Two columns from the first group onward; a chain line never splits. */
+.sec > h3, .sec > .chain { }
+.sec { columns: 2; column-gap: 9mm; column-fill: auto; }
+.sec h2, .sec .blurb { column-span: all; }
+
+.chain { margin: 0; padding: 0; list-style: none; }
+.blk {
+  position: relative; padding: 2.4pt 0 2.6pt 19pt;
+  border-bottom: .4pt dotted #e6e0d3; break-inside: avoid;
+}
+.blk .num {
+  position: absolute; left: 0; top: 2.7pt; width: 17pt; font-size: 6.4pt;
+  color: #a9750f; font-weight: 700; font-family: -apple-system, "Segoe UI", sans-serif;
+  letter-spacing: -.03em; text-align: right; padding-right: 3pt;
+}
+.blk .term { font-weight: 700; color: #000; }
+.blk .term::after { content: " — "; color: #b9b2a4; font-weight: 400; }
+.blk .kw { color: #37342d; }
+.blk .tag {
+  display: block; margin-top: .8pt; font-size: 6.2pt; letter-spacing: .08em;
+  text-transform: uppercase; color: #b0a894;
+  font-family: -apple-system, "Segoe UI", sans-serif;
+}
+/* The last-48-hours set reads as a band you can flick to. */
+.blk.t0 { background: #fdf8ec; box-shadow: -3.2pt 0 0 0 #d9a441; }
+.blk.t0 .tag { color: #a9750f; }
+
+/* A line the chain would have gutted prints as written — same weight, no seam. */
+.blk .kw.full { color: #37342d; }
+.blk .kw q { quotes: "“" "”"; color: #4a463c; }
+.blk .kw em { font-style: italic; color: #4a463c; }
+.blk .kw b:empty { display: none; }

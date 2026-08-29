@@ -2,3 +2,6 @@
 node_modules/
 
 # large binaries are committed deliberately (source PDFs for the notes reader)
+
+# the print sheet is an intermediate; the PDF beside it is the deliverable
+build/keychain.html
