@@ -84,3 +84,22 @@ s  { text-decoration: none; color: #b9b2a4; padding: 0 .5px; }
 .blk .kw q { quotes: "“" "”"; color: #4a463c; }
 .blk .kw em { font-style: italic; color: #4a463c; }
 .blk .kw b:empty { display: none; }
+
+/* ── what a unit is made of, before you read it ── */
+.mix { margin: 0 0 7pt; column-span: all; display: flex; flex-wrap: wrap; gap: 3pt 5pt; }
+.fc {
+  font-family: -apple-system, "Segoe UI", sans-serif; font-size: 6.4pt;
+  letter-spacing: .05em; text-transform: uppercase; color: #8a8474;
+  border: .4pt solid #ded7c8; border-radius: 6pt; padding: 1.4pt 4.5pt;
+}
+.fc b { color: #4a463c; margin-left: 3pt; font-size: 6.8pt; }
+.fc[data-f=example] { color: #3f7f22; border-color: #cfe0bd; }
+.fc[data-f=example] b { color: #2e5f18; }
+.fc[data-f=linkage] { color: #b8631a; border-color: #f0d9bd; }
+.fc[data-f=linkage] b { color: #934d12; }
+.fc.t0 { color: #a9750f; border-color: #e6ceA0; background: #fdf8ec; }
+.fc.t0 b { color: #8a5f0c; }
+
+/* The two facets most answers are thin on get a visible tag, not a grey word. */
+.blk .tag[data-k=eg], .blk .tag[data-k=data], .blk .tag[data-k=case] { color: #4a8a2c; }
+.blk .tag[data-k=link] { color: #c07020; }

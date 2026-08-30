@@ -263,15 +263,17 @@ is covered; it fails on a duplicate block body or an over-length block.
 
 ## The keyword chain (print)
 
-`tools/keychain.py` renders the **Joint** book as a numbered keyword chain for
-last-minute revision, using `tools/keychain.css` as the print sheet:
+`tools/keychain.py [joint|p1|p2]` renders a book as a numbered keyword chain for
+last-minute revision, using `tools/keychain.css` as the print sheet. Each unit
+opens with a facet strip — Concept · Thinker · Critique · Example · Anchor ·
+Linkage · T0 — so a thin facet is visible before you read the unit:
 
 ```
-python3 tools/keychain.py
+python3 tools/keychain.py p1
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
   --no-pdf-header-footer --print-to-pdf-no-header \
-  --print-to-pdf="$PWD/build/Maximus_Weberus_Keyword_Chain.pdf" \
-  "file://$PWD/build/keychain.html"
+  --print-to-pdf="$PWD/build/Maximus_PaperI_Keyword_Chain.pdf" \
+  "file://$PWD/build/keychain-p1.html"
 ```
 
 The chain is not a summary: the blocks were authored with their load-bearing
@@ -288,5 +290,6 @@ stripped to whatever carries the logic. Four rules earn their keep:
   **prints whole** — those carry their sense in the prose, and compressing them
   destroys the point rather than condensing it.
 
-At the last build that split 914 blocks into 673 chains and 241 printed whole,
-over 57 A4 pages. Numbering is `section.group.block`; T0 lines carry a band.
+At the last build the Joint book split 914 blocks into 673 chains and 241
+printed whole, over 57 A4 pages; Paper I alone is 512 blocks over 31 pages.
+Numbering is `section.group.block`; T0 lines carry a band.

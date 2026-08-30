@@ -7,13 +7,14 @@ stripped to whatever carries the logic. A short link between two keywords
 ("versus", "not", "so", "yet") is kept because it IS the thinking; anything
 longer collapses to a separator.
 
-    python3 tools/keychain.py            → build/keychain.html
+    python3 tools/keychain.py [joint|p1|p2]   → build/keychain-<book>.html
 """
 import json, pathlib, re, html, sys
+from collections import Counter
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data' / 'maximus.json'
-OUT = ROOT / 'build' / 'keychain.html'
+BUILD = ROOT / 'build'
 
 # Links worth keeping between two keywords: they carry the direction of the argument.
 LINK = re.compile(r'^(?:'
@@ -112,9 +113,25 @@ def line(b):
     return render(parts), False
 
 
+TITLES = {
+    'joint': ('Maximus Weberus', 'Public Administration optional · the keyword chain'),
+    'p1':    ('Maximus Weberus · Paper I', 'Administrative Theory · the keyword chain'),
+    'p2':    ('Maximus Weberus · Paper II', 'Indian Administration · the keyword chain'),
+}
+# The five things a Paper-I answer has to carry, and which kinds supply each.
+FACETS = [('Concept', ('concept',)), ('Thinker', ('thinker', 'quote')),
+          ('Critique', ('critique',)), ('Example', ('eg', 'data', 'case')),
+          ('Anchor', ('prov', 'cmte', 'inst', 'sch')), ('Linkage', ('link',))]
+
+
 def main():
+    book_id = sys.argv[1] if len(sys.argv) > 1 else 'joint'
     d = json.loads(DATA.read_text())
-    joint = next(b for b in d['books'] if b['id'] == 'joint')
+    joint = next((b for b in d['books'] if b['id'] == book_id), None)
+    if joint is None:
+        sys.exit(f'no such book: {book_id} (try joint, p1, p2)')
+    OUT = BUILD / f'keychain-{book_id}.html'
+    title, sub = TITLES.get(book_id, (joint['label'], joint['sub']))
     kinds = d['kinds']
 
     toc, body, nblocks, nwhole = [], [], 0, 0
@@ -125,6 +142,13 @@ def main():
                     f'{html.escape(unit["name"])}<em>{html.escape(unit["tag"])}</em></h2>')
         if unit.get('blurb'):
             body.append(f'<p class="blurb">{html.escape(unit["blurb"])}</p>')
+        # What this unit is made of, so a thin facet is visible before you read it.
+        mix = Counter(d['b'][i]['k'] for g in unit['groups'] for i in g['i'])
+        chips = ''.join(
+            f'<span class="fc" data-f="{lab.lower()}">{lab}<b>{sum(mix[k] for k in ks)}</b></span>'
+            for lab, ks in FACETS if sum(mix[k] for k in ks))
+        t0 = sum(1 for g in unit['groups'] for i in g['i'] if d['b'][i]['tr'] == 0)
+        body.append(f'<p class="mix">{chips}<span class="fc t0">T0<b>{t0}</b></span></p>')
         for gi, g in enumerate(unit['groups'], 1):
             body.append(f'<h3><span class="n">{si}.{gi}</span>{html.escape(g["g"])}</h3><ol class="chain">')
             for bi, idx in enumerate(g['i'], 1):
@@ -137,19 +161,20 @@ def main():
                     f'<li class="blk{tier}"><span class="num">{si}.{gi}.{bi}</span>'
                     f'<span class="term">{html.escape(b["t"])}</span>'
                     f'<span class="kw{" full" if whole else ""}">{text}</span>'
-                    f'<span class="tag">{html.escape(kinds[b["k"]]["label"])}'
+                    f'<span class="tag" data-k="{b["k"]}">{html.escape(kinds[b["k"]]["label"])}'
                     f'{" · T0" if b["tr"] == 0 else ""}</span></li>')
             body.append('</ol>')
         body.append('</section>')
 
-    n_t0 = sum(1 for b in d['b'] if b['tr'] == 0)
+    n_t0 = sum(1 for u in joint['units'] for g in u['groups']
+               for i in g['i'] if d['b'][i]['tr'] == 0)
     tpl = (ROOT / 'tools' / 'keychain.css').read_text()
     OUT.parent.mkdir(exist_ok=True)
     OUT.write_text(f'''<!doctype html><html lang="en"><head><meta charset="utf-8">
-<title>Maximus Weberus — Keyword Chain</title><style>{tpl}</style></head><body>
+<title>{title}</title><style>{tpl}</style></head><body>
 <header class="cover">
-  <h1>Maximus Weberus</h1>
-  <p class="sub">Public Administration optional · the keyword chain</p>
+  <h1>{title}</h1>
+  <p class="sub">{sub}</p>
   <p class="meta">{nblocks} blocks · {len(joint["units"])} sections · {n_t0} marked <b>T0</b>,
      the core to own if there is time for nothing else · CSE 2026</p>
   <p class="how"><b>How to read it.</b> Each line is one examiner-ready idea reduced to the terms
@@ -161,7 +186,7 @@ def main():
 </header>
 {"".join(body)}
 </body></html>''')
-    print(f'{nblocks} blocks · {len(joint["units"])} sections → {OUT.relative_to(ROOT)}'
+    print(f'{book_id}: {nblocks} blocks · {len(joint["units"])} sections → {OUT.relative_to(ROOT)}'
           f' ({OUT.stat().st_size // 1024} KB)')
     print(f'{nblocks - nwhole} as keyword chains · {nwhole} printed whole '
           f'(the chain would have gutted them)')
